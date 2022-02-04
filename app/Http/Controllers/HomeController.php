@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Atlet\Data\HomeController as DataController;
 
 class HomeController extends Controller
 {
@@ -11,9 +12,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(DataController $data)
     {
         $this->middleware('auth');
+        $this->data = $data;
     }
 
     /**
@@ -23,6 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('index');
     }
 }
