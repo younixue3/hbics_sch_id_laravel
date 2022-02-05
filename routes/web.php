@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('index');
 // });
 
+
 Auth::routes();
+Route::get('/logout', function() {
+    Auth::logout();
+    return redirect('/');
+});
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

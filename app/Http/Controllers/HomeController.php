@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Atlet\Data\HomeController as DataController;
+use App\Http\Controllers\Data\HomeController as DataController;
 
 class HomeController extends Controller
 {
