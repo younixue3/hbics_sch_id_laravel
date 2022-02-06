@@ -194,6 +194,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -218,6 +236,20 @@ __webpack_require__.r(__webpack_exports__);
         // console.log('belum lewat')
         this.show = false; // console.log(this.show)
       }
+    },
+    modalshow: function modalshow(navname) {
+      // document.getElementById('#')
+      eval(navname).classList.remove('hidden');
+      setTimeout(function () {
+        eval(navname).classList.add('h-40');
+      }, 10);
+    },
+    modalclose: function modalclose(navname) {
+      eval(navname).classList.remove('h-40');
+      eval(navname).classList.add('h-0');
+      setTimeout(function () {
+        eval(navname).classList.add('hidden');
+      }, 100);
     }
   }
 });
@@ -389,7 +421,79 @@ var render = function () {
                 [
                   _c("div", {}, [_vm._v("ada")]),
                   _vm._v(" "),
-                  _vm._m(0),
+                  _c("div", { staticClass: "col-span-4 justify-self-end" }, [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "grid grid-cols-2 font-bold" }, [
+                      _c(
+                        "div",
+                        {
+                          on: {
+                            mouseover: function ($event) {
+                              return _vm.modalshow("pendaftaran")
+                            },
+                            mouseleave: function ($event) {
+                              return _vm.modalclose("pendaftaran")
+                            },
+                          },
+                        },
+                        [
+                          _c("span", { staticClass: "cursor-pointer" }, [
+                            _vm._v(
+                              "\n                                        Pendaftaran\n                                    "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-8 fixed -translate-x-3/4" },
+                            [
+                              _c("div", {
+                                ref: "pendaftaran",
+                                staticClass:
+                                  "hidden h-0 mt-5 bg-white shadow-xl rounded-2xl border border-2 shadow w-96 z-50 transition-all ease-in-out duration-300",
+                                attrs: { id: "pendaftaran" },
+                              }),
+                            ]
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          on: {
+                            mouseover: function ($event) {
+                              return _vm.modalshow("akademis")
+                            },
+                            mouseleave: function ($event) {
+                              return _vm.modalclose("akademis")
+                            },
+                          },
+                        },
+                        [
+                          _c("span", { staticClass: "cursor-pointer" }, [
+                            _vm._v(
+                              "\n                                        Akademis\n                                    "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-8 fixed -translate-x-3/4" },
+                            [
+                              _c("div", {
+                                ref: "akademis",
+                                staticClass:
+                                  "hidden h-0 mt-5 bg-white shadow-xl rounded-2xl border border-2 shadow w-96 z-50 transition-all ease-in-out duration-300",
+                                attrs: { id: "akademis" },
+                              }),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]),
+                  ]),
                   _vm._v(" "),
                   _c("div", [
                     _c("img", {
@@ -414,7 +518,79 @@ var render = function () {
                     }),
                   ]),
                   _vm._v(" "),
-                  _vm._m(1),
+                  _c("div", { staticClass: "col-span-4 justify-self-start" }, [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "grid grid-cols-2 font-bold" }, [
+                      _c(
+                        "div",
+                        {
+                          on: {
+                            mouseover: function ($event) {
+                              return _vm.modalshow("komunitas")
+                            },
+                            mouseleave: function ($event) {
+                              return _vm.modalclose("komunitas")
+                            },
+                          },
+                        },
+                        [
+                          _c("span", { staticClass: "cursor-pointer" }, [
+                            _vm._v(
+                              "\n                                        Komunitas\n                                    "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-8 fixed translate-x-3/4" },
+                            [
+                              _c("div", {
+                                ref: "komunitas",
+                                staticClass:
+                                  "hidden h-0 mt-5 bg-white shadow-xl rounded-2xl border border-2 shadow w-96 z-50 transition-all ease-in-out duration-300",
+                                attrs: { id: "komunitas" },
+                              }),
+                            ]
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          on: {
+                            mouseover: function ($event) {
+                              return _vm.modalshow("publikasi")
+                            },
+                            mouseleave: function ($event) {
+                              return _vm.modalclose("publikasi")
+                            },
+                          },
+                        },
+                        [
+                          _c("span", { staticClass: "cursor-pointer" }, [
+                            _vm._v(
+                              "\n                                        Publikasi\n                                    "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "py-8 fixed translate-x-3/4" },
+                            [
+                              _c("div", {
+                                ref: "publikasi",
+                                staticClass:
+                                  "hidden h-0 mt-5 bg-white shadow-xl rounded-2xl border border-2 shadow w-96 z-50 transition-all ease-in-out duration-300",
+                                attrs: { id: "publikasi" },
+                              }),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]),
+                  ]),
                   _vm._v(" "),
                   _c("div", {}, [_vm._v("ada")]),
                 ]
@@ -730,56 +906,18 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-span-4 justify-self-end" }, [
-      _c("div", { staticClass: "grid grid-cols-2 font-light" }, [
-        _c("div", [_vm._v("Home")]),
-        _vm._v(" "),
-        _c("div", [_vm._v("Tentang Kami")]),
-      ]),
+    return _c("div", { staticClass: "grid grid-cols-2 font-light" }, [
+      _c("div", [_vm._v("Home")]),
       _vm._v(" "),
-      _c("div", { staticClass: "grid grid-cols-2 font-bold" }, [
-        _c("div", [
-          _c("span", { staticClass: "cursor-pointer" }, [
-            _vm._v(
-              "\n                                        Pendaftaran\n                                    "
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", {
-            staticClass:
-              "-translate-x-3/4 mt-5 bg-blue-900 rounded-2xl border border-2 shadow fixed w-96 h-40 z-50",
-          }),
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("span", [
-            _vm._v(
-              "\n                                        Akademis\n                                    "
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", {
-            staticClass:
-              "-translate-x-3/4 mt-5 bg-blue-900 rounded-2xl border border-2 shadow fixed w-96 h-40 z-50",
-          }),
-        ]),
-      ]),
+      _c("div", [_vm._v("Tentang Kami")]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-span-4 justify-self-start" }, [
-      _c("div", { staticClass: "grid grid-cols-2 font-light" }, [
-        _c("div", [_vm._v("Hubungi kami")]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "grid grid-cols-2 font-bold" }, [
-        _c("div", [_vm._v("Komunitas")]),
-        _vm._v(" "),
-        _c("div", [_vm._v("Publikasi")]),
-      ]),
+    return _c("div", { staticClass: "grid grid-cols-2 font-light" }, [
+      _c("div", [_vm._v("Hubungi kami")]),
     ])
   },
   function () {

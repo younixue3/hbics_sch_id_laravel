@@ -24,17 +24,21 @@
                                 <div>Tentang Kami</div>
                             </div>
                             <div class="grid grid-cols-2 font-bold">
-                                <div>
+                                <div @mouseover="modalshow('pendaftaran')" @mouseleave="modalclose('pendaftaran')">
                                     <span class="cursor-pointer">
                                         Pendaftaran
                                     </span>
-                                    <div class="-translate-x-3/4 mt-5 bg-blue-900 rounded-2xl border border-2 shadow fixed w-96 h-40 z-50"></div>
+                                    <div class="py-8 fixed -translate-x-3/4">
+                                        <div ref="pendaftaran" id="pendaftaran" class="hidden h-0 mt-5 bg-white shadow-xl rounded-2xl border border-2 shadow w-96 z-50 transition-all ease-in-out duration-300"></div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span>
+                                <div @mouseover="modalshow('akademis')" @mouseleave="modalclose('akademis')">
+                                    <span class="cursor-pointer">
                                         Akademis
                                     </span>
-                                    <div class="-translate-x-3/4 mt-5 bg-blue-900 rounded-2xl border border-2 shadow fixed w-96 h-40 z-50"></div>
+                                    <div class="py-8 fixed -translate-x-3/4">
+                                        <div ref="akademis" id="akademis" class="hidden h-0 mt-5 bg-white shadow-xl rounded-2xl border border-2 shadow w-96 z-50 transition-all ease-in-out duration-300"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -48,8 +52,22 @@
                                 <div>Hubungi kami</div>
                             </div>
                             <div class="grid grid-cols-2 font-bold">
-                                <div>Komunitas</div>
-                                <div>Publikasi</div>
+                                <div @mouseover="modalshow('komunitas')" @mouseleave="modalclose('komunitas')">
+                                    <span class="cursor-pointer">
+                                        Komunitas
+                                    </span>
+                                    <div class="py-8 fixed translate-x-3/4">
+                                        <div ref="komunitas" id="komunitas" class="hidden h-0 mt-5 bg-white shadow-xl rounded-2xl border border-2 shadow w-96 z-50 transition-all ease-in-out duration-300"></div>
+                                    </div>
+                                </div>
+                                <div @mouseover="modalshow('publikasi')" @mouseleave="modalclose('publikasi')">
+                                    <span class="cursor-pointer">
+                                        Publikasi
+                                    </span>
+                                    <div class="py-8 fixed translate-x-3/4">
+                                        <div ref="publikasi" id="publikasi" class="hidden h-0 mt-5 bg-white shadow-xl rounded-2xl border border-2 shadow w-96 z-50 transition-all ease-in-out duration-300"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="">ada</div>
@@ -207,6 +225,21 @@
                     this.show = false;
                     // console.log(this.show)
                 }
+            },
+            modalshow(navname) {
+                // document.getElementById('#')
+                eval(navname).classList.remove('hidden')
+                setTimeout(function() {
+                    eval(navname).classList.add('h-40')
+                }, 10)
+
+            },
+            modalclose (navname) {
+                eval(navname).classList.remove('h-40')
+                eval(navname).classList.add('h-0')
+                setTimeout(function() {
+                    eval(navname).classList.add('hidden')
+                }, 100)
             }
         }
     }
