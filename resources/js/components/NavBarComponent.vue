@@ -1,23 +1,58 @@
 <template>
-<!--    <div >-->
-        <header ref="navbar" class="fixed w-screen transition-all ease-in-out h-44 duration-300 z-50" id="navBar">
+    <div>
+        <header ref="navbar" class="h-44 fixed w-screen transition-all ease-in-out duration-300 z-50" id="navBar">
             <div>
                 <div :class="show ? 'bg-amber-400 h-16' : 'bg-transparent h-44'"
-                    class="flex justify-between items-center md:justify-start px-5 py-5 sm:py-0 md:px-10 md:space-x-10 transition-all ease-in-out duration-300">
-                    <div class="-mr-2 -my-2 md:hidden">
-                        <button id="openMenu" type="button"
-                                class="rounded-md p-1 inline-flex items-center justify-center text-gray-200 focus:outline-none transition-all ease-in-out duration-300"
-                                aria-expanded="false">
-                            <span class="sr-only">Open menu</span>
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                 stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div>
-                        <img src="">
+                    class="px-5 sm:py-0 md:px-2 md:space-x-10 transition-all ease-in-out duration-300">
+<!--                    <div class="-mr-2 -my-2 md:hidden">-->
+<!--                        <button id="openMenu" type="button"-->
+<!--                                class="rounded-md p-1 inline-flex items-center justify-center text-gray-200 focus:outline-none transition-all ease-in-out duration-300"-->
+<!--                                aria-expanded="false">-->
+<!--                            <span class="sr-only">Open menu</span>-->
+<!--                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"-->
+<!--                                 stroke="currentColor" aria-hidden="true">-->
+<!--                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"-->
+<!--                                      d="M4 6h16M4 12h16M4 18h16" />-->
+<!--                            </svg>-->
+<!--                        </button>-->
+<!--                    </div>-->
+                    <div class="grid grid-cols-11 place-items-center content-center text-center" :class="show ? 'text-black' : 'text-white'">
+                        <div class="">ada</div>
+                        <div class="col-span-4 justify-self-end">
+                            <div class="grid grid-cols-2 font-light">
+                                <div>Home</div>
+                                <div>Tentang Kami</div>
+                            </div>
+                            <div class="grid grid-cols-2 font-bold">
+                                <div>
+                                    <span class="cursor-pointer">
+                                        Pendaftaran
+                                    </span>
+                                    <div class="-translate-x-3/4 mt-5 bg-blue-900 rounded-2xl border border-2 shadow fixed w-96 h-40 z-50"></div>
+                                </div>
+                                <div>
+                                    <span>
+                                        Akademis
+                                    </span>
+                                    <div class="-translate-x-3/4 mt-5 bg-blue-900 rounded-2xl border border-2 shadow fixed w-96 h-40 z-50"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-16' : 'h-0'" :src="logo" alt="">
+                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-24'" :src="imagewhite" alt="">
+                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-20'" :src="footerwhite" alt="">
+                        </div>
+                        <div class="col-span-4 justify-self-start">
+                            <div class="grid grid-cols-2 font-light">
+                                <div>Hubungi kami</div>
+                            </div>
+                            <div class="grid grid-cols-2 font-bold">
+                                <div>Komunitas</div>
+                                <div>Publikasi</div>
+                            </div>
+                        </div>
+                        <div class="">ada</div>
                     </div>
                 </div>
             </div>
@@ -142,7 +177,7 @@
                 </div>
             </div>
         </header>
-<!--    </div>-->
+    </div>
 </template>
 
 <script>
@@ -152,6 +187,7 @@
                 show: false
             }
         },
+        props : ['imagewhite', 'footerwhite', 'logo'],
         created () {
             window.addEventListener('scroll', this.handleScroll);
         },
@@ -163,11 +199,11 @@
                 // console.log(this.$refs.navbar.getBoundingClientRect())
                 // console.log(document.getElementById('hero_section').getBoundingClientRect().bottom)
                 if (this.$refs.navbar.getBoundingClientRect().height >= document.getElementById('hero_section').getBoundingClientRect().bottom && this.show === false){
-                    console.log('lewat')
+                    // console.log('lewat')
                     this.show = true;
                     // console.log(this.show)
                 } else if (this.$refs.navbar.getBoundingClientRect().height <= document.getElementById('hero_section').getBoundingClientRect().bottom && this.show === true) {
-                    console.log('belum lewat')
+                    // console.log('belum lewat')
                     this.show = false;
                     // console.log(this.show)
                 }
