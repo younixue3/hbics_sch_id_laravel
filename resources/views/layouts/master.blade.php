@@ -9,8 +9,13 @@
         <script src="https://kit.fontawesome.com/6fd3995802.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        @include('layouts/header')
+        <div id="app">
+{{--            <example-component></example-component>--}}
+{{--            <nav-bar-component></nav-bar-component>--}}
+            @include('layouts/header')
             @yield('content')
-        @include('layouts/footer')
+            @include('layouts/footer')
+        </div>
+    <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
