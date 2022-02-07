@@ -4,20 +4,22 @@
             <div>
                 <div :class="show ? 'bg-blue-900 h-16' : 'bg-transparent h-44'"
                      class="px-5 sm:py-0 md:px-2 md:space-x-10 transition-all ease-in-out duration-300">
-                    <!--                    <div class="-mr-2 -my-2 md:hidden">-->
-                    <!--                        <button id="openMenu" type="button"-->
-                    <!--                                class="rounded-md p-1 inline-flex items-center justify-center text-gray-200 focus:outline-none transition-all ease-in-out duration-300"-->
-                    <!--                                aria-expanded="false">-->
-                    <!--                            <span class="sr-only">Open menu</span>-->
-                    <!--                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"-->
-                    <!--                                 stroke="currentColor" aria-hidden="true">-->
-                    <!--                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"-->
-                    <!--                                      d="M4 6h16M4 12h16M4 18h16" />-->
-                    <!--                            </svg>-->
-                    <!--                        </button>-->
-                    <!--                    </div>-->
                     <div class="grid grid-cols-11 place-items-center content-center text-center text-white">
-                        <div class="">ada</div>
+                        <div class="">
+                            <div class="-mr-2 -my-2 md:hidden">
+                                <button id="openMenu" type="button"
+                                        class="rounded-md p-1 inline-flex items-center justify-center text-gray-200 focus:outline-none transition-all ease-in-out duration-300"
+                                        aria-expanded="false">
+                                    <span class="sr-only">Open menu</span>
+                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                         viewBox="0 0 24 24"
+                                         stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M4 6h16M4 12h16M4 18h16"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                         <div class="col-span-4 justify-self-end">
                             <div class="grid grid-cols-2 font-light">
                                 <div>Home</div>
@@ -513,16 +515,11 @@
                     </div>
                 </div>
             </div>
-            <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden md:hidden z-50">
+            <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50">
                 <div
                     class="rounded-lg shadow-lg ring-1 ring-gray-800 ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                     <div class="pt-5 pb-6 px-5">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <img class="h-8 w-auto"
-                                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                                     alt="Workflow">
-                            </div>
+                        <div class="flex items-center justify-end">
                             <div class="-mr-2">
                                 <button id="closeMenu" type="button"
                                         class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

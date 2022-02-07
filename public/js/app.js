@@ -656,9 +656,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -865,7 +862,51 @@ var render = function () {
                     "grid grid-cols-11 place-items-center content-center text-center text-white",
                 },
                 [
-                  _c("div", {}, [_vm._v("ada")]),
+                  _c("div", {}, [
+                    _c("div", { staticClass: "-mr-2 -my-2 md:hidden" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "rounded-md p-1 inline-flex items-center justify-center text-gray-200 focus:outline-none transition-all ease-in-out duration-300",
+                          attrs: {
+                            id: "openMenu",
+                            type: "button",
+                            "aria-expanded": "false",
+                          },
+                        },
+                        [
+                          _c("span", { staticClass: "sr-only" }, [
+                            _vm._v("Open menu"),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "h-6 w-6",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                stroke: "currentColor",
+                                "aria-hidden": "true",
+                              },
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2",
+                                  d: "M4 6h16M4 12h16M4 18h16",
+                                },
+                              }),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]),
+                  ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-span-4 justify-self-end" }, [
                     _vm._m(0),
@@ -1245,7 +1286,7 @@ var render = function () {
           "div",
           {
             staticClass:
-              "absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden md:hidden z-50",
+              "absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50",
           },
           [
             _c(
@@ -1256,53 +1297,47 @@ var render = function () {
               },
               [
                 _c("div", { staticClass: "pt-5 pb-6 px-5" }, [
-                  _c(
-                    "div",
-                    { staticClass: "flex items-center justify-between" },
-                    [
-                      _vm._m(10),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "-mr-2" }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass:
-                              "bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500",
-                            attrs: { id: "closeMenu", type: "button" },
-                          },
-                          [
-                            _c("span", { staticClass: "sr-only" }, [
-                              _vm._v("Close menu"),
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "svg",
-                              {
-                                staticClass: "h-6 w-6",
-                                attrs: {
-                                  xmlns: "http://www.w3.org/2000/svg",
-                                  fill: "none",
-                                  viewBox: "0 0 24 24",
-                                  stroke: "currentColor",
-                                  "aria-hidden": "true",
-                                },
+                  _c("div", { staticClass: "flex items-center justify-end" }, [
+                    _c("div", { staticClass: "-mr-2" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500",
+                          attrs: { id: "closeMenu", type: "button" },
+                        },
+                        [
+                          _c("span", { staticClass: "sr-only" }, [
+                            _vm._v("Close menu"),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "h-6 w-6",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                stroke: "currentColor",
+                                "aria-hidden": "true",
                               },
-                              [
-                                _c("path", {
-                                  attrs: {
-                                    "stroke-linecap": "round",
-                                    "stroke-linejoin": "round",
-                                    "stroke-width": "2",
-                                    d: "M6 18L18 6M6 6l12 12",
-                                  },
-                                }),
-                              ]
-                            ),
-                          ]
-                        ),
-                      ]),
-                    ]
-                  ),
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2",
+                                  d: "M6 18L18 6M6 6l12 12",
+                                },
+                              }),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]),
+                  ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "mt-6" }, [
                     _c("nav", { staticClass: "grid gap-y-8" }, [
@@ -1534,7 +1569,7 @@ var render = function () {
                   ]),
                 ]),
                 _vm._v(" "),
-                _vm._m(11),
+                _vm._m(10),
               ]
             ),
           ]
@@ -2655,20 +2690,6 @@ var staticRenderFns = [
           ),
         ]),
       ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("img", {
-        staticClass: "h-8 w-auto",
-        attrs: {
-          src: "https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg",
-          alt: "Workflow",
-        },
-      }),
     ])
   },
   function () {
