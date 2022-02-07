@@ -35,7 +35,7 @@
                                              class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden">
                                             <div class="h-full grid grid-rows-5 divide-y-2">
                                                 <div
-                                                    class="grid grid-rows-4 items-center justify-items-stretch row-span-4 p-2">
+                                                    class="grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
                                                        href="#">
                                                         <div class="flex gap-x-5 text-center">
@@ -141,7 +141,7 @@
                                              class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden">
                                             <div class="h-full grid grid-rows-5 divide-y-2">
                                                 <div
-                                                    class="grid grid-rows-4 items-center justify-items-stretch row-span-4 p-2">
+                                                    class="grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
                                                        href="#">
                                                         <div class="flex gap-x-5 text-center">
@@ -223,13 +223,11 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="flex justify-center gap-x-5 pt-5">
-                                                    <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 text-2xl"
-                                                       href="#"><i class="fab fa-facebook"></i></a>
-                                                    <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-pink-500 to-gray-700 hover:to-violet-500 text-2xl"
-                                                       href="#"><i class="fab fa-instagram-square"></i></a>
-                                                    <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-red-600 to-gray-700 hover:to-rose-400 text-2xl"
-                                                       href="#"><i class="fab fa-youtube"></i></a>
+                                                <div class="flex justify-between gap-x-5 p-5">
+                                                    <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
+                                                       href="#"><i class="fas fa-user-graduate text-xs mr-3"></i>Alumni</a>
+                                                    <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
+                                                       href="#"><i class="fas fa-chalkboard-teacher text-xs mr-3"></i>Guru</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -239,10 +237,10 @@
                         </div>
                         <div>
                             <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-16' : 'h-0'"
-                                 :src="logo" alt="">
-                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-24'"
                                  :src="imagewhite" alt="">
-                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-20'"
+                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-24'"
+                                 :src="logo" alt="">
+                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-28'"
                                  :src="footerwhite" alt="">
                         </div>
                         <div class="col-span-4 justify-self-start">
@@ -259,7 +257,7 @@
                                              class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-96 z-50 transition-all ease-in-out duration-300 overflow-hidden">
                                             <div class="h-full grid grid-rows-5 divide-y-2">
                                                 <div
-                                                    class="grid grid-rows-2 items-center justify-items-stretch row-span-2 p-2">
+                                                    class="grid grid-rows-2 items-center justify-items-stretch row-span-2 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
                                                        href="#">
                                                         <div class="flex gap-x-5 text-center">
@@ -303,7 +301,7 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="row-span-3 grid grid-rows-2 p-5">
+                                                <div class="row-span-3 grid grid-rows-2 px-5">
                                                     <div>
                                                         <span class="text-xs font-light h-5">Alumni</span>
                                                         <div class="grid grid-cols-2 gap-x-2">
@@ -392,7 +390,7 @@
                                              class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-[36rem] z-50 transition-all ease-in-out duration-300 overflow-hidden">
                                             <div class="h-full grid grid-rows-5 divide-y-2">
                                                 <div
-                                                    class="grid grid-rows-2 items-center justify-items-stretch row-span-2 p-2">
+                                                    class="grid grid-rows-2 items-center justify-items-stretch row-span-2 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
                                                        href="#">
                                                         <div class="flex gap-x-5 text-center">
@@ -436,70 +434,38 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="px-5">
-                                                    <span class="text-xs font-light h-5">Alumni</span>
+                                                <div class="px-5 h-52">
+                                                    <span class="text-xs font-light">Alumni</span>
                                                     <div class="grid grid-cols-2 gap-5">
                                                         <a href="#"
-                                                           class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2">
+                                                           class="grid grid-cols-2 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2">
                                                             <img
                                                                 src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
-                                                                class="h-12 w-12 rounded-full object-cover">
-                                                            <div
-                                                                class="col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm">
-                                                                <div class="leading-3 transition-all ease-in-out">
-                                                                    Ricko
+                                                                class="h-28 w-28 rounded-xl object-cover">
+                                                            <div class="grid grid-rows-2 gap-0 items-start text-left text-sm py-2">
+                                                                <div class="leading-3 transition-all ease-in-out truncate">
+                                                                    Lorem Ipsum dolor sit amet, consetanioa n ojdanon
                                                                 </div>
-                                                                <div
-                                                                    class="leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3">
-                                                                    Binus University
+                                                                <div class="text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta bibendum odio, id egestas ex condimentum vitae. Integer eget ex libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi non nibh eu mi ullamcorper varius. Donec sit amet dolor sed ex pharetra egestas. Aenean malesuada quis est vitae pellentesque. Nullam interdum, mauris nec finibus lacinia, leo risus aliquet nibh, vel imperdiet ex mi feugiat elit. Cras condimentum elit nulla, quis sagittis mauris volutpat eget. Sed tristique eu turpis ultricies pellentesque. Donec at ligula nisl. Nunc porta, quam vitae dapibus tristique, erat quam placerat nibh, vitae auctor leo tortor ac sem.
+                                                                    <p>
+                                                                    </p>
                                                                 </div>
                                                             </div>
                                                         </a>
                                                         <a href="#"
-                                                           class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2">
+                                                           class="grid grid-cols-2 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2">
                                                             <img
                                                                 src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
-                                                                class="h-12 w-12 rounded-full object-cover">
-                                                            <div
-                                                                class="col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm">
-                                                                <div class="leading-3 transition-all ease-in-out">
-                                                                    Ricko
+                                                                class="h-28 w-28 rounded-xl object-cover">
+                                                            <div class="grid grid-rows-2 gap-0 items-start text-left text-sm py-2">
+                                                                <div class="leading-3 transition-all ease-in-out truncate">
+                                                                    Lorem Ipsum dolor sit amet, consetanioa n ojdanon
                                                                 </div>
-                                                                <div
-                                                                    class="leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3">
-                                                                    Binus University
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#"
-                                                           class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2">
-                                                            <img
-                                                                src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
-                                                                class="h-12 w-12 rounded-full object-cover">
-                                                            <div
-                                                                class="col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm">
-                                                                <div class="leading-3 transition-all ease-in-out">
-                                                                    Ricko
-                                                                </div>
-                                                                <div
-                                                                    class="leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3">
-                                                                    Binus University
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#"
-                                                           class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2">
-                                                            <img
-                                                                src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
-                                                                class="h-12 w-12 rounded-full object-cover">
-                                                            <div
-                                                                class="col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm">
-                                                                <div class="leading-3 transition-all ease-in-out">
-                                                                    Ricko
-                                                                </div>
-                                                                <div
-                                                                    class="leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3">
-                                                                    Binus University
+                                                                <div class="text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta bibendum odio, id egestas ex condimentum vitae. Integer eget ex libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi non nibh eu mi ullamcorper varius. Donec sit amet dolor sed ex pharetra egestas. Aenean malesuada quis est vitae pellentesque. Nullam interdum, mauris nec finibus lacinia, leo risus aliquet nibh, vel imperdiet ex mi feugiat elit. Cras condimentum elit nulla, quis sagittis mauris volutpat eget. Sed tristique eu turpis ultricies pellentesque. Donec at ligula nisl. Nunc porta, quam vitae dapibus tristique, erat quam placerat nibh, vitae auctor leo tortor ac sem.
+                                                                    <p>
+                                                                    </p>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -674,12 +640,12 @@ export default {
             // document.getElementById('#')
             eval(navname).classList.remove('hidden')
             setTimeout(function () {
-                eval(navname).classList.add('h-96')
+                eval(navname).classList.add('h-80')
             }, 10)
 
         },
         modalclose(navname) {
-            eval(navname).classList.remove('h-96')
+            eval(navname).classList.remove('h-80')
             eval(navname).classList.add('h-0')
             setTimeout(function () {
                 eval(navname).classList.add('hidden')

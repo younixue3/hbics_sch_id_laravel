@@ -622,40 +622,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -685,11 +651,11 @@ __webpack_require__.r(__webpack_exports__);
       // document.getElementById('#')
       eval(navname).classList.remove('hidden');
       setTimeout(function () {
-        eval(navname).classList.add('h-96');
+        eval(navname).classList.add('h-80');
       }, 10);
     },
     modalclose: function modalclose(navname) {
-      eval(navname).classList.remove('h-96');
+      eval(navname).classList.remove('h-80');
       eval(navname).classList.add('h-0');
       setTimeout(function () {
         eval(navname).classList.add('hidden');
@@ -993,7 +959,7 @@ var render = function () {
                                         "div",
                                         {
                                           staticClass:
-                                            "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-2",
+                                            "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5",
                                         },
                                         [
                                           _c(
@@ -1183,20 +1149,20 @@ var render = function () {
                       staticClass:
                         "m-auto transition-all ease-in-out duration-300",
                       class: _vm.show ? "h-16" : "h-0",
-                      attrs: { src: _vm.logo, alt: "" },
-                    }),
-                    _vm._v(" "),
-                    _c("img", {
-                      staticClass:
-                        "m-auto transition-all ease-in-out duration-300",
-                      class: _vm.show ? "h-0" : "h-24",
                       attrs: { src: _vm.imagewhite, alt: "" },
                     }),
                     _vm._v(" "),
                     _c("img", {
                       staticClass:
                         "m-auto transition-all ease-in-out duration-300",
-                      class: _vm.show ? "h-0" : "h-20",
+                      class: _vm.show ? "h-0" : "h-24",
+                      attrs: { src: _vm.logo, alt: "" },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass:
+                        "m-auto transition-all ease-in-out duration-300",
+                      class: _vm.show ? "h-0" : "h-28",
                       attrs: { src: _vm.footerwhite, alt: "" },
                     }),
                   ]),
@@ -1598,7 +1564,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-2",
+            "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5",
         },
         [
           _c(
@@ -1984,35 +1950,31 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex justify-center gap-x-5 pt-5" }, [
+    return _c("div", { staticClass: "flex justify-between gap-x-5 p-5" }, [
       _c(
         "a",
         {
           staticClass:
-            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 text-2xl",
+            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
           attrs: { href: "#" },
         },
-        [_c("i", { staticClass: "fab fa-facebook" })]
+        [
+          _c("i", { staticClass: "fas fa-user-graduate text-xs mr-3" }),
+          _vm._v("Alumni"),
+        ]
       ),
       _vm._v(" "),
       _c(
         "a",
         {
           staticClass:
-            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-pink-500 to-gray-700 hover:to-violet-500 text-2xl",
+            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
           attrs: { href: "#" },
         },
-        [_c("i", { staticClass: "fab fa-instagram-square" })]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-red-600 to-gray-700 hover:to-rose-400 text-2xl",
-          attrs: { href: "#" },
-        },
-        [_c("i", { staticClass: "fab fa-youtube" })]
+        [
+          _c("i", { staticClass: "fas fa-chalkboard-teacher text-xs mr-3" }),
+          _vm._v("Guru"),
+        ]
       ),
     ])
   },
@@ -2033,7 +1995,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "grid grid-rows-2 items-center justify-items-stretch row-span-2 p-2",
+            "grid grid-rows-2 items-center justify-items-stretch row-span-2 p-0.5",
         },
         [
           _c(
@@ -2148,7 +2110,7 @@ var staticRenderFns = [
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "row-span-3 grid grid-rows-2 p-5" }, [
+      _c("div", { staticClass: "row-span-3 grid grid-rows-2 px-5" }, [
         _c("div", [
           _c("span", { staticClass: "text-xs font-light h-5" }, [
             _vm._v("Alumni"),
@@ -2372,7 +2334,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "grid grid-rows-2 items-center justify-items-stretch row-span-2 p-2",
+            "grid grid-rows-2 items-center justify-items-stretch row-span-2 p-0.5",
         },
         [
           _c(
@@ -2487,22 +2449,20 @@ var staticRenderFns = [
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "px-5" }, [
-        _c("span", { staticClass: "text-xs font-light h-5" }, [
-          _vm._v("Alumni"),
-        ]),
+      _c("div", { staticClass: "px-5 h-52" }, [
+        _c("span", { staticClass: "text-xs font-light" }, [_vm._v("Alumni")]),
         _vm._v(" "),
         _c("div", { staticClass: "grid grid-cols-2 gap-5" }, [
           _c(
             "a",
             {
               staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
+                "grid grid-cols-2 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2",
               attrs: { href: "#" },
             },
             [
               _c("img", {
-                staticClass: "h-12 w-12 rounded-full object-cover",
+                staticClass: "h-28 w-28 rounded-xl object-cover",
                 attrs: {
                   src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
                 },
@@ -2512,15 +2472,18 @@ var staticRenderFns = [
                 "div",
                 {
                   staticClass:
-                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
+                    "grid grid-rows-2 gap-0 items-start text-left text-sm py-2",
                 },
                 [
                   _c(
                     "div",
-                    { staticClass: "leading-3 transition-all ease-in-out" },
+                    {
+                      staticClass:
+                        "leading-3 transition-all ease-in-out truncate",
+                    },
                     [
                       _vm._v(
-                        "\n                                                                Ricko\n                                                            "
+                        "\n                                                                Lorem Ipsum dolor sit amet, consetanioa n ojdanon\n                                                            "
                       ),
                     ]
                   ),
@@ -2529,12 +2492,13 @@ var staticRenderFns = [
                     "div",
                     {
                       staticClass:
-                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
+                        "text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9",
                     },
                     [
                       _vm._v(
-                        "\n                                                                Binus University\n                                                            "
+                        "\n                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta bibendum odio, id egestas ex condimentum vitae. Integer eget ex libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi non nibh eu mi ullamcorper varius. Donec sit amet dolor sed ex pharetra egestas. Aenean malesuada quis est vitae pellentesque. Nullam interdum, mauris nec finibus lacinia, leo risus aliquet nibh, vel imperdiet ex mi feugiat elit. Cras condimentum elit nulla, quis sagittis mauris volutpat eget. Sed tristique eu turpis ultricies pellentesque. Donec at ligula nisl. Nunc porta, quam vitae dapibus tristique, erat quam placerat nibh, vitae auctor leo tortor ac sem.\n                                                                "
                       ),
+                      _c("p"),
                     ]
                   ),
                 ]
@@ -2546,12 +2510,12 @@ var staticRenderFns = [
             "a",
             {
               staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
+                "grid grid-cols-2 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2",
               attrs: { href: "#" },
             },
             [
               _c("img", {
-                staticClass: "h-12 w-12 rounded-full object-cover",
+                staticClass: "h-28 w-28 rounded-xl object-cover",
                 attrs: {
                   src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
                 },
@@ -2561,15 +2525,18 @@ var staticRenderFns = [
                 "div",
                 {
                   staticClass:
-                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
+                    "grid grid-rows-2 gap-0 items-start text-left text-sm py-2",
                 },
                 [
                   _c(
                     "div",
-                    { staticClass: "leading-3 transition-all ease-in-out" },
+                    {
+                      staticClass:
+                        "leading-3 transition-all ease-in-out truncate",
+                    },
                     [
                       _vm._v(
-                        "\n                                                                Ricko\n                                                            "
+                        "\n                                                                Lorem Ipsum dolor sit amet, consetanioa n ojdanon\n                                                            "
                       ),
                     ]
                   ),
@@ -2578,110 +2545,13 @@ var staticRenderFns = [
                     "div",
                     {
                       staticClass:
-                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
+                        "text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9",
                     },
                     [
                       _vm._v(
-                        "\n                                                                Binus University\n                                                            "
+                        "\n                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta bibendum odio, id egestas ex condimentum vitae. Integer eget ex libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi non nibh eu mi ullamcorper varius. Donec sit amet dolor sed ex pharetra egestas. Aenean malesuada quis est vitae pellentesque. Nullam interdum, mauris nec finibus lacinia, leo risus aliquet nibh, vel imperdiet ex mi feugiat elit. Cras condimentum elit nulla, quis sagittis mauris volutpat eget. Sed tristique eu turpis ultricies pellentesque. Donec at ligula nisl. Nunc porta, quam vitae dapibus tristique, erat quam placerat nibh, vitae auctor leo tortor ac sem.\n                                                                "
                       ),
-                    ]
-                  ),
-                ]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
-              attrs: { href: "#" },
-            },
-            [
-              _c("img", {
-                staticClass: "h-12 w-12 rounded-full object-cover",
-                attrs: {
-                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                },
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
-                },
-                [
-                  _c(
-                    "div",
-                    { staticClass: "leading-3 transition-all ease-in-out" },
-                    [
-                      _vm._v(
-                        "\n                                                                Ricko\n                                                            "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
-                    },
-                    [
-                      _vm._v(
-                        "\n                                                                Binus University\n                                                            "
-                      ),
-                    ]
-                  ),
-                ]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
-              attrs: { href: "#" },
-            },
-            [
-              _c("img", {
-                staticClass: "h-12 w-12 rounded-full object-cover",
-                attrs: {
-                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                },
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
-                },
-                [
-                  _c(
-                    "div",
-                    { staticClass: "leading-3 transition-all ease-in-out" },
-                    [
-                      _vm._v(
-                        "\n                                                                Ricko\n                                                            "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
-                    },
-                    [
-                      _vm._v(
-                        "\n                                                                Binus University\n                                                            "
-                      ),
+                      _c("p"),
                     ]
                   ),
                 ]
