@@ -527,6 +527,138 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -754,7 +886,7 @@ var render = function () {
                         [
                           _c("span", { staticClass: "cursor-pointer" }, [
                             _vm._v(
-                              "\n                                        Pendaftaran\n                                    "
+                              "\n                                    Pendaftaran\n                                "
                             ),
                           ]),
                           _vm._v(" "),
@@ -792,7 +924,7 @@ var render = function () {
                         [
                           _c("span", { staticClass: "cursor-pointer" }, [
                             _vm._v(
-                              "\n                                        Akademis\n                                    "
+                              "\n                                    Akademis\n                                "
                             ),
                           ]),
                           _vm._v(" "),
@@ -1047,7 +1179,7 @@ var render = function () {
                         [
                           _c("span", { staticClass: "cursor-pointer" }, [
                             _vm._v(
-                              "\n                                        Komunitas\n                                    "
+                              "\n                                    Komunitas\n                                "
                             ),
                           ]),
                           _vm._v(" "),
@@ -1081,7 +1213,7 @@ var render = function () {
                         [
                           _c("span", { staticClass: "cursor-pointer" }, [
                             _vm._v(
-                              "\n                                        Publikasi\n                                    "
+                              "\n                                    Publikasi\n                                "
                             ),
                           ]),
                           _vm._v(" "),
@@ -1212,7 +1344,7 @@ var render = function () {
                             { staticClass: "ml-3 text-base text-gray-900" },
                             [
                               _vm._v(
-                                "\n                                Analytics\n                            "
+                                "\n                            Analytics\n                        "
                               ),
                             ]
                           ),
@@ -1257,7 +1389,7 @@ var render = function () {
                             { staticClass: "ml-3 text-base text-gray-900" },
                             [
                               _vm._v(
-                                "\n                                Engagement\n                            "
+                                "\n                            Engagement\n                        "
                               ),
                             ]
                           ),
@@ -1302,7 +1434,7 @@ var render = function () {
                             { staticClass: "ml-3 text-base text-gray-900" },
                             [
                               _vm._v(
-                                "\n                                Security\n                            "
+                                "\n                            Security\n                        "
                               ),
                             ]
                           ),
@@ -1347,7 +1479,7 @@ var render = function () {
                             { staticClass: "ml-3 text-base text-gray-900" },
                             [
                               _vm._v(
-                                "\n                                Integrations\n                            "
+                                "\n                            Integrations\n                        "
                               ),
                             ]
                           ),
@@ -1392,7 +1524,7 @@ var render = function () {
                             { staticClass: "ml-3 text-base text-gray-900" },
                             [
                               _vm._v(
-                                "\n                                Automations\n                            "
+                                "\n                            Automations\n                        "
                               ),
                             ]
                           ),
@@ -1466,7 +1598,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                    Petunjuk Pendaftaran\n                                                                "
+                          "\n                                                                Petunjuk Pendaftaran\n                                                            "
                         ),
                       ]
                     ),
@@ -1479,7 +1611,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                    Panduan mendaftar Sekolah Harapan Bangsa & Happy Holy Kids\n                                                                "
+                          "\n                                                                Panduan mendaftar Sekolah Harapan Bangsa & Happy\n                                                                Holy Kids\n                                                            "
                         ),
                       ]
                     ),
@@ -1521,7 +1653,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                    Program Beasiswa\n                                                                "
+                          "\n                                                                Program Beasiswa\n                                                            "
                         ),
                       ]
                     ),
@@ -1534,7 +1666,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                    Berbagai program Beasiswa Sekolah Harapan Bangsa & Happy Holy Kids\n                                                                "
+                          "\n                                                                Berbagai program Beasiswa Sekolah Harapan Bangsa &\n                                                                Happy Holy Kids\n                                                            "
                         ),
                       ]
                     ),
@@ -1576,7 +1708,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                    Pendaftaran Siswa Baru\n                                                                "
+                          "\n                                                                Pendaftaran Siswa Baru\n                                                            "
                         ),
                       ]
                     ),
@@ -1589,7 +1721,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                    Pendaftaran Calon Siswa Sekolah harapan Bangsa\n                                                                "
+                          "\n                                                                Pendaftaran Calon Siswa Sekolah harapan Bangsa\n                                                            "
                         ),
                       ]
                     ),
@@ -1631,7 +1763,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                    Kunjungi Kami\n                                                                "
+                          "\n                                                                Kunjungi Kami\n                                                            "
                         ),
                       ]
                     ),
@@ -1644,7 +1776,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                    Alamat dan jadwal kunjungan ke Sekolah Harapan bangsa\n                                                                "
+                          "\n                                                                Alamat dan jadwal kunjungan ke Sekolah Harapan\n                                                                bangsa\n                                                            "
                         ),
                       ]
                     ),
@@ -1702,7 +1834,7 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
           _vm._v(
-            "\n                                                                    Happy Holy Kids\n                                                                "
+            "\n                                                                Happy Holy Kids\n                                                            "
           ),
         ]),
         _vm._v(" "),
@@ -1713,7 +1845,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                                                    Kelompok bermain & Taman Kanak-kanak\n                                                                "
+              "\n                                                                Kelompok bermain & Taman Kanak-kanak\n                                                            "
             ),
           ]
         ),
@@ -1733,7 +1865,7 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
           _vm._v(
-            "\n                                                                    Sekolah Dasar\n                                                                "
+            "\n                                                                Sekolah Dasar\n                                                            "
           ),
         ]),
         _vm._v(" "),
@@ -1744,7 +1876,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                                                    Sekolah dasar Harapan Bangsa\n                                                                "
+              "\n                                                                Sekolah dasar Harapan Bangsa\n                                                            "
             ),
           ]
         ),
@@ -1764,7 +1896,7 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
           _vm._v(
-            "\n                                                                    Sekolah Menengah Pertama\n                                                                "
+            "\n                                                                Sekolah Menengah Pertama\n                                                            "
           ),
         ]),
         _vm._v(" "),
@@ -1775,7 +1907,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                                                    Sekolah menegah pertama Harapan Bangsa\n                                                                "
+              "\n                                                                Sekolah menegah pertama Harapan Bangsa\n                                                            "
             ),
           ]
         ),
@@ -1795,7 +1927,7 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
           _vm._v(
-            "\n                                                                    Sekolah Menengah Atas\n                                                                "
+            "\n                                                                Sekolah Menengah Atas\n                                                            "
           ),
         ]),
         _vm._v(" "),
@@ -1806,7 +1938,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                                                    Sekolah menengah atas Harapan Bangsa\n                                                                "
+              "\n                                                                Sekolah menengah atas Harapan Bangsa\n                                                            "
             ),
           ]
         ),
@@ -1901,7 +2033,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                    Alumni\n                                                                "
+                          "\n                                                                Alumni\n                                                            "
                         ),
                       ]
                     ),
@@ -1914,7 +2046,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                    Alumni Siswa Sekolah Harapan Bangsa & Happy Holy Kids\n                                                                "
+                          "\n                                                                Alumni Siswa Sekolah Harapan Bangsa & Happy Holy\n                                                                Kids\n                                                            "
                         ),
                       ]
                     ),
@@ -1956,7 +2088,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                    Orang Tua\n                                                                "
+                          "\n                                                                Orang Tua\n                                                            "
                         ),
                       ]
                     ),
@@ -1969,7 +2101,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                    Orang Tua/Wali Siswa dan Alumni Sekolah Harapan Bangsa dan Happy Holy Kids\n                                                                "
+                          "\n                                                                Orang Tua/Wali Siswa dan Alumni Sekolah Harapan\n                                                                Bangsa dan Happy Holy Kids\n                                                            "
                         ),
                       ]
                     ),
@@ -2015,7 +2147,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                        Ricko\n                                                                    "
+                          "\n                                                                    Ricko\n                                                                "
                         ),
                       ]
                     ),
@@ -2028,7 +2160,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                        Binus University\n                                                                    "
+                          "\n                                                                    Binus University\n                                                                "
                         ),
                       ]
                     ),
@@ -2064,7 +2196,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                        Ricko\n                                                                    "
+                          "\n                                                                    Ricko\n                                                                "
                         ),
                       ]
                     ),
@@ -2077,7 +2209,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                        Binus University\n                                                                    "
+                          "\n                                                                    Binus University\n                                                                "
                         ),
                       ]
                     ),
@@ -2121,7 +2253,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                        Ricko\n                                                                    "
+                          "\n                                                                    Ricko\n                                                                "
                         ),
                       ]
                     ),
@@ -2134,7 +2266,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                        Binus University\n                                                                    "
+                          "\n                                                                    Binus University\n                                                                "
                         ),
                       ]
                     ),
@@ -2170,7 +2302,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                        Ricko\n                                                                    "
+                          "\n                                                                    Ricko\n                                                                "
                         ),
                       ]
                     ),
@@ -2183,7 +2315,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                        Binus University\n                                                                    "
+                          "\n                                                                    Binus University\n                                                                "
                         ),
                       ]
                     ),
@@ -2240,7 +2372,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                    Berita\n                                                                "
+                          "\n                                                                Berita\n                                                            "
                         ),
                       ]
                     ),
@@ -2253,7 +2385,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                    Berita seputar Sekolah Harapan Bangsa, Happy Holy Kids dan Dunia Pendidikan\n                                                                "
+                          "\n                                                                Berita seputar Sekolah Harapan Bangsa, Happy Holy\n                                                                Kids dan Dunia Pendidikan\n                                                            "
                         ),
                       ]
                     ),
@@ -2295,7 +2427,7 @@ var staticRenderFns = [
                       { staticClass: "leading-3 transition-all ease-in-out" },
                       [
                         _vm._v(
-                          "\n                                                                    Acara\n                                                                "
+                          "\n                                                                Acara\n                                                            "
                         ),
                       ]
                     ),
@@ -2308,7 +2440,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                    Acara Sekolah Harapan Bangsa dan Happy Holy Kids yang telah di selengarakan\n                                                                "
+                          "\n                                                                Acara Sekolah Harapan Bangsa dan Happy Holy Kids\n                                                                yang telah di selengarakan\n                                                            "
                         ),
                       ]
                     ),
@@ -2353,7 +2485,7 @@ var staticRenderFns = [
                     { staticClass: "leading-3 transition-all ease-in-out" },
                     [
                       _vm._v(
-                        "\n                                                                    Ricko\n                                                                "
+                        "\n                                                                Ricko\n                                                            "
                       ),
                     ]
                   ),
@@ -2366,7 +2498,7 @@ var staticRenderFns = [
                     },
                     [
                       _vm._v(
-                        "\n                                                                    Binus University\n                                                                "
+                        "\n                                                                Binus University\n                                                            "
                       ),
                     ]
                   ),
@@ -2402,7 +2534,7 @@ var staticRenderFns = [
                     { staticClass: "leading-3 transition-all ease-in-out" },
                     [
                       _vm._v(
-                        "\n                                                                    Ricko\n                                                                "
+                        "\n                                                                Ricko\n                                                            "
                       ),
                     ]
                   ),
@@ -2415,7 +2547,7 @@ var staticRenderFns = [
                     },
                     [
                       _vm._v(
-                        "\n                                                                    Binus University\n                                                                "
+                        "\n                                                                Binus University\n                                                            "
                       ),
                     ]
                   ),
@@ -2451,7 +2583,7 @@ var staticRenderFns = [
                     { staticClass: "leading-3 transition-all ease-in-out" },
                     [
                       _vm._v(
-                        "\n                                                                    Ricko\n                                                                "
+                        "\n                                                                Ricko\n                                                            "
                       ),
                     ]
                   ),
@@ -2464,7 +2596,7 @@ var staticRenderFns = [
                     },
                     [
                       _vm._v(
-                        "\n                                                                    Binus University\n                                                                "
+                        "\n                                                                Binus University\n                                                            "
                       ),
                     ]
                   ),
@@ -2500,7 +2632,7 @@ var staticRenderFns = [
                     { staticClass: "leading-3 transition-all ease-in-out" },
                     [
                       _vm._v(
-                        "\n                                                                    Ricko\n                                                                "
+                        "\n                                                                Ricko\n                                                            "
                       ),
                     ]
                   ),
@@ -2513,7 +2645,7 @@ var staticRenderFns = [
                     },
                     [
                       _vm._v(
-                        "\n                                                                    Binus University\n                                                                "
+                        "\n                                                                Binus University\n                                                            "
                       ),
                     ]
                   ),
@@ -2553,7 +2685,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                Pricing\n                            "
+              "\n                            Pricing\n                        "
             ),
           ]
         ),
@@ -2566,7 +2698,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                Docs\n                            "
+              "\n                            Docs\n                        "
             ),
           ]
         ),
@@ -2579,7 +2711,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                Help Center\n                            "
+              "\n                            Help Center\n                        "
             ),
           ]
         ),
@@ -2592,7 +2724,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                Guides\n                            "
+              "\n                            Guides\n                        "
             ),
           ]
         ),
@@ -2605,7 +2737,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                Events\n                            "
+              "\n                            Events\n                        "
             ),
           ]
         ),
@@ -2618,7 +2750,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                Security\n                            "
+              "\n                            Security\n                        "
             ),
           ]
         ),
@@ -2634,14 +2766,14 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                Sign up\n                            "
+              "\n                            Sign up\n                        "
             ),
           ]
         ),
         _vm._v(" "),
         _c("p", { staticClass: "mt-6 text-center text-base text-white" }, [
           _vm._v(
-            "\n                                Existing customer?\n                                "
+            "\n                            Existing customer?\n                            "
           ),
           _c(
             "a",
@@ -2651,7 +2783,7 @@ var staticRenderFns = [
             },
             [
               _vm._v(
-                "\n                                    Sign in\n                                "
+                "\n                                Sign in\n                            "
               ),
             ]
           ),
