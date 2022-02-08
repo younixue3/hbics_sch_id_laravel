@@ -724,6 +724,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-80 {
   height: 20rem;
 }
+.h-96 {
+  height: 24rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -777,6 +780,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[60rem\] {
   width: 60rem;
+}
+.w-\[\] {
+  width: ;
+}
+.w-\[52rem\] {
+  width: 52rem;
+}
+.w-\[35rem\] {
+  width: 35rem;
+}
+.w-\[30rem\] {
+  width: 30rem;
+}
+.w-\[33rem\] {
+  width: 33rem;
+}
+.w-\[38rem\] {
+  width: 38rem;
 }
 .max-w-6xl {
   max-width: 72rem;
@@ -864,6 +885,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .gap-2 {
   gap: 0.5rem;
+}
+.gap-10 {
+  gap: 2.5rem;
+}
+.gap-5 {
+  gap: 1.25rem;
 }
 .gap-y-10 {
   row-gap: 2.5rem;
@@ -1167,6 +1194,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1187,6 +1218,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+.pl-10 {
+  padding-left: 2.5rem;
 }
 .text-left {
   text-align: left;
@@ -1230,6 +1264,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .text-8xl {
   font-size: 6rem;
+  line-height: 1;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 .font-semibold {
@@ -1367,6 +1409,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .ring-opacity-5 {
   --tw-ring-opacity: 0.05;
+}
+.drop-shadow {
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .grayscale {
   --tw-grayscale: grayscale(100%);
