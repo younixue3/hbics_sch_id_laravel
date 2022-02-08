@@ -17,17 +17,25 @@
                         <i class="fas fa-quote-right"></i>
                     </div>
                     <div class="relative my-20 z-10 text-lg">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis dui tempor, porta justo vel, suscipit tellus. Vivamus sed lectus nec tellus fringilla fermentum vel nec lorem. Nullam eros urna, rutrum ac euismod eu, ultricies sed nibh. Vivamus finibus ligula non tempus consequat.<span class="mx-3 italic font-light"> - Jane Doe - </span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis dui tempor, porta
+                            justo vel, suscipit tellus. Vivamus sed lectus nec tellus fringilla fermentum vel nec lorem.
+                            Nullam eros urna, rutrum ac euismod eu, ultricies sed nibh. Vivamus finibus ligula non
+                            tempus consequat.<span class="mx-3 italic font-light"> - Jane Doe - </span></p>
                     </div>
                 </div>
             </div>
             <div class="flex">
                 <div>
-                    <img class="w-[35rem] h-96 bg-white rounded-3xl shadow-lg" src="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}">
+                    <img class="w-[35rem] h-96 bg-white rounded-3xl shadow-lg"
+                         src="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}">
                 </div>
                 <div class="grid grid-cols-1 gap-5 text-start pl-10 py-10">
                     <h1 class="text-4xl font-bold">SEKOLAH KARYA</h1>
-                    <p class="w-[38rem] italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis dui tempor, porta justo vel, suscipit tellus. Vivamus sed lectus nec tellus fringilla fermentum vel nec lorem. Nullam eros urna, rutrum ac euismod eu, ultricies sed nibh. Vivamus finibus ligula non tempus consequat. Vestibulum aliquam maximus odio ac varius. Suspendisse sapien lorem, fringilla ac augue eu, congue tempor magna.</p>
+                    <p class="w-[38rem] italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                        quis dui tempor, porta justo vel, suscipit tellus. Vivamus sed lectus nec tellus fringilla
+                        fermentum vel nec lorem. Nullam eros urna, rutrum ac euismod eu, ultricies sed nibh. Vivamus
+                        finibus ligula non tempus consequat. Vestibulum aliquam maximus odio ac varius. Suspendisse
+                        sapien lorem, fringilla ac augue eu, congue tempor magna.</p>
                 </div>
             </div>
             <div>
