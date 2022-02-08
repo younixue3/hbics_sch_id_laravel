@@ -1,10 +1,10 @@
 <template>
     <div>
-        <header ref="navbar" class="h-44 fixed w-screen transition-all ease-in-out duration-300 z-50" id="navBar">
+        <header ref="navbar" class="h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-10" id="navBar">
             <div>
-                <div :class="show ? 'bg-blue-900 h-16' : 'bg-transparent h-44'"
-                     class="px-5 sm:py-0 md:px-2 md:space-x-10 transition-all ease-in-out duration-300">
-                    <div class="grid grid-cols-11 place-items-center content-center text-center text-white">
+                <div :class="show ? 'bg-blue-900 h-20' : 'bg-transparent h-44'"
+                     class="transition-all ease-in-out duration-300">
+                    <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
                         <div class="">
                             <div class="-mr-2 -my-2 md:hidden">
                                 <button id="openMenu" type="button"
@@ -20,14 +20,14 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="col-span-4 justify-self-end">
-                            <div class="grid grid-cols-2 font-light">
+                        <div class="col-span-4 justify-self-end hidden md:block mr-20">
+                            <div class="grid grid-cols-2 font-light mb-2">
                                 <div>Home</div>
                                 <div>Tentang Kami</div>
                             </div>
-                            <div class="grid grid-cols-2 font-bold">
+                            <div class="grid grid-cols-2 gap-x-5 font-bold">
                                 <div @mouseover="modalshow('pendaftaran')" @mouseleave="modalclose('pendaftaran')">
-                                    <span class="cursor-pointer">
+                                    <span class="cursor-pointer text-lg">
                                         Pendaftaran
                                     </span>
                                     <div class="py-8 fixed -translate-x-3/4">
@@ -133,7 +133,7 @@
                                     </div>
                                 </div>
                                 <div @mouseover="modalshow('akademis')" @mouseleave="modalclose('akademis')">
-                                    <span class="cursor-pointer">
+                                    <span class="cursor-pointer text-lg">
                                         Akademis
                                     </span>
                                     <div class="py-8 fixed -translate-x-3/4">
@@ -235,21 +235,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="col-span-9 md:col-span-1">
                             <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-16' : 'h-0'"
                                  :src="imagewhite" alt="">
-                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-24'"
+                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-14 md:h-24'"
                                  :src="logo" alt="">
-                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-28'"
+                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-14 md:h-28'"
                                  :src="footerwhite" alt="">
                         </div>
-                        <div class="col-span-4 justify-self-start">
-                            <div class="grid grid-cols-2 font-light">
+                        <div class="col-span-4 justify-self-start hidden md:block ml-20">
+                            <div class="grid grid-cols-2 gap-x-5 font-light mb-2">
                                 <div>Hubungi kami</div>
                             </div>
                             <div class="grid grid-cols-2 font-bold">
                                 <div @mouseover="modalshow('komunitas')" @mouseleave="modalclose('komunitas')">
-                                    <span class="cursor-pointer">
+                                    <span class="cursor-pointer text-lg">
                                         Komunitas
                                     </span>
                                     <div class="py-8 fixed">
@@ -382,15 +382,15 @@
                                     </div>
                                 </div>
                                 <div @mouseover="modalshow('publikasi')" @mouseleave="modalclose('publikasi')">
-                                    <span class="cursor-pointer">
+                                    <span class="cursor-pointer text-lg">
                                         Publikasi
                                     </span>
                                     <div class="py-8 fixed">
                                         <div ref="publikasi" id="publikasi"
-                                             class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-[36rem] z-50 transition-all ease-in-out duration-300 overflow-hidden">
+                                             class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-[31rem] z-50 transition-all ease-in-out duration-300 overflow-hidden">
                                             <div class="h-full grid grid-rows-5 divide-y-2">
                                                 <div
-                                                    class="grid grid-rows-2 items-center justify-items-stretch row-span-2 p-0.5">
+                                                    class="grid grid-rows-3 items-center justify-items-stretch row-span-3 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
                                                        href="#">
                                                         <div class="flex gap-x-5 text-center">
@@ -433,15 +433,35 @@
                                                             </div>
                                                         </div>
                                                     </a>
+                                                    <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
+                                                       href="#">
+                                                        <div class="flex gap-x-5 text-center">
+                                                            <div class="w-20">
+                                                                <div
+                                                                    class="bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200">
+                                                                    <i class="fas fa-brain"></i></div>
+                                                            </div>
+                                                            <div
+                                                                class="w-full grid grid-rows-2 gap-0 items-center text-left text-sm">
+                                                                <div class="leading-3 transition-all ease-in-out">
+                                                                    Artikel
+                                                                </div>
+                                                                <div
+                                                                    class="text-xs font-light break-words leading-3 text-black">
+                                                                    Artikel Ilmiah edukasi seputar Ilmu pendidikan dan parenting
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                                <div class="px-5 h-52">
+                                                <div class="px-5 h-36 row-span-2">
                                                     <span class="text-xs font-light">Alumni</span>
-                                                    <div class="grid grid-cols-2 gap-5">
+                                                    <div class="grid grid-cols-2 gap-x-5">
                                                         <a href="#"
-                                                           class="grid grid-cols-2 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2">
+                                                           class="grid grid-cols-2 gap-x-1 text-center bg-white h-24 rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2">
                                                             <img
                                                                 src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
-                                                                class="h-28 w-28 rounded-xl object-cover">
+                                                                class="h-[4.5rem] w-[4.5rem] rounded-xl object-cover">
                                                             <div class="grid grid-rows-2 gap-0 items-start text-left text-sm py-2">
                                                                 <div class="leading-3 transition-all ease-in-out truncate">
                                                                     Lorem Ipsum dolor sit amet, consetanioa n ojdanon
@@ -457,7 +477,7 @@
                                                            class="grid grid-cols-2 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2">
                                                             <img
                                                                 src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
-                                                                class="h-28 w-28 rounded-xl object-cover">
+                                                                class="h-[4.5rem] w-[4.5rem] rounded-xl object-cover">
                                                             <div class="grid grid-rows-2 gap-0 items-start text-left text-sm py-2">
                                                                 <div class="leading-3 transition-all ease-in-out truncate">
                                                                     Lorem Ipsum dolor sit amet, consetanioa n ojdanon
@@ -477,11 +497,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="">ada</div>
+                        <div class=""><div class="hidden md:block">ada</div></div>
                     </div>
                 </div>
             </div>
-            <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50">
+            <div class="hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50">
                 <div
                     class="rounded-lg shadow-lg ring-1 ring-gray-800 ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                     <div class="pt-5 pb-6 px-5">

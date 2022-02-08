@@ -622,6 +622,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -808,7 +828,7 @@ var render = function () {
       {
         ref: "navbar",
         staticClass:
-          "h-44 fixed w-screen transition-all ease-in-out duration-300 z-50",
+          "h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-10",
         attrs: { id: "navBar" },
       },
       [
@@ -816,16 +836,15 @@ var render = function () {
           _c(
             "div",
             {
-              staticClass:
-                "px-5 sm:py-0 md:px-2 md:space-x-10 transition-all ease-in-out duration-300",
-              class: _vm.show ? "bg-blue-900 h-16" : "bg-transparent h-44",
+              staticClass: "transition-all ease-in-out duration-300",
+              class: _vm.show ? "bg-blue-900 h-20" : "bg-transparent h-44",
             },
             [
               _c(
                 "div",
                 {
                   staticClass:
-                    "grid grid-cols-11 place-items-center content-center text-center text-white",
+                    "pt-2 grid grid-cols-11 place-items-center content-center text-center text-white",
                 },
                 [
                   _c("div", {}, [
@@ -874,265 +893,284 @@ var render = function () {
                     ]),
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-span-4 justify-self-end" }, [
-                    _vm._m(0),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "grid grid-cols-2 font-bold" }, [
-                      _c(
-                        "div",
-                        {
-                          on: {
-                            mouseover: function ($event) {
-                              return _vm.modalshow("pendaftaran")
-                            },
-                            mouseleave: function ($event) {
-                              return _vm.modalclose("pendaftaran")
-                            },
-                          },
-                        },
-                        [
-                          _c("span", { staticClass: "cursor-pointer" }, [
-                            _vm._v(
-                              "\n                                    Pendaftaran\n                                "
-                            ),
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "py-8 fixed -translate-x-3/4" },
-                            [
-                              _c(
-                                "div",
-                                {
-                                  ref: "pendaftaran",
-                                  staticClass:
-                                    "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
-                                  attrs: { id: "pendaftaran" },
-                                },
-                                [_vm._m(1)]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-span-4 justify-self-end hidden md:block mr-20",
+                    },
+                    [
+                      _vm._m(0),
                       _vm._v(" "),
                       _c(
                         "div",
-                        {
-                          on: {
-                            mouseover: function ($event) {
-                              return _vm.modalshow("akademis")
-                            },
-                            mouseleave: function ($event) {
-                              return _vm.modalclose("akademis")
-                            },
-                          },
-                        },
+                        { staticClass: "grid grid-cols-2 gap-x-5 font-bold" },
                         [
-                          _c("span", { staticClass: "cursor-pointer" }, [
-                            _vm._v(
-                              "\n                                    Akademis\n                                "
-                            ),
-                          ]),
-                          _vm._v(" "),
                           _c(
                             "div",
-                            { staticClass: "py-8 fixed -translate-x-3/4" },
+                            {
+                              on: {
+                                mouseover: function ($event) {
+                                  return _vm.modalshow("pendaftaran")
+                                },
+                                mouseleave: function ($event) {
+                                  return _vm.modalclose("pendaftaran")
+                                },
+                              },
+                            },
                             [
                               _c(
+                                "span",
+                                { staticClass: "cursor-pointer text-lg" },
+                                [
+                                  _vm._v(
+                                    "\n                                    Pendaftaran\n                                "
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
                                 "div",
-                                {
-                                  ref: "akademis",
-                                  staticClass:
-                                    "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
-                                  attrs: { id: "akademis" },
-                                },
+                                { staticClass: "py-8 fixed -translate-x-3/4" },
                                 [
                                   _c(
                                     "div",
                                     {
+                                      ref: "pendaftaran",
                                       staticClass:
-                                        "h-full grid grid-rows-5 divide-y-2",
+                                        "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
+                                      attrs: { id: "pendaftaran" },
+                                    },
+                                    [_vm._m(1)]
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              on: {
+                                mouseover: function ($event) {
+                                  return _vm.modalshow("akademis")
+                                },
+                                mouseleave: function ($event) {
+                                  return _vm.modalclose("akademis")
+                                },
+                              },
+                            },
+                            [
+                              _c(
+                                "span",
+                                { staticClass: "cursor-pointer text-lg" },
+                                [
+                                  _vm._v(
+                                    "\n                                    Akademis\n                                "
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "py-8 fixed -translate-x-3/4" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      ref: "akademis",
+                                      staticClass:
+                                        "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
+                                      attrs: { id: "akademis" },
                                     },
                                     [
                                       _c(
                                         "div",
                                         {
                                           staticClass:
-                                            "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5",
+                                            "h-full grid grid-rows-5 divide-y-2",
                                         },
                                         [
                                           _c(
-                                            "a",
+                                            "div",
                                             {
                                               staticClass:
-                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                              attrs: { href: "#" },
+                                                "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5",
                                             },
                                             [
                                               _c(
-                                                "div",
+                                                "a",
                                                 {
                                                   staticClass:
-                                                    "flex gap-x-5 text-center",
+                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                  attrs: { href: "#" },
                                                 },
                                                 [
                                                   _c(
                                                     "div",
-                                                    { staticClass: "w-20" },
+                                                    {
+                                                      staticClass:
+                                                        "flex gap-x-5 text-center",
+                                                    },
                                                     [
                                                       _c(
                                                         "div",
-                                                        {
-                                                          staticClass:
-                                                            "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-1 transition-all ease-in duration-200",
-                                                        },
+                                                        { staticClass: "w-20" },
                                                         [
-                                                          _c("img", {
-                                                            attrs: {
-                                                              src: _vm.logohhk,
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-1 transition-all ease-in duration-200",
                                                             },
-                                                          }),
+                                                            [
+                                                              _c("img", {
+                                                                attrs: {
+                                                                  src: _vm.logohhk,
+                                                                },
+                                                              }),
+                                                            ]
+                                                          ),
                                                         ]
                                                       ),
+                                                      _vm._v(" "),
+                                                      _vm._m(2),
                                                     ]
                                                   ),
-                                                  _vm._v(" "),
-                                                  _vm._m(2),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass:
+                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                  attrs: { href: "#" },
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "flex gap-x-5 text-center",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        { staticClass: "w-20" },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                            },
+                                                            [
+                                                              _c("img", {
+                                                                attrs: {
+                                                                  src: _vm.logo,
+                                                                },
+                                                              }),
+                                                            ]
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _vm._m(3),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass:
+                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                  attrs: { href: "#" },
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "flex gap-x-5 text-center",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        { staticClass: "w-20" },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                            },
+                                                            [
+                                                              _c("img", {
+                                                                attrs: {
+                                                                  src: _vm.logo,
+                                                                },
+                                                              }),
+                                                            ]
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _vm._m(4),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass:
+                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                  attrs: { href: "#" },
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "flex gap-x-5 text-center",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        { staticClass: "w-20" },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                            },
+                                                            [
+                                                              _c("img", {
+                                                                attrs: {
+                                                                  src: _vm.logo,
+                                                                },
+                                                              }),
+                                                            ]
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _vm._m(5),
+                                                    ]
+                                                  ),
                                                 ]
                                               ),
                                             ]
                                           ),
                                           _vm._v(" "),
-                                          _c(
-                                            "a",
-                                            {
-                                              staticClass:
-                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                              attrs: { href: "#" },
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "flex gap-x-5 text-center",
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "w-20" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
-                                                        },
-                                                        [
-                                                          _c("img", {
-                                                            attrs: {
-                                                              src: _vm.logo,
-                                                            },
-                                                          }),
-                                                        ]
-                                                      ),
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _vm._m(3),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "a",
-                                            {
-                                              staticClass:
-                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                              attrs: { href: "#" },
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "flex gap-x-5 text-center",
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "w-20" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
-                                                        },
-                                                        [
-                                                          _c("img", {
-                                                            attrs: {
-                                                              src: _vm.logo,
-                                                            },
-                                                          }),
-                                                        ]
-                                                      ),
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _vm._m(4),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "a",
-                                            {
-                                              staticClass:
-                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                              attrs: { href: "#" },
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "flex gap-x-5 text-center",
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    { staticClass: "w-20" },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        {
-                                                          staticClass:
-                                                            "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
-                                                        },
-                                                        [
-                                                          _c("img", {
-                                                            attrs: {
-                                                              src: _vm.logo,
-                                                            },
-                                                          }),
-                                                        ]
-                                                      ),
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _vm._m(5),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
+                                          _vm._m(6),
                                         ]
                                       ),
-                                      _vm._v(" "),
-                                      _vm._m(6),
                                     ]
                                   ),
                                 ]
@@ -1141,10 +1179,10 @@ var render = function () {
                           ),
                         ]
                       ),
-                    ]),
-                  ]),
+                    ]
+                  ),
                   _vm._v(" "),
-                  _c("div", [
+                  _c("div", { staticClass: "col-span-9 md:col-span-1" }, [
                     _c("img", {
                       staticClass:
                         "m-auto transition-all ease-in-out duration-300",
@@ -1155,93 +1193,108 @@ var render = function () {
                     _c("img", {
                       staticClass:
                         "m-auto transition-all ease-in-out duration-300",
-                      class: _vm.show ? "h-0" : "h-24",
+                      class: _vm.show ? "h-0" : "h-14 md:h-24",
                       attrs: { src: _vm.logo, alt: "" },
                     }),
                     _vm._v(" "),
                     _c("img", {
                       staticClass:
                         "m-auto transition-all ease-in-out duration-300",
-                      class: _vm.show ? "h-0" : "h-28",
+                      class: _vm.show ? "h-0" : "h-14 md:h-28",
                       attrs: { src: _vm.footerwhite, alt: "" },
                     }),
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-span-4 justify-self-start" }, [
-                    _vm._m(7),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "grid grid-cols-2 font-bold" }, [
-                      _c(
-                        "div",
-                        {
-                          on: {
-                            mouseover: function ($event) {
-                              return _vm.modalshow("komunitas")
-                            },
-                            mouseleave: function ($event) {
-                              return _vm.modalclose("komunitas")
-                            },
-                          },
-                        },
-                        [
-                          _c("span", { staticClass: "cursor-pointer" }, [
-                            _vm._v(
-                              "\n                                    Komunitas\n                                "
-                            ),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "py-8 fixed" }, [
-                            _c(
-                              "div",
-                              {
-                                ref: "komunitas",
-                                staticClass:
-                                  "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-96 z-50 transition-all ease-in-out duration-300 overflow-hidden",
-                                attrs: { id: "komunitas" },
-                              },
-                              [_vm._m(8)]
-                            ),
-                          ]),
-                        ]
-                      ),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-span-4 justify-self-start hidden md:block ml-20",
+                    },
+                    [
+                      _vm._m(7),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          on: {
-                            mouseover: function ($event) {
-                              return _vm.modalshow("publikasi")
-                            },
-                            mouseleave: function ($event) {
-                              return _vm.modalclose("publikasi")
+                      _c("div", { staticClass: "grid grid-cols-2 font-bold" }, [
+                        _c(
+                          "div",
+                          {
+                            on: {
+                              mouseover: function ($event) {
+                                return _vm.modalshow("komunitas")
+                              },
+                              mouseleave: function ($event) {
+                                return _vm.modalclose("komunitas")
+                              },
                             },
                           },
-                        },
-                        [
-                          _c("span", { staticClass: "cursor-pointer" }, [
-                            _vm._v(
-                              "\n                                    Publikasi\n                                "
-                            ),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "py-8 fixed" }, [
+                          [
                             _c(
-                              "div",
-                              {
-                                ref: "publikasi",
-                                staticClass:
-                                  "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-[36rem] z-50 transition-all ease-in-out duration-300 overflow-hidden",
-                                attrs: { id: "publikasi" },
-                              },
-                              [_vm._m(9)]
+                              "span",
+                              { staticClass: "cursor-pointer text-lg" },
+                              [
+                                _vm._v(
+                                  "\n                                    Komunitas\n                                "
+                                ),
+                              ]
                             ),
-                          ]),
-                        ]
-                      ),
-                    ]),
-                  ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "py-8 fixed" }, [
+                              _c(
+                                "div",
+                                {
+                                  ref: "komunitas",
+                                  staticClass:
+                                    "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-96 z-50 transition-all ease-in-out duration-300 overflow-hidden",
+                                  attrs: { id: "komunitas" },
+                                },
+                                [_vm._m(8)]
+                              ),
+                            ]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            on: {
+                              mouseover: function ($event) {
+                                return _vm.modalshow("publikasi")
+                              },
+                              mouseleave: function ($event) {
+                                return _vm.modalclose("publikasi")
+                              },
+                            },
+                          },
+                          [
+                            _c(
+                              "span",
+                              { staticClass: "cursor-pointer text-lg" },
+                              [
+                                _vm._v(
+                                  "\n                                    Publikasi\n                                "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "py-8 fixed" }, [
+                              _c(
+                                "div",
+                                {
+                                  ref: "publikasi",
+                                  staticClass:
+                                    "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-[31rem] z-50 transition-all ease-in-out duration-300 overflow-hidden",
+                                  attrs: { id: "publikasi" },
+                                },
+                                [_vm._m(9)]
+                              ),
+                            ]),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
                   _vm._v(" "),
-                  _c("div", {}, [_vm._v("ada")]),
+                  _vm._m(10),
                 ]
               ),
             ]
@@ -1252,7 +1305,7 @@ var render = function () {
           "div",
           {
             staticClass:
-              "absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50",
+              "hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50",
           },
           [
             _c(
@@ -1535,7 +1588,7 @@ var render = function () {
                   ]),
                 ]),
                 _vm._v(" "),
-                _vm._m(10),
+                _vm._m(11),
               ]
             ),
           ]
@@ -1549,7 +1602,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "grid grid-cols-2 font-light" }, [
+    return _c("div", { staticClass: "grid grid-cols-2 font-light mb-2" }, [
       _c("div", [_vm._v("Home")]),
       _vm._v(" "),
       _c("div", [_vm._v("Tentang Kami")]),
@@ -1982,9 +2035,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "grid grid-cols-2 font-light" }, [
-      _c("div", [_vm._v("Hubungi kami")]),
-    ])
+    return _c(
+      "div",
+      { staticClass: "grid grid-cols-2 gap-x-5 font-light mb-2" },
+      [_c("div", [_vm._v("Hubungi kami")])]
+    )
   },
   function () {
     var _vm = this
@@ -2334,7 +2389,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "grid grid-rows-2 items-center justify-items-stretch row-span-2 p-0.5",
+            "grid grid-rows-3 items-center justify-items-stretch row-span-3 p-0.5",
         },
         [
           _c(
@@ -2446,23 +2501,78 @@ var staticRenderFns = [
               ]),
             ]
           ),
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "px-5 h-52" }, [
-        _c("span", { staticClass: "text-xs font-light" }, [_vm._v("Alumni")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid grid-cols-2 gap-5" }, [
+          _vm._v(" "),
           _c(
             "a",
             {
               staticClass:
-                "grid grid-cols-2 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2",
+                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+              attrs: { href: "#" },
+            },
+            [
+              _c("div", { staticClass: "flex gap-x-5 text-center" }, [
+                _c("div", { staticClass: "w-20" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
+                    },
+                    [_c("i", { staticClass: "fas fa-brain" })]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "leading-3 transition-all ease-in-out" },
+                      [
+                        _vm._v(
+                          "\n                                                                Artikel\n                                                            "
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "text-xs font-light break-words leading-3 text-black",
+                      },
+                      [
+                        _vm._v(
+                          "\n                                                                Artikel Ilmiah edukasi seputar Ilmu pendidikan dan parenting\n                                                            "
+                        ),
+                      ]
+                    ),
+                  ]
+                ),
+              ]),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "px-5 h-36 row-span-2" }, [
+        _c("span", { staticClass: "text-xs font-light" }, [_vm._v("Alumni")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "grid grid-cols-2 gap-x-5" }, [
+          _c(
+            "a",
+            {
+              staticClass:
+                "grid grid-cols-2 gap-x-1 text-center bg-white h-24 rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2",
               attrs: { href: "#" },
             },
             [
               _c("img", {
-                staticClass: "h-28 w-28 rounded-xl object-cover",
+                staticClass: "h-[4.5rem] w-[4.5rem] rounded-xl object-cover",
                 attrs: {
                   src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
                 },
@@ -2515,7 +2625,7 @@ var staticRenderFns = [
             },
             [
               _c("img", {
-                staticClass: "h-28 w-28 rounded-xl object-cover",
+                staticClass: "h-[4.5rem] w-[4.5rem] rounded-xl object-cover",
                 attrs: {
                   src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
                 },
@@ -2560,6 +2670,14 @@ var staticRenderFns = [
           ),
         ]),
       ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [
+      _c("div", { staticClass: "hidden md:block" }, [_vm._v("ada")]),
     ])
   },
   function () {
