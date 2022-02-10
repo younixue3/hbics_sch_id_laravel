@@ -16,7 +16,7 @@
                     <div class="absolute text-gray-300 -translate-x-10 -translate-y-10 text-8xl">
                         <i class="fas fa-quote-right"></i>
                     </div>
-                    <div class="relative my-20 z-10 text-lg">
+                    <div class="relative my-20 text-lg">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis dui tempor, porta
                             justo vel, suscipit tellus. Vivamus sed lectus nec tellus fringilla fermentum vel nec lorem.
                             Nullam eros urna, rutrum ac euismod eu, ultricies sed nibh. Vivamus finibus ligula non
@@ -25,8 +25,8 @@
                 </div>
             </div>
             <div class="flex">
-                <div>
-                    <img class="w-[35rem] h-96 bg-white rounded-3xl shadow-lg"
+                <div class="w-[35rem] h-96 bg-white rounded-3xl shadow-lg shadow-neutral-500">
+                    <img class="w-[35rem] h-96 rounded-3xl"
                          src="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}">
                 </div>
                 <div class="grid grid-cols-1 gap-5 text-start pl-10 py-10">
@@ -38,8 +38,19 @@
                         sapien lorem, fringilla ac augue eu, congue tempor magna.</p>
                 </div>
             </div>
-            <div>
-
+            <div class="flex">
+                <div class="w-3/4 h-96 grid grid-cols-6 grid-rows-6 gap-10">
+                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}" insight="60"></content-card-component>
+                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}" insight="40"></content-card-component>
+                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}" insight="30"></content-card-component>
+{{--                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}" insight="40"></content-card-component>--}}
+{{--                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}" insight="20"></content-card-component>--}}
+{{--                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}" insight="10"></content-card-component>--}}
+{{--                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}" insight="50"></content-card-component>--}}
+                </div>
+                <div>
+                    <h1 class="text-4xl font-bold uppercase">Prestasi Kami</h1>
+                </div>
             </div>
         </div>
     </div>
