@@ -981,8 +981,8 @@ var render = function () {
           staticClass:
             "absolute rounded-t-xl bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden px-2",
           class: [
-            _vm.showup ? "h-1/2" : "h-1/6",
-            _vm.rows && _vm.showup ? "h-1/3" : "",
+            _vm.showup ? "h-1/2" : "md:h-1/6",
+            _vm.rows && _vm.showup ? "h-1/2 md:h-1/3" : "",
           ],
         },
         [
@@ -992,7 +992,7 @@ var render = function () {
                 "span",
                 {
                   staticClass: "text-lg font-bold truncate",
-                  class: _vm.column ? "text-4xl" : "",
+                  class: _vm.column ? "md:text-4xl" : "",
                 },
                 [_vm._v(_vm._s(_vm.title))]
               ),
@@ -1001,10 +1001,10 @@ var render = function () {
                 "p",
                 {
                   staticClass:
-                    "mt-2 h-12 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300",
+                    "mt-2 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300",
                   class: [
                     _vm.showup
-                      ? "h-5 translate-y-0 opacity-100"
+                      ? "h-9 md:h-12 translate-y-0 opacity-100"
                       : "h-5 translate-y-10 opacity-0",
                     _vm.column ? "" : "",
                   ],

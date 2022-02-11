@@ -1,10 +1,10 @@
 <template>
     <div @mouseover="onHover()" @mouseleave="onLeave()" :class="[column ? 'md:col-span-2' : 'md:col-span-1', rows ? 'md:row-span-2' : 'md:row-span-1']" class="relative bg-cover h-52 md:h-full bg-center col-span-1 transition-all ease-in-out duration-200 rounded-2xl shadow-lg shadow-neutral-300" :style="{ backgroundImage: `url('${imagecontent}')` }">
-        <div class="absolute rounded-t-xl bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden px-2" :class="[showup ? 'h-1/2' : 'h-1/6', rows && showup ? 'h-1/3' : '']">
+        <div class="absolute rounded-t-xl bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden px-2" :class="[showup ? 'h-1/2' : 'md:h-1/6', rows && showup ? 'h-1/2 md:h-1/3' : '']">
             <div class="relative h-full">
                 <div class="static">
-                    <span class="text-lg font-bold truncate" :class="column ? 'text-4xl' : ''">{{title}}</span>
-                    <p class="mt-2 h-12 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300" :class="[showup ? 'h-5 translate-y-0 opacity-100' : 'h-5 translate-y-10 opacity-0', column ? '' : '']">{{content}}</p>
+                    <span class="text-lg font-bold truncate" :class="column ? 'md:text-4xl' : ''">{{title}}</span>
+                    <p class="mt-2 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300" :class="[showup ? 'h-9 md:h-12 translate-y-0 opacity-100' : 'h-5 translate-y-10 opacity-0', column ? '' : '']">{{content}}</p>
                 </div>
                 <div class="absolute w-full bottom-0 h-5 flex justify-between self-end mt-12 transition-all ease-in-out mb-2 flex" :class="showup ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
                     <div class="flex h-5 gap-x-1">
