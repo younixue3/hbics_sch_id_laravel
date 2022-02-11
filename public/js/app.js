@@ -20,6 +20,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -28,7 +39,7 @@ __webpack_require__.r(__webpack_exports__);
       rows: false
     };
   },
-  props: ['imagecontent', 'id', 'insight'],
+  props: ['imagecontent', 'id', 'insight', 'title', 'content'],
   created: function created() {
     if (this.insight > 40) {
       this.column = true;
@@ -947,7 +958,7 @@ var render = function () {
     "div",
     {
       staticClass:
-        "relative bg-cover h-96 bg-center transition-all ease-in-out duration-200",
+        "relative bg-cover h-full bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg shadow-neutral-300",
       class: [
         _vm.column ? "col-span-2" : "col-span-1",
         _vm.rows ? "row-span-2" : "row-span-1",
@@ -967,15 +978,60 @@ var render = function () {
         "div",
         {
           staticClass:
-            "absolute bg-white w-full bottom-0 transition-all ease-in-out duration-200",
-          class: _vm.showup ? "h-52" : "h-20",
+            "absolute rounded-t-xl bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden px-2",
+          class: _vm.showup ? "h-1/3" : "h-1/6",
         },
-        [_vm._v("\n        asd\n    ")]
+        [
+          _c("span", { staticClass: "font-bold truncate" }, [
+            _vm._v(_vm._s(_vm.title)),
+          ]),
+          _vm._v(" "),
+          _c(
+            "p",
+            {
+              staticClass: "mt-2 h-16 leading-4 overflow-hidden text-ellipsis",
+              class: _vm.rows ? "" : "hidden",
+            },
+            [_vm._v(_vm._s(_vm.content))]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "border-t-2 mt-3 flex justify-between pt-2" },
+            [
+              _c("div", { staticClass: "flex gap-x-1" }, [
+                _c("img", {
+                  staticClass: "rounded-full h-5 w-5",
+                  attrs: { src: _vm.imagecontent },
+                }),
+                _vm._v(" "),
+                _c("span", [_vm._v("Ricko Tiaka")]),
+              ]),
+              _vm._v(" "),
+              _vm._m(0),
+            ]
+          ),
+        ]
       ),
     ]
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex gap-x-5" }, [
+      _c("button", { staticClass: "text-lg" }, [
+        _c("i", { staticClass: "fas fa-heart" }),
+      ]),
+      _vm._v(" "),
+      _c("button", { staticClass: "text-lg" }, [
+        _c("i", { staticClass: "fas fa-share" }),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
