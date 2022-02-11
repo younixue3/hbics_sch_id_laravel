@@ -1,10 +1,10 @@
 <template>
-    <div @mouseover="onHover()" @mouseleave="onLeave()" :class="[column ? 'col-span-2' : 'col-span-1', rows ? 'row-span-2' : 'row-span-1']" class="relative bg-cover h-full bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg shadow-neutral-300" :style="{ backgroundImage: `url('${imagecontent}')` }">
+    <div @mouseover="onHover()" @mouseleave="onLeave()" :class="[column ? 'md:col-span-2' : 'md:col-span-1', rows ? 'md:row-span-2' : 'md:row-span-1']" class="relative bg-cover h-52 md:h-full bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg shadow-neutral-300" :style="{ backgroundImage: `url('${imagecontent}')` }">
         <div class="absolute rounded-t-xl bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden px-2 py-" :class="showup ? 'h-1/3' : 'h-1/6'">
             <div class="grid grid-rows-2">
                 <div>
-                    <span class="font-bold truncate">{{title}}</span>
-                    <p class="mt-2 h-12 leading-4 overflow-hidden text-ellipsis" :class="rows ? '' : 'hidden'">{{content}}</p>
+                    <span class="text-lg font-bold truncate">{{title}}</span>
+                    <p class="mt-2 h-12 leading-4 overflow-hidden text-ellipsis text-sm font-light" :class="rows ? '' : 'hidden'">{{content}}</p>
                 </div>
                 <div class="h-5 flex justify-between self-center">
                     <div class="flex h-5 gap-x-1">

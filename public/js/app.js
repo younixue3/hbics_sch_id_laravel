@@ -962,10 +962,10 @@ var render = function () {
     "div",
     {
       staticClass:
-        "relative bg-cover h-full bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg shadow-neutral-300",
+        "relative bg-cover h-52 md:h-full bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg shadow-neutral-300",
       class: [
-        _vm.column ? "col-span-2" : "col-span-1",
-        _vm.rows ? "row-span-2" : "row-span-1",
+        _vm.column ? "md:col-span-2" : "md:col-span-1",
+        _vm.rows ? "md:row-span-2" : "md:row-span-1",
       ],
       style: { backgroundImage: "url('" + _vm.imagecontent + "')" },
       on: {
@@ -988,7 +988,7 @@ var render = function () {
         [
           _c("div", { staticClass: "grid grid-rows-2" }, [
             _c("div", [
-              _c("span", { staticClass: "font-bold truncate" }, [
+              _c("span", { staticClass: "text-lg font-bold truncate" }, [
                 _vm._v(_vm._s(_vm.title)),
               ]),
               _vm._v(" "),
@@ -996,7 +996,7 @@ var render = function () {
                 "p",
                 {
                   staticClass:
-                    "mt-2 h-12 leading-4 overflow-hidden text-ellipsis",
+                    "mt-2 h-12 leading-4 overflow-hidden text-ellipsis text-sm font-light",
                   class: _vm.rows ? "" : "hidden",
                 },
                 [_vm._v(_vm._s(_vm.content))]
