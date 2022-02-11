@@ -49,9 +49,6 @@ __webpack_require__.r(__webpack_exports__);
       this.column = true;
       this.rows = true;
     } else if (this.insight > 30) {
-      this.column = false;
-      this.rows = true;
-    } else if (this.insight > 20) {
       this.column = true;
       this.rows = false;
     }
@@ -962,7 +959,7 @@ var render = function () {
     "div",
     {
       staticClass:
-        "relative bg-cover h-52 md:h-full bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg shadow-neutral-300",
+        "relative bg-cover h-52 md:h-full bg-center col-span-1 transition-all ease-in-out duration-200 rounded-2xl shadow-lg shadow-neutral-300",
       class: [
         _vm.column ? "md:col-span-2" : "md:col-span-1",
         _vm.rows ? "md:row-span-2" : "md:row-span-1",
@@ -982,39 +979,62 @@ var render = function () {
         "div",
         {
           staticClass:
-            "absolute rounded-t-xl bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden px-2 py-",
-          class: _vm.showup ? "h-1/3" : "h-1/6",
+            "absolute rounded-t-xl bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden px-2",
+          class: [
+            _vm.showup ? "h-1/2" : "h-1/6",
+            _vm.rows && _vm.showup ? "h-1/3" : "",
+          ],
         },
         [
-          _c("div", { staticClass: "grid grid-rows-2" }, [
-            _c("div", [
-              _c("span", { staticClass: "text-lg font-bold truncate" }, [
-                _vm._v(_vm._s(_vm.title)),
-              ]),
+          _c("div", { staticClass: "relative h-full" }, [
+            _c("div", { staticClass: "static" }, [
+              _c(
+                "span",
+                {
+                  staticClass: "text-lg font-bold truncate",
+                  class: _vm.column ? "text-4xl" : "",
+                },
+                [_vm._v(_vm._s(_vm.title))]
+              ),
               _vm._v(" "),
               _c(
                 "p",
                 {
                   staticClass:
-                    "mt-2 h-12 leading-4 overflow-hidden text-ellipsis text-sm font-light",
-                  class: _vm.rows ? "" : "hidden",
+                    "mt-2 h-12 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300",
+                  class: [
+                    _vm.showup
+                      ? "h-5 translate-y-0 opacity-100"
+                      : "h-5 translate-y-10 opacity-0",
+                    _vm.column ? "" : "",
+                  ],
                 },
                 [_vm._v(_vm._s(_vm.content))]
               ),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "h-5 flex justify-between self-center" }, [
-              _c("div", { staticClass: "flex h-5 gap-x-1" }, [
-                _c("img", {
-                  staticClass: "rounded-full h-5 w-5",
-                  attrs: { src: _vm.imagecontent },
-                }),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "absolute w-full bottom-0 h-5 flex justify-between self-end mt-12 transition-all ease-in-out mb-2 flex",
+                class: _vm.showup
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0",
+              },
+              [
+                _c("div", { staticClass: "flex h-5 gap-x-1" }, [
+                  _c("img", {
+                    staticClass: "rounded-full h-5 w-5",
+                    attrs: { src: _vm.imagecontent },
+                  }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Ricko Tiaka")]),
+                ]),
                 _vm._v(" "),
-                _c("span", [_vm._v("Ricko Tiaka")]),
-              ]),
-              _vm._v(" "),
-              _vm._m(0),
-            ]),
+                _vm._m(0),
+              ]
+            ),
           ]),
         ]
       ),
@@ -1064,7 +1084,7 @@ var render = function () {
       {
         ref: "navbar",
         staticClass:
-          "h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-10",
+          "h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-10",
         attrs: { id: "navBar" },
       },
       [
