@@ -888,11 +888,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid-rows-3 {
   grid-template-rows: repeat(3, minmax(0, 1fr));
 }
+.place-content-between {
+  place-content: space-between;
+}
 .place-items-center {
   place-items: center;
 }
 .content-center {
   align-content: center;
+}
+.content-between {
+  align-content: space-between;
 }
 .items-start {
   align-items: flex-start;
@@ -967,6 +973,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .divide-gray-50 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(249 250 251 / var(--tw-divide-opacity));
+}
+.self-end {
+  align-self: flex-end;
+}
+.self-center {
+  align-self: center;
 }
 .justify-self-start {
   justify-self: start;
@@ -1240,6 +1252,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1266,6 +1282,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-10 {
   padding-top: 2.5rem;
+}
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+.pb-0 {
+  padding-bottom: 0px;
+}
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+.pt-1 {
+  padding-top: 0.25rem;
+}
+.pt-0\.5 {
+  padding-top: 0.125rem;
+}
+.pt-0 {
+  padding-top: 0px;
 }
 .text-left {
   text-align: left;
