@@ -35,6 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -979,21 +980,19 @@ var render = function () {
         "div",
         {
           staticClass:
-            "absolute rounded-t-xl bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden px-2",
-          class: [
-            _vm.showup ? "h-1/2" : "md:h-1/6",
-            _vm.rows && _vm.showup ? "h-1/2 md:h-1/3" : "",
-          ],
+            "absolute bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden px-7 py-5",
+          class: _vm.showup ? "h-52" : "md:h-32",
         },
         [
           _c("div", { staticClass: "relative h-full" }, [
             _c("div", { staticClass: "static" }, [
+              _c("span", { staticClass: "text-lg font-bold truncate" }, [
+                _vm._v(_vm._s(_vm.title)),
+              ]),
+              _vm._v(" "),
               _c(
-                "span",
-                {
-                  staticClass: "text-lg font-bold truncate",
-                  class: _vm.column ? "md:text-4xl" : "",
-                },
+                "div",
+                { staticClass: "text-amber-500 font-semibold truncate" },
                 [_vm._v(_vm._s(_vm.title))]
               ),
               _vm._v(" "),
