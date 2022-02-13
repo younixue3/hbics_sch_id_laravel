@@ -644,7 +644,7 @@ export default {
     },
     methods: {
         handleScroll() {
-            // console.log(this.$refs.navbar.getBoundingClientRect())
+            console.log(document.getElementById('snap-space').getBoundingClientRect());
             // console.log(document.getElementById('hero_section').getBoundingClientRect().bottom)
             if (this.$refs.navbar.getBoundingClientRect().height >= document.getElementById('hero_section').getBoundingClientRect().bottom && this.show === false) {
                 // console.log('lewat')
