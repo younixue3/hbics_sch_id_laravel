@@ -1,70 +1,75 @@
-<footer class="bg-gray-800 px-10 py-5 text-white">
-    <div class="grid grid-cols-2 md:grid-cols-6 border-b-2 gap-y-10 md:gap-y-0 md:gap-x-10  border-gray-600 pb-10">
-        <div class="text-lg font-light">
-            <h1 class="mb-4 font-medium uppercase">Solutions</h1>
-            <ul class="list-none text-gray-300">
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Marketing</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Analytics</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Commerce</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Insights</li>
-            </ul>
+<div class="p-10">
+    <footer class="bg-gradient-to-b from-sky-700 to-blue-900 px-10 py-5 text-white">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-y-10 md:gap-y-0 md:gap-x-10 pb-10">
+            <div class="col-span-2 text-right justify-self-end">
+                <div class="my-10">
+                    <div class="h-40 w-96 text-sm text-gray-200">
+                        Maecenas nec tincidunt massa, eget ultricies nisi. Curabitur id congue lacus, in ultricies nunc. Donec vitae diam lorem. Morbi non interdum felis, non luctus nisl. In vel nibh vel lacus tincidunt auctor. Ut vulputate sem vitae scelerisque ullamcorper. Aliquam vel egestas velit. Quisque vel lacinia augue, a vehicula erat. Aliquam finibus purus sit amet erat aliquet placerat.
+                    </div>
+                    <a class="text-gray-200 hover:text-amber-400 font-semibold transition-all ease-in-out duration-300" href="#">Admission<i class="ml-2 fas fa-chevron-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="order-first col-span-2 md:col-span-1 md:order-none">
+                <img class="h-32 m-auto" src="{{asset('assets/logo/logo_colorfull.png')}}">
+            </div>
+            <div class="col-span-2 justify-self-start">
+                <div class="my-10">
+                    <div class="h-40 w-96 text-sm text-gray-200">
+                        Nulla facilisi. Maecenas lobortis, arcu id auctor aliquam, elit sem egestas odio, sed vestibulum est neque sed urna. Curabitur tincidunt mi arcu, bibendum lacinia risus scelerisque sed. Duis nec ultricies erat. Phasellus pharetra mi eget eros molestie faucibus. Mauris posuere interdum convallis.
+                    </div>
+                    <a class="text-gray-200 hover:text-amber-400 font-semibold transition-all ease-in-out duration-300" href="#">Tentang kami<i class="ml-2 fas fa-chevron-circle-right"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="text-lg font-light">
-            <h1 class="mb-4 font-medium uppercase">Company</h1>
-            <ul class="list-none text-gray-300">
-                <li class="my-1 hover:text-gray-50 cursor-pointer">About</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Blog</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Careers</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Clients</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Partners</li>
-            </ul>
+        <div class="grid grid-cols-2 md:grid-cols-4 border-b-2 gap-y-10 md:gap-y-0 md:gap-x-10 border-gray-400 pb-10 text-center">
+            <div class="col-span-1">
+                <div class="text-amber-400 font-bold">
+                    Preschool & Kindergarten
+                </div>
+                <div class="text-white text-lg">
+                    (+62813 5011 4557) / (0542) 8510111
+                </div>
+            </div>
+            <div class="col-span-1">
+                <div class="text-amber-400 font-bold">
+                    Primary School
+                </div>
+                <div class="text-white text-lg">
+                    (+62813 5011 4557) / (0542) 8510111
+                </div>
+            </div>
+            <div class="col-span-1">
+                <div class="text-amber-400 font-bold">
+                    Secondary School
+                </div>
+                <div class="text-white text-lg">
+                    (+62812 5051 5333)
+                </div>
+            </div>
+            <div class="col-span-1">
+                <div class="text-amber-400 font-bold">
+                    High School
+                </div>
+                <div class="text-white text-lg">
+                    (+62812 5051 5333)
+                </div>
+            </div>
         </div>
-        <div class="text-lg font-light">
-            <h1 class="mb-4 font-medium uppercase">Support</h1>
-            <ul class="list-none text-gray-300">
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Pricing</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Documentation</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Guides</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">API Product</li>
-            </ul>
-        </div>
-        <div class="text-lg font-light">
-            <h1 class="mb-4 font-medium uppercase">Legal</h1>
-            <ul class="list-none text-gray-300">
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Claim</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Privacy</li>
-                <li class="my-1 hover:text-gray-50 cursor-pointer">Terms</li>
-            </ul>
-        </div>
-        <div class="col-span-2 text-lg font-light">
-            <h1 class="mb-4 font-medium uppercase">Subscribe to our Newsletter</h1>
-            <p class="text-sm text-gray-300 my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-                dolorum sit soluta accusamus dolores est quisquam voluptatum magni nobis</p>
-            <form>
-                <input
-                    class="border border-transparent rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent px-4 py-1 text-gray-800 mr-1"
-                    placeholder="Your Email">
-                <button
-                    class="bg-gray-600 hover:bg-pink-500 text-white rounded-xl focus:outline-none focus:ring-2 px-2 py-1 mt-2 sm:mt-0">
-                    Subscribe
-                </button>
-            </form>
-        </div>
-    </div>
-    <div class="text-center md:text-left my-2">
+        <div class="text-center md:text-left my-2">
         <span class="text-sm mr-1">Made with <i class="text-red-600 fas fa-heart"></i> by <a
                 href="https://www.instagram.com/ricko.tiaka/" target="_blank">ricko.tiaka</a></span>
-        <div class="md:float-right">
-            <button>
-                <img class="w-7 h-7 mx-1" src="https://img.icons8.com/ios-filled/500/ffffff/facebook-new.png"/>
-            </button>
-            <button>
-                <img class="w-7 h-7 mx-1"
-                     src="https://img.icons8.com/material-outlined/480/ffffff/instagram-new--v1.png"/>
-            </button>
-            <button>
-                <img class="w-7 h-7 mx-1" src="https://img.icons8.com/material-outlined/480/ffffff/globe--v2.png"/>
-            </button>
+            <div class="md:float-right">
+                <button>
+                    <img class="w-7 h-7 mx-1" src="https://img.icons8.com/ios-filled/500/ffffff/facebook-new.png"/>
+                </button>
+                <button>
+                    <img class="w-7 h-7 mx-1"
+                         src="https://img.icons8.com/material-outlined/480/ffffff/instagram-new--v1.png"/>
+                </button>
+                <button>
+                    <img class="w-7 h-7 mx-1" src="https://img.icons8.com/material-outlined/480/ffffff/globe--v2.png"/>
+                </button>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
+</div>
