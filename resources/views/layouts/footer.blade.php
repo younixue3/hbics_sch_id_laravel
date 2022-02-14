@@ -1,9 +1,9 @@
-<div class="p-10">
+<div class="p-10 z-10">
     <footer class="bg-gradient-to-b from-sky-700 to-blue-900 px-10 py-5 text-white">
         <div class="grid grid-cols-2 md:grid-cols-5 gap-y-10 md:gap-y-0 md:gap-x-10 pb-10">
-            <div class="col-span-2 text-right justify-self-end">
+            <div class="col-span-1 md:col-span-2 text-right justify-self-end">
                 <div class="my-10">
-                    <div class="h-40 w-96 text-sm text-gray-200">
+                    <div class="h-40 md:w-96 text-sm text-gray-200">
                         Maecenas nec tincidunt massa, eget ultricies nisi. Curabitur id congue lacus, in ultricies nunc. Donec vitae diam lorem. Morbi non interdum felis, non luctus nisl. In vel nibh vel lacus tincidunt auctor. Ut vulputate sem vitae scelerisque ullamcorper. Aliquam vel egestas velit. Quisque vel lacinia augue, a vehicula erat. Aliquam finibus purus sit amet erat aliquet placerat.
                     </div>
                     <a class="text-gray-200 hover:text-amber-400 font-semibold transition-all ease-in-out duration-300" href="#">Admission<i class="ml-2 fas fa-chevron-circle-right"></i></a>
@@ -12,9 +12,9 @@
             <div class="order-first col-span-2 md:col-span-1 md:order-none">
                 <img class="h-32 m-auto" src="{{asset('assets/logo/logo_colorfull.png')}}">
             </div>
-            <div class="col-span-2 justify-self-start">
+            <div class="col-span-1 md:col-span-2 justify-self-start">
                 <div class="my-10">
-                    <div class="h-40 w-96 text-sm text-gray-200">
+                    <div class="h-40 md:w-96 text-sm text-gray-200">
                         Nulla facilisi. Maecenas lobortis, arcu id auctor aliquam, elit sem egestas odio, sed vestibulum est neque sed urna. Curabitur tincidunt mi arcu, bibendum lacinia risus scelerisque sed. Duis nec ultricies erat. Phasellus pharetra mi eget eros molestie faucibus. Mauris posuere interdum convallis.
                     </div>
                     <a class="text-gray-200 hover:text-amber-400 font-semibold transition-all ease-in-out duration-300" href="#">Tentang kami<i class="ml-2 fas fa-chevron-circle-right"></i></a>

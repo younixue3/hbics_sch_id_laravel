@@ -529,6 +529,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-32 {
   top: 8rem;
 }
+.top-1\/2 {
+  top: 50%;
+}
+.top-10 {
+  top: 2.5rem;
+}
+.top-20 {
+  top: 5rem;
+}
 .z-10 {
   z-index: 10;
 }
@@ -537,6 +546,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .z-0 {
   z-index: 0;
+}
+.z-20 {
+  z-index: 20;
 }
 .order-first {
   order: -9999;
@@ -733,6 +745,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-20 {
   margin-top: 5rem;
 }
+.-mb-20 {
+  margin-bottom: -5rem;
+}
+.-mb-52 {
+  margin-bottom: -13rem;
+}
+.-mb-44 {
+  margin-bottom: -11rem;
+}
+.-mb-40 {
+  margin-bottom: -10rem;
+}
+.-mb-36 {
+  margin-bottom: -9rem;
+}
 .block {
   display: block;
 }
@@ -834,6 +861,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-40 {
   height: 10rem;
+}
+.h-\[35rem\] {
+  height: 35rem;
+}
+.h-\[25rem\] {
+  height: 25rem;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -1152,11 +1185,32 @@ Ensure the default browser behavior of the `hidden` attribute.
 .justify-self-end {
   justify-self: end;
 }
+.overflow-auto {
+  overflow: auto;
+}
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-visible {
+  overflow: visible;
+}
 .overflow-x-auto {
   overflow-x: auto;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.overflow-x-visible {
+  overflow-x: visible;
+}
+.overflow-y-visible {
+  overflow-y: visible;
 }
 .truncate {
   overflow: hidden;

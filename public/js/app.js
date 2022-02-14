@@ -3671,7 +3671,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relative w-full h-72" }, [
+  return _c("div", { staticClass: "relative w-full h-72 px-5" }, [
     _c(
       "div",
       { staticClass: "h-60" },
@@ -3682,7 +3682,7 @@ var render = function () {
                 "div",
                 {
                   staticClass:
-                    "bg-white rounded-xl shadow-lg border-2 flex w-[35rem] h-52 p-5 m-auto",
+                    "bg-white rounded-xl shadow-lg border-2 flex md:w-[35rem] h-52 p-5 m-auto",
                 },
                 [
                   _c("div", { staticClass: "w-1/4 m-auto" }, [

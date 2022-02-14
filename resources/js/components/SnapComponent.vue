@@ -1,8 +1,8 @@
 <template>
-    <div class="relative w-full h-72">
+    <div class="relative w-full h-72 px-5">
         <div class="h-60">
             <Transition name="slide-fade">
-                <div v-if="show" class="bg-white rounded-xl shadow-lg border-2 flex w-[35rem] h-52 p-5 m-auto">
+                <div v-if="show" class="bg-white rounded-xl shadow-lg border-2 flex md:w-[35rem] h-52 p-5 m-auto">
                     <div class="w-1/4 m-auto">
                         <img class="rounded-full w-32 h-32 bg-gray-200 object-cover" src="http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.jpg">
                     </div>
