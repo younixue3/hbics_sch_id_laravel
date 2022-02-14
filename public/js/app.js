@@ -1552,7 +1552,7 @@ var render = function () {
     "div",
     {
       staticClass:
-        "relative bg-cover h-52 md:h-full bg-center col-span-1 transition-all ease-in-out duration-200 rounded-2xl shadow-lg shadow-neutral-300",
+        "relative bg-cover h-52 md:h-full bg-center col-span-1 transition-all ease-in-out duration-200 rounded-2xl shadow-lg",
       class: [
         _vm.column ? "md:col-span-2" : "md:col-span-1",
         _vm.rows ? "md:row-span-2" : "md:row-span-1",
@@ -1620,7 +1620,9 @@ var render = function () {
                     attrs: { src: _vm.imagecontent },
                   }),
                   _vm._v(" "),
-                  _c("span", [_vm._v("Ricko Tiaka")]),
+                  _c("span", { staticClass: "text-xs" }, [
+                    _vm._v("Ricko Tiaka"),
+                  ]),
                 ]),
                 _vm._v(" "),
                 _vm._m(0),
@@ -1675,7 +1677,7 @@ var render = function () {
       {
         ref: "navbar",
         staticClass:
-          "h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-10",
+          "h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-50",
         attrs: { id: "navBar" },
       },
       [
@@ -3680,14 +3682,16 @@ var render = function () {
                 "div",
                 {
                   staticClass:
-                    "bg-white rounded-xl shadow-lg shadow-neutral-400 flex w-[35rem] h-52 p-5 m-auto",
+                    "bg-white rounded-xl shadow-lg border-2 flex w-[35rem] h-52 p-5 m-auto",
                 },
                 [
                   _c("div", { staticClass: "w-1/4 m-auto" }, [
                     _c("img", {
                       staticClass:
                         "rounded-full w-32 h-32 bg-gray-200 object-cover",
-                      attrs: { src: "" },
+                      attrs: {
+                        src: "http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.jpg",
+                      },
                     }),
                   ]),
                   _vm._v(" "),
