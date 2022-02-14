@@ -4,16 +4,20 @@
             <Transition name="slide-fade">
                 <div v-if="show" class="bg-white rounded-xl shadow-lg border-2 flex md:w-[35rem] h-52 p-5 m-auto">
                     <div class="w-1/4 m-auto">
-                        <img class="rounded-full w-32 h-32 bg-gray-200 object-cover" src="http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.jpg">
+                        <img class="rounded-full w-32 h-32 bg-gray-200 object-cover"
+                             src="http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.jpg">
                     </div>
                     <div class="relative w-3/4 px-5">
-                        <span class="text-lg font-bold truncate" v-if="show">{{data.name}}</span>
-                        <div class="text-amber-500 font-semibold truncate" v-if="show">{{data.jabatan}}</div>
-                        <p v-if="show" class="mt-2 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300 h-20 leading-4">
-                            {{data.massage}}
+                        <span class="text-lg font-bold truncate" v-if="show">{{ data.name }}</span>
+                        <div class="text-amber-500 font-semibold truncate" v-if="show">{{ data.jabatan }}</div>
+                        <p v-if="show"
+                           class="mt-2 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300 h-20 leading-4">
+                            {{ data.massage }}
                         </p>
                         <div class="absolute right-0 bottom-0">
-                            <button class="rounded-full h-10 w-10 hover:bg-gray-200 text-lg border hover:border-0 border-black" v-on:click="nextButton"><i class="fas fa-angle-right"></i></button>
+                            <button
+                                class="rounded-full h-10 w-10 hover:bg-gray-200 text-lg border hover:border-0 border-black"
+                                v-on:click="nextButton"><i class="fas fa-angle-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -26,10 +30,10 @@
 export default {
     data() {
         return {
-            show : true,
-            data : {},
-            counter : 0,
-            arrTestimoni : {
+            show: true,
+            data: {},
+            counter: 0,
+            arrTestimoni: {
                 count: 1,
                 person: [
                     {

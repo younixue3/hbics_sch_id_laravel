@@ -1,6 +1,7 @@
 <template>
     <div>
-        <header ref="navbar" class="h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-50" id="navBar">
+        <header ref="navbar" class="h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-50"
+                id="navBar">
             <div>
                 <div :class="show ? 'bg-blue-900 h-20' : 'bg-transparent h-44'"
                      class="transition-all ease-in-out duration-300">
@@ -238,9 +239,11 @@
                         <div class="col-span-9 md:col-span-1">
                             <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-16' : 'h-0'"
                                  :src="imagewhite" alt="">
-                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-14 md:h-24'"
+                            <img class="m-auto transition-all ease-in-out duration-300"
+                                 :class="show ? 'h-0' : 'h-14 md:h-24'"
                                  :src="logo" alt="">
-                            <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-0' : 'h-14 md:h-28'"
+                            <img class="m-auto transition-all ease-in-out duration-300"
+                                 :class="show ? 'h-0' : 'h-14 md:h-28'"
                                  :src="footerwhite" alt="">
                         </div>
                         <div class="col-span-4 justify-self-start hidden md:block ml-20">
@@ -448,7 +451,8 @@
                                                                 </div>
                                                                 <div
                                                                     class="text-xs font-light break-words leading-3 text-black">
-                                                                    Artikel Ilmiah edukasi seputar Ilmu pendidikan dan parenting
+                                                                    Artikel Ilmiah edukasi seputar Ilmu pendidikan dan
+                                                                    parenting
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -462,12 +466,28 @@
                                                             <img
                                                                 src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
                                                                 class="h-[4.5rem] w-[4.5rem] rounded-xl object-cover">
-                                                            <div class="grid grid-rows-2 gap-0 items-start text-left text-sm py-2">
-                                                                <div class="leading-3 transition-all ease-in-out truncate">
+                                                            <div
+                                                                class="grid grid-rows-2 gap-0 items-start text-left text-sm py-2">
+                                                                <div
+                                                                    class="leading-3 transition-all ease-in-out truncate">
                                                                     Lorem Ipsum dolor sit amet, consetanioa n ojdanon
                                                                 </div>
-                                                                <div class="text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9">
-                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta bibendum odio, id egestas ex condimentum vitae. Integer eget ex libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi non nibh eu mi ullamcorper varius. Donec sit amet dolor sed ex pharetra egestas. Aenean malesuada quis est vitae pellentesque. Nullam interdum, mauris nec finibus lacinia, leo risus aliquet nibh, vel imperdiet ex mi feugiat elit. Cras condimentum elit nulla, quis sagittis mauris volutpat eget. Sed tristique eu turpis ultricies pellentesque. Donec at ligula nisl. Nunc porta, quam vitae dapibus tristique, erat quam placerat nibh, vitae auctor leo tortor ac sem.
+                                                                <div
+                                                                    class="text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                                    elit. In porta bibendum odio, id egestas ex
+                                                                    condimentum vitae. Integer eget ex libero. Interdum
+                                                                    et malesuada fames ac ante ipsum primis in faucibus.
+                                                                    Morbi non nibh eu mi ullamcorper varius. Donec sit
+                                                                    amet dolor sed ex pharetra egestas. Aenean malesuada
+                                                                    quis est vitae pellentesque. Nullam interdum, mauris
+                                                                    nec finibus lacinia, leo risus aliquet nibh, vel
+                                                                    imperdiet ex mi feugiat elit. Cras condimentum elit
+                                                                    nulla, quis sagittis mauris volutpat eget. Sed
+                                                                    tristique eu turpis ultricies pellentesque. Donec at
+                                                                    ligula nisl. Nunc porta, quam vitae dapibus
+                                                                    tristique, erat quam placerat nibh, vitae auctor leo
+                                                                    tortor ac sem.
                                                                     <p>
                                                                     </p>
                                                                 </div>
@@ -478,12 +498,28 @@
                                                             <img
                                                                 src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
                                                                 class="h-[4.5rem] w-[4.5rem] rounded-xl object-cover">
-                                                            <div class="grid grid-rows-2 gap-0 items-start text-left text-sm py-2">
-                                                                <div class="leading-3 transition-all ease-in-out truncate">
+                                                            <div
+                                                                class="grid grid-rows-2 gap-0 items-start text-left text-sm py-2">
+                                                                <div
+                                                                    class="leading-3 transition-all ease-in-out truncate">
                                                                     Lorem Ipsum dolor sit amet, consetanioa n ojdanon
                                                                 </div>
-                                                                <div class="text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9">
-                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta bibendum odio, id egestas ex condimentum vitae. Integer eget ex libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi non nibh eu mi ullamcorper varius. Donec sit amet dolor sed ex pharetra egestas. Aenean malesuada quis est vitae pellentesque. Nullam interdum, mauris nec finibus lacinia, leo risus aliquet nibh, vel imperdiet ex mi feugiat elit. Cras condimentum elit nulla, quis sagittis mauris volutpat eget. Sed tristique eu turpis ultricies pellentesque. Donec at ligula nisl. Nunc porta, quam vitae dapibus tristique, erat quam placerat nibh, vitae auctor leo tortor ac sem.
+                                                                <div
+                                                                    class="text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                                    elit. In porta bibendum odio, id egestas ex
+                                                                    condimentum vitae. Integer eget ex libero. Interdum
+                                                                    et malesuada fames ac ante ipsum primis in faucibus.
+                                                                    Morbi non nibh eu mi ullamcorper varius. Donec sit
+                                                                    amet dolor sed ex pharetra egestas. Aenean malesuada
+                                                                    quis est vitae pellentesque. Nullam interdum, mauris
+                                                                    nec finibus lacinia, leo risus aliquet nibh, vel
+                                                                    imperdiet ex mi feugiat elit. Cras condimentum elit
+                                                                    nulla, quis sagittis mauris volutpat eget. Sed
+                                                                    tristique eu turpis ultricies pellentesque. Donec at
+                                                                    ligula nisl. Nunc porta, quam vitae dapibus
+                                                                    tristique, erat quam placerat nibh, vitae auctor leo
+                                                                    tortor ac sem.
                                                                     <p>
                                                                     </p>
                                                                 </div>
@@ -497,7 +533,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class=""><div class="hidden md:block">ada</div></div>
+                        <div class="">
+                            <div class="hidden md:block">ada</div>
+                        </div>
                     </div>
                 </div>
             </div>
