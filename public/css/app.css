@@ -508,6 +508,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bottom-96 {
   bottom: 24rem;
 }
+.bottom-60 {
+  bottom: 15rem;
+}
+.bottom-44 {
+  bottom: 11rem;
+}
 .z-0 {
   z-index: 0;
 }
@@ -1325,6 +1331,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
+.px-96 {
+  padding-left: 24rem;
+  padding-right: 24rem;
+}
+.px-80 {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+.px-52 {
+  padding-left: 13rem;
+  padding-right: 13rem;
+}
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1369,6 +1391,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pl-11 {
   padding-left: 2.75rem;
+}
+.pr-10 {
+  padding-right: 2.5rem;
 }
 .text-left {
   text-align: left;
@@ -2007,6 +2032,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 1.25rem;
   }
 
+  .md\:px-80 {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+
   .md\:pl-10 {
     padding-left: 2.5rem;
   }
@@ -2037,6 +2067,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 @media (min-width: 1024px) {
 
+  .lg\:order-last {
+    order: 9999;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -2059,6 +2093,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-3\/4 {
     width: 75%;
+  }
+
+  .lg\:w-4\/5 {
+    width: 80%;
   }
 
   .lg\:grid-cols-4 {
@@ -2088,8 +2126,21 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-bottom: 1.25rem;
   }
 
+  .lg\:px-80 {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+
   .lg\:pr-0 {
     padding-right: 0px;
+  }
+
+  .lg\:pl-0 {
+    padding-left: 0px;
+  }
+
+  .lg\:pr-3 {
+    padding-right: 0.75rem;
   }
 }
 
