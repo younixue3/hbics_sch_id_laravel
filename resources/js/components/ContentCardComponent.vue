@@ -4,13 +4,13 @@
          class="relative bg-cover h-52 md:h-full bg-center col-span-1 transition-all ease-in-out duration-200 rounded-2xl shadow-lg"
          :style="{ backgroundImage: `url('${imagecontent}')` }">
         <div
-            class="absolute bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden px-7 py-5"
-            :class="showup ? 'h-52' : 'md:h-32'">
+            class="absolute bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden p-2 lg:px-7 lg:py-5"
+            :class="showup ? 'h-32 md:h-40 lg:h-52' : 'h-20 lg:h-32'">
             <div class="relative h-full">
                 <div class="static">
-                    <span class="text-lg font-bold truncate">{{ title }}</span>
-                    <div class="text-amber-500 font-semibold truncate">{{ title }}</div>
-                    <p class="mt-2 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300"
+                    <span class="text-lg font-bold truncate leading-4 z-10">{{ title }}</span>
+                    <h4 class="text-amber-500 font-semibold truncate leading-4">{{ title }}</h4>
+                    <p class="mt-1 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300"
                        :class="[showup ? 'h-9 md:h-12 translate-y-0 opacity-100' : 'h-5 translate-y-10 opacity-0', column ? '' : '']">
                         {{ content }}</p>
                 </div>

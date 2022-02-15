@@ -1,9 +1,9 @@
-<div class="p-10 z-10">
-    <footer class="bg-gradient-to-b from-sky-700 to-blue-900 px-10 py-5 text-white">
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-y-10 md:gap-y-0 md:gap-x-10 pb-10">
+<div class="md:p-10 z-50">
+    <footer class="bg-gradient-to-b from-sky-700 to-blue-900 px-2 md:px-10 py-5 text-white rounded-3xl shadow-xl shadow-neutral-400">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-x-5 md:gap-y-0 md:gap-x-10 pb-10">
             <div class="col-span-1 md:col-span-2 text-right justify-self-end">
                 <div class="my-10">
-                    <div class="h-40 md:w-96 text-sm text-gray-200">
+                    <div class="h-96 md:h-56 lg:h-40 w-full text-sm text-gray-200">
                         Maecenas nec tincidunt massa, eget ultricies nisi. Curabitur id congue lacus, in ultricies nunc.
                         Donec vitae diam lorem. Morbi non interdum felis, non luctus nisl. In vel nibh vel lacus
                         tincidunt auctor. Ut vulputate sem vitae scelerisque ullamcorper. Aliquam vel egestas velit.
@@ -19,7 +19,7 @@
             </div>
             <div class="col-span-1 md:col-span-2 justify-self-start">
                 <div class="my-10">
-                    <div class="h-40 md:w-96 text-sm text-gray-200">
+                    <div class="h-96 md:h-56 lg:h-40 w-full text-sm text-gray-200">
                         Nulla facilisi. Maecenas lobortis, arcu id auctor aliquam, elit sem egestas odio, sed vestibulum
                         est neque sed urna. Curabitur tincidunt mi arcu, bibendum lacinia risus scelerisque sed. Duis
                         nec ultricies erat. Phasellus pharetra mi eget eros molestie faucibus. Mauris posuere interdum

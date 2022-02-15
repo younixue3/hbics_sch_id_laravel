@@ -243,11 +243,11 @@
                                  :class="show ? 'h-0' : 'h-14 md:h-24'"
                                  :src="logo" alt="">
                             <img class="m-auto transition-all ease-in-out duration-300"
-                                 :class="show ? 'h-0' : 'h-14 md:h-28'"
+                                 :class="show ? 'h-0' : 'h-14 md:h-full'"
                                  :src="footerwhite" alt="">
                         </div>
                         <div class="col-span-4 justify-self-start hidden md:block ml-20">
-                            <div class="grid grid-cols-2 gap-x-5 font-light mb-2">
+                            <div class="text-left font-light mb-2">
                                 <div>Hubungi kami</div>
                             </div>
                             <div class="grid grid-cols-2 font-bold">

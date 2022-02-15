@@ -36,6 +36,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -76,6 +85,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -760,6 +807,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
 //
 //
 //
@@ -1572,19 +1623,24 @@ var render = function () {
         "div",
         {
           staticClass:
-            "absolute bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden px-7 py-5",
-          class: _vm.showup ? "h-52" : "md:h-32",
+            "absolute bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden p-2 lg:px-7 lg:py-5",
+          class: _vm.showup ? "h-32 md:h-40 lg:h-52" : "h-20 lg:h-32",
         },
         [
           _c("div", { staticClass: "relative h-full" }, [
             _c("div", { staticClass: "static" }, [
-              _c("span", { staticClass: "text-lg font-bold truncate" }, [
-                _vm._v(_vm._s(_vm.title)),
-              ]),
+              _c(
+                "span",
+                { staticClass: "text-lg font-bold truncate leading-4 z-10" },
+                [_vm._v(_vm._s(_vm.title))]
+              ),
               _vm._v(" "),
               _c(
-                "div",
-                { staticClass: "text-amber-500 font-semibold truncate" },
+                "h4",
+                {
+                  staticClass:
+                    "text-amber-500 font-semibold truncate leading-4",
+                },
                 [_vm._v(_vm._s(_vm.title))]
               ),
               _vm._v(" "),
@@ -1592,7 +1648,7 @@ var render = function () {
                 "p",
                 {
                   staticClass:
-                    "mt-2 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300",
+                    "mt-1 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300",
                   class: [
                     _vm.showup
                       ? "h-9 md:h-12 translate-y-0 opacity-100"
@@ -1600,7 +1656,7 @@ var render = function () {
                     _vm.column ? "" : "",
                   ],
                 },
-                [_vm._v(_vm._s(_vm.content))]
+                [_vm._v("\n                    " + _vm._s(_vm.content))]
               ),
             ]),
             _vm._v(" "),
@@ -2049,7 +2105,7 @@ var render = function () {
                     _c("img", {
                       staticClass:
                         "m-auto transition-all ease-in-out duration-300",
-                      class: _vm.show ? "h-0" : "h-14 md:h-28",
+                      class: _vm.show ? "h-0" : "h-14 md:h-full",
                       attrs: { src: _vm.footerwhite, alt: "" },
                     }),
                   ]),
@@ -2884,11 +2940,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "grid grid-cols-2 gap-x-5 font-light mb-2" },
-      [_c("div", [_vm._v("Hubungi kami")])]
-    )
+    return _c("div", { staticClass: "text-left font-light mb-2" }, [
+      _c("div", [_vm._v("Hubungi kami")]),
+    ])
   },
   function () {
     var _vm = this
@@ -3396,7 +3450,7 @@ var staticRenderFns = [
                       },
                       [
                         _vm._v(
-                          "\n                                                                Artikel Ilmiah edukasi seputar Ilmu pendidikan dan parenting\n                                                            "
+                          "\n                                                                Artikel Ilmiah edukasi seputar Ilmu pendidikan dan\n                                                                parenting\n                                                            "
                         ),
                       ]
                     ),
@@ -3455,7 +3509,7 @@ var staticRenderFns = [
                     },
                     [
                       _vm._v(
-                        "\n                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta bibendum odio, id egestas ex condimentum vitae. Integer eget ex libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi non nibh eu mi ullamcorper varius. Donec sit amet dolor sed ex pharetra egestas. Aenean malesuada quis est vitae pellentesque. Nullam interdum, mauris nec finibus lacinia, leo risus aliquet nibh, vel imperdiet ex mi feugiat elit. Cras condimentum elit nulla, quis sagittis mauris volutpat eget. Sed tristique eu turpis ultricies pellentesque. Donec at ligula nisl. Nunc porta, quam vitae dapibus tristique, erat quam placerat nibh, vitae auctor leo tortor ac sem.\n                                                                "
+                        "\n                                                                Lorem ipsum dolor sit amet, consectetur adipiscing\n                                                                elit. In porta bibendum odio, id egestas ex\n                                                                condimentum vitae. Integer eget ex libero. Interdum\n                                                                et malesuada fames ac ante ipsum primis in faucibus.\n                                                                Morbi non nibh eu mi ullamcorper varius. Donec sit\n                                                                amet dolor sed ex pharetra egestas. Aenean malesuada\n                                                                quis est vitae pellentesque. Nullam interdum, mauris\n                                                                nec finibus lacinia, leo risus aliquet nibh, vel\n                                                                imperdiet ex mi feugiat elit. Cras condimentum elit\n                                                                nulla, quis sagittis mauris volutpat eget. Sed\n                                                                tristique eu turpis ultricies pellentesque. Donec at\n                                                                ligula nisl. Nunc porta, quam vitae dapibus\n                                                                tristique, erat quam placerat nibh, vitae auctor leo\n                                                                tortor ac sem.\n                                                                "
                       ),
                       _c("p"),
                     ]
@@ -3508,7 +3562,7 @@ var staticRenderFns = [
                     },
                     [
                       _vm._v(
-                        "\n                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta bibendum odio, id egestas ex condimentum vitae. Integer eget ex libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi non nibh eu mi ullamcorper varius. Donec sit amet dolor sed ex pharetra egestas. Aenean malesuada quis est vitae pellentesque. Nullam interdum, mauris nec finibus lacinia, leo risus aliquet nibh, vel imperdiet ex mi feugiat elit. Cras condimentum elit nulla, quis sagittis mauris volutpat eget. Sed tristique eu turpis ultricies pellentesque. Donec at ligula nisl. Nunc porta, quam vitae dapibus tristique, erat quam placerat nibh, vitae auctor leo tortor ac sem.\n                                                                "
+                        "\n                                                                Lorem ipsum dolor sit amet, consectetur adipiscing\n                                                                elit. In porta bibendum odio, id egestas ex\n                                                                condimentum vitae. Integer eget ex libero. Interdum\n                                                                et malesuada fames ac ante ipsum primis in faucibus.\n                                                                Morbi non nibh eu mi ullamcorper varius. Donec sit\n                                                                amet dolor sed ex pharetra egestas. Aenean malesuada\n                                                                quis est vitae pellentesque. Nullam interdum, mauris\n                                                                nec finibus lacinia, leo risus aliquet nibh, vel\n                                                                imperdiet ex mi feugiat elit. Cras condimentum elit\n                                                                nulla, quis sagittis mauris volutpat eget. Sed\n                                                                tristique eu turpis ultricies pellentesque. Donec at\n                                                                ligula nisl. Nunc porta, quam vitae dapibus\n                                                                tristique, erat quam placerat nibh, vitae auctor leo\n                                                                tortor ac sem.\n                                                                "
                       ),
                       _c("p"),
                     ]
@@ -3671,7 +3725,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relative w-full h-72 px-5" }, [
+  return _c("div", { staticClass: "relative w-full h-72 px-1 md:px-5" }, [
     _c(
       "div",
       { staticClass: "h-60" },
@@ -3682,13 +3736,13 @@ var render = function () {
                 "div",
                 {
                   staticClass:
-                    "bg-white rounded-xl shadow-lg border-2 flex md:w-[35rem] h-52 p-5 m-auto",
+                    "bg-white rounded-xl shadow-lg border-2 flex items-center md:w-[37rem] h-52 p-1 md:p-5 m-auto",
                 },
                 [
-                  _c("div", { staticClass: "w-1/4 m-auto" }, [
+                  _c("div", { staticClass: "w-1/4 self-start pl-1 pt-5" }, [
                     _c("img", {
                       staticClass:
-                        "rounded-full w-32 h-32 bg-gray-200 object-cover",
+                        "rounded-full w-16 h-16 bg-gray-200 object-cover",
                       attrs: {
                         src: "http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.jpg",
                       },
@@ -3731,18 +3785,18 @@ var render = function () {
                           ]
                         )
                       : _vm._e(),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "absolute right-0 bottom-0" }, [
-                      _c(
-                        "button",
-                        {
-                          staticClass:
-                            "rounded-full h-10 w-10 hover:bg-gray-200 text-lg border hover:border-0 border-black",
-                          on: { click: _vm.nextButton },
-                        },
-                        [_c("i", { staticClass: "fas fa-angle-right" })]
-                      ),
-                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", {}, [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "rounded-full h-7 w-7 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black",
+                        on: { click: _vm.nextButton },
+                      },
+                      [_c("i", { staticClass: "fas fa-angle-right" })]
+                    ),
                   ]),
                 ]
               )
