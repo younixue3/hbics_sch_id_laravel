@@ -782,6 +782,7 @@ __webpack_require__.r(__webpack_exports__);
       // document.getElementById('#')
       eval(navname).classList.remove('hidden');
       setTimeout(function () {
+        eval(navname).classList.remove('h-0');
         eval(navname).classList.add('h-80');
       }, 10);
     },

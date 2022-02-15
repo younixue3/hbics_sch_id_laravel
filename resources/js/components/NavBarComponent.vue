@@ -3,7 +3,7 @@
         <header ref="navbar" class="h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-50"
                 id="navBar">
             <div>
-                <div :class="show ? 'bg-blue-900 h-20' : 'bg-transparent h-44'"
+                <div :class="show ? 'bg-blue-900 h-20' : 'bg-transparent h-44' "
                      class="transition-all ease-in-out duration-300">
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
                         <div class="">
@@ -698,6 +698,7 @@ export default {
             // document.getElementById('#')
             eval(navname).classList.remove('hidden')
             setTimeout(function () {
+                eval(navname).classList.remove('h-0')
                 eval(navname).classList.add('h-80')
             }, 10)
 
