@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="{{asset('assets/logo/logo_colorfull.png')}}">
 </head>
 <body class="bg-gray-200 font-poppins">
 <div id="app">

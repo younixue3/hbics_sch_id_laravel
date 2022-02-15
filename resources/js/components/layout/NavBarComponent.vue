@@ -6,7 +6,10 @@
                 <div :class="show ? 'bg-blue-900 h-20' : 'bg-transparent h-44' "
                      class="transition-all ease-in-out duration-300">
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
-                        <div class="">
+                        <div class="text-sm font-light">
+                            <a href="https://www.office.com/" target="_blank" class="bg-white text-black px-2">
+                                Login Office.com
+                            </a>
                             <div class="-mr-2 -my-2 md:hidden">
                                 <button id="openMenu" type="button"
                                         class="rounded-md p-1 inline-flex items-center justify-center text-gray-200 focus:outline-none transition-all ease-in-out duration-300"
@@ -23,8 +26,8 @@
                         </div>
                         <div class="col-span-4 justify-self-end hidden md:block mr-20">
                             <div class="grid grid-cols-2 font-light mb-2">
-                                <div>Home</div>
-                                <div>Tentang Kami</div>
+                                <a href="#">Beranda</a>
+                                <a href="#">Tentang Kami</a>
                             </div>
                             <div class="grid grid-cols-2 gap-x-5 font-bold">
                                 <div @mouseover="modalshow('pendaftaran')" @mouseleave="modalclose('pendaftaran')">
@@ -248,7 +251,7 @@
                         </div>
                         <div class="col-span-4 justify-self-start hidden md:block ml-20">
                             <div class="text-left font-light mb-2">
-                                <div>Hubungi kami</div>
+                                <a class=" select-none" href="#">Hubungi kami</a>
                             </div>
                             <div class="grid grid-cols-2 font-bold">
                                 <div @mouseover="modalshow('komunitas')" @mouseleave="modalclose('komunitas')">
@@ -534,7 +537,7 @@
                             </div>
                         </div>
                         <div class="">
-                            <div class="hidden md:block">ada</div>
+                            <div class="cursor-pointer" v-on:click="redirectBtn('login')">Login</div>
                         </div>
                     </div>
                 </div>
@@ -670,6 +673,7 @@
 export default {
     data() {
         return {
+            windowspath : window.location.origin + '/',
             show: false
         }
     },
@@ -681,9 +685,10 @@ export default {
         window.removeEventListener('scroll', this.handleScroll);
     },
     methods: {
+        redirectBtn(path) {
+          window.location.replace(this.windowspath + path)
+        },
         handleScroll() {
-            // console.log(document.getElementById('snap-space').getBoundingClientRect());
-            // console.log(document.getElementById('hero_section').getBoundingClientRect().bottom)
             if (this.$refs.navbar.getBoundingClientRect().height >= document.getElementById('hero_section').getBoundingClientRect().bottom && this.show === false) {
                 // console.log('lewat')
                 this.show = true;

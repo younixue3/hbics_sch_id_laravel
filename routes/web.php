@@ -24,4 +24,10 @@ Route::get('/logout', function() {
     return redirect('/');
 });
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//FrontPage
+///////////Home
+Route::get('/', [App\Http\Controllers\Front\HomeController::class, 'index'])->name('home');
+//////////Tentang Kami
+Route::get('/tentang-kami', [App\Http\Controllers\Front\TentangKamiController::class, 'index'])->name('tentang-kami');
+//////////Hubungi Kami
+Route::get('/hubungi-kami', [App\Http\Controllers\Front\HubungiKamiController::class, 'index'])->name('hubungi-kami');

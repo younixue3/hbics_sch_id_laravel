@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Front;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Data\HomeController as DataController;
+use App\Http\Controllers\Front\Data\HomeController as DataController;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,6 @@ class HomeController extends Controller
      */
     public function __construct(DataController $data)
     {
-//        $this->middleware('auth');
         $this->data = $data;
     }
 
@@ -25,6 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return view('front.index');
     }
 }

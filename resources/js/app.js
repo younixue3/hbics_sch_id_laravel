@@ -21,9 +21,9 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('nav-bar-component', require('./components/NavBarComponent.vue').default);
-Vue.component('content-card-component', require('./components/ContentCardComponent').default)
-Vue.component('snap-component', require('./components/SnapComponent').default)
+Vue.component('nav-bar-component', require('./components/layout/NavBarComponent.vue').default);
+Vue.component('content-card-component', require('./components/widget/ContentCardComponent').default)
+Vue.component('snap-component', require('./components/widget/SnapComponent').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
