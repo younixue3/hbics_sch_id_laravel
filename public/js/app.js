@@ -2105,7 +2105,7 @@ var render = function () {
                     _c("img", {
                       staticClass:
                         "m-auto transition-all ease-in-out duration-300",
-                      class: _vm.show ? "h-0" : "h-14 md:h-full",
+                      class: _vm.show ? "h-0" : "h-14 md:h-24",
                       attrs: { src: _vm.footerwhite, alt: "" },
                     }),
                   ]),

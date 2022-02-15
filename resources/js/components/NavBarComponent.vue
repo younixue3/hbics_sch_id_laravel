@@ -243,7 +243,7 @@
                                  :class="show ? 'h-0' : 'h-14 md:h-24'"
                                  :src="logo" alt="">
                             <img class="m-auto transition-all ease-in-out duration-300"
-                                 :class="show ? 'h-0' : 'h-14 md:h-full'"
+                                 :class="show ? 'h-0' : 'h-14 md:h-24'"
                                  :src="footerwhite" alt="">
                         </div>
                         <div class="col-span-4 justify-self-start hidden md:block ml-20">
