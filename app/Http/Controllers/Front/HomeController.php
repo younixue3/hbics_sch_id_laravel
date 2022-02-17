@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Front;
 
+use App\Helper\getUrl;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Front\Data\HomeController as DataController;
@@ -16,6 +17,7 @@ class HomeController extends Controller
     public function __construct(DataController $data)
     {
         $this->data = $data;
+        $url = getUrl::getUrl();
     }
 
     /**
@@ -25,6 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('front.index');
+        $datas = $this->data->get_data();
+        return view('front.index', $datas);
     }
 }
