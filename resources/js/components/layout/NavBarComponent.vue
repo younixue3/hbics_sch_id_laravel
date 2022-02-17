@@ -7,7 +7,7 @@
                      class="transition-all ease-in-out duration-300">
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
                         <div class="text-sm font-light">
-                            <a href="https://www.office.com/" target="_blank" class="bg-white text-black px-2">
+                            <a href="https://www.office.com/" target="_blank" class="px-2 after:content-['_↗']":class="show ? 'bg-white text-black' : 'text-white' ">
                                 Login Office.com
                             </a>
                             <div class="-mr-2 -my-2 md:hidden">

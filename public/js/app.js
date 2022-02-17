@@ -1634,7 +1634,8 @@ var render = function () {
                     _c(
                       "a",
                       {
-                        staticClass: "bg-white text-black px-2",
+                        staticClass: "px-2 after:content-['_↗']",
+                        class: _vm.show ? "bg-white text-black" : "text-white",
                         attrs: {
                           href: "https://www.office.com/",
                           target: "_blank",
