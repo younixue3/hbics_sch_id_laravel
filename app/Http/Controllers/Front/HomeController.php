@@ -17,7 +17,6 @@ class HomeController extends Controller
     public function __construct(DataController $data)
     {
         $this->data = $data;
-        $url = getUrl::getUrl();
     }
 
     /**

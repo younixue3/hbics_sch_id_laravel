@@ -8,7 +8,7 @@
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
                         <div class="text-sm font-light">
                             <a href="https://www.office.com/" target="_blank" class="px-2 after:content-['_↗']":class="show ? 'bg-white text-black' : 'text-white' ">
-                                Login Office.com
+                                Office.com
                             </a>
                             <div class="-mr-2 -my-2 md:hidden">
                                 <button id="openMenu" type="button"
@@ -26,8 +26,8 @@
                         </div>
                         <div class="col-span-4 justify-self-end hidden md:block mr-20">
                             <div class="grid grid-cols-2 font-light mb-2">
-                                <a href="#">Beranda</a>
-                                <a href="#">Tentang Kami</a>
+                                <a :href="dataurl['home']">Beranda</a>
+                                <a :href="dataurl['tentang-kami']">Tentang Kami</a>
                             </div>
                             <div class="grid grid-cols-2 gap-x-5 font-bold">
                                 <div @mouseover="modalshow('pendaftaran')" @mouseleave="modalclose('pendaftaran')">
@@ -251,7 +251,7 @@
                         </div>
                         <div class="col-span-4 justify-self-start hidden md:block ml-20">
                             <div class="text-left font-light mb-2">
-                                <a class=" select-none" href="#">Hubungi kami</a>
+                                <a :href="dataurl['hubungi-kami']">Hubungi kami</a>
                             </div>
                             <div class="grid grid-cols-2 font-bold">
                                 <div @mouseover="modalshow('komunitas')" @mouseleave="modalclose('komunitas')">
@@ -673,11 +673,12 @@
 export default {
     data() {
         return {
+            dataurl : JSON.parse(this._props.url),
             windowspath : window.location.origin + '/',
             show: false
         }
     },
-    props: ['imagewhite', 'footerwhite', 'logo', 'logohhk'],
+    props: ['imagewhite', 'footerwhite', 'logo', 'logohhk', 'url'],
     created() {
         window.addEventListener('scroll', this.handleScroll);
     },

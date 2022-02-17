@@ -686,11 +686,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      dataurl: JSON.parse(this._props.url),
       windowspath: window.location.origin + '/',
       show: false
     };
   },
-  props: ['imagewhite', 'footerwhite', 'logo', 'logohhk'],
+  props: ['imagewhite', 'footerwhite', 'logo', 'logohhk', 'url'],
   created: function created() {
     window.addEventListener('scroll', this.handleScroll);
   },
@@ -1643,7 +1644,7 @@ var render = function () {
                       },
                       [
                         _vm._v(
-                          "\n                            Login Office.com\n                        "
+                          "\n                            Office.com\n                        "
                         ),
                       ]
                     ),
@@ -1700,7 +1701,21 @@ var render = function () {
                         "col-span-4 justify-self-end hidden md:block mr-20",
                     },
                     [
-                      _vm._m(0),
+                      _c(
+                        "div",
+                        { staticClass: "grid grid-cols-2 font-light mb-2" },
+                        [
+                          _c("a", { attrs: { href: _vm.dataurl["home"] } }, [
+                            _vm._v("Beranda"),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            { attrs: { href: _vm.dataurl["tentang-kami"] } },
+                            [_vm._v("Tentang Kami")]
+                          ),
+                        ]
+                      ),
                       _vm._v(" "),
                       _c(
                         "div",
@@ -1741,7 +1756,7 @@ var render = function () {
                                         "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
                                       attrs: { id: "pendaftaran" },
                                     },
-                                    [_vm._m(1)]
+                                    [_vm._m(0)]
                                   ),
                                 ]
                               ),
@@ -1827,6 +1842,48 @@ var render = function () {
                                                               _c("img", {
                                                                 attrs: {
                                                                   src: _vm.logohhk,
+                                                                },
+                                                              }),
+                                                            ]
+                                                          ),
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _vm._m(1),
+                                                    ]
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass:
+                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                  attrs: { href: "#" },
+                                                },
+                                                [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "flex gap-x-5 text-center",
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "div",
+                                                        { staticClass: "w-20" },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                            },
+                                                            [
+                                                              _c("img", {
+                                                                attrs: {
+                                                                  src: _vm.logo,
                                                                 },
                                                               }),
                                                             ]
@@ -1923,52 +1980,10 @@ var render = function () {
                                                   ),
                                                 ]
                                               ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: { href: "#" },
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "flex gap-x-5 text-center",
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        { staticClass: "w-20" },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
-                                                            },
-                                                            [
-                                                              _c("img", {
-                                                                attrs: {
-                                                                  src: _vm.logo,
-                                                                },
-                                                              }),
-                                                            ]
-                                                          ),
-                                                        ]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _vm._m(5),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
                                             ]
                                           ),
                                           _vm._v(" "),
-                                          _vm._m(6),
+                                          _vm._m(5),
                                         ]
                                       ),
                                     ]
@@ -2012,7 +2027,13 @@ var render = function () {
                         "col-span-4 justify-self-start hidden md:block ml-20",
                     },
                     [
-                      _vm._m(7),
+                      _c("div", { staticClass: "text-left font-light mb-2" }, [
+                        _c(
+                          "a",
+                          { attrs: { href: _vm.dataurl["hubungi-kami"] } },
+                          [_vm._v("Hubungi kami")]
+                        ),
+                      ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "grid grid-cols-2 font-bold" }, [
                         _c(
@@ -2047,7 +2068,7 @@ var render = function () {
                                     "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-96 z-50 transition-all ease-in-out duration-300 overflow-hidden",
                                   attrs: { id: "komunitas" },
                                 },
-                                [_vm._m(8)]
+                                [_vm._m(6)]
                               ),
                             ]),
                           ]
@@ -2085,7 +2106,7 @@ var render = function () {
                                     "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-[31rem] z-50 transition-all ease-in-out duration-300 overflow-hidden",
                                   attrs: { id: "publikasi" },
                                 },
-                                [_vm._m(9)]
+                                [_vm._m(7)]
                               ),
                             ]),
                           ]
@@ -2401,7 +2422,7 @@ var render = function () {
                   ]),
                 ]),
                 _vm._v(" "),
-                _vm._m(10),
+                _vm._m(8),
               ]
             ),
           ]
@@ -2411,16 +2432,6 @@ var render = function () {
   ])
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "grid grid-cols-2 font-light mb-2" }, [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Beranda")]),
-      _vm._v(" "),
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Tentang Kami")]),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -2842,16 +2853,6 @@ var staticRenderFns = [
           _vm._v("Guru"),
         ]
       ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-left font-light mb-2" }, [
-      _c("a", { staticClass: " select-none", attrs: { href: "#" } }, [
-        _vm._v("Hubungi kami"),
-      ]),
     ])
   },
   function () {

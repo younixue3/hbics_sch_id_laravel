@@ -7,6 +7,10 @@
                 <img id="hero_section" class="h-screen w-screen object-cover"
                      src="{{asset('assets/stock_photo_rdev/IMG_7266.jpg')}}" alt="">
                 <div class="absolute bottom-0 pb-10 bg-gradient-to-t from-gray-900 to-transparent w-full text-center">
+
+                </div>
+                <div class="absolute h-screen w-full translate-y-1/2">
+                    <span class="text-7xl text-white text-start font-raleway font-bold uppercase">Tentang Kami</span>
                 </div>
             </div>
         </div>

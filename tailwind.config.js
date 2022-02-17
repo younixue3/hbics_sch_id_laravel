@@ -4,7 +4,11 @@ module.exports = {
       "./resources/js/components/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            'raleway' : ['"Raleway"'],
+        }
+    },
   },
   plugins: [],
 }
