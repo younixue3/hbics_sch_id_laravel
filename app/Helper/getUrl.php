@@ -16,6 +16,6 @@ class getUrl
             'tentang-kami' => route('tentang-kami'),
             'hubungi-kami' => route('hubungi-kami')
         ];
-        return json_encode($url, JSON_UNESCAPED_SLASHES);
+        return response($url);
     }
 }

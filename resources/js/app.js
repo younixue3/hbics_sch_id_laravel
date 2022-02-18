@@ -24,6 +24,7 @@ window.Vue = require('vue').default;
 Vue.component('nav-bar-component', require('./components/layout/NavBarComponent.vue').default);
 Vue.component('content-card-component', require('./components/widget/ContentCardComponent').default)
 Vue.component('snap-component', require('./components/widget/SnapComponent').default)
+Vue.component('hero-component', require('./components/widget/HeroComponent').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

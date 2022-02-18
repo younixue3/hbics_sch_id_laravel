@@ -670,10 +670,12 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     data() {
         return {
-            dataurl : JSON.parse(this._props.url),
+            dataurl : null,
             windowspath : window.location.origin + '/',
             show: false
         }
@@ -681,9 +683,15 @@ export default {
     props: ['imagewhite', 'footerwhite', 'logo', 'logohhk', 'url'],
     created() {
         window.addEventListener('scroll', this.handleScroll);
+        axios
+            .get(this.windowspath + 'api/getUrl')
+            .then(response => (this.dataurl = response.data.original))
     },
     destroyed() {
         window.removeEventListener('scroll', this.handleScroll);
+    },
+    mounted() {
+
     },
     methods: {
         redirectBtn(path) {

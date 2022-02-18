@@ -2,14 +2,7 @@
 @section('title', 'Home')
 @section('content')
     <div class="">
-        <div class="h-screen">
-            <div class="flex h-screen relative text-center mb-10 shadow-xl">
-                <img id="hero_section" class="h-screen w-screen object-cover"
-                     src="{{asset('assets/stock_photo_rdev/IMG_7266.jpg')}}" alt="">
-                <div class="absolute bottom-0 pb-10 bg-gradient-to-t from-gray-900 to-transparent w-full text-center">
-                </div>
-            </div>
-        </div>
+        <hero-component></hero-component>
         <div class="grid grid-cols-1 gap-y-10 bg-white">
             <div class=" px-10 lg:px-80">
                 <div class="m-auto w-full align-middle">
