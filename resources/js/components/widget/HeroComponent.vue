@@ -6,29 +6,31 @@
             <div class="absolute bottom-0 pb-10 bg-gradient-to-t from-gray-900 to-transparent w-full text-center transition-all ease-in-out" :class="show ? 'opacity-100' : 'opacity-0'">
             </div>
             <div class="absolute w-screen h-screen">
-                <div class="absolute grid grid-cols-4 top-1/2 -translate-y-1/2 items-center">
+                <div class="absolute grid grid-cols-10 top-1/2 -translate-y-1/2 items-center w-full">
                     <div class="order-last">
                         <button
-                            class="rounded-full h-20 w-20 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black transition-all ease-in-out"
+                            class="rounded-full h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black transition-all ease-in-out"
                             v-on:click="nextSlider()"><i class="fas fa-angle-right"></i></button>
                     </div>
                     <div class="order-first">
                         <button
-                            class="rounded-full h-20 w-20 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black transition-all ease-in-out"
+                            class="rounded-full h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black transition-all ease-in-out"
                             v-on:click="prevSlider()"><i class="fas fa-angle-left"></i></button>
                     </div>
-                    <div class="grid grid-rows-3 px-5 justify-center items-center bg-white h-80 w-80 opacity-90 hover:opacity-100 transform hover:scale-105 transition-all ease-in-out rounded-xl">
-                        <div>
-                            <h2 class="text-3xl font-raleway font-bold transition-all ease-in-out" :class="show ? 'opacity-100' : 'opacity-0'">{{ this.sliderContent.title }}</h2>
-                            <div class="border-b-2 border-black mt-3 w-20 m-auto transition-all ease-in-out" :class="show ? 'opacity-100' : 'opacity-0'"></div>
-                        </div>
-                        <div class="self-start">
-                            <p class="font-light text-gray-500 transition-all ease-in-out" :class="show ? 'opacity-100' : 'opacity-0'">
-                                {{ this.sliderContent.content }}
-                            </p>
-                        </div>
-                        <div class="mt-5">
-                            <a class="hover:bg-blue-500 text-blue-500 hover:text-white rounded-full px-3 after:content-['_↗'] transition-all ease-in-out" href="#">Read More</a>
+                    <div class="col-span-8 justify-self-end">
+                        <div class="grid grid-rows-3 px-5 justify-center items-center bg-white md:h-80 md:w-80 opacity-90 hover:opacity-100 transform hover:scale-105 transition-all ease-in-out rounded-xl">
+                            <div>
+                                <h2 class="text-3xl font-raleway font-bold transition-all ease-in-out" :class="show ? 'opacity-100' : 'opacity-0'">{{ this.sliderContent.title }}</h2>
+                                <div class="border-b-2 border-black mt-3 w-20 m-auto transition-all ease-in-out" :class="show ? 'opacity-100' : 'opacity-0'"></div>
+                            </div>
+                            <div class="self-start">
+                                <p class="font-light text-gray-500 transition-all ease-in-out" :class="show ? 'opacity-100' : 'opacity-0'">
+                                    {{ this.sliderContent.content }}
+                                </p>
+                            </div>
+                            <div class="mt-5">
+                                <a class="hover:bg-blue-500 text-blue-500 hover:text-white rounded-full px-3 after:content-['_↗'] transition-all ease-in-out" href="#">Read More</a>
+                            </div>
                         </div>
                     </div>
                 </div>

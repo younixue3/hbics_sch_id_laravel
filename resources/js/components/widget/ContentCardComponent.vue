@@ -10,8 +10,8 @@
                 <div class="static">
                     <span class="text-lg font-bold truncate leading-4 z-10">{{ title }}</span>
                     <h4 class="text-amber-500 font-semibold truncate leading-4">{{ title }}</h4>
-                    <p class="mt-1 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300"
-                       :class="[showup ? 'h-9 md:h-12 translate-y-0 opacity-100' : 'h-5 translate-y-10 opacity-0', column ? '' : '']">
+                    <p class="hidden md:block mt-1 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300"
+                       :class="[showup ? 'h-12 translate-y-0 opacity-100' : 'h-5 translate-y-10 opacity-0', column ? '' : '']">
                         {{ content }}</p>
                 </div>
                 <div

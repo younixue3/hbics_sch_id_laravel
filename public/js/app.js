@@ -2917,6 +2917,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -4120,7 +4122,8 @@ var render = function () {
                     _c(
                       "a",
                       {
-                        staticClass: "px-2 after:content-['_↗']",
+                        staticClass:
+                          "hidden md:block px-2 after:content-['_↗']",
                         class: _vm.show ? "bg-white text-black" : "text-white",
                         attrs: {
                           href: "https://www.office.com/",
@@ -4600,7 +4603,7 @@ var render = function () {
                     ]
                   ),
                   _vm._v(" "),
-                  _c("div", {}, [
+                  _c("div", { staticClass: "hidden md:block" }, [
                     _c(
                       "div",
                       {
@@ -6163,10 +6166,10 @@ var render = function () {
                 "p",
                 {
                   staticClass:
-                    "mt-1 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300",
+                    "hidden md:block mt-1 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300",
                   class: [
                     _vm.showup
-                      ? "h-9 md:h-12 translate-y-0 opacity-100"
+                      ? "h-12 translate-y-0 opacity-100"
                       : "h-5 translate-y-10 opacity-0",
                     _vm.column ? "" : "",
                   ],
@@ -6271,7 +6274,7 @@ var render = function () {
             "div",
             {
               staticClass:
-                "absolute grid grid-cols-4 top-1/2 -translate-y-1/2 items-center",
+                "absolute grid grid-cols-10 top-1/2 -translate-y-1/2 items-center w-full",
             },
             [
               _c("div", { staticClass: "order-last" }, [
@@ -6279,7 +6282,7 @@ var render = function () {
                   "button",
                   {
                     staticClass:
-                      "rounded-full h-20 w-20 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black transition-all ease-in-out",
+                      "rounded-full h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black transition-all ease-in-out",
                     on: {
                       click: function ($event) {
                         return _vm.nextSlider()
@@ -6295,7 +6298,7 @@ var render = function () {
                   "button",
                   {
                     staticClass:
-                      "rounded-full h-20 w-20 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black transition-all ease-in-out",
+                      "rounded-full h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black transition-all ease-in-out",
                     on: {
                       click: function ($event) {
                         return _vm.prevSlider()
@@ -6306,52 +6309,54 @@ var render = function () {
                 ),
               ]),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "grid grid-rows-3 px-5 justify-center items-center bg-white h-80 w-80 opacity-90 hover:opacity-100 transform hover:scale-105 transition-all ease-in-out rounded-xl",
-                },
-                [
-                  _c("div", [
-                    _c(
-                      "h2",
-                      {
+              _c("div", { staticClass: "col-span-8 justify-self-end" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "grid grid-rows-3 px-5 justify-center items-center bg-white md:h-80 md:w-80 opacity-90 hover:opacity-100 transform hover:scale-105 transition-all ease-in-out rounded-xl",
+                  },
+                  [
+                    _c("div", [
+                      _c(
+                        "h2",
+                        {
+                          staticClass:
+                            "text-3xl font-raleway font-bold transition-all ease-in-out",
+                          class: _vm.show ? "opacity-100" : "opacity-0",
+                        },
+                        [_vm._v(_vm._s(this.sliderContent.title))]
+                      ),
+                      _vm._v(" "),
+                      _c("div", {
                         staticClass:
-                          "text-3xl font-raleway font-bold transition-all ease-in-out",
+                          "border-b-2 border-black mt-3 w-20 m-auto transition-all ease-in-out",
                         class: _vm.show ? "opacity-100" : "opacity-0",
-                      },
-                      [_vm._v(_vm._s(this.sliderContent.title))]
-                    ),
+                      }),
+                    ]),
                     _vm._v(" "),
-                    _c("div", {
-                      staticClass:
-                        "border-b-2 border-black mt-3 w-20 m-auto transition-all ease-in-out",
-                      class: _vm.show ? "opacity-100" : "opacity-0",
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "self-start" }, [
-                    _c(
-                      "p",
-                      {
-                        staticClass:
-                          "font-light text-gray-500 transition-all ease-in-out",
-                        class: _vm.show ? "opacity-100" : "opacity-0",
-                      },
-                      [
-                        _vm._v(
-                          "\n                            " +
-                            _vm._s(this.sliderContent.content) +
-                            "\n                        "
-                        ),
-                      ]
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _vm._m(0),
-                ]
-              ),
+                    _c("div", { staticClass: "self-start" }, [
+                      _c(
+                        "p",
+                        {
+                          staticClass:
+                            "font-light text-gray-500 transition-all ease-in-out",
+                          class: _vm.show ? "opacity-100" : "opacity-0",
+                        },
+                        [
+                          _vm._v(
+                            "\n                                " +
+                              _vm._s(this.sliderContent.content) +
+                              "\n                            "
+                          ),
+                        ]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(0),
+                  ]
+                ),
+              ]),
             ]
           ),
         ]),
