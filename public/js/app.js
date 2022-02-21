@@ -2837,6 +2837,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3104,7 +3109,7 @@ __webpack_require__.r(__webpack_exports__);
       this.data = this.arrTestimoni.person[this.counter];
       setTimeout(function () {
         return _this.show = true;
-      }, 1500);
+      }, 200);
     },
     handleScroll: function handleScroll() {// console.log(this.$refs.snapSpace.scrollWidth)
       // console.log(document.getElementById('activeSnap').getBoundingClientRect().left)
@@ -6121,7 +6126,7 @@ var render = function () {
     "div",
     {
       staticClass:
-        "relative bg-cover h-52 md:h-full bg-center col-span-1 transition-all ease-in-out duration-200 rounded-2xl shadow-lg",
+        "relative bg-cover bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg flex justify-end",
       class: [
         _vm.column ? "md:col-span-2" : "md:col-span-1",
         _vm.rows ? "md:row-span-2" : "md:row-span-1",
@@ -6141,15 +6146,29 @@ var render = function () {
         "div",
         {
           staticClass:
-            "absolute bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden p-2 lg:px-7 lg:py-5",
-          class: _vm.showup ? "h-32 md:h-40 lg:h-52" : "h-20 lg:h-32",
+            "transition-all ease-in-out duration-200 overflow-hidden mt-auto rounded-b-2xl bg-gradient-to-t to-transparent pt-3 pb-5 px-3 lg:px-6",
+          class: _vm.showup ? "from-gray-700" : "from-black",
         },
         [
-          _c("div", { staticClass: "relative h-full" }, [
-            _c("div", { staticClass: "static" }, [
+          _c("div", {}, [
+            _c("div", { staticClass: "static text-white" }, [
+              _vm._m(0),
+              _vm._v(" "),
               _c(
                 "span",
-                { staticClass: "text-lg font-bold truncate leading-4 z-10" },
+                {
+                  staticClass: "font-bold truncate leading-4 z-10",
+                  class: [
+                    _vm.column === true && _vm.rows === true
+                      ? "text-lg md:text-3xl lg:text-5xl"
+                      : [
+                          _vm.column ? "text-lg md:text-3xl" : "",
+                          _vm.column === false && _vm.rows === false
+                            ? "text-lg md:text-2xl"
+                            : "",
+                        ],
+                  ],
+                },
                 [_vm._v(_vm._s(_vm.title))]
               ),
               _vm._v(" "),
@@ -6157,21 +6176,25 @@ var render = function () {
                 "h4",
                 {
                   staticClass:
-                    "text-amber-500 font-semibold truncate leading-4",
+                    "text-amber-500 font-semibold truncate text-xs md:text-sm leading-4",
                 },
-                [_vm._v(_vm._s(_vm.title))]
+                [_vm._v("06 April, 2022")]
               ),
               _vm._v(" "),
               _c(
                 "p",
                 {
                   staticClass:
-                    "hidden md:block mt-1 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300",
+                    "my-4 leading-5 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300",
                   class: [
-                    _vm.showup
-                      ? "h-12 translate-y-0 opacity-100"
-                      : "h-5 translate-y-10 opacity-0",
-                    _vm.column ? "" : "",
+                    _vm.column === true && _vm.rows === true
+                      ? "h-10 md:h-16"
+                      : [
+                          _vm.column ? "h-10 md:h-14" : "",
+                          _vm.column === false && _vm.rows === false
+                            ? "h-10"
+                            : "",
+                        ],
                   ],
                 },
                 [_vm._v("\n                    " + _vm._s(_vm.content))]
@@ -6180,26 +6203,30 @@ var render = function () {
             _vm._v(" "),
             _c(
               "div",
-              {
-                staticClass:
-                  "absolute w-full bottom-0 h-5 flex justify-between self-end mt-12 transition-all ease-in-out mb-2 flex",
-                class: _vm.showup
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0",
-              },
+              { staticClass: "w-full flex justify-between text-white" },
               [
-                _c("div", { staticClass: "flex h-5 gap-x-1" }, [
-                  _c("img", {
-                    staticClass: "rounded-full h-5 w-5",
-                    attrs: { src: _vm.imagecontent },
-                  }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "text-xs" }, [
-                    _vm._v("Ricko Tiaka"),
-                  ]),
-                ]),
+                _c(
+                  "div",
+                  { staticClass: "flex h-6 gap-x-1 align-text-bottom" },
+                  [
+                    _c("img", {
+                      staticClass: "rounded-full h-6 w-6 md:h-8 md:w-8",
+                      attrs: { src: _vm.imagecontent },
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "m-auto text-xs md:text-base truncate" },
+                      [
+                        _vm._v(
+                          "\n                        Ricko Tiaka\n                    "
+                        ),
+                      ]
+                    ),
+                  ]
+                ),
                 _vm._v(" "),
-                _vm._m(0),
+                _vm._m(1),
               ]
             ),
           ]),
@@ -6213,12 +6240,31 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-5" }, [
+      _c(
+        "span",
+        {
+          staticClass:
+            "md:w-16 px-1 py-0.5 pt-1 rounded-md bg-red-600 md:flex md:justify-between",
+        },
+        [
+          _c("i", { staticClass: "fas fa-fire-alt text-xl mt-0.5" }),
+          _vm._v(" "),
+          _c("span", { staticClass: "hidden md:block" }, [_vm._v("Viral")]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex h-5 gap-x-5" }, [
-      _c("button", { staticClass: "text-lg" }, [
+      _c("button", { staticClass: "text-xs md:text-lg" }, [
         _c("i", { staticClass: "fas fa-heart" }),
       ]),
       _vm._v(" "),
-      _c("button", { staticClass: "text-lg" }, [
+      _c("button", { staticClass: "text-xs md:text-lg" }, [
         _c("i", { staticClass: "fas fa-share" }),
       ]),
     ])
@@ -6410,76 +6456,72 @@ var render = function () {
       { staticClass: "h-60" },
       [
         _c("Transition", { attrs: { name: "slide-fade" } }, [
-          _vm.show
-            ? _c(
-                "div",
-                {
+          _c(
+            "div",
+            {
+              staticClass:
+                "transition-all ease-in-out bg-white rounded-xl shadow-lg border-2 flex items-center md:w-[37rem] h-52 p-1 md:p-5 m-auto",
+              class: _vm.show
+                ? "translate-x-0 opacity-100"
+                : "opacity-0 translate-x-10",
+            },
+            [
+              _c("div", { staticClass: "w-1/4 self-start pl-1 pt-5" }, [
+                _c("img", {
                   staticClass:
-                    "bg-white rounded-xl shadow-lg border-2 flex items-center md:w-[37rem] h-52 p-1 md:p-5 m-auto",
-                },
-                [
-                  _c("div", { staticClass: "w-1/4 self-start pl-1 pt-5" }, [
-                    _c("img", {
-                      staticClass:
-                        "rounded-full w-16 h-16 bg-gray-200 object-cover",
-                      attrs: {
-                        src: "http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.jpg",
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "relative w-3/4 px-5" }, [
-                    _vm.show
-                      ? _c(
-                          "span",
-                          { staticClass: "text-lg font-bold truncate" },
-                          [_vm._v(_vm._s(_vm.data.name))]
-                        )
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.show
-                      ? _c(
-                          "div",
-                          {
-                            staticClass:
-                              "text-amber-500 font-semibold truncate",
-                          },
-                          [_vm._v(_vm._s(_vm.data.jabatan))]
-                        )
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.show
-                      ? _c(
-                          "p",
-                          {
-                            staticClass:
-                              "mt-2 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300 h-20 leading-4",
-                          },
-                          [
-                            _vm._v(
-                              "\n                        " +
-                                _vm._s(_vm.data.massage) +
-                                "\n                    "
-                            ),
-                          ]
-                        )
-                      : _vm._e(),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", {}, [
-                    _c(
-                      "button",
+                    "rounded-full w-16 h-16 bg-gray-200 object-cover",
+                  attrs: {
+                    src: "http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.jpg",
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "relative w-3/4 px-5" }, [
+                _vm.show
+                  ? _c("span", { staticClass: "text-lg font-bold truncate" }, [
+                      _vm._v(_vm._s(_vm.data.name)),
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.show
+                  ? _c(
+                      "div",
+                      { staticClass: "text-amber-500 font-semibold truncate" },
+                      [_vm._v(_vm._s(_vm.data.jabatan))]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.show
+                  ? _c(
+                      "p",
                       {
                         staticClass:
-                          "rounded-full h-7 w-7 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black",
-                        on: { click: _vm.nextButton },
+                          "mt-2 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300 h-20 leading-4",
                       },
-                      [_c("i", { staticClass: "fas fa-angle-right" })]
-                    ),
-                  ]),
-                ]
-              )
-            : _vm._e(),
+                      [
+                        _vm._v(
+                          "\n                        " +
+                            _vm._s(_vm.data.massage) +
+                            "\n                    "
+                        ),
+                      ]
+                    )
+                  : _vm._e(),
+              ]),
+              _vm._v(" "),
+              _c("div", {}, [
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "rounded-full h-7 w-7 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black",
+                    on: { click: _vm.nextButton },
+                  },
+                  [_c("i", { staticClass: "fas fa-angle-right" })]
+                ),
+              ]),
+            ]
+          ),
         ]),
       ],
       1

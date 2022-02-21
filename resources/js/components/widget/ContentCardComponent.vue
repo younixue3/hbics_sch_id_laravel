@@ -1,29 +1,34 @@
 <template>
     <div @mouseover="onHover()" @mouseleave="onLeave()"
          :class="[column ? 'md:col-span-2' : 'md:col-span-1', rows ? 'md:row-span-2' : 'md:row-span-1']"
-         class="relative bg-cover h-52 md:h-full bg-center col-span-1 transition-all ease-in-out duration-200 rounded-2xl shadow-lg"
+         class="relative bg-cover bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg flex justify-end"
          :style="{ backgroundImage: `url('${imagecontent}')` }">
         <div
-            class="absolute bg-white w-full bottom-0 transition-all ease-in-out duration-200 rounded-b-2xl overflow-hidden p-2 lg:px-7 lg:py-5"
-            :class="showup ? 'h-32 md:h-40 lg:h-52' : 'h-20 lg:h-32'">
-            <div class="relative h-full">
-                <div class="static">
-                    <span class="text-lg font-bold truncate leading-4 z-10">{{ title }}</span>
-                    <h4 class="text-amber-500 font-semibold truncate leading-4">{{ title }}</h4>
-                    <p class="hidden md:block mt-1 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300"
-                       :class="[showup ? 'h-12 translate-y-0 opacity-100' : 'h-5 translate-y-10 opacity-0', column ? '' : '']">
+            class="transition-all ease-in-out duration-200 overflow-hidden mt-auto rounded-b-2xl bg-gradient-to-t to-transparent pt-3 pb-5 px-3 lg:px-6" :class="showup ? 'from-gray-700' : 'from-black'">
+            <div class="">
+                <div class="static text-white">
+                    <div class="mb-5">
+                        <span class="md:w-16 px-1 py-0.5 pt-1 rounded-md bg-red-600 md:flex md:justify-between">
+                            <i class="fas fa-fire-alt text-xl mt-0.5"></i>
+                            <span class="hidden md:block">Viral</span>
+                        </span>
+                    </div>
+                    <span class="font-bold truncate leading-4 z-10" :class="[column === true && rows === true ? 'text-lg md:text-3xl lg:text-5xl' : [column ? 'text-lg md:text-3xl' : '', column === false && rows === false ? 'text-lg md:text-2xl' : '']]">{{ title }}</span>
+                    <h4 class="text-amber-500 font-semibold truncate text-xs md:text-sm leading-4">06 April, 2022</h4>
+                    <p class="my-4 leading-5 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300"
+                       :class="[column === true && rows === true ? 'h-10 md:h-16' : [column ? 'h-10 md:h-14' : '', column === false && rows === false ? 'h-10' : '']]">
                         {{ content }}</p>
                 </div>
-                <div
-                    class="absolute w-full bottom-0 h-5 flex justify-between self-end mt-12 transition-all ease-in-out mb-2 flex"
-                    :class="showup ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
-                    <div class="flex h-5 gap-x-1">
-                        <img class="rounded-full h-5 w-5" :src="imagecontent">
-                        <span class="text-xs">Ricko Tiaka</span>
+                <div class="w-full flex justify-between text-white">
+                    <div class="flex h-6 gap-x-1 align-text-bottom">
+                        <img class="rounded-full h-6 w-6 md:h-8 md:w-8" :src="imagecontent">
+                        <div class="m-auto text-xs md:text-base truncate">
+                            Ricko Tiaka
+                        </div>
                     </div>
                     <div class="flex h-5 gap-x-5">
-                        <button class="text-lg"><i class="fas fa-heart"></i></button>
-                        <button class="text-lg"><i class="fas fa-share"></i></button>
+                        <button class="text-xs md:text-lg"><i class="fas fa-heart"></i></button>
+                        <button class="text-xs md:text-lg"><i class="fas fa-share"></i></button>
                     </div>
                 </div>
             </div>
