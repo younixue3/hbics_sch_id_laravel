@@ -2738,10 +2738,75 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      menubar: false,
       dataurl: null,
       windowspath: window.location.origin + '/',
       show: false
@@ -2787,6 +2852,29 @@ __webpack_require__.r(__webpack_exports__);
       setTimeout(function () {
         eval(navname).classList.add('hidden');
       }, 100);
+    },
+    menushow: function menushow() {
+      this.menubar = true;
+    },
+    menuclose: function menuclose() {
+      this.menubar = false;
+    },
+    showmenumobile: function showmenumobile(navname) {
+      var btn = navname + 'btn';
+
+      if (eval(navname).classList.contains('hidden')) {
+        eval(btn).classList.remove('rotate-90');
+        eval(navname).classList.remove('hidden');
+        setTimeout(function () {
+          eval(navname).classList.remove('h-0');
+        }, 10);
+      } else {
+        eval(btn).classList.add('rotate-90');
+        eval(navname).classList.add('h-0');
+        setTimeout(function () {
+          eval(navname).classList.add('hidden');
+        }, 100);
+      }
     }
   }
 });
@@ -4153,6 +4241,11 @@ var render = function () {
                             type: "button",
                             "aria-expanded": "false",
                           },
+                          on: {
+                            click: function ($event) {
+                              return _vm.menushow()
+                            },
+                          },
                         },
                         [
                           _c("span", { staticClass: "sr-only" }, [
@@ -4627,297 +4720,324 @@ var render = function () {
             ]
           ),
         ]),
-        _vm._v(" "),
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "fixed top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50",
+        class: _vm.menubar ? "" : "hidden",
+      },
+      [
         _c(
           "div",
           {
             staticClass:
-              "hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50",
+              "rounded-lg shadow-lg ring-1 ring-gray-800 ring-opacity-5 bg-white divide-y-2 divide-gray-50",
           },
           [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "rounded-lg shadow-lg ring-1 ring-gray-800 ring-opacity-5 bg-white divide-y-2 divide-gray-50",
-              },
-              [
-                _c("div", { staticClass: "pt-5 pb-6 px-5" }, [
-                  _c("div", { staticClass: "flex items-center justify-end" }, [
-                    _c("div", { staticClass: "-mr-2" }, [
-                      _c(
-                        "button",
-                        {
-                          staticClass:
-                            "bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500",
-                          attrs: { id: "closeMenu", type: "button" },
+            _c("div", { staticClass: "pt-5 pb-6 px-5" }, [
+              _c("div", { staticClass: "flex items-center justify-end" }, [
+                _c("div", { staticClass: "-mr-2" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500",
+                      attrs: { id: "closeMenu", type: "button" },
+                      on: {
+                        click: function ($event) {
+                          return _vm.menuclose()
                         },
-                        [
-                          _c("span", { staticClass: "sr-only" }, [
-                            _vm._v("Close menu"),
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "h-6 w-6",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true",
-                              },
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12",
-                                },
-                              }),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "mt-6" }, [
-                    _c("nav", { staticClass: "grid gap-y-8" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "-m-3 p-3 flex items-center rounded-md hover:bg-gray-50",
-                          attrs: { href: "#" },
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass:
-                                "flex-shrink-0 h-6 w-6 text-indigo-600",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true",
-                              },
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-                                },
-                              }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "ml-3 text-base text-gray-900" },
-                            [
-                              _vm._v(
-                                "\n                            Analytics\n                        "
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
+                      },
+                    },
+                    [
+                      _c("span", { staticClass: "sr-only" }, [
+                        _vm._v("Close menu"),
+                      ]),
                       _vm._v(" "),
                       _c(
-                        "a",
+                        "svg",
                         {
-                          staticClass:
-                            "-m-3 p-3 flex items-center rounded-md hover:bg-gray-50",
-                          attrs: { href: "#" },
+                          staticClass: "h-6 w-6",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor",
+                            "aria-hidden": "true",
+                          },
                         },
                         [
-                          _c(
-                            "svg",
-                            {
-                              staticClass:
-                                "flex-shrink-0 h-6 w-6 text-indigo-600",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true",
-                              },
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d: "M6 18L18 6M6 6l12 12",
                             },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
-                                },
-                              }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "ml-3 text-base text-gray-900" },
-                            [
-                              _vm._v(
-                                "\n                            Engagement\n                        "
-                              ),
-                            ]
-                          ),
+                          }),
                         ]
                       ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "-m-3 p-3 flex items-center rounded-md hover:bg-gray-50",
-                          attrs: { href: "#" },
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass:
-                                "flex-shrink-0 h-6 w-6 text-indigo-600",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true",
-                              },
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
-                                },
-                              }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "ml-3 text-base text-gray-900" },
-                            [
-                              _vm._v(
-                                "\n                            Security\n                        "
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "-m-3 p-3 flex items-center rounded-md hover:bg-gray-50",
-                          attrs: { href: "#" },
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass:
-                                "flex-shrink-0 h-6 w-6 text-indigo-600",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true",
-                              },
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z",
-                                },
-                              }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "ml-3 text-base text-gray-900" },
-                            [
-                              _vm._v(
-                                "\n                            Integrations\n                        "
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "-m-3 p-3 flex items-center rounded-md hover:bg-gray-50",
-                          attrs: { href: "#" },
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass:
-                                "flex-shrink-0 h-6 w-6 text-indigo-600",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true",
-                              },
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
-                                },
-                              }),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "ml-3 text-base text-gray-900" },
-                            [
-                              _vm._v(
-                                "\n                            Automations\n                        "
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]),
-                  ]),
+                    ]
+                  ),
                 ]),
-                _vm._v(" "),
-                _vm._m(8),
-              ]
-            ),
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "mt-6 overflow-y-scroll overflow-x-hidden h-72",
+                },
+                [
+                  _c("nav", { staticClass: "grid gap-y-8" }, [
+                    _vm._m(8),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "-m-3 p-3 rounded-md transition-all ease-in-out",
+                        attrs: { href: "#" },
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "flex justify-between",
+                            on: {
+                              click: function ($event) {
+                                return _vm.showmenumobile("pendaftaranmobile")
+                              },
+                            },
+                          },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "ml-3 text-base font-semibold text-blue-800",
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        Pendaftaran\n                                    "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("i", {
+                              ref: "pendaftaranmobilebtn",
+                              staticClass:
+                                "fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out",
+                              attrs: { id: "pendaftaranmobilebtn" },
+                            }),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            ref: "pendaftaranmobile",
+                            staticClass:
+                              "h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5",
+                            attrs: { id: "pendaftaranmobile" },
+                          },
+                          [
+                            _vm._m(9),
+                            _vm._v(" "),
+                            _vm._m(10),
+                            _vm._v(" "),
+                            _vm._m(11),
+                            _vm._v(" "),
+                            _vm._m(12),
+                          ]
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "-m-3 p-3 rounded-md transition-all ease-in-out",
+                        attrs: { href: "#" },
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "flex justify-between",
+                            on: {
+                              click: function ($event) {
+                                return _vm.showmenumobile("akademismobile")
+                              },
+                            },
+                          },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "ml-3 text-base font-semibold text-blue-800",
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        Akademis\n                                    "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("i", {
+                              ref: "akademismobilebtn",
+                              staticClass:
+                                "fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out",
+                              attrs: { id: "akademismobilebtn" },
+                            }),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            ref: "akademismobile",
+                            staticClass:
+                              "h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5",
+                            attrs: { id: "akademismobile" },
+                          },
+                          [
+                            _vm._m(13),
+                            _vm._v(" "),
+                            _vm._m(14),
+                            _vm._v(" "),
+                            _vm._m(15),
+                            _vm._v(" "),
+                            _vm._m(16),
+                          ]
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "-m-3 p-3 rounded-md transition-all ease-in-out",
+                        attrs: { href: "#" },
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "flex justify-between",
+                            on: {
+                              click: function ($event) {
+                                return _vm.showmenumobile("komunitasmobile")
+                              },
+                            },
+                          },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "ml-3 text-base font-semibold text-blue-800",
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        Komunitas\n                                    "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("i", {
+                              ref: "komunitasmobilebtn",
+                              staticClass:
+                                "fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out",
+                              attrs: { id: "komunitasmobilebtn" },
+                            }),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            ref: "komunitasmobile",
+                            staticClass:
+                              "h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5",
+                            attrs: { id: "komunitasmobile" },
+                          },
+                          [_vm._m(17), _vm._v(" "), _vm._m(18)]
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "-m-3 p-3 rounded-md transition-all ease-in-out",
+                        attrs: { href: "#" },
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "flex justify-between",
+                            on: {
+                              click: function ($event) {
+                                return _vm.showmenumobile("publikasimobile")
+                              },
+                            },
+                          },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "ml-3 text-base font-semibold text-blue-800",
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        Publikasi\n                                    "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("i", {
+                              ref: "publikasimobilebtn",
+                              staticClass:
+                                "fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out",
+                              attrs: { id: "publikasimobilebtn" },
+                            }),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            ref: "publikasimobile",
+                            staticClass:
+                              "h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5",
+                            attrs: { id: "publikasimobile" },
+                          },
+                          [
+                            _vm._m(19),
+                            _vm._v(" "),
+                            _vm._m(20),
+                            _vm._v(" "),
+                            _vm._m(21),
+                          ]
+                        ),
+                      ]
+                    ),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _vm._m(22),
           ]
         ),
       ]
@@ -5983,6 +6103,302 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "-m-3 p-3 items-center rounded-md hover:bg-gray-100",
+        attrs: { href: "#" },
+      },
+      [
+        _c(
+          "span",
+          { staticClass: "ml-3 text-base font-semibold text-blue-800" },
+          [
+            _vm._v(
+              "\n                                    Beranda\n                                "
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Petunjuk Pendaftaran\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Program Beasiswa\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Pendaftaran Siswa Baru\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Kunjungi Kami\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Happy Holy Kids\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Sekolah Dasar\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Sekolah Menengah Pertama\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Sekolah Menengah Atas\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Alumni\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Orang Tua\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Berita\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Acara\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+      },
+      [
+        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _vm._v(
+              "\n                                            Artikel\n                                        "
+            ),
+          ]),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "py-6 px-5 space-y-6" }, [
       _c("div", { staticClass: "grid grid-cols-2 gap-y-4 gap-x-8" }, [
         _c(
@@ -5993,7 +6409,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                            Pricing\n                        "
+              "\n                        Tentang Kami\n                    "
             ),
           ]
         ),
@@ -6006,7 +6422,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                            Docs\n                        "
+              "\n                        Hubungi Kami\n                    "
             ),
           ]
         ),
@@ -6014,53 +6430,11 @@ var staticRenderFns = [
         _c(
           "a",
           {
-            staticClass: "text-base text-gray-900 hover:text-gray-700",
+            staticClass:
+              "col-span-2 text-base font-semibold text-center text-sky-600 hover:text-gray-700 after:content-['_↗']",
             attrs: { href: "#" },
           },
-          [
-            _vm._v(
-              "\n                            Help Center\n                        "
-            ),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "text-base text-gray-900 hover:text-gray-700",
-            attrs: { href: "#" },
-          },
-          [
-            _vm._v(
-              "\n                            Guides\n                        "
-            ),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "text-base text-gray-900 hover:text-gray-700",
-            attrs: { href: "#" },
-          },
-          [
-            _vm._v(
-              "\n                            Events\n                        "
-            ),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "text-base text-gray-900 hover:text-gray-700",
-            attrs: { href: "#" },
-          },
-          [
-            _vm._v(
-              "\n                            Security\n                        "
-            ),
-          ]
+          [_vm._v("\n                        Office.com\n                    ")]
         ),
       ]),
       _vm._v(" "),
@@ -6072,30 +6446,8 @@ var staticRenderFns = [
               "w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base text-white bg-indigo-600 hover:bg-indigo-700",
             attrs: { href: "#" },
           },
-          [
-            _vm._v(
-              "\n                            Sign up\n                        "
-            ),
-          ]
+          [_vm._v("\n                        Log In\n                    ")]
         ),
-        _vm._v(" "),
-        _c("p", { staticClass: "mt-6 text-center text-base text-white" }, [
-          _vm._v(
-            "\n                            Existing customer?\n                            "
-          ),
-          _c(
-            "a",
-            {
-              staticClass: "text-indigo-600 hover:text-indigo-500",
-              attrs: { href: "#" },
-            },
-            [
-              _vm._v(
-                "\n                                Sign in\n                            "
-              ),
-            ]
-          ),
-        ]),
       ]),
     ])
   },
@@ -6360,7 +6712,7 @@ var render = function () {
                   "div",
                   {
                     staticClass:
-                      "grid grid-rows-3 px-5 justify-center items-center bg-white md:h-80 md:w-80 opacity-90 hover:opacity-100 transform hover:scale-105 transition-all ease-in-out rounded-xl",
+                      "grid grid-rows-3 px-5 justify-center items-center bg-white h-[25rem] md:h-80 md:w-80 opacity-90 hover:opacity-100 transform hover:scale-105 transition-all ease-in-out rounded-xl",
                   },
                   [
                     _c("div", [

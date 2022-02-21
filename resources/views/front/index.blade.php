@@ -5,17 +5,21 @@
         <hero-component></hero-component>
         <div class="grid grid-cols-1 gap-y-0 md:gap-y-10 bg-white">
             <div class=" px-10 lg:px-80">
-                <div class="m-auto w-full align-middle">
+                <div class="m-auto w-full align-middle my-10">
                     <div
-                        class="absolute text-gray-300 -translate-x-10 -translate-y-5 md:-translate-x-10 md:-translate-y-10 text-6xl md:text-8xl">
-                        <i class="fas fa-quote-right"></i>
+                        class="md:absolute h-full text-gray-700 md:text-gray-300 md:-translate-x-10 md:-translate-y-10 text-5xl md:text-8xl text-center">
+                        <i class="fa-solid fa-quote-left"></i>
                     </div>
-                    <div class="relative my-20 text-lg text-center md:text-left">
+                    <div class="relative md:my-20 text-lg text-center md:text-left z-10">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis dui tempor, porta
                             justo vel, suscipit tellus. Vivamus sed lectus nec tellus fringilla fermentum vel nec lorem.
                             Nullam eros urna, rutrum ac euismod eu, ultricies sed nibh. Vivamus finibus ligula non
                             tempus consequat.<span class="mx-3 italic font-light block md:inline"> - Jane Doe - </span>
                         </p>
+                    </div>
+                    <div
+                        class="md:absolute md:right-0 text-gray-700 md:text-gray-300 md:-translate-x-80 md:-translate-y-40 text-5xl md:text-8xl text-center z-0">
+                        <i class="fa-solid fa-quote-right"></i>
                     </div>
                 </div>
             </div>

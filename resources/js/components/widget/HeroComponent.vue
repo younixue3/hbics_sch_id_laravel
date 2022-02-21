@@ -18,7 +18,7 @@
                             v-on:click="prevSlider()"><i class="fas fa-angle-left"></i></button>
                     </div>
                     <div class="col-span-8 justify-self-end">
-                        <div class="grid grid-rows-3 px-5 justify-center items-center bg-white md:h-80 md:w-80 opacity-90 hover:opacity-100 transform hover:scale-105 transition-all ease-in-out rounded-xl">
+                        <div class="grid grid-rows-3 px-5 justify-center items-center bg-white h-[25rem] md:h-80 md:w-80 opacity-90 hover:opacity-100 transform hover:scale-105 transition-all ease-in-out rounded-xl">
                             <div>
                                 <h2 class="text-3xl font-raleway font-bold transition-all ease-in-out" :class="show ? 'opacity-100' : 'opacity-0'">{{ this.sliderContent.title }}</h2>
                                 <div class="border-b-2 border-black mt-3 w-20 m-auto transition-all ease-in-out" :class="show ? 'opacity-100' : 'opacity-0'"></div>
