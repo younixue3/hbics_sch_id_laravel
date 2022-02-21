@@ -717,7 +717,7 @@
                             Hubungi Kami
                         </a>
 
-                        <a href="#" class="col-span-2 text-base font-semibold text-center text-sky-600 hover:text-gray-700 after:content-['_↗']">
+                        <a href="https://www.office.com/" target="_blank" class="col-span-2 text-base font-semibold text-center text-sky-600 hover:text-gray-700 after:content-['_↗']">
                             Office.com
                         </a>
                     </div>

@@ -2929,7 +2929,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -6432,7 +6431,7 @@ var staticRenderFns = [
           {
             staticClass:
               "col-span-2 text-base font-semibold text-center text-sky-600 hover:text-gray-700 after:content-['_↗']",
-            attrs: { href: "#" },
+            attrs: { href: "https://www.office.com/", target: "_blank" },
           },
           [_vm._v("\n                        Office.com\n                    ")]
         ),
@@ -6537,17 +6536,7 @@ var render = function () {
                 "p",
                 {
                   staticClass:
-                    "my-4 leading-5 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300",
-                  class: [
-                    _vm.column === true && _vm.rows === true
-                      ? "h-10 md:h-16"
-                      : [
-                          _vm.column ? "h-10 md:h-14" : "",
-                          _vm.column === false && _vm.rows === false
-                            ? "h-10"
-                            : "",
-                        ],
-                  ],
+                    "my-4 leading-6 overflow-hidden text-ellipsis text-lg font-light transition-all ease-in-out duration-300 h-12",
                 },
                 [_vm._v("\n                    " + _vm._s(_vm.content))]
               ),

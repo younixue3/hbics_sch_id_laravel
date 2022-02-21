@@ -1525,6 +1525,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .leading-5{
   line-height: 1.25rem;
 }
+.leading-6{
+  line-height: 1.5rem;
+}
 .text-gray-200{
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
