@@ -3,7 +3,7 @@
 @section('content')
     <div class="">
         <hero-component></hero-component>
-        <div class="grid grid-cols-1 gap-y-0 md:gap-y-10 bg-white">
+        <div class="grid grid-cols-1 gap-y-0 md:gap-y-10">
             <div class=" px-10 lg:px-80">
                 <div class="m-auto w-full align-middle my-10">
                     <div

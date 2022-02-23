@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/6fd3995802.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="app">
+<div id="app" class="bg-gray-100 font-raleway">
     @include('layouts/header')
     @yield('content')
     @include('layouts/footer')
