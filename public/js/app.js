@@ -3143,6 +3143,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       counter: 0,
+      scrolcount: 0,
       arrTestimoni: {
         count: 0,
         fasilitas: [{
@@ -3159,17 +3160,26 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  created: function created() {// this.data = this.arrTestimoni.person[0]
+  mounted: function mounted() {// this.scrolcount = this.$refs.scrollsnap.scrollWidth
   },
   methods: {
     nextButton: function nextButton() {
       this.counter = this.counter + 1;
+      var scroller = this.$refs.scrollsnap;
+      var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width;
+      console.log(this.scrolcount);
 
-      if (this.counter === 5) {
+      if (this.counter === 4) {
         this.counter = 0;
+        this.scrolcount = 0;
+      } else {
+        this.scrolcount = this.scrolcount + element;
       }
 
-      this.$refs.scrollsnap.scrollIntoView('');
+      scroller.scrollTo({
+        behavior: 'smooth',
+        left: this.scrolcount
+      });
     }
   }
 });
@@ -6963,7 +6973,7 @@ var render = function () {
       {
         ref: "scrollsnap",
         staticClass:
-          "snap-x flex gap-6 snap-mandatory overflow-x-auto removescrollbar",
+          "snap-x flex gap-6 snap-mandatory overflow-x-auto removescrollbar scroll-smooth",
       },
       [
         _vm._l(_vm.arrTestimoni.fasilitas, function (item, index) {
@@ -6971,11 +6981,12 @@ var render = function () {
             "div",
             {
               staticClass: "snap-center scroll-mx-6 shrink-0 rounded-3xl px-2",
+              attrs: { id: "testing" + index },
             },
             [
               _c("img", {
                 staticClass: "h-56 rounded-3xl",
-                attrs: { id: index, src: item.image },
+                attrs: { src: item.image },
               }),
             ]
           )
@@ -6986,9 +6997,23 @@ var render = function () {
       2
     ),
     _vm._v(" "),
-    _vm._m(1),
+    _c("div", { staticClass: "absolute flex h-full right-0 px-2" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out",
+          on: {
+            click: function ($event) {
+              return _vm.nextButton()
+            },
+          },
+        },
+        [_c("i", { staticClass: "fas fa-angle-right" })]
+      ),
+    ]),
     _vm._v(" "),
-    _vm._m(2),
+    _vm._m(1),
   ])
 }
 var staticRenderFns = [
@@ -7022,21 +7047,6 @@ var staticRenderFns = [
         ]),
       ]
     )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "absolute flex h-full right-0 px-2" }, [
-      _c(
-        "button",
-        {
-          staticClass:
-            "rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out",
-        },
-        [_c("i", { staticClass: "fas fa-angle-right" })]
-      ),
-    ])
   },
   function () {
     var _vm = this

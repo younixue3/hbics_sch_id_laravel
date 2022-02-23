@@ -1,8 +1,8 @@
 <template>
     <div class="flex relative">
-        <div ref="scrollsnap" class="snap-x flex gap-6 snap-mandatory overflow-x-auto removescrollbar">
-            <div v-for="(item, index) in arrTestimoni.fasilitas" class="snap-center scroll-mx-6 shrink-0 rounded-3xl px-2">
-                <img :id="index" class="h-56 rounded-3xl" :src="item.image" />
+        <div ref="scrollsnap" class="snap-x flex gap-6 snap-mandatory overflow-x-auto removescrollbar scroll-smooth">
+            <div v-for="(item, index) in arrTestimoni.fasilitas" :id="'testing' + index" class="snap-center scroll-mx-6 shrink-0 rounded-3xl px-2">
+                <img class="h-56 rounded-3xl" :src="item.image" />
             </div>
             <div href="#" class="snap-center scroll-mx-6 shrink-0 rounded-3xl overflow-hidden">
                 <div class="flex relative">
@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="absolute flex h-full right-0 px-2">
-            <button
+            <button v-on:click="nextButton()"
                 class="rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out"><i class="fas fa-angle-right"></i></button>
         </div>
         <div class="absolute flex h-full left-0 px-2">
@@ -31,6 +31,7 @@ export default {
     data() {
         return {
             counter: 0,
+            scrolcount: 0,
             arrTestimoni: {
                 count: 0,
                 fasilitas: [
@@ -53,16 +54,25 @@ export default {
             },
         }
     },
-    created() {
-        // this.data = this.arrTestimoni.person[0]
+    mounted() {
+        // this.scrolcount = this.$refs.scrollsnap.scrollWidth
     },
     methods: {
         nextButton() {
             this.counter = this.counter + 1
-            if (this.counter === 5) {
+
+            var scroller = this.$refs.scrollsnap
+            var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width
+            console.log(this.scrolcount)
+
+
+            if (this.counter === 4) {
                 this.counter = 0
+                this.scrolcount = 0
+            } else {
+                this.scrolcount = this.scrolcount + element
             }
-            this.$refs.scrollsnap.scrollIntoView('')
+            scroller.scrollTo({behavior: 'smooth', left: this.scrolcount})
         },
     }
 }
