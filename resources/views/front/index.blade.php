@@ -92,7 +92,7 @@
                     class="absolute top-32 w-full h-52 rounded-3xl bg-gradient-to-br from-sky-600 to-blue-900 transform scale-110 skew-y-3 rotate-6 z-0 shadow-lg shadow-neutral-400 transition-all ease-in-out duration-500">
 
                 </div>
-                <snap-component></snap-component>
+                <testimoni-component></testimoni-component>
             </div>
         </div>
     </div>

@@ -15,5 +15,17 @@
     @include('layouts/footer')
 </div>
 <script src="{{asset('js/app.js')}}"></script>
+<style>
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .removescrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .removescrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+</style>
 </body>
 </html>

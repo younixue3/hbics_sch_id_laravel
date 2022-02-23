@@ -62,7 +62,7 @@
         <div class="flex relative justify-item-center h-96 w-full bg-cover bg-center mt-10 rounded-3xl overflow-hidden text-white">
             <img class="static object-cover brightness-50 w-full rounded-3xl" src="{{asset('assets/stock_photo_rdev/cambridge.jpeg')}}">
             <div class="absolute text-center">
-                <div class="flex relative h-96">
+                <div class="flex h-96">
                     <div class="m-auto">
                         <h1 class="text-5xl font-semibold hover:after:content-['_↗']"><a href="#">Metode Pembelajaran</a></h1>
                         <p class="px-72 font-light my-2">Kurikulum Cambridge yang diadaptasi oleh Sekolah Kristen Harapan Bangsa bertujuan untuk menciptakan generasi yang siap dalam persaingan global. Sesuai namanya, kurikulum Cambridge berasal dari organisasi yang ada di Universitas Cambridge, Inggris.</p>
@@ -72,31 +72,11 @@
             </div>
         </div>
     </div>
-    <div class="snap-x flex gap-6 snap-mandatory overflow-x-auto px-20">
-        <div class="snap-center scroll-mx-6 shrink-0">
-            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+    <div class="my-20">
+        <div class="px-20">
+            <h1 class="text-3xl font-semibold hover:after:content-['_↗']"><a href="#">Fasilitas</a></h1>
+            <p class="my-5">Fasilitas Sekolah adalah sarana dan prasarana yang harus tersedia untuk melancarkan kegiatan belajar mengajar di sekolah. Sekolah Kristen Harapan Bangsa Balikpapan dan Happy Holy Kids Balikpapan menyediakan fasilitas terbaik untuk menunjang kegiatan belajar mengajar siswa/i.</p>
         </div>
-        <div class="snap-center scroll-mx-6 shrink-0">
-            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
-        </div>
-        <div class="snap-center scroll-mx-6 shrink-0">
-            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
-        </div>
-        <div class="snap-center scroll-mx-6 shrink-0">
-            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
-        </div>
-        <div class="snap-center scroll-mx-6 shrink-0">
-            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
-        </div>
-        <div class="snap-center scroll-mx-6 shrink-0">
-            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
-        </div>
-        <div class="snap-center scroll-mx-6 shrink-0">
-            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
-        </div>
-        <div class="snap-center scroll-mx-6 shrink-0">
-            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
-        </div>
-
+        <snap-component></snap-component>
     </div>
 @endsection
