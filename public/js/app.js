@@ -2809,6 +2809,7 @@ __webpack_require__.r(__webpack_exports__);
       menubar: false,
       dataurl: null,
       windowspath: window.location.origin + '/',
+      livepath: window.location.pathname,
       show: false
     };
   },
@@ -4350,7 +4351,14 @@ var render = function () {
             "div",
             {
               staticClass: "transition-all ease-in-out duration-300",
-              class: _vm.show ? "bg-blue-900 h-20" : "bg-transparent h-44",
+              class: [
+                _vm.show
+                  ? "h-20"
+                  : _vm.livepath !== "/"
+                  ? "h-44"
+                  : "bg-transparent h-44",
+                _vm.livepath !== "/" ? "bg-blue-900" : "bg-blue-900",
+              ],
             },
             [
               _c(
@@ -4366,7 +4374,11 @@ var render = function () {
                       {
                         staticClass:
                           "hidden md:block px-2 after:content-['_↗']",
-                        class: _vm.show ? "bg-white text-black" : "text-white",
+                        class: _vm.show
+                          ? "bg-white text-black"
+                          : _vm.livepath !== "/"
+                          ? "bg-white text-black"
+                          : "text-white",
                         attrs: {
                           href: "https://www.office.com/",
                           target: "_blank",
@@ -4743,14 +4755,14 @@ var render = function () {
                     _c("img", {
                       staticClass:
                         "m-auto transition-all ease-in-out duration-300",
-                      class: _vm.show ? "h-0" : "h-14 md:h-24",
+                      class: _vm.show ? "h-0" : "h-14 md:h-20",
                       attrs: { src: _vm.logo, alt: "" },
                     }),
                     _vm._v(" "),
                     _c("img", {
                       staticClass:
                         "m-auto transition-all ease-in-out duration-300",
-                      class: _vm.show ? "h-0" : "h-14 md:h-24",
+                      class: _vm.show ? "h-0" : "h-14 md:h-20",
                       attrs: { src: _vm.footerwhite, alt: "" },
                     }),
                   ]),

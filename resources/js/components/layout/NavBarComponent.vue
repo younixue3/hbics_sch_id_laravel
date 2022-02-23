@@ -3,11 +3,11 @@
         <header ref="navbar" class="h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-50"
                 id="navBar">
             <div>
-                <div :class="show ? 'bg-blue-900 h-20' : 'bg-transparent h-44' "
+                <div :class="[show ? 'h-20' : livepath !== '/' ? 'h-44' : 'bg-transparent h-44', livepath !== '/' ? 'bg-blue-900' : 'bg-blue-900']"
                      class="transition-all ease-in-out duration-300">
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
                         <div class="text-sm font-light">
-                            <a href="https://www.office.com/" target="_blank" class="hidden md:block px-2 after:content-['_↗']":class="show ? 'bg-white text-black' : 'text-white' ">
+                            <a href="https://www.office.com/" target="_blank" class="hidden md:block px-2 after:content-['_↗']":class="show ? 'bg-white text-black' : livepath !== '/' ? 'bg-white text-black' : 'text-white'">
                                 Login 365
                             </a>
                             <div class="-mr-2 -my-2 md:hidden">
@@ -243,10 +243,10 @@
                             <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-16' : 'h-0'"
                                  :src="imagewhite" alt="">
                             <img class="m-auto transition-all ease-in-out duration-300"
-                                 :class="show ? 'h-0' : 'h-14 md:h-24'"
+                                 :class="show ? 'h-0' : 'h-14 md:h-20'"
                                  :src="logo" alt="">
                             <img class="m-auto transition-all ease-in-out duration-300"
-                                 :class="show ? 'h-0' : 'h-14 md:h-24'"
+                                 :class="show ? 'h-0' : 'h-14 md:h-20'"
                                  :src="footerwhite" alt="">
                         </div>
                         <div class="col-span-4 justify-self-start hidden md:block ml-20">
@@ -742,6 +742,7 @@ export default {
             menubar : false,
             dataurl : null,
             windowspath : window.location.origin + '/',
+            livepath : window.location.pathname,
             show: false
         }
     },

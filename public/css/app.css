@@ -1175,6 +1175,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
+.bg-red-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+}
 .bg-gradient-to-t{
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
@@ -1412,6 +1416,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pl-20{
   padding-left: 5rem;
+}
+.pt-52{
+  padding-top: 13rem;
+}
+.pt-72{
+  padding-top: 18rem;
+}
+.pt-7{
+  padding-top: 1.75rem;
+}
+.pt-60{
+  padding-top: 15rem;
+}
+.pt-56{
+  padding-top: 14rem;
 }
 .text-left{
   text-align: left;
@@ -1985,6 +2004,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
   .md\:h-80{
     height: 20rem;
+  }
+  .md\:h-20{
+    height: 5rem;
   }
   .md\:w-96{
     width: 24rem;

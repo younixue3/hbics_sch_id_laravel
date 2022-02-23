@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('title', 'Tentang Kami')
 @section('content')
-    <div class="pt-20 p-32">
-        <div id="hero_section" class="h-[35rem] grid grid-cols-3 grid-rows-3 justify-items-stretch gap-5">
-            <div class="bg-green-500 rounded-3xl justify-self-start overflow-hidden">
+    <div class="pt-52 p-32">
+        <div class="h-[35rem] grid grid-cols-3 grid-rows-3 justify-items-stretch gap-5">
+            <div id="hero_section" class="bg-green-500 rounded-3xl justify-self-start overflow-hidden">
                 <img class="h-52 rounded-xl" src="{{asset('assets/stock_photo_rdev/IMG_6818.jpg')}}">
             </div>
             <div class="row-span-3 rounded-3xl overflow-hidden">
