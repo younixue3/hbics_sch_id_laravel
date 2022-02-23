@@ -2,7 +2,7 @@
     <div class="h-screen bg-gray-200 overflow-hidden">
         <div class="flex h-screen relative text-center mb-10 shadow-xl transition-all ease-in-out duration-300" :class="show ? 'translate-x-0 opacity-100' : 'opacity-0 translate-x-10'">
             <img id="hero_section" class="h-screen w-screen object-cover transition-all ease-in-out"
-                 :src="this.sliderContent.image" alt="">
+                 :src="this.windowspath + this.sliderContent.image" alt="">
             <div class="absolute bottom-0 pb-10 bg-gradient-to-t from-gray-900 to-transparent w-full text-center transition-all ease-in-out" :class="show ? 'opacity-100' : 'opacity-0'">
             </div>
             <div class="absolute w-screen h-screen">
@@ -45,35 +45,36 @@ export default {
         return {
             show: true,
             slider: 0,
+            windowspath : window.location.origin + '/',
             sliderContent: [],
             heroContent: [
                 {
                     id: 1,
-                    image: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/IMG_7266.jpg',
+                    image: 'IMG_7266.jpg',
                     title: 'Happy Holy Kids',
                     content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
                 },
                 {
                     id: 2,
-                    image: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/Pic-1.jpg',
+                    image: 'Pic-1.jpg',
                     title: 'Sekolah Dasar',
                     content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
                 },
                 {
                     id: 3,
-                    image: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/IMG_7266.jpg',
+                    image: 'IMG_7266.jpg',
                     title: 'Sekolah Menengah Pertama',
                     content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
                 },
                 {
                     id: 4,
-                    image: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/Pic-1.jpg',
+                    image: 'Pic-1.jpg',
                     title: 'Sekolah Menengah Atas',
                     content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
                 },
                 {
                     id: 5,
-                    image: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/IMG_7266.jpg',
+                    image: 'IMG_7266.jpg',
                     title: 'Visi Misi',
                     content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
                 },
