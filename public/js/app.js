@@ -3016,7 +3016,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       show: true,
       slider: 0,
-      windowspath: window.location.origin + '/',
+      windowspath: window.location.origin + '/assets/stock_photo_rdev/',
       sliderContent: [],
       heroContent: [{
         id: 1,
@@ -6797,11 +6797,7 @@ var render = function () {
         _c("img", {
           staticClass:
             "h-screen w-screen object-cover transition-all ease-in-out",
-          attrs: {
-            id: "hero_section",
-            src: this.windowspath + this.sliderContent.image,
-            alt: "",
-          },
+          attrs: { id: "hero_section", src: this.sliderContent.image, alt: "" },
         }),
         _vm._v(" "),
         _c("div", {
