@@ -8,7 +8,7 @@
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
                         <div class="text-sm font-light">
                             <a href="https://www.office.com/" target="_blank" class="hidden md:block px-2 after:content-['_↗']":class="show ? 'bg-white text-black' : 'text-white' ">
-                                Office.com
+                                Login 365
                             </a>
                             <div class="-mr-2 -my-2 md:hidden">
                                 <button id="openMenu" type="button" @click="menushow()"
