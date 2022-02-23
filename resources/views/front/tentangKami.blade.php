@@ -26,8 +26,8 @@
         </div>
     </div>
     <div class="mt-10 px-32 text-left">
-        <h1 class="text-4xl font-bold hover:after:content-['_↗']"><a href="#">Sekolah K.A.R.Y.A</a></h1>
-        <p class="font-light text-lg mt-5">“Sekolah K.A.R.Y.A” merupakan filosofi dan arah pendidikan terbaru yang ditetapkan oleh segenap jajaran kepemimpinan Yayasan Tunas Cahaya Bangsa untuk diterapkan di lingkungan KB-TK Happy Holy Kids dan SD Kristen – SMA Kristen Harapan Bangsa Balikpapan sejak bulan Maret 2020. </p>
+        <h1 class="text-3xl font-bold hover:after:content-['_↗']"><a href="#">Sekolah K.A.R.Y.A</a></h1>
+        <p class="font-light text-sm mt-5">“Sekolah K.A.R.Y.A” merupakan filosofi dan arah pendidikan terbaru yang ditetapkan oleh segenap jajaran kepemimpinan Yayasan Tunas Cahaya Bangsa untuk diterapkan di lingkungan KB-TK Happy Holy Kids dan SD Kristen – SMA Kristen Harapan Bangsa Balikpapan sejak bulan Maret 2020. </p>
     </div>
     <div class="flex px-32 mt-10">
         <img class="h-[40rem] w-2/5 object-cover" src="{{asset('assets/stock_photo_rdev/IMG_7266.jpg')}}">
