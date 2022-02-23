@@ -2,7 +2,7 @@
     <div class="h-screen bg-gray-200 overflow-hidden">
         <div class="flex h-screen relative text-center mb-10 shadow-xl transition-all ease-in-out duration-300" :class="show ? 'translate-x-0 opacity-100' : 'opacity-0 translate-x-10'">
             <img id="hero_section" class="h-screen w-screen object-cover transition-all ease-in-out"
-                 :src=" this.sliderContent.image" alt="">
+                 :src=" this.windowspath + this.sliderContent.image" alt="">
             <div class="absolute bottom-0 pb-10 bg-gradient-to-t from-gray-900 to-transparent w-full text-center transition-all ease-in-out" :class="show ? 'opacity-100' : 'opacity-0'">
             </div>
             <div class="absolute w-screen h-screen">

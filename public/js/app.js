@@ -6797,7 +6797,11 @@ var render = function () {
         _c("img", {
           staticClass:
             "h-screen w-screen object-cover transition-all ease-in-out",
-          attrs: { id: "hero_section", src: this.sliderContent.image, alt: "" },
+          attrs: {
+            id: "hero_section",
+            src: this.windowspath + this.sliderContent.image,
+            alt: "",
+          },
         }),
         _vm._v(" "),
         _c("div", {
