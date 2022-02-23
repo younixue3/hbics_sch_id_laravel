@@ -3164,7 +3164,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     nextButton: function nextButton() {
-      this.counter = this.counter + 1;
       var scroller = this.$refs.scrollsnap;
       var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width;
       console.log(this.scrolcount);
@@ -3173,7 +3172,25 @@ __webpack_require__.r(__webpack_exports__);
         this.counter = 0;
         this.scrolcount = 0;
       } else {
+        this.counter = this.counter + 1;
         this.scrolcount = this.scrolcount + element;
+      }
+
+      scroller.scrollTo({
+        behavior: 'smooth',
+        left: this.scrolcount
+      });
+    },
+    prevButton: function prevButton() {
+      var scroller = this.$refs.scrollsnap;
+      var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width;
+
+      if (this.counter === 0) {
+        this.scrolcount = scroller.scrollWidth / 2;
+        this.counter = 4;
+      } else {
+        this.counter = this.counter - 1;
+        this.scrolcount = this.scrolcount - element;
       }
 
       scroller.scrollTo({
@@ -7013,7 +7030,21 @@ var render = function () {
       ),
     ]),
     _vm._v(" "),
-    _vm._m(1),
+    _c("div", { staticClass: "absolute flex h-full left-0 px-2" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out",
+          on: {
+            click: function ($event) {
+              return _vm.prevButton()
+            },
+          },
+        },
+        [_c("i", { staticClass: "fas fa-angle-left" })]
+      ),
+    ]),
   ])
 }
 var staticRenderFns = [
@@ -7047,21 +7078,6 @@ var staticRenderFns = [
         ]),
       ]
     )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "absolute flex h-full left-0 px-2" }, [
-      _c(
-        "button",
-        {
-          staticClass:
-            "rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out",
-        },
-        [_c("i", { staticClass: "fas fa-angle-left" })]
-      ),
-    ])
   },
 ]
 render._withStripped = true

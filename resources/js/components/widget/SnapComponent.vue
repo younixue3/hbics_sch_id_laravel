@@ -20,7 +20,7 @@
                 class="rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out"><i class="fas fa-angle-right"></i></button>
         </div>
         <div class="absolute flex h-full left-0 px-2">
-            <button
+            <button v-on:click="prevButton()"
                 class="rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out"><i class="fas fa-angle-left"></i></button>
         </div>
     </div>
@@ -59,18 +59,30 @@ export default {
     },
     methods: {
         nextButton() {
-            this.counter = this.counter + 1
-
             var scroller = this.$refs.scrollsnap
+
             var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width
             console.log(this.scrolcount)
-
-
             if (this.counter === 4) {
+
+
                 this.counter = 0
                 this.scrolcount = 0
             } else {
+                this.counter = this.counter + 1
                 this.scrolcount = this.scrolcount + element
+            }
+            scroller.scrollTo({behavior: 'smooth', left: this.scrolcount})
+        },
+        prevButton() {
+            var scroller = this.$refs.scrollsnap
+            var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width
+            if (this.counter === 0 ) {
+                this.scrolcount = scroller.scrollWidth / 2
+                this.counter = 4
+            } else {
+                this.counter = this.counter - 1
+                this.scrolcount = this.scrolcount - element
             }
             scroller.scrollTo({behavior: 'smooth', left: this.scrolcount})
         },
