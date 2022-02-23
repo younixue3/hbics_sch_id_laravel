@@ -6583,7 +6583,7 @@ var staticRenderFns = [
               "col-span-2 text-base font-semibold text-center text-sky-600 hover:text-gray-700 after:content-['_↗']",
             attrs: { href: "https://www.office.com/", target: "_blank" },
           },
-          [_vm._v("\n                        Office.com\n                    ")]
+          [_vm._v("\n                        Login 365\n                    ")]
         ),
       ]),
       _vm._v(" "),
