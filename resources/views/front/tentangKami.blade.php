@@ -79,4 +79,13 @@
         </div>
         <snap-component></snap-component>
     </div>
+    <div class="my-20 bg-gray-200 h-52 text-center py-5">
+        <h3 class="mb-10 text-3xl uppercase">Our Partnership</h3>
+        <div class="grid grid-cols-4 px-52 gap-10 items-center justify-items-center">
+            <img class="h-14 grayscale hover:grayscale-0 transition-all ease-in-out" src="{{asset('assets/logo/microsoft.png')}}">
+            <img class="h-14 grayscale hover:grayscale-0 transition-all ease-in-out" src="{{asset('assets/logo/ocbc.png')}}">
+            <img class="h-14 grayscale hover:grayscale-0 transition-all ease-in-out"src="{{asset('assets/logo/flazz.png')}}">
+            <img class="h-14 grayscale hover:grayscale-0 transition-all ease-in-out" src="{{asset('assets/logo/yamaha.png')}}">
+        </div>
+    </div>
 @endsection

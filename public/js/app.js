@@ -4380,11 +4380,10 @@ var render = function () {
               staticClass: "transition-all ease-in-out duration-300",
               class: [
                 _vm.show
-                  ? "h-20"
+                  ? "bg-blue-900 h-20"
                   : _vm.livepath !== "/"
-                  ? "h-44"
+                  ? "bg-blue-900 h-44"
                   : "bg-transparent h-44",
-                _vm.livepath !== "/" ? "bg-blue-900" : "bg-blue-900",
               ],
             },
             [
