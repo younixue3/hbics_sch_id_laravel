@@ -1,13 +1,11 @@
 <template>
-    <div class="flex relative">
+    <div class="flex relative w-full">
         <div ref="scrollsnap" class="snap-x flex gap-6 snap-mandatory overflow-x-auto removescrollbar scroll-smooth">
             <div v-for="(item, index) in arrTestimoni.fasilitas" :id="'testing' + index" class="snap-center scroll-mx-6 shrink-0 rounded-3xl px-2">
-                <img class="h-56 rounded-3xl" :src="item.image" />
-            </div>
-            <div href="#" class="snap-center scroll-mx-6 shrink-0 rounded-3xl overflow-hidden">
+<!--                <img class="h-44 lg:h-56 rounded-3xl" :src="item.image" />-->
                 <div class="flex relative">
-                    <img class="h-56 rounded-3xl blur-sm" src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
-                    <div class="absolute w-full h-full flex">
+                    <img class="h-44 lg:h-56 rounded-3xl" :class="index === 5 ? 'blur-sm' : ''" :src="item.image" />
+                    <div class="absolute w-full h-full flex" v-if="index === 5">
                         <div class="m-auto text-3xl text-white">
                             Show More +
                         </div>
@@ -50,6 +48,9 @@ export default {
                     {
                         image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80',
                     },
+                    {
+                        image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80',
+                    },
                 ]
             },
         }
@@ -61,11 +62,9 @@ export default {
         nextButton() {
             var scroller = this.$refs.scrollsnap
 
-            var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width
+            var element = document.getElementById('testing1').getBoundingClientRect().width
             console.log(this.scrolcount)
-            if (this.counter === 4) {
-
-
+            if (this.counter === 5) {
                 this.counter = 0
                 this.scrolcount = 0
             } else {
@@ -78,8 +77,8 @@ export default {
             var scroller = this.$refs.scrollsnap
             var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width
             if (this.counter === 0 ) {
-                this.scrolcount = scroller.scrollWidth / 2
-                this.counter = 4
+                this.scrolcount = scroller.scrollWidth
+                this.counter = 5
             } else {
                 this.counter = this.counter - 1
                 this.scrolcount = this.scrolcount - element

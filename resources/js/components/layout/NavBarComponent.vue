@@ -7,10 +7,10 @@
                      class="transition-all ease-in-out duration-300">
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
                         <div class="text-sm font-light">
-                            <a href="https://www.office.com/" target="_blank" class="hidden md:block px-2 after:content-['_↗']":class="show ? 'bg-white text-black' : livepath !== '/' ? 'bg-white text-black' : 'text-white'">
+                            <a href="https://www.office.com/" target="_blank" class="hidden lg:block px-2 after:content-['_↗']":class="show ? 'bg-white text-black' : livepath !== '/' ? 'bg-white text-black' : 'text-white'">
                                 Login 365
                             </a>
-                            <div class="-mr-2 -my-2 md:hidden">
+                            <div class="-mr-2 -my-2 lg:hidden">
                                 <button id="openMenu" type="button" @click="menushow()"
                                         class="rounded-md p-1 inline-flex items-center justify-center text-gray-200 focus:outline-none transition-all ease-in-out duration-300"
                                         aria-expanded="false">
@@ -24,7 +24,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="col-span-4 justify-self-end hidden md:block mr-20">
+                        <div class="col-span-4 justify-self-end hidden lg:block mr-20">
                             <div class="grid grid-cols-2 font-light mb-2">
                                 <a :href="dataurl['home']">Beranda</a>
                                 <a :href="dataurl['tentang-kami']">Tentang Kami</a>
@@ -239,7 +239,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-span-9 md:col-span-1">
+                        <div class="col-span-9 lg:col-span-1">
                             <img class="m-auto transition-all ease-in-out duration-300" :class="show ? 'h-16' : 'h-0'"
                                  :src="imagewhite" alt="">
                             <img class="m-auto transition-all ease-in-out duration-300"
@@ -249,7 +249,7 @@
                                  :class="show ? 'h-0' : 'h-14 md:h-20'"
                                  :src="footerwhite" alt="">
                         </div>
-                        <div class="col-span-4 justify-self-start hidden md:block ml-20">
+                        <div class="col-span-4 justify-self-start hidden lg:block ml-20">
                             <div class="text-left font-light mb-2">
                                 <a :href="dataurl['hubungi-kami']">Hubungi kami</a>
                             </div>
@@ -536,14 +536,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="hidden md:block">
+                        <div class="hidden lg:block">
                             <div class="cursor-pointer" v-on:click="redirectBtn('login')">Login</div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <div :class="menubar ? '' : 'hidden'" class="fixed top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50">
+        <div :class="menubar ? '' : 'hidden'" class="fixed top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden z-50">
             <div
                 class="rounded-lg shadow-lg ring-1 ring-gray-800 ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <div class="pt-5 pb-6 px-5">

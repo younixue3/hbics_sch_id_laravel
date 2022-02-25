@@ -1,37 +1,38 @@
 @extends('layouts.master')
 @section('title', 'Tentang Kami')
 @section('content')
-    <div class="pt-52 p-32">
-        <div class="h-[35rem] grid grid-cols-3 grid-rows-3 justify-items-stretch gap-5">
-            <div id="hero_section" class="bg-green-500 rounded-3xl justify-self-start overflow-hidden">
-                <img class="h-52 rounded-xl" src="{{asset('assets/stock_photo_rdev/IMG_6818.jpg')}}">
+    <div class="pt-52 p-32 px-10 lg:px-16 xl:px-32">
+        <div class="h-[35rem] grid grid-cols-3 grid-rows-4 lg:grid-rows-3 justify-items-stretch  gap-2 :gap-5">
+            <div class="bg-gray-100 rounded-xl md:rounded-3xl justify-self-start order-last md:order-none overflow-hidden">
+                <img class="h-full md:h-52 rounded-xl" src="{{asset('assets/stock_photo_rdev/IMG_6818.jpg')}}">
             </div>
-            <div class="row-span-3 rounded-3xl overflow-hidden">
-                <img class="h-full object-cover rounded-3xl" src="{{asset('assets/stock_photo_rdev/EDUsd-1-scaled.jpg')}}">
+            <div class="row-span-3 col-span-3 md:col-span-2 lg:col-span-1 sm:order-first lg:order-none bg-gray-100 rounded-3xl overflow-hidden">
+                <img class="h-full w-full object-cover rounded-3xl" src="{{asset('assets/stock_photo_rdev/EDUsd-1-scaled.jpg')}}">
             </div>
-            <div class="relative flex border rounded-3xl bg-gradient-to-b from-yellow-400 to-amber-500 row-span-2 px-5">
+            <div id="hero_section" class="relative flex border order-first col-span-3 md:col-span-1 lg:order-none rounded-3xl bg-gradient-to-b from-yellow-400 to-amber-500 row-span-2 md:row-span-3 lg:row-span-2 px-5">
                 <div class="m-auto text-sky-900">
-                    <span class="text-lg font-semibold">Visi kami :</span>
-                    <p class="text-3xl font-bold">
+                    <span class="text-sm xl:text-lg font-semibold">Visi kami :</span>
+                    <p class="text-base sm:text-xl lg:text-2xl xl:text-3xl font-bold">
                         “Menjadi sekolah terbaik dalam layanan, maksimal mencerdaskan generasi berkarakter yang menghasilkan karya unggul bagi Indonesia.”
                     </p>
                 </div>
             </div>
-            <div class="row-span-2">
-                <img class="w-full object-cover rounded-3xl" src="{{asset('assets/stock_photo_rdev/IMG_7258.jpg')}}">
+            <div class="lg:row-span-2 bg-gray-100">
+                <img class="w-full object-cover rounded-xl md:rounded-3xl" src="{{asset('assets/stock_photo_rdev/IMG_7258.jpg')}}">
             </div>
-            <div class="border">
-                <img class="h-full object-cover rounded-3xl" src="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}">
+            <div class="bg-gray-100">
+                <img class="h-full object-cover rounded-xl md:rounded-3xl" src="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}">
             </div>
         </div>
     </div>
-    <div class="mt-10 px-32 text-left">
+    <div class="mt-10 px-5 lg:px-16 xl:px-32 text-left">
         <h1 class="text-3xl font-bold hover:after:content-['_↗']"><a href="#">Sekolah K.A.R.Y.A</a></h1>
-        <p class="font-light text-sm mt-5">“Sekolah K.A.R.Y.A” merupakan filosofi dan arah pendidikan terbaru yang ditetapkan oleh segenap jajaran kepemimpinan Yayasan Tunas Cahaya Bangsa untuk diterapkan di lingkungan KB-TK Happy Holy Kids dan SD Kristen – SMA Kristen Harapan Bangsa Balikpapan sejak bulan Maret 2020. </p>
+        <p class="font-light text-sm mt-5 mb-2">“Sekolah K.A.R.Y.A” merupakan filosofi dan arah pendidikan terbaru yang ditetapkan oleh segenap jajaran kepemimpinan Yayasan Tunas Cahaya Bangsa untuk diterapkan di lingkungan KB-TK Happy Holy Kids dan SD Kristen – SMA Kristen Harapan Bangsa Balikpapan sejak bulan Maret 2020. </p>
+        <a class="font-normal text-sm text-sky-800" href="#">Read More<i class="ml-1 fa-solid fa-circle-arrow-right"></i></a>
     </div>
-    <div class="flex px-32 mt-10">
-        <img class="h-[40rem] w-2/5 object-cover" src="{{asset('assets/stock_photo_rdev/IMG_7266.jpg')}}">
-        <div class="m-auto ml-10">
+    <div class="lg:flex md:px-10 lg:px-16 xl:px-32 mt-10">
+        <img class="md:h-full lg:h-[40rem] lg:w-2/5 mb-10 lg:mb-0 object-cover" src="{{asset('assets/stock_photo_rdev/IMG_7266.jpg')}}">
+        <div class="m-auto px-5 lg:pl-10">
             <h3 class="text-3xl font-bold hover:after:content-['_↗']"><a href="">Sejarah Sekolah Harapan Bangsa</a></h3>
             <div class="flex flex-col gap-y-2 pt-5 text-sm font-light">
                 <p>
@@ -58,34 +59,34 @@
             </div>
         </div>
     </div>
-    <div class="px-20">
-        <div class="flex relative justify-item-center h-96 w-full bg-cover bg-center mt-10 rounded-3xl overflow-hidden text-white">
+    <div class="px-5 md:px-10 lg:px-16 xl:px-20">
+        <div class="flex relative justify-item-center h-72 md:h-96 w-full bg-cover bg-center mt-10 rounded-3xl overflow-hidden text-white">
             <img class="static object-cover brightness-50 w-full rounded-3xl" src="{{asset('assets/stock_photo_rdev/cambridge.jpeg')}}">
             <div class="absolute text-center">
-                <div class="flex h-96">
+                <div class="flex h-72 md:h-96">
                     <div class="m-auto">
-                        <h1 class="text-5xl font-semibold hover:after:content-['_↗']"><a href="#">Metode Pembelajaran</a></h1>
-                        <p class="px-72 font-light my-2">Kurikulum Cambridge yang diadaptasi oleh Sekolah Kristen Harapan Bangsa bertujuan untuk menciptakan generasi yang siap dalam persaingan global. Sesuai namanya, kurikulum Cambridge berasal dari organisasi yang ada di Universitas Cambridge, Inggris.</p>
+                        <h1 class="text-3xl md:text-5xl font-semibold hover:after:content-['_↗']"><a href="#">Metode Pembelajaran</a></h1>
+                        <p class="px-5 md:px-24 xl:px-72 text-sm md:text-base font-light my-2 overflow-hidden h-16 leading-4">Kurikulum Cambridge yang diadaptasi oleh Sekolah Kristen Harapan Bangsa bertujuan untuk menciptakan generasi yang siap dalam persaingan global. Sesuai namanya, kurikulum Cambridge berasal dari organisasi yang ada di Universitas Cambridge, Inggris.</p>
                         <a class="font-normal" href="#">Read More<i class="ml-1 fa-solid fa-circle-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="my-20">
-        <div class="px-20">
+    <div class="my-10 md:my-20">
+        <div class="px-5 md:px-20">
             <h1 class="text-3xl font-semibold hover:after:content-['_↗']"><a href="#">Fasilitas</a></h1>
             <p class="my-5">Fasilitas Sekolah adalah sarana dan prasarana yang harus tersedia untuk melancarkan kegiatan belajar mengajar di sekolah. Sekolah Kristen Harapan Bangsa Balikpapan dan Happy Holy Kids Balikpapan menyediakan fasilitas terbaik untuk menunjang kegiatan belajar mengajar siswa/i.</p>
         </div>
         <snap-component></snap-component>
     </div>
-    <div class="my-20 bg-gray-200 h-52 text-center py-5">
-        <h3 class="mb-10 text-3xl uppercase">Our Partnership</h3>
-        <div class="grid grid-cols-4 px-52 gap-10 items-center justify-items-center">
-            <img class="h-14 grayscale hover:grayscale-0 transition-all ease-in-out" src="{{asset('assets/logo/microsoft.png')}}">
-            <img class="h-14 grayscale hover:grayscale-0 transition-all ease-in-out" src="{{asset('assets/logo/ocbc.png')}}">
-            <img class="h-14 grayscale hover:grayscale-0 transition-all ease-in-out"src="{{asset('assets/logo/flazz.png')}}">
-            <img class="h-14 grayscale hover:grayscale-0 transition-all ease-in-out" src="{{asset('assets/logo/yamaha.png')}}">
+    <div class="my-20 bg-gray-200 h-full text-center py-10">
+        <h3 class="mb-10 text-xl md:text-3xl uppercase">Our Partnership</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 px-10 md:px-32 lg:px-52 gap-10 items-center justify-items-center">
+            <img class="lg:h-14 object-contain grayscale hover:grayscale-0 transition-all ease-in-out" src="{{asset('assets/logo/microsoft.png')}}">
+            <img class="lg:h-14 object-contain grayscale hover:grayscale-0 transition-all ease-in-out" src="{{asset('assets/logo/ocbc.png')}}">
+            <img class="lg:h-14 object-contain grayscale hover:grayscale-0 transition-all ease-in-out"src="{{asset('assets/logo/flazz.png')}}">
+            <img class="lg:h-14 object-contain grayscale hover:grayscale-0 transition-all ease-in-out" src="{{asset('assets/logo/yamaha.png')}}">
         </div>
     </div>
 @endsection

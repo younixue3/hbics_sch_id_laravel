@@ -3137,8 +3137,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3147,6 +3145,8 @@ __webpack_require__.r(__webpack_exports__);
       arrTestimoni: {
         count: 0,
         fasilitas: [{
+          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
+        }, {
           image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
         }, {
           image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
@@ -3165,10 +3165,10 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     nextButton: function nextButton() {
       var scroller = this.$refs.scrollsnap;
-      var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width;
+      var element = document.getElementById('testing1').getBoundingClientRect().width;
       console.log(this.scrolcount);
 
-      if (this.counter === 4) {
+      if (this.counter === 5) {
         this.counter = 0;
         this.scrolcount = 0;
       } else {
@@ -3186,8 +3186,8 @@ __webpack_require__.r(__webpack_exports__);
       var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width;
 
       if (this.counter === 0) {
-        this.scrolcount = scroller.scrollWidth / 2;
-        this.counter = 4;
+        this.scrolcount = scroller.scrollWidth;
+        this.counter = 5;
       } else {
         this.counter = this.counter - 1;
         this.scrolcount = this.scrolcount - element;
@@ -4399,7 +4399,7 @@ var render = function () {
                       "a",
                       {
                         staticClass:
-                          "hidden md:block px-2 after:content-['_↗']",
+                          "hidden lg:block px-2 after:content-['_↗']",
                         class: _vm.show
                           ? "bg-white text-black"
                           : _vm.livepath !== "/"
@@ -4417,7 +4417,7 @@ var render = function () {
                       ]
                     ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "-mr-2 -my-2 md:hidden" }, [
+                    _c("div", { staticClass: "-mr-2 -my-2 lg:hidden" }, [
                       _c(
                         "button",
                         {
@@ -4471,7 +4471,7 @@ var render = function () {
                     "div",
                     {
                       staticClass:
-                        "col-span-4 justify-self-end hidden md:block mr-20",
+                        "col-span-4 justify-self-end hidden lg:block mr-20",
                     },
                     [
                       _c(
@@ -4770,7 +4770,7 @@ var render = function () {
                     ]
                   ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-span-9 md:col-span-1" }, [
+                  _c("div", { staticClass: "col-span-9 lg:col-span-1" }, [
                     _c("img", {
                       staticClass:
                         "m-auto transition-all ease-in-out duration-300",
@@ -4797,7 +4797,7 @@ var render = function () {
                     "div",
                     {
                       staticClass:
-                        "col-span-4 justify-self-start hidden md:block ml-20",
+                        "col-span-4 justify-self-start hidden lg:block ml-20",
                     },
                     [
                       _c("div", { staticClass: "text-left font-light mb-2" }, [
@@ -4888,7 +4888,7 @@ var render = function () {
                     ]
                   ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "hidden md:block" }, [
+                  _c("div", { staticClass: "hidden lg:block" }, [
                     _c(
                       "div",
                       {
@@ -4914,7 +4914,7 @@ var render = function () {
       "div",
       {
         staticClass:
-          "fixed top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50",
+          "fixed top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden z-50",
         class: _vm.menubar ? "" : "hidden",
       },
       [
@@ -6983,7 +6983,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "flex relative" }, [
+  return _c("div", { staticClass: "flex relative w-full" }, [
     _c(
       "div",
       {
@@ -6991,26 +6991,35 @@ var render = function () {
         staticClass:
           "snap-x flex gap-6 snap-mandatory overflow-x-auto removescrollbar scroll-smooth",
       },
-      [
-        _vm._l(_vm.arrTestimoni.fasilitas, function (item, index) {
-          return _c(
-            "div",
-            {
-              staticClass: "snap-center scroll-mx-6 shrink-0 rounded-3xl px-2",
-              attrs: { id: "testing" + index },
-            },
-            [
+      _vm._l(_vm.arrTestimoni.fasilitas, function (item, index) {
+        return _c(
+          "div",
+          {
+            staticClass: "snap-center scroll-mx-6 shrink-0 rounded-3xl px-2",
+            attrs: { id: "testing" + index },
+          },
+          [
+            _c("div", { staticClass: "flex relative" }, [
               _c("img", {
-                staticClass: "h-56 rounded-3xl",
+                staticClass: "h-44 lg:h-56 rounded-3xl",
+                class: index === 5 ? "blur-sm" : "",
                 attrs: { src: item.image },
               }),
-            ]
-          )
-        }),
-        _vm._v(" "),
-        _vm._m(0),
-      ],
-      2
+              _vm._v(" "),
+              index === 5
+                ? _c("div", { staticClass: "absolute w-full h-full flex" }, [
+                    _c("div", { staticClass: "m-auto text-3xl text-white" }, [
+                      _vm._v(
+                        "\n                            Show More +\n                        "
+                      ),
+                    ]),
+                  ])
+                : _vm._e(),
+            ]),
+          ]
+        )
+      }),
+      0
     ),
     _vm._v(" "),
     _c("div", { staticClass: "absolute flex h-full right-0 px-2" }, [
@@ -7046,39 +7055,7 @@ var render = function () {
     ]),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "snap-center scroll-mx-6 shrink-0 rounded-3xl overflow-hidden",
-        attrs: { href: "#" },
-      },
-      [
-        _c("div", { staticClass: "flex relative" }, [
-          _c("img", {
-            staticClass: "h-56 rounded-3xl blur-sm",
-            attrs: {
-              src: "https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80",
-            },
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "absolute w-full h-full flex" }, [
-            _c("div", { staticClass: "m-auto text-3xl text-white" }, [
-              _vm._v(
-                "\n                        Show More +\n                    "
-              ),
-            ]),
-          ]),
-        ]),
-      ]
-    )
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
