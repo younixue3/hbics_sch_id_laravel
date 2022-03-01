@@ -3,11 +3,14 @@
         <header ref="navbar" class="h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-50"
                 id="navBar">
             <div>
-                <div :class="[show ? 'bg-blue-900 h-20' : livepath !== '/' ? 'bg-blue-900 h-44' : 'bg-transparent h-44']"
-                     class="transition-all ease-in-out duration-300">
+                <div
+                    :class="[show ? 'bg-blue-900 h-20' : livepath !== '/' ? 'bg-blue-900 h-44' : 'bg-transparent h-44']"
+                    class="transition-all ease-in-out duration-300">
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
                         <div class="text-sm font-light">
-                            <a href="https://www.office.com/" target="_blank" class="hidden lg:block px-2 after:content-['_↗']":class="show ? 'bg-white text-black' : livepath !== '/' ? 'bg-white text-black' : 'text-white'">
+                            <a href="https://www.office.com/" target="_blank"
+                               class="hidden lg:block px-2 after:content-['_↗']"
+                               :class="show ? 'bg-white text-black' : livepath !== '/' ? 'bg-white text-black' : 'text-white'">
                                 Login 365
                             </a>
                             <div class="-mr-2 -my-2 lg:hidden">
@@ -543,7 +546,8 @@
                 </div>
             </div>
         </header>
-        <div :class="menubar ? '' : 'hidden'" class="fixed top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden z-50">
+        <div :class="menubar ? '' : 'hidden'"
+             class="fixed top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden z-50">
             <div
                 class="rounded-lg shadow-lg ring-1 ring-gray-800 ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <div class="pt-5 pb-6 px-5">
@@ -570,36 +574,42 @@
                                     </span>
                             </a>
 
-                            <div href="#" class="-m-3 p-3 rounded-md transition-all ease-in-out" >
+                            <div href="#" class="-m-3 p-3 rounded-md transition-all ease-in-out">
                                 <div class="flex justify-between" @click="showmenumobile('pendaftaranmobile')">
                                         <span class="ml-3 text-base font-semibold text-blue-800">
                                             Pendaftaran
                                         </span>
-                                    <i ref="pendaftaranmobilebtn" id="pendaftaranmobilebtn" class="fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out"></i>
+                                    <i ref="pendaftaranmobilebtn" id="pendaftaranmobilebtn"
+                                       class="fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out"></i>
                                 </div>
-                                <div ref="pendaftaranmobile" id="pendaftaranmobile" class="h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5">
-                                    <div class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                <div ref="pendaftaranmobile" id="pendaftaranmobile"
+                                     class="h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5">
+                                    <div
+                                        class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Petunjuk Pendaftaran
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                    <div
+                                        class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Program Beasiswa
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                    <div
+                                        class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Pendaftaran Siswa Baru
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                    <div
+                                        class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Kunjungi Kami
@@ -614,9 +624,11 @@
                                         <span class="ml-3 text-base font-semibold text-blue-800">
                                             Akademis
                                         </span>
-                                    <i ref="akademismobilebtn" id="akademismobilebtn" class="fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out"></i>
+                                    <i ref="akademismobilebtn" id="akademismobilebtn"
+                                       class="fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out"></i>
                                 </div>
-                                <div ref="akademismobile" id="akademismobile" class="h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5">
+                                <div ref="akademismobile" id="akademismobile"
+                                     class="h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5">
                                     <div class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
@@ -624,21 +636,24 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                    <div
+                                        class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Sekolah Dasar
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                    <div
+                                        class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Sekolah Menengah Pertama
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                    <div
+                                        class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Sekolah Menengah Atas
@@ -653,17 +668,21 @@
                                         <span class="ml-3 text-base font-semibold text-blue-800">
                                             Komunitas
                                         </span>
-                                    <i ref="komunitasmobilebtn" id="komunitasmobilebtn" class="fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out"></i>
+                                    <i ref="komunitasmobilebtn" id="komunitasmobilebtn"
+                                       class="fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out"></i>
                                 </div>
-                                <div ref="komunitasmobile" id="komunitasmobile" class="h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5">
-                                    <div class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                <div ref="komunitasmobile" id="komunitasmobile"
+                                     class="h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5">
+                                    <div
+                                        class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Alumni
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                    <div
+                                        class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Orang Tua
@@ -678,24 +697,29 @@
                                         <span class="ml-3 text-base font-semibold text-blue-800">
                                             Publikasi
                                         </span>
-                                    <i ref="publikasimobilebtn" id="publikasimobilebtn" class="fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out"></i>
+                                    <i ref="publikasimobilebtn" id="publikasimobilebtn"
+                                       class="fas fa-sort-down transform rotate-90 text-blue-800 transition-all ease-in-out"></i>
                                 </div>
-                                <div ref="publikasimobile" id="publikasimobile" class="h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5">
-                                    <div class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                <div ref="publikasimobile" id="publikasimobile"
+                                     class="h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5">
+                                    <div
+                                        class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Berita
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                    <div
+                                        class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Acara
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                    <div
+                                        class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a href="#" class="">
                                                 Artikel
@@ -717,7 +741,8 @@
                             Hubungi Kami
                         </a>
 
-                        <a href="https://www.office.com/" target="_blank" class="col-span-2 text-base font-semibold text-center text-sky-600 hover:text-gray-700 after:content-['_↗']">
+                        <a href="https://www.office.com/" target="_blank"
+                           class="col-span-2 text-base font-semibold text-center text-sky-600 hover:text-gray-700 after:content-['_↗']">
                             Login 365
                         </a>
                     </div>
@@ -739,10 +764,10 @@ import axios from 'axios';
 export default {
     data() {
         return {
-            menubar : false,
-            dataurl : null,
-            windowspath : window.location.origin + '/',
-            livepath : window.location.pathname,
+            menubar: false,
+            dataurl: null,
+            windowspath: window.location.origin + '/',
+            livepath: window.location.pathname,
             show: false
         }
     },
@@ -761,7 +786,7 @@ export default {
     },
     methods: {
         redirectBtn(path) {
-          window.location.replace(this.windowspath + path)
+            window.location.replace(this.windowspath + path)
         },
         handleScroll() {
             if (this.$refs.navbar.getBoundingClientRect().height >= document.getElementById('hero_section').getBoundingClientRect().bottom && this.show === false) {

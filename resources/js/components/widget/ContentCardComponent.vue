@@ -4,7 +4,8 @@
          class="relative bg-cover bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg flex justify-end"
          :style="{ backgroundImage: `url('${imagecontent}')` }">
         <div
-            class="transition-all ease-in-out duration-200 overflow-hidden mt-auto rounded-b-2xl bg-gradient-to-t to-transparent pt-3 pb-5 px-3 lg:px-6" :class="showup ? 'from-gray-700' : 'from-black'">
+            class="transition-all ease-in-out duration-200 overflow-hidden mt-auto rounded-b-2xl bg-gradient-to-t to-transparent pt-3 pb-5 px-3 lg:px-6"
+            :class="showup ? 'from-gray-700' : 'from-black'">
             <div class="">
                 <div class="static text-white">
                     <div class="mb-5">
@@ -13,7 +14,10 @@
                             <span class="hidden md:block">Viral</span>
                         </span>
                     </div>
-                    <span class="font-bold truncate leading-4 z-10" :class="[column === true && rows === true ? 'text-lg md:text-3xl lg:text-5xl' : [column ? 'text-lg md:text-3xl' : '', column === false && rows === false ? 'text-lg md:text-2xl' : '']]">{{ title }}</span>
+                    <span class="font-bold truncate leading-4 z-10"
+                          :class="[column === true && rows === true ? 'text-lg md:text-3xl lg:text-5xl' : [column ? 'text-lg md:text-3xl' : '', column === false && rows === false ? 'text-lg md:text-2xl' : '']]">{{
+                            title
+                        }}</span>
                     <h4 class="text-amber-500 font-semibold truncate text-xs md:text-sm leading-4">06 April, 2022</h4>
                     <p class="my-4 leading-6 overflow-hidden text-ellipsis text-lg font-light transition-all ease-in-out duration-300 h-12">
                         {{ content }}</p>

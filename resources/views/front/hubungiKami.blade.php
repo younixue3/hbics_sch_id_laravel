@@ -4,7 +4,8 @@
     <div class="bg-pattern pt-72 pb-10 text-center">
         <h1 id="hero_section" class="mb-20 text-5xl font-bold text-blue-900">Hubungi kami</h1>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-14 px-10 lg:px-20">
-            <div class="bg-white hover:bg-blue-900 hover:text-white transition-all ease-in-out duration-300 rounded-2xl shadow-lg p-5">
+            <div
+                class="bg-white hover:bg-blue-900 hover:text-white transition-all ease-in-out duration-300 rounded-2xl shadow-lg p-5">
                 <h3 class="text-2xl font-semibold">Jam Operasional</h3>
                 <div class="flex-row my-5 text-sm">
                     <div>
@@ -15,15 +16,18 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-white hover:bg-blue-900 hover:text-white transition-all ease-in-out duration-300 rounded-2xl shadow-lg p-5">
+            <div
+                class="bg-white hover:bg-blue-900 hover:text-white transition-all ease-in-out duration-300 rounded-2xl shadow-lg p-5">
                 <h3 class="text-2xl font-semibold">Kunjungi Kami</h3>
                 <div class="flex-row my-5 text-sm">
                     <div>
-                        Jl. Indrakila No. 99G Kel. Gn. Samarinda Baru, Kec. Balikpapan Utara Kotamadya Balikpapan, Kalimantan Timur Indonesia - 76128
+                        Jl. Indrakila No. 99G Kel. Gn. Samarinda Baru, Kec. Balikpapan Utara Kotamadya Balikpapan,
+                        Kalimantan Timur Indonesia - 76128
                     </div>
                 </div>
             </div>
-            <div class="bg-white hover:bg-blue-900 hover:text-white transition-all ease-in-out duration-300 rounded-2xl shadow-lg p-5">
+            <div
+                class="bg-white hover:bg-blue-900 hover:text-white transition-all ease-in-out duration-300 rounded-2xl shadow-lg p-5">
                 <h3 class="text-2xl font-semibold">Telepon</h3>
                 <div class="flex-row my-5 text-sm">
                     <div class="my-1">
@@ -42,22 +46,26 @@
         </div>
         <div class="flex py-20 px-16 md:px-20">
             <div class="md:w-2/5 relative">
-                <div class="absolute right-0 translate-x-10 -translate-y-10 bg-white h-20 md:h-40 w-20 md:w-40 shadow-xl rounded-2xl">
+                <div
+                    class="absolute right-0 translate-x-10 -translate-y-10 bg-white h-20 md:h-40 w-20 md:w-40 shadow-xl rounded-2xl">
                     <img class="" src="{{asset('assets/stock_photo_rdev/3d-fluency-blue-paper-plane.png')}}">
                 </div>
             </div>
             <div class="md:w-3/5 py-10 px-10 md:px-20 bg-white shadow-xl rounded-2xl w-full flex-row text-left">
                 <div class="my-2">
                     <span class="text-sm">Nama lengkap</span>
-                    <input type="text" class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
+                    <input type="text"
+                           class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                 </div>
                 <div class="my-2">
                     <label class="text-sm">Email address</label>
-                    <input type="text" class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
+                    <input type="text"
+                           class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                 </div>
                 <div class="my-2">
                     <label class="text-sm">Pesan</label>
-                    <textarea class="bg-gray-100 h-20 resize-none w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold"></textarea>
+                    <textarea
+                        class="bg-gray-100 h-20 resize-none w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold"></textarea>
                 </div>
                 <div class="my-5">
                     <button class="w-full rounded-xl text-lg py-2 text-white font-bold bg-amber-400 hover:bg-amber-500">

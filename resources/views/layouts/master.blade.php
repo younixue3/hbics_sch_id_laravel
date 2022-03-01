@@ -23,8 +23,8 @@
 
     /* Hide scrollbar for IE, Edge and Firefox */
     .removescrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
     }
 </style>
 </body>

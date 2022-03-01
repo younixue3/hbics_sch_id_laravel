@@ -1,10 +1,11 @@
 <template>
     <div class="flex relative w-full">
         <div ref="scrollsnap" class="snap-x flex gap-6 snap-mandatory overflow-x-auto removescrollbar scroll-smooth">
-            <div v-for="(item, index) in arrTestimoni.fasilitas" :id="'testing' + index" class="snap-center scroll-mx-6 shrink-0 rounded-3xl px-2">
-<!--                <img class="h-44 lg:h-56 rounded-3xl" :src="item.image" />-->
+            <div v-for="(item, index) in arrTestimoni.fasilitas" :id="'testing' + index"
+                 class="snap-center scroll-mx-6 shrink-0 rounded-3xl px-2">
+                <!--                <img class="h-44 lg:h-56 rounded-3xl" :src="item.image" />-->
                 <div class="flex relative">
-                    <img class="h-44 lg:h-56 rounded-3xl" :class="index === 5 ? 'blur-sm' : ''" :src="item.image" />
+                    <img class="h-44 lg:h-56 rounded-3xl" :class="index === 5 ? 'blur-sm' : ''" :src="item.image"/>
                     <div class="absolute w-full h-full flex" v-if="index === 5">
                         <div class="m-auto text-3xl text-white">
                             Show More +
@@ -15,11 +16,13 @@
         </div>
         <div class="absolute flex h-full right-0 px-2">
             <button v-on:click="nextButton()"
-                class="rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out"><i class="fas fa-angle-right"></i></button>
+                    class="rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out">
+                <i class="fas fa-angle-right"></i></button>
         </div>
         <div class="absolute flex h-full left-0 px-2">
             <button v-on:click="prevButton()"
-                class="rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out"><i class="fas fa-angle-left"></i></button>
+                    class="rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out">
+                <i class="fas fa-angle-left"></i></button>
         </div>
     </div>
 </template>
@@ -76,7 +79,7 @@ export default {
         prevButton() {
             var scroller = this.$refs.scrollsnap
             var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width
-            if (this.counter === 0 ) {
+            if (this.counter === 0) {
                 this.scrolcount = scroller.scrollWidth
                 this.counter = 5
             } else {

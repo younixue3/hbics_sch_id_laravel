@@ -1,5 +1,6 @@
 <div class="md:p-10 z-50">
-    <footer class="bg-gradient-to-b from-sky-700 to-blue-900 px-2 md:px-10 py-5 text-white md:rounded-3xl shadow-xl shadow-neutral-400 z-50">
+    <footer
+        class="bg-gradient-to-b from-sky-700 to-blue-900 px-2 md:px-10 py-5 text-white md:rounded-3xl shadow-xl shadow-neutral-400 z-50">
         <div class="grid grid-cols-2 md:grid-cols-5 gap-x-5 md:gap-y-0 md:gap-x-10 pb-10">
             <div class="col-span-1 md:col-span-2 text-right justify-self-end">
                 <div class="my-10">
