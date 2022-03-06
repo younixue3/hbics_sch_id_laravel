@@ -58,7 +58,7 @@
                            class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                 </div>
                 <div class="my-2">
-                    <label class="text-sm">Email address</label>
+                    <label class="text-sm">Alamat email</label>
                     <input type="text"
                            class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                 </div>

@@ -4549,8 +4549,11 @@ var render = function () {
                             },
                             [
                               _c(
-                                "span",
-                                { staticClass: "cursor-pointer text-lg" },
+                                "a",
+                                {
+                                  staticClass: "cursor-pointer text-lg",
+                                  attrs: { href: _vm.dataurl["pendaftaran"] },
+                                },
                                 [
                                   _vm._v(
                                     "\n                                    Pendaftaran\n                                "
@@ -4570,7 +4573,83 @@ var render = function () {
                                         "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
                                       attrs: { id: "pendaftaran" },
                                     },
-                                    [_vm._m(0)]
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "h-full grid grid-rows-5 divide-y-2",
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5",
+                                            },
+                                            [
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass:
+                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                  attrs: {
+                                                    href: _vm.dataurl[
+                                                      "petuntuk-pendaftaran"
+                                                    ],
+                                                  },
+                                                },
+                                                [_vm._m(0)]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass:
+                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                  attrs: {
+                                                    href: _vm.dataurl[
+                                                      "program-beasiswa"
+                                                    ],
+                                                  },
+                                                },
+                                                [_vm._m(1)]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass:
+                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                  attrs: {
+                                                    href: _vm.dataurl[
+                                                      "pendaftaran-siswa-baru"
+                                                    ],
+                                                  },
+                                                },
+                                                [_vm._m(2)]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass:
+                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                  attrs: {
+                                                    href: _vm.dataurl[
+                                                      "kunjungi-kami"
+                                                    ],
+                                                  },
+                                                },
+                                                [_vm._m(3)]
+                                              ),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _vm._m(4),
+                                        ]
+                                      ),
+                                    ]
                                   ),
                                 ]
                               ),
@@ -4591,8 +4670,11 @@ var render = function () {
                             },
                             [
                               _c(
-                                "span",
-                                { staticClass: "cursor-pointer text-lg" },
+                                "a",
+                                {
+                                  staticClass: "cursor-pointer text-lg",
+                                  attrs: { href: _vm.dataurl["akademis"] },
+                                },
                                 [
                                   _vm._v(
                                     "\n                                    Akademis\n                                "
@@ -4632,7 +4714,11 @@ var render = function () {
                                                 {
                                                   staticClass:
                                                     "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: { href: "#" },
+                                                  attrs: {
+                                                    href: _vm.dataurl[
+                                                      "happy-holy-kids"
+                                                    ],
+                                                  },
                                                 },
                                                 [
                                                   _c(
@@ -4663,7 +4749,7 @@ var render = function () {
                                                         ]
                                                       ),
                                                       _vm._v(" "),
-                                                      _vm._m(1),
+                                                      _vm._m(5),
                                                     ]
                                                   ),
                                                 ]
@@ -4674,7 +4760,11 @@ var render = function () {
                                                 {
                                                   staticClass:
                                                     "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: { href: "#" },
+                                                  attrs: {
+                                                    href: _vm.dataurl[
+                                                      "sekolah-dasar"
+                                                    ],
+                                                  },
                                                 },
                                                 [
                                                   _c(
@@ -4705,7 +4795,7 @@ var render = function () {
                                                         ]
                                                       ),
                                                       _vm._v(" "),
-                                                      _vm._m(2),
+                                                      _vm._m(6),
                                                     ]
                                                   ),
                                                 ]
@@ -4716,7 +4806,11 @@ var render = function () {
                                                 {
                                                   staticClass:
                                                     "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: { href: "#" },
+                                                  attrs: {
+                                                    href: _vm.dataurl[
+                                                      "sekolah-menengah-pertama"
+                                                    ],
+                                                  },
                                                 },
                                                 [
                                                   _c(
@@ -4747,7 +4841,7 @@ var render = function () {
                                                         ]
                                                       ),
                                                       _vm._v(" "),
-                                                      _vm._m(3),
+                                                      _vm._m(7),
                                                     ]
                                                   ),
                                                 ]
@@ -4758,7 +4852,11 @@ var render = function () {
                                                 {
                                                   staticClass:
                                                     "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: { href: "#" },
+                                                  attrs: {
+                                                    href: _vm.dataurl[
+                                                      "sekolah-menengah-atas"
+                                                    ],
+                                                  },
                                                 },
                                                 [
                                                   _c(
@@ -4789,7 +4887,7 @@ var render = function () {
                                                         ]
                                                       ),
                                                       _vm._v(" "),
-                                                      _vm._m(4),
+                                                      _vm._m(8),
                                                     ]
                                                   ),
                                                 ]
@@ -4797,7 +4895,7 @@ var render = function () {
                                             ]
                                           ),
                                           _vm._v(" "),
-                                          _vm._m(5),
+                                          _vm._m(9),
                                         ]
                                       ),
                                     ]
@@ -4882,7 +4980,51 @@ var render = function () {
                                     "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-96 z-50 transition-all ease-in-out duration-300 overflow-hidden",
                                   attrs: { id: "komunitas" },
                                 },
-                                [_vm._m(6)]
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "h-full grid grid-rows-5 divide-y-2",
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "grid grid-rows-2 items-center justify-items-stretch row-span-2 p-0.5",
+                                        },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                              attrs: {
+                                                href: _vm.dataurl["alumni"],
+                                              },
+                                            },
+                                            [_vm._m(10)]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                              attrs: {
+                                                href: _vm.dataurl["orang-tua"],
+                                              },
+                                            },
+                                            [_vm._m(11)]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._m(12),
+                                    ]
+                                  ),
+                                ]
                               ),
                             ]),
                           ]
@@ -4920,7 +5062,63 @@ var render = function () {
                                     "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-[31rem] z-50 transition-all ease-in-out duration-300 overflow-hidden",
                                   attrs: { id: "publikasi" },
                                 },
-                                [_vm._m(7)]
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "h-full grid grid-rows-5 divide-y-2",
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "grid grid-rows-3 items-center justify-items-stretch row-span-3 p-0.5",
+                                        },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                              attrs: {
+                                                href: _vm.dataurl["berita"],
+                                              },
+                                            },
+                                            [_vm._m(13)]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                              attrs: {
+                                                href: _vm.dataurl["acara"],
+                                              },
+                                            },
+                                            [_vm._m(14)]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                              attrs: {
+                                                href: _vm.dataurl["artikel"],
+                                              },
+                                            },
+                                            [_vm._m(15)]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._m(16),
+                                    ]
+                                  ),
+                                ]
                               ),
                             ]),
                           ]
@@ -5021,14 +5219,13 @@ var render = function () {
                 },
                 [
                   _c("nav", { staticClass: "grid gap-y-8" }, [
-                    _vm._m(8),
+                    _vm._m(17),
                     _vm._v(" "),
                     _c(
                       "div",
                       {
                         staticClass:
                           "-m-3 p-3 rounded-md transition-all ease-in-out",
-                        attrs: { href: "#" },
                       },
                       [
                         _c(
@@ -5073,13 +5270,13 @@ var render = function () {
                             attrs: { id: "pendaftaranmobile" },
                           },
                           [
-                            _vm._m(9),
+                            _vm._m(18),
                             _vm._v(" "),
-                            _vm._m(10),
+                            _vm._m(19),
                             _vm._v(" "),
-                            _vm._m(11),
+                            _vm._m(20),
                             _vm._v(" "),
-                            _vm._m(12),
+                            _vm._m(21),
                           ]
                         ),
                       ]
@@ -5135,13 +5332,13 @@ var render = function () {
                             attrs: { id: "akademismobile" },
                           },
                           [
-                            _vm._m(13),
+                            _vm._m(22),
                             _vm._v(" "),
-                            _vm._m(14),
+                            _vm._m(23),
                             _vm._v(" "),
-                            _vm._m(15),
+                            _vm._m(24),
                             _vm._v(" "),
-                            _vm._m(16),
+                            _vm._m(25),
                           ]
                         ),
                       ]
@@ -5196,7 +5393,7 @@ var render = function () {
                               "h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5",
                             attrs: { id: "komunitasmobile" },
                           },
-                          [_vm._m(17), _vm._v(" "), _vm._m(18)]
+                          [_vm._m(26), _vm._v(" "), _vm._m(27)]
                         ),
                       ]
                     ),
@@ -5251,11 +5448,11 @@ var render = function () {
                             attrs: { id: "publikasimobile" },
                           },
                           [
-                            _vm._m(19),
+                            _vm._m(28),
                             _vm._v(" "),
-                            _vm._m(20),
+                            _vm._m(29),
                             _vm._v(" "),
-                            _vm._m(21),
+                            _vm._m(30),
                           ]
                         ),
                       ]
@@ -5265,7 +5462,7 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(22),
+            _vm._m(31),
           ]
         ),
       ]
@@ -5277,267 +5474,216 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "h-full grid grid-rows-5 divide-y-2" }, [
+    return _c("div", { staticClass: "flex gap-x-5 text-center" }, [
+      _c("div", { staticClass: "w-20" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
+          },
+          [_c("i", { staticClass: "fas fa-pen-alt" })]
+        ),
+      ]),
+      _vm._v(" "),
       _c(
         "div",
         {
           staticClass:
-            "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5",
+            "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
         },
         [
-          _c(
-            "a",
-            {
-              staticClass:
-                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-              attrs: { href: "#" },
-            },
-            [
-              _c("div", { staticClass: "flex gap-x-5 text-center" }, [
-                _c("div", { staticClass: "w-20" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
-                    },
-                    [_c("i", { staticClass: "fas fa-pen-alt" })]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                Petunjuk Pendaftaran\n                                                            "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "text-xs font-light break-words leading-3 text-black",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                Panduan mendaftar Sekolah Harapan Bangsa & Happy\n                                                                Holy Kids\n                                                            "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
-            ]
-          ),
+          _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+            _vm._v(
+              "\n                                                                Petunjuk Pendaftaran\n                                                            "
+            ),
+          ]),
           _vm._v(" "),
           _c(
-            "a",
+            "div",
             {
               staticClass:
-                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-              attrs: { href: "#" },
+                "text-xs font-light break-words leading-3 text-black",
             },
             [
-              _c("div", { staticClass: "flex gap-x-5 text-center" }, [
-                _c("div", { staticClass: "w-20" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
-                    },
-                    [_c("i", { staticClass: "fas fa-trophy" })]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                Program Beasiswa\n                                                            "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "text-xs font-light break-words leading-3 text-black",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                Berbagai program Beasiswa Sekolah Harapan Bangsa &\n                                                                Happy Holy Kids\n                                                            "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-              attrs: { href: "#" },
-            },
-            [
-              _c("div", { staticClass: "flex gap-x-5 text-center" }, [
-                _c("div", { staticClass: "w-20" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
-                    },
-                    [_c("i", { staticClass: "fas fa-user-tie" })]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                Pendaftaran Siswa Baru\n                                                            "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "text-xs font-light break-words leading-3 text-black",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                Pendaftaran Calon Siswa Sekolah harapan Bangsa\n                                                            "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-              attrs: { href: "#" },
-            },
-            [
-              _c("div", { staticClass: "flex gap-x-5 text-center" }, [
-                _c("div", { staticClass: "w-20" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
-                    },
-                    [_c("i", { staticClass: "fas fa-school" })]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                Kunjungi Kami\n                                                            "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "text-xs font-light break-words leading-3 text-black",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                Alamat dan jadwal kunjungan ke Sekolah Harapan\n                                                                bangsa\n                                                            "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
+              _vm._v(
+                "\n                                                                Panduan mendaftar Sekolah Harapan Bangsa & Happy\n                                                                Holy Kids\n                                                            "
+              ),
             ]
           ),
         ]
       ),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex justify-center gap-x-5 pt-5" }, [
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex gap-x-5 text-center" }, [
+      _c("div", { staticClass: "w-20" }, [
         _c(
-          "a",
+          "div",
           {
             staticClass:
-              "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 text-2xl",
-            attrs: { href: "#" },
+              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
           },
-          [_c("i", { staticClass: "fab fa-facebook" })]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass:
-              "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-pink-500 to-gray-700 hover:to-violet-500 text-2xl",
-            attrs: { href: "#" },
-          },
-          [_c("i", { staticClass: "fab fa-instagram-square" })]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass:
-              "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-red-600 to-gray-700 hover:to-rose-400 text-2xl",
-            attrs: { href: "#" },
-          },
-          [_c("i", { staticClass: "fab fa-youtube" })]
+          [_c("i", { staticClass: "fas fa-trophy" })]
         ),
       ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+        },
+        [
+          _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+            _vm._v(
+              "\n                                                                Program Beasiswa\n                                                            "
+            ),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "text-xs font-light break-words leading-3 text-black",
+            },
+            [
+              _vm._v(
+                "\n                                                                Berbagai program Beasiswa Sekolah Harapan Bangsa &\n                                                                Happy Holy Kids\n                                                            "
+              ),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex gap-x-5 text-center" }, [
+      _c("div", { staticClass: "w-20" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
+          },
+          [_c("i", { staticClass: "fas fa-user-tie" })]
+        ),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+        },
+        [
+          _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+            _vm._v(
+              "\n                                                                Pendaftaran Siswa Baru\n                                                            "
+            ),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "text-xs font-light break-words leading-3 text-black",
+            },
+            [
+              _vm._v(
+                "\n                                                                Pendaftaran Calon Siswa Sekolah harapan Bangsa\n                                                            "
+              ),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex gap-x-5 text-center" }, [
+      _c("div", { staticClass: "w-20" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
+          },
+          [_c("i", { staticClass: "fas fa-school" })]
+        ),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+        },
+        [
+          _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+            _vm._v(
+              "\n                                                                Kunjungi Kami\n                                                            "
+            ),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "text-xs font-light break-words leading-3 text-black",
+            },
+            [
+              _vm._v(
+                "\n                                                                Alamat dan jadwal kunjungan ke Sekolah Harapan\n                                                                bangsa\n                                                            "
+              ),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex justify-center gap-x-5 pt-5" }, [
+      _c(
+        "a",
+        {
+          staticClass:
+            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 text-2xl",
+          attrs: { href: "#" },
+        },
+        [_c("i", { staticClass: "fab fa-facebook" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass:
+            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-pink-500 to-gray-700 hover:to-violet-500 text-2xl",
+          attrs: { href: "#" },
+        },
+        [_c("i", { staticClass: "fab fa-instagram-square" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass:
+            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-red-600 to-gray-700 hover:to-rose-400 text-2xl",
+          attrs: { href: "#" },
+        },
+        [_c("i", { staticClass: "fab fa-youtube" })]
+      ),
     ])
   },
   function () {
@@ -5700,337 +5846,306 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "h-full grid grid-rows-5 divide-y-2" }, [
+    return _c("div", { staticClass: "flex gap-x-5 text-center" }, [
+      _c("div", { staticClass: "w-20" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-1 transition-all ease-in duration-200",
+          },
+          [_c("i", { staticClass: "fas fa-user-graduate" })]
+        ),
+      ]),
+      _vm._v(" "),
       _c(
         "div",
         {
           staticClass:
-            "grid grid-rows-2 items-center justify-items-stretch row-span-2 p-0.5",
+            "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
         },
         [
-          _c(
-            "a",
-            {
-              staticClass:
-                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-              attrs: { href: "#" },
-            },
-            [
-              _c("div", { staticClass: "flex gap-x-5 text-center" }, [
-                _c("div", { staticClass: "w-20" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-1 transition-all ease-in duration-200",
-                    },
-                    [_c("i", { staticClass: "fas fa-user-graduate" })]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                Alumni\n                                                            "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "text-xs font-light break-words leading-3 text-black",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                Alumni Siswa Sekolah Harapan Bangsa & Happy Holy\n                                                                Kids\n                                                            "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
-            ]
-          ),
+          _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+            _vm._v(
+              "\n                                                                Alumni\n                                                            "
+            ),
+          ]),
           _vm._v(" "),
           _c(
-            "a",
+            "div",
             {
               staticClass:
-                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-              attrs: { href: "#" },
+                "text-xs font-light break-words leading-3 text-black",
             },
             [
-              _c("div", { staticClass: "flex gap-x-5 text-center" }, [
-                _c("div", { staticClass: "w-20" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
-                    },
-                    [_c("i", { staticClass: "fas fa-user-friends" })]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                Orang Tua\n                                                            "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "text-xs font-light break-words leading-3 text-black",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                Orang Tua/Wali Siswa dan Alumni Sekolah Harapan\n                                                                Bangsa dan Happy Holy Kids\n                                                            "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
+              _vm._v(
+                "\n                                                                Alumni Siswa Sekolah Harapan Bangsa & Happy Holy\n                                                                Kids\n                                                            "
+              ),
             ]
           ),
         ]
       ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex gap-x-5 text-center" }, [
+      _c("div", { staticClass: "w-20" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
+          },
+          [_c("i", { staticClass: "fas fa-user-friends" })]
+        ),
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row-span-3 grid grid-rows-2 px-5" }, [
-        _c("div", [
-          _c("span", { staticClass: "text-xs font-light h-5" }, [
-            _vm._v("Alumni"),
+      _c(
+        "div",
+        {
+          staticClass:
+            "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+        },
+        [
+          _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+            _vm._v(
+              "\n                                                                Orang Tua\n                                                            "
+            ),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "grid grid-cols-2 gap-x-2" }, [
-            _c(
-              "a",
-              {
-                staticClass:
-                  "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
-                attrs: { href: "#" },
-              },
-              [
-                _c("img", {
-                  staticClass: "h-12 w-12 rounded-full object-cover",
-                  attrs: {
-                    src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                  },
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                    Ricko\n                                                                "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                    Binus University\n                                                                "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass:
-                  "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
-                attrs: { href: "#" },
-              },
-              [
-                _c("img", {
-                  staticClass: "h-12 w-12 rounded-full object-cover",
-                  attrs: {
-                    src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                  },
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                    Ricko\n                                                                "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                    Binus University\n                                                                "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]
-            ),
-          ]),
+          _c(
+            "div",
+            {
+              staticClass:
+                "text-xs font-light break-words leading-3 text-black",
+            },
+            [
+              _vm._v(
+                "\n                                                                Orang Tua/Wali Siswa dan Alumni Sekolah Harapan\n                                                                Bangsa dan Happy Holy Kids\n                                                            "
+              ),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row-span-3 grid grid-rows-2 px-5" }, [
+      _c("div", [
+        _c("span", { staticClass: "text-xs font-light h-5" }, [
+          _vm._v("Alumni"),
         ]),
         _vm._v(" "),
-        _c("div", [
-          _c("span", { staticClass: "text-xs font-light h-5" }, [
-            _vm._v("Orang Tua"),
-          ]),
+        _c("div", { staticClass: "grid grid-cols-2 gap-x-2" }, [
+          _c(
+            "a",
+            {
+              staticClass:
+                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
+              attrs: { href: "#" },
+            },
+            [
+              _c("img", {
+                staticClass: "h-12 w-12 rounded-full object-cover",
+                attrs: {
+                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
+                },
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "leading-3 transition-all ease-in-out" },
+                    [
+                      _vm._v(
+                        "\n                                                                    Ricko\n                                                                "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
+                    },
+                    [
+                      _vm._v(
+                        "\n                                                                    Binus University\n                                                                "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "grid grid-cols-2 gap-2" }, [
-            _c(
-              "a",
-              {
-                staticClass:
-                  "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
-                attrs: { href: "#" },
-              },
-              [
-                _c("img", {
-                  staticClass: "h-12 w-12 rounded-full object-cover",
-                  attrs: {
-                    src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                  },
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                    Ricko\n                                                                "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                    Binus University\n                                                                "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass:
-                  "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
-                attrs: { href: "#" },
-              },
-              [
-                _c("img", {
-                  staticClass: "h-12 w-12 rounded-full object-cover",
-                  attrs: {
-                    src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                  },
-                }),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                    Ricko\n                                                                "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                    Binus University\n                                                                "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]
-            ),
-          ]),
+          _c(
+            "a",
+            {
+              staticClass:
+                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
+              attrs: { href: "#" },
+            },
+            [
+              _c("img", {
+                staticClass: "h-12 w-12 rounded-full object-cover",
+                attrs: {
+                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
+                },
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "leading-3 transition-all ease-in-out" },
+                    [
+                      _vm._v(
+                        "\n                                                                    Ricko\n                                                                "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
+                    },
+                    [
+                      _vm._v(
+                        "\n                                                                    Binus University\n                                                                "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("span", { staticClass: "text-xs font-light h-5" }, [
+          _vm._v("Orang Tua"),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "grid grid-cols-2 gap-2" }, [
+          _c(
+            "a",
+            {
+              staticClass:
+                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
+              attrs: { href: "#" },
+            },
+            [
+              _c("img", {
+                staticClass: "h-12 w-12 rounded-full object-cover",
+                attrs: {
+                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
+                },
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "leading-3 transition-all ease-in-out" },
+                    [
+                      _vm._v(
+                        "\n                                                                    Ricko\n                                                                "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
+                    },
+                    [
+                      _vm._v(
+                        "\n                                                                    Binus University\n                                                                "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
+              attrs: { href: "#" },
+            },
+            [
+              _c("img", {
+                staticClass: "h-12 w-12 rounded-full object-cover",
+                attrs: {
+                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
+                },
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "leading-3 transition-all ease-in-out" },
+                    [
+                      _vm._v(
+                        "\n                                                                    Ricko\n                                                                "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
+                    },
+                    [
+                      _vm._v(
+                        "\n                                                                    Binus University\n                                                                "
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]
+          ),
         ]),
       ]),
     ])
@@ -6039,291 +6154,250 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "h-full grid grid-rows-5 divide-y-2" }, [
+    return _c("div", { staticClass: "flex gap-x-5 text-center" }, [
+      _c("div", { staticClass: "w-20" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-1 transition-all ease-in duration-200",
+          },
+          [_c("i", { staticClass: "fas fa-newspaper" })]
+        ),
+      ]),
+      _vm._v(" "),
       _c(
         "div",
         {
           staticClass:
-            "grid grid-rows-3 items-center justify-items-stretch row-span-3 p-0.5",
+            "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
         },
         [
-          _c(
-            "a",
-            {
-              staticClass:
-                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-              attrs: { href: "#" },
-            },
-            [
-              _c("div", { staticClass: "flex gap-x-5 text-center" }, [
-                _c("div", { staticClass: "w-20" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-1 transition-all ease-in duration-200",
-                    },
-                    [_c("i", { staticClass: "fas fa-newspaper" })]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                Berita\n                                                            "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "text-xs font-light break-words leading-3 text-black",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                Berita seputar Sekolah Harapan Bangsa, Happy Holy\n                                                                Kids dan Dunia Pendidikan\n                                                            "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
-            ]
-          ),
+          _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+            _vm._v(
+              "\n                                                                Berita\n                                                            "
+            ),
+          ]),
           _vm._v(" "),
           _c(
-            "a",
+            "div",
             {
               staticClass:
-                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-              attrs: { href: "#" },
+                "text-xs font-light break-words leading-3 text-black",
             },
             [
-              _c("div", { staticClass: "flex gap-x-5 text-center" }, [
-                _c("div", { staticClass: "w-20" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
-                    },
-                    [_c("i", { staticClass: "fas fa-star" })]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                Acara\n                                                            "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "text-xs font-light break-words leading-3 text-black",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                Acara Sekolah Harapan Bangsa dan Happy Holy Kids\n                                                                yang telah di selengarakan\n                                                            "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-              attrs: { href: "#" },
-            },
-            [
-              _c("div", { staticClass: "flex gap-x-5 text-center" }, [
-                _c("div", { staticClass: "w-20" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
-                    },
-                    [_c("i", { staticClass: "fas fa-brain" })]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "leading-3 transition-all ease-in-out" },
-                      [
-                        _vm._v(
-                          "\n                                                                Artikel\n                                                            "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "text-xs font-light break-words leading-3 text-black",
-                      },
-                      [
-                        _vm._v(
-                          "\n                                                                Artikel Ilmiah edukasi seputar Ilmu pendidikan dan\n                                                                parenting\n                                                            "
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-              ]),
+              _vm._v(
+                "\n                                                                Berita seputar Sekolah Harapan Bangsa, Happy Holy\n                                                                Kids dan Dunia Pendidikan\n                                                            "
+              ),
             ]
           ),
         ]
       ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex gap-x-5 text-center" }, [
+      _c("div", { staticClass: "w-20" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
+          },
+          [_c("i", { staticClass: "fas fa-star" })]
+        ),
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "px-5 h-36 row-span-2" }, [
-        _c("span", { staticClass: "text-xs font-light" }, [_vm._v("Alumni")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid grid-cols-2 gap-x-5" }, [
-          _c(
-            "a",
-            {
-              staticClass:
-                "grid grid-cols-2 gap-x-1 text-center bg-white h-24 rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2",
-              attrs: { href: "#" },
-            },
-            [
-              _c("img", {
-                staticClass: "h-[4.5rem] w-[4.5rem] rounded-xl object-cover",
-                attrs: {
-                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                },
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "grid grid-rows-2 gap-0 items-start text-left text-sm py-2",
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "leading-3 transition-all ease-in-out truncate",
-                    },
-                    [
-                      _vm._v(
-                        "\n                                                                Lorem Ipsum dolor sit amet, consetanioa n ojdanon\n                                                            "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9",
-                    },
-                    [
-                      _vm._v(
-                        "\n                                                                Lorem ipsum dolor sit amet, consectetur adipiscing\n                                                                elit. In porta bibendum odio, id egestas ex\n                                                                condimentum vitae. Integer eget ex libero. Interdum\n                                                                et malesuada fames ac ante ipsum primis in faucibus.\n                                                                Morbi non nibh eu mi ullamcorper varius. Donec sit\n                                                                amet dolor sed ex pharetra egestas. Aenean malesuada\n                                                                quis est vitae pellentesque. Nullam interdum, mauris\n                                                                nec finibus lacinia, leo risus aliquet nibh, vel\n                                                                imperdiet ex mi feugiat elit. Cras condimentum elit\n                                                                nulla, quis sagittis mauris volutpat eget. Sed\n                                                                tristique eu turpis ultricies pellentesque. Donec at\n                                                                ligula nisl. Nunc porta, quam vitae dapibus\n                                                                tristique, erat quam placerat nibh, vitae auctor leo\n                                                                tortor ac sem.\n                                                                "
-                      ),
-                      _c("p"),
-                    ]
-                  ),
-                ]
-              ),
-            ]
-          ),
+      _c(
+        "div",
+        {
+          staticClass:
+            "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+        },
+        [
+          _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+            _vm._v(
+              "\n                                                                Acara\n                                                            "
+            ),
+          ]),
           _vm._v(" "),
           _c(
-            "a",
+            "div",
             {
               staticClass:
-                "grid grid-cols-2 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2",
-              attrs: { href: "#" },
+                "text-xs font-light break-words leading-3 text-black",
             },
             [
-              _c("img", {
-                staticClass: "h-[4.5rem] w-[4.5rem] rounded-xl object-cover",
-                attrs: {
-                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                },
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "grid grid-rows-2 gap-0 items-start text-left text-sm py-2",
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "leading-3 transition-all ease-in-out truncate",
-                    },
-                    [
-                      _vm._v(
-                        "\n                                                                Lorem Ipsum dolor sit amet, consetanioa n ojdanon\n                                                            "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9",
-                    },
-                    [
-                      _vm._v(
-                        "\n                                                                Lorem ipsum dolor sit amet, consectetur adipiscing\n                                                                elit. In porta bibendum odio, id egestas ex\n                                                                condimentum vitae. Integer eget ex libero. Interdum\n                                                                et malesuada fames ac ante ipsum primis in faucibus.\n                                                                Morbi non nibh eu mi ullamcorper varius. Donec sit\n                                                                amet dolor sed ex pharetra egestas. Aenean malesuada\n                                                                quis est vitae pellentesque. Nullam interdum, mauris\n                                                                nec finibus lacinia, leo risus aliquet nibh, vel\n                                                                imperdiet ex mi feugiat elit. Cras condimentum elit\n                                                                nulla, quis sagittis mauris volutpat eget. Sed\n                                                                tristique eu turpis ultricies pellentesque. Donec at\n                                                                ligula nisl. Nunc porta, quam vitae dapibus\n                                                                tristique, erat quam placerat nibh, vitae auctor leo\n                                                                tortor ac sem.\n                                                                "
-                      ),
-                      _c("p"),
-                    ]
-                  ),
-                ]
+              _vm._v(
+                "\n                                                                Acara Sekolah Harapan Bangsa dan Happy Holy Kids\n                                                                yang telah di selengarakan\n                                                            "
               ),
             ]
           ),
-        ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex gap-x-5 text-center" }, [
+      _c("div", { staticClass: "w-20" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
+          },
+          [_c("i", { staticClass: "fas fa-brain" })]
+        ),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+        },
+        [
+          _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+            _vm._v(
+              "\n                                                                Artikel\n                                                            "
+            ),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "text-xs font-light break-words leading-3 text-black",
+            },
+            [
+              _vm._v(
+                "\n                                                                Artikel Ilmiah edukasi seputar Ilmu pendidikan dan\n                                                                parenting\n                                                            "
+              ),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "px-5 h-36 row-span-2" }, [
+      _c("span", { staticClass: "text-xs font-light" }, [_vm._v("Alumni")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "grid grid-cols-2 gap-x-5" }, [
+        _c(
+          "a",
+          {
+            staticClass:
+              "grid grid-cols-2 gap-x-1 text-center bg-white h-24 rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2",
+            attrs: { href: "#" },
+          },
+          [
+            _c("img", {
+              staticClass: "h-[4.5rem] w-[4.5rem] rounded-xl object-cover",
+              attrs: {
+                src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
+              },
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "grid grid-rows-2 gap-0 items-start text-left text-sm py-2",
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "leading-3 transition-all ease-in-out truncate",
+                  },
+                  [
+                    _vm._v(
+                      "\n                                                                Lorem Ipsum dolor sit amet, consetanioa n ojdanon\n                                                            "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9",
+                  },
+                  [
+                    _vm._v(
+                      "\n                                                                Lorem ipsum dolor sit amet, consectetur adipiscing\n                                                                elit. In porta bibendum odio, id egestas ex\n                                                                condimentum vitae. Integer eget ex libero. Interdum\n                                                                et malesuada fames ac ante ipsum primis in faucibus.\n                                                                Morbi non nibh eu mi ullamcorper varius. Donec sit\n                                                                amet dolor sed ex pharetra egestas. Aenean malesuada\n                                                                quis est vitae pellentesque. Nullam interdum, mauris\n                                                                nec finibus lacinia, leo risus aliquet nibh, vel\n                                                                imperdiet ex mi feugiat elit. Cras condimentum elit\n                                                                nulla, quis sagittis mauris volutpat eget. Sed\n                                                                tristique eu turpis ultricies pellentesque. Donec at\n                                                                ligula nisl. Nunc porta, quam vitae dapibus\n                                                                tristique, erat quam placerat nibh, vitae auctor leo\n                                                                tortor ac sem.\n                                                                "
+                    ),
+                    _c("p"),
+                  ]
+                ),
+              ]
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass:
+              "grid grid-cols-2 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl p-2",
+            attrs: { href: "#" },
+          },
+          [
+            _c("img", {
+              staticClass: "h-[4.5rem] w-[4.5rem] rounded-xl object-cover",
+              attrs: {
+                src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
+              },
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "grid grid-rows-2 gap-0 items-start text-left text-sm py-2",
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "leading-3 transition-all ease-in-out truncate",
+                  },
+                  [
+                    _vm._v(
+                      "\n                                                                Lorem Ipsum dolor sit amet, consetanioa n ojdanon\n                                                            "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-xs font-light leading-3 text-black text-ellipsis overflow-hidden h-9",
+                  },
+                  [
+                    _vm._v(
+                      "\n                                                                Lorem ipsum dolor sit amet, consectetur adipiscing\n                                                                elit. In porta bibendum odio, id egestas ex\n                                                                condimentum vitae. Integer eget ex libero. Interdum\n                                                                et malesuada fames ac ante ipsum primis in faucibus.\n                                                                Morbi non nibh eu mi ullamcorper varius. Donec sit\n                                                                amet dolor sed ex pharetra egestas. Aenean malesuada\n                                                                quis est vitae pellentesque. Nullam interdum, mauris\n                                                                nec finibus lacinia, leo risus aliquet nibh, vel\n                                                                imperdiet ex mi feugiat elit. Cras condimentum elit\n                                                                nulla, quis sagittis mauris volutpat eget. Sed\n                                                                tristique eu turpis ultricies pellentesque. Donec at\n                                                                ligula nisl. Nunc porta, quam vitae dapibus\n                                                                tristique, erat quam placerat nibh, vitae auctor leo\n                                                                tortor ac sem.\n                                                                "
+                    ),
+                    _c("p"),
+                  ]
+                ),
+              ]
+            ),
+          ]
+        ),
       ]),
     ])
   },

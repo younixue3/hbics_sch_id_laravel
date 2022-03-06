@@ -1,5 +1,5 @@
 <nav-bar-component imagewhite="{{ asset('assets/logo/logo_white.png') }}"
                    footerwhite="{{ asset('assets/logo/harapan_bangsa_putih.png') }}"
                    logo="{{ asset('assets/logo/logo_colorfull.png') }}"
-                   logohhk="{{asset('assets/logo/HHK2.png')}}" url="{{$url}}"></nav-bar-component>
+                   logohhk="{{asset('assets/logo/HHK2.png')}}"></nav-bar-component>
 {{--{{dd($url)}}--}}

@@ -8,15 +8,5 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function __construct()
-    {
-        $this->url = getUrl::getUrl();
-    }
-
-    public function get_data()
-    {
-        $url = $this->url;
-        $data = compact('url');
-        return $data;
-    }
+    //
 }

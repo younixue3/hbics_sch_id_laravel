@@ -34,9 +34,9 @@
                             </div>
                             <div class="grid grid-cols-2 gap-x-5 font-bold">
                                 <div @mouseover="modalshow('pendaftaran')" @mouseleave="modalclose('pendaftaran')">
-                                    <span class="cursor-pointer text-lg">
+                                    <a :href="dataurl['pendaftaran']" class="cursor-pointer text-lg">
                                         Pendaftaran
-                                    </span>
+                                    </a>
                                     <div class="py-8 fixed -translate-x-3/4">
                                         <div ref="pendaftaran" id="pendaftaran"
                                              class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden">
@@ -44,7 +44,7 @@
                                                 <div
                                                     class="grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['petuntuk-pendaftaran']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -65,7 +65,7 @@
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['program-beasiswa']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -86,7 +86,7 @@
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['pendaftaran-siswa-baru']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -106,7 +106,7 @@
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['kunjungi-kami']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -140,9 +140,9 @@
                                     </div>
                                 </div>
                                 <div @mouseover="modalshow('akademis')" @mouseleave="modalclose('akademis')">
-                                    <span class="cursor-pointer text-lg">
+                                    <a :href="dataurl['akademis']" class="cursor-pointer text-lg">
                                         Akademis
-                                    </span>
+                                    </a>
                                     <div class="py-8 fixed -translate-x-3/4">
                                         <div ref="akademis" id="akademis"
                                              class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden">
@@ -150,7 +150,7 @@
                                                 <div
                                                     class="grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['happy-holy-kids']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -170,7 +170,7 @@
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['sekolah-dasar']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -190,7 +190,7 @@
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['sekolah-menengah-pertama']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -210,7 +210,7 @@
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['sekolah-menengah-atas']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -268,7 +268,7 @@
                                                 <div
                                                     class="grid grid-rows-2 items-center justify-items-stretch row-span-2 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['alumni']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -289,7 +289,7 @@
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['orang-tua']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -401,7 +401,7 @@
                                                 <div
                                                     class="grid grid-rows-3 items-center justify-items-stretch row-span-3 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['berita']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -422,7 +422,7 @@
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['acara']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -443,7 +443,7 @@
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       href="#">
+                                                       :href="dataurl['artikel']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -574,7 +574,7 @@
                                     </span>
                             </a>
 
-                            <div href="#" class="-m-3 p-3 rounded-md transition-all ease-in-out">
+                            <div class="-m-3 p-3 rounded-md transition-all ease-in-out">
                                 <div class="flex justify-between" @click="showmenumobile('pendaftaranmobile')">
                                         <span class="ml-3 text-base font-semibold text-blue-800">
                                             Pendaftaran

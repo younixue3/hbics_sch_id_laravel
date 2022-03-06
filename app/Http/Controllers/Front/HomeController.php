@@ -26,7 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $datas = $this->data->get_data();
-        return view('front.index', $datas);
+        return view('front.index');
     }
 }
