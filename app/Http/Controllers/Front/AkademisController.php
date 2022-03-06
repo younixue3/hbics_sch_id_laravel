@@ -25,6 +25,6 @@ class AkademisController extends Controller
      */
     public function index()
     {
-        return view('');
+        return view('front.akademis.index');
     }
 }

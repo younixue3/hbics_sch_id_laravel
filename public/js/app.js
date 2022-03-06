@@ -2826,7 +2826,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -4595,7 +4594,7 @@ var render = function () {
                                                     "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
                                                   attrs: {
                                                     href: _vm.dataurl[
-                                                      "petuntuk-pendaftaran"
+                                                      "petunjuk-pendaftaran"
                                                     ],
                                                   },
                                                 },

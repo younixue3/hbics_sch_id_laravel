@@ -1,12 +1,12 @@
 @extends('layouts.master')
-@section('title', 'Pendaftaran')
+@section('title', 'Akademis')
 @section('content')
     <div id="hero_section" class="h-44"></div>
     <div class="h-52 md:h-96 bg-fixed bg-no-repeat bg-cover flex bg-center" style="background-image: url('{{asset('assets/stock_photo_rdev/cambridge.jpeg')}}')">
         <div class="m-auto w-full h-full text-center text-white flex relative backdrop-brightness-75">
             <div class="m-auto">
                 <h1 class="text-2xl md:text-5xl font-bold uppercase">
-                    Petunjuk Pendaftaran
+                    Happy Holy Kids
                 </h1>
                 <p class="my-5">
                     Panduan mendaftar Sekolah Harapan Bangsa & Happy Holy Kids
@@ -20,7 +20,7 @@
         <div class="m-auto w-full h-full text-center text-white flex relative backdrop-brightness-75">
             <div class="m-auto">
                 <h1 class="text-2xl md:text-5xl font-bold uppercase">
-                    Program Beasiswa
+                    Sekolah Dasar
                 </h1>
                 <p class="my-5">
                     Berbagai program Beasiswa Sekolah Harapan Bangsa & Happy Holy Kids
@@ -34,7 +34,7 @@
         <div class="m-auto w-full h-full text-center text-white flex relative backdrop-brightness-75">
             <div class="m-auto">
                 <h1 class="text-2xl md:text-5xl font-bold uppercase">
-                    Pendaftaran Siswa Baru
+                    Sekolah Menengah Pertama
                 </h1>
                 <p class="my-5">
                     Pendaftaran Calon Siswa Sekolah harapan Bangsa
@@ -48,7 +48,7 @@
         <div class="m-auto w-full h-full text-center text-white flex relative backdrop-brightness-75">
             <div class="m-auto">
                 <h1 class="text-2xl md:text-5xl font-bold uppercase">
-                    Kunjungi Kami
+                    Sekolah Menengah Atas
                 </h1>
                 <p class="my-5">
                     Alamat dan jadwal kunjungan ke Sekolah Harapan Bangsa

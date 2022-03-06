@@ -41,10 +41,9 @@
                                         <div ref="pendaftaran" id="pendaftaran"
                                              class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden">
                                             <div class="h-full grid grid-rows-5 divide-y-2">
-                                                <div
-                                                    class="grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5">
+                                                <div class="grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       :href="dataurl['petuntuk-pendaftaran']">
+                                                       :href="dataurl['petunjuk-pendaftaran']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
