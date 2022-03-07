@@ -27,4 +27,24 @@ class AkademisController extends Controller
     {
         return view('front.akademis.index');
     }
+
+    public function kelompokBermainTk()
+    {
+        return view('front.akademis.hhk.index');
+    }
+
+    public function sekolahDasar()
+    {
+        return view('front.akademis.sd.index');
+    }
+
+    public function sekolahMenengahPertama()
+    {
+        return view('front.akademis.smp.index');
+    }
+
+    public function sekolahMenengahAtas()
+    {
+        return view('front.akademis.sma.index');
+    }
 }

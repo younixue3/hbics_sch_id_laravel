@@ -3136,6 +3136,123 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      counter: 0,
+      scrolcount: 0,
+      arrTestimoni: {
+        count: 0,
+        alumni: [{
+          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
+        }, {
+          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
+        }, {
+          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
+        }, {
+          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
+        }, {
+          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
+        }, {
+          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
+        }]
+      }
+    };
+  },
+  mounted: function mounted() {// this.scrolcount = this.$refs.scrollsnap.scrollWidth
+  },
+  methods: {
+    nextButton: function nextButton() {
+      var scroller = this.$refs.scrollsnap;
+      var element = document.getElementById('testing1').getBoundingClientRect().width;
+      console.log(this.scrolcount);
+
+      if (this.counter === 5) {
+        this.counter = 0;
+        this.scrolcount = 0;
+      } else {
+        this.counter = this.counter + 1;
+        this.scrolcount = this.scrolcount + element;
+      }
+
+      scroller.scrollTo({
+        behavior: 'smooth',
+        left: this.scrolcount
+      });
+    },
+    prevButton: function prevButton() {
+      var scroller = this.$refs.scrollsnap;
+      var element = document.getElementById('testing' + this.counter).getBoundingClientRect().width;
+
+      if (this.counter === 0) {
+        this.scrolcount = scroller.scrollWidth;
+        this.counter = 5;
+      } else {
+        this.counter = this.counter - 1;
+        this.scrolcount = this.scrolcount - element;
+      }
+
+      scroller.scrollTo({
+        behavior: 'smooth',
+        left: this.scrolcount
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapComponent.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapComponent.vue?vue&type=script&lang=js& ***!
@@ -3183,7 +3300,7 @@ __webpack_require__.r(__webpack_exports__);
       scrolcount: 0,
       arrTestimoni: {
         count: 0,
-        fasilitas: [{
+        testi: [{
           image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
         }, {
           image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
@@ -3384,6 +3501,7 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('content-card-component', 
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('testimoni-component', (__webpack_require__(/*! ./components/widget/TestimoniComponent */ "./resources/js/components/widget/TestimoniComponent.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('hero-component', (__webpack_require__(/*! ./components/widget/HeroComponent */ "./resources/js/components/widget/HeroComponent.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('snap-component', (__webpack_require__(/*! ./components/widget/SnapComponent */ "./resources/js/components/widget/SnapComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('snap-alumni-component', (__webpack_require__(/*! ./components/widget/SnapAlumniComponent */ "./resources/js/components/widget/SnapAlumniComponent.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -4129,6 +4247,45 @@ component.options.__file = "resources/js/components/widget/HeroComponent.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/SnapAlumniComponent.vue":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/widget/SnapAlumniComponent.vue ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SnapAlumniComponent_vue_vue_type_template_id_01445995_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SnapAlumniComponent.vue?vue&type=template&id=01445995&scoped=true& */ "./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=template&id=01445995&scoped=true&");
+/* harmony import */ var _SnapAlumniComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SnapAlumniComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _SnapAlumniComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _SnapAlumniComponent_vue_vue_type_template_id_01445995_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _SnapAlumniComponent_vue_vue_type_template_id_01445995_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "01445995",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/SnapAlumniComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/SnapComponent.vue":
 /*!**********************************************************!*\
   !*** ./resources/js/components/widget/SnapComponent.vue ***!
@@ -4257,6 +4414,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SnapAlumniComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SnapAlumniComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SnapAlumniComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/SnapComponent.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************!*\
   !*** ./resources/js/components/widget/SnapComponent.vue?vue&type=script&lang=js& ***!
@@ -4349,6 +4522,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeroComponent_vue_vue_type_template_id_0b13de43_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HeroComponent_vue_vue_type_template_id_0b13de43_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HeroComponent.vue?vue&type=template&id=0b13de43&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/HeroComponent.vue?vue&type=template&id=0b13de43&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=template&id=01445995&scoped=true&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=template&id=01445995&scoped=true& ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SnapAlumniComponent_vue_vue_type_template_id_01445995_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SnapAlumniComponent_vue_vue_type_template_id_01445995_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SnapAlumniComponent_vue_vue_type_template_id_01445995_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SnapAlumniComponent.vue?vue&type=template&id=01445995&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=template&id=01445995&scoped=true&");
 
 
 /***/ }),
@@ -7081,10 +7271,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapComponent.vue?vue&type=template&id=5accf073&scoped=true&":
-/*!********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapComponent.vue?vue&type=template&id=5accf073&scoped=true& ***!
-  \********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=template&id=01445995&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapAlumniComponent.vue?vue&type=template&id=01445995&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -7103,9 +7293,138 @@ var render = function () {
       {
         ref: "scrollsnap",
         staticClass:
-          "snap-x flex gap-6 snap-mandatory overflow-x-auto removescrollbar scroll-smooth",
+          "snap-x flex gap-6 snap-mandatory overflow-x-auto overflow-y-hidden removescrollbar scroll-smooth",
       },
-      _vm._l(_vm.arrTestimoni.fasilitas, function (item, index) {
+      _vm._l(_vm.arrTestimoni.alumni, function (item, index) {
+        return _c(
+          "div",
+          {
+            staticClass: "snap-center scroll-mx-6 shrink-0 rounded-3xl px-2",
+            attrs: { id: "testing" + index },
+          },
+          [
+            _c("div", { staticClass: "flex relative py-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "bg-white h-44 lg:h-56 lg:w-[30rem] rounded-3xl p-5",
+                  class: index === 5 ? "blur-sm brightness-75" : "",
+                },
+                [
+                  _c("div", { staticClass: "md:flex h-full" }, [
+                    _c("div", { staticClass: "md:w-1/3 m-auto flex" }, [
+                      _c("img", {
+                        staticClass: "h-20 w-20 rounded-full m-auto",
+                        attrs: { src: item.image },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(0, true),
+                  ]),
+                ]
+              ),
+              _vm._v(" "),
+              index === 5
+                ? _c("div", { staticClass: "absolute w-full h-full flex" }, [
+                    _c("div", { staticClass: "m-auto text-3xl text-white" }, [
+                      _vm._v(
+                        "\n                        Show More +\n                    "
+                      ),
+                    ]),
+                  ])
+                : _vm._e(),
+            ]),
+          ]
+        )
+      }),
+      0
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "absolute flex h-full right-0 px-2" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out",
+          on: {
+            click: function ($event) {
+              return _vm.nextButton()
+            },
+          },
+        },
+        [_c("i", { staticClass: "fas fa-angle-right" })]
+      ),
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "absolute flex h-full left-0 px-2" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "rounded-full m-auto h-7 w-7 md:h-10 md:w-10 md:h-10 md:w-10 backdrop-blur-sm backdrop-brightness-75 text-2xl text-white transition-all ease-in-out",
+          on: {
+            click: function ($event) {
+              return _vm.prevButton()
+            },
+          },
+        },
+        [_c("i", { staticClass: "fas fa-angle-left" })]
+      ),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "md:w-2/3 m-auto" }, [
+      _c("span", { staticClass: "text-sm md:text-lg" }, [
+        _vm._v("Queen Callie Tatang"),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "text-base md:text-2xl font-semibold" }, [
+        _vm._v("Juara Harapan 2"),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "text-xs md:text-sm" }, [
+        _vm._v("Dinas Pendidikan Kota Balikpapan (Cinta Cagar Budaya)"),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapComponent.vue?vue&type=template&id=5accf073&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/SnapComponent.vue?vue&type=template&id=5accf073&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "flex relative w-full py-3" }, [
+    _c(
+      "div",
+      {
+        ref: "scrollsnap",
+        staticClass:
+          "snap-x flex gap-6 snap-mandatory overflow-x-auto overflow-y-hidden removescrollbar scroll-smooth",
+      },
+      _vm._l(_vm.arrTestimoni.testi, function (item, index) {
         return _c(
           "div",
           {

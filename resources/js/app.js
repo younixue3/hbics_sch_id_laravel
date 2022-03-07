@@ -26,6 +26,7 @@ Vue.component('content-card-component', require('./components/widget/ContentCard
 Vue.component('testimoni-component', require('./components/widget/TestimoniComponent').default)
 Vue.component('hero-component', require('./components/widget/HeroComponent').default)
 Vue.component('snap-component', require('./components/widget/SnapComponent').default)
+Vue.component('snap-alumni-component', require('./components/widget/SnapAlumniComponent').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
