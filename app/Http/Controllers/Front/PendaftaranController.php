@@ -28,6 +28,16 @@ class PendaftaranController extends Controller
         return view('front.pendaftaran.index');
     }
 
+    public function petunjukPendaftaran()
+    {
+        return view('front.pendaftaran.petunjukPendaftaran.index');
+    }
+
+    public function programBeasiswa()
+    {
+        return view('front.pendaftaran.programBeasiswa.index');
+    }
+
     public function kunjungiKami()
     {
         return view('front.pendaftaran.kunjungiKami.index');
