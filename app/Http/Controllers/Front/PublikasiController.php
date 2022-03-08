@@ -17,4 +17,9 @@ class PublikasiController extends Controller
     {
         $this->data = $data;
     }
+
+    public function berita()
+    {
+        return view('front.publikasi.berita.index');
+    }
 }

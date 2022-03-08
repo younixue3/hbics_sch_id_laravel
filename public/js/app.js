@@ -4828,7 +4828,9 @@ var render = function () {
               class: [
                 _vm.show
                   ? "bg-blue-900 h-20"
-                  : _vm.livepath === "/" || _vm.livepath === "/alumni"
+                  : _vm.livepath === "/" ||
+                    _vm.livepath === "/alumni" ||
+                    _vm.livepath === "/orang-tua"
                   ? "bg-transparent h-44"
                   : "bg-blue-900 h-44",
               ],
