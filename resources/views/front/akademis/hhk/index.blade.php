@@ -11,7 +11,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-pattern">
+        <div class="bg-pattern pb-5">
             <div class="flex">
                 <div class="px-10 py-10 text-center text-lg">
                     Happy Holy Kids sendiri merupakan satu-satunya di Kalimantan Timur dan Yayasan Tunas Cahaya Bangsa adalah satu-satunya sekolah yang mendapatkan perjanjian eksklusif dengan Happy Holy Kids pusat yang berada di Jakarta. Happy Holy Kids berdiri pada tanggal 17 Juli 2006. Kurikulum Happy Holy Kids menggunakan pendekatan saintifik dengan beragam sentra pembelajaran. Sentra dirancang sebagai tempat dimana anak-anak belajar.  Mereka mengeksplorasi lingkungan mereka melalui proses pembelajaran lewat permainan. Happy Holy Kids juga memiliki program karya wisata di mana anak-anak dapat belajar dunia di sekitar mereka lebih dekat dengan mengalaminya.

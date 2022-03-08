@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Happy Holy Kids Balikpapan')
+@section('title', 'SMP Kristen Harapan Bangsa')
 @section('content')
     <div>
         <div id="hero_section" class="h-[35rem] bg-fixed bg-no-repeat bg-cover flex bg-center" style="background-image: url('{{asset('assets/stock_photo_rdev/cambridge.jpeg')}}')">
@@ -38,15 +38,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="flex justify-self-start">
-                        <div class="bg-white m-auto md:w-96 rounded-xl shadow-xl p-5 transform hover:scale-105 transition-all ease-in-out duration-500">
-                            <h4 class="text-xl font-bold"> Jam Kegiatan Belajar Mengajar :</h4>
-                            <ul>
-                                <li>Senin - Jum'at 08.00 - 10.45</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="md:col-span-2 flex">
+                    <div class="flex">
                         <div class="bg-white m-auto md:w-96 rounded-xl shadow-xl p-5 transform hover:scale-105 transition-all ease-in-out duration-500">
                             <h4 class="text-xl font-bold"> Ekstrakurikuler :</h4>
                             <ul>
@@ -61,6 +53,14 @@
                                 <li>Panahan</li>
                                 <li>Public Speaking</li>
                                 <li>Robotic</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 flex place-self-start justify-self-center">
+                        <div class="bg-white m-auto md:w-96 rounded-xl shadow-xl p-5 transform hover:scale-105 transition-all ease-in-out duration-500">
+                            <h4 class="text-xl font-bold"> Jam Kegiatan Belajar Mengajar :</h4>
+                            <ul>
+                                <li>Senin - Jum'at 08.00 - 10.45</li>
                             </ul>
                         </div>
                     </div>

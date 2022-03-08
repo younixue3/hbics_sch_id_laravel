@@ -2,10 +2,10 @@
     <div class="h-screen bg-gray-200 overflow-hidden">
         <div class="flex h-screen relative text-center mb-10 shadow-xl transition-all ease-in-out duration-300"
              :class="show ? 'translate-x-0 opacity-100' : 'opacity-0 translate-x-10'">
-            <img id="hero_section" class="h-screen w-screen object-cover transition-all ease-in-out"
+            <img id="hero_section" class="h-screen w-screen object-top object-cover transition-all ease-in-out"
                  :src=" this.windowspath + this.sliderContent.image" alt="">
             <div
-                class="absolute top-0 pb-32 bg-gradient-to-b from-gray-900 to-transparent w-full opacity-50 text-center transition-all ease-in-out"
+                    class="absolute top-0 pb-32 bg-gradient-to-b from-gray-900 to-transparent w-full opacity-50 text-center transition-all ease-in-out"
                 :class="show ? 'opacity-100' : 'opacity-0'">
             </div>
             <div class="absolute w-screen h-screen">
@@ -32,12 +32,8 @@
                             <div class="self-start">
                                 <p class="font-light text-gray-500 transition-all ease-in-out"
                                    :class="show ? 'opacity-100' : 'opacity-0'">
-                                    {{ this.sliderContent.content }}
+                                    {{ this.sliderContent.massage }}
                                 </p>
-                            </div>
-                            <div class="mt-5">
-                                <a class="hover:bg-blue-500 text-blue-500 hover:text-white rounded-full px-3 after:content-['_↗'] transition-all ease-in-out"
-                                   href="#">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -58,33 +54,33 @@ export default {
             heroContent: [
                 {
                     id: 1,
-                    image: 'IMG_7266.jpg',
-                    title: 'Happy Holy Kids',
-                    content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
+                    image: 'JaneDoe.jpg',
+                    title: 'Jane Doe',
+                    massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
                 {
                     id: 2,
-                    image: 'Pic-1.jpg',
-                    title: 'Sekolah Dasar',
-                    content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
+                    image: 'JaneDoe.jpg',
+                    title: 'Jane Doe',
+                    massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
                 {
                     id: 3,
-                    image: 'IMG_7266.jpg',
-                    title: 'Sekolah Menengah Pertama',
-                    content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
+                    image: 'JaneDoe.jpg',
+                    title: 'Jane Doe',
+                    massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
                 {
                     id: 4,
-                    image: 'Pic-1.jpg',
-                    title: 'Sekolah Menengah Atas',
-                    content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
+                    image: 'JaneDoe.jpg',
+                    title: 'Jane Doe',
+                    massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
                 {
                     id: 5,
-                    image: 'IMG_7266.jpg',
-                    title: 'Visi Misi',
-                    content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
+                    image: 'JaneDoe.jpg',
+                    title: 'Jane Doe',
+                    massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
             ]
         }

@@ -1,8 +1,8 @@
 <template>
     <div class="flex relative w-full py-3">
-        <div ref="scrollsnap" class="snap-x flex gap-6 snap-mandatory overflow-x-auto overflow-y-hidden removescrollbar scroll-smooth">
+        <div ref="scrollsnap" class="snap-x flex gap-6 snap-mandatory overflow-x-auto overflow-y-hidden removescrollbar scroll-smooth pb-10 px-2">
             <div v-for="(item, index) in arrTestimoni.testi" :id="'testing' + index"
-                 class="snap-center scroll-mx-6 shrink-0 rounded-3xl px-2">
+                 class="snap-center scroll-mx-6 shrink-0 md:mx-2 rounded-3xl shadow-xl">
                 <!--                <img class="h-44 lg:h-56 rounded-3xl" :src="item.image" />-->
                 <div class="flex relative">
                     <img class="h-44 lg:h-56 rounded-3xl" :class="index === 5 ? 'blur-sm' : ''" :src="item.image"/>

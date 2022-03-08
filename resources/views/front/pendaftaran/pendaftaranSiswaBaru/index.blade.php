@@ -14,7 +14,7 @@
                         <li>Pasfoto Orang Tua ukuran 3x4cm (background polos warna bebas)</li>
                         <li>Pasfoto Anak ukuran 3x4cm (background polos warna bebas)</li>
                     </ul>
-                    <div class="font-light italic bg-yellow-200 rounded-xl h-full md:h-6 sm:hover:h-24 transition-all ease-in-out overflow-hidden p-2 sm:p-n">
+                    <div class="font-light italic bg-yellow-200 rounded-xl h-full md:h-6 sm:hover:h-24 transition-all ease-in-out overflow-hidden">
                         <div>
                             Apabila siswa/i adalah pindahan dari sekolah lain, harap menyiapkan berkas tambahan berikut:
                         </div>

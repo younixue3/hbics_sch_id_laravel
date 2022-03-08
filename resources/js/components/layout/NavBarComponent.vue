@@ -4,7 +4,7 @@
                 id="navBar">
             <div>
                 <div
-                    :class="[show ? 'bg-blue-900 h-20' : livepath !== '/' ? 'bg-blue-900 h-44' : 'bg-transparent h-44']"
+                    :class="[show ? 'bg-blue-900 h-20' : livepath === '/' || livepath === '/alumni' ? 'bg-transparent h-44' : 'bg-blue-900 h-44']"
                     class="transition-all ease-in-out duration-300">
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
                         <div class="text-sm font-light">
