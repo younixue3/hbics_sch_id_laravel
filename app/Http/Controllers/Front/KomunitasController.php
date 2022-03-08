@@ -22,4 +22,9 @@ class KomunitasController extends Controller
     {
         return view('front.komunitas.alumni.index');
     }
+
+    public function orangTua()
+    {
+        return view('front.komunitas.orangtua.index');
+    }
 }
