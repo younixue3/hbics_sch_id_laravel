@@ -7,7 +7,7 @@
             <div class=" px-10 lg:px-80">
                 <div class="m-auto w-full align-middle my-10">
                     <div
-                        class="md:absolute h-full text-gray-700 md:text-gray-300 md:-translate-x-10 md:-translate-y-10 text-5xl md:text-8xl text-center">
+                        class="md:absolute text-gray-700 md:text-gray-300 md:-translate-x-10 md:-translate-y-10 text-5xl md:text-8xl text-center">
                         <i class="fa-solid fa-quote-left"></i>
                     </div>
                     <div class="relative md:my-20 text-lg text-center md:text-left z-10">
@@ -35,6 +35,9 @@
                         fermentum vel nec lorem. Nullam eros urna, rutrum ac euismod eu, ultricies sed nibh. Vivamus
                         finibus ligula non tempus consequat. Vestibulum aliquam maximus odio ac varius. Suspendisse
                         sapien lorem, fringilla ac augue eu, congue tempor magna.</p>
+                    <div class="flex">
+                        <img class="m-auto h-36" src="{{asset('assets/stock_photo_rdev/AKRE-01-01.webp')}}">
+                    </div>
                 </div>
             </div>
             <div class="my-10 md:my-20 md:px-20">
