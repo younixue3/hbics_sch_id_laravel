@@ -3,7 +3,7 @@
 @section('content')
     <div>
         <div id="hero_section" class="h-[35rem] bg-fixed bg-no-repeat bg-cover flex bg-center"
-             style="background-image: url('{{asset('assets/stock_photo_rdev/cambridge.jpeg')}}')">
+             style="background-image: url('{{asset('assets/stock_photo_rdev/cambridge.webp')}}')">
             <div class="m-auto w-full h-full text-center text-white flex relative backdrop-brightness-75">
                 <div class="mx-auto mt-auto mb-20">
                     <h1 class="text-2xl md:text-6xl font-bold uppercase">
