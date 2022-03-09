@@ -62,7 +62,7 @@
                 </div>
                 <div class="md:row-span-2">
                     <video class="md:h-[49.25rem] w-full object-cover rounded-2xl object-cover" autoplay loop muted>
-                        <source src="{{asset('assets/stock_photo_rdev/video_1.mp4')}}">
+                        <source src="{{asset('assets/stock_photo_rdev/pexels-宇航-钱-10641436.mp4')}}">
                     </video>
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
