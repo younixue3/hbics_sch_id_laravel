@@ -5,12 +5,12 @@
         <div class="h-[35rem] grid grid-cols-3 grid-rows-4 lg:grid-rows-3 justify-items-stretch  gap-2 :gap-5">
             <div
                 class="bg-gray-100 rounded-xl md:rounded-3xl justify-self-start order-last md:order-none overflow-hidden">
-                <img class="h-full md:h-52 rounded-xl" src="{{asset('assets/stock_photo_rdev/IMG_6818.jpg')}}">
+                <img class="h-full md:h-52 rounded-xl" src="{{asset('assets/stock_photo_rdev/IMG_6818.webp')}}">
             </div>
             <div
                 class="row-span-3 col-span-3 md:col-span-2 lg:col-span-1 sm:order-first lg:order-none bg-gray-100 rounded-3xl overflow-hidden">
                 <img class="h-full w-full object-cover rounded-3xl"
-                     src="{{asset('assets/stock_photo_rdev/EDUsd-1-scaled.jpg')}}">
+                     src="{{asset('assets/stock_photo_rdev/EDUsd-1-scaled.webp')}}">
             </div>
             <div id="hero_section"
                  class="relative flex border order-first col-span-3 md:col-span-1 lg:order-none rounded-3xl bg-gradient-to-b from-yellow-400 to-amber-500 row-span-2 md:row-span-3 lg:row-span-2 px-5">
@@ -24,11 +24,11 @@
             </div>
             <div class="lg:row-span-2 bg-gray-100">
                 <img class="w-full object-cover rounded-xl md:rounded-3xl"
-                     src="{{asset('assets/stock_photo_rdev/IMG_7258.jpg')}}">
+                     src="{{asset('assets/stock_photo_rdev/IMG_7258.webp')}}">
             </div>
             <div class="bg-gray-100">
                 <img class="h-full object-cover rounded-xl md:rounded-3xl"
-                     src="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}">
+                     src="{{asset('assets/stock_photo_rdev/Pic-1.webp')}}">
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
     </div>
     <div class="lg:flex md:px-10 lg:px-16 xl:px-32 mt-10">
         <img class="md:h-full lg:h-[40rem] lg:w-2/5 mb-10 lg:mb-0 object-cover"
-             src="{{asset('assets/stock_photo_rdev/IMG_7266.jpg')}}">
+             src="{{asset('assets/stock_photo_rdev/IMG_7266.webp')}}">
         <div class="m-auto px-5 lg:pl-10">
             <h3 class="text-3xl font-bold hover:after:content-['_↗']"><a href="{{route('sejarah')}}">Sejarah Sekolah Harapan Bangsa</a></h3>
             <div class="flex flex-col gap-y-2 pt-5 text-sm font-light">
