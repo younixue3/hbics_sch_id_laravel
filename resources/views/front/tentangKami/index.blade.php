@@ -104,7 +104,7 @@
                     <div class="m-auto">
                         <h1 class="text-3xl md:text-5xl font-semibold hover:after:content-['_↗']"><a href="{{route('metode-pembelajaran')}}">Metode
                                 Pembelajaran</a></h1>
-                        <p class="px-5 md:px-24 xl:px-72 text-sm md:text-base font-light my-2 overflow-hidden h-16 leading-4">
+                        <p class="px-5 md:px-24 xl:px-72 text-sm md:text-base font-light my-2 overflow-hidden h-20 leading-4">
                             Kurikulum Cambridge yang diadaptasi oleh Sekolah Kristen Harapan Bangsa bertujuan untuk
                             menciptakan generasi yang siap dalam persaingan global. Sesuai namanya, kurikulum Cambridge
                             berasal dari organisasi yang ada di Universitas Cambridge, Inggris.</p>

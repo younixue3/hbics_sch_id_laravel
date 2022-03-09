@@ -496,6 +496,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-m-3{
   margin: -0.75rem;
 }
+.m-10{
+  margin: 2.5rem;
+}
+.m-52{
+  margin: 13rem;
+}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -555,6 +561,30 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+.mx-20{
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.mx-32{
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+.mx-52{
+  margin-left: 13rem;
+  margin-right: 13rem;
+}
+.mx-44{
+  margin-left: 11rem;
+  margin-right: 11rem;
+}
+.mx-5{
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 .ml-1{
   margin-left: 0.25rem;
@@ -849,6 +879,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-1\/2{
   width: 50%;
+}
+.w-52{
+  width: 13rem;
 }
 .max-w-6xl{
   max-width: 72rem;
@@ -1190,6 +1223,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-l-2{
   border-left-width: 2px;
 }
+.border-l-4{
+  border-left-width: 4px;
+}
 .border-gray-200{
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -1212,6 +1248,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+.border-yellow-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(202 138 4 / var(--tw-border-opacity));
+}
+.border-blue-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
 }
 .bg-white{
   --tw-bg-opacity: 1;
@@ -1271,6 +1315,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-red-600{
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+.bg-yellow-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
+}
+.bg-blue-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-t{
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
@@ -1479,6 +1531,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.px-52{
+  padding-left: 13rem;
+  padding-right: 13rem;
+}
+.px-44{
+  padding-left: 11rem;
+  padding-right: 11rem;
+}
+.px-32{
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+.px-0{
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .pt-8{
   padding-top: 2rem;
@@ -2146,6 +2218,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:m-auto{
     margin: auto;
   }
+  .md\:m-10{
+    margin: 2.5rem;
+  }
   .md\:my-10{
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
@@ -2161,6 +2236,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:mx-2{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+  }
+  .md\:mx-32{
+    margin-left: 8rem;
+    margin-right: 8rem;
   }
   .md\:mb-10{
     margin-bottom: 2.5rem;
@@ -2363,6 +2442,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+  .md\:px-52{
+    padding-left: 13rem;
+    padding-right: 13rem;
   }
   .md\:pl-10{
     padding-left: 2.5rem;
