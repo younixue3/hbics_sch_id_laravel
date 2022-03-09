@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.front.master')
 @section('title', 'Hubungi kami')
 @section('content')
     <div class="bg-pattern pt-72 pb-10 text-center">

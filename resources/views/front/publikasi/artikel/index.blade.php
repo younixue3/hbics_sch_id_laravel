@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.front.master')
 @section('title', 'Alumni')
 @section('content')
     <div id="hero_section" class="h-52"></div>

@@ -10,9 +10,9 @@
 </head>
 <body>
 <div id="app" class="bg-gray-100 font-raleway">
-    @include('layouts/header')
+    @include('layouts.front.header')
     @yield('content')
-    @include('layouts/footer')
+    @include('layouts.front.footer')
 </div>
 <script src="{{asset('js/app.js')}}"></script>
 <style>

@@ -55,3 +55,5 @@ Route::get('/orang-tua', [App\Http\Controllers\Front\KomunitasController::class,
 Route::get('/berita', [App\Http\Controllers\Front\PublikasiController::class, 'berita'])->name('berita');
 Route::get('/acara', [App\Http\Controllers\Front\PublikasiController::class, 'acara'])->name('acara');
 Route::get('/artikel', [App\Http\Controllers\Front\PublikasiController::class, 'artikel'])->name('artikel');
+
+Route::get('dashboard', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard');

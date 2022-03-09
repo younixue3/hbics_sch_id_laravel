@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.front.master')
 @section('title', 'Tentang Kami')
 @section('content')
     <div class="pt-52 p-32 px-10 lg:px-16 xl:px-32">
