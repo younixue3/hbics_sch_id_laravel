@@ -22,4 +22,14 @@ class PublikasiController extends Controller
     {
         return view('front.publikasi.berita.index');
     }
+
+    public function acara()
+    {
+        return view('front.publikasi.acara.index');
+    }
+
+    public function artikel()
+    {
+        return view('front.publikasi.artikel.index');
+    }
 }

@@ -27,6 +27,33 @@ class TentangKamiController extends Controller
     public function index()
     {
         $datas = $this->data->get_data();
-        return view('front.tentangKami', $datas);
+        return view('front.tentangKami.index', $datas);
     }
+
+    public function sejarah()
+    {
+        return view('front.tentangKami.sejarah.index');
+    }
+
+    public function visiMisi()
+    {
+        return view('front.tentangKami.visiMisi.index');
+    }
+
+
+    public function filosofiPendidikan()
+    {
+        return view('front.tentangKami.filosofiPendidikan.index');
+    }
+
+    public function metodePembelajaran()
+    {
+        return view('front.tentangKami.metodePembelajaran.index');
+    }
+
+    public function fasilitas()
+    {
+        return view('front.tentangKami.fasilitas.index');
+    }
+
 }
