@@ -586,6 +586,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 .ml-1{
   margin-left: 0.25rem;
 }
@@ -696,6 +700,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-0{
   margin-top: 0px;
+}
+.-mb-2{
+  margin-bottom: -0.5rem;
+}
+.-mb-5{
+  margin-bottom: -1.25rem;
+}
+.-mb-1{
+  margin-bottom: -0.25rem;
+}
+.-mb-0\.5{
+  margin-bottom: -0.125rem;
+}
+.-mb-0{
+  margin-bottom: -0px;
 }
 .block{
   display: block;
@@ -1226,6 +1245,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-l-4{
   border-left-width: 4px;
 }
+.border-b-4{
+  border-bottom-width: 4px;
+}
+.border-b{
+  border-bottom-width: 1px;
+}
 .border-gray-200{
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -1605,6 +1630,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-32{
   padding-bottom: 8rem;
+}
+.pb-2{
+  padding-bottom: 0.5rem;
 }
 .text-left{
   text-align: left;
@@ -2056,9 +2084,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:z-10:focus{
   z-index: 10;
 }
+.focus\:border-b-4:focus{
+  border-bottom-width: 4px;
+}
 .focus\:border-sky-500:focus{
   --tw-border-opacity: 1;
   border-color: rgb(14 165 233 / var(--tw-border-opacity));
+}
+.focus\:border-blue-600:focus{
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
 }
 .focus\:text-blue-700:focus{
   --tw-text-opacity: 1;

@@ -7,11 +7,11 @@
                 <!--                <img class="h-44 lg:h-56 rounded-3xl" :src="item.image" />-->
                 <div class="flex relative">
                     <img class="h-44 lg:h-56 rounded-3xl" :class="index === 5 ? 'blur-sm' : ''" :src="item.image"/>
-                    <div class="absolute w-full h-full flex" v-if="index === 5">
+                    <a :href="fasilitaspath" class="absolute w-full h-full flex" v-if="index === 5">
                         <div class="m-auto text-3xl text-white">
                             Show More +
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -32,6 +32,7 @@
 export default {
     data() {
         return {
+            fasilitaspath: window.location.origin + '/fasilitas',
             counter: 0,
             scrolcount: 0,
             arrTestimoni: {

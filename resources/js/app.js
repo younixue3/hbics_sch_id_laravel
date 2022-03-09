@@ -29,6 +29,7 @@ Vue.component('hero-component', require('./components/widget/HeroComponent').def
 Vue.component('hero-alumni-component', require('./components/widget/HeroAlumniComponent').default)
 Vue.component('snap-component', require('./components/widget/SnapComponent').default)
 Vue.component('snap-alumni-component', require('./components/widget/SnapAlumniComponent').default)
+Vue.component('gallery-component', require('./components/widget/GalleryComponent').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
