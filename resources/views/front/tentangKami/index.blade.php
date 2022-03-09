@@ -98,7 +98,7 @@
         <div
             class="flex relative justify-item-center h-72 md:h-96 w-full bg-cover bg-center mt-10 rounded-3xl overflow-hidden text-white">
             <img class="static object-cover brightness-50 w-full rounded-3xl"
-                 src="{{asset('assets/stock_photo_rdev/cambridge.jpeg')}}">
+                 src="{{asset('assets/stock_photo_rdev/cambridge.webp')}}">
             <div class="absolute text-center">
                 <div class="flex h-72 md:h-96">
                     <div class="m-auto">
