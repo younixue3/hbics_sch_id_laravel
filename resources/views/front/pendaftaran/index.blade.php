@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="h-52 md:h-96 bg-fixed bg-no-repeat bg-cover flex"
-         style="background-image: url('{{asset('assets/stock_photo_rdev/IMG_0762.jpg')}}')">
+         style="background-image: url('{{asset('assets/stock_photo_rdev/IMG_0762.webp')}}')">
         <div class="m-auto w-full h-full text-center text-white flex relative backdrop-brightness-75">
             <div class="m-auto">
                 <h1 class="text-2xl md:text-5xl font-bold uppercase">
@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="h-52 md:h-96 bg-fixed bg-no-repeat bg-cover flex"
-         style="background-image: url('{{asset('assets/stock_photo_rdev/siswabaru.jpg')}}')">
+         style="background-image: url('{{asset('assets/stock_photo_rdev/siswabaru.webp')}}')">
         <div class="m-auto w-full h-full text-center text-white flex relative backdrop-brightness-75">
             <div class="m-auto">
                 <h1 class="text-2xl md:text-5xl font-bold uppercase">
@@ -48,7 +48,7 @@
         </div>
     </div>
     <div class="h-52 md:h-96 bg-fixed bg-no-repeat bg-cover flex"
-         style="background-image: url('{{asset('assets/stock_photo_rdev/IMG_2114.jpg')}}')">
+         style="background-image: url('{{asset('assets/stock_photo_rdev/IMG_2114.webp')}}')">
         <div class="m-auto w-full h-full text-center text-white flex relative backdrop-brightness-75">
             <div class="m-auto">
                 <h1 class="text-2xl md:text-5xl font-bold uppercase">

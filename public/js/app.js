@@ -3033,11 +3033,11 @@ __webpack_require__.r(__webpack_exports__);
           type: 'video',
           area: 'tk'
         }, {
-          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/chris-ried-bN5XdU-bap4-unsplash.jpg',
+          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/chris-ried-bN5XdU-bap4-unsplash.webp',
           type: 'img',
           area: 'tk'
         }, {
-          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/marvin-meyer-SYTO3xs06fU-unsplash.jpg',
+          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/marvin-meyer-SYTO3xs06fU-unsplash.webp',
           type: 'img',
           area: 'sd'
         }, {
@@ -3045,7 +3045,7 @@ __webpack_require__.r(__webpack_exports__);
           type: 'video',
           area: 'smp'
         }, {
-          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/austin-poon-JO_S6ewBqAk-unsplash.jpg',
+          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/austin-poon-JO_S6ewBqAk-unsplash.webp',
           type: 'img',
           area: 'smp'
         }, {
@@ -3053,19 +3053,19 @@ __webpack_require__.r(__webpack_exports__);
           type: 'video',
           area: 'sma'
         }, {
-          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.jpg',
+          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp',
           type: 'img',
           area: 'smp'
         }, {
-          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/domenico-loia-hGV2TfOh0ns-unsplash.jpg',
+          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/domenico-loia-hGV2TfOh0ns-unsplash.webp',
           type: 'img',
           area: 'sma'
         }, {
-          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/luca-bravo-XJXWbfSo2f0-unsplash.jpg',
+          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/luca-bravo-XJXWbfSo2f0-unsplash.webp',
           type: 'img',
           area: 'tk'
         }, {
-          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/alex-knight-2EJCSULRwC8-unsplash.jpg',
+          url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/alex-knight-2EJCSULRwC8-unsplash.webp',
           type: 'img',
           area: 'sd'
         }, {
@@ -3155,27 +3155,27 @@ __webpack_require__.r(__webpack_exports__);
       sliderContent: [],
       heroContent: [{
         id: 1,
-        image: 'JaneDoe.jpg',
+        image: 'JaneDoe.webp',
         title: 'Jane Doe',
         massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       }, {
         id: 2,
-        image: 'JaneDoe.jpg',
+        image: 'JaneDoe.webp',
         title: 'Jane Doe',
         massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       }, {
         id: 3,
-        image: 'JaneDoe.jpg',
+        image: 'JaneDoe.webp',
         title: 'Jane Doe',
         massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       }, {
         id: 4,
-        image: 'JaneDoe.jpg',
+        image: 'JaneDoe.webp',
         title: 'Jane Doe',
         massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       }, {
         id: 5,
-        image: 'JaneDoe.jpg',
+        image: 'JaneDoe.webp',
         title: 'Jane Doe',
         massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       }]
@@ -3303,27 +3303,27 @@ __webpack_require__.r(__webpack_exports__);
       sliderContent: [],
       heroContent: [{
         id: 1,
-        image: 'IMG_7266.jpg',
+        image: 'IMG_7266.webp',
         title: 'Happy Holy Kids',
         content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
       }, {
         id: 2,
-        image: 'Pic-1.jpg',
+        image: 'Pic-1.webp',
         title: 'Sekolah Dasar',
         content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
       }, {
         id: 3,
-        image: 'IMG_7266.jpg',
+        image: 'IMG_7266.webp',
         title: 'Sekolah Menengah Pertama',
         content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
       }, {
         id: 4,
-        image: 'Pic-1.jpg',
+        image: 'Pic-1.webp',
         title: 'Sekolah Menengah Atas',
         content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
       }, {
         id: 5,
-        image: 'IMG_7266.jpg',
+        image: 'IMG_7266.webp',
         title: 'Visi Misi',
         content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
       }]
@@ -8224,7 +8224,7 @@ var render = function () {
                   staticClass:
                     "rounded-full w-16 h-16 bg-gray-200 object-cover",
                   attrs: {
-                    src: "http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.jpg",
+                    src: "http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.webp",
                   },
                 }),
               ]),

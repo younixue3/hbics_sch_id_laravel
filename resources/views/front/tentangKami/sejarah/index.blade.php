@@ -4,7 +4,7 @@
     <div class="bg-pattern pt-72 pb-10 text-center">
         <h1 id="hero_section" class="mb-20 text-5xl font-bold text-blue-900">Sejarah</h1>
         <div class="flex px-10">
-            <img class="w-1/2 rounded-3xl shadow-xl transform scale-75 -rotate-3 hover:rotate-2 transition-all ease-in-out duration-500" src="{{asset('assets/stock_photo_rdev/gedung.jpg')}}">
+            <img class="w-1/2 rounded-3xl shadow-xl transform scale-75 -rotate-3 hover:rotate-2 transition-all ease-in-out duration-500" src="{{asset('assets/stock_photo_rdev/gedung.webp')}}">
             <p class="m-auto text-left">Sekolah Kristen Harapan Bangsa pertama kali Sekolah Dasar Harapan Bangsa didirikan pada tahun 2008 untuk melanjutkan program Taman Kanak-kanak Happy Holy Kids. Kedua sekolah tersebut berafiliasi di bawah Yayasan Tunas Cahaya Bangsa dan didirikan oleh 4 pengurus yaitu Bapak Ronny Runtukahu, Bapak Doni Prasetyo, Bapak Daniel Henson, dan mendiang Ibu Lenny Priskila Tan yang merupakan kepala sekolah pertama di kedua sekolah tersebut. Visi mereka adalah mencetak pemimpin masa depan melalui pendidikan Kristen dan membentuk mereka menjadi intelektual, berpotensi maksimal, dan berkarakter Kristus. </p>
         </div>
         <div class="flex">
@@ -80,15 +80,15 @@
         </div>
         <div class="flex px-10">
             <p class="m-auto text-right">Dengan motto “Membuat Hidup Lebih Baik”, para pendiri sekolah percaya bahwa generasi masa depan yang lebih baik perlu memiliki karakter yang saleh, mereka perlu mengetahui tujuan hidup mereka yang sebenarnya sedini mungkin, dan potensi mereka perlu tumbuh dan dipelihara sepenuhnya. Di tahun pertamanya, Sekolah Dasar Kristen Harapan Bangsa memulai perjalanannya dengan kelas yang terdiri dari 20 siswa dan 5 guru, bertempat di gedung sekolah aslinya di Jln. R.E Martadinata, Balikpapan. Tahun berikutnya, Tuhan memberkati sekolah tersebut dengan gedung sekolah baru yang terletak di Jln. Indrakila, Balikpapan utara yang merupakan lokasi kampus kami saat ini. </p>
-            <img class="w-1/2 rounded-3xl shadow-xl transform scale-75 rotate-3 hover:-rotate-2 transition-all ease-in-out duration-500" src="{{asset('assets/stock_photo_rdev/hold-hand.jpg')}}">
+            <img class="w-1/2 rounded-3xl shadow-xl transform scale-75 rotate-3 hover:-rotate-2 transition-all ease-in-out duration-500" src="{{asset('assets/stock_photo_rdev/hold-hand.webp')}}">
         </div>
         <div class="flex px-10">
-            <img class="w-1/2 rounded-3xl shadow-xl transform scale-75 -rotate-3 hover:rotate-2 transition-all ease-in-out duration-500" src="{{asset('assets/stock_photo_rdev/banner.jpg')}}">
+            <img class="w-1/2 rounded-3xl shadow-xl transform scale-75 -rotate-3 hover:rotate-2 transition-all ease-in-out duration-500" src="{{asset('assets/stock_photo_rdev/banner.webp')}}">
             <p class="m-auto text-left">Bangunan sekolah yang sekarang ini digunakan pertama kali dibangun pada awal tahun ajaran 2010/2011. Gayung bersambut, masyarakat Balikpapan dengan cepat mengetahui kualitas sekolah dan bagaimana sekolah tersebut menjadi lebih maju dari sekolah konvensional lainnya. Sekolah mulai tumbuh secara eksponensial dan menerima hampir seratus siswa baru setiap tahun. Pada bulan Februari 2014, sekolah mengalami masa sulit karena Ibu Lenny Priskila Tan meninggal dunia, namun atas petunjuk Tuhan, sekolah terus berkembang dengan sekumpulan pimpinan sekolah baru yang dibimbing olehnya. Di tahun yang sama, SMP Kristen Harapan Bangsa resmi berdiri, diikuti oleh SMA di tahun 2017.</p>
         </div>
         <div class="flex px-10">
             <p class="m-auto text-right">Nama Sekolah Kristen Terpadu Harapan Bangsa merupakan urutan sekolah dari Tingkat Sekolah Dasar sampai dengan Sekolah Menengah Atas. Saat ini, HHK dan HBICS memiliki lebih dari 700 siswa dan memiliki sekitar 150 guru dan karyawan. Ke depannya, sekolah ini akan melanjutkan perjalanannya menjadi sekolah Kristen terbaik di Balikpapan yang akan menghasilkan pembelajar dan pemimpin masa depan yang berkualitas. </p>
-            <img class="w-1/2 rounded-3xl shadow-xl transform scale-75 rotate-3 hover:-rotate-2 transition-all ease-in-out duration-500" src="{{asset('assets/stock_photo_rdev/IMG_2012.jpg')}}">
+            <img class="w-1/2 rounded-3xl shadow-xl transform scale-75 rotate-3 hover:-rotate-2 transition-all ease-in-out duration-500" src="{{asset('assets/stock_photo_rdev/IMG_2012.webp')}}">
         </div>
     </div>
 @endsection

@@ -58,31 +58,31 @@ export default {
             heroContent: [
                 {
                     id: 1,
-                    image: 'IMG_7266.jpg',
+                    image: 'IMG_7266.webp',
                     title: 'Happy Holy Kids',
                     content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
                 },
                 {
                     id: 2,
-                    image: 'Pic-1.jpg',
+                    image: 'Pic-1.webp',
                     title: 'Sekolah Dasar',
                     content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
                 },
                 {
                     id: 3,
-                    image: 'IMG_7266.jpg',
+                    image: 'IMG_7266.webp',
                     title: 'Sekolah Menengah Pertama',
                     content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
                 },
                 {
                     id: 4,
-                    image: 'Pic-1.jpg',
+                    image: 'Pic-1.webp',
                     title: 'Sekolah Menengah Atas',
                     content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
                 },
                 {
                     id: 5,
-                    image: 'IMG_7266.jpg',
+                    image: 'IMG_7266.webp',
                     title: 'Visi Misi',
                     content: 'Mauris placerat nulla non laoreet fringilla. Vivamus ut metus sed mi eleifend dapibus. Curabitur non consequat massa. Donec scelerisque orci neque, id vehicula magna varius nec.'
                 },

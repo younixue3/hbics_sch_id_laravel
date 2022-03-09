@@ -6,7 +6,7 @@
                      class="transition-all ease-in-out bg-white rounded-xl shadow-lg border-2 flex items-center md:w-[37rem] h-52 p-1 md:p-5 m-auto">
                     <div class="w-1/4 self-start pl-1 pt-5">
                         <img class="rounded-full w-16 h-16 bg-gray-200 object-cover"
-                             src="http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.jpg">
+                             src="http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.webp">
                     </div>
                     <div class="relative w-3/4 px-5">
                         <span class="text-lg font-bold truncate" v-if="show">{{ data.name }}</span>

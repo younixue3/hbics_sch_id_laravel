@@ -54,31 +54,31 @@ export default {
             heroContent: [
                 {
                     id: 1,
-                    image: 'JaneDoe.jpg',
+                    image: 'JaneDoe.webp',
                     title: 'Jane Doe',
                     massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
                 {
                     id: 2,
-                    image: 'JaneDoe.jpg',
+                    image: 'JaneDoe.webp',
                     title: 'Jane Doe',
                     massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
                 {
                     id: 3,
-                    image: 'JaneDoe.jpg',
+                    image: 'JaneDoe.webp',
                     title: 'Jane Doe',
                     massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
                 {
                     id: 4,
-                    image: 'JaneDoe.jpg',
+                    image: 'JaneDoe.webp',
                     title: 'Jane Doe',
                     massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },
                 {
                     id: 5,
-                    image: 'JaneDoe.jpg',
+                    image: 'JaneDoe.webp',
                     title: 'Jane Doe',
                     massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                 },

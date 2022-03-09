@@ -28,15 +28,15 @@ export default {
             arrGallery : {
                 data : [
                     {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/pexels-宇航-钱-10641436.mp4', type : 'video', area : 'tk'},
-                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/chris-ried-bN5XdU-bap4-unsplash.jpg', type : 'img', area : 'tk'},
-                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/marvin-meyer-SYTO3xs06fU-unsplash.jpg', type : 'img', area : 'sd'},
+                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/chris-ried-bN5XdU-bap4-unsplash.webp', type : 'img', area : 'tk'},
+                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/marvin-meyer-SYTO3xs06fU-unsplash.webp', type : 'img', area : 'sd'},
                     {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/video.mp4', type : 'video', area : 'smp'},
-                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/austin-poon-JO_S6ewBqAk-unsplash.jpg', type : 'img', area : 'smp'},
+                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/austin-poon-JO_S6ewBqAk-unsplash.webp', type : 'img', area : 'smp'},
                     {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/pexels-anna-nekrashevich-6799742.mp4', type : 'video', area : 'sma'},
-                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.jpg', type : 'img', area : 'smp'},
-                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/domenico-loia-hGV2TfOh0ns-unsplash.jpg', type : 'img', area : 'sma'},
-                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/luca-bravo-XJXWbfSo2f0-unsplash.jpg', type : 'img', area : 'tk'},
-                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/alex-knight-2EJCSULRwC8-unsplash.jpg', type : 'img', area : 'sd'},
+                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp', type : 'img', area : 'smp'},
+                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/domenico-loia-hGV2TfOh0ns-unsplash.webp', type : 'img', area : 'sma'},
+                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/luca-bravo-XJXWbfSo2f0-unsplash.webp', type : 'img', area : 'tk'},
+                    {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/alex-knight-2EJCSULRwC8-unsplash.webp', type : 'img', area : 'sd'},
                     {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/Pexels_Videos_1350205.mp4', type : 'video', area : 'smp'},
                     {url : 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/pexels-宇航-钱-10641436.mp4', type : 'video', area : 'sd'},
                 ]

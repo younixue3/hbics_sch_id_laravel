@@ -29,7 +29,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -45,7 +45,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -61,7 +61,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -77,7 +77,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -93,7 +93,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -109,7 +109,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -125,7 +125,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -141,7 +141,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -157,7 +157,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -173,7 +173,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -189,7 +189,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -205,7 +205,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -221,7 +221,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -237,7 +237,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -253,7 +253,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -271,7 +271,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -287,7 +287,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -303,7 +303,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -319,7 +319,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -335,7 +335,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -351,7 +351,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -367,7 +367,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -383,7 +383,7 @@
                             class="flex p-1 md:p-3 rounded-3xl hover:bg-gray-100 transition-all ease-in-out duration-500">
                             <div class="w-1/3 flex">
                                 <img class="h-10 md:h-20 w-10 md:w-20 rounded-full object-cover m-auto"
-                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.jpg')}}">
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                             </div>
                             <div class="w-2/3 pl-1 md:pl-3 flex">
                                 <div class="m-auto">
@@ -401,19 +401,19 @@
             <div class="my-10 md:px-20">
                 <div
                     class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-0 z-10">
-                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}"
+                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.webp')}}"
                                             insight="50"
                                             title="Lorem Ipsum"
                                             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi. Cras cursus elit sed ligula volutpat, id malesuada felis facilisis. Suspendisse mauris quam, scelerisque nec purus eget, pretium volutpat magna. Vivamus tempus sit amet nibh vitae imperdiet. Curabitur congue dignissim consequat. Maecenas quis sapien ut nibh consectetur feugiat id ut arcu. Cras odio nulla, laoreet sed metus a, malesuada dictum dui. Nulla rutrum, ipsum sit amet tristique cursus, ligula dui sagittis quam, a mattis ipsum sapien sit amet est."></content-card-component>
-                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}"
+                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.webp')}}"
                                             insight="40"
                                             title="Lorem Ipsum"
                                             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi. Cras cursus elit sed ligula volutpat, id malesuada felis facilisis. Suspendisse mauris quam, scelerisque nec purus eget, pretium volutpat magna. Vivamus tempus sit amet nibh vitae imperdiet. Curabitur congue dignissim consequat. Maecenas quis sapien ut nibh consectetur feugiat id ut arcu. Cras odio nulla, laoreet sed metus a, malesuada dictum dui. Nulla rutrum, ipsum sit amet tristique cursus, ligula dui sagittis quam, a mattis ipsum sapien sit amet est."></content-card-component>
-                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}"
+                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.webp')}}"
                                             insight="20"
                                             title="Lorem Ipsum"
                                             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi. Cras cursus elit sed ligula volutpat, id malesuada felis facilisis. Suspendisse mauris quam, scelerisque nec purus eget, pretium volutpat magna. Vivamus tempus sit amet nibh vitae imperdiet. Curabitur congue dignissim consequat. Maecenas quis sapien ut nibh consectetur feugiat id ut arcu. Cras odio nulla, laoreet sed metus a, malesuada dictum dui. Nulla rutrum, ipsum sit amet tristique cursus, ligula dui sagittis quam, a mattis ipsum sapien sit amet est."></content-card-component>
-                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.jpg')}}"
+                    <content-card-component imagecontent="{{asset('assets/stock_photo_rdev/Pic-1.webp')}}"
                                             insight="20"
                                             title="Lorem Ipsum"
                                             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi. Cras cursus elit sed ligula volutpat, id malesuada felis facilisis. Suspendisse mauris quam, scelerisque nec purus eget, pretium volutpat magna. Vivamus tempus sit amet nibh vitae imperdiet. Curabitur congue dignissim consequat. Maecenas quis sapien ut nibh consectetur feugiat id ut arcu. Cras odio nulla, laoreet sed metus a, malesuada dictum dui. Nulla rutrum, ipsum sit amet tristique cursus, ligula dui sagittis quam, a mattis ipsum sapien sit amet est."></content-card-component>
