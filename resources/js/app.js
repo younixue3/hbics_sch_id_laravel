@@ -30,6 +30,8 @@ Vue.component('hero-alumni-component', require('./components/widget/HeroAlumniCo
 Vue.component('snap-component', require('./components/widget/SnapComponent').default)
 Vue.component('snap-alumni-component', require('./components/widget/SnapAlumniComponent').default)
 Vue.component('gallery-component', require('./components/widget/GalleryComponent').default)
+Vue.component('mac-card-component', require('./components/widget/MacCardComponent').default)
+Vue.component('nav-bar-dash-component', require('./components/layout/NavBarDashComponent').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
