@@ -147,7 +147,7 @@
                 </tr>
                 </tbody>
             </table>
-            <div class="w-full absolute bottom-0 bg-gray-600 text-white rounded-b-xl">
+            <div class="w-full absolute bottom-0 bg-gray-600 text-white">
                 <button class=w-full>View All Orders</button>
             </div>
         </mac-card-component>
@@ -206,7 +206,7 @@
                 </tr>
                 </tbody>
             </table>
-            <div class="w-full absolute bottom-0 bg-gray-600 text-white rounded-b-xl">
+            <div class="w-full absolute bottom-0 bg-gray-600 text-white">
                 <button class=w-full>View All Orders</button>
             </div>
         </mac-card-component>
@@ -259,7 +259,7 @@
                 </tr>
                 </tbody>
             </table>
-            <div class="w-full absolute bottom-0 bg-gray-600 text-white rounded-b-xl">
+            <div class="w-full absolute bottom-0 bg-gray-600 text-white">
                 <button class=w-full>View All Orders</button>
             </div>
         </mac-card-component>

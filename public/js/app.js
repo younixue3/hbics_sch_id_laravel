@@ -3644,8 +3644,7 @@ __webpack_require__.r(__webpack_exports__);
       this.layoutsize = true;
     },
     closeit: function closeit() {
-      this.scale = true;
-      setTimeout(this.closed = false, 400);
+      this.scale = true; // setTimeout(this.closed = false, 400)
     }
   }
 });
@@ -9004,8 +9003,11 @@ var render = function () {
         "div",
         {
           staticClass:
-            "transition-all duration-500 h-full ease-in-out transform scale-100 bg-gray-200 rounded-t-xl rounded-b-md shadow-md overflow-hidden",
-          class: [_vm.layoutsize ? "h-10" : "h-full", _vm.scale ? "" : ""],
+            "transition-all duration-500 ease-in-out transform scale-100 bg-gray-200 rounded-t-xl rounded-b-md shadow-md overflow-hidden",
+          class: [
+            _vm.layoutsize ? "h-11" : "h-full",
+            _vm.scale ? "scale-50" : "scale-100",
+          ],
         },
         [
           _c("button", {
@@ -9037,7 +9039,11 @@ var render = function () {
           _vm._v("\n    " + _vm._s(_vm.cardsname) + "\n    "),
           _c(
             "div",
-            { staticClass: "content h-full bg-gray-100 py-2 pt-5" },
+            {
+              staticClass:
+                "content h-full bg-gray-100 py-2 transition-all ease-in-out duration-300",
+              class: _vm.layoutsize ? "pt-8" : "pt-5",
+            },
             [_vm._t("default")],
             2
           ),
