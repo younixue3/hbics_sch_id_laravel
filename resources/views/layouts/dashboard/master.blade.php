@@ -12,13 +12,13 @@
 <div id="app" class="bg-gray-100 font-raleway">
     <div class="flex w-full">
         @include('layouts.dashboard.header')
-            <div class="min-h-screen w-full px-10 py-5">
-                @yield('content')
-            </div>
+        <div class="min-h-screen w-full px-10 py-5">
+            @yield('content')
+        </div>
     </div>
 
 </div>
-    @include('layouts.dashboard.footer')
+@include('layouts.dashboard.footer')
 </div>
 <script src="{{asset('js/app.js')}}"></script>
 <style>

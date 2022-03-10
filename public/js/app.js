@@ -3100,6 +3100,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3222,6 +3245,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3627,6 +3669,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3644,7 +3687,12 @@ __webpack_require__.r(__webpack_exports__);
       this.layoutsize = true;
     },
     closeit: function closeit() {
-      this.scale = true; // setTimeout(this.closed = false, 400)
+      var _this = this;
+
+      this.scale = true;
+      setTimeout(function () {
+        return _this.closed = false;
+      }, 400);
     }
   }
 });
@@ -7817,7 +7865,7 @@ var render = function () {
                 "transition-all ease-in-out duration-500 my-auto text-2xl align-middle overflow-hidden truncate font-light",
               class: _vm.collapsed ? "w-full" : "w-0",
             },
-            [_vm._v("\n                RDeveloper\n        ")]
+            [_vm._v("\n            RDeveloper\n        ")]
           ),
           _vm._v(" "),
           _c(
@@ -8566,7 +8614,7 @@ var render = function () {
             },
           },
         },
-        [_vm._v("All")]
+        [_vm._v("All\n        ")]
       ),
       _vm._v(" "),
       _c(
@@ -8580,7 +8628,7 @@ var render = function () {
             },
           },
         },
-        [_vm._v("TK & PG")]
+        [_vm._v("TK & PG\n        ")]
       ),
       _vm._v(" "),
       _c(
@@ -8594,7 +8642,7 @@ var render = function () {
             },
           },
         },
-        [_vm._v("SD")]
+        [_vm._v("SD\n        ")]
       ),
       _vm._v(" "),
       _c(
@@ -8608,7 +8656,7 @@ var render = function () {
             },
           },
         },
-        [_vm._v("SMP")]
+        [_vm._v("SMP\n        ")]
       ),
       _vm._v(" "),
       _c(
@@ -8622,7 +8670,7 @@ var render = function () {
             },
           },
         },
-        [_vm._v("SMA")]
+        [_vm._v("SMA\n        ")]
       ),
     ]),
     _vm._v(" "),
@@ -9006,7 +9054,7 @@ var render = function () {
             "transition-all duration-500 ease-in-out transform scale-100 bg-gray-200 rounded-t-xl rounded-b-md shadow-md overflow-hidden",
           class: [
             _vm.layoutsize ? "h-11" : "h-full",
-            _vm.scale ? "scale-50" : "scale-100",
+            _vm.scale ? "scale-0" : "scale-100",
           ],
         },
         [
