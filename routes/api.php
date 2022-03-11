@@ -1,6 +1,6 @@
 <?php
 
-use App\Helper\getUrl;
+use App\Helper\getUrl, App\Helper\getUrlDashboard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('getUrl', function () {
     return response()->json(getUrl::getUrl());
+});
+
+Route::get('getUrlDashboard', function () {
+    return response()->json(getUrlDashboard::getUrl());
 });

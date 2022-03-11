@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Dashboard\Data\PrestasiController as DataController;
+use App\Http\Controllers\Dashboard\Data\StaffController as DataController;
 
-class PrestasiController extends Controller
+class StaffController extends Controller
 {
     public function __construct(DataController $data)
     {
@@ -20,7 +20,7 @@ class PrestasiController extends Controller
      */
     public function index()
     {
-        return view('dashboard.prestasi.index');
+        return view('dashboard.staff.index');
     }
 
     /**

@@ -713,6 +713,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mb-0{
   margin-bottom: -0px;
 }
+.mr-4{
+  margin-right: 1rem;
+}
 .block{
   display: block;
 }
@@ -818,11 +821,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[25rem\]{
   height: 25rem;
 }
-.h-60{
-  height: 15rem;
-}
 .h-11{
   height: 2.75rem;
+}
+.h-60{
+  height: 15rem;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -907,6 +910,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-16{
   width: 4rem;
+}
+.w-1\/6{
+  width: 16.666667%;
+}
+.w-32{
+  width: 8rem;
+}
+.w-52{
+  width: 13rem;
 }
 .max-w-6xl{
   max-width: 72rem;
@@ -997,11 +1009,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .scale-0{
   --tw-scale-x: 0;
   --tw-scale-y: 0;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.scale-50{
-  --tw-scale-x: .5;
-  --tw-scale-y: .5;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform{
@@ -1258,14 +1265,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .rounded-b-2xl{
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
-}
-.rounded-b-lg{
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-}
-.rounded-b-sm{
-  border-bottom-right-radius: 0.125rem;
-  border-bottom-left-radius: 0.125rem;
 }
 .border{
   border-width: 1px;
@@ -1562,9 +1561,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-0\.5{
   padding: 0.125rem;
-}
-.p-8{
-  padding: 2rem;
 }
 .py-4{
   padding-top: 1rem;
@@ -2696,6 +2692,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
   .md\:hover\:w-60:hover{
     width: 15rem;
+  }
+  .md\:hover\:w-52:hover{
+    width: 13rem;
+  }
+  .md\:hover\:w-32:hover{
+    width: 8rem;
+  }
+  .md\:hover\:w-44:hover{
+    width: 11rem;
   }
 }
 @media (min-width: 1024px){

@@ -2826,7 +2826,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -2918,6 +2917,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -3016,122 +3017,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      dataurl: null,
+      livepath: window.location.pathname,
+      livehref: window.location.href,
+      windowspath: window.location.origin + '/',
       collapsed: true,
       hover: true
     };
   },
+  created: function created() {
+    var _this = this;
+
+    window.addEventListener('scroll', this.handleScroll);
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get(this.windowspath + 'api/getUrlDashboard').then(function (response) {
+      return _this.dataurl = response.data.original;
+    });
+  },
   methods: {
     CollapsedHover: function CollapsedHover() {
+      console.log(this.livehref === this.dataurl['dashboard'] ? 'truemint' : 'fakemint');
+
       if (this.hover === true) {} else {
         this.collapsed = false;
       }
@@ -5491,12 +5400,7 @@ var render = function () {
                       "a",
                       {
                         staticClass:
-                          "hidden lg:block px-2 after:content-['_↗']",
-                        class: _vm.show
-                          ? "bg-white text-black"
-                          : _vm.livepath !== "/"
-                          ? "bg-white text-black"
-                          : "text-white",
+                          "hidden lg:block px-2 after:content-['_↗'] text-white",
                         attrs: {
                           href: "https://www.office.com/",
                           target: "_blank",
@@ -6180,14 +6084,10 @@ var render = function () {
                   _vm._v(" "),
                   _c("div", { staticClass: "hidden lg:block" }, [
                     _c(
-                      "div",
+                      "a",
                       {
                         staticClass: "cursor-pointer",
-                        on: {
-                          click: function ($event) {
-                            return _vm.redirectBtn("login")
-                          },
-                        },
+                        attrs: { href: _vm.dataurl["login"] },
                       },
                       [_vm._v("Login")]
                     ),
@@ -7834,7 +7734,7 @@ var render = function () {
         "h-full md:h-auto text-gray-800 z-50 fixed duration-300 bg-gray-100 shadow-md md:static",
       class: _vm.collapsed
         ? "w-60 md:w-80 lg:w-80"
-        : "w-0 md:w-11 lg:w-11 md:hover:w-60",
+        : "w-0 md:w-11 lg:w-11 md:hover:w-44",
       attrs: { id: "mobile-menu" },
       on: {
         mouseenter: function ($event) {
@@ -7852,20 +7752,28 @@ var render = function () {
           staticClass: "font-bold text-xl h-16 pr-2 md:pr-0 flex relative z-50",
         },
         [
-          _c("img", {
-            staticClass: "min-h-5 h-5 mx-3 my-auto",
-            class: _vm.collapsed ? "" : "hidden",
-            attrs: { src: "", alt: "" },
-          }),
-          _vm._v(" "),
           _c(
             "div",
             {
-              staticClass:
-                "transition-all ease-in-out duration-500 my-auto text-2xl align-middle overflow-hidden truncate font-light",
+              staticClass: "flex transition-all ease-in-out duration-500",
               class: _vm.collapsed ? "w-full" : "w-0",
             },
-            [_vm._v("\n            RDeveloper\n        ")]
+            [
+              _c("img", {
+                staticClass: "min-h-5 h-5 mx-3 my-auto",
+                attrs: { src: "", alt: "" },
+              }),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "my-auto text-2xl align-middle overflow-hidden truncate font-light",
+                  attrs: { href: _vm.dataurl["home"] },
+                },
+                [_vm._v("\n                RDeveloper\n            ")]
+              ),
+            ]
           ),
           _vm._v(" "),
           _c(
@@ -7889,7 +7797,129 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-      _vm._m(0),
+      _c("div", { staticClass: "text-lg font-normal tracking-tight" }, [
+        _c("ul", { staticClass: "py-5 px-1 py-2" }, [
+          _c(
+            "li",
+            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
+            [
+              _c("a", { attrs: { href: _vm.dataurl["dashboard"] } }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                    class:
+                      _vm.livehref === _vm.dataurl["dashboard"]
+                        ? "bg-gray-300"
+                        : "bg-gray-100",
+                  },
+                  [_vm._m(0)]
+                ),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
+            [
+              _c("a", { attrs: { href: _vm.dataurl["gallery"] } }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                    class:
+                      _vm.livehref === _vm.dataurl["gallery"]
+                        ? "bg-gray-300"
+                        : "bg-gray-100",
+                  },
+                  [_vm._m(1)]
+                ),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
+            [
+              _c("a", { attrs: { href: _vm.dataurl["komunitas"] } }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                    class:
+                      _vm.livehref === _vm.dataurl["komunitas"]
+                        ? "bg-gray-300"
+                        : "bg-gray-100",
+                  },
+                  [_vm._m(2)]
+                ),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
+            [
+              _c("a", { attrs: { href: _vm.dataurl["prestasi"] } }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                    class:
+                      _vm.livehref === _vm.dataurl["prestasi"]
+                        ? "bg-gray-300"
+                        : "bg-gray-100",
+                  },
+                  [_vm._m(3)]
+                ),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
+            [
+              _c("a", { attrs: { href: _vm.dataurl["publikasi"] } }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                    class:
+                      _vm.livehref === _vm.dataurl["publikasi"]
+                        ? "bg-gray-300"
+                        : "bg-gray-100",
+                  },
+                  [_vm._m(4)]
+                ),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
+            [
+              _c("a", { attrs: { href: _vm.dataurl["staff"] } }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                    class:
+                      _vm.livehref === _vm.dataurl["staff"]
+                        ? "bg-gray-300"
+                        : "bg-gray-100",
+                  },
+                  [_vm._m(5)]
+                ),
+              ]),
+            ]
+          ),
+        ]),
+      ]),
     ]
   )
 }
@@ -7898,524 +7928,72 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-lg font-normal tracking-tight" }, [
-      _c("ul", { staticClass: "py-5 px-1 py-2" }, [
-        _c(
-          "li",
-          { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
-          [
-            _c("a", { attrs: { href: "dashboard.html" } }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "bg-gray-300 hover:bg-gray-200 px-2 pt-1 rounded-lg",
-                },
-                [
-                  _c("i", { staticClass: "fas fa-columns mr-3" }),
-                  _c("span", [_vm._v("Dashboard")]),
-                ]
-              ),
-            ]),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "li",
-          { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "bg-gray-100 hover:bg-gray-200 w-auto px-2 pt-1 rounded-lg",
-                attrs: { onclick: "DropDown()" },
-              },
-              [
-                _c("i", { staticClass: "fas fa-desktop mr-3" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "inline-block w-3/4" }, [
-                  _vm._v("Layout"),
-                ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "overflow-hidden" }, [
-                  _c("i", {
-                    staticClass:
-                      "my-auto fas fa-chevron-right transition-all duration-500 transform",
-                  }),
-                ]),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "ul",
-              {
-                staticClass:
-                  "hidden bg-gray-200 rounded-lg px-2.5 my-2 h-full truncate",
-              },
-              [
-                _c("a", { attrs: { href: "boxed.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", {}, [_vm._v("Boxed")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "fixednavbar.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Fixed Navbar")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "fixedsidebar.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Fixed Sidebar")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "fixednavsidebar.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Fixed Sidebar + Navbar")]),
-                    ]
-                  ),
-                ]),
-              ]
-            ),
-          ]
-        ),
-        _vm._v(" "),
-        _c("a", { attrs: { href: "charts.html" } }, [
-          _c(
-            "li",
-            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
-            [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "bg-gray-100 hover:bg-gray-200 px-2 pt-1 rounded-lg",
-                },
-                [
-                  _c("i", { staticClass: "fas fa-chart-pie mr-3" }),
-                  _c("span", [_vm._v("Charts")]),
-                ]
-              ),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c(
-          "li",
-          { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "bg-gray-100 hover:bg-gray-200 px-2 pt-1 rounded-lg",
-                attrs: { onclick: "DropDown()" },
-              },
-              [
-                _c("i", { staticClass: "fas fa-puzzle-piece mr-3" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "inline-block w-3/4" }, [
-                  _vm._v("Components"),
-                ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "overflow-hidden" }, [
-                  _c("i", {
-                    staticClass:
-                      "my-auto fas fa-chevron-right transition-all duration-500 transform",
-                  }),
-                ]),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "ul",
-              {
-                staticClass:
-                  "hidden bg-gray-200 rounded-lg px-2.5 my-2 h-full truncate",
-              },
-              [
-                _c("a", { attrs: { href: "theme.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Theme")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "button.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Buttons")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "modalsalerts.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Modals & Alerts")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "cards.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Cards")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "forms.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Forms")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "tables.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Tables")]),
-                    ]
-                  ),
-                ]),
-              ]
-            ),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "li",
-          { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "bg-gray-100 hover:bg-gray-200 px-2 pt-1 rounded-lg",
-                attrs: { onclick: "DropDown()" },
-              },
-              [
-                _c("i", { staticClass: "fas fa-window-maximize mr-3" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "inline-block w-3/4" }, [
-                  _vm._v("Pages"),
-                ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "overflow-hidden" }, [
-                  _c("i", {
-                    staticClass:
-                      "my-auto fas fa-chevron-right transition-all duration-500 transform",
-                  }),
-                ]),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "ul",
-              {
-                staticClass:
-                  "hidden bg-gray-200 rounded-lg px-2.5 my-2 h-full truncate",
-              },
-              [
-                _c("a", { attrs: { href: "login.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Login")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "register.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Register")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "errors.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Errors")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "searchs.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Searchs")]),
-                    ]
-                  ),
-                ]),
-              ]
-            ),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "li",
-          { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "bg-gray-100 hover:bg-gray-200 px-2 pt-1 rounded-lg",
-                attrs: { onclick: "DropDown()" },
-              },
-              [
-                _c("i", { staticClass: "fas fa-hand-holding-heart mr-3" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "inline-block w-3/4" }, [
-                  _vm._v("Example"),
-                ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "overflow-hidden" }, [
-                  _c("i", {
-                    staticClass:
-                      "my-auto fas fa-chevron-right transition-all duration-500 transform",
-                  }),
-                ]),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "ul",
-              {
-                staticClass:
-                  "hidden bg-gray-200 rounded-lg px-2.5 my-2 h-full truncate",
-              },
-              [
-                _c("a", { attrs: { href: "blog.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Blog")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "hero.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Hero")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "mailbox.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Mailbox")]),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "calendars.html" } }, [
-                  _c(
-                    "li",
-                    {
-                      staticClass: "my-1 cursor-pointer",
-                      attrs: { onclick: "DropDownItem()" },
-                    },
-                    [
-                      _c("div", {
-                        staticClass:
-                          "ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2",
-                      }),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Calendar")]),
-                    ]
-                  ),
-                ]),
-              ]
-            ),
-          ]
-        ),
+    return _c("div", { staticClass: "flex w-52" }, [
+      _c("div", { staticClass: "w-1/6" }, [
+        _c("i", { staticClass: "fa-solid fa-gauge-high mr-3" }),
       ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("Dashboard")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex w-52" }, [
+      _c("div", { staticClass: "w-1/6" }, [
+        _c("i", { staticClass: "fa-solid fa-images mr-3" }),
+      ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("Gallery")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex w-52" }, [
+      _c("div", { staticClass: "w-1/6" }, [
+        _c("i", { staticClass: "fa-solid fa-users mr-3" }),
+      ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("Komunitas")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex w-52" }, [
+      _c("div", { staticClass: "w-1/6" }, [
+        _c("i", { staticClass: "fa-solid fa-award mr-3" }),
+      ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("Prestasi")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex w-52" }, [
+      _c("div", { staticClass: "w-1/6" }, [
+        _c("i", { staticClass: "fa-solid fa-newspaper mr-3" }),
+      ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("Publikasi")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex w-52" }, [
+      _c("div", { staticClass: "w-1/6" }, [
+        _c("i", { staticClass: "fa-solid fa-id-badge mr-3" }),
+      ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("Staff")]),
     ])
   },
 ]

@@ -9,8 +9,7 @@
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
                         <div class="text-sm font-light">
                             <a href="https://www.office.com/" target="_blank"
-                               class="hidden lg:block px-2 after:content-['_↗']"
-                               :class="show ? 'bg-white text-black' : livepath !== '/' ? 'bg-white text-black' : 'text-white'">
+                               class="hidden lg:block px-2 after:content-['_↗'] text-white">
                                 Login 365
                             </a>
                             <div class="-mr-2 -my-2 lg:hidden">
@@ -540,7 +539,7 @@
                             </div>
                         </div>
                         <div class="hidden lg:block">
-                            <div class="cursor-pointer" v-on:click="redirectBtn('login')">Login</div>
+                            <a class="cursor-pointer" :href="dataurl['login']">Login</a>
                         </div>
                     </div>
                 </div>
