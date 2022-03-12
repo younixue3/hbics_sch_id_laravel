@@ -2837,7 +2837,13 @@ __webpack_require__.r(__webpack_exports__);
       show: false
     };
   },
-  props: ['imagewhite', 'footerwhite', 'logo', 'logohhk', 'url'],
+  props: {
+    imagewhite: String,
+    footerwhite: String,
+    logo: String,
+    logohhk: String,
+    authstatus: String
+  },
   created: function created() {
     var _this = this;
 
@@ -4012,7 +4018,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.slide-fade-enter-active[data-v-831ff40e] {\n    transition: all 0.3s ease-out;\n}\n.slide-fade-leave-active[data-v-831ff40e] {\n    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter-from[data-v-831ff40e],\n.slide-fade-leave-to[data-v-831ff40e] {\n    transform: translateX(20px);\n    opacity: 0;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.slide-fade-enter-active[data-v-831ff40e] {\r\n    transition: all 0.3s ease-out;\n}\n.slide-fade-leave-active[data-v-831ff40e] {\r\n    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter-from[data-v-831ff40e],\r\n.slide-fade-leave-to[data-v-831ff40e] {\r\n    transform: translateX(20px);\r\n    opacity: 0;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6082,16 +6088,23 @@ var render = function () {
                     ]
                   ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "hidden lg:block" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "cursor-pointer",
-                        attrs: { href: _vm.dataurl["login"] },
-                      },
-                      [_vm._v("Login")]
-                    ),
-                  ]),
+                  _c(
+                    "div",
+                    {
+                      class:
+                        _vm.authstatus !== "" ? "hidden lg:block" : "hidden",
+                    },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "cursor-pointer",
+                          attrs: { href: _vm.dataurl["dashboard"] },
+                        },
+                        [_vm._v("Dashboard")]
+                      ),
+                    ]
+                  ),
                 ]
               ),
             ]

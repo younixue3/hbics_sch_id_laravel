@@ -30,7 +30,7 @@ class getUrl
             'berita' => route('berita'),
             'acara' => route('acara'),
             'artikel' => route('artikel'),
-            'login' => route('login')
+            'dashboard' => route('dashboard.index'),
         ];
         return response($url);
     }

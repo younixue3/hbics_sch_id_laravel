@@ -698,9 +698,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mr-5{
   margin-right: -1.25rem;
 }
-.mr-5{
-  margin-right: 1.25rem;
-}
 .mt-0\.5{
   margin-top: 0.125rem;
 }
@@ -712,9 +709,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .-mb-0{
   margin-bottom: -0px;
-}
-.mr-4{
-  margin-right: 1rem;
 }
 .block{
   display: block;
@@ -902,8 +896,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-0{
   width: 0px;
 }
-.w-3\/4{
-  width: 75%;
+.w-52{
+  width: 13rem;
+}
+.w-1\/6{
+  width: 16.666667%;
 }
 .w-1\/4{
   width: 25%;
@@ -911,14 +908,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-16{
   width: 4rem;
 }
-.w-1\/6{
-  width: 16.666667%;
-}
-.w-32{
-  width: 8rem;
-}
-.w-52{
-  width: 13rem;
+.w-3\/4{
+  width: 75%;
 }
 .max-w-6xl{
   max-width: 72rem;
@@ -1650,10 +1641,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
-.px-2\.5{
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-}
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1997,20 +1984,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-.ring{
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
 .ring-gray-800{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(31 41 55 / var(--tw-ring-opacity));
 }
 .ring-opacity-5{
   --tw-ring-opacity: 0.05;
-}
-.ring-offset-2{
-  --tw-ring-offset-width: 2px;
 }
 .blur-sm{
   --tw-blur: blur(4px);
@@ -2689,15 +2668,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-gray-300{
     --tw-text-opacity: 1;
     color: rgb(209 213 219 / var(--tw-text-opacity));
-  }
-  .md\:hover\:w-60:hover{
-    width: 15rem;
-  }
-  .md\:hover\:w-52:hover{
-    width: 13rem;
-  }
-  .md\:hover\:w-32:hover{
-    width: 8rem;
   }
   .md\:hover\:w-44:hover{
     width: 11rem;
