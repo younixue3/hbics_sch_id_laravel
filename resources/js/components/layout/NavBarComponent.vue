@@ -776,7 +776,7 @@ export default {
         logo: String,
         logohhk: String,
         authstatus: String
-},
+    },
     created() {
         window.addEventListener('scroll', this.handleScroll);
         axios
