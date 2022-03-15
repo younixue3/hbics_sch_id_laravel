@@ -2,265 +2,248 @@
 @section('title', 'Dashboard')
 @section('content')
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
-        <div class="md:col-span-3 bg-gray-100 shadow-md text-gray-800 rounded-xl flex">
-            <div class="w-1/3 text-4xl p-5">
-                <i class="bg-purple-500 text-white rounded-full px-5 py-4 fas fa-shopping-bag"></i>
+        <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12">
+            <div class="">
+                <add-galery-function></add-galery-function>
             </div>
-            <div class="w-2/3 ml-10 my-auto">
-                <span class="text-4xl">236</span>
-                <div class="-mt-3 text-lg">Orders<i class="mx-2 text-green-500 fas fa-caret-up"></i></div>
-            </div>
-        </div>
-        <div class="md:col-span-3 bg-gray-100 shadow-md text-gray-800 rounded-xl flex">
-            <div class="w-1/3 text-4xl p-5">
-                <i class="bg-green-500 text-white rounded-full px-3 py-4 fas fa-users"></i>
-            </div>
-            <div class="w-2/3 ml-10 my-auto">
-                <span class="text-4xl">56</span>
-                <div class="-mt-3 text-lg">Users<i class="mx-2 text-green-500 fas fa-caret-up"></i></div>
-            </div>
-        </div>
-        <div class="md:col-span-3 bg-gray-100 shadow-md text-gray-800 rounded-xl flex">
-            <div class="w-1/3 text-4xl p-5">
-                <i class="bg-blue-500 text-white rounded-full px-4 py-4 fas fa-envelope"></i>
-            </div>
-            <div class="w-2/3 ml-10 my-auto">
-                <span class="text-4xl">12</span>
-                <div class="-mt-3 text-lg">Emails<i
-                        class="mx-2 text-red-500 fas fa-caret-up transform rotate-180"></i></div>
-            </div>
-        </div>
-        <div class="md:col-span-3 bg-gray-100 shadow-md text-gray-800 rounded-xl flex">
-            <div class="w-1/3 text-4xl p-5">
-                <i class="bg-yellow-500 text-white rounded-full px-3.5 py-4 fas fa-id-card-alt"></i>
-            </div>
-            <div class="w-2/3 ml-10 my-auto">
-                <span class="text-4xl">36</span>
-                <div class="-mt-3 text-lg">Subscribers<i class="mx-2 text-green-500 fas fa-caret-up"></i></div>
-            </div>
-        </div>
-        <mac-card-component cardsname="Staff | Status" class="row-span-1 md:col-span-4 lg:col-span-6">
-            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-
-                <div class="text-center">
-                    <img class="h-8 w-8 rounded-full mx-auto"
-                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                         alt="">
-                    <h1>Jane Doe</h1>
-                    <div class="px-6">
-                        <h4 class="text-xs bg-indigo-200 rounded-full pt-0.5">1h Ago</h4>
+            <div class="grid grid-cols-4 gap-5 px-3">
+                <div class="flex relative group">
+                    <img class="w-56 h-56 rounded-xl object-cover" src="{{asset('assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp')}}">
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 grid grid-rows-3 gap-3 bg-white rounded-lg shadow-lg p-2 text-center opacity-0 group-hover:opacity-100 group-hover:-right-5 transition-all ease-in-out duration-500">
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <img class="h-8 w-8 rounded-full mx-auto"
-                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                         alt="">
-                    <h1>Jane Doe</h1>
-                    <div class="px-6">
-                        <h4 class="text-xs bg-indigo-200 rounded-full pt-0.5">1h Ago</h4>
+                <div class="flex relative group">
+                    <img class="w-56 h-56 rounded-xl object-cover" src="{{asset('assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp')}}">
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 grid grid-rows-3 gap-3 bg-white rounded-lg shadow-lg p-2 text-center opacity-0 group-hover:opacity-100 group-hover:-right-5 transition-all ease-in-out duration-500">
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <img class="h-8 w-8 rounded-full mx-auto"
-                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                         alt="">
-                    <h1>Jane Doe</h1>
-                    <div class="px-6">
-                        <h4 class="text-xs bg-indigo-200 rounded-full pt-0.5">1h Ago</h4>
+                <div class="flex relative group">
+                    <img class="w-56 h-56 rounded-xl object-cover" src="{{asset('assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp')}}">
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 grid grid-rows-3 gap-3 bg-white rounded-lg shadow-lg p-2 text-center opacity-0 group-hover:opacity-100 group-hover:-right-5 transition-all ease-in-out duration-500">
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <img class="h-8 w-8 rounded-full mx-auto"
-                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                         alt="">
-                    <h1>Jane Doe</h1>
-                    <div class="px-6">
-                        <h4 class="text-xs bg-indigo-200 rounded-full pt-0.5">1h Ago</h4>
+                <div class="flex relative group">
+                    <img class="w-56 h-56 rounded-xl object-cover" src="{{asset('assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp')}}">
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 grid grid-rows-3 gap-3 bg-white rounded-lg shadow-lg p-2 text-center opacity-0 group-hover:opacity-100 group-hover:-right-5 transition-all ease-in-out duration-500">
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <img class="h-8 w-8 rounded-full mx-auto"
-                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                         alt="">
-                    <h1>Jane Doe</h1>
-                    <div class="px-6">
-                        <h4 class="text-xs bg-indigo-200 rounded-full pt-0.5">1h Ago</h4>
+                <div class="flex relative group">
+                    <img class="w-56 h-56 rounded-xl object-cover" src="{{asset('assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp')}}">
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 grid grid-rows-3 gap-3 bg-white rounded-lg shadow-lg p-2 text-center opacity-0 group-hover:opacity-100 group-hover:-right-5 transition-all ease-in-out duration-500">
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <img class="h-8 w-8 rounded-full mx-auto"
-                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                         alt="">
-                    <h1>Jane Doe</h1>
-                    <div class="px-6">
-                        <h4 class="text-xs bg-indigo-200 rounded-full pt-0.5">1h Ago</h4>
+                <div class="flex relative group">
+                    <img class="w-56 h-56 rounded-xl object-cover" src="{{asset('assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp')}}">
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 grid grid-rows-3 gap-3 bg-white rounded-lg shadow-lg p-2 text-center opacity-0 group-hover:opacity-100 group-hover:-right-5 transition-all ease-in-out duration-500">
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex relative group">
+                    <img class="w-56 h-56 rounded-xl object-cover" src="{{asset('assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp')}}">
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 grid grid-rows-3 gap-3 bg-white rounded-lg shadow-lg p-2 text-center opacity-0 group-hover:opacity-100 group-hover:-right-5 transition-all ease-in-out duration-500">
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex relative group">
+                    <img class="w-56 h-56 rounded-xl object-cover" src="{{asset('assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp')}}">
+                    <div class="absolute right-0 top-1/2 -translate-y-1/2 grid grid-rows-3 gap-3 bg-white rounded-lg shadow-lg p-2 text-center opacity-0 group-hover:opacity-100 group-hover:-right-5 transition-all ease-in-out duration-500">
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </mac-card-component>
-        <mac-card-component cardsname="Blog | Table" class="row-span-2 md:col-span-4 lg:col-span-6">
-            <table class="table-fixed w-full text-xs md:text-base mb-4">
-                <thead class="border-b-4">
-                <tr>
-                    <th>Order Id</th>
-                    <th>Item</th>
-                    <th>Status</th>
-                    <th>Experience & Review</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td class="truncate">Template E-Commerce + Pro</td>
-                    <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">Success</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-yellow-500 px-2 py-0.5 text-white rounded-full">Pending</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-red-500 px-2 py-0.5 text-white rounded-full">Expired</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-blue-500 px-2 py-0.5 text-white rounded-full">Processing</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">Success</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-red-500 px-2 py-0.5 text-white rounded-full">Expired</span></td>
-                    <td>5</td>
-                </tr>
-                </tbody>
-            </table>
-            <div class="w-full absolute bottom-0 bg-gray-600 text-white">
-                <button class=w-full>View All Orders</button>
-            </div>
-        </mac-card-component>
-        <mac-card-component cardsname="Mail | Table" class="row-span-3 md:col-span-4 lg:col-span-6">
-            <table class="table-fixed w-full text-xs md:text-base mb-4">
-                <thead class="border-b-4">
-                <tr>
-                    <th>Order Id</th>
-                    <th>Item</th>
-                    <th>Status</th>
-                    <th>Experience & Review</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td class="truncate">Template E-Commerce + Pro</td>
-                    <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">Success</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-yellow-500 px-2 py-0.5 text-white rounded-full">Pending</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-red-500 px-2 py-0.5 text-white rounded-full">Expired</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-blue-500 px-2 py-0.5 text-white rounded-full">Processing</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">Success</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-red-500 px-2 py-0.5 text-white rounded-full">Expired</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-red-500 px-2 py-0.5 text-white rounded-full">Expired</span></td>
-                    <td>5</td>
-                </tr>
-                </tbody>
-            </table>
-            <div class="w-full absolute bottom-0 bg-gray-600 text-white">
-                <button class=w-full>View All Orders</button>
-            </div>
-        </mac-card-component>
-        <mac-card-component cardsname="Visitor | Table" class="row-span-3 md:col-span-4 lg:col-span-6">
-            <table class="table-fixed w-full h-full text-xs md:text-base mb-4">
-                <thead class="border-b-4">
-                <tr>
-                    <th>Order Id</th>
-                    <th>Item</th>
-                    <th>Status</th>
-                    <th>Experience & Review</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td class="truncate">Template E-Commerce + Pro</td>
-                    <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">Success</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-yellow-500 px-2 py-0.5 text-white rounded-full">Pending</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-red-500 px-2 py-0.5 text-white rounded-full">Expired</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-blue-500 px-2 py-0.5 text-white rounded-full">Processing</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">Success</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-red-500 px-2 py-0.5 text-white rounded-full">Expired</span></td>
-                    <td>5</td>
-                </tr>
-                </tbody>
-            </table>
-            <div class="w-full absolute bottom-0 bg-gray-600 text-white">
-                <button class=w-full>View All Orders</button>
+            <div class="bg-gray-100 px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+                <div class="flex-1 flex justify-between sm:hidden">
+                    <a href="#"
+                       class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                        Previous
+                    </a>
+                    <a href="#"
+                       class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                        Next
+                    </a>
+                </div>
+                <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                    <div>
+                        <p class="text-sm text-gray-700">
+                            Showing
+                            <span class="font-medium">1</span>
+                            to
+                            <span class="font-medium">10</span>
+                            of
+                            <span class="font-medium">97</span>
+                            results
+                        </p>
+                    </div>
+                    <div>
+                        <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
+                             aria-label="Pagination">
+                            <a href="#"
+                               class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <span class="sr-only">Previous</span>
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                     fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                          d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                          clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-current="page"
+                               class="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                                1
+                            </a>
+                            <a href="#"
+                               class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                                2
+                            </a>
+                            <a href="#"
+                               class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium">
+                                3
+                            </a>
+                            <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">
+                                            ...
+                                        </span>
+                            <a href="#"
+                               class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium">
+                                8
+                            </a>
+                            <a href="#"
+                               class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                                9
+                            </a>
+                            <a href="#"
+                               class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                                10
+                            </a>
+                            <a href="#"
+                               class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <span class="sr-only">Next</span><!---->
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                     fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                          clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </mac-card-component>
     </div>
