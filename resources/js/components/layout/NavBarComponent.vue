@@ -538,8 +538,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="hidden lg:block">
-                            <a class="cursor-pointer" :href="dataurl['login']">Login</a>
+                        <div :class="authstatus !== '' ? 'hidden lg:block' : 'hidden'">
+                            <a class="cursor-pointer" :href="dataurl['dashboard']">Dashboard</a>
                         </div>
                     </div>
                 </div>
@@ -767,10 +767,16 @@ export default {
             dataurl: null,
             windowspath: window.location.origin + '/',
             livepath: window.location.pathname,
-            show: false
+            show: false,
         }
     },
-    props: ['imagewhite', 'footerwhite', 'logo', 'logohhk', 'url'],
+    props: {
+        imagewhite: String,
+        footerwhite: String,
+        logo: String,
+        logohhk: String,
+        authstatus: String
+    },
     created() {
         window.addEventListener('scroll', this.handleScroll);
         axios

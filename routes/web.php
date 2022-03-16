@@ -56,7 +56,7 @@ Route::get('/berita', [App\Http\Controllers\Front\PublikasiController::class, 'b
 Route::get('/acara', [App\Http\Controllers\Front\PublikasiController::class, 'acara'])->name('acara');
 Route::get('/artikel', [App\Http\Controllers\Front\PublikasiController::class, 'artikel'])->name('artikel');
 
-Route::name('dashboard.')->prefix('dashboard')->group(function () {
+Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('index');
     Route::resource('staff', \App\Http\Controllers\Dashboard\StaffController::class);
     Route::resource('gallery', \App\Http\Controllers\Dashboard\GalleryController::class);
