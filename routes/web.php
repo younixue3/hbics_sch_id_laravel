@@ -59,7 +59,7 @@ Route::get('/artikel', [App\Http\Controllers\Front\PublikasiController::class, '
 Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('index');
     Route::resource('staff', \App\Http\Controllers\Dashboard\StaffController::class);
-    Route::resource('gallery', \App\Http\Controllers\Dashboard\GalleryController::class);
+    Route::resource('fasilitas', \App\Http\Controllers\Dashboard\FasilitasController::class);
     Route::resource('komunitas', \App\Http\Controllers\Dashboard\KomunitasController::class);
     Route::resource('prestasi', \App\Http\Controllers\Dashboard\PrestasiController::class);
     Route::resource('publikasi', \App\Http\Controllers\Dashboard\PublikasiController::class);

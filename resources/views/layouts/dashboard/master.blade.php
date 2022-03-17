@@ -10,6 +10,7 @@
 </head>
 <body>
 <div id="app" class="bg-gray-100 font-raleway">
+    <modal-validation-function></modal-validation-function>
     <div class="flex w-full">
         @include('layouts.dashboard.header')
         <div class="min-h-screen w-full px-10 py-5">

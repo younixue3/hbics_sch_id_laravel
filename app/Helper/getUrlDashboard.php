@@ -14,7 +14,7 @@ class getUrlDashboard
         $url = [
             'home' => route('home'),
             'dashboard' => route('dashboard.index'),
-            'gallery' => route('dashboard.gallery.index'),
+            'fasilitas' => route('dashboard.fasilitas.index'),
             'komunitas' => route('dashboard.komunitas.index'),
             'prestasi' => route('dashboard.prestasi.index'),
             'publikasi' => route('dashboard.publikasi.index'),

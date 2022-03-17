@@ -61,7 +61,11 @@ export default {
                         type: 'img',
                         area: 'sd'
                     },
-                    {url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/video.mp4', type: 'video', area: 'smp'},
+                    {
+                        url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/video.mp4',
+                        type: 'video',
+                        area: 'smp'
+                    },
                     {
                         url: 'http://hbics_sch_id.rdev/assets/stock_photo_rdev/austin-poon-JO_S6ewBqAk-unsplash.webp',
                         type: 'img',

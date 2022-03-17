@@ -7,9 +7,24 @@
 // require('./bootstrap');
 
 import Vue from 'vue';
+import Vuex from "vuex";
 
 window.Vue = require('vue').default;
+Vue.use(Vuex)
 
+const store = new Vuex.Store({
+    state: {
+        modal: {
+            item: null,
+            status: false,
+        },
+    },
+    mutations: {
+        toggleModelView (state) {
+            state.modal.status = state.modal.status === false;
+        }
+    }
+})
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -29,10 +44,12 @@ Vue.component('hero-component', require('./components/widget/HeroComponent').def
 Vue.component('hero-alumni-component', require('./components/widget/HeroAlumniComponent').default)
 Vue.component('snap-component', require('./components/widget/SnapComponent').default)
 Vue.component('snap-alumni-component', require('./components/widget/SnapAlumniComponent').default)
-Vue.component('gallery-component', require('./components/widget/GalleryComponent').default)
+Vue.component('fasilitas-component', require('./components/widget/FasilitasComponent').default)
 Vue.component('mac-card-component', require('./components/widget/MacCardComponent').default)
 Vue.component('nav-bar-dash-component', require('./components/layout/NavBarDashComponent').default)
-Vue.component('add-galery-function', require('./components/function/AddGaleryFunction').default)
+Vue.component('add-fasilitas-function', require('./components/function/AddFasilitasFunction').default)
+Vue.component('modal-validation-function', require('./components/function/ModalValidationFunction').default)
+Vue.component('card-fasilitas-function', require('./components/widget/CardFasilitasComponent').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -42,4 +59,5 @@ Vue.component('add-galery-function', require('./components/function/AddGaleryFun
 
 const app = new Vue({
     el: '#app',
+    store: store,
 });

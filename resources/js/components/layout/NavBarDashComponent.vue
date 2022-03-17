@@ -1,6 +1,6 @@
 <template>
     <div id="mobile-menu"
-         class="h-full md:h-auto text-gray-800 z-50 fixed duration-300 bg-gray-100 shadow-md md:static"
+         class="h-full md:h-auto text-gray-800 z-40 fixed duration-300 bg-gray-100 shadow-md md:static"
          @mouseenter="CollapsedHover()" @mouseleave="CollapsedHover()"
          :class="collapsed ? 'w-60 md:w-80 lg:w-80' : 'w-0 md:w-11 lg:w-11 md:hover:w-44'">
         <div class="font-bold text-xl h-16 pr-2 md:pr-0 flex relative z-50">
@@ -33,9 +33,9 @@
                     </a>
                 </li>
                 <li class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
-                    <a :href="dataurl['gallery']">
+                    <a :href="dataurl['fasilitas']">
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
-                             :class="livehref === dataurl['gallery'] ? 'bg-gray-300' : 'bg-gray-100'">
+                             :class="livehref === dataurl['fasilitas'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
                                 <div class="w-1/6">
                                     <i class="fa-solid fa-images mr-3"></i>
@@ -125,7 +125,6 @@ export default {
     },
     methods: {
         CollapsedHover: function () {
-            console.log(this.livehref === this.dataurl['dashboard'] ? 'truemint' : 'fakemint')
             if (this.hover === true) {
             } else {
                 this.collapsed = false;

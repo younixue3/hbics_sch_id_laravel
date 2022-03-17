@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "@tailwindcss/forms": "^0.4.0",
-        "vue": "^2.6.14"
+        "vue": "^2.6.14",
+        "vuex": "^3.0.0"
     }
 }

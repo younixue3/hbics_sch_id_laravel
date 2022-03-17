@@ -2,7 +2,7 @@
 <footer class="bg-gray-800 px-10 py-5 text-white">
     <div
         class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-b-2 gap-y-10 md:gap-y-0 md:gap-x-10  border-gray-600 pb-10">
-        <div class="text-lg font-light">
+        <div class="te  xt-lg font-light">
             <h1 class="mb-4 font-medium uppercase">Solutions</h1>
             <ul class="list-none text-gray-300">
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Marketing</li>

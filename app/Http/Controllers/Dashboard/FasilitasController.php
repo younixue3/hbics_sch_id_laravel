@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Dashboard\Data\GalleryController as DataController;
+use App\Http\Controllers\Dashboard\Data\FasilitasController as DataController;
 
 
-class GalleryController extends Controller
+class FasilitasController extends Controller
 {
     public function __construct(DataController $data)
     {
@@ -19,9 +19,13 @@ class GalleryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('dashboard.gallery.index');
+        $data = $this->data->get_data();
+
+        $compact = compact('data');
+
+        return view('dashboard.fasilitas.index', $compact);
     }
 
     /**
