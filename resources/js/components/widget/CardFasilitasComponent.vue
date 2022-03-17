@@ -38,13 +38,13 @@ export default {
         openModal: function () {
             this.$store.state.modal.item = this.$props.name
             this.$store.commit('toggleModelView')
-            if (this.$store.state.modal.status === true) {
-                console.log('true')
-                document.body.classList.add('removescrollbar', 'overflow-hidden')
-            } else {
-                console.log('false')
-                document.body.classList.remove('removescrollbar', 'overflow-hidden')
-            }
+            // if (this.$store.state.modal.status === true) {
+            //     console.log('true')
+            //     document.body.classList.add('removescrollbar', 'overflow-hidden')
+            // } else {
+            //     console.log('false')
+            //     document.body.classList.remove('removescrollbar', 'overflow-hidden')
+            // }
         }
     }
 }

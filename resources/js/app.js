@@ -22,6 +22,11 @@ const store = new Vuex.Store({
     mutations: {
         toggleModelView (state) {
             state.modal.status = state.modal.status === false;
+            if (state.modal.status === true) {
+                document.body.classList.add('removescrollbar', 'overflow-hidden')
+            } else {
+                document.body.classList.remove('removescrollbar', 'overflow-hidden')
+            }
         }
     }
 })

@@ -3191,15 +3191,13 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     openModal: function openModal() {
       this.$store.state.modal.item = this.$props.name;
-      this.$store.commit('toggleModelView');
-
-      if (this.$store.state.modal.status === true) {
-        console.log('true');
-        document.body.classList.add('removescrollbar', 'overflow-hidden');
-      } else {
-        console.log('false');
-        document.body.classList.remove('removescrollbar', 'overflow-hidden');
-      }
+      this.$store.commit('toggleModelView'); // if (this.$store.state.modal.status === true) {
+      //     console.log('true')
+      //     document.body.classList.add('removescrollbar', 'overflow-hidden')
+      // } else {
+      //     console.log('false')
+      //     document.body.classList.remove('removescrollbar', 'overflow-hidden')
+      // }
     }
   }
 });
@@ -4122,6 +4120,12 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_0__["default"].Store({
   mutations: {
     toggleModelView: function toggleModelView(state) {
       state.modal.status = state.modal.status === false;
+
+      if (state.modal.status === true) {
+        document.body.classList.add('removescrollbar', 'overflow-hidden');
+      } else {
+        document.body.classList.remove('removescrollbar', 'overflow-hidden');
+      }
     }
   }
 });
