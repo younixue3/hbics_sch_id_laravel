@@ -14,15 +14,28 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
-        modal: {
+        modalvalidation: {
             item: null,
             status: false,
         },
+        modalfasilitas: {
+            item: null,
+            type: null,
+            status: false
+        }
     },
     mutations: {
-        toggleModelView (state) {
-            state.modal.status = state.modal.status === false;
-            if (state.modal.status === true) {
+        toggleModelValidationView (state) {
+            state.modalvalidation.status = state.modalvalidation.status === false;
+            if (state.modalvalidation.status === true) {
+                document.body.classList.add('removescrollbar', 'overflow-hidden')
+            } else {
+                document.body.classList.remove('removescrollbar', 'overflow-hidden')
+            }
+        },
+        toggleModelFasilitasView (state) {
+            state.modalfasilitas.status = state.modalfasilitas.status === false;
+            if (state.modalfasilitas.status === true) {
                 document.body.classList.add('removescrollbar', 'overflow-hidden')
             } else {
                 document.body.classList.remove('removescrollbar', 'overflow-hidden')
@@ -55,6 +68,7 @@ Vue.component('nav-bar-dash-component', require('./components/layout/NavBarDashC
 Vue.component('add-fasilitas-function', require('./components/function/AddFasilitasFunction').default)
 Vue.component('modal-validation-function', require('./components/function/ModalValidationFunction').default)
 Vue.component('card-fasilitas-function', require('./components/widget/CardFasilitasComponent').default)
+Vue.component('modal-fasilitas-component', require('./components/widget/ModalFasilitasComponent').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

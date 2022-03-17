@@ -11,12 +11,12 @@
                 </a>
             </div>
             <div>
-                <a href="#">
+                <a class="cursor-pointer" @click="openModalFasilitas()">
                     <i class="fa-solid fa-eye"></i>
                 </a>
             </div>
             <div>
-                <div class="pointer-event" @click="openModal()">
+                <div class="cursor-pointer" @click="openModalValidation()">
                     <i class="fa-solid fa-trash-can"></i>
                 </div>
             </div>
@@ -35,16 +35,14 @@ export default {
     },
     props: ['name', 'type', 'delete_req'],
     methods : {
-        openModal: function () {
-            this.$store.state.modal.item = this.$props.name
-            this.$store.commit('toggleModelView')
-            // if (this.$store.state.modal.status === true) {
-            //     console.log('true')
-            //     document.body.classList.add('removescrollbar', 'overflow-hidden')
-            // } else {
-            //     console.log('false')
-            //     document.body.classList.remove('removescrollbar', 'overflow-hidden')
-            // }
+        openModalValidation: function () {
+            this.$store.state.modalvalidation.item = this.$props.name
+            this.$store.commit('toggleModelValidationView')
+        },
+        openModalFasilitas: function () {
+            this.$store.state.modalfasilitas.item = this.$props.name
+            this.$store.state.modalfasilitas.type = this.$props.type
+            this.$store.commit('toggleModelFasilitasView')
         }
     }
 }

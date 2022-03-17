@@ -1,6 +1,6 @@
 <template>
     <Transition name="fade-rdev">
-        <div v-if="$store.state.modal.item" class="absolute w-screen h-screen bg-black bg-opacity-25 backdrop-blur-sm flex z-50 transition-all ease-in-out duration-500" :class="$store.state.modal.item ? 'opacity-100' : 'opacity-0'">
+        <div v-if="$store.state.modalvalidation.item" class="fixed w-screen h-screen bg-black bg-opacity-25 backdrop-blur-sm flex z-50 transition-all ease-in-out duration-500" :class="$store.state.modalvalidation.item ? 'opacity-100' : 'opacity-0'">
             <div class="w-auto md:w-96 bg-white m-auto rounded-3xl">
                 <div class="flex px-5 lg:px-10 pt-5 pb-2">
                     <i class="fas fa-exclamation-circle text-5xl md:text-6xl text-yellow-500 mt-3"></i>
@@ -27,7 +27,7 @@ export default {
     },
     methods: {
         closeModal: function () {
-            this.$store.state.modal.item = null
+            this.$store.state.modalvalidation.item = null
             this.$store.commit('toggleModelView')
         }
     }
