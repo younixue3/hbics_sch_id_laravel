@@ -10,36 +10,40 @@
                     </div>
                 </div>
                 <div class="bg-gray-100 py-3 rounded-b-3xl text-right px-5">
-                    <button v-if="$store.state.modalvalidation.url.edit_req != null" @click="submitModal($store.state.modalvalidation.url.edit_req)" class="bg-blue-500 focus:bg-blue-600 transition duration-150 text-white text-center rounded-md shadow-md px-2"><span class="align-text-top">Submit</span></button>
-                    <a v-if="$store.state.modalvalidation.url.delete_req != null" :href="$store.state.modalvalidation.url.delete_req" class="bg-blue-500 focus:bg-blue-600 transition duration-150 text-white text-center rounded-md shadow-md px-2"><span class="align-text-top">Submit</span></a>
+                    <button :form="$store.state.modalvalidation.url.validation_form" class="bg-blue-500 focus:bg-blue-600 transition duration-150 text-white text-center rounded-md shadow-md px-2"><span class="align-text-top">Submit</span></button>
                     <button class="bg-transparent focus:bg-red-200 transition duration-150 text-red-600 rounded-md text-center px-2" @click="closeModal"><span class="align-text-top">Cancel</span></button>
                 </div>
             </div>
+            <modal-delete-function></modal-delete-function>
         </div>
     </Transition>
 </template>
 
 <script>
-import CardFasilitasComponent from "../widget/CardFasilitasComponent";
+import modalDeleteFunction from "./fasilitas/ModalDeleteFunction";
 export default {
     data() {
         return {
         }
     },
+    components: {
+        modalDeleteFunction
+    },
     methods: {
         deleteModal: function () {
+            this.$store.commit('toggleModalValidationView')
             this.$store.state.modalvalidation.item = null
             this.$store.state.modalvalidation.massage = null
             this.$store.state.modalvalidation.url.delete_req = null
             this.$store.state.modalvalidation.url.edit_req = null
-            window.location.replace(this.$store.state.modalvalidation.url.delete_req)
         },
         submitModal: function (form) {
+            document.getElementById(form).submit();
+            this.$store.commit('toggleModalValidationView')
             this.$store.state.modalvalidation.item = null
             this.$store.state.modalvalidation.massage = null
             this.$store.state.modalvalidation.url.delete_req = null
             this.$store.state.modalvalidation.url.edit_req = null
-            document.getElementById(form).submit();
         },
         closeModal: function () {
             this.$store.state.modalvalidation.item = null

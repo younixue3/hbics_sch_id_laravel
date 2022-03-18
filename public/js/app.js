@@ -2091,7 +2091,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _widget_CardFasilitasComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../widget/CardFasilitasComponent */ "./resources/js/components/widget/CardFasilitasComponent.vue");
+/* harmony import */ var _fasilitas_ModalDeleteFunction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fasilitas/ModalDeleteFunction */ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue");
 //
 //
 //
@@ -2118,20 +2118,24 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
+  components: {
+    modalDeleteFunction: _fasilitas_ModalDeleteFunction__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   methods: {
     deleteModal: function deleteModal() {
+      this.$store.commit('toggleModalValidationView');
       this.$store.state.modalvalidation.item = null;
       this.$store.state.modalvalidation.massage = null;
       this.$store.state.modalvalidation.url.delete_req = null;
       this.$store.state.modalvalidation.url.edit_req = null;
-      window.location.replace(this.$store.state.modalvalidation.url.delete_req);
     },
     submitModal: function submitModal(form) {
+      document.getElementById(form).submit();
+      this.$store.commit('toggleModalValidationView');
       this.$store.state.modalvalidation.item = null;
       this.$store.state.modalvalidation.massage = null;
       this.$store.state.modalvalidation.url.delete_req = null;
       this.$store.state.modalvalidation.url.edit_req = null;
-      document.getElementById(form).submit();
     },
     closeModal: function closeModal() {
       this.$store.state.modalvalidation.item = null;
@@ -2141,6 +2145,30 @@ __webpack_require__.r(__webpack_exports__);
       this.$store.commit('toggleModalValidationView');
     }
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {}
 });
 
 /***/ }),
@@ -2183,11 +2211,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -2199,10 +2222,8 @@ __webpack_require__.r(__webpack_exports__);
       this.$store.commit('toggleModalEdit');
     },
     submitModal: function submitModal() {
-      console.log('submit');
-      this.$store.state.modalvalidation.item = this.$store.state.modal.modaledit.item;
       this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?";
-      this.$store.state.modalvalidation.url.edit_req = "formEditFasilitas";
+      this.$store.state.modalvalidation.url.validation_form = "formEditFasilitas";
       this.$store.commit('toggleModalValidationView');
     }
   }
@@ -3274,7 +3295,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     openModalValidation: function openModalValidation() {
       this.$store.state.modalvalidation.item = this.$props.name;
-      this.$store.state.modalvalidation.url.delete_req = this.$props.delete_req;
+      this.$store.state.modalvalidation.url.url_req = this.$props.delete_req;
+      this.$store.state.modalvalidation.url.validation_form = "formDeleteFasilitas";
       this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?";
       this.$store.commit('toggleModalValidationView');
     },
@@ -3285,7 +3307,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     openModalEdit: function openModalEdit() {
       this.$store.state.modal.modaledit.item = this.$props.name;
-      this.$store.state.modalvalidation.url.edit_req = this.$props.edit_req;
+      this.$store.state.modalvalidation.url.url_req = this.$props.edit_req;
       this.$store.commit('toggleModalEdit');
     }
   }
@@ -4250,8 +4272,8 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_0__["default"].Store({
       item: null,
       massage: null,
       url: {
-        edit_req: null,
-        delete_req: null
+        url_req: null,
+        validation_form: null
       },
       status: false
     },
@@ -5194,6 +5216,45 @@ component.options.__file = "resources/js/components/function/ModalValidationFunc
 
 /***/ }),
 
+/***/ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/function/fasilitas/ModalDeleteFunction.vue ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true& */ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true&");
+/* harmony import */ var _ModalDeleteFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ModalDeleteFunction.vue?vue&type=script&lang=js& */ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ModalDeleteFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "6a06266d",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/function/fasilitas/ModalDeleteFunction.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/function/fasilitas/ModalEditFunction.vue":
 /*!**************************************************************************!*\
   !*** ./resources/js/components/function/fasilitas/ModalEditFunction.vue ***!
@@ -5739,6 +5800,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalDeleteFunction.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************!*\
   !*** ./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=script&lang=js& ***!
@@ -6029,6 +6106,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalValidationFunction_vue_vue_type_template_id_72c3c872_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalValidationFunction_vue_vue_type_template_id_72c3c872_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalValidationFunction.vue?vue&type=template&id=72c3c872&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/ModalValidationFunction.vue?vue&type=template&id=72c3c872&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true&":
+/*!***********************************************************************************************************************!*\
+  !*** ./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true& ***!
+  \***********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true&");
 
 
 /***/ }),
@@ -6354,46 +6448,22 @@ var render = function () {
                       "bg-gray-100 py-3 rounded-b-3xl text-right px-5",
                   },
                   [
-                    _vm.$store.state.modalvalidation.url.edit_req != null
-                      ? _c(
-                          "button",
-                          {
-                            staticClass:
-                              "bg-blue-500 focus:bg-blue-600 transition duration-150 text-white text-center rounded-md shadow-md px-2",
-                            on: {
-                              click: function ($event) {
-                                return _vm.submitModal(
-                                  _vm.$store.state.modalvalidation.url.edit_req
-                                )
-                              },
-                            },
-                          },
-                          [
-                            _c("span", { staticClass: "align-text-top" }, [
-                              _vm._v("Submit"),
-                            ]),
-                          ]
-                        )
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.$store.state.modalvalidation.url.delete_req != null
-                      ? _c(
-                          "a",
-                          {
-                            staticClass:
-                              "bg-blue-500 focus:bg-blue-600 transition duration-150 text-white text-center rounded-md shadow-md px-2",
-                            attrs: {
-                              href: _vm.$store.state.modalvalidation.url
-                                .delete_req,
-                            },
-                          },
-                          [
-                            _c("span", { staticClass: "align-text-top" }, [
-                              _vm._v("Submit"),
-                            ]),
-                          ]
-                        )
-                      : _vm._e(),
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "bg-blue-500 focus:bg-blue-600 transition duration-150 text-white text-center rounded-md shadow-md px-2",
+                        attrs: {
+                          form: _vm.$store.state.modalvalidation.url
+                            .validation_form,
+                        },
+                      },
+                      [
+                        _c("span", { staticClass: "align-text-top" }, [
+                          _vm._v("Submit"),
+                        ]),
+                      ]
+                    ),
                     _vm._v(" "),
                     _c(
                       "button",
@@ -6412,10 +6482,61 @@ var render = function () {
                 ),
               ]
             ),
-          ]
+            _vm._v(" "),
+            _c("modal-delete-function"),
+          ],
+          1
         )
       : _vm._e(),
   ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "form",
+    {
+      staticClass:
+        "mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2",
+      attrs: {
+        id: "formDeleteFasilitas",
+        type: "hidden",
+        action: _vm.$store.state.modalvalidation.url.url_req,
+        name: "formEditFasilitas",
+        method: "POST",
+      },
+    },
+    [
+      _c("input", {
+        attrs: { type: "hidden", name: "_token" },
+        domProps: { value: _vm.$store.state.csrf },
+      }),
+      _vm._v(" "),
+      _c("input", {
+        attrs: { type: "hidden", name: "_method", value: "delete" },
+      }),
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -6484,7 +6605,7 @@ var render = function () {
                         "mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2",
                       attrs: {
                         id: "formEditFasilitas",
-                        action: "",
+                        action: _vm.$store.state.modalvalidation.url.url_req,
                         name: "formEditFasilitas",
                         method: "POST",
                       },
@@ -6496,15 +6617,16 @@ var render = function () {
                       }),
                       _vm._v(" "),
                       _c("input", {
-                        staticClass:
-                          "block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer\n                              file:mr-4 file:py-2 file:px-4\n                              file:rounded-full file:border-0\n                              file:text-sm file:font-semibold\n                              file:bg-violet-50 file:text-violet-700\n                              hover:file:bg-violet-100\n                            ",
                         attrs: {
-                          type: "file",
-                          name: "fileupload",
-                          id: "fileupload",
+                          type: "hidden",
+                          name: "_method",
+                          value: "put",
                         },
                       }),
-                    ]
+                      _vm._v(" "),
+                      _vm._t("default"),
+                    ],
+                    2
                   ),
                   _vm._v(" "),
                   _c("div", { staticClass: "mt-5 grid grid-cols-2 gap-5" }, [
@@ -10340,13 +10462,13 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("Transition", { attrs: { name: "fade-rdev" } }, [
-    _vm.$store.state.modalfasilitas.status
+    _vm.$store.state.modal.modalshow.status
       ? _c(
           "div",
           {
             staticClass:
               "fixed w-screen h-screen bg-black bg-opacity-25 backdrop-blur-sm flex z-50 transition-all ease-in-out duration-300 text-center",
-            class: _vm.$store.state.modalfasilitas.status
+            class: _vm.$store.state.modal.modalshow.status
               ? "opacity-100"
               : "opacity-0",
           },
@@ -10366,17 +10488,17 @@ var render = function () {
                 ),
                 _vm._v(" "),
                 _c("div", { staticClass: "p-5 w-full" }, [
-                  _vm.$store.state.modalfasilitas.type === "img"
+                  _vm.$store.state.modal.modalshow.type === "img"
                     ? _c("img", {
                         staticClass: "h-96 rounded-2xl",
-                        attrs: { src: _vm.$store.state.modalfasilitas.item },
+                        attrs: { src: _vm.$store.state.modal.modalshow.item },
                       })
                     : _vm._e(),
                   _vm._v(" "),
-                  _vm.$store.state.modalfasilitas.type === "video"
+                  _vm.$store.state.modal.modalshow.type === "video"
                     ? _c("video", { staticClass: "h-96 rounded-2xl" }, [
                         _c("source", {
-                          attrs: { src: _vm.$store.state.modalfasilitas.item },
+                          attrs: { src: _vm.$store.state.modal.modalshow.item },
                         }),
                       ])
                     : _vm._e(),

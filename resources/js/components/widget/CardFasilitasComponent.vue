@@ -37,7 +37,8 @@ export default {
     methods : {
         openModalValidation: function () {
             this.$store.state.modalvalidation.item = this.$props.name
-            this.$store.state.modalvalidation.url.delete_req = this.$props.delete_req
+            this.$store.state.modalvalidation.url.url_req = this.$props.delete_req
+            this.$store.state.modalvalidation.url.validation_form = "formDeleteFasilitas"
             this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?"
             this.$store.commit('toggleModalValidationView')
         },
@@ -48,7 +49,7 @@ export default {
         },
         openModalEdit: function () {
             this.$store.state.modal.modaledit.item = this.$props.name
-            this.$store.state.modalvalidation.url.edit_req = this.$props.edit_req
+            this.$store.state.modalvalidation.url.url_req = this.$props.edit_req
             this.$store.commit('toggleModalEdit')
         }
     }

@@ -11,7 +11,9 @@
 </head>
 <body>
 <div id="app" class="bg-gray-100 font-raleway">
-    <modal-edit-fasilitas-function></modal-edit-fasilitas-function>
+    <modal-edit-fasilitas-function>
+        @yield('modalEdit')
+    </modal-edit-fasilitas-function>
     <modal-show-fasilitas-component></modal-show-fasilitas-component>
     <modal-validation-function></modal-validation-function>
     <div class="flex w-full">

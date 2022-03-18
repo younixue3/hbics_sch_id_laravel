@@ -10,15 +10,10 @@
                     <label class="block text-lg font-medium text-gray-700">
                         Profile Picture
                     </label>
-                    <form id="formEditFasilitas" action="" name="formEditFasilitas" class="mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2" method="POST">
+                    <form id="formEditFasilitas" :action="$store.state.modalvalidation.url.url_req" name="formEditFasilitas" class="mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2" method="POST">
                         <input type="hidden" name="_token" :value="$store.state.csrf">
-                        <input type="file" name="fileupload" id="fileupload" class="block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer
-                                  file:mr-4 file:py-2 file:px-4
-                                  file:rounded-full file:border-0
-                                  file:text-sm file:font-semibold
-                                  file:bg-violet-50 file:text-violet-700
-                                  hover:file:bg-violet-100
-                                "/>
+                        <input type="hidden" name="_method" value="put">
+                        <slot></slot>
                     </form>
                     <div class="mt-5 grid grid-cols-2 gap-5">
                         <button @click="submitModal" class="bg-indigo-500 text-white text-center rounded-2xl shadow-md px-5 py-1 w-full"><span class="align-text-top">Submit</span></button>
@@ -44,10 +39,8 @@ export default {
             this.$store.commit('toggleModalEdit')
         },
         submitModal: function () {
-            console.log('submit')
-            this.$store.state.modalvalidation.item = this.$store.state.modal.modaledit.item
             this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?"
-            this.$store.state.modalvalidation.url.edit_req = "formEditFasilitas"
+            this.$store.state.modalvalidation.url.validation_form = "formEditFasilitas"
             this.$store.commit('toggleModalValidationView')
         }
     }

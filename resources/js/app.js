@@ -19,8 +19,8 @@ const store = new Vuex.Store({
             item: null,
             massage: null,
             url: {
-                edit_req: null,
-                delete_req: null
+                url_req: null,
+                validation_form: null,
             },
             status: false,
         },

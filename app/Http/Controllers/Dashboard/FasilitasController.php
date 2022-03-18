@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Fasilitas;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Dashboard\Data\FasilitasController as DataController;
 
@@ -80,7 +81,7 @@ class FasilitasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd($request);
     }
 
     /**
@@ -89,7 +90,7 @@ class FasilitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(int $id)
+    public function destroy($id)
     {
         dd($id);
         $data = $this->data->destroy_data($id);

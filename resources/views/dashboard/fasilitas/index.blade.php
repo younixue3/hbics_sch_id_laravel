@@ -6,7 +6,7 @@
         <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12">
             <div class="grid grid-cols-4 gap-2 px-3">
                 @forelse($data as $key => $value)
-                    <card-fasilitas-component name="{{asset('assets/stock_photo_rdev/'. $value->name)}}" type="{{$value->type}}" delete_req="{{route('dashboard.fasilitas.destroy', $value->id)}}" edit_req=""></card-fasilitas-component>
+                    <card-fasilitas-component name="{{asset('assets/stock_photo_rdev/'. $value->name)}}" type="{{$value->type}}" delete_req="{{route('dashboard.fasilitas.destroy', $value->id)}}" edit_req="{{route('dashboard.fasilitas.update', $value->id)}}"></card-fasilitas-component>
                 @empty
                     <h3 class="m-auto">Data Kosong</h3>
                 @endforelse
@@ -90,4 +90,13 @@
             </div>
         </mac-card-component>
     </div>
+@endsection
+@section('modalEdit')
+    <input type="file" name="fileupload" id="fileupload" class="block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer
+                                  file:mr-4 file:py-2 file:px-4
+                                  file:rounded-full file:border-0
+                                  file:text-sm file:font-semibold
+                                  file:bg-violet-50 file:text-violet-700
+                                  hover:file:bg-violet-100
+                                "/>
 @endsection
