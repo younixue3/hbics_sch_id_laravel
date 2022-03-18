@@ -92,8 +92,8 @@ class FasilitasController extends Controller
      */
     public function destroy($id)
     {
-        dd($id);
+//        dd($id);
         $data = $this->data->destroy_data($id);
-        return redirect(route('dashboad.index'));
+        return redirect(route('dashboard.index'));
     }
 }

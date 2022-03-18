@@ -15,6 +15,6 @@ class FasilitasController extends Controller
 
     public function destroy_data($id)
     {
-        return Fasilitas::find($id);
+        return Fasilitas::find($id)->delete();
     }
 }
