@@ -12,4 +12,9 @@ class FasilitasController extends Controller
     {
         return Fasilitas::latest()->get();
     }
+
+    public function destroy_data($id)
+    {
+        return Fasilitas::find($id);
+    }
 }

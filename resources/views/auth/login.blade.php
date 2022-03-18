@@ -1,62 +1,9 @@
 @extends('layouts.app')
 @section('title', 'Login')
 @section('content')
-    {{--    <div class="">--}}
-    {{--        <div class="bg-white rounded-3xl flex p-3 w-2/5 h-rd100 my-32 mx-auto">--}}
-    {{--            @error('email')--}}
-    {{--            <div class="bg-gradient-to-t from-red-600 to-red-400 rounded-xl p-10 w-96 text-white">--}}
-    {{--                <div class="text-4xl font-bold">{{ __('Error') }}</div>--}}
-    {{--                <div class="h-52">--}}
-    {{--                    <p class="my-14">{{$message}}</p>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--            @else--}}
-    {{--                @error('password')--}}
-    {{--                <div class="bg-gradient-to-t from-red-600 to-red-400 rounded-xl p-10 w-96 h-52 text-white">--}}
-    {{--                    <div class="text-4xl font-bold">{{ __('Error') }}</div>--}}
-    {{--                    <div class="h-52">--}}
-    {{--                        <p class="my-14">{{$message}}</p>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--                @else--}}
-    {{--                    <div class="bg-gradient-to-t from-blue-600 to-blue-400 rounded-xl p-10 w-96 text-white">--}}
-    {{--                        <div class="text-4xl font-bold">{{ __('Login') }}</div>--}}
-    {{--                        <div class="h-52">--}}
-    {{--                            <p class="my-14">Welcome to HBICS Blog</p>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                    @enderro@csrfr--}}
-    {{--                    @enderror--}}
-    {{--                    <form class="grid pl-6 text-xl place-items-center w-full" method="POST"--}}
-    {{--                          action="{{ route('login') }}">--}}
-    {{--                        --}}
-    {{--                        <div class="grid w-full">--}}
-    {{--                            <input id="email"--}}
-    {{--                                   class="border-b-2 border-gray-400 mr-10 focus:outline-none text-lg placeholder-opacity-50 pl-1 py-2 @error('email') is-invalid @enderror"--}}
-    {{--                                   type="email" value="{{ old('email') }}" required autocomplete="email" name="email"--}}
-    {{--                                   placeholder="{{ __('E-Mail Address') }}" autofocus>--}}
-    {{--                            <input id="password"--}}
-    {{--                                   class="border-b-2 border-gray-400 mr-10 focus:outline-none text-lg placeholder-opacity-50 pl-1 py-2 @error('password') is-invalid @enderror"--}}
-    {{--                                   type="password" required autocomplete="current-password" name="password"--}}
-    {{--                                   placeholder="{{ __('Password') }}">--}}
-    {{--                            <label class="mt-2">--}}
-    {{--                                <input class="h-4 w-4 " type="checkbox" name="remember"--}}
-    {{--                                       id="remember" {{ old('remember') ? 'checked' : '' }}><span--}}
-    {{--                                    class="text-sm ml-2">{{ __('Remember Me') }}</span>--}}
-    {{--                            </label>--}}
-    {{--                        </div>--}}
-    {{--                        <div class="flex ">--}}
-    {{--                            <button type="submit" class="text-white bg-gray-700 rounded-xl mx-1 px-3 py-0.5">Login--}}
-    {{--                            </button>--}}
-    {{--                            <button class="border-2 border-gray-700 text-gray-700 rounded-xl mx-1 px-3 py-0.5">Cancel--}}
-    {{--                            </button>--}}
-    {{--                        </div>--}}
-    {{--                    </form>--}}
-    {{--        </div>--}}
-    {{--    </div>--}}
     <div class="relative">
         <img class="static h-screen w-full object-cover"
-             src="{{asset('assets/stock_photo_rdev/IMG_8419.jpg')}}">
+             src="{{asset('assets/stock_photo_rdev/IMG_8419.webp')}}">
         <div class="absolute top-1/4 md:top-0 right-0 w-full md:h-screen md:w-96 p-4">
             <div class="text-center bg-white shadow-lg h-auto md:h-full w-full top-0 rounded-xl shadow-xl py-5">
                 <form class="static transform md:translate-y-1/2" action="{{ route('login') }}" method="POST">

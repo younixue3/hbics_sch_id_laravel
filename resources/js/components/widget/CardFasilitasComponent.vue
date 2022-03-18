@@ -6,14 +6,14 @@
         <img v-if="type === 'img'" class="w-full h-60 rounded-xl object-cover" :src="name">
         <div class="absolute right-1/2 bottom-2 translate-x-1/2 grid grid-cols-3 gap-x-5 bg-white rounded-lg shadow-lg px-2 py-0.5 text-base text-center opacity-0 group-hover:opacity-100 group-hover:bottom-1 transition-all ease-in-out duration-500">
             <div>
-                <a href="#">
+                <div class="cursor-pointer" @click="openModalEdit()">
                     <i class="fa-solid fa-pen-to-square"></i>
-                </a>
+                </div>
             </div>
             <div>
-                <a class="cursor-pointer" @click="openModalFasilitas()">
+                <div class="cursor-pointer" @click="openModalShow()">
                     <i class="fa-solid fa-eye"></i>
-                </a>
+                </div>
             </div>
             <div>
                 <div class="cursor-pointer" @click="openModalValidation()">
@@ -33,16 +33,23 @@ export default {
             },
         }
     },
-    props: ['name', 'type', 'delete_req'],
+    props: ['name', 'type', 'delete_req', 'edit_req'],
     methods : {
         openModalValidation: function () {
             this.$store.state.modalvalidation.item = this.$props.name
-            this.$store.commit('toggleModelValidationView')
+            this.$store.state.modalvalidation.url.delete_req = this.$props.delete_req
+            this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?"
+            this.$store.commit('toggleModalValidationView')
         },
-        openModalFasilitas: function () {
-            this.$store.state.modalfasilitas.item = this.$props.name
-            this.$store.state.modalfasilitas.type = this.$props.type
-            this.$store.commit('toggleModelFasilitasView')
+        openModalShow: function () {
+            this.$store.state.modal.modalshow.item = this.$props.name
+            this.$store.state.modal.modalshow.type = this.$props.type
+            this.$store.commit('toggleModalShow')
+        },
+        openModalEdit: function () {
+            this.$store.state.modal.modaledit.item = this.$props.name
+            this.$store.state.modalvalidation.url.edit_req = this.$props.edit_req
+            this.$store.commit('toggleModalEdit')
         }
     }
 }

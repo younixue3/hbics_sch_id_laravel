@@ -6,7 +6,7 @@
         <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12">
             <div class="grid grid-cols-4 gap-2 px-3">
                 @forelse($data as $key => $value)
-                    <card-fasilitas-function name="{{asset('assets/stock_photo_rdev/'. $value->name)}}" type="{{$value->type}}" delete_req=""></card-fasilitas-function>
+                    <card-fasilitas-component name="{{asset('assets/stock_photo_rdev/'. $value->name)}}" type="{{$value->type}}" delete_req="{{route('dashboard.fasilitas.destroy', $value->id)}}" edit_req=""></card-fasilitas-component>
                 @empty
                     <h3 class="m-auto">Data Kosong</h3>
                 @endforelse

@@ -14,18 +14,30 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
+        csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
         modalvalidation: {
             item: null,
+            massage: null,
+            url: {
+                edit_req: null,
+                delete_req: null
+            },
             status: false,
         },
-        modalfasilitas: {
-            item: null,
-            type: null,
-            status: false
+        modal: {
+            modalshow: {
+                item: null,
+                type: null,
+                status: false
+            },
+            modaledit: {
+                item: null,
+                status: false
+            }
         }
     },
     mutations: {
-        toggleModelValidationView (state) {
+        toggleModalValidationView (state) {
             state.modalvalidation.status = state.modalvalidation.status === false;
             if (state.modalvalidation.status === true) {
                 document.body.classList.add('removescrollbar', 'overflow-hidden')
@@ -33,9 +45,17 @@ const store = new Vuex.Store({
                 document.body.classList.remove('removescrollbar', 'overflow-hidden')
             }
         },
-        toggleModelFasilitasView (state) {
-            state.modalfasilitas.status = state.modalfasilitas.status === false;
-            if (state.modalfasilitas.status === true) {
+        toggleModalShow (state) {
+            state.modal.modalshow.status = state.modal.modalshow.status === false;
+            if (state.modal.modalshow.status === true) {
+                document.body.classList.add('removescrollbar', 'overflow-hidden')
+            } else {
+                document.body.classList.remove('removescrollbar', 'overflow-hidden')
+            }
+        },
+        toggleModalEdit (state) {
+            state.modal.modaledit.status = state.modal.modaledit.status === false;
+            if (state.modal.modaledit.status === true) {
                 document.body.classList.add('removescrollbar', 'overflow-hidden')
             } else {
                 document.body.classList.remove('removescrollbar', 'overflow-hidden')
@@ -67,8 +87,9 @@ Vue.component('mac-card-component', require('./components/widget/MacCardComponen
 Vue.component('nav-bar-dash-component', require('./components/layout/NavBarDashComponent').default)
 Vue.component('add-fasilitas-function', require('./components/function/AddFasilitasFunction').default)
 Vue.component('modal-validation-function', require('./components/function/ModalValidationFunction').default)
-Vue.component('card-fasilitas-function', require('./components/widget/CardFasilitasComponent').default)
-Vue.component('modal-fasilitas-component', require('./components/widget/ModalFasilitasComponent').default)
+Vue.component('card-fasilitas-component', require('./components/widget/CardFasilitasComponent').default)
+Vue.component('modal-show-fasilitas-component', require('./components/widget/fasilitas/ModalShowFasilitasComponent').default)
+Vue.component('modal-edit-fasilitas-function', require('./components/function/fasilitas/ModalEditFunction').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

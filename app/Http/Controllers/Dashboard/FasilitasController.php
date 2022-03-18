@@ -89,8 +89,10 @@ class FasilitasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
-        //
+        dd($id);
+        $data = $this->data->destroy_data($id);
+        return redirect(route('dashboad.index'));
     }
 }
