@@ -6,12 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Models\Fasilitas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Helper\getFilename;
+use Illuminate\Support\Facades\Storage;
 
 class FasilitasController extends Controller
 {
     public function get_data()
     {
-        return Fasilitas::latest()->get();
+        return Fasilitas::latest()->paginate(12);
     }
 
     public function destroy_data($id)
@@ -21,8 +23,13 @@ class FasilitasController extends Controller
 
     public function update_data($request, $id)
     {
-        dd($request->fileupload->getClientOriginalName());
-        $filename = Str::random(40);
-        $fasilitas = new Fasilitas();
+        $filename = getFilename::getFilename($request);
+        $fasilitas = Fasilitas::findOrFail($id);
+        if ($request->fileupload != null) {
+            Storage::disk('upload')->putFileAs('fasilitas_assets', $request->fileupload , $filename['filename']);
+            $fasilitas->name = $filename['filename'];
+            $fasilitas->type = $filename['type'];
+        };
+        return $fasilitas->save();
     }
 }

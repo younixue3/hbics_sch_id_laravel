@@ -82,13 +82,14 @@ class FasilitasController extends Controller
     public function update(Request $request, $id)
     {
         $validator = $request->validate([
-            'fileupload' => ['required', 'mimes:jpg', 'dimensions: max_width = 2464, max_height = 2464', 'max: 2']
+            'fileupload' => ['required', 'mimes:jpeg,jpg,webp,png,mp4', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000']
         ]);
 
 //        $request->validate($request, [
 //            'fileupload' => 'required|mimes:jpeg,jpg,png,svg|dimensions: max_width = 2464, max_height = 2464|max:2',
 //        ]);
         $data = $this->data->update_data($request, $id);
+        return redirect(route('dashboard.fasilitas.index'))->with('success', 'Data Changed Successfully');
     }
 
     /**
@@ -101,6 +102,6 @@ class FasilitasController extends Controller
     {
 //        dd($id);
         $data = $this->data->destroy_data($id);
-        return redirect(route('dashboard.index'));
+        return redirect(route('dashboard.fasilitas.index'));
     }
 }
