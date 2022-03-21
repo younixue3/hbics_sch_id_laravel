@@ -1,6 +1,7 @@
 /node_modules
 /public/hot
 /public/assets/stock_photo_rdev
+/public/Upload
 /public/storage
 /storage/*.key
 /vendor
