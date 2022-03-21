@@ -4,6 +4,7 @@
     <add-fasilitas-function></add-fasilitas-function>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
         <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12">
+{{--            {{$errors['fileupload']}}--}}
             <div class="grid grid-cols-4 gap-2 px-3">
                 @forelse($data as $key => $value)
                     <card-fasilitas-component name="{{asset('assets/stock_photo_rdev/'. $value->name)}}" type="{{$value->type}}" delete_req="{{route('dashboard.fasilitas.destroy', $value->id)}}" edit_req="{{route('dashboard.fasilitas.update', $value->id)}}"></card-fasilitas-component>
@@ -99,4 +100,12 @@
                                   file:bg-violet-50 file:text-violet-700
                                   hover:file:bg-violet-100
                                 "/>
+@endsection
+@section('notification')
+    <div class="fixed bottom-0 right-0 flex-row">
+        @forelse ($errors->all() as $error)
+            <notification-component type="error" message="{{$error}}"></notification-component>
+        @empty
+        @endforelse
+    </div>
 @endsection

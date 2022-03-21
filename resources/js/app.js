@@ -90,6 +90,7 @@ Vue.component('modal-validation-function', require('./components/function/ModalV
 Vue.component('card-fasilitas-component', require('./components/widget/CardFasilitasComponent').default)
 Vue.component('modal-show-fasilitas-component', require('./components/widget/fasilitas/ModalShowFasilitasComponent').default)
 Vue.component('modal-edit-fasilitas-function', require('./components/function/fasilitas/ModalEditFunction').default)
+Vue.component('notification-component', require('./components/widget/NotificationComponent').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -81,7 +81,14 @@ class FasilitasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request);
+        $validator = $request->validate([
+            'fileupload' => ['required', 'mimes:jpg', 'dimensions: max_width = 2464, max_height = 2464', 'max: 2']
+        ]);
+
+//        $request->validate($request, [
+//            'fileupload' => 'required|mimes:jpeg,jpg,png,svg|dimensions: max_width = 2464, max_height = 2464|max:2',
+//        ]);
+        $data = $this->data->update_data($request, $id);
     }
 
     /**

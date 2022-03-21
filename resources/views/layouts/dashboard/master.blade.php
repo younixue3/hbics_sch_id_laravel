@@ -22,7 +22,7 @@
             @yield('content')
         </div>
     </div>
-
+    @yield('notification')
 </div>
 @include('layouts.dashboard.footer')
 </div>

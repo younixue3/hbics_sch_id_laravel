@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="{{asset('assets/logo/logo_colorfull.png')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script src="https://kit.fontawesome.com/6fd3995802.js" crossorigin="anonymous"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 <div id="app" class="bg-gray-100 font-raleway">

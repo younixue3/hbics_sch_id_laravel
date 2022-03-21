@@ -10,7 +10,7 @@
                     <label class="block text-lg font-medium text-gray-700">
                         Profile Picture
                     </label>
-                    <form id="formEditFasilitas" :action="$store.state.modalvalidation.url.url_req" name="formEditFasilitas" class="mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2" method="POST">
+                    <form id="formEditFasilitas" :action="$store.state.modalvalidation.url.url_req" enctype="multipart/form-data" name="formEditFasilitas" class="mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2" method="POST">
                         <input type="hidden" name="_token" :value="$store.state.csrf">
                         <input type="hidden" name="_method" value="put">
                         <slot></slot>
