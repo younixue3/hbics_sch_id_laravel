@@ -30,9 +30,7 @@
                         <td class="py-1">BackEnd Web Developer</td>
                         <td class="py-1">Admin</td>
                         <td class="py-1">
-                            <button class="text-gray-400 hover:text-indigo-500 text-lg text-center transition-all ease-in-out">
-                                <i class="fas fa-external-link"></i>
-                            </button>
+                            <button-show-component></button-show-component>
                         </td>
                     </tr>
                     </tbody>
@@ -42,6 +40,8 @@
             </div>
         </mac-card-component>
     </div>
+@endsection
+@section('modalShow')
 @endsection
 @section('modalEdit')
 @endsection
