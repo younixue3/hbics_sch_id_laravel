@@ -31,7 +31,9 @@ const store = new Vuex.Store({
                 status: false
             },
             modaledit: {
-                item: null,
+                status: false
+            },
+            modaladd: {
                 status: false
             }
         }
@@ -56,6 +58,14 @@ const store = new Vuex.Store({
         toggleModalEdit (state) {
             state.modal.modaledit.status = state.modal.modaledit.status === false;
             if (state.modal.modaledit.status === true) {
+                document.body.classList.add('removescrollbar', 'overflow-hidden')
+            } else {
+                document.body.classList.remove('removescrollbar', 'overflow-hidden')
+            }
+        },
+        toggleModalAdd (state) {
+            state.modal.modaladd.status = state.modal.modaladd.status === false;
+            if (state.modal.modaladd.status === true) {
                 document.body.classList.add('removescrollbar', 'overflow-hidden')
             } else {
                 document.body.classList.remove('removescrollbar', 'overflow-hidden')
@@ -85,12 +95,14 @@ Vue.component('snap-alumni-component', require('./components/widget/SnapAlumniCo
 Vue.component('fasilitas-component', require('./components/widget/FasilitasComponent').default)
 Vue.component('mac-card-component', require('./components/widget/MacCardComponent').default)
 Vue.component('nav-bar-dash-component', require('./components/layout/NavBarDashComponent').default)
-Vue.component('add-fasilitas-function', require('./components/function/AddFasilitasFunction').default)
-Vue.component('modal-validation-function', require('./components/function/ModalValidationFunction').default)
 Vue.component('card-fasilitas-component', require('./components/widget/CardFasilitasComponent').default)
 Vue.component('modal-show-fasilitas-component', require('./components/widget/fasilitas/ModalShowFasilitasComponent').default)
-Vue.component('modal-edit-fasilitas-function', require('./components/function/fasilitas/ModalEditFunction').default)
 Vue.component('notification-component', require('./components/widget/NotificationComponent').default)
+
+Vue.component('button-add-function', require('./components/function/ButtonAddFunction').default)
+Vue.component('modal-add-function', require('./components/function/form/ModalAddFunction').default)
+Vue.component('modal-validation-function', require('./components/function/ModalValidationFunction').default)
+Vue.component('modal-edit-function', require('./components/function/form/ModalEditFunction').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

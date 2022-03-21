@@ -32,7 +32,7 @@
 export default {
     data() {
         return {
-            fasilitaspath: window.location.origin + '/fasilitas',
+            fasilitaspath: window.location.origin + '/form',
             counter: 0,
             scrolcount: 0,
             arrTestimoni: {

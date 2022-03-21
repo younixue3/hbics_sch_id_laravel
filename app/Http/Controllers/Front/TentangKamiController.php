@@ -53,7 +53,7 @@ class TentangKamiController extends Controller
 
     public function fasilitas()
     {
-        return view('front.tentangKami.fasilitas.index');
+        return view('front.tentangKami.form.index');
     }
 
 }

@@ -2054,10 +2054,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/AddFasilitasFunction.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/AddFasilitasFunction.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/ButtonAddFunction.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/ButtonAddFunction.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2075,7 +2075,13 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  methods: {}
+  props: ['add_req'],
+  methods: {
+    openModalAdd: function openModalAdd() {
+      this.$store.state.modalvalidation.url.url_req = this.$props.add_req;
+      this.$store.commit('toggleModalAdd');
+    }
+  }
 });
 
 /***/ }),
@@ -2091,7 +2097,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _fasilitas_ModalDeleteFunction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fasilitas/ModalDeleteFunction */ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue");
+/* harmony import */ var _form_ModalDeleteFunction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form/ModalDeleteFunction */ "./resources/js/components/function/form/ModalDeleteFunction.vue");
 //
 //
 //
@@ -2119,24 +2125,9 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   components: {
-    modalDeleteFunction: _fasilitas_ModalDeleteFunction__WEBPACK_IMPORTED_MODULE_0__["default"]
+    modalDeleteFunction: _form_ModalDeleteFunction__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   methods: {
-    deleteModal: function deleteModal() {
-      this.$store.commit('toggleModalValidationView');
-      this.$store.state.modalvalidation.item = null;
-      this.$store.state.modalvalidation.massage = null;
-      this.$store.state.modalvalidation.url.delete_req = null;
-      this.$store.state.modalvalidation.url.edit_req = null;
-    },
-    submitModal: function submitModal(form) {
-      document.getElementById(form).submit();
-      this.$store.commit('toggleModalValidationView');
-      this.$store.state.modalvalidation.item = null;
-      this.$store.state.modalvalidation.massage = null;
-      this.$store.state.modalvalidation.url.delete_req = null;
-      this.$store.state.modalvalidation.url.edit_req = null;
-    },
     closeModal: function closeModal() {
       this.$store.state.modalvalidation.item = null;
       this.$store.state.modalvalidation.massage = null;
@@ -2149,10 +2140,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2160,32 +2151,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  methods: {}
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
 //
 //
 //
@@ -2222,8 +2187,87 @@ __webpack_require__.r(__webpack_exports__);
       this.$store.commit('toggleModalEdit');
     },
     submitModal: function submitModal() {
-      this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?";
-      this.$store.state.modalvalidation.url.validation_form = "formEditFasilitas";
+      this.$store.state.modalvalidation.massage = "Apakah anda yakin menambahkan data ini?";
+      this.$store.state.modalvalidation.url.validation_form = "formAdd";
+      this.$store.commit('toggleModalValidationView');
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  methods: {
+    closeModal: function closeModal() {
+      // this.$store.state.modal.modaledit = null
+      // this.$store.state.modal.modaledit.type = null
+      this.$store.commit('toggleModalEdit');
+    },
+    submitModal: function submitModal() {
+      this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk mengubah data ini?";
+      this.$store.state.modalvalidation.url.validation_form = "formEdit";
       this.$store.commit('toggleModalValidationView');
     }
   }
@@ -3294,9 +3338,8 @@ __webpack_require__.r(__webpack_exports__);
   props: ['name', 'type', 'delete_req', 'edit_req'],
   methods: {
     openModalValidation: function openModalValidation() {
-      this.$store.state.modalvalidation.item = this.$props.name;
       this.$store.state.modalvalidation.url.url_req = this.$props.delete_req;
-      this.$store.state.modalvalidation.url.validation_form = "formDeleteFasilitas";
+      this.$store.state.modalvalidation.url.validation_form = "formDelete";
       this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?";
       this.$store.commit('toggleModalValidationView');
     },
@@ -3306,7 +3349,6 @@ __webpack_require__.r(__webpack_exports__);
       this.$store.commit('toggleModalShow');
     },
     openModalEdit: function openModalEdit() {
-      this.$store.state.modal.modaledit.item = this.$props.name;
       this.$store.state.modalvalidation.url.url_req = this.$props.edit_req;
       this.$store.commit('toggleModalEdit');
     }
@@ -4077,7 +4119,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      fasilitaspath: window.location.origin + '/fasilitas',
+      fasilitaspath: window.location.origin + '/form',
       counter: 0,
       scrolcount: 0,
       arrTestimoni: {
@@ -4333,7 +4375,9 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_0__["default"].Store({
         status: false
       },
       modaledit: {
-        item: null,
+        status: false
+      },
+      modaladd: {
         status: false
       }
     }
@@ -4365,6 +4409,15 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_0__["default"].Store({
       } else {
         document.body.classList.remove('removescrollbar', 'overflow-hidden');
       }
+    },
+    toggleModalAdd: function toggleModalAdd(state) {
+      state.modal.modaladd.status = state.modal.modaladd.status === false;
+
+      if (state.modal.modaladd.status === true) {
+        document.body.classList.add('removescrollbar', 'overflow-hidden');
+      } else {
+        document.body.classList.remove('removescrollbar', 'overflow-hidden');
+      }
     }
   }
 });
@@ -4389,12 +4442,13 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('snap-alumni-component', (
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('fasilitas-component', (__webpack_require__(/*! ./components/widget/FasilitasComponent */ "./resources/js/components/widget/FasilitasComponent.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('mac-card-component', (__webpack_require__(/*! ./components/widget/MacCardComponent */ "./resources/js/components/widget/MacCardComponent.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('nav-bar-dash-component', (__webpack_require__(/*! ./components/layout/NavBarDashComponent */ "./resources/js/components/layout/NavBarDashComponent.vue")["default"]));
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('add-fasilitas-function', (__webpack_require__(/*! ./components/function/AddFasilitasFunction */ "./resources/js/components/function/AddFasilitasFunction.vue")["default"]));
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('modal-validation-function', (__webpack_require__(/*! ./components/function/ModalValidationFunction */ "./resources/js/components/function/ModalValidationFunction.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('card-fasilitas-component', (__webpack_require__(/*! ./components/widget/CardFasilitasComponent */ "./resources/js/components/widget/CardFasilitasComponent.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('modal-show-fasilitas-component', (__webpack_require__(/*! ./components/widget/fasilitas/ModalShowFasilitasComponent */ "./resources/js/components/widget/fasilitas/ModalShowFasilitasComponent.vue")["default"]));
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('modal-edit-fasilitas-function', (__webpack_require__(/*! ./components/function/fasilitas/ModalEditFunction */ "./resources/js/components/function/fasilitas/ModalEditFunction.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('notification-component', (__webpack_require__(/*! ./components/widget/NotificationComponent */ "./resources/js/components/widget/NotificationComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('button-add-function', (__webpack_require__(/*! ./components/function/ButtonAddFunction */ "./resources/js/components/function/ButtonAddFunction.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('modal-add-function', (__webpack_require__(/*! ./components/function/form/ModalAddFunction */ "./resources/js/components/function/form/ModalAddFunction.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('modal-validation-function', (__webpack_require__(/*! ./components/function/ModalValidationFunction */ "./resources/js/components/function/ModalValidationFunction.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('modal-edit-function', (__webpack_require__(/*! ./components/function/form/ModalEditFunction */ "./resources/js/components/function/form/ModalEditFunction.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -4432,10 +4486,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-72c3c
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css&":
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4449,7 +4503,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-20957ccc],\n.fade-rdev-leave-active[data-v-20957ccc] {\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-20957ccc],\n.fade-rdev-leave-to[data-v-20957ccc] {\n    opacity: 0;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-256b926a],\n.fade-rdev-leave-active[data-v-256b926a] {\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-256b926a],\n.fade-rdev-leave-to[data-v-256b926a] {\n    opacity: 0;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-14c5c7c0],\n.fade-rdev-leave-active[data-v-14c5c7c0] {\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-14c5c7c0],\n.fade-rdev-leave-to[data-v-14c5c7c0] {\n    opacity: 0;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4817,10 +4895,10 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css&":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css& ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4830,7 +4908,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_style_index_0_id_20957ccc_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalAddFunction_vue_vue_type_style_index_0_id_256b926a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css&");
 
             
 
@@ -4839,11 +4917,41 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_style_index_0_id_20957ccc_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalAddFunction_vue_vue_type_style_index_0_id_256b926a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_style_index_0_id_20957ccc_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalAddFunction_vue_vue_type_style_index_0_id_256b926a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_style_index_0_id_14c5c7c0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_style_index_0_id_14c5c7c0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_style_index_0_id_14c5c7c0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -5186,10 +5294,10 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ "./resources/js/components/function/AddFasilitasFunction.vue":
-/*!*******************************************************************!*\
-  !*** ./resources/js/components/function/AddFasilitasFunction.vue ***!
-  \*******************************************************************/
+/***/ "./resources/js/components/function/ButtonAddFunction.vue":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/function/ButtonAddFunction.vue ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5197,8 +5305,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _AddFasilitasFunction_vue_vue_type_template_id_5bff5d6b_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AddFasilitasFunction.vue?vue&type=template&id=5bff5d6b&scoped=true& */ "./resources/js/components/function/AddFasilitasFunction.vue?vue&type=template&id=5bff5d6b&scoped=true&");
-/* harmony import */ var _AddFasilitasFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AddFasilitasFunction.vue?vue&type=script&lang=js& */ "./resources/js/components/function/AddFasilitasFunction.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ButtonAddFunction_vue_vue_type_template_id_07b260fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ButtonAddFunction.vue?vue&type=template&id=07b260fb&scoped=true& */ "./resources/js/components/function/ButtonAddFunction.vue?vue&type=template&id=07b260fb&scoped=true&");
+/* harmony import */ var _ButtonAddFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ButtonAddFunction.vue?vue&type=script&lang=js& */ "./resources/js/components/function/ButtonAddFunction.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -5208,19 +5316,19 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _AddFasilitasFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _AddFasilitasFunction_vue_vue_type_template_id_5bff5d6b_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _AddFasilitasFunction_vue_vue_type_template_id_5bff5d6b_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _ButtonAddFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ButtonAddFunction_vue_vue_type_template_id_07b260fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ButtonAddFunction_vue_vue_type_template_id_07b260fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "5bff5d6b",
+  "07b260fb",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/function/AddFasilitasFunction.vue"
+component.options.__file = "resources/js/components/function/ButtonAddFunction.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -5266,10 +5374,10 @@ component.options.__file = "resources/js/components/function/ModalValidationFunc
 
 /***/ }),
 
-/***/ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue":
-/*!****************************************************************************!*\
-  !*** ./resources/js/components/function/fasilitas/ModalDeleteFunction.vue ***!
-  \****************************************************************************/
+/***/ "./resources/js/components/function/form/ModalAddFunction.vue":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/function/form/ModalAddFunction.vue ***!
+  \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5277,8 +5385,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true& */ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true&");
-/* harmony import */ var _ModalDeleteFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ModalDeleteFunction.vue?vue&type=script&lang=js& */ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ModalAddFunction_vue_vue_type_template_id_256b926a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ModalAddFunction.vue?vue&type=template&id=256b926a&scoped=true& */ "./resources/js/components/function/form/ModalAddFunction.vue?vue&type=template&id=256b926a&scoped=true&");
+/* harmony import */ var _ModalAddFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ModalAddFunction.vue?vue&type=script&lang=js& */ "./resources/js/components/function/form/ModalAddFunction.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ModalAddFunction_vue_vue_type_style_index_0_id_256b926a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css& */ "./resources/js/components/function/form/ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _ModalAddFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ModalAddFunction_vue_vue_type_template_id_256b926a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ModalAddFunction_vue_vue_type_template_id_256b926a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "256b926a",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/function/form/ModalAddFunction.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/function/form/ModalDeleteFunction.vue":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/function/form/ModalDeleteFunction.vue ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ModalDeleteFunction_vue_vue_type_template_id_134f8461_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ModalDeleteFunction.vue?vue&type=template&id=134f8461&scoped=true& */ "./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=template&id=134f8461&scoped=true&");
+/* harmony import */ var _ModalDeleteFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ModalDeleteFunction.vue?vue&type=script&lang=js& */ "./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -5289,26 +5438,26 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _ModalDeleteFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _ModalDeleteFunction_vue_vue_type_template_id_134f8461_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ModalDeleteFunction_vue_vue_type_template_id_134f8461_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "6a06266d",
+  "134f8461",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/function/fasilitas/ModalDeleteFunction.vue"
+component.options.__file = "resources/js/components/function/form/ModalDeleteFunction.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/function/fasilitas/ModalEditFunction.vue":
-/*!**************************************************************************!*\
-  !*** ./resources/js/components/function/fasilitas/ModalEditFunction.vue ***!
-  \**************************************************************************/
+/***/ "./resources/js/components/function/form/ModalEditFunction.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/function/form/ModalEditFunction.vue ***!
+  \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5316,9 +5465,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _ModalEditFunction_vue_vue_type_template_id_20957ccc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ModalEditFunction.vue?vue&type=template&id=20957ccc&scoped=true& */ "./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=template&id=20957ccc&scoped=true&");
-/* harmony import */ var _ModalEditFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ModalEditFunction.vue?vue&type=script&lang=js& */ "./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=script&lang=js&");
-/* harmony import */ var _ModalEditFunction_vue_vue_type_style_index_0_id_20957ccc_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css& */ "./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css&");
+/* harmony import */ var _ModalEditFunction_vue_vue_type_template_id_14c5c7c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ModalEditFunction.vue?vue&type=template&id=14c5c7c0&scoped=true& */ "./resources/js/components/function/form/ModalEditFunction.vue?vue&type=template&id=14c5c7c0&scoped=true&");
+/* harmony import */ var _ModalEditFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ModalEditFunction.vue?vue&type=script&lang=js& */ "./resources/js/components/function/form/ModalEditFunction.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ModalEditFunction_vue_vue_type_style_index_0_id_14c5c7c0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css& */ "./resources/js/components/function/form/ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -5330,18 +5479,18 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _ModalEditFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ModalEditFunction_vue_vue_type_template_id_20957ccc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _ModalEditFunction_vue_vue_type_template_id_20957ccc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _ModalEditFunction_vue_vue_type_template_id_14c5c7c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ModalEditFunction_vue_vue_type_template_id_14c5c7c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "20957ccc",
+  "14c5c7c0",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/function/fasilitas/ModalEditFunction.vue"
+component.options.__file = "resources/js/components/function/form/ModalEditFunction.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -5857,10 +6006,10 @@ component.options.__file = "resources/js/components/widget/fasilitas/ModalShowFa
 
 /***/ }),
 
-/***/ "./resources/js/components/function/AddFasilitasFunction.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/components/function/AddFasilitasFunction.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************/
+/***/ "./resources/js/components/function/ButtonAddFunction.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/function/ButtonAddFunction.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5868,8 +6017,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddFasilitasFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AddFasilitasFunction.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/AddFasilitasFunction.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddFasilitasFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonAddFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ButtonAddFunction.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/ButtonAddFunction.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonAddFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -5889,10 +6038,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************!*\
-  !*** ./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************/
+/***/ "./resources/js/components/function/form/ModalAddFunction.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/function/form/ModalAddFunction.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5900,15 +6049,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalDeleteFunction.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalAddFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalAddFunction.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalAddFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalDeleteFunction.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************!*\
-  !*** ./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************/
+/***/ "./resources/js/components/function/form/ModalEditFunction.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/function/form/ModalEditFunction.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5916,7 +6081,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalEditFunction.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalEditFunction.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
@@ -6142,15 +6307,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css&":
-/*!***********************************************************************************************************************************!*\
-  !*** ./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css& ***!
-  \***********************************************************************************************************************************/
+/***/ "./resources/js/components/function/form/ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css&":
+/*!*****************************************************************************************************************************!*\
+  !*** ./resources/js/components/function/form/ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css& ***!
+  \*****************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_style_index_0_id_20957ccc_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=style&index=0&id=20957ccc&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalAddFunction_vue_vue_type_style_index_0_id_256b926a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=style&index=0&id=256b926a&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/function/form/ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css&":
+/*!******************************************************************************************************************************!*\
+  !*** ./resources/js/components/function/form/ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css& ***!
+  \******************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_style_index_0_id_14c5c7c0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=style&index=0&id=14c5c7c0&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -6181,19 +6359,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/function/AddFasilitasFunction.vue?vue&type=template&id=5bff5d6b&scoped=true&":
-/*!**************************************************************************************************************!*\
-  !*** ./resources/js/components/function/AddFasilitasFunction.vue?vue&type=template&id=5bff5d6b&scoped=true& ***!
-  \**************************************************************************************************************/
+/***/ "./resources/js/components/function/ButtonAddFunction.vue?vue&type=template&id=07b260fb&scoped=true&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/function/ButtonAddFunction.vue?vue&type=template&id=07b260fb&scoped=true& ***!
+  \***********************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddFasilitasFunction_vue_vue_type_template_id_5bff5d6b_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddFasilitasFunction_vue_vue_type_template_id_5bff5d6b_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonAddFunction_vue_vue_type_template_id_07b260fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonAddFunction_vue_vue_type_template_id_07b260fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddFasilitasFunction_vue_vue_type_template_id_5bff5d6b_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AddFasilitasFunction.vue?vue&type=template&id=5bff5d6b&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/AddFasilitasFunction.vue?vue&type=template&id=5bff5d6b&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonAddFunction_vue_vue_type_template_id_07b260fb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ButtonAddFunction.vue?vue&type=template&id=07b260fb&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/ButtonAddFunction.vue?vue&type=template&id=07b260fb&scoped=true&");
 
 
 /***/ }),
@@ -6215,36 +6393,53 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true&":
-/*!***********************************************************************************************************************!*\
-  !*** ./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true& ***!
-  \***********************************************************************************************************************/
+/***/ "./resources/js/components/function/form/ModalAddFunction.vue?vue&type=template&id=256b926a&scoped=true&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/function/form/ModalAddFunction.vue?vue&type=template&id=256b926a&scoped=true& ***!
+  \***************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalAddFunction_vue_vue_type_template_id_256b926a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalAddFunction_vue_vue_type_template_id_256b926a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_template_id_6a06266d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalAddFunction_vue_vue_type_template_id_256b926a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalAddFunction.vue?vue&type=template&id=256b926a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=template&id=256b926a&scoped=true&");
 
 
 /***/ }),
 
-/***/ "./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=template&id=20957ccc&scoped=true&":
-/*!*********************************************************************************************************************!*\
-  !*** ./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=template&id=20957ccc&scoped=true& ***!
-  \*********************************************************************************************************************/
+/***/ "./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=template&id=134f8461&scoped=true&":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=template&id=134f8461&scoped=true& ***!
+  \******************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_template_id_20957ccc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_template_id_20957ccc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_template_id_134f8461_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_template_id_134f8461_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_template_id_20957ccc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalEditFunction.vue?vue&type=template&id=20957ccc&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=template&id=20957ccc&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalDeleteFunction_vue_vue_type_template_id_134f8461_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalDeleteFunction.vue?vue&type=template&id=134f8461&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=template&id=134f8461&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/function/form/ModalEditFunction.vue?vue&type=template&id=14c5c7c0&scoped=true&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/components/function/form/ModalEditFunction.vue?vue&type=template&id=14c5c7c0&scoped=true& ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_template_id_14c5c7c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_template_id_14c5c7c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ModalEditFunction_vue_vue_type_template_id_14c5c7c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ModalEditFunction.vue?vue&type=template&id=14c5c7c0&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=template&id=14c5c7c0&scoped=true&");
 
 
 /***/ }),
@@ -6470,10 +6665,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/AddFasilitasFunction.vue?vue&type=template&id=5bff5d6b&scoped=true&":
-/*!*****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/AddFasilitasFunction.vue?vue&type=template&id=5bff5d6b&scoped=true& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/ButtonAddFunction.vue?vue&type=template&id=07b260fb&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/ButtonAddFunction.vue?vue&type=template&id=07b260fb&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -6486,28 +6681,22 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c(
+      "button",
+      {
+        staticClass:
+          "bg-green-400 rounded-lg w-20 px-3 flex justify-between text-center",
+        on: { click: _vm.openModalAdd },
+      },
+      [
+        _c("span", [_vm._v("Add")]),
+        _c("i", { staticClass: "fa-solid fa-plus my-auto" }),
+      ]
+    ),
+  ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "button",
-        {
-          staticClass:
-            "bg-green-400 rounded-lg w-20 px-3 flex justify-between text-center",
-        },
-        [
-          _c("span", [_vm._v("Add")]),
-          _c("i", { staticClass: "fa-solid fa-plus my-auto" }),
-        ]
-      ),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -6619,10 +6808,129 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true&":
-/*!**************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalDeleteFunction.vue?vue&type=template&id=6a06266d&scoped=true& ***!
-  \**************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=template&id=256b926a&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalAddFunction.vue?vue&type=template&id=256b926a&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("Transition", { attrs: { name: "fade-rdev" } }, [
+    _vm.$store.state.modal.modaladd.status
+      ? _c(
+          "div",
+          {
+            staticClass:
+              "fixed w-screen h-screen bg-black bg-opacity-25 backdrop-blur-sm flex z-50 transition-all ease-in-out duration-300 text-center",
+            class: _vm.$store.state.modal.modaladd.status
+              ? "opacity-100"
+              : "opacity-0",
+          },
+          [
+            _c(
+              "div",
+              { staticClass: "w-[35rem] bg-white m-auto rounded-3xl relative" },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "transition-all ease-in-out duration-300 bg-gray-700 bg-opacity-50 hover:bg-opacity-75 w-10 h-10 text-white text-xl rounded-xl -mt-5 -mr-5 absolute right-0",
+                    on: { click: _vm.closeModal },
+                  },
+                  [_c("i", { staticClass: "fa-solid fa-xmark" })]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "p-5 w-full" }, [
+                  _c("h1", [_vm._v("Add Data")]),
+                  _vm._v(" "),
+                  _c(
+                    "form",
+                    {
+                      attrs: {
+                        id: "formAdd",
+                        action: _vm.$store.state.modalvalidation.url.url_req,
+                        enctype: "multipart/form-data",
+                        name: "formAdd",
+                        method: "POST",
+                      },
+                    },
+                    [
+                      _c("input", {
+                        attrs: { type: "hidden", name: "_token" },
+                        domProps: { value: _vm.$store.state.csrf },
+                      }),
+                      _vm._v(" "),
+                      _c("input", {
+                        attrs: {
+                          type: "hidden",
+                          name: "_method",
+                          value: "post",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _vm._t("default"),
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mt-5 grid grid-cols-2 gap-5" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "bg-indigo-500 text-white text-center rounded-2xl shadow-md px-5 py-1 w-full",
+                        on: { click: _vm.submitModal },
+                      },
+                      [
+                        _c("span", { staticClass: "align-text-top" }, [
+                          _vm._v("Submit"),
+                        ]),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "border-2 border-red-500 text-red-500 text-center rounded-2xl shadow-md px-5 py-1 w-full",
+                        on: { click: _vm.closeModal },
+                      },
+                      [
+                        _c("span", { staticClass: "align-text-top" }, [
+                          _vm._v("Cancel"),
+                        ]),
+                      ]
+                    ),
+                  ]),
+                ]),
+              ]
+            ),
+          ]
+        )
+      : _vm._e(),
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=template&id=134f8461&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalDeleteFunction.vue?vue&type=template&id=134f8461&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -6639,10 +6947,10 @@ var render = function () {
     "form",
     {
       attrs: {
-        id: "formDeleteFasilitas",
+        id: "formDelete",
         type: "hidden",
         action: _vm.$store.state.modalvalidation.url.url_req,
-        name: "formEditFasilitas",
+        name: "formEdit",
         method: "POST",
       },
     },
@@ -6665,10 +6973,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=template&id=20957ccc&scoped=true&":
-/*!************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/fasilitas/ModalEditFunction.vue?vue&type=template&id=20957ccc&scoped=true& ***!
-  \************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=template&id=14c5c7c0&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/function/form/ModalEditFunction.vue?vue&type=template&id=14c5c7c0&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -6709,25 +7017,13 @@ var render = function () {
                 _vm._v(" "),
                 _c("div", { staticClass: "p-5 w-full" }, [
                   _c(
-                    "label",
-                    { staticClass: "block text-lg font-medium text-gray-700" },
-                    [
-                      _vm._v(
-                        "\n                    Profile Picture\n                "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
                     "form",
                     {
-                      staticClass:
-                        "mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2",
                       attrs: {
-                        id: "formEditFasilitas",
+                        id: "formEdit",
                         action: _vm.$store.state.modalvalidation.url.url_req,
                         enctype: "multipart/form-data",
-                        name: "formEditFasilitas",
+                        name: "formEdit",
                         method: "POST",
                       },
                     },
@@ -9278,13 +9574,13 @@ var render = function () {
             "li",
             { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
             [
-              _c("a", { attrs: { href: _vm.dataurl["fasilitas"] } }, [
+              _c("a", { attrs: { href: _vm.dataurl["form"] } }, [
                 _c(
                   "div",
                   {
                     staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
                     class:
-                      _vm.livehref === _vm.dataurl["fasilitas"]
+                      _vm.livehref === _vm.dataurl["form"]
                         ? "bg-gray-300"
                         : "bg-gray-100",
                   },
@@ -9400,7 +9696,7 @@ var staticRenderFns = [
         _c("i", { staticClass: "fa-solid fa-images mr-3" }),
       ]),
       _vm._v(" "),
-      _c("span", [_vm._v("Gallery")]),
+      _c("span", [_vm._v("Fasilitas")]),
     ])
   },
   function () {

@@ -30,7 +30,7 @@ class FasilitasController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the fasilitas for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -47,7 +47,11 @@ class FasilitasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = $request->validate([
+            'fileupload' => ['mimes:jpeg,jpg,webp,png,mp4', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000']
+        ]);
+        $data = $this->data->store_data($request);
+        return redirect(route('dashboard.fasilitas.index'))->with('success', 'Insert Data Successfully');
     }
 
     /**
@@ -62,7 +66,7 @@ class FasilitasController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the fasilitas for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -82,14 +86,10 @@ class FasilitasController extends Controller
     public function update(Request $request, $id)
     {
         $validator = $request->validate([
-            'fileupload' => ['required', 'mimes:jpeg,jpg,webp,png,mp4', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000']
+            'fileupload' => ['mimes:jpeg,jpg,webp,png,mp4', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000']
         ]);
-
-//        $request->validate($request, [
-//            'fileupload' => 'required|mimes:jpeg,jpg,png,svg|dimensions: max_width = 2464, max_height = 2464|max:2',
-//        ]);
         $data = $this->data->update_data($request, $id);
-        return redirect(route('dashboard.fasilitas.index'))->with('success', 'Data Changed Successfully');
+        return redirect(route('dashboard.fasilitas.index'))->with('success', 'Update Data Successfully');
     }
 
     /**
@@ -100,8 +100,7 @@ class FasilitasController extends Controller
      */
     public function destroy($id)
     {
-//        dd($id);
         $data = $this->data->destroy_data($id);
-        return redirect(route('dashboard.fasilitas.index'));
+        return redirect(route('dashboard.fasilitas.index'))->with('success', 'Delete Data Successfully');
     }
 }

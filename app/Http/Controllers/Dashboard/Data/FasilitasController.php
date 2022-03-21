@@ -16,20 +16,34 @@ class FasilitasController extends Controller
         return Fasilitas::latest()->paginate(12);
     }
 
-    public function destroy_data($id)
+    public function store_data($request)
     {
-        return Fasilitas::find($id)->delete();
-    }
-
-    public function update_data($request, $id)
-    {
-        $filename = getFilename::getFilename($request);
-        $fasilitas = Fasilitas::findOrFail($id);
+        $fasilitas = New Fasilitas();
         if ($request->fileupload != null) {
+            $filename = getFilename::getFilename($request);
             Storage::disk('upload')->putFileAs('fasilitas_assets', $request->fileupload , $filename['filename']);
             $fasilitas->name = $filename['filename'];
             $fasilitas->type = $filename['type'];
         };
+        $fasilitas->area = $request->area;
         return $fasilitas->save();
+    }
+
+    public function update_data($request, $id)
+    {
+        $fasilitas = Fasilitas::findOrFail($id);
+        if ($request->fileupload != null) {
+            $filename = getFilename::getFilename($request);
+            Storage::disk('upload')->putFileAs('fasilitas_assets', $request->fileupload , $filename['filename']);
+            $fasilitas->name = $filename['filename'];
+            $fasilitas->type = $filename['type'];
+        };
+        $fasilitas->area = $request->area;
+        return $fasilitas->save();
+    }
+
+    public function destroy_data($id)
+    {
+        return Fasilitas::find($id)->delete();
     }
 }

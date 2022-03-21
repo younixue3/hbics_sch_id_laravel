@@ -116,7 +116,7 @@
     </div>
     <div class="my-10 md:my-20">
         <div class="px-12 xl:px-20">
-            <h1 class="text-3xl font-semibold hover:after:content-['_↗']"><a href="{{route('fasilitas')}}">Fasilitas</a></h1>
+            <h1 class="text-3xl font-semibold hover:after:content-['_↗']"><a href="{{route('form')}}">Fasilitas</a></h1>
             <p class="my-5">Fasilitas Sekolah adalah sarana dan prasarana yang harus tersedia untuk melancarkan kegiatan
                 belajar mengajar di sekolah. Sekolah Kristen Harapan Bangsa Balikpapan dan Happy Holy Kids Balikpapan
                 menyediakan fasilitas terbaik untuk menunjang kegiatan belajar mengajar siswa/i.</p>

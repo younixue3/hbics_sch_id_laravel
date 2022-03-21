@@ -11,10 +11,13 @@
 </head>
 <body>
 <div id="app" class="bg-gray-100 font-raleway">
-    <modal-edit-fasilitas-function>
+    <modal-add-function>
+        @yield('modalAdd')
+    </modal-add-function>
+    <modal-edit-function>
         @yield('modalEdit')
-    </modal-edit-fasilitas-function>
-    <modal-show-fasilitas-component></modal-show-fasilitas-component>
+    </modal-edit-function>
+    <modal-show-fasilitas-component-componentt></modal-show-fasilitas-component-componentt>
     <modal-validation-function></modal-validation-function>
     <div class="flex w-full">
         @include('layouts.dashboard.header')

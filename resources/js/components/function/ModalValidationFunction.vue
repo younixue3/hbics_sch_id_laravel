@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import modalDeleteFunction from "./fasilitas/ModalDeleteFunction";
+import modalDeleteFunction from "./form/ModalDeleteFunction";
 export default {
     data() {
         return {
@@ -30,21 +30,6 @@ export default {
         modalDeleteFunction
     },
     methods: {
-        deleteModal: function () {
-            this.$store.commit('toggleModalValidationView')
-            this.$store.state.modalvalidation.item = null
-            this.$store.state.modalvalidation.massage = null
-            this.$store.state.modalvalidation.url.delete_req = null
-            this.$store.state.modalvalidation.url.edit_req = null
-        },
-        submitModal: function (form) {
-            document.getElementById(form).submit();
-            this.$store.commit('toggleModalValidationView')
-            this.$store.state.modalvalidation.item = null
-            this.$store.state.modalvalidation.massage = null
-            this.$store.state.modalvalidation.url.delete_req = null
-            this.$store.state.modalvalidation.url.edit_req = null
-        },
         closeModal: function () {
             this.$store.state.modalvalidation.item = null
             this.$store.state.modalvalidation.massage = null

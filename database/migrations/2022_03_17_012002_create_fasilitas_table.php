@@ -13,7 +13,7 @@ class CreateFasilitasTable extends Migration
      */
     public function up()
     {
-        Schema::create('fasilitas', function (Blueprint $table) {
+        Schema::create('form', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->enum('type', ['video', 'img']);
@@ -29,6 +29,6 @@ class CreateFasilitasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fasilitas');
+        Schema::dropIfExists('form');
     }
 }
