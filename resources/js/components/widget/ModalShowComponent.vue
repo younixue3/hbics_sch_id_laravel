@@ -9,11 +9,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
                 <div class="p-5 w-full">
-                    <img class="h-96 rounded-2xl" v-if="$store.state.modal.modalshow.type === 'img'"
-                         :src="$store.state.modal.modalshow.item">
-                    <video class="h-96 rounded-2xl" v-if="$store.state.modal.modalshow.type === 'video'">
-                        <source :src="$store.state.modal.modalshow.item">
-                    </video>
+                    <slot></slot>
                 </div>
             </div>
         </div>

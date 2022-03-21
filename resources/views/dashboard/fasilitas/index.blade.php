@@ -21,6 +21,13 @@
         </mac-card-component>
     </div>
 @endsection
+@section('modalShow')
+    <img class="h-96 rounded-2xl" v-if="$store.state.modal.modalshow.type === 'img'"
+         :src="$store.state.modal.modalshow.item">
+    <video class="h-96 rounded-2xl" v-if="$store.state.modal.modalshow.type === 'video'">
+        <source :src="$store.state.modal.modalshow.item">
+    </video>
+@endsection
 @section('modalEdit')
     <div class="mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2">
         <input type="file" name="fileupload" id="fileupload" class="block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer

@@ -96,7 +96,7 @@ Vue.component('fasilitas-component', require('./components/widget/FasilitasCompo
 Vue.component('mac-card-component', require('./components/widget/MacCardComponent').default)
 Vue.component('nav-bar-dash-component', require('./components/layout/NavBarDashComponent').default)
 Vue.component('card-fasilitas-component', require('./components/widget/CardFasilitasComponent').default)
-Vue.component('modal-show-fasilitas-component', require('./components/widget/fasilitas/ModalShowFasilitasComponent').default)
+Vue.component('modal-show-component', require('./components/widget/ModalShowComponent').default)
 Vue.component('notification-component', require('./components/widget/NotificationComponent').default)
 
 Vue.component('button-add-function', require('./components/function/ButtonAddFunction').default)
