@@ -2071,6 +2071,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -2098,6 +2099,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _form_ModalDeleteFunction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form/ModalDeleteFunction */ "./resources/js/components/function/form/ModalDeleteFunction.vue");
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2176,6 +2183,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -2214,6 +2229,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   methods: {}
 });
@@ -2231,6 +2247,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3930,6 +3954,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3940,7 +3967,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['type', 'message'],
   mounted: function mounted() {
     setTimeout(this.timesup, 20000);
-    setTimeout(this.hideup, 20100); // this.timesup()
+    setTimeout(this.hideup, 21000); // this.timesup()
   },
   methods: {
     timesup: function timesup() {
@@ -3950,6 +3977,11 @@ __webpack_require__.r(__webpack_exports__);
     hideup: function hideup() {
       var hidedata = this;
       hidedata.hidden = false;
+    },
+    closeNotif: function closeNotif() {
+      var local = this;
+      this.timeout = false;
+      setTimeout(this.hidden = false, 1000); // setTimeout(this.hideup, 1000)
     }
   }
 });
@@ -4304,6 +4336,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
 //
 //
 //
@@ -10544,46 +10580,50 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.hidden
-    ? _c(
-        "div",
-        {
-          staticClass:
-            "m-3 ml-0 md:w-96 text-left border-b-8 mx-auto flex transition-all ease-in-out duration-1000",
-          class: [
-            _vm.type === "error"
-              ? "bg-red-100 text-red-700 border-red-600"
-              : _vm.type === "success"
-              ? "bg-green-100 text-green-700 border-green-600"
-              : _vm.type === "info"
-              ? "bg-blue-100 text-blue-700 border-blue-600"
-              : "",
-            _vm.timeout ? "opacity-100" : "opacity-0",
-          ],
+  return _c(
+    "div",
+    {
+      staticClass:
+        "m-3 ml-0 md:w-96 text-left border-b-8 mx-auto flex transition-all ease-in-out duration-1000 cursor-pointer",
+      class: [
+        _vm.type === "error"
+          ? "bg-red-100 text-red-700 border-red-600"
+          : _vm.type === "success"
+          ? "bg-green-100 text-green-700 border-green-600"
+          : _vm.type === "info"
+          ? "bg-blue-100 text-blue-700 border-blue-600"
+          : "",
+        _vm.timeout ? "opacity-100" : "opacity-0",
+      ],
+      on: {
+        click: function ($event) {
+          return _vm.closeNotif()
         },
-        [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "px-1 py-2" }, [
-            _c("h1", { staticClass: "text-sm lg:text-base" }, [
-              _vm._v(
-                _vm._s(
-                  _vm.type === "error"
-                    ? "Error"
-                    : _vm.type === "success"
-                    ? "Success"
-                    : _vm.type === "info"
-                    ? "Info"
-                    : ""
-                )
-              ),
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "text-xs" }, [_vm._v(_vm._s(_vm.message))]),
-          ]),
-        ]
-      )
-    : _vm._e()
+      },
+    },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "px-1 py-2" }, [
+        _c("h1", { staticClass: "text-sm lg:text-base" }, [
+          _vm._v(
+            "\n            " +
+              _vm._s(
+                _vm.type === "error"
+                  ? "Error"
+                  : _vm.type === "success"
+                  ? "Success"
+                  : _vm.type === "info"
+                  ? "Info"
+                  : ""
+              )
+          ),
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-xs" }, [_vm._v(_vm._s(_vm.message))]),
+      ]),
+    ]
+  )
 }
 var staticRenderFns = [
   function () {

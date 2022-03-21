@@ -73,5 +73,8 @@
             <notification-component type="error" message="{{$error}}"></notification-component>
         @empty
         @endforelse
+        @if(session()->has('success'))
+            <notification-component type="success" message="{{ session()->get('success') }}"></notification-component>
+        @endif
     </div>
 @endsection
