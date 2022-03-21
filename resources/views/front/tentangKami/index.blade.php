@@ -33,7 +33,8 @@
         </div>
     </div>
     <div class="mt-10 px-5 lg:px-16 xl:px-32 text-left">
-        <h1 class="text-3xl font-bold hover:after:content-['_↗']"><a href="{{route('filosofi-pendidikan')}}">Sekolah K.A.R.Y.A</a></h1>
+        <h1 class="text-3xl font-bold hover:after:content-['_↗']"><a href="{{route('filosofi-pendidikan')}}">Sekolah
+                K.A.R.Y.A</a></h1>
         <p class="font-light text-sm mt-5 mb-2">“Sekolah K.A.R.Y.A” merupakan filosofi dan arah pendidikan terbaru yang
             ditetapkan oleh segenap jajaran kepemimpinan Yayasan Tunas Cahaya Bangsa untuk diterapkan di lingkungan
             KB-TK Happy Holy Kids dan SD Kristen – SMA Kristen Harapan Bangsa Balikpapan sejak bulan Maret 2020. </p>
@@ -44,7 +45,8 @@
         <img class="md:h-full lg:h-[40rem] lg:w-2/5 mb-10 lg:mb-0 object-cover"
              src="{{asset('assets/stock_photo_rdev/IMG_7266.webp')}}">
         <div class="m-auto px-5 lg:pl-10">
-            <h3 class="text-3xl font-bold hover:after:content-['_↗']"><a href="{{route('sejarah')}}">Sejarah Sekolah Harapan Bangsa</a></h3>
+            <h3 class="text-3xl font-bold hover:after:content-['_↗']"><a href="{{route('sejarah')}}">Sejarah Sekolah
+                    Harapan Bangsa</a></h3>
             <div class="flex flex-col gap-y-2 pt-5 text-sm font-light">
                 <p>
                     Sekolah Kristen Harapan Bangsa pertama kali Sekolah Dasar Harapan Bangsa didirikan pada tahun 2008
@@ -66,7 +68,8 @@
                 </p>
                 <a class="font-normal text-sky-800" href="{{route('sejarah')}}">Read More<i
                         class="ml-1 fa-solid fa-circle-arrow-right"></i></a>
-                <h3 class="text-3xl mt-5 font-bold hover:after:content-['_↗']"><a href="{{route('visi-misi')}}">Visi & Misi</a></h3>
+                <h3 class="text-3xl mt-5 font-bold hover:after:content-['_↗']"><a href="{{route('visi-misi')}}">Visi &
+                        Misi</a></h3>
                 <span class="block">Visi :</span>
                 <span>
                     Menjadi sekolah <span class="font-semibold">terbaik dalam layanan</span>, maksimal mencerdaskan generasi berkarakter <span
@@ -102,13 +105,15 @@
             <div class="absolute text-center">
                 <div class="flex h-72 md:h-96">
                     <div class="m-auto">
-                        <h1 class="text-3xl md:text-5xl font-semibold hover:after:content-['_↗']"><a href="{{route('metode-pembelajaran')}}">Metode
+                        <h1 class="text-3xl md:text-5xl font-semibold hover:after:content-['_↗']"><a
+                                href="{{route('metode-pembelajaran')}}">Metode
                                 Pembelajaran</a></h1>
                         <p class="px-5 md:px-24 xl:px-72 text-sm md:text-base font-light my-2 overflow-hidden h-20 leading-4">
                             Kurikulum Cambridge yang diadaptasi oleh Sekolah Kristen Harapan Bangsa bertujuan untuk
                             menciptakan generasi yang siap dalam persaingan global. Sesuai namanya, kurikulum Cambridge
                             berasal dari organisasi yang ada di Universitas Cambridge, Inggris.</p>
-                        <a class="font-normal" href="{{route('metode-pembelajaran')}}">Read More<i class="ml-1 fa-solid fa-circle-arrow-right"></i></a>
+                        <a class="font-normal" href="{{route('metode-pembelajaran')}}">Read More<i
+                                class="ml-1 fa-solid fa-circle-arrow-right"></i></a>
                     </div>
                 </div>
             </div>

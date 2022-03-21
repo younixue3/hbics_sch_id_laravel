@@ -25,11 +25,13 @@
         <div class="md:px-20 my-10">
             <div class="grid md:grid-rows-6 grid-cols-1 md:grid-cols-3 gap-5">
                 <div class="md:row-span-2">
-                    <img class="md:h-[49.25rem] w-full object-cover rounded-2xl" src="{{asset('assets/stock_photo_rdev/CTA.webp')}}">
+                    <img class="md:h-[49.25rem] w-full object-cover rounded-2xl"
+                         src="{{asset('assets/stock_photo_rdev/CTA.webp')}}">
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>
@@ -43,11 +45,13 @@
                     </div>
                 </div>
                 <div class="md:row-span-1">
-                    <img class="md:h-96 w-full object-cover rounded-2xl" src="{{asset('assets/stock_photo_rdev/chris-ried-bN5XdU-bap4-unsplash.webp')}}">
+                    <img class="md:h-96 w-full object-cover rounded-2xl"
+                         src="{{asset('assets/stock_photo_rdev/chris-ried-bN5XdU-bap4-unsplash.webp')}}">
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>
@@ -67,7 +71,8 @@
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>
@@ -81,11 +86,13 @@
                     </div>
                 </div>
                 <div class="md:row-span-1">
-                    <img class="md:h-96 w-full object-cover rounded-2xl" src="{{asset('assets/stock_photo_rdev/marvin-meyer-SYTO3xs06fU-unsplash.webp')}}">
+                    <img class="md:h-96 w-full object-cover rounded-2xl"
+                         src="{{asset('assets/stock_photo_rdev/marvin-meyer-SYTO3xs06fU-unsplash.webp')}}">
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>
@@ -99,11 +106,13 @@
                     </div>
                 </div>
                 <div class="md:row-span-2">
-                    <img class="md:h-[49.25rem] w-full object-cover rounded-2xl" src="{{asset('assets/stock_photo_rdev/luca-bravo-XJXWbfSo2f0-unsplash.webp')}}">
+                    <img class="md:h-[49.25rem] w-full object-cover rounded-2xl"
+                         src="{{asset('assets/stock_photo_rdev/luca-bravo-XJXWbfSo2f0-unsplash.webp')}}">
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>
@@ -117,11 +126,13 @@
                     </div>
                 </div>
                 <div class="md:row-span-1">
-                    <img class="md:h-96 w-full object-cover rounded-2xl" src="{{asset('assets/stock_photo_rdev/alex-knight-2EJCSULRwC8-unsplash.webp')}}">
+                    <img class="md:h-96 w-full object-cover rounded-2xl"
+                         src="{{asset('assets/stock_photo_rdev/alex-knight-2EJCSULRwC8-unsplash.webp')}}">
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>
@@ -141,7 +152,8 @@
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>
@@ -155,11 +167,13 @@
                     </div>
                 </div>
                 <div class="md:row-span-1">
-                    <img class="md:h-96 w-full object-cover rounded-2xl" src="{{asset('assets/stock_photo_rdev/domenico-loia-hGV2TfOh0ns-unsplash.webp')}}">
+                    <img class="md:h-96 w-full object-cover rounded-2xl"
+                         src="{{asset('assets/stock_photo_rdev/domenico-loia-hGV2TfOh0ns-unsplash.webp')}}">
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>
@@ -173,11 +187,13 @@
                     </div>
                 </div>
                 <div class="md:row-span-2">
-                    <img class="md:h-[49.25rem] w-full object-cover rounded-2xl" src="{{asset('assets/stock_photo_rdev/austin-poon-JO_S6ewBqAk-unsplash.webp')}}">
+                    <img class="md:h-[49.25rem] w-full object-cover rounded-2xl"
+                         src="{{asset('assets/stock_photo_rdev/austin-poon-JO_S6ewBqAk-unsplash.webp')}}">
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>
@@ -197,7 +213,8 @@
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>
@@ -211,11 +228,13 @@
                     </div>
                 </div>
                 <div class="md:row-span-2">
-                    <img class="md:h-[49.25rem] w-full object-cover rounded-2xl" src="{{asset('assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp')}}">
+                    <img class="md:h-[49.25rem] w-full object-cover rounded-2xl"
+                         src="{{asset('assets/stock_photo_rdev/andras-vas-Bd7gNnWJBkU-unsplash.webp')}}">
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>
@@ -235,7 +254,8 @@
                     <div class="h-36 px-3 py-2 pt-3">
                         <div class="w-full flex justify-between mb-1">
                             <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
+                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                     src="{{asset('assets/stock_photo_rdev/JaneDoe.webp')}}">
                                 <div class="m-auto text-xs md:text-base truncate">
                                     Ricko Tiaka
                                 </div>

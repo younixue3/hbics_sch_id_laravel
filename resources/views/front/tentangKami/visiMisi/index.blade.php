@@ -8,10 +8,11 @@
                 <div class="bg-white rounded-3xl shadow-xl p-5">
                     <span class="block">Visi :</span>
                     <div class="my-2">
-                    Menjadi sekolah <span class="font-semibold">terbaik dalam layanan</span>, maksimal mencerdaskan generasi berkarakter <span
+                        Menjadi sekolah <span class="font-semibold">terbaik dalam layanan</span>, maksimal mencerdaskan
+                        generasi berkarakter <span
                             class="font-semibold">Kristus</span> yang menghasilkan <span
                             class="font-semibold">karya unggul</span> bagi Indonesia.
-                </div>
+                    </div>
                     <span class="block">Misi :</span>
                     <ol class="leading-6 my-5">
                         <li><i class="fas fa-check-circle text-green-600 mr-3"></i><span class="font-semibold">Membangun karakter</span>

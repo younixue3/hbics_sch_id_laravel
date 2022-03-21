@@ -1,3 +1,4 @@
+
 @extends('layouts.front.master')
 @section('title', 'Filosofi Pendidikan')
 @section('content')

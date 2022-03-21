@@ -4,7 +4,8 @@
             <source :src="name">
         </video>
         <img v-if="type === 'img'" class="w-full h-60 rounded-xl object-cover" :src="name">
-        <div class="absolute right-1/2 bottom-2 translate-x-1/2 grid grid-cols-3 gap-x-5 bg-white rounded-lg shadow-lg px-2 py-0.5 text-base text-center opacity-0 group-hover:opacity-100 group-hover:bottom-1 transition-all ease-in-out duration-500">
+        <div
+            class="absolute right-1/2 bottom-2 translate-x-1/2 grid grid-cols-3 gap-x-5 bg-white rounded-lg shadow-lg px-2 py-0.5 text-base text-center opacity-0 group-hover:opacity-100 group-hover:bottom-1 transition-all ease-in-out duration-500">
             <div>
                 <div class="cursor-pointer" @click="openModalEdit()">
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -34,7 +35,7 @@ export default {
         }
     },
     props: ['name', 'type', 'delete_req', 'edit_req'],
-    methods : {
+    methods: {
         openModalValidation: function () {
             this.$store.state.modalvalidation.url.url_req = this.$props.delete_req
             this.$store.state.modalvalidation.url.validation_form = "formDelete"

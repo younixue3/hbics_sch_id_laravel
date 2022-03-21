@@ -18,10 +18,10 @@ class FasilitasController extends Controller
 
     public function store_data($request)
     {
-        $fasilitas = New Fasilitas();
+        $fasilitas = new Fasilitas();
         if ($request->fileupload != null) {
             $filename = getFilename::getFilename($request);
-            Storage::disk('upload')->putFileAs('fasilitas_assets', $request->fileupload , $filename['filename']);
+            Storage::disk('upload')->putFileAs('fasilitas_assets', $request->fileupload, $filename['filename']);
             $fasilitas->name = $filename['filename'];
             $fasilitas->type = $filename['type'];
         };
@@ -34,7 +34,7 @@ class FasilitasController extends Controller
         $fasilitas = Fasilitas::findOrFail($id);
         if ($request->fileupload != null) {
             $filename = getFilename::getFilename($request);
-            Storage::disk('upload')->putFileAs('fasilitas_assets', $request->fileupload , $filename['filename']);
+            Storage::disk('upload')->putFileAs('fasilitas_assets', $request->fileupload, $filename['filename']);
             $fasilitas->name = $filename['filename'];
             $fasilitas->type = $filename['type'];
         };

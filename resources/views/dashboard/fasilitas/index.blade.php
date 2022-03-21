@@ -4,10 +4,13 @@
     <button-add-function add_req="{{route('dashboard.fasilitas.store')}}"></button-add-function>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
         <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12">
-{{--            {{$errors['fileupload']}}--}}
+            {{--            {{$errors['fileupload']}}--}}
             <div class="grid grid-cols-1 md:grid-cols-4 gap-2 px-3">
                 @forelse($data as $key => $value)
-                    <card-fasilitas-component name="{{asset('Upload/fasilitas_assets/'. $value->name)}}" type="{{$value->type}}" delete_req="{{route('dashboard.fasilitas.destroy', $value->id)}}" edit_req="{{route('dashboard.fasilitas.update', $value->id)}}"></card-fasilitas-component>
+                    <card-fasilitas-component name="{{asset('Upload/fasilitas_assets/'. $value->name)}}"
+                                              type="{{$value->type}}"
+                                              delete_req="{{route('dashboard.fasilitas.destroy', $value->id)}}"
+                                              edit_req="{{route('dashboard.fasilitas.update', $value->id)}}"></card-fasilitas-component>
                 @empty
                     <h3 class="m-auto">Data Kosong</h3>
                 @endforelse

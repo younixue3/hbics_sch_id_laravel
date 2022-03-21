@@ -51,9 +51,7 @@
     })
     export default {
         data() {
-            return {
-
-            }
+            return {}
         },
         methods: {
             closeModal: function () {
