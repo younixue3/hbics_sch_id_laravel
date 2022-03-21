@@ -126,7 +126,7 @@
                 belajar mengajar di sekolah. Sekolah Kristen Harapan Bangsa Balikpapan dan Happy Holy Kids Balikpapan
                 menyediakan fasilitas terbaik untuk menunjang kegiatan belajar mengajar siswa/i.</p>
         </div>
-        <snap-component></snap-component>
+        <snap-component url="{{route('api.getFasilitas')}}" asset="{{asset('Upload/fasilitas_assets')}}/"></snap-component>
     </div>
     <div class="my-20 bg-gray-200 h-full text-center py-10">
         <h3 class="mb-10 text-xl md:text-3xl uppercase">Our Partnership</h3>

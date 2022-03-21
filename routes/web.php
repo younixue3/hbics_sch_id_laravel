@@ -33,7 +33,7 @@ Route::get('/sejarah', [App\Http\Controllers\Front\TentangKamiController::class,
 Route::get('/visi-misi', [App\Http\Controllers\Front\TentangKamiController::class, 'visiMisi'])->name('visi-misi');
 Route::get('/filosofi-pendidikan', [App\Http\Controllers\Front\TentangKamiController::class, 'filosofiPendidikan'])->name('filosofi-pendidikan');
 Route::get('/metode-pembelajaran', [App\Http\Controllers\Front\TentangKamiController::class, 'metodePembelajaran'])->name('metode-pembelajaran');
-Route::get('/form', [App\Http\Controllers\Front\TentangKamiController::class, 'fasilitas'])->name('form');
+Route::get('/fasilitas', [App\Http\Controllers\Front\TentangKamiController::class, 'fasilitas'])->name('form');
 //////////Hubungi Kami
 Route::get('/hubungi-kami', [App\Http\Controllers\Front\HubungiKamiController::class, 'index'])->name('hubungi-kami');
 //////////Pendaftaran

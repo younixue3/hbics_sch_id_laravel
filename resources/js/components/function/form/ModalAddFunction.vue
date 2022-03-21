@@ -38,9 +38,7 @@ export default {
     },
     methods: {
         closeModal: function () {
-            // this.$store.state.modal.modaledit = null
-            // this.$store.state.modal.modaledit.type = null
-            this.$store.commit('toggleModalEdit')
+            this.$store.commit('toggleModalAdd')
         },
         submitModal: function () {
             this.$store.state.modalvalidation.massage = "Apakah anda yakin menambahkan data ini?"

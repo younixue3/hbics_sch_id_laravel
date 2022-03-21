@@ -26,3 +26,8 @@ Route::get('getUrl', function () {
 Route::get('getUrlDashboard', function () {
     return response()->json(getUrlDashboard::getUrl());
 });
+
+//DATA API GET
+
+Route::get('getFasilitas', [\App\Http\Controllers\Front\Data\api\FasilitasController::class, 'getFasilitas'])->name('api.getFasilitas');
+Route::get('getFasilitasAll', [\App\Http\Controllers\Front\Data\api\FasilitasController::class, 'getFasilitasAll'])->name('api.getFasilitasAll');

@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 /*
-! tailwindcss v3.0.18 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
 */
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -639,17 +639,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mb-36{
   margin-bottom: -9rem;
 }
-.ml-3{
-  margin-left: 0.75rem;
+.mb-2{
+  margin-bottom: 0.5rem;
 }
 .mt-10{
   margin-top: 2.5rem;
 }
 .mt-5{
   margin-top: 1.25rem;
-}
-.mb-2{
-  margin-bottom: 0.5rem;
 }
 .mb-10{
   margin-bottom: 2.5rem;
@@ -686,6 +683,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-6{
   margin-top: 1.5rem;
+}
+.ml-3{
+  margin-left: 0.75rem;
 }
 .ml-5{
   margin-left: 1.25rem;
@@ -918,6 +918,30 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[35rem\]{
   width: 35rem;
 }
+.w-56{
+  width: 14rem;
+}
+.w-\[38rem\]{
+  width: 38rem;
+}
+.w-\[36rem\]{
+  width: 36rem;
+}
+.w-\[364rem\]{
+  width: 364rem;
+}
+.w-\[34rem\]{
+  width: 34rem;
+}
+.w-\[30rem\]{
+  width: 30rem;
+}
+.w-\[25rem\]{
+  width: 25rem;
+}
+.w-\[27rem\]{
+  width: 27rem;
+}
 .max-w-6xl{
   max-width: 72rem;
 }
@@ -1051,9 +1075,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2458,17 +2479,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:block{
     display: block;
   }
-  .sm\:flex{
-    display: flex;
-  }
-  .sm\:hidden{
-    display: none;
-  }
   .sm\:h-20{
     height: 5rem;
-  }
-  .sm\:flex-1{
-    flex: 1 1 0%;
   }
   .sm\:items-center{
     align-items: center;
@@ -2589,9 +2601,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
   .md\:flex{
     display: flex;
-  }
-  .md\:inline-flex{
-    display: inline-flex;
   }
   .md\:grid{
     display: grid;

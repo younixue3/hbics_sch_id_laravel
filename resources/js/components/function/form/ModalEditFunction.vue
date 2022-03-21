@@ -37,8 +37,6 @@ export default {
     },
     methods: {
         closeModal: function () {
-            // this.$store.state.modal.modaledit = null
-            // this.$store.state.modal.modaledit.type = null
             this.$store.commit('toggleModalEdit')
         },
         submitModal: function () {

@@ -71,7 +71,7 @@
                     </svg>
                 </a>
             @else
-                <a href="#" disabled="true"
+                <a disabled
                    class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
                     <span class="sr-only">Next</span><!---->
                     <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"

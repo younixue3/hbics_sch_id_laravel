@@ -26,8 +26,7 @@ class TentangKamiController extends Controller
      */
     public function index()
     {
-        $datas = $this->data->get_data();
-        return view('front.tentangKami.index', $datas);
+        return view('front.tentangKami.index');
     }
 
     public function sejarah()
@@ -53,7 +52,7 @@ class TentangKamiController extends Controller
 
     public function fasilitas()
     {
-        return view('front.tentangKami.form.index');
+        return view('front.tentangKami.fasilitas.index');
     }
 
 }

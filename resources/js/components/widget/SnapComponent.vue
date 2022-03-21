@@ -2,11 +2,14 @@
     <div class="flex relative w-full py-3">
         <div ref="scrollsnap"
              class="snap-x flex gap-6 snap-mandatory overflow-x-auto overflow-y-hidden removescrollbar scroll-smooth pb-10 px-2">
-            <div v-for="(item, index) in arrTestimoni.testi" :id="'testing' + index"
+            <div v-for="(item, index) in arrFasilitas.fasilitas" :id="'testing' + index"
                  class="snap-center scroll-mx-6 shrink-0 md:mx-2 rounded-3xl shadow-xl">
                 <!--                <img class="h-44 lg:h-56 rounded-3xl" :src="item.image" />-->
                 <div class="flex relative">
-                    <img class="h-44 lg:h-56 rounded-3xl" :class="index === 5 ? 'blur-sm' : ''" :src="item.image"/>
+                    <img v-if="item.type === 'img'" class="h-44 lg:h-56 w-[27rem] object-cover rounded-3xl" :class="index === 5 ? 'blur-sm' : ''" :src="asset + item.name"/>
+                    <video v-if="item.type === 'video'" class="h-44 lg:h-56 w-[27rem] object-cover rounded-3xl" :class="index === 5 ? 'blur-sm' : ''">
+                        <source :src="asset + item.name">
+                    </video>
                     <a :href="fasilitaspath" class="absolute w-full h-full flex" v-if="index === 5">
                         <div class="m-auto text-3xl text-white">
                             Show More +
@@ -29,39 +32,24 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     data() {
         return {
-            fasilitaspath: window.location.origin + '/form',
+            fasilitaspath: window.location.origin + '/fasilitas',
             counter: 0,
             scrolcount: 0,
-            arrTestimoni: {
+            arrFasilitas: {
                 count: 0,
-                testi: [
-                    {
-                        image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80',
-                    },
-                    {
-                        image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80',
-                    },
-                    {
-                        image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80',
-                    },
-                    {
-                        image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80',
-                    },
-                    {
-                        image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80',
-                    },
-                    {
-                        image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80',
-                    },
-                ]
+                fasilitas: []
             },
         }
     },
-    mounted() {
-        // this.scrolcount = this.$refs.scrollsnap.scrollWidth
+    props: ['url', 'asset'],
+    created() {
+        axios
+            .get(this.$props.url)
+            .then(response => (this.arrFasilitas.fasilitas = response.data))
     },
     methods: {
         nextButton() {

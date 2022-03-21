@@ -37,7 +37,7 @@
         </label>
         <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300">
             <option disabled selected>--- Pilih Area ---</option>
-            <option>HHK</option>
+            <option>TK</option>
             <option>SD</option>
             <option>SMP</option>
             <option>SMA</option>
@@ -60,7 +60,7 @@
         </label>
         <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300">
             <option disabled selected>--- Pilih Area ---</option>
-            <option>HHK</option>
+            <option>TK</option>
             <option>SD</option>
             <option>SMP</option>
             <option>SMA</option>
