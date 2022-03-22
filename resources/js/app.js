@@ -102,6 +102,8 @@ Vue.component('notification-component', require('./components/widget/Notificatio
 Vue.component('button-add-function', require('./components/function/ButtonAddFunction').default)
 Vue.component('button-show-component', require('./components/widget/ButtonShowComponent').default)
 
+Vue.component('form-staff-component', require('./components/widget/staff/FormStaffComponent').default)
+
 Vue.component('multiple-select-component', require('./components/widget/MutipleselectComponent').default)
 
 Vue.component('modal-add-function', require('./components/function/form/ModalAddFunction').default)
@@ -117,4 +119,9 @@ Vue.component('modal-edit-function', require('./components/function/form/ModalEd
 const app = new Vue({
     el: '#app',
     store: store,
+    computed: {
+        storeCall() {
+            return this.$store.state
+        }
+    }
 });

@@ -20,7 +20,7 @@
                             <td class="py-1 pl-4">
                                 <div class="flex items-center">
                                     <img class="h-8 w-8 mr-2 rounded-full"
-                                         src="{{asset('Upload/foto_profile') . '/' . $value->foto_profile()->img}}"
+                                         src="{{asset('Upload/foto_profile/') . $value->foto_profile()->img}}"
                                          alt="">
                                     <div class="text-left my-auto">
                                         {{$value->name}}
@@ -30,14 +30,14 @@
                             </td>
                             <td class="py-1 uppercase">{{$value->area}}</td>
                             <td class="py-1.5 grid grid-cols-3 gap-1">
-                                @foreach($value->roles_user()->get() as $key => $value)
+                                @foreach($value->roles_user()->get() as $key => $item)
                                     <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5">
-                                        {{$value->roles()->first()->name}}
+                                        {{$item->roles()->first()->name}}
                                     </span>
                                 @endforeach
                             </td>
                             <td class="py-1">
-                                <button-show-component></button-show-component>
+                                <button-show-component img="{{asset('Upload/foto_profile/'. $value->foto_profile()->img)}}" user="{{route('dashboard.staff.show', $value->randKey)}}"></button-show-component>
                             </td>
                         </tr>
                     @empty
@@ -52,7 +52,11 @@
     </div>
 @endsection
 @section('modalShow')
-
+    <form-staff-component>
+        <template v-slot:multicomponent>
+            <multiple-select-component disabled="true" class="col-start-1 col-span-2" nameoption="selectrole"></multiple-select-component>
+        </template>
+    </form-staff-component>
 @endsection
 @section('modalEdit')
 
@@ -97,7 +101,7 @@
             </label>
             <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="password" name="password_confirmation">
         </div>
-        <multiple-select-component valueoption="{{$role}}"></multiple-select-component>
+        <multiple-select-component class="col-start-1 col-span-2" nameoption="selectrole" valueoption="{{$role}}"></multiple-select-component>
     </div>
 @endsection
 @section('notification')

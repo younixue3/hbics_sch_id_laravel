@@ -9,6 +9,7 @@ use App\Models\FotoProfile;
 use App\Models\Roles;
 use App\Models\User;
 use App\Models\UsersRoles;
+use Database\Seeders\UsersRolesSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -26,7 +27,6 @@ class StaffController extends Controller
 
     public function store_data($request)
     {
-//        dd($request);
         $user = User::create([
             'randKey' => Str::random(40) . '_' . $request->name,
             'name' => $request->name,
@@ -41,10 +41,24 @@ class StaffController extends Controller
             $foto_profile->user = $user->id;
             $foto_profile->save();
         };
+        foreach (json_decode($request->selectrole) as $value) {
+            $userRole = new UsersRoles();
+            $userRole->user = $user->id;
+            $userRole->role = $value->id;
+            $userRole->save();
+        }
     }
 
     public function show_data($key)
     {
-        return User::findOrFail('randKey', $key);
+//        dd($key);
+        $arrrolesuser = [];
+        $user = User::where('randKey', $key)->firstOrFail();
+        $roles_user = $user->roles_user()->get();
+        foreach ($roles_user as $item) {
+            array_push($arrrolesuser, ['name' => $item->roles()->first()->name]);
+        }
+        $compact = compact('user', 'arrrolesuser');
+        return $compact;
     }
 }

@@ -21,7 +21,6 @@ class StaffController extends Controller
     public function index(Request $request)
     {
         $data = $this->data->get_data();
-//        dd($data);
         return view('dashboard.staff.index', $data);
     }
 
@@ -62,8 +61,7 @@ class StaffController extends Controller
     public function show($key)
     {
         $data = $this->data->show_data($key);
-        $compact = compact('data');
-        return view('dashboard.staff.index', $compact);
+        return response($data);
     }
 
     /**

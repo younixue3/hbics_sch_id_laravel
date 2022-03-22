@@ -5,14 +5,19 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
     data() {
         return {
         }
     },
-    props: ['user'],
+    props: ['user', 'img'],
     methods: {
         openModalShow: function () {
+            axios
+                .get(this.$props.user)
+                .then(response => (this.$store.state.modal.modalshow.item = response.data))
+            this.$store.state.modal.modalshow.img = this.$props.img
             this.$store.commit('toggleModalShow')
         }
     }
