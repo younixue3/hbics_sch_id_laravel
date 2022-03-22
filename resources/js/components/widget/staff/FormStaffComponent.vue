@@ -4,7 +4,7 @@
             <label class="block font-medium text-gray-700">
                 Name
             </label>
-            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="name" :value="$store.state.modal.modalshow.item.name">
+            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="name" :value="$store.state.modal.modalshow.item.user.name">
         </div>
         <div class="row-span-2">
             <label class="block font-medium text-gray-700">
@@ -16,7 +16,7 @@
             <label class="block font-medium text-gray-700">
                 Email
             </label>
-            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="email" name="email" :value="$store.state.modal.modalshow.item.email">
+            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="email" name="email" :value="$store.state.modal.modalshow.item.user.email">
         </div>
         <slot name="multicomponent"></slot>
     </div>

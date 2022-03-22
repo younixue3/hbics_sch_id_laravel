@@ -11545,7 +11545,7 @@ var render = function () {
           staticClass:
             "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
           attrs: { disabled: "", type: "text", name: "name" },
-          domProps: { value: _vm.$store.state.modal.modalshow.item.name },
+          domProps: { value: _vm.$store.state.modal.modalshow.item.user.name },
         }),
       ]),
       _vm._v(" "),
@@ -11570,7 +11570,7 @@ var render = function () {
           staticClass:
             "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
           attrs: { disabled: "", type: "email", name: "email" },
-          domProps: { value: _vm.$store.state.modal.modalshow.item.email },
+          domProps: { value: _vm.$store.state.modal.modalshow.item.user.email },
         }),
       ]),
       _vm._v(" "),
