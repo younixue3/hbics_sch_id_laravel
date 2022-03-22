@@ -14,7 +14,7 @@ class FasilitasSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('form')->insert([
+        DB::table('fasilitas')->insert([
             ['name' => 'pexels-宇航-钱-10641436.mp4', 'type' => 'video', 'area' => 'tk'],
             ['name' => 'chris-ried-bN5XdU-bap4-unsplash.webp', 'type' => 'img', 'area' => 'sd'],
             ['name' => 'marvin-meyer-SYTO3xs06fU-unsplash.webp', 'type' => 'img', 'area' => 'smp'],

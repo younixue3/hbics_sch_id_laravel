@@ -18,9 +18,11 @@ class StaffController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('dashboard.staff.index');
+        $data = $this->data->get_data();
+        $compact = compact('data');
+        return view('dashboard.staff.index', $compact);
     }
 
     /**
@@ -41,7 +43,10 @@ class StaffController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = $request->validate([
+            'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
+            'name' => ['required', 'max_length: 60']
+        ]);
     }
 
     /**
@@ -50,9 +55,11 @@ class StaffController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($key)
     {
-        //
+        $data = $this->data->show_data($key);
+        $compact = compact('data');
+        return view('dashboard.staff.index', $compact);
     }
 
     /**

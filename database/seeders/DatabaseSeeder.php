@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\FotoProfile;
 use Illuminate\Database\Seeder;
 use Database\Seeders\RoleSeeder;
 use Database\Seeders\UserSeeder;
@@ -18,7 +19,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             RoleSeeder::class,
-            FasilitasSeeder::class
+            UsersRolesSeeder::class,
+            FasilitasSeeder::class,
+            FotoProfileSeeder::class
         ]);
 
         // \App\Models\User::factory(10)->create();

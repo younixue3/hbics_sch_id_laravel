@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFasilitasTable extends Migration
+class CreateFotoProfileTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateFasilitasTable extends Migration
      */
     public function up()
     {
-        Schema::create('fasilitas', function (Blueprint $table) {
+        Schema::create('foto_profile', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->enum('type', ['video', 'img']);
-            $table->enum('area', ['tk', 'sd', 'smp', 'sma']);
+            $table->text('img');
+            $table->unsignedBigInteger('user');
+            $table->foreign('user')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateFasilitasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('form');
+        Schema::dropIfExists('foto_profile');
     }
 }

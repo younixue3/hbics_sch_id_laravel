@@ -20,6 +20,7 @@ class RoleSeeder extends Seeder
             ['name' => 'Author'],
             ['name' => 'Quality Assurance'],
             ['name' => 'Manager'],
+            ['name' => 'Super Admin'],
         ]);
     }
 }

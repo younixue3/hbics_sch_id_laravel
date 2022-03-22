@@ -5,34 +5,44 @@
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
         <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12">
             <div>
-                <table class="w-full text-center">
+                <table class="table-auto w-full text-center">
                     <thead class="bg-gray-100">
                     <tr>
                         <th class="py-1">Name</th>
                         <th class="py-1">Area</th>
-                        <th class="py-1">Role</th>
+                        <th class="py-1 w-96">Role</th>
                         <th class="py-1"></th>
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y-2 divide-gray-200">
-                    <tr class="hover:bg-blue-100 transition-all duration-200">
-                        <td class="py-1 pl-4">
-                            <div class="flex items-center">
-                                <img class="h-8 w-8 mr-2 rounded-full"
-                                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                     alt="">
-                                <div class="text-left my-auto">
-                                    Jane Doe
-                                    <div class="text-sm text-gray-500">janedoe@example.com</div>
+                    @forelse($data as $key => $value)
+                        <tr class="hover:bg-blue-50 transition-all duration-200">
+                            <td class="py-1 pl-4">
+                                <div class="flex items-center">
+                                    <img class="h-8 w-8 mr-2 rounded-full"
+                                         src="{{asset('Upload/foto_profile') . '/' . $value->foto_profile()->img}}"
+                                         alt="">
+                                    <div class="text-left my-auto">
+                                        {{$value->name}}
+                                        <div class="text-sm text-gray-500">{{$value->email}}</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td class="py-1">BackEnd Web Developer</td>
-                        <td class="py-1">Admin</td>
-                        <td class="py-1">
-                            <button-show-component></button-show-component>
-                        </td>
-                    </tr>
+                            </td>
+                            <td class="py-1 uppercase">{{$value->area}}</td>
+                            <td class="py-1.5 grid grid-cols-3 gap-1">
+                                @foreach($value->roles_user()->get() as $key => $value)
+                                    <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5">
+                                        {{$value->roles()->first()->name}}
+                                    </span>
+                                @endforeach
+                            </td>
+                            <td class="py-1">
+                                <button-show-component></button-show-component>
+                            </td>
+                        </tr>
+                    @empty
+                        Data kosong
+                    @endforelse
                     </tbody>
                 </table>
             </div>
@@ -42,10 +52,52 @@
     </div>
 @endsection
 @section('modalShow')
+
 @endsection
 @section('modalEdit')
+
 @endsection
 @section('modalAdd')
+    <div class="grid grid-cols-2 gap-5 text-left">
+        <div class="">
+            <label class="block font-medium text-gray-700">
+                Name
+            </label>
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="name">
+        </div>
+        <div class="row-span-2">
+            <label class="block font-medium text-gray-700">
+                Foto
+            </label>
+            <div class="mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2">
+                <input type="file" name="fileupload" id="fileupload" class="block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer
+                                  file:mr-4 file:py-2 file:px-4
+                                  file:rounded-full file:border-0
+                                  file:text-sm file:font-semibold
+                                  file:bg-violet-50 file:text-violet-700
+                                  hover:file:bg-violet-100
+                                "/>
+            </div>
+        </div>
+        <div class="">
+            <label class="block font-medium text-gray-700">
+                Email
+            </label>
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="email" name="email">
+        </div>
+        <div class="">
+            <label class="block font-medium text-gray-700">
+                Password
+            </label>
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="password">
+        </div>
+        <div class="col-start-1">
+            <label class="block font-medium text-gray-700">
+                Password
+            </label>
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="password_confirmation">
+        </div>
+    </div>
 @endsection
 @section('notification')
     <div class="fixed bottom-0 right-0 flex-row">
