@@ -7,7 +7,7 @@
             {{--            {{$errors['fileupload']}}--}}
             <div class="grid grid-cols-1 md:grid-cols-4 gap-2 px-3">
                 @forelse($data as $key => $value)
-                    <card-fasilitas-component name="{{asset('Upload/fasilitas_assets/'. $value->name)}}"
+                    <card-fasilitas-component name="{{asset('Upload/fasilitas_assets/'.  $value->name)}}"
                                               type="{{$value->type}}"
                                               delete_req="{{route('dashboard.fasilitas.destroy', $value->id)}}"
                                               edit_req="{{route('dashboard.fasilitas.update', $value->id)}}"></card-fasilitas-component>

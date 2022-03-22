@@ -20,7 +20,7 @@
                             <td class="py-1 pl-4">
                                 <div class="flex items-center">
                                     <img class="h-8 w-8 mr-2 rounded-full"
-                                         src="{{asset('Upload/foto_profile/') . $value->foto_profile()->img}}"
+                                         src="{{asset('Upload/foto_profile/'.$value->foto_profile()->img)}}"
                                          alt="">
                                     <div class="text-left my-auto">
                                         {{$value->name}}
