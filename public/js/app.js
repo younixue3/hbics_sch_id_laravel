@@ -4659,7 +4659,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-256b926a],\r\n.fade-rdev-leave-active[data-v-256b926a] {\r\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-256b926a],\r\n.fade-rdev-leave-to[data-v-256b926a] {\r\n    opacity: 0;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-256b926a],\n.fade-rdev-leave-active[data-v-256b926a] {\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-256b926a],\n.fade-rdev-leave-to[data-v-256b926a] {\n    opacity: 0;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -7208,85 +7208,77 @@ var render = function () {
               : "opacity-0",
           },
           [
-            _c(
-              "div",
-              { staticClass: "w-[35rem] bg-white m-auto rounded-3xl relative" },
-              [
+            _c("div", { staticClass: "bg-white m-auto rounded-3xl relative" }, [
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "transition-all ease-in-out duration-300 bg-gray-700 bg-opacity-50 hover:bg-opacity-75 w-10 h-10 text-white text-xl rounded-xl -mt-5 -mr-5 absolute right-0",
+                  on: { click: _vm.closeModal },
+                },
+                [_c("i", { staticClass: "fa-solid fa-xmark" })]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "p-5 w-full" }, [
+                _c("h1", [_vm._v("Add Data")]),
+                _vm._v(" "),
                 _c(
-                  "button",
+                  "form",
                   {
-                    staticClass:
-                      "transition-all ease-in-out duration-300 bg-gray-700 bg-opacity-50 hover:bg-opacity-75 w-10 h-10 text-white text-xl rounded-xl -mt-5 -mr-5 absolute right-0",
-                    on: { click: _vm.closeModal },
+                    attrs: {
+                      id: "formAdd",
+                      action: _vm.$store.state.modalvalidation.url.url_req,
+                      enctype: "multipart/form-data",
+                      name: "formAdd",
+                      method: "POST",
+                    },
                   },
-                  [_c("i", { staticClass: "fa-solid fa-xmark" })]
+                  [
+                    _c("input", {
+                      attrs: { type: "hidden", name: "_token" },
+                      domProps: { value: _vm.$store.state.csrf },
+                    }),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: { type: "hidden", name: "_method", value: "post" },
+                    }),
+                    _vm._v(" "),
+                    _vm._t("default"),
+                  ],
+                  2
                 ),
                 _vm._v(" "),
-                _c("div", { staticClass: "p-5 w-full" }, [
-                  _c("h1", [_vm._v("Add Data")]),
-                  _vm._v(" "),
+                _c("div", { staticClass: "mt-5 grid grid-cols-2 gap-5" }, [
                   _c(
-                    "form",
+                    "button",
                     {
-                      attrs: {
-                        id: "formAdd",
-                        action: _vm.$store.state.modalvalidation.url.url_req,
-                        enctype: "multipart/form-data",
-                        name: "formAdd",
-                        method: "POST",
-                      },
+                      staticClass:
+                        "bg-indigo-500 text-white text-center rounded-2xl shadow-md px-5 py-1 w-full",
+                      on: { click: _vm.submitModal },
                     },
                     [
-                      _c("input", {
-                        attrs: { type: "hidden", name: "_token" },
-                        domProps: { value: _vm.$store.state.csrf },
-                      }),
-                      _vm._v(" "),
-                      _c("input", {
-                        attrs: {
-                          type: "hidden",
-                          name: "_method",
-                          value: "post",
-                        },
-                      }),
-                      _vm._v(" "),
-                      _vm._t("default"),
-                    ],
-                    2
+                      _c("span", { staticClass: "align-text-top" }, [
+                        _vm._v("Submit"),
+                      ]),
+                    ]
                   ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "mt-5 grid grid-cols-2 gap-5" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass:
-                          "bg-indigo-500 text-white text-center rounded-2xl shadow-md px-5 py-1 w-full",
-                        on: { click: _vm.submitModal },
-                      },
-                      [
-                        _c("span", { staticClass: "align-text-top" }, [
-                          _vm._v("Submit"),
-                        ]),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        staticClass:
-                          "border-2 border-red-500 text-red-500 text-center rounded-2xl shadow-md px-5 py-1 w-full",
-                        on: { click: _vm.closeModal },
-                      },
-                      [
-                        _c("span", { staticClass: "align-text-top" }, [
-                          _vm._v("Cancel"),
-                        ]),
-                      ]
-                    ),
-                  ]),
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "border-2 border-red-500 text-red-500 text-center rounded-2xl shadow-md px-5 py-1 w-full",
+                      on: { click: _vm.closeModal },
+                    },
+                    [
+                      _c("span", { staticClass: "align-text-top" }, [
+                        _vm._v("Cancel"),
+                      ]),
+                    ]
+                  ),
                 ]),
-              ]
-            ),
+              ]),
+            ]),
           ]
         )
       : _vm._e(),
@@ -11540,7 +11532,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "grid grid-cols-2 gap-5 text-left" },
+    { staticClass: "grid grid-cols-2 gap-5 text-left w-[38rem]" },
     [
       _c("div", {}, [
         _c("label", { staticClass: "block font-medium text-gray-700" }, [

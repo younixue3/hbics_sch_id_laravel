@@ -62,7 +62,7 @@
 
 @endsection
 @section('modalAdd')
-    <div class="grid grid-cols-2 gap-5 text-left">
+    <div class="grid grid-cols-2 gap-5 text-left w-[38rem]">
         <div class="">
             <label class="block font-medium text-gray-700">
                 Name
@@ -93,15 +93,15 @@
             <label class="block font-medium text-gray-700">
                 Area
             </label>
-            <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300">
+            <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
                 <option disabled selected>--- Pilih Area ---</option>
-                <option>TK</option>
-                <option>SD</option>
-                <option>SMP</option>
-                <option>SMA</option>
-                <option>QRD</option>
-                <option>FINANCE</option>
-                <option>HRGA</option>
+                <option>hhk</option>
+                <option>sd</option>
+                <option>smp</option>
+                <option>sma</option>
+                <option>qrd</option>
+                <option>finance</option>
+                <option>hrga</option>
             </select>
         </div>
         <div class="col-start-1">

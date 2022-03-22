@@ -27,10 +27,12 @@ class StaffController extends Controller
 
     public function store_data($request)
     {
+//        dd($request->area);
         $user = User::create([
             'randKey' => Str::random(40) . '_' . $request->name,
             'name' => $request->name,
             'email' => $request->email,
+            'area' => 'qrd',
             'password' => $request->password
         ]);
         if ($request->fileupload != null) {

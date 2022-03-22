@@ -933,6 +933,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-24{
   width: 6rem;
 }
+.w-\[38rem\]{
+  width: 38rem;
+}
 .max-w-6xl{
   max-width: 72rem;
 }

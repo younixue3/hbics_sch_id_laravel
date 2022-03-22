@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-2 gap-5 text-left">
+    <div class="grid grid-cols-2 gap-5 text-left w-[38rem]">
         <div class="">
             <label class="block font-medium text-gray-700">
                 Name
