@@ -3997,7 +3997,16 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
-    selectOption: function selectOption() {}
+    selectOption: function selectOption(click) {
+      this.arrOption = [];
+      this.arrValOption[click].status = this.arrValOption[click].status === false;
+
+      for (var item in this.arrValOption) {
+        if (this.arrValOption[item].status === true) {
+          this.arrOption.push(this.arrValOption[item].name);
+        }
+      }
+    }
   }
 });
 
@@ -10855,9 +10864,19 @@ var render = function () {
       "div",
       { staticClass: "rounded-md border p-2 grid grid-cols-3" },
       _vm._l(_vm.arrValOption, function (item, index) {
-        return _c("button", { staticClass: "bg-blue-100" }, [
-          _vm._v(_vm._s(item.name)),
-        ])
+        return _c(
+          "button",
+          {
+            staticClass: "bg-blue-100",
+            attrs: { type: "button" },
+            on: {
+              click: function ($event) {
+                return _vm.selectOption(index)
+              },
+            },
+          },
+          [_vm._v(_vm._s(item.name))]
+        )
       }),
       0
     ),

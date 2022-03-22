@@ -2,7 +2,7 @@
     <div>
         <input type="hidden" :name="nameOption" :value="arrOption">
         <div class="rounded-md border p-2 grid grid-cols-3">
-            <button class="bg-blue-100" v-for="(item, index) in arrValOption">{{item.name}}</button>
+            <button type="button" @click="selectOption(index)" class="bg-blue-100" v-for="(item, index) in arrValOption">{{item.name}}</button>
         </div>
     </div>
 </template>
@@ -23,8 +23,15 @@ export default {
         }
     },
     methods: {
-        selectOption: function () {
+        selectOption: function (click) {
+            this.arrOption = []
+            this.arrValOption[click].status = this.arrValOption[click].status === false
 
+            for (let item in this.arrValOption) {
+                if (this.arrValOption[item].status === true) {
+                    this.arrOption.push(this.arrValOption[item].name)
+                }
+            }
         }
     }
 }
