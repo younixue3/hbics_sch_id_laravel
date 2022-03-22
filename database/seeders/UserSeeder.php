@@ -22,6 +22,7 @@ class UserSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'randKey' => Str::random(40).'_admin',
             'password' => Hash::make('password'),
+            'is_super_admin' => true
         ]);
     }
 }

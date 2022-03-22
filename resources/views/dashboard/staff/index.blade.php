@@ -19,7 +19,7 @@
                         <tr class="hover:bg-blue-50 transition-all duration-200">
                             <td class="py-1 pl-4">
                                 <div class="flex items-center">
-                                    <img class="h-8 w-8 mr-2 rounded-full"
+                                    <img class="h-8 w-8 mr-2 rounded-full object-cover"
                                          src="{{asset('Upload/foto_profile/'.$value->foto_profile()->img)}}"
                                          alt="">
                                     <div class="text-left my-auto">
@@ -37,7 +37,8 @@
                                 @endforeach
                             </td>
                             <td class="py-1">
-                                <button-show-component img="{{asset('Upload/foto_profile/'. $value->foto_profile()->img)}}" user="{{route('dashboard.staff.show', $value->randKey)}}"></button-show-component>
+                                <button-show-component img="{{asset('Upload/foto_profile/'. $value->foto_profile()->img)}}" user="{{route('dashboard.staff.show', $value->randKey)}}"
+                                    delete_req="{{route('dashboard.staff.destroy', $value->randKey)}}" edit_req="{{route('dashboard.staff.update', $value->randKey)}}" change_password_req="{{route('dashboard.staff.update', $value->randKey)}}"></button-show-component>
                             </td>
                         </tr>
                     @empty
@@ -59,11 +60,8 @@
     </form-staff-component>
 @endsection
 @section('modalEdit')
-
-@endsection
-@section('modalAdd')
-    <div class="grid grid-cols-2 gap-5 text-left w-[38rem]">
-        <div class="">
+    <div class="grid grid-cols-3 gap-5 text-left w-[42rem]">
+        <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Name
             </label>
@@ -83,13 +81,13 @@
                                 "/>
             </div>
         </div>
-        <div class="">
+        <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Email
             </label>
             <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="email" name="email">
         </div>
-        <div class="col-start-1">
+        <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Area
             </label>
@@ -104,17 +102,87 @@
                 <option>hrga</option>
             </select>
         </div>
-        <div class="col-start-1">
+        <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Password
             </label>
             <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="password" name="password">
         </div>
-        <div class="col-start-1">
+        <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Password
             </label>
             <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="password" name="password_confirmation">
+        </div>
+        <div class="col-start-1 col-span-2 flex justify-self-start px-5">
+            <input class="m-auto rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="checkbox" name="is_super_admin">
+            <label class="ml-2 w-full font-medium text-gray-700 text-sm">
+                Is Superadmin
+            </label>
+        </div>
+        <multiple-select-component class="col-start-1 col-span-2" nameoption="selectrole" valueoption="{{$role}}"></multiple-select-component>
+    </div>
+@endsection
+@section('modalAdd')
+    <div class="grid grid-cols-3 gap-5 text-left w-[42rem]">
+        <div class="col-start-1 col-span-2">
+            <label class="block font-medium text-gray-700">
+                Name
+            </label>
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="name">
+        </div>
+        <div class="row-span-2">
+            <label class="block font-medium text-gray-700">
+                Foto
+            </label>
+            <div class="mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2">
+                <input type="file" name="fileupload" id="fileupload" class="block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer
+                                  file:mr-4 file:py-2 file:px-4
+                                  file:rounded-full file:border-0
+                                  file:text-sm file:font-semibold
+                                  file:bg-violet-50 file:text-violet-700
+                                  hover:file:bg-violet-100
+                                "/>
+            </div>
+        </div>
+        <div class="col-start-1 col-span-2">
+            <label class="block font-medium text-gray-700">
+                Email
+            </label>
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="email" name="email">
+        </div>
+        <div class="col-start-1 col-span-2">
+            <label class="block font-medium text-gray-700">
+                Area
+            </label>
+            <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
+                <option disabled selected>--- Pilih Area ---</option>
+                <option>hhk</option>
+                <option>sd</option>
+                <option>smp</option>
+                <option>sma</option>
+                <option>qrd</option>
+                <option>finance</option>
+                <option>hrga</option>
+            </select>
+        </div>
+        <div class="col-start-1 col-span-2">
+            <label class="block font-medium text-gray-700">
+                Password
+            </label>
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="password" name="password">
+        </div>
+        <div class="col-start-1 col-span-2">
+            <label class="block font-medium text-gray-700">
+                Password
+            </label>
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="password" name="password_confirmation">
+        </div>
+        <div class="col-start-1 col-span-2 flex justify-self-start px-5">
+            <input class="m-auto rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="checkbox" name="is_super_admin">
+            <label class="ml-2 w-full font-medium text-gray-700 text-sm">
+                Is Superadmin
+            </label>
         </div>
         <multiple-select-component class="col-start-1 col-span-2" nameoption="selectrole" valueoption="{{$role}}"></multiple-select-component>
     </div>

@@ -19,6 +19,7 @@ class CreateFasilitasTable extends Migration
             $table->enum('type', ['video', 'img']);
             $table->enum('area', ['tk', 'sd', 'smp', 'sma']);
             $table->timestamps();
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
         });
     }
 

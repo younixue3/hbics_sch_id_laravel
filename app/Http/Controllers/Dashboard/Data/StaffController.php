@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\UsersRoles;
 use Database\Seeders\UsersRolesSeeder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -27,13 +28,14 @@ class StaffController extends Controller
 
     public function store_data($request)
     {
-//        dd($request->area);
+//        dd($request);
         $user = User::create([
             'randKey' => Str::random(40) . '_' . $request->name,
             'name' => $request->name,
             'email' => $request->email,
-            'area' => 'qrd',
-            'password' => $request->password
+            'area' => $request->area,
+            'password' => Hash::make($request->password),
+            'is_super_admin' => $request->is_super_admin === 'on'
         ]);
         if ($request->fileupload != null) {
             $foto_profile = new FotoProfile();
@@ -62,5 +64,10 @@ class StaffController extends Controller
         }
         $compact = compact('user', 'arrrolesuser');
         return $compact;
+    }
+
+    public function destroy_data($key)
+    {
+        return User::where('randKey', $key)->delete();
     }
 }

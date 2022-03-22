@@ -45,7 +45,7 @@ class StaffController extends Controller
         $validator = $request->validate([
             'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
             'name' => ['required', 'max: 60'],
-            'email' => ['required', 'email:rfc,dns'],
+            'email' => 'email',
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
         $data = $this->data->store_data($request);
@@ -82,7 +82,7 @@ class StaffController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $key)
     {
         //
     }
@@ -93,8 +93,9 @@ class StaffController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($key)
     {
-        //
+        $data = $this->data->destroy_data($key);
+        return redirect(route('dashboard.staff.index'))->with('success', 'Delete Data Successfully');
     }
 }
