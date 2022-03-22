@@ -89,7 +89,22 @@
             </label>
             <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="email" name="email">
         </div>
-        <div class="">
+        <div class="col-start-1">
+            <label class="block font-medium text-gray-700">
+                Area
+            </label>
+            <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300">
+                <option disabled selected>--- Pilih Area ---</option>
+                <option>TK</option>
+                <option>SD</option>
+                <option>SMP</option>
+                <option>SMA</option>
+                <option>QRD</option>
+                <option>FINANCE</option>
+                <option>HRGA</option>
+            </select>
+        </div>
+        <div class="col-start-1">
             <label class="block font-medium text-gray-700">
                 Password
             </label>

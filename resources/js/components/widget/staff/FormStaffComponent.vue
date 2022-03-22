@@ -18,6 +18,12 @@
             </label>
             <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="email" name="email" :value="$store.state.modal.modalshow.item.user.email">
         </div>
+        <div class="">
+            <label class="block font-medium text-gray-700">
+                Area
+            </label>
+            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase" type="text" name="area" :value="$store.state.modal.modalshow.item.user.area">
+        </div>
         <slot name="multicomponent"></slot>
     </div>
 </template>
