@@ -102,6 +102,7 @@ Vue.component('notification-component', require('./components/widget/Notificatio
 Vue.component('button-add-function', require('./components/function/ButtonAddFunction').default)
 Vue.component('button-show-component', require('./components/widget/ButtonShowComponent').default)
 
+Vue.component('multiple-select-component', require('./components/widget/MutipleselectComponent').default)
 
 Vue.component('modal-add-function', require('./components/function/form/ModalAddFunction').default)
 Vue.component('modal-validation-function', require('./components/function/ModalValidationFunction').default)

@@ -21,8 +21,8 @@ class StaffController extends Controller
     public function index(Request $request)
     {
         $data = $this->data->get_data();
-        $compact = compact('data');
-        return view('dashboard.staff.index', $compact);
+//        dd($data);
+        return view('dashboard.staff.index', $data);
     }
 
     /**
@@ -45,8 +45,12 @@ class StaffController extends Controller
     {
         $validator = $request->validate([
             'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
-            'name' => ['required', 'max_length: 60']
+            'name' => ['required', 'max: 60'],
+            'email' => ['required', 'email:rfc,dns'],
+            'password' => ['required', 'confirmed', 'min:8'],
         ]);
+        $data = $this->data->store_data($request);
+        return redirect(route('dashboard.staff.index'))->with('success', 'Insert Data Successfully');
     }
 
     /**

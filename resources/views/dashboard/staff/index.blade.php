@@ -15,7 +15,7 @@
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y-2 divide-gray-200">
-                    @forelse($data as $key => $value)
+                    @forelse($user as $key => $value)
                         <tr class="hover:bg-blue-50 transition-all duration-200">
                             <td class="py-1 pl-4">
                                 <div class="flex items-center">
@@ -89,14 +89,15 @@
             <label class="block font-medium text-gray-700">
                 Password
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="password">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="password" name="password">
         </div>
         <div class="col-start-1">
             <label class="block font-medium text-gray-700">
                 Password
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="password_confirmation">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="password" name="password_confirmation">
         </div>
+        <multiple-select-component valueoption="{{$role}}"></multiple-select-component>
     </div>
 @endsection
 @section('notification')
