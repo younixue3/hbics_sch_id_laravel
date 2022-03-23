@@ -17,31 +17,31 @@
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y-2 divide-gray-200">
-{{--                    @forelse($publikasi as $key => $value)--}}
-{{--                        <tr class="hover:bg-blue-50 transition-all duration-200">--}}
-{{--                            <td class="py-1 pl-4">--}}
-{{--                                <div class="flex items-center">--}}
-{{--                                    <div class="text-left my-auto">--}}
-{{--                                        {{$value->title}}--}}
-{{--                                        <div class="text-sm text-gray-500">{{$value->email}}</div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </td>--}}
-{{--                            <td class="py-1 uppercase">{{$value->area}}</td>--}}
-{{--                            <td class="py-1.5 grid grid-cols-3 gap-1">--}}
+                    @forelse($publikasis as $key => $value)
+                        <tr class="hover:bg-blue-50 transition-all duration-200">
+                            <td class="py-1 pl-4">
+                                <div class="flex items-center">
+                                    <div class="text-left my-auto">
+                                        {{$value->title}}
+                                        <div class="text-sm text-gray-500">{{$value->email}}</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="py-1 uppercase">{{$value->area}}</td>
+                            <td class="py-1.5 grid grid-cols-3 gap-1">
 {{--                                @foreach($value->roles_user()->get() as $key => $item)--}}
 {{--                                    <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5">--}}
 {{--                                        {{$item->roles()->first()->name}}--}}
 {{--                                    </span>--}}
 {{--                                @endforeach--}}
-{{--                            </td>--}}
-{{--                            <td class="py-1">--}}
-{{--                                <button><i class="fa-solid fa-ellipsis-vertical"></i></button>--}}
-{{--                            </td>--}}
-{{--                        </tr>--}}
-{{--                    @empty--}}
-{{--                        Data kosong--}}
-{{--                    @endforelse--}}
+                            </td>
+                            <td class="py-1">
+                                <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            </td>
+                        </tr>
+                    @empty
+                        Data kosong
+                    @endforelse
                     </tbody>
                 </table>
             </div>

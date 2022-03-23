@@ -16,8 +16,6 @@ class CreateContentsTable extends Migration
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
             $table->json('item');
-            $table->unsignedBigInteger('type');
-            $table->foreign('type')->references('id')->on('types');
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
         });

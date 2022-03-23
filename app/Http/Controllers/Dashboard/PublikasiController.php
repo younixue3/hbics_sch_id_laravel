@@ -18,9 +18,9 @@ class PublikasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data = $this->data->get_data();
+        $data = $this->data->get_data($request);
         return view('dashboard.publikasi.index', $data);
     }
 
