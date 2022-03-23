@@ -36,8 +36,8 @@
             <div class="mt-2">
                 <p class="text-xs mb-2">Gunakan password yang setidaknya 8 Karakter dan bersifat Unik</p>
                 <div class="grid grid-cols-2 gap-2">
-                    <button type="button" class="rounded-lg bg-red-500 hover:bg-red-600 border border-red-600 px-2 py-1 text-xs font-medium text-white transition-all ease-in-out">Change Password</button>
-                    <button type="button" class="rounded-lg bg-red-500 hover:bg-red-600 border border-red-600 px-2 py-1 text-xs font-medium text-white transition-all ease-in-out">Remove Superadmin Permission</button>
+                    <button type="button" @click="openModalChangePassword" class="rounded-lg bg-red-500 hover:bg-red-600 border border-red-600 px-2 py-1 text-xs font-medium text-white transition-all ease-in-out">Change Password</button>
+                    <button type="button" v-if="$store.state.modal.modalshow.item.user.is_super_admin" @click="openModalRemoveSuperadmin" class="rounded-lg bg-red-500 hover:bg-red-600 border border-red-600 px-2 py-1 text-xs font-medium text-white transition-all ease-in-out">Remove Superadmin Permission</button>
                 </div>
             </div>
         </div>
@@ -59,9 +59,19 @@ export default {
             this.$store.commit('toggleModalValidationView')
         },
         openModalEdit: function () {
-            this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.delete_req
+            this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.edit_req
             this.$store.commit('toggleModalEdit')
         },
+        openModalChangePassword: function () {
+            this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.change_password
+            this.$store.commit('toggleModalChangePassword')
+        },
+        openModalRemoveSuperadmin: function () {
+            this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.remove_superadmin
+            this.$store.state.modalvalidation.url.validation_form = "formRemoveSuperadmin"
+            this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus akses superadmin pada data ini?"
+            this.$store.commit('toggleModalValidationView')
+        }
     }
 }
 </script>

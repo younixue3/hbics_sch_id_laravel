@@ -35,6 +35,9 @@ const store = new Vuex.Store({
             },
             modaladd: {
                 status: false
+            },
+            modalstaff: {
+                status: false
             }
         }
     },
@@ -66,6 +69,14 @@ const store = new Vuex.Store({
         toggleModalAdd (state) {
             state.modal.modaladd.status = state.modal.modaladd.status === false;
             if (state.modal.modaladd.status === true) {
+                document.body.classList.add('removescrollbar', 'overflow-hidden')
+            } else {
+                document.body.classList.remove('removescrollbar', 'overflow-hidden')
+            }
+        },
+        toggleModalChangePassword (state) {
+            state.modal.modalstaff.status = state.modal.modalstaff.status === false;
+            if (state.modal.modalstaff.status === true) {
                 document.body.classList.add('removescrollbar', 'overflow-hidden')
             } else {
                 document.body.classList.remove('removescrollbar', 'overflow-hidden')
@@ -104,6 +115,9 @@ Vue.component('button-show-component', require('./components/widget/ButtonShowCo
 
 Vue.component('form-staff-component', require('./components/widget/staff/FormStaffComponent').default)
 Vue.component('form-staff-edit-component', require('./components/widget/staff/FormEditComponent').default)
+Vue.component('form-staff-change-password-component', require('./components/widget/staff/FormChangePasswordComponent').default)
+Vue.component('modal-staff-change-password-function', require('./components/function/form/staff/ModalChangePassword').default)
+Vue.component('modal-remove-superadmin', require('./components/function/form/staff/ModalRemoveSuperadmin').default)
 
 Vue.component('multiple-select-component', require('./components/widget/MutipleselectComponent').default)
 

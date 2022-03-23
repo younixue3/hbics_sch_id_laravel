@@ -42,7 +42,7 @@
             </select>
         </div>
         <div class="col-start-1 col-span-2 flex justify-self-start px-5">
-            <input class="m-auto rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="checkbox" name="is_super_admin" :checked="$store.state.modal.modalshow.item.user.is_super_name === 1 ? 'true' : 'false'">
+            <input class="m-auto rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="checkbox" name="is_super_admin" :checked="$store.state.modal.modalshow.item.user.is_super_admin === 1 ? true : false">
             <label class="ml-2 w-full font-medium text-gray-700 text-sm">
                 Is Superadmin
             </label>

@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Testing\Fluent\Concerns\Has;
 
 class StaffController extends Controller
 {
@@ -57,34 +58,50 @@ class StaffController extends Controller
     {
 //        $user = User::where('randKey', $key)->first();
 //        dd(UsersRoles::where('user', $user->id)->restore());
-        $user = User::where('randKey', $key);
-
-        if ($request->fileupload != null) {
-            $filename = getFilename::getFilename($request);
-            Storage::disk('upload')->putFileAs('foto_profile', $request->fileupload, $filename['filename']);
-            $foto_profile = FotoProfile::where('user', $user->first()->id)->update([
-                'img' => $filename['filename'],
-            ]);
-        };
-        if($request->selectrole) {
-            UsersRoles::where('user', $user->first()->id)->delete();
-            foreach (json_decode($request->selectrole) as $value) {
-                $userRole = new UsersRoles();
-                $userRole->user = $user->first()->id;
-                $userRole->role = $value->id;
-                $userRole->save();
-            }
-        }
-        $user->update([
-            'randKey' => Str::random(40) . '_' . $request->name,
-            'name' => $request->name,
-            'email' => $request->email,
-            'is_super_admin' => $request->is_super_admin === 'on'
-        ]);
-        if ($request->area !== null) {
+        if ($request->password !== null) {
             $user = User::where('randKey', $key)->update([
-                'area' => $request->area,
+                'password' => Hash::make($request->password)
             ]);
+        } else {
+
+            $user = User::where('randKey', $key);
+
+            if ($request->fileupload != null) {
+                $filename = getFilename::getFilename($request);
+                Storage::disk('upload')->putFileAs('foto_profile', $request->fileupload, $filename['filename']);
+                $foto_profile = FotoProfile::where('user', $user->first()->id)->update([
+                    'img' => $filename['filename'],
+                ]);
+            };
+            if($request->selectrole !== '[object Object]') {
+                UsersRoles::where('user', $user->first()->id)->delete();
+                foreach (json_decode($request->selectrole) as $value) {
+                    $userRole = new UsersRoles();
+                    $userRole->user = $user->first()->id;
+                    $userRole->role = $value->id;
+                    $userRole->save();
+                }
+            }
+            if ($request->is_super_admin === 'false') {
+                $user = User::where('randKey', $key)->update([
+                    'is_super_admin' => false
+                ]);
+            } elseif ($request->is_super_admin === 'on') {
+                $user = User::where('randKey', $key)->update([
+                    'is_super_admin' => $request->is_super_admin === 'on'
+                ]);
+            } else {
+                $user->update([
+                    'randKey' => Str::random(40) . '_' . $request->name,
+                    'name' => $request->name,
+                    'email' => $request->email,
+                ]);
+            }
+            if ($request->area !== null) {
+                $user = User::where('randKey', $key)->update([
+                    'area' => $request->area,
+                ]);
+            }
         }
     }
 

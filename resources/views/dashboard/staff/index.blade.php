@@ -38,7 +38,7 @@
                             </td>
                             <td class="py-1">
                                 <button-show-component img="{{asset('Upload/foto_profile/'. $value->foto_profile()->img)}}" user="{{route('dashboard.staff.show', $value->randKey)}}"
-                                    delete_req="{{route('dashboard.staff.destroy', $value->randKey)}}" edit_req="{{route('dashboard.staff.update', $value->randKey)}}" change_password_req="{{route('dashboard.staff.update', $value->randKey)}}"></button-show-component>
+                                    delete_req="{{route('dashboard.staff.destroy', $value->randKey)}}" edit_req="{{route('dashboard.staff.update', $value->randKey)}}" change_password_req="{{route('dashboard.staff.update', $value->randKey)}}" remove_superadmin="{{route('dashboard.staff.update', $value->randKey)}}"></button-show-component>
                             </td>
                         </tr>
                     @empty
@@ -51,6 +51,10 @@
             </div>
         </mac-card-component>
     </div>
+@endsection
+@section('modalChangePassword')
+    <form-staff-change-password-component>
+    </form-staff-change-password-component>
 @endsection
 @section('modalShow')
     <form-staff-component>

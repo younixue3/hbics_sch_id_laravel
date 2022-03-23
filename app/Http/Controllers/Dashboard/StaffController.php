@@ -84,12 +84,22 @@ class StaffController extends Controller
      */
     public function update(Request $request, $key)
     {
-//        dd($key);
-        $validator = $request->validate([
-            'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
-            'name' => ['required', 'max: 60'],
-            'email' => 'email',
-        ]);
+        if ($request->password !== null) {
+            $validator = $request->validate([
+                'password' => ['required', 'confirmed', 'min:8'],
+            ]);
+        } elseif ($request->is_super_admin !== null) {
+            $validator = $request->validate([
+                'is_super_admin' => ['required'],
+            ]);
+        } else {
+            $validator = $request->validate([
+                'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
+                'name' => ['required', 'max: 60'],
+                'email' => 'email',
+            ]);
+        }
+
         $data = $this->data->update_data($request, $key);
         return redirect(route('dashboard.staff.index'))->with('success', 'Insert Data Successfully');
     }

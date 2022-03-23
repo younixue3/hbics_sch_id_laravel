@@ -20,6 +20,9 @@
     <modal-edit-function>
         @yield('modalEdit')
     </modal-edit-function>
+    <modal-staff-change-password-function>
+        @yield('modalChangePassword')
+    </modal-staff-change-password-function>
     <modal-validation-function></modal-validation-function>
     <div class="flex w-full">
         @include('layouts.dashboard.header')

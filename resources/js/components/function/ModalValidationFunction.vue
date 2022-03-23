@@ -21,6 +21,7 @@
                 </div>
             </div>
             <modal-delete-function></modal-delete-function>
+            <modal-remove-superadmin></modal-remove-superadmin>
         </div>
     </Transition>
 </template>

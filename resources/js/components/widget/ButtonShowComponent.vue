@@ -11,10 +11,10 @@ import axios from "axios";
 export default {
     data() {
         return {
-            urlreq: {delete_req: this.delete_req, edit_req: this.edit_req, change_password: this.change_password_req}
+            urlreq: {delete_req: this.delete_req, edit_req: this.edit_req, change_password: this.change_password_req, remove_superadmin: this.remove_superadmin}
         }
     },
-    props: ['user', 'img', 'delete_req', 'edit_req', 'change_password_req'],
+    props: ['user', 'img', 'delete_req', 'edit_req', 'change_password_req', 'remove_superadmin'],
     methods: {
         openModalShow: function () {
             axios
