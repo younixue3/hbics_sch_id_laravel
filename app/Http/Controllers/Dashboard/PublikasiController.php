@@ -20,7 +20,8 @@ class PublikasiController extends Controller
      */
     public function index()
     {
-        return view('dashboard.publikasi.index');
+        $data = $this->data->get_data();
+        return view('dashboard.publikasi.index', $data);
     }
 
     /**
