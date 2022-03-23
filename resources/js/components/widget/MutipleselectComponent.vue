@@ -5,8 +5,8 @@
             Role
         </label>
         <div class="rounded-md border p-2 grid grid-cols-3 gap-2">
-            <button :disabled="disabled" type="button" @click="selectOption(index)" class="rounded-md text-xs transition-all ease-in-out text-white" :class="item.status ? 'bg-red-500 hover:bg-red-400' : 'bg-blue-500 hover:bg-blue-400'" v-if="$store.state.modal.modalshow.item === null" v-for="(item, index) in arrValOption">{{item.name}}</button>
-            <button :disabled="disabled" type="button" @click="selectOption(index)" class="rounded-md text-xs transition-all ease-in-out text-white" :class="item.status ? 'bg-red-500 hover:bg-red-400' : 'bg-blue-500 hover:bg-blue-400'" v-if="$store.state.modal.modalshow.item !== null" v-for="(item, index) in this.storeurl">{{item.name}}</button>
+            <button :disabled="disabled" type="button" @click="selectOption(index)" class="rounded-md text-xs transition-all ease-in-out text-white" :class="item.status ? 'bg-red-500 hover:bg-red-400' : 'bg-blue-500 hover:bg-blue-400'" v-if="" v-for="(item, index) in arrValOption">{{item.name}}</button>
+            <button :disabled="disabled" type="button" @click="selectOption(index)" class="takedata rounded-md text-xs transition-all ease-in-out text-white" :class="item.status ? 'bg-red-500 hover:bg-red-400' : 'bg-blue-500 hover:bg-blue-400'" v-if="" v-for="(item, index) in this.storeurl">{{item.name}}</button>
         </div>
     </div>
 </template>
@@ -23,22 +23,42 @@ export default {
     props: {
         nameoption: String,
         valueoption: String,
-        disabled: Boolean
+        disabled: String
     },
     mounted() {
 
-        if (this.$store.state.modal.modalshow.item === null) {
+        if (this.$props.valueoption === "true") {
+            console.log('storeurl');
+            this.storeurl = this.$store.state.modal.modalshow.item.arrrolesuser
+            console.log(this.storeurl);
+            for (let item in this.$store.state.modal.modalshow.item.arrrolesuser) {
+                this.$store.state.modal.modalshow.item.arrrolesuser[item].status = false
+            }
+        } else {
             this.arrValOption = JSON.parse(this.valueoption)
+            console.log('arrValOption');
+            console.log(this.arrValOption);
             for (let item in this.arrValOption) {
                 this.arrValOption[item].status = false
             }
-        } else {
-            this.storeurl = this.$store.state.modal.modalshow.item.arrrolesuser
-            for (let item in this.$store.state.modal.modalshow.item.arrrolesuser) {
-                console.log(item)
-                this.$store.state.modal.modalshow.item.arrrolesuser[item].status = false
-            }
+
         }
+
+        // if (this.$store.state.modal.modalshow.item === null && this.$store.state.modal.modaledit.status === false || this.$store.state.modal.modaladd.status === false) {
+        //     this.arrValOption = JSON.parse(this.valueoption)
+        //     console.log('arrValOption');
+        //     console.log(this.arrValOption);
+        //     for (let item in this.arrValOption) {
+        //         this.arrValOption[item].status = false
+        //     }
+        // } else {
+        //     this.storeurl = this.$store.state.modal.modalshow.item.arrrolesuser
+        //     console.log('storeurl');
+        //     console.log(this.storeurl);
+        //     for (let item in this.$store.state.modal.modalshow.item.arrrolesuser) {
+        //         this.$store.state.modal.modalshow.item.arrrolesuser[item].status = false
+        //     }
+        // }
     },
     methods: {
         selectOption: function (click) {

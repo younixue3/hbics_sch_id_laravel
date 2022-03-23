@@ -20,6 +20,7 @@ class CreateUsersRolesTable extends Migration
             $table->unsignedBigInteger('role');
             $table->foreign('role')->references('id')->on('roles');
             $table->timestamps();
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
         });
     }
 

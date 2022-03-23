@@ -103,6 +103,7 @@ Vue.component('button-add-function', require('./components/function/ButtonAddFun
 Vue.component('button-show-component', require('./components/widget/ButtonShowComponent').default)
 
 Vue.component('form-staff-component', require('./components/widget/staff/FormStaffComponent').default)
+Vue.component('form-staff-edit-component', require('./components/widget/staff/FormEditComponent').default)
 
 Vue.component('multiple-select-component', require('./components/widget/MutipleselectComponent').default)
 

@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 /*
-! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.18 | MIT License | https://tailwindcss.com
 */
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -723,17 +723,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-0{
   margin-left: 0px;
 }
-.mr-5{
-  margin-right: 1.25rem;
-}
 .block{
   display: block;
 }
 .inline-block{
   display: inline-block;
-}
-.inline{
-  display: inline;
 }
 .flex{
   display: flex;
@@ -873,8 +867,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-96{
   width: 24rem;
 }
-.w-\[38rem\]{
-  width: 38rem;
+.w-\[42rem\]{
+  width: 42rem;
 }
 .w-7{
   width: 1.75rem;
@@ -933,14 +927,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-3\/4{
   width: 75%;
 }
-.w-\[35rem\]{
-  width: 35rem;
-}
 .w-24{
   width: 6rem;
-}
-.w-\[42rem\]{
-  width: 42rem;
 }
 .max-w-6xl{
   max-width: 72rem;
@@ -1398,10 +1386,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
-.border-gray-100{
-  --tw-border-opacity: 1;
-  border-color: rgb(243 244 246 / var(--tw-border-opacity));
-}
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1528,14 +1512,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-50{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-.bg-red-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
-}
-.bg-red-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
@@ -2246,20 +2222,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-content: ' ↗';
   content: var(--tw-content);
 }
-.after\:content-\[\'_\!\'\]::after{
-  --tw-content: ' !';
-  content: var(--tw-content);
-}
-.after\:content-\[\'_\'\]::after{
-  --tw-content: ' ';
-  content: var(--tw-content);
-}
 .after\:content-\[\'_\2298\'\]::after{
   --tw-content: ' ⊘';
-  content: var(--tw-content);
-}
-.after\:content-\[\'_\2302\'\]::after{
-  --tw-content: ' ⌂';
   content: var(--tw-content);
 }
 .checked\:border-blue-600:checked{
@@ -2357,14 +2321,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-red-600:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-.hover\:bg-gray-400:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-.hover\:bg-gray-300:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 .hover\:bg-opacity-75:hover{
   --tw-bg-opacity: 0.75;

@@ -53,6 +53,41 @@ class StaffController extends Controller
         }
     }
 
+    public function update_data($request, $key)
+    {
+//        $user = User::where('randKey', $key)->first();
+//        dd(UsersRoles::where('user', $user->id)->restore());
+        $user = User::where('randKey', $key);
+
+        if ($request->fileupload != null) {
+            $filename = getFilename::getFilename($request);
+            Storage::disk('upload')->putFileAs('foto_profile', $request->fileupload, $filename['filename']);
+            $foto_profile = FotoProfile::where('user', $user->first()->id)->update([
+                'img' => $filename['filename'],
+            ]);
+        };
+        if($request->selectrole) {
+            UsersRoles::where('user', $user->first()->id)->delete();
+            foreach (json_decode($request->selectrole) as $value) {
+                $userRole = new UsersRoles();
+                $userRole->user = $user->first()->id;
+                $userRole->role = $value->id;
+                $userRole->save();
+            }
+        }
+        $user->update([
+            'randKey' => Str::random(40) . '_' . $request->name,
+            'name' => $request->name,
+            'email' => $request->email,
+            'is_super_admin' => $request->is_super_admin === 'on'
+        ]);
+        if ($request->area !== null) {
+            $user = User::where('randKey', $key)->update([
+                'area' => $request->area,
+            ]);
+        }
+    }
+
     public function show_data($key)
     {
 //        dd($key);
