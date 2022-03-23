@@ -16,7 +16,7 @@ class CreatePublikasisTable extends Migration
         Schema::create('publikasis', function (Blueprint $table) {
             $table->id();
             $table->string('title', 80);
-            $table->enum('status', ['draft', 'published', 'reject']);
+            $table->enum('status', ['draft', 'publish', 'reject'])->default('draft');
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
         });

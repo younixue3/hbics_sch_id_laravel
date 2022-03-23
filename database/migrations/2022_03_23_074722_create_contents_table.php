@@ -15,7 +15,7 @@ class CreateContentsTable extends Migration
     {
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
-            $table->text('item');
+            $table->json('item');
             $table->unsignedBigInteger('type');
             $table->foreign('type')->references('id')->on('types');
             $table->timestamps();
