@@ -265,7 +265,7 @@
                                              class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-96 z-50 transition-all ease-in-out duration-300 overflow-hidden">
                                             <div class="h-full grid grid-rows-5 divide-y-2">
                                                 <div
-                                                    class="grid grid-rows-2 items-center justify-items-stretch row-span-2 p-0.5">
+                                                    class="grid grid-rows-2 items-center justify-items-stretch row-span-3 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
                                                        :href="dataurl['alumni']">
                                                         <div class="flex gap-x-5 text-center">
@@ -308,16 +308,37 @@
                                                             </div>
                                                         </div>
                                                     </a>
+                                                    <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
+                                                       :href="dataurl['orang-tua']">
+                                                        <div class="flex gap-x-5 text-center">
+                                                            <div class="w-20">
+                                                                <div
+                                                                    class="bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200">
+                                                                    <i class="fas fa-user-friends"></i></div>
+                                                            </div>
+                                                            <div
+                                                                class="w-full grid grid-rows-2 gap-0 items-center text-left text-sm">
+                                                                <div class="leading-3 transition-all ease-in-out">
+                                                                    Guru & Staff
+                                                                </div>
+                                                                <div
+                                                                    class="text-xs font-light break-words leading-3 text-black">
+                                                                    Guru dan Staff Sekolah Harapan Bangsa dan Happy Holy
+                                                                    Kids
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                                <div class="row-span-3 grid grid-rows-2 px-5">
+                                                <div class="row-span-2 grid grid-rows-2 px-5">
                                                     <div>
                                                         <span class="text-xs font-light h-5">Alumni</span>
                                                         <div class="grid grid-cols-2 gap-x-2">
                                                             <a href="#"
-                                                               class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2">
+                                                               class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2">
                                                                 <img
                                                                     src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
-                                                                    class="h-12 w-12 rounded-full object-cover">
+                                                                    class="h-6 w-6 rounded-full object-cover">
                                                                 <div
                                                                     class="col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm">
                                                                     <div class="leading-3 transition-all ease-in-out">
@@ -330,10 +351,10 @@
                                                                 </div>
                                                             </a>
                                                             <a href="#"
-                                                               class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2">
+                                                               class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2">
                                                                 <img
                                                                     src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
-                                                                    class="h-12 w-12 rounded-full object-cover">
+                                                                    class="h-6 w-6 rounded-full object-cover">
                                                                 <div
                                                                     class="col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm">
                                                                     <div class="leading-3 transition-all ease-in-out">
@@ -351,10 +372,10 @@
                                                         <span class="text-xs font-light h-5">Orang Tua</span>
                                                         <div class="grid grid-cols-2 gap-2">
                                                             <a href="#"
-                                                               class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2">
+                                                               class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2">
                                                                 <img
                                                                     src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
-                                                                    class="h-12 w-12 rounded-full object-cover">
+                                                                    class="h-6 w-6 rounded-full object-cover">
                                                                 <div
                                                                     class="col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm">
                                                                     <div class="leading-3 transition-all ease-in-out">
@@ -367,10 +388,10 @@
                                                                 </div>
                                                             </a>
                                                             <a href="#"
-                                                               class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2">
+                                                               class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2">
                                                                 <img
                                                                     src="http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg"
-                                                                    class="h-12 w-12 rounded-full object-cover">
+                                                                    class="h-6 w-6 rounded-full object-cover">
                                                                 <div
                                                                     class="col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm">
                                                                     <div class="leading-3 transition-all ease-in-out">

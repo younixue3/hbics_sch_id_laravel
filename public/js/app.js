@@ -3155,6 +3155,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -8841,7 +8862,7 @@ var render = function () {
                                         "div",
                                         {
                                           staticClass:
-                                            "grid grid-rows-2 items-center justify-items-stretch row-span-2 p-0.5",
+                                            "grid grid-rows-2 items-center justify-items-stretch row-span-3 p-0.5",
                                         },
                                         [
                                           _c(
@@ -8867,10 +8888,22 @@ var render = function () {
                                             },
                                             [_vm._m(11)]
                                           ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                              attrs: {
+                                                href: _vm.dataurl["orang-tua"],
+                                              },
+                                            },
+                                            [_vm._m(12)]
+                                          ),
                                         ]
                                       ),
                                       _vm._v(" "),
-                                      _vm._m(12),
+                                      _vm._m(13),
                                     ]
                                   ),
                                 ]
@@ -8935,7 +8968,7 @@ var render = function () {
                                                 href: _vm.dataurl["berita"],
                                               },
                                             },
-                                            [_vm._m(13)]
+                                            [_vm._m(14)]
                                           ),
                                           _vm._v(" "),
                                           _c(
@@ -8947,7 +8980,7 @@ var render = function () {
                                                 href: _vm.dataurl["acara"],
                                               },
                                             },
-                                            [_vm._m(14)]
+                                            [_vm._m(15)]
                                           ),
                                           _vm._v(" "),
                                           _c(
@@ -8959,12 +8992,12 @@ var render = function () {
                                                 href: _vm.dataurl["artikel"],
                                               },
                                             },
-                                            [_vm._m(15)]
+                                            [_vm._m(16)]
                                           ),
                                         ]
                                       ),
                                       _vm._v(" "),
-                                      _vm._m(16),
+                                      _vm._m(17),
                                     ]
                                   ),
                                 ]
@@ -9071,7 +9104,7 @@ var render = function () {
                 },
                 [
                   _c("nav", { staticClass: "grid gap-y-8" }, [
-                    _vm._m(17),
+                    _vm._m(18),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -9122,13 +9155,13 @@ var render = function () {
                             attrs: { id: "pendaftaranmobile" },
                           },
                           [
-                            _vm._m(18),
-                            _vm._v(" "),
                             _vm._m(19),
                             _vm._v(" "),
                             _vm._m(20),
                             _vm._v(" "),
                             _vm._m(21),
+                            _vm._v(" "),
+                            _vm._m(22),
                           ]
                         ),
                       ]
@@ -9184,13 +9217,13 @@ var render = function () {
                             attrs: { id: "akademismobile" },
                           },
                           [
-                            _vm._m(22),
-                            _vm._v(" "),
                             _vm._m(23),
                             _vm._v(" "),
                             _vm._m(24),
                             _vm._v(" "),
                             _vm._m(25),
+                            _vm._v(" "),
+                            _vm._m(26),
                           ]
                         ),
                       ]
@@ -9245,7 +9278,7 @@ var render = function () {
                               "h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5",
                             attrs: { id: "komunitasmobile" },
                           },
-                          [_vm._m(26), _vm._v(" "), _vm._m(27)]
+                          [_vm._m(27), _vm._v(" "), _vm._m(28)]
                         ),
                       ]
                     ),
@@ -9300,11 +9333,11 @@ var render = function () {
                             attrs: { id: "publikasimobile" },
                           },
                           [
-                            _vm._m(28),
-                            _vm._v(" "),
                             _vm._m(29),
                             _vm._v(" "),
                             _vm._m(30),
+                            _vm._v(" "),
+                            _vm._m(31),
                           ]
                         ),
                       ]
@@ -9314,7 +9347,7 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(31),
+            _vm._m(32),
           ]
         ),
       ]
@@ -9788,7 +9821,52 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row-span-3 grid grid-rows-2 px-5" }, [
+    return _c("div", { staticClass: "flex gap-x-5 text-center" }, [
+      _c("div", { staticClass: "w-20" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 transition-all ease-in duration-200",
+          },
+          [_c("i", { staticClass: "fas fa-user-friends" })]
+        ),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+        },
+        [
+          _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+            _vm._v(
+              "\n                                                                Guru & Staff\n                                                            "
+            ),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "text-xs font-light break-words leading-3 text-black",
+            },
+            [
+              _vm._v(
+                "\n                                                                Guru dan Staff Sekolah Harapan Bangsa dan Happy Holy\n                                                                Kids\n                                                            "
+              ),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row-span-2 grid grid-rows-2 px-5" }, [
       _c("div", [
         _c("span", { staticClass: "text-xs font-light h-5" }, [
           _vm._v("Alumni"),
@@ -9799,12 +9877,12 @@ var staticRenderFns = [
             "a",
             {
               staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
+                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2",
               attrs: { href: "#" },
             },
             [
               _c("img", {
-                staticClass: "h-12 w-12 rounded-full object-cover",
+                staticClass: "h-6 w-6 rounded-full object-cover",
                 attrs: {
                   src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
                 },
@@ -9848,12 +9926,12 @@ var staticRenderFns = [
             "a",
             {
               staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
+                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2",
               attrs: { href: "#" },
             },
             [
               _c("img", {
-                staticClass: "h-12 w-12 rounded-full object-cover",
+                staticClass: "h-6 w-6 rounded-full object-cover",
                 attrs: {
                   src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
                 },
@@ -9905,12 +9983,12 @@ var staticRenderFns = [
             "a",
             {
               staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
+                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2",
               attrs: { href: "#" },
             },
             [
               _c("img", {
-                staticClass: "h-12 w-12 rounded-full object-cover",
+                staticClass: "h-6 w-6 rounded-full object-cover",
                 attrs: {
                   src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
                 },
@@ -9954,12 +10032,12 @@ var staticRenderFns = [
             "a",
             {
               staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-16 p-2",
+                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2",
               attrs: { href: "#" },
             },
             [
               _c("img", {
-                staticClass: "h-12 w-12 rounded-full object-cover",
+                staticClass: "h-6 w-6 rounded-full object-cover",
                 attrs: {
                   src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
                 },
