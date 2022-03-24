@@ -1,7 +1,8 @@
 @extends('layouts.dashboard.master')
 @section('title', 'Staff')
 @section('content')
-    <button-add-function add_req="{{route('dashboard.staff.store')}}"></button-add-function>
+    <a href="{{route('dashboard.publikasi.create')}}" class="bg-green-400 rounded-lg w-20 px-3 flex justify-between text-center"><span>Add</span><i
+            class="fa-solid fa-plus my-auto"></i></a>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
         <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12">
             <div>
@@ -11,32 +12,82 @@
                         <th class="py-1">Title</th>
                         <th class="py-1">Author</th>
                         <th class="py-1">Category</th>
-                        <th class="py-1">Created Date</th>
-                        <th class="py-1">Updated Date</th>
+                        <th class="py-1">Status</th>
+                        <th class="py-1">Created</th>
+                        <th class="py-1">Updated</th>
                         <th class="py-1"></th>
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y-2 divide-gray-200">
                     @forelse($publikasis as $key => $value)
+{{--                        {{$value->users_update()->staff()}}--}}
+{{--                        {{dd($value->user_update()->staff())}}--}}
                         <tr class="hover:bg-blue-50 transition-all duration-200">
                             <td class="py-1 pl-4">
                                 <div class="flex items-center">
                                     <div class="text-left my-auto">
                                         {{$value->title}}
-                                        <div class="text-sm text-gray-500">{{$value->email}}</div>
                                     </div>
                                 </div>
                             </td>
-                            <td class="py-1 uppercase">{{$value->area}}</td>
-                            <td class="py-1.5 grid grid-cols-3 gap-1">
-{{--                                @foreach($value->roles_user()->get() as $key => $item)--}}
-{{--                                    <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5">--}}
-{{--                                        {{$item->roles()->first()->name}}--}}
-{{--                                    </span>--}}
-{{--                                @endforeach--}}
+                            <td class="py-1">
+                                <div class="flex items-center">
+                                    <img class="h-8 w-8 mr-2 rounded-full object-cover"
+                                         src="{{asset('Upload/foto_profile/'.$value->users_create()->user()->foto_profile()->img)}}"
+                                         alt="">
+                                    <div class="text-left my-auto">
+                                        <div class="text-sm text-gray-500">{{$value->users_create()->user()->name}}</div>
+                                    </div>
+                                </div>
                             </td>
                             <td class="py-1">
-                                <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                                @foreach($value->kategoris_publikasi() as $key => $item)
+                                <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5">
+                                    {{$item->kategoris()->name}}
+                                </span>
+                                @endforeach
+                            </td>
+                            <td class="py-1">
+                                @if($value->status === 'publish')
+                                    <span class="bg-green-500 hover:bg-green-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                        {{$value->status}}
+                                    </span>
+                                @elseif($value->status === 'reject')
+                                    <span class="bg-red-500 hover:bg-red-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                        {{$value->status}}
+                                    </span>
+                                @elseif($value->status === 'draft')
+                                    <span class="bg-yellow-500 hover:bg-yellow-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                        {{$value->status}}
+                                    </span>
+                                @endif
+                            </td>
+                            <td class="py-1 text-sm text-gray-500">
+                                {{\Carbon\Carbon::parse($value->created_at)->format('d M Y')}}
+                            </td>
+                            <td class="py-1">
+                                <div class="flex items-center text-sm text-gray-500">
+                                    @if($value->users_update() != null)
+                                        <span>{{\Carbon\Carbon::parse($value->users_update()->updated_at)->format('d M Y')}}</span>
+                                        (
+                                        <img class="h-4 w-4 ml-1 mr-1 rounded-full object-cover"
+                                             src="{{asset('Upload/foto_profile/'.$value->users_update()->user()->foto_profile()->img)}}"
+                                             alt="">
+                                        <div class="text-left my-auto text-xs">
+                                            <div class="">
+                                                    {{$value->users_update()->user()->name}}
+                                            </div>
+                                        </div>
+                                        )
+                                    @else
+                                        <div class="text-center w-full italic">
+                                            Tidak ada perubahan
+                                        </div>
+                                    @endif
+                                </div>
+                            </td>
+                            <td class="py-1 px-3">
+                                <button-dot-menu-component></button-dot-menu-component>
                             </td>
                         </tr>
                     @empty
@@ -51,10 +102,6 @@
     </div>
 @endsection
 @section('modalShow')
-@endsection
-@section('modalEdit')
-@endsection
-@section('modalAdd')
 @endsection
 @section('notification')
     <div class="fixed bottom-0 right-0 flex-row">

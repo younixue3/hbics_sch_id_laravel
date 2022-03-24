@@ -14,7 +14,7 @@ class UsersPublikasisUpdatedSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users_publikasis_updated')->inser([
+        DB::table('users_publikasis_updated')->insert([
             ['user' => 1, 'publikasi' => 1, 'created_at' => today(), 'updated_at' => today()],
             ['user' => 1, 'publikasi' => 1, 'created_at' => today(), 'updated_at' => today()],
             ['user' => 1, 'publikasi' => 2, 'created_at' => today(), 'updated_at' => today()],

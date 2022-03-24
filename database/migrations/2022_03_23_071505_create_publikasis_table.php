@@ -15,6 +15,7 @@ class CreatePublikasisTable extends Migration
     {
         Schema::create('publikasis', function (Blueprint $table) {
             $table->id();
+            $table->string('randKey');
             $table->string('title', 80);
             $table->enum('status', ['draft', 'publish', 'reject'])->default('draft');
             $table->timestamps();

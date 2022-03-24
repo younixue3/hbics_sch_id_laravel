@@ -8,6 +8,7 @@
 
 import Vue from 'vue';
 import Vuex from "vuex";
+import vClickOutside from 'v-click-outside'
 
 window.Vue = require('vue').default;
 Vue.use(Vuex)
@@ -103,33 +104,47 @@ Vue.component('hero-component', require('./components/widget/HeroComponent').def
 Vue.component('hero-alumni-component', require('./components/widget/HeroAlumniComponent').default)
 Vue.component('snap-component', require('./components/widget/SnapComponent').default)
 Vue.component('snap-alumni-component', require('./components/widget/SnapAlumniComponent').default)
-Vue.component('fasilitas-component', require('./components/widget/FasilitasComponent').default)
 Vue.component('mac-card-component', require('./components/widget/MacCardComponent').default)
 Vue.component('nav-bar-dash-component', require('./components/layout/NavBarDashComponent').default)
-Vue.component('card-fasilitas-component', require('./components/widget/CardFasilitasComponent').default)
 Vue.component('modal-show-component', require('./components/widget/ModalShowComponent').default)
 Vue.component('notification-component', require('./components/widget/NotificationComponent').default)
+Vue.component('multiple-select-component', require('./components/widget/MutipleselectComponent').default)
 
+//FUNCTION
+Vue.component('modal-add-function', require('./components/function/form/ModalAddFunction').default)
+Vue.component('modal-validation-function', require('./components/function/ModalValidationFunction').default)
+Vue.component('modal-edit-function', require('./components/function/form/ModalEditFunction').default)
 Vue.component('button-add-function', require('./components/function/ButtonAddFunction').default)
-Vue.component('button-show-component', require('./components/widget/ButtonShowComponent').default)
 
+//FASILITAS Widget
+////FRONT
+Vue.component('fasilitas-component', require('./components/widget/FasilitasComponent').default)
+////DASHBOARD
+Vue.component('card-fasilitas-component', require('./components/widget/CardFasilitasComponent').default)
+
+//STAFF Widget & Function
 Vue.component('form-staff-component', require('./components/widget/staff/FormStaffComponent').default)
 Vue.component('form-staff-edit-component', require('./components/widget/staff/FormEditComponent').default)
 Vue.component('form-staff-change-password-component', require('./components/widget/staff/FormChangePasswordComponent').default)
 Vue.component('modal-staff-change-password-function', require('./components/function/form/staff/ModalChangePassword').default)
 Vue.component('modal-remove-superadmin', require('./components/function/form/staff/ModalRemoveSuperadmin').default)
+Vue.component('button-show-component', require('./components/widget/ButtonShowComponent').default)
 
-Vue.component('multiple-select-component', require('./components/widget/MutipleselectComponent').default)
+//Publikasi Widget & Function
+Vue.component('workspace-publikasi-function', require('./components/function/publikasi/WorkspacePublikasiFunction').default)
+Vue.component('button-dot-menu-component', require('./components/widget/publikasi/ButtonDotMenuComponent').default)
+Vue.component('item-render-function', require('./components/function/publikasi/ItemRenderFunction').default)
+////Publikasi Workspace Component
+Vue.component('title-workspace', require('./components/workspace/TitleWorkspace').default)
+Vue.component('paragraph-workspace', require('./components/workspace/ParagraphWorkspace').default)
 
-Vue.component('modal-add-function', require('./components/function/form/ModalAddFunction').default)
-Vue.component('modal-validation-function', require('./components/function/ModalValidationFunction').default)
-Vue.component('modal-edit-function', require('./components/function/form/ModalEditFunction').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+Vue.use(vClickOutside)
 
 const app = new Vue({
     el: '#app',
@@ -138,5 +153,8 @@ const app = new Vue({
         storeCall() {
             return this.$store.state
         }
-    }
+    },
+    directives: {
+        clickOutside: vClickOutside.directive
+    },
 });

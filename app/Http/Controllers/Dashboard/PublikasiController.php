@@ -31,7 +31,7 @@ class PublikasiController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.publikasi.add');
     }
 
     /**

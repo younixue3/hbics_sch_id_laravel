@@ -3,7 +3,7 @@
 @section('content')
     <button-add-function add_req="{{route('dashboard.staff.store')}}"></button-add-function>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
-        <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12">
+        <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12 overflow-hidden">
             <div>
                 <table class="table-auto w-full text-center">
                     <thead class="bg-gray-100">
@@ -30,9 +30,9 @@
                             </td>
                             <td class="py-1 uppercase">{{$value->area}}</td>
                             <td class="py-1.5 grid grid-cols-3 gap-1">
-                                @foreach($value->roles_user()->get() as $key => $item)
+                                @foreach($value->roles_user() as $key => $item)
                                     <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5">
-                                        {{$item->roles()->first()->name}}
+                                        {{$item->roles()->name}}
                                     </span>
                                 @endforeach
                             </td>

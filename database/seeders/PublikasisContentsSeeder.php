@@ -15,7 +15,9 @@ class PublikasisContentsSeeder extends Seeder
     public function run()
     {
         DB::table('publikasis_contents')->insert([
-           ['publikasi' => 1]
+           ['publikasi' => 1, 'content' => 1],
+           ['publikasi' => 2, 'content' => 2],
+           ['publikasi' => 3, 'content' => 3],
         ]);
     }
 }

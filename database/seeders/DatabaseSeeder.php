@@ -24,7 +24,13 @@ class DatabaseSeeder extends Seeder
             FotoProfileSeeder::class,
             KategorisSeeder::class,
             TypesSeeder::class,
-            PublikasisSeeder::class
+            PublikasisSeeder::class,
+            ContentsSeeder::class,
+            KategorisSeeder::class,
+            PublikasisContentsSeeder::class,
+            PublikasisKategorisSeeder::class,
+            UsersPublikasisCreatedSeeder::class,
+            UsersPublikasisUpdatedSeeder::class,
         ]);
 
         // \App\Models\User::factory(10)->create();
