@@ -110,9 +110,9 @@ class StaffController extends Controller
 //        dd($key);
         $arrrolesuser = [];
         $user = User::where('randKey', $key)->firstOrFail();
-        $roles_user = $user->roles_user()->get();
+        $roles_user = $user->roles_user();
         foreach ($roles_user as $item) {
-            array_push($arrrolesuser, ['name' => $item->roles()->first()->name]);
+            array_push($arrrolesuser, ['name' => $item->roles()->name]);
         }
         $compact = compact('user', 'arrrolesuser');
         return $compact;

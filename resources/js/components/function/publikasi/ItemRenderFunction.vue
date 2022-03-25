@@ -5,18 +5,20 @@ export default {
 
         }
     },
-    props: ['type', 'content'],
+    props: ['type', 'content', 'index'],
     render: function (createElement) {
         if (this.type === 'title') {
             return createElement('title-workspace', {
                 props: {
-                    content: this.content
+                    content: this.content,
+                    index: this.index
                 }
             })
         } else if(this.type === 'paragraph') {
             return createElement('paragraph-workspace', {
                 props: {
-                    content: this.content
+                    content: this.content,
+                    index: this.index
                 }
             })
         }

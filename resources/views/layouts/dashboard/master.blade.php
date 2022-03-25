@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="{{asset('assets/logo/logo_colorfull.png')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script src="https://kit.fontawesome.com/6fd3995802.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tiny.cloud/1/myd6mneo80f63ct1oaplcds41f0tlhaveajnuxiiaenjdgol/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
@@ -36,44 +37,7 @@
 </div>
 {{--VueJs--}}
 <script>
-    Vue.component('modalEditFunctions', {
-        el: '#modal_edit_functions'
-        methods: {
-            closeModal: function () {
-                // this.$store.state.modal.modaledit = null
-                // this.$store.state.modal.modaledit.type = null
-                console.log(this.$refs.fileupload)
-                this.$store.commit('toggleModalEdit')
-            },
-            submitModal: function () {
-                console.log('submit')
-                this.$store.state.modalvalidation.item = this.$store.state.modal.modaledit.item
-                this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?"
-                this.$store.state.modalvalidation.url.edit_req = "formEditFasilitas"
-                this.$store.commit('toggleModalValidationView')
-            }
-        }
-    })
-    export default {
-        data() {
-            return {}
-        },
-        methods: {
-            closeModal: function () {
-                // this.$store.state.modal.modaledit = null
-                // this.$store.state.modal.modaledit.type = null
-                console.log(this.$refs.fileupload)
-                this.$store.commit('toggleModalEdit')
-            },
-            submitModal: function () {
-                console.log('submit')
-                this.$store.state.modalvalidation.item = this.$store.state.modal.modaledit.item
-                this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?"
-                this.$store.state.modalvalidation.url.edit_req = "formEditFasilitas"
-                this.$store.commit('toggleModalValidationView')
-            }
-        }
-    }
+
 </script>
 {{--VueJs--}}
 <script src="{{asset('js/app.js')}}"></script>

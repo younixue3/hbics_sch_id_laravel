@@ -40,7 +40,8 @@ const store = new Vuex.Store({
             modalstaff: {
                 status: false
             }
-        }
+        },
+        workspace: {},
     },
     mutations: {
         toggleModalValidationView (state) {
