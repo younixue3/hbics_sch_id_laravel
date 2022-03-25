@@ -138,6 +138,8 @@ Vue.component('item-render-function', require('./components/function/publikasi/I
 ////Publikasi Workspace Component
 Vue.component('title-workspace', require('./components/workspace/TitleWorkspace').default)
 Vue.component('paragraph-workspace', require('./components/workspace/ParagraphWorkspace').default)
+Vue.component('image-workspace', require('./components/workspace/ImageWorkspace').default)
+Vue.component('video-workspace', require('./components/workspace/VideoWorkspace').default)
 
 
 /**

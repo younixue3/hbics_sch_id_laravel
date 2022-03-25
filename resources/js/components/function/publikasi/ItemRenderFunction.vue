@@ -21,6 +21,20 @@ export default {
                     index: this.index
                 }
             })
+        } else if(this.type === 'image') {
+            return createElement('image-workspace', {
+                props: {
+                    content: this.content,
+                    index: this.index
+                }
+            })
+        } else if(this.type === 'video') {
+            return createElement('video-workspace', {
+                props: {
+                    content: this.content,
+                    index: this.index
+                }
+            })
         }
     }
 }

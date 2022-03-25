@@ -3,8 +3,8 @@
     <div
         class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-b-2 gap-y-10 md:gap-y-0 md:gap-x-10  border-gray-600 pb-10">
         <div class="te  xt-lg font-light">
-            <h1 class="mb-4 font-medium uppercase">Solutions</h1>
-            <ul class="list-none text-gray-300">
+            <h1 class="mb-4 font-raleway font-medium uppercase font-normal text-lg">Solutions</h1>
+            <ul class="list-none text-gray-300 list-none">
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Marketing</li>
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Analytics</li>
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Commerce</li>
@@ -12,8 +12,8 @@
             </ul>
         </div>
         <div class="text-lg font-light">
-            <h1 class="mb-4 font-medium uppercase">Company</h1>
-            <ul class="list-none text-gray-300">
+            <h1 class="mb-4 font-raleway font-medium uppercase font-normal text-lg">Company</h1>
+            <ul class="list-none text-gray-300 list-none">
                 <li class="my-1 hover:text-gray-50 cursor-pointer">About</li>
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Blog</li>
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Careers</li>
@@ -22,8 +22,8 @@
             </ul>
         </div>
         <div class="text-lg font-light">
-            <h1 class="mb-4 font-medium uppercase">Support</h1>
-            <ul class="list-none text-gray-300">
+            <h1 class="mb-4 font-raleway font-medium uppercase font-normal text-lg">Support</h1>
+            <ul class="list-none text-gray-300 list-none">
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Pricing</li>
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Documentation</li>
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Guides</li>
@@ -31,15 +31,15 @@
             </ul>
         </div>
         <div class="text-lg font-light">
-            <h1 class="mb-4 font-medium uppercase">Legal</h1>
-            <ul class="list-none text-gray-300">
+            <h1 class="mb-4 font-raleway font-medium uppercase font-normal text-lg">Legal</h1>
+            <ul class="list-none text-gray-300 list-none">
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Claim</li>
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Privacy</li>
                 <li class="my-1 hover:text-gray-50 cursor-pointer">Terms</li>
             </ul>
         </div>
         <div class="col-span-2 text-lg font-light">
-            <h1 class="mb-4 font-medium uppercase">Subscribe to our Newsletter</h1>
+            <h1 class="mb-4 font-raleway font-medium uppercase font-normal text-lg">Subscribe to our Newsletter</h1>
             <p class="text-sm text-gray-300 my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
                 dolorum sit soluta accusamus dolores est quisquam voluptatum magni nobis</p>
             <form>

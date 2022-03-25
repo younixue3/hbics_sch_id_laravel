@@ -1,14 +1,34 @@
 <template>
-    <div class="grid grid-cols-1 gap-x-5 my-5">
+    <form id="formPublish" method="get" class="grid grid-cols-1 gap-x-5 gap-y-4 my-5">
         <item-render-function v-for="(item, index) in items" v-bind:type="item.type" v-bind:content="item.content" v-bind:index="index">
         </item-render-function>
-        <div class="grid grid-cols-6 overflow-x-scroll">
-            <button @click="bindDataItems('title')">Title</button>
-            <button @click="bindDataItems('paragraph')">Paragraph</button>
-            <button @click="bindDataItems('image')">Image</button>
-            <button @click="bindDataItems('title')">Video</button>
+        <div class="grid grid-cols-6 gap-5 overflow-x-scroll">
+            <div class="cursor-pointer text-center bg-amber-400 rounded-md" @click="bindDataItems('paragraph')">
+                <div>
+                    <i class="fa-solid inline-block fa-paragraph"></i>
+                </div>
+                <div class="text-sm">Paragraph</div>
+            </div>
+            <div class="cursor-pointer text-center bg-amber-400 rounded-md" @click="bindDataItems('title')">
+                <div>
+                    <i class="fa-solid fa-heading"></i>
+                </div>
+                <div class="text-sm">Title</div>
+            </div>
+            <div class="cursor-pointer text-center bg-amber-400 rounded-md" @click="bindDataItems('image')">
+                <div>
+                    <i class="fa-solid fa-image"></i>
+                </div>
+                <div class="text-sm">Image</div>
+            </div>
+            <div class="cursor-pointer text-center bg-amber-400 rounded-md" @click="bindDataItems('video')">
+                <div>
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <div class="text-sm">video</div>
+            </div>
         </div>
-    </div>
+    </form>
 </template>
 
 <script>

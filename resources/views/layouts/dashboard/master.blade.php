@@ -11,7 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
-<div id="app" class="bg-gray-100 font-raleway">
+<div id="app" class="bg-gray-100 font-raleway font-">
     <modal-show-component>
         @yield('modalShow')
     </modal-show-component>

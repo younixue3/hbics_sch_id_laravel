@@ -2164,8 +2164,44 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-ul{
+ul li{
   list-style-type: disc;
+  list-style-position: inside;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 700;
+}
+
+h1{
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h2{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+h3{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h4{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+h5{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+h6{
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .file\:mr-4::-webkit-file-upload-button{
