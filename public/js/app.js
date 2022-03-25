@@ -2914,13 +2914,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      items: []
+      items: [],
+      jsonstring: JSON.stringify(this.$store.state.workspace)
     };
   },
-  props: ['fetchdata'],
+  props: ['fetchdata', 'store_link'],
   methods: {
     bindDataItems: function bindDataItems(type) {
       this.items.push({
@@ -2928,6 +2934,14 @@ __webpack_require__.r(__webpack_exports__);
         content: null
       });
       this.$store.state.workspace.items = this.items;
+    },
+    transferData: function transferData() {
+      this.jsonstring = JSON.stringify(this.$store.state.workspace);
+    }
+  },
+  watch: {
+    items: function items(val) {
+      this.jsonstring = JSON.stringify(this.$store.state.workspace);
     }
   }
 });
@@ -5411,6 +5425,7 @@ __webpack_require__.r(__webpack_exports__);
     previewImage: function previewImage() {
       var _this = this;
 
+      this.$store.state.workspace.items[this.$props.index].content = event.target.files[0].name;
       var reader = new FileReader();
       reader.readAsDataURL(event.target.files[0]);
 
@@ -5507,6 +5522,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5547,6 +5563,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5565,6 +5582,7 @@ __webpack_require__.r(__webpack_exports__);
     previewVideo: function previewVideo() {
       var _this = this;
 
+      this.$store.state.workspace.items[this.$props.index].content = event.target.files[0].name;
       var reader = new FileReader();
       reader.readAsDataURL(event.target.files[0]);
 
@@ -9612,9 +9630,24 @@ var render = function () {
     "form",
     {
       staticClass: "grid grid-cols-1 gap-x-5 gap-y-4 my-5",
-      attrs: { id: "formPublish", method: "get" },
+      attrs: {
+        id: "formPublish",
+        action: _vm.store_link,
+        enctype: "multipart/form-data",
+        name: "formChangePassword",
+        method: "POST",
+      },
     },
     [
+      _c("input", {
+        attrs: { type: "hidden", name: "_token" },
+        domProps: { value: _vm.$store.state.csrf },
+      }),
+      _vm._v(" "),
+      _c("input", {
+        attrs: { type: "hidden", name: "_method", value: "post" },
+      }),
+      _vm._v(" "),
       _vm._l(_vm.items, function (item, index) {
         return _c("item-render-function", {
           attrs: { type: item.type, content: item.content, index: index },
@@ -9690,6 +9723,32 @@ var render = function () {
           ]
         ),
       ]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.jsonstring,
+            expression: "jsonstring",
+          },
+        ],
+        attrs: { type: "" },
+        domProps: { value: _vm.jsonstring },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.jsonstring = $event.target.value
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("input", {
+        attrs: { type: "submit" },
+        on: { mouseover: _vm.transferData },
+      }),
     ],
     2
   )
@@ -14307,23 +14366,25 @@ var render = function () {
       on: { dblclick: _vm.inputOn },
     }),
     _vm._v(" "),
-    _vm.inputMode
-      ? _c("div", [
-          _c("input", {
-            attrs: { type: "file", name: _vm.inputFile + _vm.index },
-            on: { change: _vm.previewImage },
-          }),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
-              on: { click: _vm.inputOff },
-            },
-            [_vm._v("Save Changes")]
-          ),
-        ])
-      : _vm._e(),
+    _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
+      _c("input", {
+        attrs: {
+          type: "file",
+          name: "inputfile" + _vm.index,
+          src: _vm.$store.state.workspace.items[_vm.index].content,
+        },
+        on: { change: _vm.previewImage },
+      }),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
+          on: { click: _vm.inputOff },
+        },
+        [_vm._v("Save Changes")]
+      ),
+    ]),
   ])
 }
 var staticRenderFns = []
@@ -14469,6 +14530,31 @@ var render = function () {
           }),
         ])
       : _vm._e(),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.$store.state.workspace.items[_vm.index].content,
+          expression: "$store.state.workspace.items[index].content",
+        },
+      ],
+      attrs: { type: "hidden", name: "title" + _vm.index },
+      domProps: { value: _vm.$store.state.workspace.items[_vm.index].content },
+      on: {
+        input: function ($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.$set(
+            _vm.$store.state.workspace.items[_vm.index],
+            "content",
+            $event.target.value
+          )
+        },
+      },
+    }),
   ])
 }
 var staticRenderFns = []
@@ -14503,23 +14589,27 @@ var render = function () {
       on: { dblclick: _vm.inputOn },
     }),
     _vm._v(" "),
-    _vm.inputMode
-      ? _c("div", [
-          _c("input", {
-            attrs: { type: "file", name: _vm.inputFile + _vm.index },
-            on: { change: _vm.previewVideo },
-          }),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
-              on: { click: _vm.inputOff },
-            },
-            [_vm._v("Save Changes")]
-          ),
-        ])
-      : _vm._e(),
+    _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
+      _c("input", {
+        attrs: {
+          type: "file",
+          name: "inputFile" + _vm.index,
+          src: _vm.$store.state.workspace.items[_vm.index].content,
+        },
+        on: { change: _vm.previewVideo },
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
+          on: { click: _vm.inputOff },
+        },
+        [_vm._v("Save Changes")]
+      ),
+    ]),
+    _vm._v(" "),
+    _c("div", {}),
   ])
 }
 var staticRenderFns = []

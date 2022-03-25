@@ -4,6 +4,7 @@
         <form action="#" @submit="inputOff" v-if="inputMode === true">
             <input class="text-5xl" v-model="$store.state.workspace.items[index].content">
         </form>
+        <input type="hidden" :name="'title'+index" v-model="$store.state.workspace.items[index].content">
     </div>
 </template>
 

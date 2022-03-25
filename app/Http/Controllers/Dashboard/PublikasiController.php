@@ -42,7 +42,7 @@ class PublikasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

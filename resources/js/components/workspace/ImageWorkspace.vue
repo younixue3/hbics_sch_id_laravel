@@ -1,9 +1,9 @@
 <template>
     <div>
         <img ref="previewimg" class="w-full object-cover" :class="inputMode === false ? 'h-96' : 'h-20'" @dblclick="inputOn">
-        <div v-if="inputMode">
-            <input type="file" :name="inputFile + index" @change="previewImage">
-            <button class="px-2 mt-5 bg-emerald-500 rounded-md text-white" @click="inputOff">Save Changes</button>
+        <div :class="inputMode ? '' : 'hidden'">
+            <input type="file" :name="'inputfile'+index" @change="previewImage" :src="$store.state.workspace.items[index].content">
+            <span class="px-2 mt-5 bg-emerald-500 rounded-md text-white" @click="inputOff">Save Changes</span>
         </div>
     </div>
 </template>
@@ -26,6 +26,7 @@ export default {
 
         },
         previewImage: function () {
+            this.$store.state.workspace.items[this.$props.index].content = event.target.files[0].name
             const reader = new FileReader();
             reader.readAsDataURL(event.target.files[0]);
             reader.onload = () => {

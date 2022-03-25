@@ -1,10 +1,11 @@
 <template>
     <div>
         <video ref="previewvideo" class="w-full object-contain" :class="inputMode === false ? 'h-96' : ''" @dblclick="inputOn" controls allow></video>
-        <div v-if="inputMode">
-            <input type="file" :name="inputFile + index" @change="previewVideo">
-            <button class="px-2 mt-5 bg-emerald-500 rounded-md text-white" @click="inputOff">Save Changes</button>
+        <div :class="inputMode ? '' : 'hidden'">
+            <input type="file" :name="'inputFile' + index" @change="previewVideo" :src="$store.state.workspace.items[index].content">
+            <div class="px-2 mt-5 bg-emerald-500 rounded-md text-white" @click="inputOff">Save Changes</div>
         </div>
+        <div class=""></div>
     </div>
 </template>
 
@@ -26,6 +27,7 @@ export default {
 
         },
         previewVideo: function () {
+            this.$store.state.workspace.items[this.$props.index].content = event.target.files[0].name
             const reader = new FileReader();
             reader.readAsDataURL(event.target.files[0]);
             reader.onload = () => {
