@@ -3,7 +3,7 @@
         <video ref="previewvideo" class="w-full object-contain" :class="inputMode === false ? 'h-96' : ''" @dblclick="inputOn" controls allow></video>
         <div :class="inputMode ? '' : 'hidden'">
             <input type="file" :name="'inputFile' + index" @change="previewVideo" :src="$store.state.workspace.items[index].content">
-            <div class="px-2 mt-5 bg-emerald-500 rounded-md text-white" @click="inputOff">Save Changes</div>
+            <span class="px-2 mt-5 bg-emerald-500 rounded-md text-white" @click="inputOff">Save Changes</span>
         </div>
         <div class=""></div>
     </div>

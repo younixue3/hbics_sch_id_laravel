@@ -2919,6 +2919,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -9654,74 +9657,89 @@ var render = function () {
         })
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "grid grid-cols-6 gap-5 overflow-x-scroll" }, [
+      _c("span", { staticClass: "flex group" }, [
         _c(
           "div",
           {
-            staticClass: "cursor-pointer text-center bg-amber-400 rounded-md",
-            on: {
-              click: function ($event) {
-                return _vm.bindDataItems("paragraph")
-              },
-            },
+            staticClass:
+              "grid grid-cols-6 gap-5 w-0 group-hover:w-screen transition-all ease-in-out",
           },
           [
-            _vm._m(0),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "cursor-pointer text-center bg-amber-400 rounded-md",
+                on: {
+                  click: function ($event) {
+                    return _vm.bindDataItems("paragraph")
+                  },
+                },
+              },
+              [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("div", { staticClass: "text-sm" }, [_vm._v("Paragraph")]),
+              ]
+            ),
             _vm._v(" "),
-            _c("div", { staticClass: "text-sm" }, [_vm._v("Paragraph")]),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "cursor-pointer text-center bg-amber-400 rounded-md",
+                on: {
+                  click: function ($event) {
+                    return _vm.bindDataItems("title")
+                  },
+                },
+              },
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("div", { staticClass: "text-sm" }, [_vm._v("Title")]),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "cursor-pointer text-center bg-amber-400 rounded-md",
+                on: {
+                  click: function ($event) {
+                    return _vm.bindDataItems("image")
+                  },
+                },
+              },
+              [
+                _vm._m(2),
+                _vm._v(" "),
+                _c("div", { staticClass: "text-sm" }, [_vm._v("Image")]),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "cursor-pointer text-center bg-amber-400 rounded-md",
+                on: {
+                  click: function ($event) {
+                    return _vm.bindDataItems("video")
+                  },
+                },
+              },
+              [
+                _vm._m(3),
+                _vm._v(" "),
+                _c("div", { staticClass: "text-sm" }, [_vm._v("video")]),
+              ]
+            ),
           ]
         ),
         _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "cursor-pointer text-center bg-amber-400 rounded-md",
-            on: {
-              click: function ($event) {
-                return _vm.bindDataItems("title")
-              },
-            },
-          },
-          [
-            _vm._m(1),
-            _vm._v(" "),
-            _c("div", { staticClass: "text-sm" }, [_vm._v("Title")]),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "cursor-pointer text-center bg-amber-400 rounded-md",
-            on: {
-              click: function ($event) {
-                return _vm.bindDataItems("image")
-              },
-            },
-          },
-          [
-            _vm._m(2),
-            _vm._v(" "),
-            _c("div", { staticClass: "text-sm" }, [_vm._v("Image")]),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "cursor-pointer text-center bg-amber-400 rounded-md",
-            on: {
-              click: function ($event) {
-                return _vm.bindDataItems("video")
-              },
-            },
-          },
-          [
-            _vm._m(3),
-            _vm._v(" "),
-            _c("div", { staticClass: "text-sm" }, [_vm._v("video")]),
-          ]
-        ),
+        _vm._m(4),
       ]),
       _vm._v(" "),
       _c("input", {
@@ -9779,6 +9797,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [_c("i", { staticClass: "fa-solid fa-video" })])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("i", { staticClass: "fa-solid fa-angle-right group-hover:text-5xl" }),
+    ])
   },
 ]
 render._withStripped = true
@@ -14600,7 +14626,7 @@ var render = function () {
       }),
       _vm._v(" "),
       _c(
-        "div",
+        "span",
         {
           staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
           on: { click: _vm.inputOff },

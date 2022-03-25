@@ -2600,6 +2600,19 @@ h6{
   bottom: 0.25rem;
 }
 
+.group:hover .group-hover\:w-screen{
+  width: 100vw;
+}
+
+.group:hover .group-hover\:w-0{
+  width: 0px;
+}
+
+.group:hover .group-hover\:text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .group:hover .group-hover\:opacity-100{
   opacity: 1;
 }
