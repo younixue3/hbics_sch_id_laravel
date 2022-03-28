@@ -87,7 +87,7 @@
                                 </div>
                             </td>
                             <td class="py-1 px-3">
-                                <button-dot-menu-component></button-dot-menu-component>
+                                <button-dot-menu-component delete_req="{{route('dashboard.publikasi.destroy', $value->randKey)}}" edit_url="{{route('dashboard.publikasi.edit', $value->randKey)}}"></button-dot-menu-component>
                             </td>
                         </tr>
                     @empty

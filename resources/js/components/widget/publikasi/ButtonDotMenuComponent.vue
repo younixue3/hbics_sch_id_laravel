@@ -8,10 +8,10 @@
                 <a href="">
                     Show
                 </a>
-                <a href="">
+                <a :href="edit_url">
                     Edit
                 </a>
-                <div @click="">
+                <div class="cursor-pointer" @click="openModalValidation">
                     Delete
                 </div>
             </div>
@@ -34,7 +34,13 @@ export default {
         },
         focusout: function () {
             this.show = false
-        }
+        },
+        openModalValidation: function () {
+            this.$store.state.modalvalidation.url.url_req = this.$props.delete_req
+            this.$store.state.modalvalidation.url.validation_form = "formDelete"
+            this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?"
+            this.$store.commit('toggleModalValidationView')
+        },
     },
 }
 </script>

@@ -2,7 +2,7 @@
     <div>
         <input type="hidden" :name="nameoption" v-model="arrOption">
         <label class="block font-medium text-gray-700">
-            Role
+            Select
         </label>
         <div class="rounded-md border p-2 grid grid-cols-3 gap-2">
             <button :disabled="disabled" type="button" @click="selectOption(index)" class="rounded-md text-xs transition-all ease-in-out text-white" :class="item.status ? 'bg-red-500 hover:bg-red-400' : 'bg-blue-500 hover:bg-blue-400'" v-if="" v-for="(item, index) in arrValOption">{{item.name}}</button>

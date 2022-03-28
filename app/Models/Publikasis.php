@@ -11,6 +11,7 @@ class Publikasis extends Model
 {
     use HasFactory, SoftDeletes;
     protected $table = 'publikasis';
+    protected $guarded = [];
 
     public function users_update()
     {
@@ -25,5 +26,10 @@ class Publikasis extends Model
     public function kategoris_publikasi()
     {
         return $this->belongsTo(PublikasisKategoris::class, 'id', 'publikasi')->get();
+    }
+
+    public function publikasis_contents()
+    {
+        return $this->belongsTo(PublikasisContents::class, 'id', 'publikasi')->latest()->get();
     }
 }

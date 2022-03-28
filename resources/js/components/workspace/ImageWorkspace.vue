@@ -1,8 +1,9 @@
 <template>
-    <div>
-        <img ref="previewimg" class="w-full object-cover" :class="inputMode === false ? 'h-96' : 'h-20'" @dblclick="inputOn">
+    <div class="relative">
+        <button-gear-menu-component v-bind:items="index"></button-gear-menu-component>
+        <img ref="previewimg" class="w-full object-cover rounded-3xl m-5" :class="inputMode === false ? 'h-96' : 'h-32 border border-black'" @dblclick="inputOn">
         <div :class="inputMode ? '' : 'hidden'">
-            <input type="file" :name="'inputfile'+index" @change="previewImage" :src="$store.state.workspace.items[index].content">
+            <input type="file" :name="'inputFile'+indexfile" @change="previewImage" :src="$store.state.workspace.items[index].content">
             <span class="px-2 mt-5 bg-emerald-500 rounded-md text-white" @click="inputOff">Save Changes</span>
         </div>
     </div>
@@ -13,10 +14,15 @@ export default {
     data() {
         return {
             inputMode: true,
-            imageAsset: null
+            imageAsset: null,
+            indexfile: null
         }
     },
     props: ['content', 'index'],
+    created() {
+        this.indexfile = this.$store.state.file
+        this.$store.state.file++
+    },
     methods: {
         inputOn: function () {
             this.inputMode = true

@@ -41,7 +41,8 @@ const store = new Vuex.Store({
                 status: false
             }
         },
-        workspace: {},
+        workspace: {items: []},
+        file: 1
     },
     mutations: {
         toggleModalValidationView (state) {
@@ -83,6 +84,16 @@ const store = new Vuex.Store({
             } else {
                 document.body.classList.remove('removescrollbar', 'overflow-hidden')
             }
+        },
+        pushData(state, item) {
+            state.workspace.items.push(item)
+        },
+        deleteData(state, item) {
+            // console.log(item)
+            if (state.workspace.items[item].type === 'image' || state.workspace.items[item].type === 'video') {
+                state.file = state.file - 1
+            }
+            state.workspace.items.splice(item, 1);
         }
     }
 })
@@ -135,6 +146,7 @@ Vue.component('button-show-component', require('./components/widget/ButtonShowCo
 Vue.component('workspace-publikasi-function', require('./components/function/publikasi/WorkspacePublikasiFunction').default)
 Vue.component('button-dot-menu-component', require('./components/widget/publikasi/ButtonDotMenuComponent').default)
 Vue.component('item-render-function', require('./components/function/publikasi/ItemRenderFunction').default)
+Vue.component('button-gear-menu-component', require('./components/widget/publikasi/ButtonGearMenuComponent').default)
 ////Publikasi Workspace Component
 Vue.component('title-workspace', require('./components/workspace/TitleWorkspace').default)
 Vue.component('paragraph-workspace', require('./components/workspace/ParagraphWorkspace').default)

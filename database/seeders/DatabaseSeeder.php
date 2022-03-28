@@ -26,7 +26,6 @@ class DatabaseSeeder extends Seeder
             TypesSeeder::class,
             PublikasisSeeder::class,
             ContentsSeeder::class,
-            KategorisSeeder::class,
             PublikasisContentsSeeder::class,
             PublikasisKategorisSeeder::class,
             UsersPublikasisCreatedSeeder::class,

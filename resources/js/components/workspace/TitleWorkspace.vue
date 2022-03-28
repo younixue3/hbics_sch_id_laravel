@@ -1,10 +1,11 @@
 <template>
-    <div>
+    <div class="relative">
+        <button-gear-menu-component v-bind:items="index"></button-gear-menu-component>
         <h1 class="text-5xl" v-if="inputMode === false" @dblclick="inputOn">{{$store.state.workspace.items[index].content}}</h1>
         <form action="#" @submit="inputOff" v-if="inputMode === true">
-            <input class="text-5xl" v-model="$store.state.workspace.items[index].content">
+            <input class="text-5xl w-full" v-model="$store.state.workspace.items[index].content">
         </form>
-        <input type="hidden" :name="'title'+index" v-model="$store.state.workspace.items[index].content">
+        <input type="hidden" :name="'title0'" v-model="$store.state.workspace.items[index].content">
     </div>
 </template>
 

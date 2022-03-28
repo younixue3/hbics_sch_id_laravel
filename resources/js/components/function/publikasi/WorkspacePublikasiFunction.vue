@@ -3,10 +3,10 @@
           name="formChangePassword" method="POST">
     <input type="hidden" name="_token" :value="$store.state.csrf">
     <input type="hidden" name="_method" value="post">
-        <item-render-function v-for="(item, index) in items" v-bind:type="item.type" v-bind:content="item.content" v-bind:index="index">
+        <item-render-function v-for="(item, index) in this.$store.state.workspace.items" v-bind:type="item.type" v-bind:content="item.content" v-bind:index="index">
         </item-render-function>
         <span class="flex group">
-            <div class="grid grid-cols-6 gap-5 w-0 group-hover:w-screen transition-all ease-in-out">
+            <div class="grid grid-cols-6 gap-5 w-0 scale-0 group-hover:w-max group-hover:scale-100 transition-all ease-in-out overflow-hidden">
                 <div class="cursor-pointer text-center bg-amber-400 rounded-md transition-all ease-in-out" @click="bindDataItems('paragraph')">
                     <div>
                         <i class="fa-solid inline-block fa-paragraph"></i>
@@ -32,10 +32,17 @@
                     <div class="text-sm">video</div>
                 </div>
             </div>
-            <div><i class="fa-solid fa-angle-right group-hover:text-5xl"></i></div>
+            <div class="bg-green-400 w-10 h-10 text-center rounded-md text-xl group-hover:hidden flex">
+                <div class="m-auto">
+                    <i class="m-auto fa-solid fa-angle-right"></i>
+                </div>
+            </div>
         </span>
-        <input type="" v-model="jsonstring">
-        <input @mouseover="transferData" type="submit">
+        <slot>
+
+        </slot>
+        <input type="hidden" name="item" v-model="jsonstring">
+        <input class="bg-blue-500 my-1 rounded-lg text-xl text-white" @mouseover="transferData" type="submit">
     </form>
 </template>
 
@@ -49,10 +56,18 @@ export default {
         }
     },
     props: ['fetchdata', 'store_link'],
+    created() {
+        if (this.$props.fetchdata !== null) {
+            this.$store.state.workspace = JSON.parse(this.fetchdata)
+            // this.items = this.$store.state.workspace.item
+        }
+    },
     methods: {
         bindDataItems: function (type) {
-            this.items.push({type: type, content: null})
-            this.$store.state.workspace.items = this.items
+            // this.items.push({type: type, content: null})
+            // store.commit('addCustomer', { id: '2', name: 'User 2'})
+            // this.$store.state.workspace.items.push({type: type, content: null})
+            this.$store.commit('pushData', { type: type, content: null})
         },
         transferData: function () {
             this.jsonstring = JSON.stringify(this.$store.state.workspace)

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Kategoris;
+use App\Models\Publikasis;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Dashboard\Data\PublikasiController as DataController;
 
@@ -31,7 +33,9 @@ class PublikasiController extends Controller
      */
     public function create()
     {
-        return view('dashboard.publikasi.add');
+        $category = Kategoris::get();
+        $compact = compact('category');
+        return view('dashboard.publikasi.add', $compact);
     }
 
     /**
@@ -42,7 +46,13 @@ class PublikasiController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        foreach ($request->files as $key => $value) {
+            $request->validate([
+               $key  => 'mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 50'
+            ]);
+        }
+        $data = $this->data->store_data($request);
+        return redirect(route('dashboard.publikasi.index'))->with('success', 'Insert Data Successfully');
     }
 
     /**
@@ -62,9 +72,10 @@ class PublikasiController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($key)
     {
-        //
+        $data = $this->data->edit_data($key);
+        return view('dashboard.publikasi.edit', $data);
     }
 
     /**
@@ -85,8 +96,9 @@ class PublikasiController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($key)
     {
-        //
+        $data = $this->data->destroy_data($key);
+        return redirect(route('dashboard.publikasi.index'))->with('success', 'Insert Data Successfully');
     }
 }

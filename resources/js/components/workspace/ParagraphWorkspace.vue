@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div clas="relative">
+        <button-gear-menu-component v-bind:items="index"></button-gear-menu-component>
         <div v-if="inputMode === false" @dblclick="inputOn" v-html="$store.state.workspace.items[index].content">
 
         </div>
