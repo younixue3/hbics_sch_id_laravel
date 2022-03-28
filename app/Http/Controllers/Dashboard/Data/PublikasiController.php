@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard\Data;
 
+use App\Helper\getFilename;
 use App\Http\Controllers\Controller;
 use App\Models\Contents;
 use App\Models\Kategoris;
@@ -10,6 +11,7 @@ use App\Models\PublikasisContents;
 use App\Models\PublikasisKategoris;
 use App\Models\UsersPublikasisCreated;
 use App\Models\UsersPublikasisUpdated;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class PublikasiController extends Controller
@@ -23,7 +25,7 @@ class PublikasiController extends Controller
 
     public function store_data($request)
     {
-//        dd($request);
+//        dd($request->inputFile1->getClientOriginalName());
         $publikasi = Publikasis::create([
             'randKey' => Str::random(8),
             'title' => $request->title0,
@@ -39,11 +41,22 @@ class PublikasiController extends Controller
             'publikasi' => $publikasi->id,
             'content' => $content->id
         ]);
-        foreach (json_decode($request->selectcategory) as $value) {
-            $userRole = new PublikasisKategoris();
-            $userRole->publikasi = $publikasi->id;
-            $userRole->kategori = $value->id;
-            $userRole->save();
+        if ($request->selectcategory !== '[object Object]') {
+            foreach (json_decode($request->selectcategory) as $value) {
+                $userRole = new PublikasisKategoris();
+                $userRole->publikasi = $publikasi->id;
+                $userRole->kategori = $value->id;
+                $userRole->save();
+            }
+        }
+        if($request->inputFile1 !== null) {
+            for ($i = 1; ; $i++) {
+                if ($request['inputFile'.$i] === null) {
+                    break;
+                }
+//                $filename = getFilename::getFilename($request);
+                Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['inputFile'.$i]->getClientOriginalName());
+            }
         }
     }
 
@@ -89,6 +102,15 @@ class PublikasiController extends Controller
                 $userRole->publikasi = $publikasi->first()->id;
                 $userRole->kategori = $value->id;
                 $userRole->save();
+            }
+        }
+        if($request->inputFile0 !== null) {
+            for ($i = 1; ; $i++) {
+                if ($request['inputFile'.$i] === null) {
+                    break;
+                }
+                $filename = getFilename::getFilename($request);
+                Storage::disk('upload')->putFileAs('foto_content', $request->fileupload, $filename['filename']);
             }
         }
     }

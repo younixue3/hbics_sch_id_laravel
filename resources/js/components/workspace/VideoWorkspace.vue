@@ -19,11 +19,20 @@ export default {
             indexfile: null
         }
     },
-    created() {
+    mounted() {
+
         this.indexfile = this.$store.state.file
         this.$store.state.file++
+        if (this.$props.editmode === 'true') {
+            console.log('editmode true');
+            for (var item in this.$store.state.workspace.items) {
+                if (this.$store.state.workspace.items[item].type === 'image' || 'video') {
+                    this.$store.state.workspace.items[item].content = this.urlasset + this.$store.state.workspace.items[item].content
+                }
+            }
+        }
     },
-    props: ['content', 'index'],
+    props: ['content', 'index', 'editmode'],
     methods: {
         inputOn: function () {
             this.inputMode = true

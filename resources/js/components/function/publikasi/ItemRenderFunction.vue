@@ -5,7 +5,7 @@ export default {
 
         }
     },
-    props: ['type', 'content', 'index'],
+    props: ['type', 'content', 'index', 'urlasset'],
     render: function (createElement) {
         if (this.type === 'title') {
             return createElement('title-workspace', {
@@ -25,14 +25,18 @@ export default {
             return createElement('image-workspace', {
                 props: {
                     content: this.content,
-                    index: this.index
+                    index: this.index,
+                    urlasset: this.urlasset,
+                    editmode: this.editmode
                 }
             })
         } else if(this.type === 'video') {
             return createElement('video-workspace', {
                 props: {
                     content: this.content,
-                    index: this.index
+                    index: this.index,
+                    urlasset: this.urlasset,
+                    editmode: this.editmode
                 }
             })
         }

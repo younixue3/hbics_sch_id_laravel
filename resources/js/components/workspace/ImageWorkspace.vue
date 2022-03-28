@@ -18,10 +18,18 @@ export default {
             indexfile: null
         }
     },
-    props: ['content', 'index'],
-    created() {
+    props: ['content', 'index', 'editmode', 'urlasset'],
+    mounted() {
         this.indexfile = this.$store.state.file
         this.$store.state.file++
+        console.log('editmode true');
+        if (this.$props.editmode === 'true') {
+            for (var item in this.$store.state.workspace.items) {
+                if (this.$store.state.workspace.items[item].type === 'image' || 'video') {
+                    this.$store.state.workspace.items[item].content = this.urlasset + this.$store.state.workspace.items[item].content
+                }
+            }
+        }
     },
     methods: {
         inputOn: function () {

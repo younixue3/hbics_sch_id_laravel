@@ -2834,7 +2834,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  props: ['type', 'content', 'index'],
+  props: ['type', 'content', 'index', 'urlasset'],
   render: function render(createElement) {
     if (this.type === 'title') {
       return createElement('title-workspace', {
@@ -2854,14 +2854,18 @@ __webpack_require__.r(__webpack_exports__);
       return createElement('image-workspace', {
         props: {
           content: this.content,
-          index: this.index
+          index: this.index,
+          urlasset: this.urlasset,
+          editmode: this.editmode
         }
       });
     } else if (this.type === 'video') {
       return createElement('video-workspace', {
         props: {
           content: this.content,
-          index: this.index
+          index: this.index,
+          urlasset: this.urlasset,
+          editmode: this.editmode
         }
       });
     }
@@ -2935,7 +2939,7 @@ __webpack_require__.r(__webpack_exports__);
       jsonstring: JSON.stringify(this.$store.state.workspace)
     };
   },
-  props: ['fetchdata', 'store_link'],
+  props: ['fetchdata', 'store_link', 'urlasset', 'editmode'],
   created: function created() {
     if (this.$props.fetchdata !== null) {
       this.$store.state.workspace = JSON.parse(this.fetchdata); // this.items = this.$store.state.workspace.item
@@ -5495,10 +5499,19 @@ __webpack_require__.r(__webpack_exports__);
       indexfile: null
     };
   },
-  props: ['content', 'index'],
-  created: function created() {
+  props: ['content', 'index', 'editmode', 'urlasset'],
+  mounted: function mounted() {
     this.indexfile = this.$store.state.file;
     this.$store.state.file++;
+    console.log('editmode true');
+
+    if (this.$props.editmode === 'true') {
+      for (var item in this.$store.state.workspace.items) {
+        if (this.$store.state.workspace.items[item].type === 'image' || 'video') {
+          this.$store.state.workspace.items[item].content = this.urlasset + this.$store.state.workspace.items[item].content;
+        }
+      }
+    }
   },
   methods: {
     inputOn: function inputOn() {
@@ -5660,11 +5673,21 @@ __webpack_require__.r(__webpack_exports__);
       indexfile: null
     };
   },
-  created: function created() {
+  mounted: function mounted() {
     this.indexfile = this.$store.state.file;
     this.$store.state.file++;
+
+    if (this.$props.editmode === 'true') {
+      console.log('editmode true');
+
+      for (var item in this.$store.state.workspace.items) {
+        if (this.$store.state.workspace.items[item].type === 'image' || 'video') {
+          this.$store.state.workspace.items[item].content = this.urlasset + this.$store.state.workspace.items[item].content;
+        }
+      }
+    }
   },
-  props: ['content', 'index'],
+  props: ['content', 'index', 'editmode'],
   methods: {
     inputOn: function inputOn() {
       this.inputMode = true;
@@ -9826,7 +9849,13 @@ var render = function () {
       _vm._v(" "),
       _vm._l(this.$store.state.workspace.items, function (item, index) {
         return _c("item-render-function", {
-          attrs: { type: item.type, content: item.content, index: index },
+          attrs: {
+            type: item.type,
+            content: item.content,
+            index: index,
+            urlasset: _vm.urlasset,
+            editmode: _vm.editmode,
+          },
         })
       }),
       _vm._v(" "),
