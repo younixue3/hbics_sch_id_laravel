@@ -9,6 +9,7 @@ use App\Models\Publikasis;
 use App\Models\PublikasisContents;
 use App\Models\PublikasisKategoris;
 use App\Models\UsersPublikasisCreated;
+use App\Models\UsersPublikasisUpdated;
 use Illuminate\Support\Str;
 
 class PublikasiController extends Controller
@@ -58,5 +59,37 @@ class PublikasiController extends Controller
         $compact = compact('publikasi', 'category');
 
         return $compact;
+    }
+
+    public function update_data($request, $key)
+    {
+        $publikasi = Publikasis::where('randKey', $key);
+
+        $publikasi->update([
+            'title' => $request->title0,
+        ]);
+        if ($publikasi->first()->publikasis_contents()->first()->content()->first()->item !== $request->item) {
+            $content = Contents::create([
+                'item' => $request->item
+            ]);
+            PublikasisContents::where('publikasi', $publikasi->first()->id)->delete();
+            $publikasi_content = PublikasisContents::create([
+                'publikasi' => $publikasi->first()->id,
+                'content' => $content->id
+            ]);
+            $user_publikasi = UsersPublikasisUpdated::create([
+                'user' => auth()->user()->id,
+                'publikasi' => $publikasi->first()->id
+            ]);
+        }
+        if ($request->selectcategory !== '[object Object]') {
+            PublikasisKategoris::where('publikasi', $publikasi->first()->id)->delete();
+            foreach (json_decode($request->selectcategory) as $value) {
+                $userRole = new PublikasisKategoris();
+                $userRole->publikasi = $publikasi->first()->id;
+                $userRole->kategori = $value->id;
+                $userRole->save();
+            }
+        }
     }
 }

@@ -2,7 +2,6 @@
     <form id="formPublish" :action="store_link" class="grid grid-cols-1 gap-x-5 gap-y-4 my-5" enctype="multipart/form-data"
           name="formChangePassword" method="POST">
     <input type="hidden" name="_token" :value="$store.state.csrf">
-    <input type="hidden" name="_method" value="post">
         <item-render-function v-for="(item, index) in this.$store.state.workspace.items" v-bind:type="item.type" v-bind:content="item.content" v-bind:index="index">
         </item-render-function>
         <span class="flex group">

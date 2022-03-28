@@ -85,9 +85,15 @@ class PublikasiController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $key)
     {
-        //
+        foreach ($request->files as $key => $value) {
+            $request->validate([
+                $key  => 'mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 50'
+            ]);
+        }
+        $data = $this->data->update_data($request, $key);
+        return redirect(route('dashboard.publikasi.index'))->with('success', 'Update Data Successfully');
     }
 
     /**
@@ -99,6 +105,6 @@ class PublikasiController extends Controller
     public function destroy($key)
     {
         $data = $this->data->destroy_data($key);
-        return redirect(route('dashboard.publikasi.index'))->with('success', 'Insert Data Successfully');
+        return redirect(route('dashboard.publikasi.index'))->with('success', 'Delete Data Successfully');
     }
 }

@@ -101,7 +101,7 @@ class StaffController extends Controller
         }
 
         $data = $this->data->update_data($request, $key);
-        return redirect(route('dashboard.staff.index'))->with('success', 'Insert Data Successfully');
+        return redirect(route('dashboard.staff.index'))->with('success', 'Update Data Successfully');
     }
 
     /**
