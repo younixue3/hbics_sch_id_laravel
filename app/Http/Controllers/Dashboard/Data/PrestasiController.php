@@ -35,8 +35,24 @@ class PrestasiController extends Controller
         $compact = compact('prestasi');
         return $compact;
     }
-    public function update_data($request, $key)
+    public function update_data($request, $id)
     {
-
+        $prestasi = Prestasis::findOrFail($id);
+        $prestasi->name = $request->name;
+        $prestasi->prestasi = $request->prestasi;
+        $prestasi->detail_prestasi = $request->detail_prestasi;
+        if ($request->area !== null) {
+            $prestasi->area = $request->area;
+        }
+        if ($request->fileupload != null) {
+            $filename = getFilename::getFilename($request);
+            Storage::disk('upload')->putFileAs('foto_siswa', $request->fileupload, $filename['filename']);
+            $prestasi->picture = $filename['filename'];
+        };
+        $prestasi->save();
+    }
+    public function destroy_data($id)
+    {
+        return Prestasis::findOrFail($id)->delete();
     }
 }

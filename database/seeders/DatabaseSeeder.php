@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             UsersPublikasisCreatedSeeder::class,
             UsersPublikasisUpdatedSeeder::class,
             PrestasisSeeder::class,
+            KomunitasSeeder::class,
         ]);
 
         // \App\Models\User::factory(10)->create();

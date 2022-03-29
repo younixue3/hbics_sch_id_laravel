@@ -91,11 +91,10 @@ class PrestasiController extends Controller
             'name' => ['required', 'max: 60'],
             'prestasi' => ['required'],
             'detail_prestasi' => ['required'],
-            'area' => ['required'],
         ]);
 
         $data = $this->data->update_data($request, $id);
-        return redirect(route('dashboard.staff.index'))->with('success', 'Update Data Successfully');
+        return redirect(route('dashboard.prestasi.index'))->with('success', 'Update Data Successfully');
     }
 
     /**
@@ -106,6 +105,7 @@ class PrestasiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = $this->data->destroy_data($id);
+        return redirect(route('dashboard.prestasi.index'))->with('success', 'Delete Data Successfully');
     }
 }
