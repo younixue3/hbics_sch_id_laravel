@@ -25,7 +25,7 @@ class PublikasiController extends Controller
 
     public function store_data($request)
     {
-//        dd($request->inputFile1->getClientOriginalName());
+//        dd($request);
         $publikasi = Publikasis::create([
             'randKey' => Str::random(8),
             'title' => $request->title0,
@@ -50,11 +50,12 @@ class PublikasiController extends Controller
             }
         }
         if($request->inputFile1 !== null) {
-            for ($i = 1; ; $i++) {
+            for ($i = 1; $i === intval($request->totalfile) ;) {
+//                dd($request);
                 if ($request['inputFile'.$i] === null) {
-                    break;
+                    Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['inputFile'.$i]->getClientOriginalName());
                 }
-                Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['inputFile'.$i]->getClientOriginalName());
+                $i++;
             }
         }
     }
@@ -104,11 +105,15 @@ class PublikasiController extends Controller
             }
         }
         if($request->inputFile1 !== null) {
-            for ($i = 1; ; $i++) {
-                if ($request['inputFile'.$i] === null) {
-                    break;
+//        dd($i = 1 > intval($request->totalfile));
+            for ($i = 1; $i < intval($request->totalfile);) {
+//                dd($request['inputFile'.$i]);
+                if ($request['inputFile'.$i] !== null) {
+//                    dd('masuk');
+                    Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['inputFile'.$i]->getClientOriginalName());
+
                 }
-                Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['inputFile'.$i]->getClientOriginalName());
+                $i++;
             }
         }
     }

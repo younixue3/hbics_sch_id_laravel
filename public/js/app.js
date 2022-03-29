@@ -2932,6 +2932,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2943,6 +2944,12 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     if (this.$props.fetchdata !== null) {
       this.$store.state.workspace = JSON.parse(this.fetchdata); // this.items = this.$store.state.workspace.item
+    }
+
+    if (editmode === 'true') {
+      for (var item in this.$store.state.workspace.items) {
+        this.$store.state.workspace.file++;
+      }
     }
   },
   methods: {
@@ -5502,14 +5509,20 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: ['content', 'index', 'editmode', 'urlasset'],
   mounted: function mounted() {
-    this.indexfile = this.$store.state.file;
+    if (this.$props.editmode === 'true') {
+      this.inputMode = false;
+    }
+
     this.$store.state.file++;
+    this.indexfile = this.$store.state.file;
 
     if (this.$props.editmode === 'true') {
       if (this.$store.state.workspace.items[this.$props.index].type === 'image' || this.$store.state.workspace.items[this.$props.index].type === 'video') {
         var name = this.$store.state.workspace.items[this.$props.index].content;
         var filename = '/' + name;
         this.filename = this.urlasset + filename;
+        var preview = this.$refs.previewimg;
+        preview.src = this.filename;
       }
     }
   },
@@ -5671,24 +5684,29 @@ __webpack_require__.r(__webpack_exports__);
     return {
       inputMode: true,
       imageAsset: null,
-      indexfile: null
+      indexfile: null,
+      filename: null
     };
   },
   mounted: function mounted() {
-    this.indexfile = this.$store.state.file;
+    if (this.$props.editmode === 'true') {
+      this.inputMode = false;
+    }
+
     this.$store.state.file++;
+    this.indexfile = this.$store.state.file;
 
     if (this.$props.editmode === 'true') {
-      console.log('editmode true');
-
-      for (var item in this.$store.state.workspace.items) {
-        if (this.$store.state.workspace.items[item].type === 'image' || 'video') {
-          this.$store.state.workspace.items[item].content = this.urlasset + this.$store.state.workspace.items[item].content;
-        }
+      if (this.$store.state.workspace.items[this.$props.index].type === 'image' || this.$store.state.workspace.items[this.$props.index].type === 'video') {
+        var name = this.$store.state.workspace.items[this.$props.index].content;
+        var filename = '/' + name;
+        this.filename = this.urlasset + filename;
+        var preview = this.$refs.previewvideo;
+        preview.src = this.filename;
       }
     }
   },
-  props: ['content', 'index', 'editmode'],
+  props: ['content', 'index', 'editmode', 'urlasset'],
   methods: {
     inputOn: function inputOn() {
       this.inputMode = true;
@@ -5767,7 +5785,7 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_2__["default"].Store({
     workspace: {
       items: []
     },
-    file: 1
+    file: 0
   },
   mutations: {
     toggleModalValidationView: function toggleModalValidationView(state) {
@@ -9964,6 +9982,27 @@ var render = function () {
               return
             }
             _vm.jsonstring = $event.target.value
+          },
+        },
+      }),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.$store.state.file,
+            expression: "$store.state.file",
+          },
+        ],
+        attrs: { type: "hidden", name: "totalfile" },
+        domProps: { value: _vm.$store.state.file },
+        on: {
+          input: function ($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.$store.state, "file", $event.target.value)
           },
         },
       }),
@@ -14693,35 +14732,29 @@ var render = function () {
       _c("img", {
         ref: "previewimg",
         staticClass: "w-full object-cover rounded-3xl m-5",
-        class:
-          _vm.inputMode === false || _vm.editmode !== "false"
-            ? "h-96"
-            : "h-32 border border-black",
-        attrs: { src: _vm.filename },
+        class: _vm.inputMode === false ? "h-96" : "h-32 border border-black",
         on: { dblclick: _vm.inputOn },
       }),
       _vm._v(" "),
-      _vm.editmode === "false"
-        ? _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
-            _c("input", {
-              attrs: {
-                type: "file",
-                name: "inputFile" + _vm.indexfile,
-                src: _vm.$store.state.workspace.items[_vm.index].content,
-              },
-              on: { change: _vm.previewImage },
-            }),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
-                on: { click: _vm.inputOff },
-              },
-              [_vm._v("Save Changes")]
-            ),
-          ])
-        : _vm._e(),
+      _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
+        _c("input", {
+          attrs: {
+            type: "file",
+            name: "inputFile" + _vm.indexfile,
+            src: _vm.$store.state.workspace.items[_vm.index].content,
+          },
+          on: { change: _vm.previewImage },
+        }),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
+            on: { click: _vm.inputOff },
+          },
+          [_vm._v("Save Changes")]
+        ),
+      ]),
     ],
     1
   )

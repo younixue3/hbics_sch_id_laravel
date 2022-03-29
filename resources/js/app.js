@@ -42,7 +42,7 @@ const store = new Vuex.Store({
             }
         },
         workspace: {items: []},
-        file: 1
+        file: 0
     },
     mutations: {
         toggleModalValidationView (state) {

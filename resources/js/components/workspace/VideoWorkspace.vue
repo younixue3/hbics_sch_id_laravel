@@ -16,23 +16,28 @@ export default {
         return {
             inputMode: true,
             imageAsset: null,
-            indexfile: null
+            indexfile: null,
+            filename: null,
         }
     },
     mounted() {
-
-        this.indexfile = this.$store.state.file
-        this.$store.state.file++
         if (this.$props.editmode === 'true') {
-            console.log('editmode true');
-            for (var item in this.$store.state.workspace.items) {
-                if (this.$store.state.workspace.items[item].type === 'image' || 'video') {
-                    this.$store.state.workspace.items[item].content = this.urlasset + this.$store.state.workspace.items[item].content
-                }
+            this.inputMode = false
+        }
+
+        this.$store.state.file++
+        this.indexfile = this.$store.state.file
+        if (this.$props.editmode === 'true') {
+            if (this.$store.state.workspace.items[this.$props.index].type === 'image' || this.$store.state.workspace.items[this.$props.index].type === 'video') {
+                var name = this.$store.state.workspace.items[this.$props.index].content
+                var filename = '/' + name
+                this.filename = this.urlasset + filename
+                const preview = this.$refs.previewvideo
+                preview.src = this.filename
             }
         }
     },
-    props: ['content', 'index', 'editmode'],
+    props: ['content', 'index', 'editmode', 'urlasset'],
     methods: {
         inputOn: function () {
             this.inputMode = true

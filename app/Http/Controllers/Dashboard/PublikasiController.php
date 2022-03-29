@@ -48,7 +48,7 @@ class PublikasiController extends Controller
     {
         foreach ($request->files as $key => $value) {
             $request->validate([
-               $key  => 'mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 50'
+               $key  => 'mimes:jpeg,jpg,webp,png,mp4', 'dimensions: max_width = 2464, max_height = 2464', 'max: 50'
             ]);
         }
         $data = $this->data->store_data($request);
@@ -89,7 +89,7 @@ class PublikasiController extends Controller
     {
         foreach ($request->files as $index => $value) {
             $request->validate([
-                $index  => 'mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 50'
+                $index  => 'mimes:jpeg,jpg,webp,png,mp4', 'dimensions: max_width = 2464, max_height = 2464', 'max: 50'
             ]);
         }
         $data = $this->data->update_data($request, $key);

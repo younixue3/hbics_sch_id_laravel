@@ -41,6 +41,7 @@
 
         </slot>
         <input type="hidden" name="item" v-model="jsonstring">
+        <input type="hidden" name="totalfile" v-model="$store.state.file">
         <input class="bg-blue-500 my-1 rounded-lg text-xl text-white" @mouseover="transferData" type="submit">
     </form>
 </template>
@@ -59,6 +60,11 @@ export default {
         if (this.$props.fetchdata !== null) {
             this.$store.state.workspace = JSON.parse(this.fetchdata)
             // this.items = this.$store.state.workspace.item
+        }
+        if (editmode === 'true') {
+            for (var item in this.$store.state.workspace.items) {
+                this.$store.state.workspace.file++
+            }
         }
     },
     methods: {
