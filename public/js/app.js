@@ -2834,7 +2834,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  props: ['type', 'content', 'index', 'urlasset'],
+  props: ['type', 'content', 'index', 'urlasset', 'editmode'],
   render: function render(createElement) {
     if (this.type === 'title') {
       return createElement('title-workspace', {
@@ -5496,26 +5496,27 @@ __webpack_require__.r(__webpack_exports__);
     return {
       inputMode: true,
       imageAsset: null,
-      indexfile: null
+      indexfile: null,
+      filename: null
     };
   },
   props: ['content', 'index', 'editmode', 'urlasset'],
   mounted: function mounted() {
     this.indexfile = this.$store.state.file;
     this.$store.state.file++;
-    console.log('editmode true');
 
     if (this.$props.editmode === 'true') {
-      for (var item in this.$store.state.workspace.items) {
-        if (this.$store.state.workspace.items[item].type === 'image' || 'video') {
-          this.$store.state.workspace.items[item].content = this.urlasset + this.$store.state.workspace.items[item].content;
-        }
+      if (this.$store.state.workspace.items[this.$props.index].type === 'image' || this.$store.state.workspace.items[this.$props.index].type === 'video') {
+        var name = this.$store.state.workspace.items[this.$props.index].content;
+        var filename = '/' + name;
+        this.filename = this.urlasset + filename;
       }
     }
   },
   methods: {
     inputOn: function inputOn() {
       this.inputMode = true;
+      this.$props.editmode = 'false';
     },
     inputOff: function inputOff() {
       this.inputMode = false;
@@ -14692,29 +14693,35 @@ var render = function () {
       _c("img", {
         ref: "previewimg",
         staticClass: "w-full object-cover rounded-3xl m-5",
-        class: _vm.inputMode === false ? "h-96" : "h-32 border border-black",
+        class:
+          _vm.inputMode === false || _vm.editmode !== "false"
+            ? "h-96"
+            : "h-32 border border-black",
+        attrs: { src: _vm.filename },
         on: { dblclick: _vm.inputOn },
       }),
       _vm._v(" "),
-      _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
-        _c("input", {
-          attrs: {
-            type: "file",
-            name: "inputFile" + _vm.indexfile,
-            src: _vm.$store.state.workspace.items[_vm.index].content,
-          },
-          on: { change: _vm.previewImage },
-        }),
-        _vm._v(" "),
-        _c(
-          "span",
-          {
-            staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
-            on: { click: _vm.inputOff },
-          },
-          [_vm._v("Save Changes")]
-        ),
-      ]),
+      _vm.editmode === "false"
+        ? _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
+            _c("input", {
+              attrs: {
+                type: "file",
+                name: "inputFile" + _vm.indexfile,
+                src: _vm.$store.state.workspace.items[_vm.index].content,
+              },
+              on: { change: _vm.previewImage },
+            }),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
+                on: { click: _vm.inputOff },
+              },
+              [_vm._v("Save Changes")]
+            ),
+          ])
+        : _vm._e(),
     ],
     1
   )

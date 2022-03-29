@@ -5,7 +5,7 @@ export default {
 
         }
     },
-    props: ['type', 'content', 'index', 'urlasset'],
+    props: ['type', 'content', 'index', 'urlasset', 'editmode'],
     render: function (createElement) {
         if (this.type === 'title') {
             return createElement('title-workspace', {

@@ -54,7 +54,6 @@ class PublikasiController extends Controller
                 if ($request['inputFile'.$i] === null) {
                     break;
                 }
-//                $filename = getFilename::getFilename($request);
                 Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['inputFile'.$i]->getClientOriginalName());
             }
         }
@@ -104,13 +103,12 @@ class PublikasiController extends Controller
                 $userRole->save();
             }
         }
-        if($request->inputFile0 !== null) {
+        if($request->inputFile1 !== null) {
             for ($i = 1; ; $i++) {
                 if ($request['inputFile'.$i] === null) {
                     break;
                 }
-                $filename = getFilename::getFilename($request);
-                Storage::disk('upload')->putFileAs('foto_content', $request->fileupload, $filename['filename']);
+                Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['inputFile'.$i]->getClientOriginalName());
             }
         }
     }

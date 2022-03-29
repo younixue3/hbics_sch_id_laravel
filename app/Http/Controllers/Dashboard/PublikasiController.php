@@ -87,9 +87,9 @@ class PublikasiController extends Controller
      */
     public function update(Request $request, $key)
     {
-        foreach ($request->files as $key => $value) {
+        foreach ($request->files as $index => $value) {
             $request->validate([
-                $key  => 'mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 50'
+                $index  => 'mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 50'
             ]);
         }
         $data = $this->data->update_data($request, $key);
