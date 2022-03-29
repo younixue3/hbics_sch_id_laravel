@@ -68,7 +68,7 @@
                             <td class="py-1">
                                 <div class="flex items-center text-sm text-gray-500">
                                     @if($value->users_update() != null)
-                                        <span>{{\Carbon\Carbon::parse($value->users_update()->updated_at)->format('d M Y')}}</span>
+                                        <span>{{\Carbon\Carbon::parse($value->users_update()->updated_at)->setTimezone('Asia/Kuala_Lumpur')->format('d M Y - h:i:s')}}</span>
                                         (
                                         <img class="h-4 w-4 ml-1 mr-1 rounded-full object-cover"
                                              src="{{asset('Upload/foto_profile/'.$value->users_update()->user()->foto_profile()->img)}}"

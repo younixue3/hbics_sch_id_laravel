@@ -5498,13 +5498,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       inputMode: true,
       imageAsset: null,
       indexfile: null,
-      filename: null
+      filename: null,
+      show: false
     };
   },
   props: ['content', 'index', 'editmode', 'urlasset'],
@@ -5545,6 +5562,18 @@ __webpack_require__.r(__webpack_exports__);
         var preview = _this.$refs.previewimg;
         preview.src = reader.result;
       };
+    },
+    showmenu: function showmenu() {
+      this.show = true;
+    },
+    focusout: function focusout() {
+      this.show = false;
+    },
+    deleteitem: function deleteitem() {
+      this.$store.commit('deleteData', this.$props.index);
+    },
+    edititem: function edititem() {
+      this.inputMode = true;
     }
   }
 });
@@ -5667,6 +5696,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var v_click_outside__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! v-click-outside */ "./node_modules/v-click-outside/dist/v-click-outside.umd.js");
+/* harmony import */ var v_click_outside__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(v_click_outside__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -5679,13 +5710,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       inputMode: true,
       imageAsset: null,
       indexfile: null,
-      filename: null
+      filename: null,
+      show: false // states : this.$store.state.workspace
+
     };
   },
   mounted: function mounted() {
@@ -5725,6 +5775,18 @@ __webpack_require__.r(__webpack_exports__);
         var preview = _this.$refs.previewvideo;
         preview.src = reader.result;
       };
+    },
+    showmenu: function showmenu() {
+      this.show = true;
+    },
+    focusout: function focusout() {
+      this.show = false;
+    },
+    deleteitem: function deleteitem() {
+      this.$store.commit('deleteData', this.$props.index);
+    },
+    edititem: function edititem() {
+      this.inputMode = true;
     }
   }
 });
@@ -14723,43 +14785,106 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "relative" },
-    [
-      _c("button-gear-menu-component", { attrs: { items: _vm.index } }),
-      _vm._v(" "),
-      _c("img", {
-        ref: "previewimg",
-        staticClass: "w-full object-cover rounded-3xl m-5",
-        class: _vm.inputMode === false ? "h-96" : "h-32 border border-black",
-        on: { dblclick: _vm.inputOn },
+  return _c("div", { staticClass: "relative" }, [
+    _c("div", { staticClass: "flex w-full justify-end mb-5" }, [
+      _c("div", { staticClass: "flex" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-rose-500 flex rounded-lg w-8 h-8 text-white cursor-pointer",
+            on: { click: _vm.showmenu },
+          },
+          [_vm._m(0)]
+        ),
+        _vm._v(" "),
+        _vm.show
+          ? _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "click-outside",
+                    rawName: "v-click-outside",
+                    value: _vm.focusout,
+                    expression: "focusout",
+                  },
+                ],
+                staticClass:
+                  "absolute right-6 translate-y-1/2 bg-white shadow-md rounded-md px-5 z-50",
+              },
+              [
+                _c("div", { staticClass: "grid grid-cols-1" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "cursor-pointer",
+                      on: { click: _vm.deleteitem },
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Delete\n                    "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "cursor-pointer",
+                      on: { click: _vm.edititem },
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Edit\n                    "
+                      ),
+                    ]
+                  ),
+                ]),
+              ]
+            )
+          : _vm._e(),
+      ]),
+    ]),
+    _vm._v(" "),
+    _c("img", {
+      ref: "previewimg",
+      staticClass: "w-full object-cover rounded-3xl m-5",
+      class: _vm.inputMode === false ? "h-96" : "h-32 border border-black",
+      on: { dblclick: _vm.inputOn },
+    }),
+    _vm._v(" "),
+    _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
+      _c("input", {
+        attrs: {
+          type: "file",
+          name: "inputFile" + _vm.indexfile,
+          src: _vm.$store.state.workspace.items[_vm.index].content,
+        },
+        on: { change: _vm.previewImage },
       }),
       _vm._v(" "),
-      _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
-        _c("input", {
-          attrs: {
-            type: "file",
-            name: "inputFile" + _vm.indexfile,
-            src: _vm.$store.state.workspace.items[_vm.index].content,
-          },
-          on: { change: _vm.previewImage },
-        }),
-        _vm._v(" "),
-        _c(
-          "span",
-          {
-            staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
-            on: { click: _vm.inputOff },
-          },
-          [_vm._v("Save Changes")]
-        ),
-      ]),
-    ],
-    1
-  )
+      _c(
+        "span",
+        {
+          staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
+          on: { click: _vm.inputOff },
+        },
+        [_vm._v("Save Changes")]
+      ),
+    ]),
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "m-auto" }, [
+      _c("i", { staticClass: "fa-solid fa-gear" }),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -14836,7 +14961,8 @@ var render = function () {
               _c(
                 "button",
                 {
-                  staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
+                  staticClass:
+                    "px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer",
                   on: { click: _vm.inputOff },
                 },
                 [_vm._v("Save Changes")]
@@ -14968,46 +15094,110 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "relative" },
-    [
-      _c("button-gear-menu-component", { attrs: { items: _vm.index } }),
-      _vm._v(" "),
-      _c("video", {
-        ref: "previewvideo",
-        staticClass: "object-cover rounded-3xl m-5",
-        class: _vm.inputMode === false ? "w-full h-96" : "w-96",
-        attrs: { controls: "", allow: "" },
-        on: { dblclick: _vm.inputOn },
+  return _c("div", { staticClass: "relative" }, [
+    _c("div", { staticClass: "flex w-full justify-end mb-5" }, [
+      _c("div", { staticClass: "flex" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-rose-500 flex rounded-lg w-8 h-8 text-white cursor-pointer",
+            on: { click: _vm.showmenu },
+          },
+          [_vm._m(0)]
+        ),
+        _vm._v(" "),
+        _vm.show
+          ? _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "click-outside",
+                    rawName: "v-click-outside",
+                    value: _vm.focusout,
+                    expression: "focusout",
+                  },
+                ],
+                staticClass:
+                  "absolute right-6 translate-y-1/2 bg-white shadow-md rounded-md px-5 z-50",
+              },
+              [
+                _c("div", { staticClass: "grid grid-cols-1" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "cursor-pointer",
+                      on: { click: _vm.deleteitem },
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Delete\n                    "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "cursor-pointer",
+                      on: { click: _vm.edititem },
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Edit\n                    "
+                      ),
+                    ]
+                  ),
+                ]),
+              ]
+            )
+          : _vm._e(),
+      ]),
+    ]),
+    _vm._v(" "),
+    _c("video", {
+      ref: "previewvideo",
+      staticClass: "object-cover rounded-3xl m-5",
+      class: _vm.inputMode === false ? "w-full h-96" : "w-96",
+      attrs: { controls: "", allow: "" },
+      on: { dblclick: _vm.inputOn },
+    }),
+    _vm._v(" "),
+    _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
+      _c("input", {
+        attrs: {
+          type: "file",
+          name: "inputFile" + _vm.indexfile,
+          src: _vm.$store.state.workspace.items[_vm.index].content,
+        },
+        on: { change: _vm.previewVideo },
       }),
       _vm._v(" "),
-      _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
-        _c("input", {
-          attrs: {
-            type: "file",
-            name: "inputFile" + _vm.indexfile,
-            src: _vm.$store.state.workspace.items[_vm.index].content,
-          },
-          on: { change: _vm.previewVideo },
-        }),
-        _vm._v(" "),
-        _c(
-          "span",
-          {
-            staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
-            on: { click: _vm.inputOff },
-          },
-          [_vm._v("Save Changes")]
-        ),
-      ]),
-      _vm._v(" "),
-      _c("div", {}),
-    ],
-    1
-  )
+      _c(
+        "span",
+        {
+          staticClass:
+            "px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer",
+          on: { click: _vm.inputOff },
+        },
+        [_vm._v("Save Changes")]
+      ),
+    ]),
+    _vm._v(" "),
+    _c("div", {}),
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "m-auto" }, [
+      _c("i", { staticClass: "fa-solid fa-gear" }),
+    ])
+  },
+]
 render._withStripped = true
 
 
