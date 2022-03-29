@@ -153,6 +153,10 @@ Vue.component('paragraph-workspace', require('./components/workspace/ParagraphWo
 Vue.component('image-workspace', require('./components/workspace/ImageWorkspace').default)
 Vue.component('video-workspace', require('./components/workspace/VideoWorkspace').default)
 
+//PRESTASI Widget & Function
+Vue.component('form-prestasi-component', require('./components/widget/prestasi/FormPrestasiComponent').default)
+Vue.component('form-prestasi-edit-component', require('./components/widget/prestasi/FormEditComponent').default)
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -20,7 +20,8 @@ class PrestasiController extends Controller
      */
     public function index()
     {
-        return view('dashboard.prestasi.index');
+        $data = $this->data->get_data();
+        return view('dashboard.prestasi.index', $data);
     }
 
     /**
@@ -41,7 +42,16 @@ class PrestasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+//        dd($request);
+        $validator = $request->validate([
+            'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
+            'name' => ['required', 'max: 60'],
+            'prestasi' => ['required'],
+            'detail_prestasi' => ['required'],
+            'area' => ['required'],
+        ]);
+        $data = $this->data->store_data($request);
+        return redirect(route('dashboard.prestasi.index'))->with('success', 'Insert Data Successfully');
     }
 
     /**
@@ -52,7 +62,8 @@ class PrestasiController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = $this->data->show_data($id);
+        return response($data);
     }
 
     /**
@@ -75,7 +86,16 @@ class PrestasiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = $request->validate([
+            'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
+            'name' => ['required', 'max: 60'],
+            'prestasi' => ['required'],
+            'detail_prestasi' => ['required'],
+            'area' => ['required'],
+        ]);
+
+        $data = $this->data->update_data($request, $id);
+        return redirect(route('dashboard.staff.index'))->with('success', 'Update Data Successfully');
     }
 
     /**
