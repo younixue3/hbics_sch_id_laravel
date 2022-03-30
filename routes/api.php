@@ -31,3 +31,4 @@ Route::get('getUrlDashboard', function () {
 
 Route::get('getFasilitas', [\App\Http\Controllers\Front\Data\api\FasilitasController::class, 'getFasilitas'])->name('api.getFasilitas');
 Route::get('getFasilitasAll', [\App\Http\Controllers\Front\Data\api\FasilitasController::class, 'getFasilitasAll'])->name('api.getFasilitasAll');
+Route::get('getTestimoni', [\App\Http\Controllers\Front\Data\api\HomeController::class, 'getTestimoni'])->name('api.getTestimoni');

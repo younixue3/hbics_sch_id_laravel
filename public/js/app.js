@@ -4190,10 +4190,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: ['imagecontent', 'id', 'insight', 'title', 'content'],
   created: function created() {
-    if (this.insight > 40) {
+    if (this.insight === '1') {
       this.column = true;
       this.rows = true;
-    } else if (this.insight > 30) {
+    } else if (this.insight === '2') {
       this.column = true;
       this.rows = false;
     }
@@ -5065,6 +5065,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -5094,6 +5096,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5102,57 +5105,33 @@ __webpack_require__.r(__webpack_exports__);
       counter: 0,
       arrTestimoni: {
         count: 1,
-        person: [{
-          id: 1,
-          name: 'Ricko Tiaka',
-          jabatan: 'Web Developer',
-          massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi.',
-          status: false
-        }, {
-          id: 2,
-          name: 'Ricky Tiaka',
-          jabatan: 'Mobile Developer',
-          massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi.',
-          status: true
-        }, {
-          id: 3,
-          name: 'Ricka Tiaka',
-          jabatan: 'Flutter Developer',
-          massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi.',
-          status: false
-        }, {
-          id: 4,
-          name: 'Ricku Tiaka',
-          jabatan: 'Vue Js Developer',
-          massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi.',
-          status: false
-        }, {
-          id: 5,
-          name: 'Rocki Tiaka',
-          jabatan: 'Front-End Engineer',
-          massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi.',
-          status: false
-        }]
+        person: []
       }
     };
   },
+  props: ['get_req'],
   created: function created() {
+    var _this = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get(this.$props.get_req).then(function (response) {
+      return _this.arrTestimoni.person = response.data, _this.data = _this.arrTestimoni.person[0];
+    });
     this.data = this.arrTestimoni.person[0];
   },
   methods: {
     nextButton: function nextButton() {
-      var _this = this;
+      var _this2 = this;
 
       this.counter = this.counter + 1;
 
-      if (this.counter === 5) {
+      if (this.counter === 4) {
         this.counter = 0;
       }
 
       this.show = false;
       this.data = this.arrTestimoni.person[this.counter];
       setTimeout(function () {
-        return _this.show = true;
+        return _this2.show = true;
       }, 200);
     },
     handleScroll: function handleScroll() {// console.log(this.$refs.snapSpace.scrollWidth)
@@ -6423,7 +6402,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.slide-fade-enter-active[data-v-831ff40e] {\r\n    transition: all 0.3s ease-out;\n}\n.slide-fade-leave-active[data-v-831ff40e] {\r\n    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter-from[data-v-831ff40e],\r\n.slide-fade-leave-to[data-v-831ff40e] {\r\n    transform: translateX(20px);\r\n    opacity: 0;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.slide-fade-enter-active[data-v-831ff40e] {\n    transition: all 0.3s ease-out;\n}\n.slide-fade-leave-active[data-v-831ff40e] {\n    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter-from[data-v-831ff40e],\n.slide-fade-leave-to[data-v-831ff40e] {\n    transform: translateX(20px);\n    opacity: 0;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -13609,7 +13588,7 @@ var render = function () {
         "div",
         {
           staticClass:
-            "transition-all ease-in-out duration-200 overflow-hidden mt-auto rounded-b-2xl bg-gradient-to-t to-transparent pt-3 pb-5 px-3 lg:px-6",
+            "transition-all ease-in-out duration-200 overflow-hidden mt-auto w-full rounded-b-2xl bg-gradient-to-t to-transparent pt-3 pb-5 px-3 lg:px-6",
           class: _vm.showup ? "from-gray-700" : "from-black",
         },
         [
@@ -13620,7 +13599,7 @@ var render = function () {
               _c(
                 "span",
                 {
-                  staticClass: "font-bold truncate leading-4 z-10",
+                  staticClass: "font-bold leading-4 z-10",
                   class: [
                     _vm.column === true && _vm.rows === true
                       ? "text-lg md:text-3xl lg:text-5xl"
@@ -13649,6 +13628,8 @@ var render = function () {
                 {
                   staticClass:
                     "my-4 leading-6 overflow-hidden text-ellipsis text-lg font-light transition-all ease-in-out duration-300 h-12",
+                  class:
+                    _vm.column === false && _vm.rows === false ? "hidden" : "",
                 },
                 [_vm._v("\n                    " + _vm._s(_vm.content))]
               ),
@@ -14788,7 +14769,7 @@ var render = function () {
                   ? _c(
                       "div",
                       { staticClass: "text-amber-500 font-semibold truncate" },
-                      [_vm._v(_vm._s(_vm.data.jabatan))]
+                      [_vm._v(_vm._s(_vm.data.status))]
                     )
                   : _vm._e(),
                 _vm._v(" "),
@@ -14802,7 +14783,7 @@ var render = function () {
                       [
                         _vm._v(
                           "\n                        " +
-                            _vm._s(_vm.data.massage) +
+                            _vm._s(_vm.data.pesan) +
                             "\n                    "
                         ),
                       ]

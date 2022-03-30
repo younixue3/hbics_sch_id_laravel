@@ -10,10 +10,10 @@
                     </div>
                     <div class="relative w-3/4 px-5">
                         <span class="text-lg font-bold truncate" v-if="show">{{ data.name }}</span>
-                        <div class="text-amber-500 font-semibold truncate" v-if="show">{{ data.jabatan }}</div>
+                        <div class="text-amber-500 font-semibold truncate" v-if="show">{{ data.status }}</div>
                         <p v-if="show"
                            class="mt-2 leading-3 overflow-hidden text-ellipsis text-sm font-light transition-all ease-in-out duration-300 h-20 leading-4">
-                            {{ data.massage }}
+                            {{ data.pesan }}
                         </p>
                     </div>
                     <div class="">
@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
     data() {
         return {
@@ -37,52 +38,24 @@ export default {
             arrTestimoni: {
                 count: 1,
                 person: [
-                    {
-                        id: 1,
-                        name: 'Ricko Tiaka',
-                        jabatan: 'Web Developer',
-                        massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi.',
-                        status: false
-                    },
-                    {
-                        id: 2,
-                        name: 'Ricky Tiaka',
-                        jabatan: 'Mobile Developer',
-                        massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi.',
-                        status: true
-                    },
-                    {
-                        id: 3,
-                        name: 'Ricka Tiaka',
-                        jabatan: 'Flutter Developer',
-                        massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi.',
-                        status: false
-                    },
-                    {
-                        id: 4,
-                        name: 'Ricku Tiaka',
-                        jabatan: 'Vue Js Developer',
-                        massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi.',
-                        status: false
-                    },
-                    {
-                        id: 5,
-                        name: 'Rocki Tiaka',
-                        jabatan: 'Front-End Engineer',
-                        massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris ut ipsum varius blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nisl non ante semper vehicula. Morbi pretium, nisl in egestas iaculis, augue enim scelerisque neque, in scelerisque dolor justo quis sapien. Mauris suscipit eleifend eros non condimentum. Maecenas felis mi, efficitur tincidunt accumsan vel, lacinia sed nisi.',
-                        status: false
-                    }
                 ]
             },
         }
     },
+    props: ['get_req'],
     created() {
+        axios
+            .get(this.$props.get_req)
+            .then(response => (
+                this.arrTestimoni.person = response.data,
+                this.data = this.arrTestimoni.person[0]
+            ))
         this.data = this.arrTestimoni.person[0]
     },
     methods: {
         nextButton() {
             this.counter = this.counter + 1
-            if (this.counter === 5) {
+            if (this.counter === 4) {
                 this.counter = 0
             }
             this.show = false
