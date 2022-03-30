@@ -4,7 +4,7 @@
             <label class="block font-medium text-gray-700">
                 Name
             </label>
-            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="name" :value="$store.state.modal.modalshow.item.prestasi.name">
+            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="name" :value="$store.state.modal.modalshow.item.komunitas.name">
         </div>
         <div class="row-span-2">
             <label class="block font-medium text-gray-700">
@@ -14,9 +14,15 @@
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
-                Prestasi
+                Status
             </label>
-            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="prestasi" :value="$store.state.modal.modalshow.item.prestasi.prestasi">
+            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="status" :value="$store.state.modal.modalshow.item.komunitas.status">
+        </div>
+        <div class="col-start-1 col-span-2">
+            <label class="block font-medium text-gray-700">
+                pesan
+            </label>
+            <textarea disabled class="resize-none flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" name="pesan" :value="$store.state.modal.modalshow.item.komunitas.pesan"></textarea>
         </div>
         <div class="col-start-3 row-span-2  ">
             <div class="mt-2 grid grid-cols-2 gap-2">
@@ -26,15 +32,15 @@
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
-                Detail Prestasi
+                Area
             </label>
-            <textarea disabled class="resize-none flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" name="detail_prestasi" :value="$store.state.modal.modalshow.item.prestasi.detail_prestasi"></textarea>
+            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase" type="text" name="area" :value="$store.state.modal.modalshow.item.komunitas.area">
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
-                Area
+                Koneksi
             </label>
-            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase" type="text" name="area" :value="$store.state.modal.modalshow.item.prestasi.area">
+            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase" type="text" name="koneksi" :value="$store.state.modal.modalshow.item.komunitas.connection">
         </div>
     </div>
 </template>

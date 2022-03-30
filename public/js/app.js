@@ -5163,6 +5163,164 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  props: [],
+  methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  methods: {
+    openModalValidation: function openModalValidation() {
+      this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.delete_req;
+      this.$store.state.modalvalidation.url.validation_form = "formDelete";
+      this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?";
+      this.$store.commit('toggleModalValidationView');
+    },
+    openModalEdit: function openModalEdit() {
+      this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.edit_req;
+      this.$store.commit('toggleModalEdit');
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js& ***!
@@ -6102,7 +6260,10 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('image-workspace', (__webp
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('video-workspace', (__webpack_require__(/*! ./components/workspace/VideoWorkspace */ "./resources/js/components/workspace/VideoWorkspace.vue")["default"])); //PRESTASI Widget & Function
 
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-prestasi-component', (__webpack_require__(/*! ./components/widget/prestasi/FormPrestasiComponent */ "./resources/js/components/widget/prestasi/FormPrestasiComponent.vue")["default"]));
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-prestasi-edit-component', (__webpack_require__(/*! ./components/widget/prestasi/FormEditComponent */ "./resources/js/components/widget/prestasi/FormEditComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-prestasi-edit-component', (__webpack_require__(/*! ./components/widget/prestasi/FormEditComponent */ "./resources/js/components/widget/prestasi/FormEditComponent.vue")["default"])); //KOMUNITAS Widget & Function
+
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-komunitas-component', (__webpack_require__(/*! ./components/widget/komunitas/FormKomunitasComponent */ "./resources/js/components/widget/komunitas/FormKomunitasComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-komunitas-edit-component', (__webpack_require__(/*! ./components/widget/komunitas/FormEditComponent */ "./resources/js/components/widget/komunitas/FormEditComponent.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -7970,6 +8131,84 @@ component.options.__file = "resources/js/components/widget/TestimoniComponent.vu
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/komunitas/FormEditComponent.vue":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormEditComponent.vue ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FormEditComponent_vue_vue_type_template_id_84d1e982_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormEditComponent.vue?vue&type=template&id=84d1e982&scoped=true& */ "./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=template&id=84d1e982&scoped=true&");
+/* harmony import */ var _FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormEditComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormEditComponent_vue_vue_type_template_id_84d1e982_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _FormEditComponent_vue_vue_type_template_id_84d1e982_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "84d1e982",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/komunitas/FormEditComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/komunitas/FormKomunitasComponent.vue":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormKomunitasComponent.vue ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FormKomunitasComponent_vue_vue_type_template_id_0b4a8242_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true& */ "./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true&");
+/* harmony import */ var _FormKomunitasComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormKomunitasComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormKomunitasComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormKomunitasComponent_vue_vue_type_template_id_0b4a8242_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _FormKomunitasComponent_vue_vue_type_template_id_0b4a8242_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "0b4a8242",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/komunitas/FormKomunitasComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/prestasi/FormEditComponent.vue":
 /*!***********************************************************************!*\
   !*** ./resources/js/components/widget/prestasi/FormEditComponent.vue ***!
@@ -8783,6 +9022,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormEditComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKomunitasComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormKomunitasComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKomunitasComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************!*\
   !*** ./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js& ***!
@@ -9428,6 +9699,40 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=template&id=84d1e982&scoped=true&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=template&id=84d1e982&scoped=true& ***!
+  \*******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_template_id_84d1e982_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_template_id_84d1e982_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_template_id_84d1e982_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormEditComponent.vue?vue&type=template&id=84d1e982&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=template&id=84d1e982&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true&":
+/*!************************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true& ***!
+  \************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKomunitasComponent_vue_vue_type_template_id_0b4a8242_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKomunitasComponent_vue_vue_type_template_id_0b4a8242_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKomunitasComponent_vue_vue_type_template_id_0b4a8242_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=template&id=64a8eb23&scoped=true&":
 /*!******************************************************************************************************************!*\
   !*** ./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=template&id=64a8eb23&scoped=true& ***!
@@ -9800,7 +10105,7 @@ var render = function () {
               ),
               _vm._v(" "),
               _c("div", { staticClass: "p-5 w-full" }, [
-                _c("h1", [_vm._v("Add Data")]),
+                _c("h1", { staticClass: "text-base" }, [_vm._v("Add Data")]),
                 _vm._v(" "),
                 _c(
                   "form",
@@ -14531,6 +14836,321 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=template&id=84d1e982&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=template&id=84d1e982&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "grid grid-cols-3 gap-5 text-left w-[42rem]" },
+    [
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Name\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { type: "text", name: "name" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.komunitas.name,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Status\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { type: "text", name: "status" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.komunitas.status,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Pesan\n        "),
+        ]),
+        _vm._v(" "),
+        _c("textarea", {
+          staticClass:
+            "resize-none flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { name: "pesan" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.komunitas.pesan,
+          },
+        }),
+        _vm._v("'\n    "),
+      ]),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2),
+    ]
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row-span-2" }, [
+      _c("label", { staticClass: "block font-medium text-gray-700" }, [
+        _vm._v("\n            Foto\n        "),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2",
+        },
+        [
+          _c("input", {
+            staticClass:
+              "block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer\n                              file:mr-4 file:py-2 file:px-4\n                              file:rounded-full file:border-0\n                              file:text-sm file:font-semibold\n                              file:bg-violet-50 file:text-violet-700\n                              hover:file:bg-violet-100\n                            ",
+            attrs: { type: "file", name: "fileupload", id: "fileupload" },
+          }),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-start-1 col-span-2" }, [
+      _c("label", { staticClass: "block font-medium text-gray-700" }, [
+        _vm._v("\n            Area\n        "),
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase",
+          attrs: { name: "area" },
+        },
+        [
+          _c("option", { attrs: { disabled: "", selected: "" } }, [
+            _vm._v("--- Pilih Area ---"),
+          ]),
+          _vm._v(" "),
+          _c("option", [_vm._v("hhk")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("sd")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("smp")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("sma")]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-start-1 col-span-2" }, [
+      _c("label", { staticClass: "block font-medium text-gray-700" }, [
+        _vm._v("\n            Koneksi\n        "),
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase",
+          attrs: { name: "connection" },
+        },
+        [
+          _c("option", { attrs: { disabled: "", selected: "" } }, [
+            _vm._v("--- Pilih Area ---"),
+          ]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "alumni" } }, [_vm._v("Alumni")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "orang_tua" } }, [
+            _vm._v("Orang Tua"),
+          ]),
+        ]
+      ),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "grid grid-cols-3 gap-5 text-left w-[42rem]" },
+    [
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Name\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { disabled: "", type: "text", name: "name" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.komunitas.name,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Foto\n        "),
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          staticClass:
+            "m-auto rounded-full h-24 w-24 object-cover border border-gray-200",
+          attrs: { src: _vm.$store.state.modal.modalshow.img },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Status\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { disabled: "", type: "text", name: "status" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.komunitas.status,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            pesan\n        "),
+        ]),
+        _vm._v(" "),
+        _c("textarea", {
+          staticClass:
+            "resize-none flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { disabled: "", name: "pesan" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.komunitas.pesan,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-3 row-span-2  " }, [
+        _c("div", { staticClass: "mt-2 grid grid-cols-2 gap-2" }, [
+          _c(
+            "button",
+            {
+              staticClass:
+                "rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-300 px-1.5 py-1 text-xs font-medium text-black after:content-['_↗'] transition-all ease-in-out",
+              attrs: { type: "button" },
+              on: { click: _vm.openModalEdit },
+            },
+            [_vm._v("Edit Staff")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "rounded-lg bg-red-500 hover:bg-red-600 border border-red-600 px-1.5 py-1 text-xs font-medium text-white after:content-['_⊘'] transition-all ease-in-out",
+              attrs: { type: "button" },
+              on: {
+                click: function ($event) {
+                  return _vm.openModalValidation()
+                },
+              },
+            },
+            [_vm._v("Delete Staff")]
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Area\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase",
+          attrs: { disabled: "", type: "text", name: "area" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.komunitas.area,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Koneksi\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase",
+          attrs: { disabled: "", type: "text", name: "koneksi" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.komunitas.connection,
+          },
+        }),
+      ]),
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=template&id=64a8eb23&scoped=true&":
 /*!*********************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=template&id=64a8eb23&scoped=true& ***!
@@ -14730,6 +15350,36 @@ var render = function () {
         }),
       ]),
       _vm._v(" "),
+      _c("div", { staticClass: "col-start-3 row-span-2  " }, [
+        _c("div", { staticClass: "mt-2 grid grid-cols-2 gap-2" }, [
+          _c(
+            "button",
+            {
+              staticClass:
+                "rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-300 px-1.5 py-1 text-xs font-medium text-black after:content-['_↗'] transition-all ease-in-out",
+              attrs: { type: "button" },
+              on: { click: _vm.openModalEdit },
+            },
+            [_vm._v("Edit Staff")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "rounded-lg bg-red-500 hover:bg-red-600 border border-red-600 px-1.5 py-1 text-xs font-medium text-white after:content-['_⊘'] transition-all ease-in-out",
+              attrs: { type: "button" },
+              on: {
+                click: function ($event) {
+                  return _vm.openModalValidation()
+                },
+              },
+            },
+            [_vm._v("Delete Staff")]
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
       _c("div", { staticClass: "col-start-1 col-span-2" }, [
         _c("label", { staticClass: "block font-medium text-gray-700" }, [
           _vm._v("\n            Detail Prestasi\n        "),
@@ -14759,36 +15409,6 @@ var render = function () {
             value: _vm.$store.state.modal.modalshow.item.prestasi.area,
           },
         }),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-start-3" }, [
-        _c("div", { staticClass: "mt-2 grid grid-cols-2 gap-2" }, [
-          _c(
-            "button",
-            {
-              staticClass:
-                "rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-300 px-1.5 py-1 text-xs font-medium text-black after:content-['_↗'] transition-all ease-in-out",
-              attrs: { type: "button" },
-              on: { click: _vm.openModalEdit },
-            },
-            [_vm._v("Edit Staff")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass:
-                "rounded-lg bg-red-500 hover:bg-red-600 border border-red-600 px-1.5 py-1 text-xs font-medium text-white after:content-['_⊘'] transition-all ease-in-out",
-              attrs: { type: "button" },
-              on: {
-                click: function ($event) {
-                  return _vm.openModalValidation()
-                },
-              },
-            },
-            [_vm._v("Delete Staff")]
-          ),
-        ]),
       ]),
     ]
   )

@@ -10,7 +10,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
                 <div class="p-5 w-full">
-                    <h1>Add Data</h1>
+                    <h1 class="text-base">Add Data</h1>
                     <form id="formAdd" :action="$store.state.modalvalidation.url.url_req" enctype="multipart/form-data"
                           name="formAdd" method="POST">
                         <input type="hidden" name="_token" :value="$store.state.csrf">

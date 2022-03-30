@@ -493,6 +493,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .col-start-3{
   grid-column-start: 3;
 }
+.col-start-2{
+  grid-column-start: 2;
+}
 .row-span-1{
   grid-row: span 1 / span 1;
 }
@@ -867,14 +870,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-20{
   width: 5rem;
 }
-.w-4{
-  width: 1rem;
-}
 .w-96{
   width: 24rem;
 }
 .w-\[42rem\]{
   width: 42rem;
+}
+.w-4{
+  width: 1rem;
 }
 .w-7{
   width: 1.75rem;
@@ -933,11 +936,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-3\/4{
   width: 75%;
 }
-.w-\[30rem\]{
-  width: 30rem;
-}
 .w-24{
   width: 6rem;
+}
+.w-\[30rem\]{
+  width: 30rem;
 }
 .max-w-6xl{
   max-width: 72rem;
@@ -1525,13 +1528,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
-.bg-emerald-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
-}
 .bg-rose-500{
   --tw-bg-opacity: 1;
   background-color: rgb(244 63 94 / var(--tw-bg-opacity));
+}
+.bg-emerald-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
 }
 .bg-gray-50{
   --tw-bg-opacity: 1;

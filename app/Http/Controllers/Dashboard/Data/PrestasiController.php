@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard\Data;
 use App\Http\Controllers\Controller;
 use App\Models\Prestasis;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PrestasiController extends Controller
 {

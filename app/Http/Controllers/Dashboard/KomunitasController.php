@@ -18,9 +18,10 @@ class KomunitasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('dashboard.komunitas.index');
+        $data = $this->data->get_data();
+        return view('dashboard.komunitas.index', $data);
     }
 
     /**
@@ -41,7 +42,16 @@ class KomunitasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = $request->validate([
+            'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
+            'name' => ['required', 'max: 60'],
+            'status' => ['required'],
+            'pesan' => ['required'],
+            'area' => ['required'],
+            'connection' => ['required'],
+        ]);
+        $data = $this->data->store_data($request);
+        return redirect(route('dashboard.komunitas.index'))->with('success', 'Insert Data Successfully');
     }
 
     /**
@@ -52,7 +62,8 @@ class KomunitasController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = $this->data->show_data($id);
+        return response($data);
     }
 
     /**
@@ -75,7 +86,15 @@ class KomunitasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = $request->validate([
+            'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
+            'name' => ['required', 'max: 60'],
+            'status' => ['required'],
+            'pesan' => ['required'],
+        ]);
+
+        $data = $this->data->update_data($request, $id);
+        return redirect(route('dashboard.komunitas.index'))->with('success', 'Update Data Successfully');
     }
 
     /**
@@ -86,6 +105,7 @@ class KomunitasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = $this->data->destroy_data($id);
+        return redirect(route('dashboard.komunitas.index'))->with('success', 'Delete Data Successfully');
     }
 }

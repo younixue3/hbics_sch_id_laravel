@@ -157,6 +157,10 @@ Vue.component('video-workspace', require('./components/workspace/VideoWorkspace'
 Vue.component('form-prestasi-component', require('./components/widget/prestasi/FormPrestasiComponent').default)
 Vue.component('form-prestasi-edit-component', require('./components/widget/prestasi/FormEditComponent').default)
 
+//KOMUNITAS Widget & Function
+Vue.component('form-komunitas-component', require('./components/widget/komunitas/FormKomunitasComponent').default)
+Vue.component('form-komunitas-edit-component', require('./components/widget/komunitas/FormEditComponent').default)
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
