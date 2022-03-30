@@ -3,7 +3,7 @@
         <div class="flex h-screen relative text-center mb-10 shadow-xl transition-all ease-in-out duration-300"
              :class="show ? 'translate-x-0 opacity-100' : 'opacity-0 translate-x-10'">
             <img id="hero_section" class="h-screen w-screen object-top object-cover transition-all ease-in-out"
-                 :src=" this.windowspath + this.sliderContent.image" alt="">
+                 :src="this.windowspath + this.sliderContent.picture" alt="">
             <div
                 class="absolute top-0 pb-32 bg-gradient-to-b from-gray-900 to-transparent w-full opacity-50 text-center transition-all ease-in-out"
                 :class="show ? 'opacity-100' : 'opacity-0'">
@@ -25,14 +25,14 @@
                             class="grid grid-rows-3 px-5 justify-center items-center bg-white h-[25rem] md:h-80 md:w-80 opacity-90 hover:opacity-100 transform hover:scale-105 transition-all ease-in-out rounded-xl">
                             <div>
                                 <h2 class="text-3xl font-raleway font-bold transition-all ease-in-out"
-                                    :class="show ? 'opacity-100' : 'opacity-0'">{{ this.sliderContent.title }}</h2>
+                                    :class="show ? 'opacity-100' : 'opacity-0'">{{ this.sliderContent.name }}</h2>
                                 <div class="border-b-2 border-black mt-3 w-20 m-auto transition-all ease-in-out"
                                      :class="show ? 'opacity-100' : 'opacity-0'"></div>
                             </div>
                             <div class="self-start">
                                 <p class="font-light text-gray-500 transition-all ease-in-out"
                                    :class="show ? 'opacity-100' : 'opacity-0'">
-                                    {{ this.sliderContent.massage }}
+                                    {{ this.sliderContent.pesan }}
                                 </p>
                             </div>
                         </div>
@@ -44,50 +44,26 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     data() {
         return {
             show: true,
             slider: 0,
-            windowspath: window.location.origin + '/assets/stock_photo_rdev/',
+            windowspath: window.location.origin + '/assets/foto_komunitas/',
             sliderContent: [],
-            heroContent: [
-                {
-                    id: 1,
-                    image: 'JaneDoe.webp',
-                    title: 'Jane Doe',
-                    massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                },
-                {
-                    id: 2,
-                    image: 'JaneDoe.webp',
-                    title: 'Jane Doe',
-                    massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                },
-                {
-                    id: 3,
-                    image: 'JaneDoe.webp',
-                    title: 'Jane Doe',
-                    massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                },
-                {
-                    id: 4,
-                    image: 'JaneDoe.webp',
-                    title: 'Jane Doe',
-                    massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                },
-                {
-                    id: 5,
-                    image: 'JaneDoe.webp',
-                    title: 'Jane Doe',
-                    massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                },
-            ]
+            heroContent: []
         }
     },
+    props: ['url_req'],
     mounted() {
+        axios
+            .get(this.$props.url_req)
+            .then(response => this.heroContent = response.data)
+            .finally(() => this.sliderContent = this.heroContent[this.slider])
+
         setInterval(this.countSlider, 8000);
-        this.sliderContent = this.heroContent[this.slider]
     },
     methods: {
         countSlider: function () {

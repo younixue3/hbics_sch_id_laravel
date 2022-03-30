@@ -7,6 +7,7 @@ module.exports = {
     extend: {
         fontFamily: {
             'raleway' : ['"Raleway"'],
+            'playfair' : ['"Playfair Display"']
         }
     },
   },

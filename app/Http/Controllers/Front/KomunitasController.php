@@ -20,7 +20,8 @@ class KomunitasController extends Controller
 
     public function alumni()
     {
-        return view('front.komunitas.alumni.index');
+        $data = $this->data->get_data_alumni();
+        return view('front.komunitas.alumni.index', $data);
     }
 
     public function orangTua()

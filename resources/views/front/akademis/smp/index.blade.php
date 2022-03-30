@@ -81,7 +81,7 @@
             <div class="text-center">
                 <h2 class="text-3xl font-bold">Prestasi Sekolah Kristen Harapan Bangsa Balikpapan, sebagai SMP Favorit
                     Balikpapan</h2>
-                <snap-alumni-component></snap-alumni-component>
+                <snap-alumni-component area="{{route('api.getTestimoniSmpk')}}"></snap-alumni-component>
             </div>
         </div>
     </div>

@@ -32,3 +32,9 @@ Route::get('getUrlDashboard', function () {
 Route::get('getFasilitas', [\App\Http\Controllers\Front\Data\api\FasilitasController::class, 'getFasilitas'])->name('api.getFasilitas');
 Route::get('getFasilitasAll', [\App\Http\Controllers\Front\Data\api\FasilitasController::class, 'getFasilitasAll'])->name('api.getFasilitasAll');
 Route::get('getTestimoni', [\App\Http\Controllers\Front\Data\api\HomeController::class, 'getTestimoni'])->name('api.getTestimoni');
+Route::get('getTestimoniHhk', [\App\Http\Controllers\Front\Data\api\AkademisController::class, 'get_prestasi_hhk'])->name('api.getTestimoniHhk');
+Route::get('getTestimoniSdk', [\App\Http\Controllers\Front\Data\api\AkademisController::class, 'get_prestasi_sdk'])->name('api.getTestimoniSdk');
+Route::get('getTestimoniSmpk', [\App\Http\Controllers\Front\Data\api\AkademisController::class, 'get_prestasi_smpk'])->name('api.getTestimoniSmpk');
+Route::get('getTestimoniSmak', [\App\Http\Controllers\Front\Data\api\AkademisController::class, 'get_prestasi_smak'])->name('api.getTestimoniSmak');
+Route::get('getHeroAlumni', [\App\Http\Controllers\Front\Data\api\KomunitasController::class, 'get_data_hero_alumni'])->name('api.getHeroAlumni');
+Route::get('getHeroOrangTua', [\App\Http\Controllers\Front\Data\api\KomunitasController::class, 'get_data_orang_tua'])->name('api.getHeroOrangTua');

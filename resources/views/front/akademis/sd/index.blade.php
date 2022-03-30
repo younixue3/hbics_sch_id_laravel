@@ -83,7 +83,7 @@
             </div>
             <div class="text-center">
                 <h2 class="text-3xl font-bold">Prestasi Happy Holy Kids sebagai TK Favorit Balikpapan</h2>
-                <snap-alumni-component></snap-alumni-component>
+                <snap-alumni-component area="{{route('api.getTestimoniSdk')}}"></snap-alumni-component>
             </div>
         </div>
     </div>

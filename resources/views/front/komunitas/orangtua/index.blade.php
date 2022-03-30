@@ -2,7 +2,7 @@
 @section('title', 'Orang Tua')
 @section('content')
     <div>
-        <hero-alumni-component></hero-alumni-component>
+        <hero-alumni-component url_req="{{route('api.getHeroOrangTua')}}"></hero-alumni-component>
         <div class="bg-pattern">
             <div class="p-5 md:p-20">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="p-2 md:p-10">
-                <testimoni-component></testimoni-component>
+                <testimoni-component get_req="{{route('api.getTestimoni')}}"></testimoni-component>
                 <div class="my-10 md:px-20">
                     <div
                         class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-0 z-10">

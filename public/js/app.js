@@ -4300,6 +4300,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -4345,79 +4347,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       show: true,
       slider: 0,
-      windowspath: window.location.origin + '/assets/stock_photo_rdev/',
+      windowspath: window.location.origin + '/assets/foto_komunitas/',
       sliderContent: [],
-      heroContent: [{
-        id: 1,
-        image: 'JaneDoe.webp',
-        title: 'Jane Doe',
-        massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      }, {
-        id: 2,
-        image: 'JaneDoe.webp',
-        title: 'Jane Doe',
-        massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      }, {
-        id: 3,
-        image: 'JaneDoe.webp',
-        title: 'Jane Doe',
-        massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      }, {
-        id: 4,
-        image: 'JaneDoe.webp',
-        title: 'Jane Doe',
-        massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      }, {
-        id: 5,
-        image: 'JaneDoe.webp',
-        title: 'Jane Doe',
-        massage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-      }]
+      heroContent: []
     };
   },
+  props: ['url_req'],
   mounted: function mounted() {
+    var _this = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get(this.$props.url_req).then(function (response) {
+      return _this.heroContent = response.data;
+    })["finally"](function () {
+      return _this.sliderContent = _this.heroContent[_this.slider];
+    });
     setInterval(this.countSlider, 8000);
-    this.sliderContent = this.heroContent[this.slider];
   },
   methods: {
     countSlider: function countSlider() {
-      var _this = this;
+      var _this2 = this;
 
       if (this.slider === 4) {
         this.slider = 1;
         setTimeout(function () {
-          return _this.sliderContent = _this.heroContent[_this.slider];
-        }, 200);
-      } else {
-        this.slider++;
-        setTimeout(function () {
-          return _this.sliderContent = _this.heroContent[_this.slider];
-        }, 200);
-      }
-
-      this.show = false;
-      setTimeout(function () {
-        return _this.show = true;
-      }, 300);
-    },
-    nextSlider: function nextSlider() {
-      this.countSlider();
-    },
-    prevSlider: function prevSlider() {
-      var _this2 = this;
-
-      if (this.slider === 0) {
-        this.slider = 4;
-        setTimeout(function () {
           return _this2.sliderContent = _this2.heroContent[_this2.slider];
         }, 200);
       } else {
-        this.slider--;
+        this.slider++;
         setTimeout(function () {
           return _this2.sliderContent = _this2.heroContent[_this2.slider];
         }, 200);
@@ -4426,6 +4388,29 @@ __webpack_require__.r(__webpack_exports__);
       this.show = false;
       setTimeout(function () {
         return _this2.show = true;
+      }, 300);
+    },
+    nextSlider: function nextSlider() {
+      this.countSlider();
+    },
+    prevSlider: function prevSlider() {
+      var _this3 = this;
+
+      if (this.slider === 0) {
+        this.slider = 4;
+        setTimeout(function () {
+          return _this3.sliderContent = _this3.heroContent[_this3.slider];
+        }, 200);
+      } else {
+        this.slider--;
+        setTimeout(function () {
+          return _this3.sliderContent = _this3.heroContent[_this3.slider];
+        }, 200);
+      }
+
+      this.show = false;
+      setTimeout(function () {
+        return _this3.show = true;
       }, 300);
     }
   }
@@ -4837,6 +4822,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -4873,13 +4860,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -4887,23 +4868,17 @@ __webpack_require__.r(__webpack_exports__);
       scrolcount: 0,
       arrTestimoni: {
         count: 0,
-        alumni: [{
-          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
-        }, {
-          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
-        }, {
-          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
-        }, {
-          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
-        }, {
-          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
-        }, {
-          image: 'https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80'
-        }]
+        alumni: []
       }
     };
   },
-  mounted: function mounted() {// this.scrolcount = this.$refs.scrollsnap.scrollWidth
+  props: ['area'],
+  mounted: function mounted() {
+    var _this = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get(this.$props.area).then(function (response) {
+      return _this.arrTestimoni.alumni = response.data;
+    });
   },
   methods: {
     nextButton: function nextButton() {
@@ -13882,7 +13857,7 @@ var render = function () {
             "h-screen w-screen object-top object-cover transition-all ease-in-out",
           attrs: {
             id: "hero_section",
-            src: this.windowspath + this.sliderContent.image,
+            src: this.windowspath + this.sliderContent.picture,
             alt: "",
           },
         }),
@@ -13949,7 +13924,7 @@ var render = function () {
                             "text-3xl font-raleway font-bold transition-all ease-in-out",
                           class: _vm.show ? "opacity-100" : "opacity-0",
                         },
-                        [_vm._v(_vm._s(this.sliderContent.title))]
+                        [_vm._v(_vm._s(this.sliderContent.name))]
                       ),
                       _vm._v(" "),
                       _c("div", {
@@ -13970,7 +13945,7 @@ var render = function () {
                         [
                           _vm._v(
                             "\n                                " +
-                              _vm._s(this.sliderContent.massage) +
+                              _vm._s(this.sliderContent.pesan) +
                               "\n                            "
                           ),
                         ]
@@ -14505,7 +14480,6 @@ var render = function () {
                 {
                   staticClass:
                     "bg-white h-44 lg:h-56 lg:w-[30rem] rounded-3xl shadow-xl p-5",
-                  class: index === 5 ? "blur-sm brightness-75" : "",
                 },
                 [
                   _c("div", { staticClass: "md:flex h-full" }, [
@@ -14516,20 +14490,24 @@ var render = function () {
                       }),
                     ]),
                     _vm._v(" "),
-                    _vm._m(0, true),
+                    _c("div", { staticClass: "md:w-2/3 m-auto" }, [
+                      _c("span", { staticClass: "text-sm md:text-lg" }, [
+                        _vm._v(_vm._s(item.name)),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "text-base md:text-2xl font-semibold" },
+                        [_vm._v(_vm._s(item.prestasi))]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "text-xs md:text-sm" }, [
+                        _vm._v(_vm._s(item.detail_prestasi)),
+                      ]),
+                    ]),
                   ]),
                 ]
               ),
-              _vm._v(" "),
-              index === 5
-                ? _c("div", { staticClass: "absolute w-full h-full flex" }, [
-                    _c("div", { staticClass: "m-auto text-3xl text-white" }, [
-                      _vm._v(
-                        "\n                        Show More +\n                    "
-                      ),
-                    ]),
-                  ])
-                : _vm._e(),
             ]),
           ]
         )
@@ -14570,28 +14548,7 @@ var render = function () {
     ]),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "md:w-2/3 m-auto" }, [
-      _c("span", { staticClass: "text-sm md:text-lg" }, [
-        _vm._v("Queen Callie Tatang"),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "text-base md:text-2xl font-semibold" }, [
-        _vm._v("Juara Harapan 2"),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "text-xs md:text-sm" }, [
-        _vm._v(
-          "Dinas Pendidikan Kota Balikpapan (Cinta Cagar Budaya)\n                            "
-        ),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

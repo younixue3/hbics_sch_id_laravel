@@ -30,25 +30,21 @@ class AkademisController extends Controller
 
     public function kelompokBermainTk()
     {
-        $data = $this->data->get_data_hhk();
-        return view('front.akademis.hhk.index', $data);
+        return view('front.akademis.hhk.index');
     }
 
     public function sekolahDasar()
     {
-        $data = $this->data->get_data_hhk();
-        return view('front.akademis.sd.index', $data);
+        return view('front.akademis.sd.index');
     }
 
     public function sekolahMenengahPertama()
     {
-        $data = $this->data->get_data_hhk();
-        return view('front.akademis.smp.index', $data);
+        return view('front.akademis.smp.index');
     }
 
     public function sekolahMenengahAtas()
     {
-        $data = $this->data->get_data_hhk();
-        return view('front.akademis.sma.index', $data);
+        return view('front.akademis.sma.index');
     }
 }
