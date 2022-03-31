@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.master')
 @section('title', 'Staff')
 @section('content')
-    <button-add-function add_req="{{route('dashboard.staff.store')}}"></button-add-function>
+    <button-add-function add_req="{{route('dashboard.teacher_staff.store')}}"></button-add-function>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
         <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12 overflow-hidden">
             <div>
@@ -10,7 +10,7 @@
                     <tr>
                         <th class="py-1">Name</th>
                         <th class="py-1">Area</th>
-                        <th class="py-1 w-96">Role</th>
+                        <th class="py-1 w-96">Profesi</th>
                         <th class="py-1"></th>
                     </tr>
                     </thead>
@@ -20,7 +20,7 @@
                             <td class="py-1 pl-4">
                                 <div class="flex items-center">
                                     <img class="h-8 w-8 mr-2 rounded-full object-cover"
-                                         src="{{asset('Upload/foto_profile/'.$value->picture)}}"
+                                         src="{{asset('Upload/foto_teacher_staff/'.$value->picture)}}"
                                          alt="">
                                     <div class="text-left my-auto">
                                         {{$value->first_name . ' ' . $value->last_name}}
@@ -29,16 +29,12 @@
                                 </div>
                             </td>
                             <td class="py-1 uppercase">{{$value->area}}</td>
-                            <td class="py-1.5 grid grid-cols-3 gap-1">
-                                @foreach($value->roles_user() as $key => $item)
-                                    <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5">
-                                        {{$item->roles()->name}}
-                                    </span>
-                                @endforeach
+                            <td class="py-1.5">
+                                {{$value->profesi}}
                             </td>
                             <td class="py-1">
-                                <button-show-component img="{{asset('Upload/foto_profile/'. $value->foto_profile()->img)}}" user="{{route('dashboard.staff.show', $value->randKey)}}"
-                                                       delete_req="{{route('dashboard.staff.destroy', $value->randKey)}}" edit_req="{{route('dashboard.staff.update', $value->randKey)}}" change_password_req="{{route('dashboard.staff.update', $value->randKey)}}" remove_superadmin="{{route('dashboard.staff.update', $value->randKey)}}"></button-show-component>
+                                <button-show-component img="{{asset('Upload/foto_teacher_staff/'. $value->picture)}}" user="{{route('dashboard.teacher_staff.show', $value->id)}}"
+                                                       delete_req="{{route('dashboard.teacher_staff.destroy', $value->id)}}" edit_req="{{route('dashboard.teacher_staff.update', $value->id)}}" change_password_req="{{route('dashboard.teacher_staff.update', $value->id)}}" remove_superadmin="{{route('dashboard.teacher_staff.update', $value->id)}}"></button-show-component>
                             </td>
                         </tr>
                     @empty
@@ -48,35 +44,38 @@
                 </table>
             </div>
             <div class="bg-gray-100 px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+                {{$teacherstaff->links('widgets.custom_pagination')}}
             </div>
         </mac-card-component>
     </div>
 @endsection
-@section('modalChangePassword')
-    <form-staff-change-password-component>
-    </form-staff-change-password-component>
-@endsection
 @section('modalShow')
-    <form-staff-component>
-        <template v-slot:multicomponent>
-            <multiple-select-component disabled="true" class="col-start-1 col-span-2" nameoption="selectrole" valueoption="true"></multiple-select-component>
-        </template>
-    </form-staff-component>
+    <form-teacher-staff-component>
+    </form-teacher-staff-component>
 @endsection
 @section('modalEdit')
-    <form-staff-edit-component>
-        <template v-slot:multicomponent>
-            <multiple-select-component class="col-start-1 col-span-2" nameoption="selectrole" valueoption="{{$role}}"></multiple-select-component>
-        </template>
-    </form-staff-edit-component>
+    <form-edit-teacher-staff-component>
+    </form-edit-teacher-staff-component>
 @endsection
 @section('modalAdd')
     <div class="grid grid-cols-3 gap-5 text-left w-[42rem]">
+        <div class="col-span-1">
+            <label class="block font-medium text-gray-700">
+                First Name
+            </label>
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="first_name">
+        </div>
+        <div class="col-span-1">
+            <label class="block font-medium text-gray-700">
+                Last Name
+            </label>
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="last_name">
+        </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
-                Name
+                Profesi
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="name">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="profesi">
         </div>
         <div class="row-span-2">
             <label class="block font-medium text-gray-700">
@@ -113,25 +112,6 @@
                 <option>hrga</option>
             </select>
         </div>
-        <div class="col-start-1 col-span-2">
-            <label class="block font-medium text-gray-700">
-                Password
-            </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="password" name="password">
-        </div>
-        <div class="col-start-1 col-span-2">
-            <label class="block font-medium text-gray-700">
-                Password
-            </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="password" name="password_confirmation">
-        </div>
-        <div class="col-start-1 col-span-2 flex justify-self-start px-5">
-            <input class="m-auto rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="checkbox" name="is_super_admin">
-            <label class="ml-2 w-full font-medium text-gray-700 text-sm">
-                Is Superadmin
-            </label>
-        </div>
-        <multiple-select-component class="col-start-1 col-span-2" nameoption="selectrole" valueoption="{{$role}}"></multiple-select-component>
     </div>
 @endsection
 @section('notification')

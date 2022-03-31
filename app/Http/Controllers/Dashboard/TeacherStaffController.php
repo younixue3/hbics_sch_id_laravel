@@ -42,7 +42,16 @@ class TeacherStaffController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = $request->validate([
+            'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
+            'first_name' => ['required', 'max: 60'],
+            'last_name' => ['required', 'max: 60'],
+            'area' => ['required'],
+            'profesi' => ['required'],
+            'email' => 'email',
+        ]);
+        $data = $this->data->store_data($request);
+        return redirect(route('dashboard.teacher_staff.index'))->with('success', 'Insert Data Successfully');
     }
 
     /**
@@ -53,7 +62,8 @@ class TeacherStaffController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = $this->data->show_data($id);
+        return response($data);
     }
 
     /**
@@ -76,7 +86,16 @@ class TeacherStaffController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = $request->validate([
+            'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
+            'first_name' => ['required', 'max: 60'],
+            'last_name' => ['required', 'max: 60'],
+            'profesi' => ['required'],
+            'email' => 'email',
+        ]);
+
+        $data = $this->data->update_data($request, $id);
+        return redirect(route('dashboard.teacher_staff.index'))->with('success', 'Update Data Successfully');
     }
 
     /**
@@ -87,6 +106,7 @@ class TeacherStaffController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = $this->data->destroy_data($id);
+        return redirect(route('dashboard.teacher_staff.index'))->with('success', 'Delete Data Successfully');
     }
 }

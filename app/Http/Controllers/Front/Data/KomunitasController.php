@@ -19,9 +19,9 @@ class KomunitasController extends Controller
     public function get_teacher_staff_data($request, $area)
     {
         if ($request->area === 'all') {
-            $teacherstaff = TeacherStaff::get();
+            $teacherstaff = TeacherStaff::paginate(12);
         } else {
-            $teacherstaff = TeacherStaff::where('area', $area)->get();
+            $teacherstaff = TeacherStaff::where('area', $area)->paginate(12);
         }
 
         $compact = compact('teacherstaff');

@@ -5209,6 +5209,85 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  props: [],
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=script&lang=js& ***!
@@ -5281,6 +5360,94 @@ __webpack_require__.r(__webpack_exports__);
     openModalEdit: function openModalEdit() {
       this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.edit_req;
       this.$store.commit('toggleModalEdit');
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  methods: {
+    openModalValidation: function openModalValidation() {
+      this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.delete_req;
+      this.$store.state.modalvalidation.url.validation_form = "formDelete";
+      this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?";
+      this.$store.commit('toggleModalValidationView');
+    },
+    openModalEdit: function openModalEdit() {
+      this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.edit_req;
+      this.$store.commit('toggleModalEdit');
+    },
+    openModalChangePassword: function openModalChangePassword() {
+      this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.change_password;
+      this.$store.commit('toggleModalChangePassword');
+    },
+    openModalRemoveSuperadmin: function openModalRemoveSuperadmin() {
+      this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.remove_superadmin;
+      this.$store.state.modalvalidation.url.validation_form = "formRemoveSuperadmin";
+      this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus akses superadmin pada data ini?";
+      this.$store.commit('toggleModalValidationView');
     }
   }
 });
@@ -6310,6 +6477,8 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-prestasi-edit-compon
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-komunitas-component', (__webpack_require__(/*! ./components/widget/komunitas/FormKomunitasComponent */ "./resources/js/components/widget/komunitas/FormKomunitasComponent.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-komunitas-edit-component', (__webpack_require__(/*! ./components/widget/komunitas/FormEditComponent */ "./resources/js/components/widget/komunitas/FormEditComponent.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('teacher-staff-component', (__webpack_require__(/*! ./components/widget/komunitas/TeacherStaffComponent */ "./resources/js/components/widget/komunitas/TeacherStaffComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-teacher-staff-component', (__webpack_require__(/*! ./components/widget/komunitas/FormTeacherStaffComponent */ "./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-edit-teacher-staff-component', (__webpack_require__(/*! ./components/widget/komunitas/FormEditTeacherStaffComponent */ "./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -8216,6 +8385,45 @@ component.options.__file = "resources/js/components/widget/komunitas/FormEditCom
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FormEditTeacherStaffComponent_vue_vue_type_template_id_5c136e7e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormEditTeacherStaffComponent.vue?vue&type=template&id=5c136e7e&scoped=true& */ "./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=template&id=5c136e7e&scoped=true&");
+/* harmony import */ var _FormEditTeacherStaffComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormEditTeacherStaffComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormEditTeacherStaffComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormEditTeacherStaffComponent_vue_vue_type_template_id_5c136e7e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _FormEditTeacherStaffComponent_vue_vue_type_template_id_5c136e7e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "5c136e7e",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/komunitas/FormKomunitasComponent.vue":
 /*!*****************************************************************************!*\
   !*** ./resources/js/components/widget/komunitas/FormKomunitasComponent.vue ***!
@@ -8251,6 +8459,45 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/widget/komunitas/FormKomunitasComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FormTeacherStaffComponent_vue_vue_type_template_id_680681ab_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTeacherStaffComponent.vue?vue&type=template&id=680681ab&scoped=true& */ "./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=template&id=680681ab&scoped=true&");
+/* harmony import */ var _FormTeacherStaffComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTeacherStaffComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormTeacherStaffComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormTeacherStaffComponent_vue_vue_type_template_id_680681ab_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _FormTeacherStaffComponent_vue_vue_type_template_id_680681ab_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "680681ab",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -9123,6 +9370,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditTeacherStaffComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormEditTeacherStaffComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditTeacherStaffComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************!*\
   !*** ./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=script&lang=js& ***!
@@ -9136,6 +9399,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKomunitasComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormKomunitasComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKomunitasComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTeacherStaffComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormTeacherStaffComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTeacherStaffComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -9817,6 +10096,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=template&id=5c136e7e&scoped=true&":
+/*!*******************************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=template&id=5c136e7e&scoped=true& ***!
+  \*******************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditTeacherStaffComponent_vue_vue_type_template_id_5c136e7e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditTeacherStaffComponent_vue_vue_type_template_id_5c136e7e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditTeacherStaffComponent_vue_vue_type_template_id_5c136e7e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormEditTeacherStaffComponent.vue?vue&type=template&id=5c136e7e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=template&id=5c136e7e&scoped=true&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true&":
 /*!************************************************************************************************************************!*\
   !*** ./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true& ***!
@@ -9830,6 +10126,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKomunitasComponent_vue_vue_type_template_id_0b4a8242_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormKomunitasComponent_vue_vue_type_template_id_0b4a8242_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=template&id=680681ab&scoped=true&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=template&id=680681ab&scoped=true& ***!
+  \***************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTeacherStaffComponent_vue_vue_type_template_id_680681ab_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTeacherStaffComponent_vue_vue_type_template_id_680681ab_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTeacherStaffComponent_vue_vue_type_template_id_680681ab_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormTeacherStaffComponent.vue?vue&type=template&id=680681ab&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=template&id=680681ab&scoped=true&");
 
 
 /***/ }),
@@ -11475,9 +11788,9 @@ var render = function () {
                                               staticClass:
                                                 "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
                                               attrs: {
-                                                href: _vm.dataurl[
-                                                  "teacher-staff"
-                                                ],
+                                                href:
+                                                  _vm.dataurl["teacher-staff"] +
+                                                  "/all",
                                               },
                                             },
                                             [_vm._m(12)]
@@ -13484,7 +13797,7 @@ var render = function () {
             "div",
             { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
             [
-              _c("a", { attrs: { href: _vm.dataurl["staff"] } }, [
+              _c("a", { attrs: { href: _vm.dataurl["teacher-staff"] } }, [
                 _c(
                   "div",
                   {
@@ -15141,6 +15454,164 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=template&id=5c136e7e&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue?vue&type=template&id=5c136e7e&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "grid grid-cols-3 gap-5 text-left w-[42rem]" },
+    [
+      _c("div", { staticClass: "col-span-1" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            First Name\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { type: "text", name: "first_name" },
+          domProps: {
+            value:
+              _vm.$store.state.modal.modalshow.item.teacherstaff.first_name,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-span-1" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Last Name\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { type: "text", name: "last_name" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.teacherstaff.last_name,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Profesi\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { type: "text", name: "profesi" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.teacherstaff.profesi,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Email\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { type: "email", name: "email" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.teacherstaff.email,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _vm._m(1),
+    ]
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row-span-2" }, [
+      _c("label", { staticClass: "block font-medium text-gray-700" }, [
+        _vm._v("\n            Foto\n        "),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2",
+        },
+        [
+          _c("input", {
+            staticClass:
+              "block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer\n                              file:mr-4 file:py-2 file:px-4\n                              file:rounded-full file:border-0\n                              file:text-sm file:font-semibold\n                              file:bg-violet-50 file:text-violet-700\n                              hover:file:bg-violet-100\n                            ",
+            attrs: { type: "file", name: "fileupload", id: "fileupload" },
+          }),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-start-1 col-span-2" }, [
+      _c("label", { staticClass: "block font-medium text-gray-700" }, [
+        _vm._v("\n            Area\n        "),
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase",
+          attrs: { name: "area" },
+        },
+        [
+          _c("option", { attrs: { disabled: "", selected: "" } }, [
+            _vm._v("--- Pilih Area ---"),
+          ]),
+          _vm._v(" "),
+          _c("option", [_vm._v("hhk")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("sd")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("smp")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("sma")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("qrd")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("finance")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("hrga")]),
+        ]
+      ),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true&":
 /*!***************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormKomunitasComponent.vue?vue&type=template&id=0b4a8242&scoped=true& ***!
@@ -15276,6 +15747,153 @@ var render = function () {
             value: _vm.$store.state.modal.modalshow.item.komunitas.connection,
           },
         }),
+      ]),
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=template&id=680681ab&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue?vue&type=template&id=680681ab&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "grid grid-cols-3 gap-5 text-left w-[42rem]" },
+    [
+      _c("div", { staticClass: "col-span-1" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            First Name\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { disabled: "", type: "text", name: "first_name" },
+          domProps: {
+            value:
+              _vm.$store.state.modal.modalshow.item.teacherstaff.first_name,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-span-1" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Last Name\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { disabled: "", type: "text", name: "last_name" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.teacherstaff.last_name,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Profesi\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { disabled: "", type: "text", name: "profesi" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.teacherstaff.profesi,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Foto\n        "),
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          staticClass:
+            "m-auto rounded-full h-24 w-24 object-cover border border-gray-200",
+          attrs: { src: _vm.$store.state.modal.modalshow.img },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Email\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { disabled: "", type: "email", name: "email" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.teacherstaff.email,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Area\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase",
+          attrs: { disabled: "", type: "text", name: "area" },
+          domProps: {
+            value: _vm.$store.state.modal.modalshow.item.teacherstaff.area,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-3" }, [
+        _c("div", { staticClass: "mt-2 grid grid-cols-2 gap-2" }, [
+          _c(
+            "button",
+            {
+              staticClass:
+                "rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-300 px-1.5 py-1 text-xs font-medium text-black after:content-['_↗'] transition-all ease-in-out",
+              attrs: { type: "button" },
+              on: { click: _vm.openModalEdit },
+            },
+            [_vm._v("Edit Staff")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "rounded-lg bg-red-500 hover:bg-red-600 border border-red-600 px-1.5 py-1 text-xs font-medium text-white after:content-['_⊘'] transition-all ease-in-out",
+              attrs: { type: "button" },
+              on: {
+                click: function ($event) {
+                  return _vm.openModalValidation()
+                },
+              },
+            },
+            [_vm._v("Delete Staff")]
+          ),
+        ]),
       ]),
     ]
   )
@@ -16117,13 +16735,14 @@ var render = function () {
         _c("label", { staticClass: "block font-medium text-gray-700" }, [
           _vm._v("\n            Area\n        "),
         ]),
-        _vm._v(" "),
+        _vm._v('\n        "'),
         _c("input", {
           staticClass:
             "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase",
           attrs: { disabled: "", type: "text", name: "area" },
           domProps: { value: _vm.$store.state.modal.modalshow.item.user.area },
         }),
+        _vm._v('"\n    '),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-start-3" }, [

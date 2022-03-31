@@ -161,6 +161,8 @@ Vue.component('form-prestasi-edit-component', require('./components/widget/prest
 Vue.component('form-komunitas-component', require('./components/widget/komunitas/FormKomunitasComponent').default)
 Vue.component('form-komunitas-edit-component', require('./components/widget/komunitas/FormEditComponent').default)
 Vue.component('teacher-staff-component', require('./components/widget/komunitas/TeacherStaffComponent').default)
+Vue.component('form-teacher-staff-component', require('./components/widget/komunitas/FormTeacherStaffComponent').default)
+Vue.component('form-edit-teacher-staff-component', require('./components/widget/komunitas/FormEditTeacherStaffComponent').default)
 
 
 /**

@@ -98,7 +98,7 @@
                     </a>
                 </div>
                 <div class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
-                    <a :href="dataurl['staff']">
+                    <a :href="dataurl['teacher-staff']">
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['staff'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">

@@ -309,7 +309,7 @@
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       :href="dataurl['teacher-staff']">
+                                                       :href="dataurl['teacher-staff'] + '/all'">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div

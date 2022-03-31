@@ -48,6 +48,7 @@
                 </table>
             </div>
             <div class="bg-gray-100 px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+                {{$user->links('widgets.custom_pagination')}}
             </div>
         </mac-card-component>
     </div>

@@ -31,8 +31,9 @@ class getUrl
             'acara' => route('acara'),
             'artikel' => route('artikel'),
             'dashboard' => route('dashboard.index'),
-            'teacher-staff' => route('teacher-staff')
+            'teacher-staff' => route('teacher-staff','')
         ];
         return response($url);
+
     }
 }
