@@ -15,9 +15,8 @@
                         </span>
                     </div>
                     <span class="font-bold leading-4 z-10"
-                          :class="[column === true && rows === true ? 'text-lg md:text-3xl lg:text-5xl' : [column ? 'text-lg md:text-3xl' : '', column === false && rows === false ? 'text-lg md:text-2xl' : '']]">{{
-                            title
-                        }}</span>
+                          :class="[column === true && rows === true ? 'text-lg md:text-3xl lg:text-5xl' : [column ? 'text-lg md:text-3xl' : '', column === false && rows === false ? 'text-lg md:text-2xl' : '']]">
+                        {{ title }}</span>
                     <h4 class="text-amber-500 font-semibold truncate text-xs md:text-sm leading-4">06 April, 2022</h4>
                     <p class="my-4 leading-6 overflow-hidden text-ellipsis text-lg font-light transition-all ease-in-out duration-300 h-12" :class="column === false && rows === false ? 'hidden' : ''">
                         {{ content }}</p>

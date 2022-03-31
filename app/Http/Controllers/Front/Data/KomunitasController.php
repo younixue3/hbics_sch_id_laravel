@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front\Data;
 
 use App\Http\Controllers\Controller;
 use App\Models\Komunitas;
+use App\Models\TeacherStaff;
 use Illuminate\Http\Request;
 
 class KomunitasController extends Controller
@@ -12,6 +13,19 @@ class KomunitasController extends Controller
     {
         $alumni = Komunitas::where('connection', 'alumni')->get()->take(15);
         $compact = compact('alumni');
+        return $compact;
+    }
+
+    public function get_teacher_staff_data($request, $area)
+    {
+        if ($request->area === 'all') {
+            $teacherstaff = TeacherStaff::get();
+        } else {
+            $teacherstaff = TeacherStaff::where('area', $area)->get();
+        }
+
+        $compact = compact('teacherstaff');
+
         return $compact;
     }
 }

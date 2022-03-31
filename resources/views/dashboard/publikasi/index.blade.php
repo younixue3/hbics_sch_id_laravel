@@ -41,7 +41,7 @@
                                 </div>
                             </td>
                             <td class="py-1">
-                                @foreach($value->kategoris_publikasi() as $key => $item)
+                                @foreach($value->kategoris_publikasi()->get() as $key => $item)
                                 <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5">
                                     {{$item->kategoris()->name}}
                                 </span>

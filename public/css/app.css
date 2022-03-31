@@ -706,12 +706,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mr-5{
   margin-right: -1.25rem;
 }
-.mt-0\.5{
-  margin-top: 0.125rem;
-}
-.mt-0{
-  margin-top: 0px;
-}
 .-mb-0\.5{
   margin-bottom: -0.125rem;
 }
@@ -726,6 +720,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .ml-0{
   margin-left: 0px;
+}
+.mt-0\.5{
+  margin-top: 0.125rem;
+}
+.mt-0{
+  margin-top: 0px;
 }
 .block{
   display: block;
@@ -1088,6 +1088,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .grid-cols-6{
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .grid-rows-4{
   grid-template-rows: repeat(4, minmax(0, 1fr));
@@ -1507,10 +1510,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
-.bg-red-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
 .bg-amber-500{
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
@@ -1530,6 +1529,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-50{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+.bg-red-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
@@ -1840,9 +1843,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .font-raleway{
   font-family: "Raleway";
 }
-.font-playfair{
-  font-family: "Playfair Display";
-}
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -2112,10 +2112,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .brightness-50{
   --tw-brightness: brightness(.5);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.brightness-75{
-  --tw-brightness: brightness(.75);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .grayscale{
@@ -2834,11 +2830,11 @@ h6{
   .md\:h-6{
     height: 1.5rem;
   }
-  .md\:h-\[49\.25rem\]{
-    height: 49.25rem;
-  }
   .md\:h-8{
     height: 2rem;
+  }
+  .md\:h-\[49\.25rem\]{
+    height: 49.25rem;
   }
   .md\:h-44{
     height: 11rem;
@@ -2879,9 +2875,6 @@ h6{
   .md\:w-11{
     width: 2.75rem;
   }
-  .md\:w-16{
-    width: 4rem;
-  }
   .md\:w-10{
     width: 2.5rem;
   }
@@ -2893,6 +2886,9 @@ h6{
   }
   .md\:w-\[37rem\]{
     width: 37rem;
+  }
+  .md\:w-16{
+    width: 4rem;
   }
   .md\:translate-y-1\/2{
     --tw-translate-y: 50%;
@@ -2938,6 +2934,9 @@ h6{
   }
   .md\:grid-rows-6{
     grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+  .md\:grid-rows-3{
+    grid-template-rows: repeat(3, minmax(0, 1fr));
   }
   .md\:justify-between{
     justify-content: space-between;

@@ -28,4 +28,10 @@ class KomunitasController extends Controller
     {
         return view('front.komunitas.orangtua.index');
     }
+
+    public function teacherStaff(Request $request, $area)
+    {
+        $data = $this->data->get_teacher_staff_data($request, $area);
+        return view('front.komunitas.teacherstaff.index', $data);
+    }
 }

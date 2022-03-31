@@ -20,16 +20,19 @@ class PublikasiController extends Controller
 
     public function berita()
     {
-        return view('front.publikasi.berita.index');
+        $data = $this->data->get_data_berita();
+        return view('front.publikasi.berita.index', $data);
     }
 
     public function acara()
     {
-        return view('front.publikasi.acara.index');
+        $data = $this->data->get_data_acara();
+        return view('front.publikasi.acara.index', $data);
     }
 
     public function artikel()
     {
-        return view('front.publikasi.artikel.index');
+        $data = $this->data->get_data_artikel();
+        return view('front.publikasi.artikel.index', $data);
     }
 }

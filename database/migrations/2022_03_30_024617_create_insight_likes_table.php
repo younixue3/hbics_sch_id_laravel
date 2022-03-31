@@ -20,6 +20,7 @@ class CreateInsightLikesTable extends Migration
             $table->unsignedBigInteger('user');
             $table->foreign('user')->references('id')->on('users');
             $table->timestamps();
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
         });
     }
 

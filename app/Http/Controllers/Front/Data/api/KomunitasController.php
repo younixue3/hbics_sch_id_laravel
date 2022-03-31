@@ -12,9 +12,14 @@ class KomunitasController extends Controller
     {
         return response(Komunitas::where('connection', 'alumni')->get()->take(5));
     }
+
     public function get_data_orang_tua()
     {
         return response(Komunitas::where('connection', 'orang_tua')->get()->take(5));
     }
 
+    public function getTeacherStaffAll($request)
+    {
+        return response(Komunitas::where('connection', 'orang_tua')->paginate(12));
+    }
 }

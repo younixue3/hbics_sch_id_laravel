@@ -25,7 +25,7 @@ class Publikasis extends Model
 
     public function kategoris_publikasi()
     {
-        return $this->belongsTo(PublikasisKategoris::class, 'id', 'publikasi')->get();
+        return $this->belongsTo(PublikasisKategoris::class, 'id', 'publikasi');
     }
 
     public function publikasis_contents()
