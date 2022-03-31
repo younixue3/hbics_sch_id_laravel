@@ -3971,6 +3971,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -13466,6 +13479,26 @@ var render = function () {
               ]),
             ]
           ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
+            [
+              _c("a", { attrs: { href: _vm.dataurl["staff"] } }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                    class:
+                      _vm.livehref === _vm.dataurl["staff"]
+                        ? "bg-gray-300"
+                        : "bg-gray-100",
+                  },
+                  [_vm._m(6)]
+                ),
+              ]),
+            ]
+          ),
         ]),
       ]),
     ]
@@ -13542,6 +13575,18 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("Staff")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex w-52" }, [
+      _c("div", { staticClass: "w-1/6" }, [
+        _c("i", { staticClass: "fa-solid fa-id-badge mr-3" }),
+      ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("Teacher & Staff Component")]),
     ])
   },
 ]

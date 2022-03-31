@@ -17,6 +17,7 @@ class CreateTeacherStaffTable extends Migration
             $table->id();
             $table->string('first_name', 30);
             $table->string('last_name', 40);
+            $table->string('email');
             $table->text('picture')->nullable();
             $table->enum('area', ['hhk', 'sdk', 'smpk', 'smak', 'qrd', 'finance', 'hrga']);
             $table->text('profesi');
