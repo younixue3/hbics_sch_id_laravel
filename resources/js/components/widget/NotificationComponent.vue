@@ -6,7 +6,7 @@
             <i class="fas fa-info text-2xl lg:text-3xl"></i>
         </div>
         <div class="px-1 py-2">
-            <h1 class="text-sm lg:text-base">
+            <h1 class="text-sm lg:text-base font-raleway">
                 {{ type === 'error' ? 'Error' : type === 'success' ? 'Success' : type === 'info' ? 'Info' : '' }}</h1>
             <p class="text-xs">{{ message }}</p>
         </div>

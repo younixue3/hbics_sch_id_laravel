@@ -45,9 +45,9 @@
             <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
                 <option disabled selected>--- Pilih Area ---</option>
                 <option>hhk</option>
-                <option>sd</option>
-                <option>smp</option>
-                <option>sma</option>
+                <option>sdk</option>
+                <option>smpk</option>
+                <option>smak</option>
                 <option>qrd</option>
                 <option>finance</option>
                 <option>hrga</option>

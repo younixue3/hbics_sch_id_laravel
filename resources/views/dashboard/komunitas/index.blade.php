@@ -111,7 +111,7 @@
             <select name="connection" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
                 <option disabled selected>--- Pilih Koneksi ---</option>
                 <option>Alumni</option>
-                <option>Orang Tua</option>
+                <option value="orang_tua">Orang Tua</option>
             </select>
         </div>
     </div>

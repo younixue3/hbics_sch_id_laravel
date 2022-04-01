@@ -4,7 +4,7 @@
          class="relative bg-cover bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg flex justify-end"
          :style="{ backgroundImage: `url('${imagecontent}')` }">
         <div
-            class="transition-all ease-in-out duration-200 overflow-hidden mt-auto w-full rounded-b-2xl bg-gradient-to-t to-transparent pt-3 pb-5 px-3 lg:px-6"
+            class="transition-all ease-in-out duration-200 overflow-hidden m-auto h-full w-full rounded-b-2xl bg-gradient-to-t to-transparent pt-3 pb-5 px-3 lg:px-6"
             :class="showup ? 'from-gray-700' : 'from-black'">
             <div class="">
                 <div class="static text-white">

@@ -21,7 +21,7 @@
                             <td class="py-1 pl-4">
                                 <div class="flex items-center">
                                     <img class="h-8 w-8 mr-2 rounded-full object-cover"
-                                         src="{{asset('Upload/foto_profile/'.$value->picture)}}"
+                                         src="{{asset('Upload/foto_siswa/'.$value->picture)}}"
                                          alt="">
                                     <div class="text-left my-auto">
                                         {{$value->name}}

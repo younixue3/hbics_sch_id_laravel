@@ -20,7 +20,7 @@ class StaffController extends Controller
 {
     public function get_data()
     {
-        $user = User::get();
+        $user = User::paginate(20);
         $role = json_encode(Roles::get());
         $compact = compact('user', 'role');
         return $compact;

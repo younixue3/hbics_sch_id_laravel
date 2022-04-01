@@ -7,7 +7,7 @@
                 <div class="flex px-5 lg:px-10 pt-5 pb-2">
                     <i class="fas fa-exclamation-circle text-5xl md:text-6xl text-yellow-500 mt-3"></i>
                     <div class="ml-8 text-left">
-                        <h1 class="font-bold text-xl my-4">Apakah anda yakin?</h1>
+                        <h1 class="font-bold text-xl my-4 font-raleway">Apakah anda yakin?</h1>
                         <p class="w-auto">{{ $store.state.modalvalidation.massage }}</p>
                     </div>
                 </div>

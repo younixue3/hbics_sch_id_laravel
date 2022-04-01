@@ -4876,6 +4876,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      imageurl: window.location.origin + '/Upload/foto_siswa/',
       counter: 0,
       scrolcount: 0,
       arrTestimoni: {
@@ -10428,9 +10429,11 @@ var render = function () {
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "ml-8 text-left" }, [
-                    _c("h1", { staticClass: "font-bold text-xl my-4" }, [
-                      _vm._v("Apakah anda yakin?"),
-                    ]),
+                    _c(
+                      "h1",
+                      { staticClass: "font-bold text-xl my-4 font-raleway" },
+                      [_vm._v("Apakah anda yakin?")]
+                    ),
                     _vm._v(" "),
                     _c("p", { staticClass: "w-auto" }, [
                       _vm._v(_vm._s(_vm.$store.state.modalvalidation.massage)),
@@ -10536,7 +10539,9 @@ var render = function () {
               ),
               _vm._v(" "),
               _c("div", { staticClass: "p-5 w-full" }, [
-                _c("h1", { staticClass: "text-base" }, [_vm._v("Add Data")]),
+                _c("h1", { staticClass: "text-base font-raleway" }, [
+                  _vm._v("Add Data"),
+                ]),
                 _vm._v(" "),
                 _c(
                   "form",
@@ -10938,7 +10943,7 @@ var render = function () {
   return _c(
     "form",
     {
-      staticClass: "grid grid-cols-1 gap-x-5 gap-y-4 my-5",
+      staticClass: "grid grid-cols-1 gap-x-5 gap-y-4 my-5 font-playfair",
       attrs: {
         id: "formPublish",
         action: _vm.store_link,
@@ -13803,7 +13808,7 @@ var render = function () {
                   {
                     staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
                     class:
-                      _vm.livehref === _vm.dataurl["staff"]
+                      _vm.livehref === _vm.dataurl["teacher-staff"]
                         ? "bg-gray-300"
                         : "bg-gray-100",
                   },
@@ -14074,7 +14079,7 @@ var render = function () {
         "div",
         {
           staticClass:
-            "transition-all ease-in-out duration-200 overflow-hidden mt-auto w-full rounded-b-2xl bg-gradient-to-t to-transparent pt-3 pb-5 px-3 lg:px-6",
+            "transition-all ease-in-out duration-200 overflow-hidden m-auto h-full w-full rounded-b-2xl bg-gradient-to-t to-transparent pt-3 pb-5 px-3 lg:px-6",
           class: _vm.showup ? "from-gray-700" : "from-black",
         },
         [
@@ -14917,7 +14922,7 @@ var render = function () {
       _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "px-1 py-2" }, [
-        _c("h1", { staticClass: "text-sm lg:text-base" }, [
+        _c("h1", { staticClass: "text-sm lg:text-base font-raleway" }, [
           _vm._v(
             "\n            " +
               _vm._s(
@@ -14996,8 +15001,9 @@ var render = function () {
                   _c("div", { staticClass: "md:flex h-full" }, [
                     _c("div", { staticClass: "md:w-1/3 m-auto flex" }, [
                       _c("img", {
-                        staticClass: "h-20 w-20 rounded-full m-auto",
-                        attrs: { src: item.image },
+                        staticClass:
+                          "h-20 w-20 rounded-full m-auto object-cover",
+                        attrs: { src: _vm.imageurl + item.picture },
                       }),
                     ]),
                     _vm._v(" "),
@@ -15590,11 +15596,11 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("option", [_vm._v("hhk")]),
           _vm._v(" "),
-          _c("option", [_vm._v("sd")]),
+          _c("option", [_vm._v("sdk")]),
           _vm._v(" "),
-          _c("option", [_vm._v("smp")]),
+          _c("option", [_vm._v("smpk")]),
           _vm._v(" "),
-          _c("option", [_vm._v("sma")]),
+          _c("option", [_vm._v("smak")]),
           _vm._v(" "),
           _c("option", [_vm._v("qrd")]),
           _vm._v(" "),
