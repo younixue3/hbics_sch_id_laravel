@@ -51,7 +51,7 @@ export default {
         return {
             show: true,
             slider: 0,
-            windowspath: window.location.origin + '/assets/foto_komunitas/',
+            windowspath: window.location.origin + '/Upload/foto_komunitas/',
             sliderContent: [],
             heroContent: []
         }

@@ -35,4 +35,10 @@ class PublikasiController extends Controller
         $data = $this->data->get_data_artikel();
         return view('front.publikasi.artikel.index', $data);
     }
+
+    public function show($key)
+    {
+        $data = $this->data->show_data($key);
+        return view('front.publikasi.show', $data);
+    }
 }

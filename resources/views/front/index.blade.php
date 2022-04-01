@@ -49,10 +49,11 @@
                     <div
                         class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-0 z-10">
                         @forelse($prestasi as $key => $value)
-                            <content-card-component imagecontent="{{asset('Upload/foto_content/'. $value->thumbnail)}}"
-                                                    insight="{{++$key}}"
-                                                    title="{{$value->title}}"
-                                                    content="{{$value->title}}"></content-card-component>
+                            <content-card-component insight="{{++$key}}"
+                                                    item="{{$value}}"
+                                                    author="{{$value->users_create()->user()}}"
+                                                    author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
+                                                    urlshow="{{route('publikasi.show', $value->randKey)}}"></content-card-component>
                         @empty
                             Data kosong
                         @endforelse
@@ -75,10 +76,11 @@
                             $urut = 3;
                         @endphp
                         @forelse($prestasi as $key => $value)
-                            <content-card-component imagecontent="{{asset('Upload/foto_content/'. $value->thumbnail)}}"
-                                                    insight="{{ --$urut }}"
-                                                    title="{{$value->title}}"
-                                                    content="{{$value->title}}"></content-card-component>
+                            <content-card-component insight="{{ --$urut }}"
+                                                    item="{{$value}}"
+                                                    author="{{$value->users_create()->user()}}"
+                                                    author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
+                                                    urlshow="{{route('publikasi.show', $value->randKey)}}"></content-card-component>
                         @empty
                             Data kosong
                         @endforelse

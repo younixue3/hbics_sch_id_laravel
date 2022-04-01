@@ -54,8 +54,12 @@ Route::get('/orang-tua', [App\Http\Controllers\Front\KomunitasController::class,
 Route::get('/teacher-staff/{area}', [App\Http\Controllers\Front\KomunitasController::class, 'teacherStaff'])->name('teacher-staff');
 //////////Publikasi
 Route::get('/berita', [App\Http\Controllers\Front\PublikasiController::class, 'berita'])->name('berita');
+Route::get('/berita/{key}', [App\Http\Controllers\Front\PublikasiController::class, 'show'])->name('berita.show');
 Route::get('/acara', [App\Http\Controllers\Front\PublikasiController::class, 'acara'])->name('acara');
+Route::get('/acara/{key}', [App\Http\Controllers\Front\PublikasiController::class, 'show'])->name('acara.show');
 Route::get('/artikel', [App\Http\Controllers\Front\PublikasiController::class, 'artikel'])->name('artikel');
+Route::get('/artikel/{key}', [App\Http\Controllers\Front\PublikasiController::class, 'show'])->name('artikel.show');
+Route::get('/publikasi/{key}', [App\Http\Controllers\Front\PublikasiController::class, 'show'])->name('publikasi.show');
 
 Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('index');

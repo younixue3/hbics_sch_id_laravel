@@ -144,14 +144,20 @@ Vue.component('button-show-component', require('./components/widget/ButtonShowCo
 
 //Publikasi Widget & Function
 Vue.component('workspace-publikasi-function', require('./components/function/publikasi/WorkspacePublikasiFunction').default)
+Vue.component('workspace-output', require('./components/function/publikasi/WorkspaceOutput').default)
 Vue.component('button-dot-menu-component', require('./components/widget/publikasi/ButtonDotMenuComponent').default)
 Vue.component('item-render-function', require('./components/function/publikasi/ItemRenderFunction').default)
+Vue.component('item-render-output', require('./components/function/publikasi/ItemRenderOutput').default)
 Vue.component('button-gear-menu-component', require('./components/widget/publikasi/ButtonGearMenuComponent').default)
 ////Publikasi Workspace Component
 Vue.component('title-workspace', require('./components/workspace/TitleWorkspace').default)
 Vue.component('paragraph-workspace', require('./components/workspace/ParagraphWorkspace').default)
 Vue.component('image-workspace', require('./components/workspace/ImageWorkspace').default)
 Vue.component('video-workspace', require('./components/workspace/VideoWorkspace').default)
+Vue.component('title-workspace-output', require('./components/workspace/output/TitleWorkspaceOutput').default)
+Vue.component('paragraph-workspace-output', require('./components/workspace/output/ParagraphWorkspaceOutput').default)
+Vue.component('image-workspace-output', require('./components/workspace/output/ImageWorkspaceOutput').default)
+Vue.component('video-workspace-output', require('./components/workspace/output/VideoWorkspaceOutput').default)
 
 //PRESTASI Widget & Function
 Vue.component('form-prestasi-component', require('./components/widget/prestasi/FormPrestasiComponent').default)

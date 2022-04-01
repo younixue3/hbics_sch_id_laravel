@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             UsersRolesSeeder::class,
 //            FasilitasSeeder::class,
-//            FotoProfileSeeder::class,
+            FotoProfileSeeder::class,
             KategorisSeeder::class,
             TypesSeeder::class,
 //            PublikasisSeeder::class,

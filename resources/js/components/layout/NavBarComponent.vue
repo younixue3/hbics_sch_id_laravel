@@ -265,7 +265,7 @@
                                              class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-96 z-50 transition-all ease-in-out duration-300 overflow-hidden">
                                             <div class="h-full grid grid-rows-5 divide-y-2">
                                                 <div
-                                                    class="grid grid-rows-2 items-center justify-items-stretch row-span-3 p-0.5">
+                                                    class="grid grid-rows-3 items-center justify-items-stretch row-span-3 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
                                                        :href="dataurl['alumni']">
                                                         <div class="flex gap-x-5 text-center">
@@ -370,7 +370,7 @@
                                                     </div>
                                                     <div>
                                                         <span class="text-xs font-light h-5">Orang Tua</span>
-                                                        <div class="grid grid-cols-2 gap-2">
+                                                        <div class="grid grid-cols-2 gap-x-2">
                                                             <a href="#"
                                                                class="grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2">
                                                                 <img
@@ -830,12 +830,12 @@ export default {
             eval(navname).classList.remove('hidden')
             setTimeout(function () {
                 eval(navname).classList.remove('h-0')
-                eval(navname).classList.add('h-80')
+                eval(navname).classList.add('h-96')
             }, 10)
 
         },
         modalclose(navname) {
-            eval(navname).classList.remove('h-80')
+            eval(navname).classList.remove('h-96')
             eval(navname).classList.add('h-0')
             setTimeout(function () {
                 eval(navname).classList.add('hidden')

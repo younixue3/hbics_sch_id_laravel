@@ -4,11 +4,11 @@
             <Transition name="slide-fade">
                 <div :class="show ? 'translate-x-0 opacity-100' : 'opacity-0 translate-x-10'"
                      class="transition-all ease-in-out bg-white rounded-xl shadow-lg border-2 flex items-center md:w-[37rem] h-52 p-1 md:p-5 m-auto">
-                    <div class="w-1/4 self-start pl-1 pt-5">
-                        <img class="rounded-full w-16 h-16 bg-gray-200 object-cover"
-                             src="http://hbics_sch_id.test/assets/stock_photo_rdev/Pic-1.webp">
+                    <div class="self-start pl-1 pt-5 w-2/6">
+                        <img class="rounded-full w-32 h-32 bg-gray-200 object-cover"
+                             :src=" this.pathfoto + data.picture">
                     </div>
-                    <div class="relative w-3/4 px-5">
+                    <div class="w-4/6 relative px-5">
                         <span class="text-lg font-bold truncate" v-if="show">{{ data.name }}</span>
                         <div class="text-amber-500 font-semibold truncate" v-if="show">{{ data.status }}</div>
                         <p v-if="show"
@@ -35,6 +35,7 @@ export default {
             show: true,
             data: {},
             counter: 0,
+            pathfoto: window.location.origin + '/Upload/foto_komunitas/',
             arrTestimoni: {
                 count: 1,
                 person: [

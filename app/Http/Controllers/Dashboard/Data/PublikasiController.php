@@ -29,7 +29,8 @@ class PublikasiController extends Controller
             $publikasi = Publikasis::create([
                 'randKey' => Str::random(8),
                 'title' => $request->title0,
-                'thumbnail' => $request->inputFile1->getClientOriginalName()
+                'thumbnail' => $request->inputFile1->getClientOriginalName(),
+                'type' => $request->inputFile1->extension() === 'mp4' ? 'video' : 'img'
             ]);
         } else {
             $publikasi = Publikasis::create([
@@ -93,7 +94,8 @@ class PublikasiController extends Controller
         if ($request->inputFile1 !== null) {
             $publikasi->update([
                 'title' => $request->title0,
-                'thumbnail' => $request->inputFile1->getClientOriginalName()
+                'thumbnail' => $request->inputFile1->getClientOriginalName(),
+                'type' => $request->inputFile1->extension() === 'mp4' ? 'video' : 'img'
             ]);
         } else {
             $publikasi->update([

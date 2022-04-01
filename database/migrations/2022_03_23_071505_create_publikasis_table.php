@@ -18,6 +18,7 @@ class CreatePublikasisTable extends Migration
             $table->string('randKey');
             $table->string('title', 150);
             $table->text('thumbnail');
+            $table->enum('type', ['img', 'video']);
             $table->enum('status', ['draft', 'publish', 'reject'])->default('draft');
             $table->timestamps();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
