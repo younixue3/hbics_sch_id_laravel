@@ -17125,7 +17125,7 @@ var render = function () {
           },
           [
             _c("div", { staticClass: "grid grid-cols-1" }, [
-              _c("a", { attrs: { href: "" } }, [
+              _c("a", { attrs: { href: _vm.show_url, target: "_blank" } }, [
                 _vm._v("\n                Show\n            "),
               ]),
               _vm._v(" "),

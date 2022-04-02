@@ -5,7 +5,7 @@
         </div>
         <div v-if="show" v-click-outside="focusout" class="absolute right-6 -translate-y-1/2 bg-white shadow-md rounded-md px-10">
             <div class="grid grid-cols-1">
-                <a href="">
+                <a :href="show_url" target="_blank">
                     Show
                 </a>
                 <a :href="edit_url">
