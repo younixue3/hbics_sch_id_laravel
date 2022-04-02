@@ -32,4 +32,9 @@ class Publikasis extends Model
     {
         return $this->belongsTo(PublikasisContents::class, 'id', 'publikasi')->latest()->get();
     }
+
+    public function publikasis_comments()
+    {
+        return $this->belongsTo(PublikasisComments::class, 'id', 'publikasi')->latest()->get();
+    }
 }

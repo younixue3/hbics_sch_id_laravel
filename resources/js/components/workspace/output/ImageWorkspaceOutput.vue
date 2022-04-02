@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <img ref="previewimg" class="w-full object-cover rounded-3xl m-5 h-96" :src="this.urlasset + this.$store.state.workspace.items[this.$props.index].content">
+        <img ref="previewimg" class="w-full object-cover rounded-3xl m-5 h-96" :src="this.urlasset + '/' + this.$store.state.workspace.items[this.$props.index].content">
     </div>
 </template>
 

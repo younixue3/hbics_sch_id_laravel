@@ -20,6 +20,7 @@ class CreatePublikasisCommentsTable extends Migration
             $table->unsignedBigInteger('publikasi');
             $table->foreign('publikasi')->references('id')->on('publikasis');
             $table->timestamps();
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
         });
     }
 

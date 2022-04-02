@@ -18071,6 +18071,7 @@ var render = function () {
       attrs: {
         src:
           this.urlasset +
+          "/" +
           this.$store.state.workspace.items[this.$props.index].content,
       },
     }),

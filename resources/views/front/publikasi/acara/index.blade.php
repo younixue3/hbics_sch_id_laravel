@@ -16,69 +16,68 @@
             @endforelse
         </div>
         <div class="md:px-20 my-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="grid md:grid-rows-6 grid-cols-1 md:grid-cols-3 gap-5">
                 @forelse($acara as $key => $value)
                     @if($key % 2 != 0)
-                        <div class="md:row-span-1">
+                        <a class="md:row-span-1" href="{{route('acara.show', $value->randKey)}}">
                             @if($value->type === 'video')
-                                <video class="md:h-[49.25rem] w-full object-cover rounded-2xl object-cover" autoplay loop muted>
+                                <video class="md:h-96 w-full object-cover rounded-2xl" autoplay loop muted>
                                     <source src="{{asset('Upload/foto_content/'.$value->thumbnail)}}#t=0,10">
                                 </video>
                             @else
                                 <img class="md:h-96 w-full object-cover rounded-2xl"
                                      src="{{asset('Upload/foto_content/'.$value->thumbnail)}}">
-                                <div class="h-36 px-3 py-2 pt-3">
-                                    @endif
-                                    <div class="w-full flex justify-between mb-1">
-                                        <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                            <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
-                                                 src="{{asset('Upload/foto_profile/'.$value->users_create()->user()->foto_profile()->img)}}">
-                                            <div class="m-auto text-xs md:text-base truncate">
-                                                {{$value->users_create()->user()->name}}
-                                            </div>
-                                        </div>
-                                        <div class="flex h-5 gap-x-5">
-                                            <button class="text-xs md:text-lg"><i class="fas fa-heart"></i></button>
-                                            <button class="text-xs md:text-lg"><i class="fas fa-share"></i></button>
+                            @endif
+                            <div class="h-36 px-3 py-2 pt-3">
+                                <div class="w-full flex justify-between mb-1">
+                                    <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
+                                        <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                             src="{{asset('Upload/foto_profile/'.$value->users_create()->user()->foto_profile()->img)}}">
+                                        <div class="m-auto text-xs md:text-base truncate">
+                                            {{$value->users_create()->user()->name}}
                                         </div>
                                     </div>
-                                    <h3 class="text-2xl">{{$value->title}}</h3>
+                                    <div class="flex h-5 gap-x-5">
+                                        <button class="text-xs md:text-lg"><i class="fas fa-heart"></i></button>
+                                        <button class="text-xs md:text-lg"><i class="fas fa-share"></i></button>
+                                    </div>
                                 </div>
-                        </div>
+                                <h3 class="text-2xl">{{$value->title}}</h3>
+                            </div>
+                        </a>
                     @else
-                        <div class="md:row-span-2">
+                        <a class="md:row-span-2" href="{{route('acara.show', $value->randKey)}}">
                             @if($value->type === 'video')
-                                <video class="md:h-[49.25rem] w-full object-cover rounded-2xl object-cover" autoplay loop muted>
-                                    <source src="{{asset('Upload/foto_content/'.$value->thumbnail)}}">
+                                <video class="md:h-[49.25rem] w-full object-cover rounded-2xl" autoplay loop muted>
+                                    <source src="{{asset('Upload/foto_content/'.$value->thumbnail)}}#t=0,10">
                                 </video>
                             @else
-                                <img class="md:h-96 w-full object-cover rounded-2xl"
+                                <img class="md:h-[49.25rem] w-full object-cover rounded-2xl"
                                      src="{{asset('Upload/foto_content/'.$value->thumbnail)}}">
-                                <div class="h-36 px-3 py-2 pt-3">
-                                    @endif
-                                    <div class="h-36 px-3 py-2 pt-3">
-                                        <div class="w-full flex justify-between mb-1">
-                                            <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                                <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
-                                                     src="{{asset('Upload/foto_profile/'.$value->users_create()->user()->foto_profile()->img)}}">
-                                                <div class="m-auto text-xs md:text-base truncate">
-                                                    {{$value->users_create()->user()->name}}
-                                                </div>
-                                            </div>
-                                            <div class="flex h-5 gap-x-5">
-                                                <button class="text-xs md:text-lg"><i class="fas fa-heart"></i></button>
-                                                <button class="text-xs md:text-lg"><i class="fas fa-share"></i></button>
-                                            </div>
+                            @endif
+                            <div class="h-36 px-3 py-2 pt-3">
+                                <div class="w-full flex justify-between mb-1">
+                                    <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
+                                        <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
+                                             src="{{asset('Upload/foto_profile/'.$value->users_create()->user()->foto_profile()->img)}}">
+                                        <div class="m-auto text-xs md:text-base truncate">
+                                            {{$value->users_create()->user()->name}}
                                         </div>
-                                        <h3 class="text-2xl">{{$value->title}}</h3>
+                                    </div>
+                                    <div class="flex h-5 gap-x-5">
+                                        <button class="text-xs md:text-lg"><i class="fas fa-heart"></i></button>
+                                        <button class="text-xs md:text-lg"><i class="fas fa-share"></i></button>
                                     </div>
                                 </div>
-                            @endif
-
-                            @empty
-                                Data kosong
-                            @endforelse
-                        </div>
+                                <h3 class="text-2xl">{{$value->title}}</h3>
+                            </div>
+                        </a>
+                    @endif
+                @empty
+                    Data kosong
+                @endforelse
             </div>
+            {{$acara->links('widgets.custom_pagination')}}
         </div>
+    </div>
 @endsection

@@ -49,7 +49,8 @@ class PublikasiController extends Controller
     {
         $cardpublikasi = Publikasis::where('randKey', '!=',$key)->get()->take(4);
         $publikasi = Publikasis::where('randKey', $key)->firstOrFail();
-        $compact = compact('publikasi', 'cardpublikasi');
+        $comment = $publikasi->publikasis_comments();
+        $compact = compact('publikasi', 'cardpublikasi', 'comment');
         return $compact;
     }
 }
