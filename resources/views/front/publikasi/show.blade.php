@@ -26,7 +26,7 @@
                 </div>
                 <div class="bg-white rounded-xl shadow-lg p-5">
                     <form class="my-5" action="{{route('comment.store', $publikasi->randKey)}}">
-                        <input type="text" class="rounded-xl border shadow-md h-10 w-96 px-3 pt-2 pb-1 focus:outline-none" name="name" placeholder="Your Name (Can be Anonym)">
+                        <input type="text" class="rounded-xl border shadow-md h-10 md:w-96 px-3 pt-2 pb-1 focus:outline-none" name="name" placeholder="Your Name (Can be Anonym)">
                         <div class="flex rounded-xl shadow-md mt-5">
                             <textarea class="resize-none flex-1 block border border-r-0 w-full rounded-l-xl focus:outline-none px-3 pt-2 pb-1" name="comment"
                                       placeholder="Search what you want to know"></textarea>
