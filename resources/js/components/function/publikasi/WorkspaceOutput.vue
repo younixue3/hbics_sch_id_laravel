@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <item-render-output class="font-playfair" v-for="(item, index) in this.$store.state.workspace.items" v-bind:type="item.type" v-bind:content="item.content" v-bind:index="index" v-bind:urlasset="urlasset" v-bind:editmode="editmode">
+    <div class="grid grid-cols-1 gap-x-5 gap-y-4 my-5">
+        <item-render-output v-for="(item, index) in this.$store.state.workspace.items" v-bind:type="item.type" v-bind:content="item.content" v-bind:index="index" v-bind:urlasset="urlasset" v-bind:editmode="editmode">
         </item-render-output>
     </div>
 </template>

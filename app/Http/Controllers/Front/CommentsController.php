@@ -41,6 +41,10 @@ class CommentsController extends Controller
      */
     public function store(Request $request, $key)
     {
+        $request->validate([
+            'name' => ['required', 'max:60'],
+            'comment' => ['required']
+        ]);
         $data = $this->data->store_data($request, $key);
         return redirect(url()->previous())->with('success', 'Comment anda berhasil di simpan');
     }

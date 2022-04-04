@@ -11779,9 +11779,9 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "grid grid-cols-1 gap-x-5 gap-y-4 my-5" },
     _vm._l(this.$store.state.workspace.items, function (item, index) {
       return _c("item-render-output", {
-        staticClass: "font-playfair",
         attrs: {
           type: item.type,
           content: item.content,
@@ -11820,7 +11820,7 @@ var render = function () {
   return _c(
     "form",
     {
-      staticClass: "grid grid-cols-1 gap-x-5 gap-y-4 my-5 font-playfair",
+      staticClass: "grid grid-cols-1 gap-x-5 gap-y-4 my-5",
       attrs: {
         id: "formPublish",
         action: _vm.store_link,
