@@ -13,7 +13,7 @@ class KomunitasController extends Controller
     public function get_data_alumni()
     {
         $alumni = Komunitas::where('connection', 'alumni')->get()->take(15);
-        $content = Publikasis::get()->take(6);
+        $content = Publikasis::where('status', 'publish')->get()->take(6);
         $compact = compact('alumni', 'content');
         return $compact;
     }
