@@ -5,7 +5,7 @@
     <div class="px-5 md:px-10 bg-pattern">
         <div class="md:px-20 my-10">
             <div>
-                <div class="grid grid-cols-4 md:flex justify-center border-b border-black">
+                <div class="grid grid-cols-3 md:flex justify-center border-b border-black">
                     <a href="{{route('teacher-staff','all')}}"
                         class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">All
                     </a>
@@ -32,7 +32,7 @@
                        class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">HRGA
                     </a>
                 </div>
-                <div class="grid grid-cols-4 md:grid-cols-3 gap-5 mt-10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
                     @forelse($teacherstaff as $key => $value)
                         <div class="bg-white shadow-xl rounded-xl p-3">
                             <img class="md:h-80 grayscale hover:grayscale-0 w-full object-cover rounded-2xl transition-all ease-in-out duration-300"
