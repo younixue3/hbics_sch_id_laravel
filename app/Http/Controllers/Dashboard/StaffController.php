@@ -44,7 +44,7 @@ class StaffController extends Controller
     public function store(Request $request)
     {
         $validator = $request->validate([
-            'fileupload' => ['mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
+            'fileupload' => ['required', 'mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
             'name' => ['required', 'max: 60'],
             'email' => 'email',
             'password' => ['required', 'confirmed', 'min:8'],
