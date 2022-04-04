@@ -14998,7 +14998,7 @@ var render = function () {
           class: _vm.showup ? "from-gray-700" : "from-black",
         },
         [
-          _c("div", { staticClass: "h-full" }, [
+          _c("div", { staticClass: "h-full relative" }, [
             _c("div", { staticClass: "static text-white" }, [
               _vm._m(0),
               _vm._v(" "),

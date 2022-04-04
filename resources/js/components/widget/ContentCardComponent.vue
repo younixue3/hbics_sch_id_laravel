@@ -9,7 +9,7 @@
         <div
             class="transition-all ease-in-out duration-200 overflow-hidden m-auto h-full w-full rounded-b-2xl bg-gradient-to-t to-transparent pt-3 pb-5 px-3 lg:px-6 z-10"
             :class="showup ? 'from-gray-700' : 'from-black'">
-            <div class="h-full">
+            <div class="h-full relative">
                 <div class="static text-white">
                     <div class="mb-5">
                         <span class="md:w-16 px-1 py-0.5 pt-1 rounded-md bg-red-600 md:flex md:justify-between">
