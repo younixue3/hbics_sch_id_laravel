@@ -18463,7 +18463,7 @@ var render = function () {
   return _c("div", { staticClass: "relative" }, [
     _c(
       "h1",
-      { staticClass: "text-2xl md:text-5xl", on: { dblclick: _vm.inputOn } },
+      { staticClass: "text-4xl md:text-5xl", on: { dblclick: _vm.inputOn } },
       [_vm._v(_vm._s(_vm.$store.state.workspace.items[_vm.index].content))]
     ),
   ])
