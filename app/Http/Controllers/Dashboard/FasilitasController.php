@@ -13,6 +13,7 @@ class FasilitasController extends Controller
     public function __construct(DataController $data)
     {
         $this->data = $data;
+        $this->middleware(['admin']);
     }
 
     /**

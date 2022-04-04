@@ -32,7 +32,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
+                <div v-if="is_admin === 'true'" class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['fasilitas']">
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['fasilitas'] ? 'bg-gray-300' : 'bg-gray-100'">
@@ -45,7 +45,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
+                <div v-if="is_admin === 'true'" class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['komunitas']">
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['komunitas'] ? 'bg-gray-300' : 'bg-gray-100'">
@@ -58,7 +58,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
+                <div v-if="is_admin === 'true'" class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['prestasi']">
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['prestasi'] ? 'bg-gray-300' : 'bg-gray-100'">
@@ -84,7 +84,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
+                <div v-if="is_admin === 'true'" class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['staff']">
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['staff'] ? 'bg-gray-300' : 'bg-gray-100'">
@@ -97,7 +97,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
+                <div v-if="is_admin === 'true'" class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['teacher-staff']">
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['teacher-staff'] ? 'bg-gray-300' : 'bg-gray-100'">
@@ -128,6 +128,9 @@ export default {
             collapsed: true,
             hover: true,
         }
+    },
+    props: {
+        is_admin : Boolean,
     },
     created() {
         window.addEventListener('scroll', this.handleScroll);

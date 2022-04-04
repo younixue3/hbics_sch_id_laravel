@@ -4109,6 +4109,9 @@ __webpack_require__.r(__webpack_exports__);
       hover: true
     };
   },
+  props: {
+    is_admin: Boolean
+  },
   created: function created() {
     var _this = this;
 
@@ -14564,65 +14567,80 @@ var render = function () {
             ]
           ),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
-            [
-              _c("a", { attrs: { href: _vm.dataurl["fasilitas"] } }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
-                    class:
-                      _vm.livehref === _vm.dataurl["fasilitas"]
-                        ? "bg-gray-300"
-                        : "bg-gray-100",
-                  },
-                  [_vm._m(1)]
-                ),
-              ]),
-            ]
-          ),
+          _vm.is_admin === "true"
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                },
+                [
+                  _c("a", { attrs: { href: _vm.dataurl["fasilitas"] } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                        class:
+                          _vm.livehref === _vm.dataurl["fasilitas"]
+                            ? "bg-gray-300"
+                            : "bg-gray-100",
+                      },
+                      [_vm._m(1)]
+                    ),
+                  ]),
+                ]
+              )
+            : _vm._e(),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
-            [
-              _c("a", { attrs: { href: _vm.dataurl["komunitas"] } }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
-                    class:
-                      _vm.livehref === _vm.dataurl["komunitas"]
-                        ? "bg-gray-300"
-                        : "bg-gray-100",
-                  },
-                  [_vm._m(2)]
-                ),
-              ]),
-            ]
-          ),
+          _vm.is_admin === "true"
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                },
+                [
+                  _c("a", { attrs: { href: _vm.dataurl["komunitas"] } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                        class:
+                          _vm.livehref === _vm.dataurl["komunitas"]
+                            ? "bg-gray-300"
+                            : "bg-gray-100",
+                      },
+                      [_vm._m(2)]
+                    ),
+                  ]),
+                ]
+              )
+            : _vm._e(),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
-            [
-              _c("a", { attrs: { href: _vm.dataurl["prestasi"] } }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
-                    class:
-                      _vm.livehref === _vm.dataurl["prestasi"]
-                        ? "bg-gray-300"
-                        : "bg-gray-100",
-                  },
-                  [_vm._m(3)]
-                ),
-              ]),
-            ]
-          ),
+          _vm.is_admin === "true"
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                },
+                [
+                  _c("a", { attrs: { href: _vm.dataurl["prestasi"] } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                        class:
+                          _vm.livehref === _vm.dataurl["prestasi"]
+                            ? "bg-gray-300"
+                            : "bg-gray-100",
+                      },
+                      [_vm._m(3)]
+                    ),
+                  ]),
+                ]
+              )
+            : _vm._e(),
           _vm._v(" "),
           _c(
             "div",
@@ -14644,45 +14662,55 @@ var render = function () {
             ]
           ),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
-            [
-              _c("a", { attrs: { href: _vm.dataurl["staff"] } }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
-                    class:
-                      _vm.livehref === _vm.dataurl["staff"]
-                        ? "bg-gray-300"
-                        : "bg-gray-100",
-                  },
-                  [_vm._m(5)]
-                ),
-              ]),
-            ]
-          ),
+          _vm.is_admin === "true"
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                },
+                [
+                  _c("a", { attrs: { href: _vm.dataurl["staff"] } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                        class:
+                          _vm.livehref === _vm.dataurl["staff"]
+                            ? "bg-gray-300"
+                            : "bg-gray-100",
+                      },
+                      [_vm._m(5)]
+                    ),
+                  ]),
+                ]
+              )
+            : _vm._e(),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
-            [
-              _c("a", { attrs: { href: _vm.dataurl["teacher-staff"] } }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
-                    class:
-                      _vm.livehref === _vm.dataurl["teacher-staff"]
-                        ? "bg-gray-300"
-                        : "bg-gray-100",
-                  },
-                  [_vm._m(6)]
-                ),
-              ]),
-            ]
-          ),
+          _vm.is_admin === "true"
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                },
+                [
+                  _c("a", { attrs: { href: _vm.dataurl["teacher-staff"] } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                        class:
+                          _vm.livehref === _vm.dataurl["teacher-staff"]
+                            ? "bg-gray-300"
+                            : "bg-gray-100",
+                      },
+                      [_vm._m(6)]
+                    ),
+                  ]),
+                ]
+              )
+            : _vm._e(),
         ]),
       ]),
     ]

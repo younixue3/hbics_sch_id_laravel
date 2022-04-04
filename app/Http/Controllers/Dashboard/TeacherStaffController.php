@@ -12,6 +12,7 @@ class TeacherStaffController extends Controller
     public function __construct(DataController $data)
     {
         $this->data = $data;
+        $this->middleware(['admin']);
     }
     /**
      * Display a listing of the resource.
