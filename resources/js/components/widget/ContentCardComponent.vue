@@ -24,7 +24,7 @@
                     <p class="my-4 leading-6 overflow-hidden text-ellipsis text-lg font-light transition-all ease-in-out duration-300 h-12" :class="column === false && rows === false ? 'hidden' : ''">
                         {{ item.title }}</p>
                 </div>
-                <div class="w-full absolute flex justify-between text-white bottom-0 mb-5">
+                <div class="w-full absolute flex justify-between text-white bottom-0 mb-3">
                     <div class="flex h-6 gap-x-1 align-text-bottom">
                         <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover" :src="pathprofile + author_pic">
                         <div class="m-auto text-xs md:text-base truncate">
