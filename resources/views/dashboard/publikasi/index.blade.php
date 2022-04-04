@@ -1,5 +1,5 @@
 @extends('layouts.dashboard.master')
-@section('title', 'Staff')
+@section('title', 'Publikasi')
 @section('content')
     <a href="{{route('dashboard.publikasi.create')}}" class="bg-green-400 rounded-lg w-20 px-3 flex justify-between text-center"><span>Add</span><i
             class="fa-solid fa-plus my-auto"></i></a>

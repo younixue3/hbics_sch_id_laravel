@@ -1,5 +1,5 @@
 @extends('layouts.dashboard.master')
-@section('title', 'Dashboard')
+@section('title', 'Fasilitas')
 @section('content')
     <button-add-function add_req="{{route('dashboard.fasilitas.store')}}"></button-add-function>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">

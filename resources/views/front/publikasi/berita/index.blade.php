@@ -1,5 +1,5 @@
 @extends('layouts.front.master')
-@section('title', 'Alumni')
+@section('title', 'Berita')
 @section('content')
     <div id="hero_section" class="h-52"></div>
     <div class="px-5 md:px-10">

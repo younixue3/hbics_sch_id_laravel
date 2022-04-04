@@ -1,5 +1,5 @@
 @extends('layouts.dashboard.master')
-@section('title', 'Edit')
+@section('title', 'Publikasi | Edit')
 @section('content')
 {{--    {{dd($publikasi->publikasis_contents()->first()->content()->first()->item)}}--}}
     <workspace-publikasi-function editmode="true" urlasset="{{asset('Upload/foto_content')}}" fetchdata="{{$publikasi->publikasis_contents()->first()->content()->first()->item}}" store_link="{{route('dashboard.publikasi.update',$publikasi->randKey)}}" @submit="submitPublikasi">

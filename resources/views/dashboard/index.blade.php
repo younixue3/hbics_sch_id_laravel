@@ -1,5 +1,5 @@
 @extends('layouts.dashboard.master')
-@section('title', 'Dashboard')
+@section('title', '')
 @section('content')
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
         <div class="md:col-span-3 bg-gray-100 shadow-md text-gray-800 rounded-xl flex">
