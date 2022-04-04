@@ -5,7 +5,7 @@
     <div class="px-5 md:px-10 bg-pattern">
         <div class="md:px-20 my-10">
             <div>
-                <div class="flex justify-center border-b border-black">
+                <div class="grid grid-cols-4 md:flex justify-center border-b border-black">
                     <a href="{{route('teacher-staff','all')}}"
                         class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">All
                     </a>
