@@ -14636,7 +14636,7 @@ var render = function () {
                     "my-auto text-2xl align-middle overflow-hidden truncate font-light",
                   attrs: { href: _vm.dataurl["home"] },
                 },
-                [_vm._v("\n                RDeveloper\n            ")]
+                [_vm._v("\n                Dashboard\n            ")]
               ),
             ]
           ),

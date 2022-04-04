@@ -8,7 +8,7 @@
                 <img class="min-h-5 h-5 mx-3 my-auto" src="" alt="">
                 <a :href="dataurl['home']"
                    class="my-auto text-2xl align-middle overflow-hidden truncate font-light">
-                    RDeveloper
+                    Dashboard
                 </a>
             </div>
             <button @click="CloseBar()" type="button"
