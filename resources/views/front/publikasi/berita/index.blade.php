@@ -19,7 +19,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 @forelse($berita as $key => $value)
                     @if($key % 2 != 0)
-                        <a class="md:row-span-1" href="{{route('berita.show', $value->randKey)}}">
+                        <a class="md:row-span-1 bg-white rounded-2xl" href="{{route('berita.show', $value->randKey)}}">
                             @if($value->type === 'video')
                                 <video class="md:h-96 w-full object-cover rounded-2xl" autoplay loop muted>
                                     <source src="{{asset('Upload/foto_content/'.$value->thumbnail)}}#t=0,10">
@@ -46,7 +46,7 @@
                             </div>
                         </a>
                     @else
-                        <a class="md:row-span-2" href="{{route('berita.show', $value->randKey)}}">
+                        <a class="md:row-span-2 bg-white rounded-2xl" href="{{route('berita.show', $value->randKey)}}">
                             @if($value->type === 'video')
                                 <video class="md:h-[49.25rem] w-full object-cover rounded-2xl" autoplay loop muted>
                                     <source src="{{asset('Upload/foto_content/'.$value->thumbnail)}}#t=0,10">
