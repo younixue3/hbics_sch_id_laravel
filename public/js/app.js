@@ -15162,7 +15162,7 @@ var render = function () {
               "div",
               {
                 staticClass:
-                  "w-full absolute flex justify-between text-white bottom-0 mb-3",
+                  "w-full absolute flex justify-between text-white bottom-0 mb-2",
               },
               [
                 _c(
