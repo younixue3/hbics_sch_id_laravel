@@ -16,7 +16,7 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->is_super_admin || auth()->user()->roles_user()->where('role', 2) !== null || auth()->user()->roles_user()->where('role', 3) !== null) {
+        if (auth()->user()->is_super_admin || auth()->user()->roles_user()->where('role', 2)->first() !== null || auth()->user()->roles_user()->where('role', 3)->first() !== null || auth()->user()->roles_user()->where('role', 1)->first() === null) {
             return $next($request);
         } else {
             return redirect(route('dashboard.index'))->with('error','You have not admin access');
