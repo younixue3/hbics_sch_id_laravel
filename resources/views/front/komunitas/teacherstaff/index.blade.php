@@ -5,7 +5,7 @@
     <div class="px-5 md:px-10 bg-pattern">
         <div class="md:px-20 my-10">
             <div>
-                <div class="grid grid-cols-3 md:flex justify-center border-b border-black">
+                <div class="grid grid-cols-3 md:flex text-sm md:text-base justify-center border-b border-black">
                     <a href="{{route('teacher-staff','all')}}"
                         class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">All
                     </a>
@@ -45,9 +45,9 @@
                                             <div class="m-auto text-sm md:text-xl font-normal">
                                                 {{$value->last_name}}
                                             </div>
-                                            <div class="mt-20">
-                                                <div class="text-xl font-semibol uppercase">{{$value->area}}</div>
-                                                <div class="text-lg font-normal">{{$value->profesi}}</div>
+                                            <div class="mt-10 md:mt-20">
+                                                <div class="text-sm md:text-xl font-semibol uppercase">{{$value->area}}</div>
+                                                <div class="text-sm md:text-lg font-normal">{{$value->profesi}}</div>
                                             </div>
                                         </div>
                                     </div>

@@ -2840,6 +2840,9 @@ h6{
   .md\:mt-10{
     margin-top: 2.5rem;
   }
+  .md\:mt-20{
+    margin-top: 5rem;
+  }
   .md\:block{
     display: block;
   }
