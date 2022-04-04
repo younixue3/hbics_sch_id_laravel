@@ -19,16 +19,16 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 @forelse($berita as $key => $value)
                     @if($key % 2 != 0)
-                        <a class="md:row-span-1 bg-white rounded-2xl" href="{{route('berita.show', $value->randKey)}}">
+                        <a class="md:row-span-1 grid grid-rows-2" href="{{route('berita.show', $value->randKey)}}">
                             @if($value->type === 'video')
-                                <video class="md:h-96 w-full object-cover rounded-t-2xl" autoplay loop muted>
+                                <video class="md:h-96 w-full object-cover rounded-2xl" autoplay loop muted>
                                     <source src="{{asset('Upload/foto_content/'.$value->thumbnail)}}#t=0,10">
                                 </video>
                             @else
-                                <img class="md:h-96 w-full object-cover rounded-t-2xl"
+                                <img class="md:h-96 w-full object-cover rounded-2xl"
                                      src="{{asset('Upload/foto_content/'.$value->thumbnail)}}">
                             @endif
-                            <div class="h-36 px-3 py-2 pt-3">
+                            <div class="h-36 bg-white rounded-2xl px-3 py-2 pt-3">
                                 <div class="w-full flex justify-between mb-1">
                                     <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
                                         <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
@@ -46,16 +46,16 @@
                             </div>
                         </a>
                     @else
-                        <a class="md:row-span-2 bg-white rounded-2xl" href="{{route('berita.show', $value->randKey)}}">
+                        <a class="md:row-span-2 grid grid-rows-2" href="{{route('berita.show', $value->randKey)}}">
                             @if($value->type === 'video')
-                                <video class="md:h-[49.25rem] w-full object-cover rounded-t-2xl" autoplay loop muted>
+                                <video class="md:h-[49.25rem] w-full object-cover rounded-2xl" autoplay loop muted>
                                     <source src="{{asset('Upload/foto_content/'.$value->thumbnail)}}#t=0,10">
                                 </video>
                             @else
-                                <img class="md:h-[49.25rem] w-full object-cover rounded-t-2xl"
+                                <img class="md:h-[49.25rem] w-full object-cover rounded-2xl"
                                      src="{{asset('Upload/foto_content/'.$value->thumbnail)}}">
                             @endif
-                            <div class="h-36 px-3 py-2 pt-3">
+                            <div class="h-36 bg-white rounded-2xl px-3 py-2 pt-3">
                                 <div class="w-full flex justify-between mb-1">
                                     <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
                                         <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
