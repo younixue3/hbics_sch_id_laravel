@@ -30,7 +30,7 @@
                                 <img class="md:h-96 w-full object-cover rounded-2xl"
                                      src="{{asset('Upload/foto_content/'.$value->thumbnail)}}">
                             @endif
-                            <div class="h-36 px-3 py-2 pt-3">
+                            <div class="h-36 overflow-hidden px-3 py-2 pt-3">
                                 <div class="w-full flex justify-between mb-1">
                                     <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
                                         <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
@@ -57,7 +57,7 @@
                                 <img class="md:h-[49.25rem] w-full object-cover rounded-2xl"
                                      src="{{asset('Upload/foto_content/'.$value->thumbnail)}}">
                             @endif
-                            <div class="h-36 px-3 py-2 pt-3">
+                            <div class="h-36 overflow-hidden px-3 py-2 pt-3">
                                 <div class="w-full flex justify-between mb-1">
                                     <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
                                         <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
