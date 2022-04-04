@@ -702,7 +702,7 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                        class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a :href="dataurl['orang-tua']" class="">
                                                 Orang Tua
@@ -712,7 +712,7 @@
                                     <div
                                         class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a :href="dataurl['teacher-staff']" class="">
+                                            <a :href="dataurl['teacher-staff'] + '/all'" class="">
                                                 Guru & Staff
                                             </a>
                                         </div>

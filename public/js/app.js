@@ -13332,7 +13332,7 @@ var render = function () {
                               "div",
                               {
                                 staticClass:
-                                  "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                                  "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
                               },
                               [
                                 _c(
@@ -13372,7 +13372,9 @@ var render = function () {
                                       "a",
                                       {
                                         attrs: {
-                                          href: _vm.dataurl["teacher-staff"],
+                                          href:
+                                            _vm.dataurl["teacher-staff"] +
+                                            "/all",
                                         },
                                       },
                                       [
