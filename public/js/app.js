@@ -18395,7 +18395,7 @@ var render = function () {
   return _c("div", { staticClass: "relative" }, [
     _c("img", {
       ref: "previewimg",
-      staticClass: "w-full object-cover rounded-3xl m-5 h-96",
+      staticClass: "w-full object-cover rounded-3xl h-96",
       attrs: {
         src:
           this.urlasset +
@@ -18494,7 +18494,7 @@ var render = function () {
       "video",
       {
         ref: "previewvideo",
-        staticClass: "object-cover rounded-3xl m-5 w-full h-[35rem] my-20",
+        staticClass: "object-cover rounded-3xl w-full h-[35rem] my-20",
         attrs: { controls: "" },
       },
       [_c("source", { attrs: { src: this.urlasset + "/" + this.content } })]

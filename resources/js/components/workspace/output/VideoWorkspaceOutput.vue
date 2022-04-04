@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <video ref="previewvideo" class="object-cover rounded-3xl m-5 w-full h-[35rem] my-20" controls>
+        <video ref="previewvideo" class="object-cover rounded-3xl w-full h-[35rem] my-20" controls>
             <source :src="this.urlasset + '/' + this.content">
         </video>
     </div>
