@@ -40,8 +40,6 @@
                             <div class="px-3 py-2 pt-3">
                                 <div class="w-full flex justify-between mb-1">
                                     <div class="flex     gap-x-1 align-text-bottom mb-2">
-                                        <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
-                                             src="{{asset('Upload/foto_teacher_staff/'.$value->picture)}}">
                                         <div class="m-auto text-sm md:text-2xl font-bold">
                                             {{$value->first_name}}
                                             <div class="m-auto text-sm md:text-xl font-normal">
