@@ -1638,6 +1638,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-center{
   background-position: center;
 }
+.bg-left{
+  background-position: left;
+}
 .bg-no-repeat{
   background-repeat: no-repeat;
 }

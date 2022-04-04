@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-pattern">
+        <div class="bg-akademis bg-no-repeat bg-left pb-5">
             <div class="flex">
                 <div class="px-10 py-10 text-center text-lg">
                     Sekolah Menengah Pertama Harapan Bangsa sebagai SMP Kristen unggulan Balikpapan menggunakan
