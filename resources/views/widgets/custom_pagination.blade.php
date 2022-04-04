@@ -1,13 +1,13 @@
 <div class="w-full flex items-center justify-between">
     <div>
-        <p class="text-sm text-gray-700">
-            Showing
-            <span class="font-medium">1</span>
-            to
-            <span class="font-medium">10</span>
-            of
-            <span class="font-medium">97</span>
-            results
+        <p class="text-sm text-gray-700 leading-5">
+            {!! __('Showing') !!}
+            <span class="font-medium">{{ $paginator->firstItem() }}</span>
+            {!! __('to') !!}
+            <span class="font-medium">{{ $paginator->lastItem() }}</span>
+            {!! __('of') !!}
+            <span class="font-medium">{{ $paginator->total() }}</span>
+            {!! __('results') !!}
         </p>
     </div>
     <div>

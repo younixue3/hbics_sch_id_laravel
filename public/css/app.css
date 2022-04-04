@@ -1964,6 +1964,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .leading-none{
   line-height: 1;
 }
+.leading-5{
+  line-height: 1.25rem;
+}
 .tracking-tight{
   letter-spacing: -0.025em;
 }
