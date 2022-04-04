@@ -18461,9 +18461,11 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "relative" }, [
-    _c("h1", { staticClass: "text-5xl", on: { dblclick: _vm.inputOn } }, [
-      _vm._v(_vm._s(_vm.$store.state.workspace.items[_vm.index].content)),
-    ]),
+    _c(
+      "h1",
+      { staticClass: "text-2xl md:text-5xl", on: { dblclick: _vm.inputOn } },
+      [_vm._v(_vm._s(_vm.$store.state.workspace.items[_vm.index].content))]
+    ),
   ])
 }
 var staticRenderFns = []
