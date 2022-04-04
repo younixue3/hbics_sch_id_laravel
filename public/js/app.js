@@ -3881,6 +3881,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -12873,7 +12881,28 @@ var render = function () {
                 },
                 [
                   _c("nav", { staticClass: "grid gap-y-8" }, [
-                    _vm._m(18),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "-m-3 p-3 items-center rounded-md hover:bg-gray-100",
+                        attrs: { href: _vm.dataurl["home"] },
+                      },
+                      [
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "ml-3 text-base font-semibold text-blue-800",
+                          },
+                          [
+                            _vm._v(
+                              "\n                                    Beranda\n                            "
+                            ),
+                          ]
+                        ),
+                      ]
+                    ),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -12924,13 +12953,125 @@ var render = function () {
                             attrs: { id: "pendaftaranmobile" },
                           },
                           [
-                            _vm._m(19),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl[
+                                            "petunjuk-pendaftaran"
+                                          ],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Petunjuk Pendaftaran\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                             _vm._v(" "),
-                            _vm._m(20),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl["program-beasiswa"],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Program Beasiswa\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                             _vm._v(" "),
-                            _vm._m(21),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl[
+                                            "pendaftaran-siswa-baru"
+                                          ],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Pendaftaran Siswa Baru\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                             _vm._v(" "),
-                            _vm._m(22),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl["kunjungi-kami"],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Kunjungi Kami\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                           ]
                         ),
                       ]
@@ -12986,13 +13127,125 @@ var render = function () {
                             attrs: { id: "akademismobile" },
                           },
                           [
-                            _vm._m(23),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl["happy-holy-kids"],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Happy Holy Kids\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                             _vm._v(" "),
-                            _vm._m(24),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl["sekolah-dasar"],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Sekolah Dasar\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                             _vm._v(" "),
-                            _vm._m(25),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl[
+                                            "sekolah-menengah-pertama"
+                                          ],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Sekolah Menengah Pertama\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                             _vm._v(" "),
-                            _vm._m(26),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl[
+                                            "sekolah-menengah-atas"
+                                          ],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Sekolah Menengah Atas\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                           ]
                         ),
                       ]
@@ -13047,7 +13300,92 @@ var render = function () {
                               "h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5",
                             attrs: { id: "komunitasmobile" },
                           },
-                          [_vm._m(27), _vm._v(" "), _vm._m(28)]
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: _vm.dataurl["alumni"] },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Alumni\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl["orang-tua"],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Orang Tua\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl["teacher-staff"],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Guru & Staff\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                          ]
                         ),
                       ]
                     ),
@@ -13102,11 +13440,84 @@ var render = function () {
                             attrs: { id: "publikasimobile" },
                           },
                           [
-                            _vm._m(29),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: _vm.dataurl["berita"] },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Berita\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                             _vm._v(" "),
-                            _vm._m(30),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      { attrs: { href: _vm.dataurl["acara"] } },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Acara\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                             _vm._v(" "),
-                            _vm._m(31),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: _vm.dataurl["artikel"] },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Artikel\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                           ]
                         ),
                       ]
@@ -13116,7 +13527,7 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(32),
+            _vm._m(18),
           ]
         ),
       ]
@@ -14099,302 +14510,6 @@ var staticRenderFns = [
         ),
       ]),
     ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "-m-3 p-3 items-center rounded-md hover:bg-gray-100",
-        attrs: { href: "#" },
-      },
-      [
-        _c(
-          "span",
-          { staticClass: "ml-3 text-base font-semibold text-blue-800" },
-          [
-            _vm._v(
-              "\n                                    Beranda\n                                "
-            ),
-          ]
-        ),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Petunjuk Pendaftaran\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Program Beasiswa\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Pendaftaran Siswa Baru\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Kunjungi Kami\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Happy Holy Kids\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Sekolah Dasar\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Sekolah Menengah Pertama\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Sekolah Menengah Atas\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Alumni\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Orang Tua\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Berita\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Acara\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
-      },
-      [
-        _c("div", { staticClass: "-mb-3 mt-1.5 bg-white" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v(
-              "\n                                            Artikel\n                                        "
-            ),
-          ]),
-        ]),
-      ]
-    )
   },
   function () {
     var _vm = this

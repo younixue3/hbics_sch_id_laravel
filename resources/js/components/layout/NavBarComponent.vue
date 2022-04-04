@@ -587,11 +587,11 @@
                     </div>
                     <div class="mt-6 overflow-y-scroll overflow-x-hidden h-72">
                         <nav class="grid gap-y-8">
-                            <a href="#" class="-m-3 p-3 items-center rounded-md hover:bg-gray-100">
+                            <a :href="dataurl['home']" class="-m-3 p-3 items-center rounded-md hover:bg-gray-100">
                                 <!--                                    <i class="fa-solid fa-house text-blue-700 text-xl"></i>-->
                                 <span class="ml-3 text-base font-semibold text-blue-800">
                                         Beranda
-                                    </span>
+                                </span>
                             </a>
 
                             <div class="-m-3 p-3 rounded-md transition-all ease-in-out">
@@ -607,7 +607,7 @@
                                     <div
                                         class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['petunjuk-pendaftaran']" class="">
                                                 Petunjuk Pendaftaran
                                             </a>
                                         </div>
@@ -615,7 +615,7 @@
                                     <div
                                         class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['program-beasiswa']" class="">
                                                 Program Beasiswa
                                             </a>
                                         </div>
@@ -623,7 +623,7 @@
                                     <div
                                         class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['pendaftaran-siswa-baru']" class="">
                                                 Pendaftaran Siswa Baru
                                             </a>
                                         </div>
@@ -631,7 +631,7 @@
                                     <div
                                         class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['kunjungi-kami']" class="">
                                                 Kunjungi Kami
                                             </a>
                                         </div>
@@ -651,7 +651,7 @@
                                      class="h-0 hidden transition-all ease-in-out overflow-hidden grid ml-5">
                                     <div class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['happy-holy-kids']" class="">
                                                 Happy Holy Kids
                                             </a>
                                         </div>
@@ -659,7 +659,7 @@
                                     <div
                                         class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['sekolah-dasar']" class="">
                                                 Sekolah Dasar
                                             </a>
                                         </div>
@@ -667,7 +667,7 @@
                                     <div
                                         class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['sekolah-menengah-pertama']" class="">
                                                 Sekolah Menengah Pertama
                                             </a>
                                         </div>
@@ -675,7 +675,7 @@
                                     <div
                                         class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['sekolah-menengah-atas']" class="">
                                                 Sekolah Menengah Atas
                                             </a>
                                         </div>
@@ -696,7 +696,7 @@
                                     <div
                                         class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['alumni']" class="">
                                                 Alumni
                                             </a>
                                         </div>
@@ -704,8 +704,16 @@
                                     <div
                                         class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['orang-tua']" class="">
                                                 Orang Tua
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                        <div class="-mb-3 mt-1.5 bg-white">
+                                            <a :href="dataurl['teacher-staff']" class="">
+                                                Guru & Staff
                                             </a>
                                         </div>
                                     </div>
@@ -725,7 +733,7 @@
                                     <div
                                         class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['berita']" class="">
                                                 Berita
                                             </a>
                                         </div>
@@ -733,7 +741,7 @@
                                     <div
                                         class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['acara']" class="">
                                                 Acara
                                             </a>
                                         </div>
@@ -741,7 +749,7 @@
                                     <div
                                         class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a href="#" class="">
+                                            <a :href="dataurl['artikel']" class="">
                                                 Artikel
                                             </a>
                                         </div>
