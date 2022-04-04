@@ -11,10 +11,10 @@ class PublikasiController extends Controller
 {
     public function get_data_berita()
     {
-        $berita = Publikasis::whereHas('kategoris_publikasi', function (Builder $query) {
+        $berita = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 1);
         })->paginate(12);
-        $cardberita = Publikasis::whereHas('kategoris_publikasi', function (Builder $query) {
+        $cardberita = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 1);
         })->get()->take(4);
         $compact = compact('berita', 'cardberita');
@@ -23,10 +23,10 @@ class PublikasiController extends Controller
 
     public function get_data_acara()
     {
-        $acara = Publikasis::whereHas('kategoris_publikasi', function (Builder $query) {
+        $acara = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 2);
         })->paginate(12);
-        $cardacara = Publikasis::whereHas('kategoris_publikasi', function (Builder $query) {
+        $cardacara = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 2);
         })->get()->take(4);
         $compact = compact('acara', 'cardacara');
@@ -35,10 +35,10 @@ class PublikasiController extends Controller
 
     public function get_data_artikel()
     {
-        $artikel = Publikasis::whereHas('kategoris_publikasi', function (Builder $query) {
+        $artikel = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 3);
         })->paginate(12);
-        $cardartikel = Publikasis::whereHas('kategoris_publikasi', function (Builder $query) {
+        $cardartikel = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 3);
         })->get()->take(4);
         $compact = compact('artikel', 'cardartikel');

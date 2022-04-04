@@ -92,15 +92,31 @@ class PublikasiController extends Controller
         $publikasi = Publikasis::where('randKey', $key);
 
         if ($request->inputFile1 !== null) {
-            $publikasi->update([
-                'title' => $request->title0,
-                'thumbnail' => $request->inputFile1->getClientOriginalName(),
-                'type' => $request->inputFile1->extension() === 'mp4' ? 'video' : 'img'
-            ]);
+            if ($request->status !== null) {
+                $publikasi->update([
+                    'title' => $request->title0,
+                    'thumbnail' => $request->inputFile1->getClientOriginalName(),
+                    'type' => $request->inputFile1->extension() === 'mp4' ? 'video' : 'img',
+                    'status' => $request->status
+                ]);
+            } else {
+                $publikasi->update([
+                    'title' => $request->title0,
+                    'thumbnail' => $request->inputFile1->getClientOriginalName(),
+                    'type' => $request->inputFile1->extension() === 'mp4' ? 'video' : 'img'
+                ]);
+            }
         } else {
-            $publikasi->update([
-                'title' => $request->title0
-            ]);
+            if ($request->status !== null) {
+                $publikasi->update([
+                    'title' => $request->title0,
+                    'status' => $request->status
+                ]);
+            } else {
+                $publikasi->update([
+                    'title' => $request->title0
+                ]);
+            }
         }
         if ($publikasi->first()->publikasis_contents()->first()->content()->first()->item !== $request->item) {
             $content = Contents::create([

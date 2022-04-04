@@ -561,13 +561,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
-.my-20{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
 .mx-5{
   margin-left: 1.25rem;
   margin-right: 1.25rem;
+}
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .mx-0\.5{
   margin-left: 0.125rem;
@@ -732,9 +732,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .ml-0{
   margin-left: 0px;
-}
-.mr-5{
-  margin-right: 1.25rem;
 }
 .block{
   display: block;
@@ -1479,6 +1476,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
 }
+.bg-yellow-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+.bg-red-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
 .bg-green-400{
   --tw-bg-opacity: 1;
   background-color: rgb(74 222 128 / var(--tw-bg-opacity));
@@ -1660,11 +1665,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-5{
   padding: 1.25rem;
 }
-.p-32{
-  padding: 8rem;
-}
 .p-2{
   padding: 0.5rem;
+}
+.p-32{
+  padding: 8rem;
 }
 .p-1{
   padding: 0.25rem;
@@ -1811,6 +1816,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pb-0{
   padding-bottom: 0px;
 }
+.pl-7{
+  padding-left: 1.75rem;
+}
 .pt-2{
   padding-top: 0.5rem;
 }
@@ -1846,15 +1854,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-32{
   padding-bottom: 8rem;
-}
-.pr-10{
-  padding-right: 2.5rem;
-}
-.pl-10{
-  padding-left: 2.5rem;
-}
-.pl-7{
-  padding-left: 1.75rem;
 }
 .text-left{
   text-align: left;
