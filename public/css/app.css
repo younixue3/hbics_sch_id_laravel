@@ -844,6 +844,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-11{
   height: 2.75rem;
 }
+.h-max{
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.max-h-52{
+  max-height: 13rem;
+}
+.max-h-96{
+  max-height: 24rem;
+}
 .min-h-screen{
   min-height: 100vh;
 }

@@ -3813,82 +3813,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -12622,67 +12546,58 @@ var render = function () {
                                 {
                                   ref: "komunitas",
                                   staticClass:
-                                    "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-96 z-50 transition-all ease-in-out duration-300 overflow-hidden",
+                                    "h-0 max-h-52 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg z-50 transition-all ease-in-out duration-300 overflow-hidden",
                                   attrs: { id: "komunitas" },
                                 },
                                 [
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "h-full grid grid-rows-5 divide-y-2",
-                                    },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "grid grid-rows-3 items-center justify-items-stretch row-span-3 p-0.5",
-                                        },
-                                        [
-                                          _c(
-                                            "a",
-                                            {
-                                              staticClass:
-                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                              attrs: {
-                                                href: _vm.dataurl["alumni"],
-                                              },
+                                  _c("div", { staticClass: "h-full" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "grid grid-rows-3 items-center justify-items-stretch p-0.5",
+                                      },
+                                      [
+                                        _c(
+                                          "a",
+                                          {
+                                            staticClass:
+                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                            attrs: {
+                                              href: _vm.dataurl["alumni"],
                                             },
-                                            [_vm._m(10)]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "a",
-                                            {
-                                              staticClass:
-                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                              attrs: {
-                                                href: _vm.dataurl["orang-tua"],
-                                              },
+                                          },
+                                          [_vm._m(10)]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "a",
+                                          {
+                                            staticClass:
+                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                            attrs: {
+                                              href: _vm.dataurl["orang-tua"],
                                             },
-                                            [_vm._m(11)]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "a",
-                                            {
-                                              staticClass:
-                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                              attrs: {
-                                                href:
-                                                  _vm.dataurl["teacher-staff"] +
-                                                  "/all",
-                                              },
+                                          },
+                                          [_vm._m(11)]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "a",
+                                          {
+                                            staticClass:
+                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                            attrs: {
+                                              href:
+                                                _vm.dataurl["teacher-staff"] +
+                                                "/all",
                                             },
-                                            [_vm._m(12)]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(13),
-                                    ]
-                                  ),
+                                          },
+                                          [_vm._m(12)]
+                                        ),
+                                      ]
+                                    ),
+                                  ]),
                                 ]
                               ),
                             ]),
@@ -12745,7 +12660,7 @@ var render = function () {
                                                 href: _vm.dataurl["berita"],
                                               },
                                             },
-                                            [_vm._m(14)]
+                                            [_vm._m(13)]
                                           ),
                                           _vm._v(" "),
                                           _c(
@@ -12757,7 +12672,7 @@ var render = function () {
                                                 href: _vm.dataurl["acara"],
                                               },
                                             },
-                                            [_vm._m(15)]
+                                            [_vm._m(14)]
                                           ),
                                           _vm._v(" "),
                                           _c(
@@ -12769,12 +12684,12 @@ var render = function () {
                                                 href: _vm.dataurl["artikel"],
                                               },
                                             },
-                                            [_vm._m(16)]
+                                            [_vm._m(15)]
                                           ),
                                         ]
                                       ),
                                       _vm._v(" "),
-                                      _vm._m(17),
+                                      _vm._m(16),
                                     ]
                                   ),
                                 ]
@@ -13529,7 +13444,7 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(18),
+            _vm._m(17),
           ]
         ),
       ]
@@ -14042,224 +13957,6 @@ var staticRenderFns = [
           ),
         ]
       ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row-span-2 grid grid-rows-2 px-5" }, [
-      _c("div", [
-        _c("span", { staticClass: "text-xs font-light h-5" }, [
-          _vm._v("Alumni"),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid grid-cols-2 gap-x-2" }, [
-          _c(
-            "a",
-            {
-              staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2",
-              attrs: { href: "#" },
-            },
-            [
-              _c("img", {
-                staticClass: "h-6 w-6 rounded-full object-cover",
-                attrs: {
-                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                },
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
-                },
-                [
-                  _c(
-                    "div",
-                    { staticClass: "leading-3 transition-all ease-in-out" },
-                    [
-                      _vm._v(
-                        "\n                                                                    Ricko\n                                                                "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
-                    },
-                    [
-                      _vm._v(
-                        "\n                                                                    Binus University\n                                                                "
-                      ),
-                    ]
-                  ),
-                ]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2",
-              attrs: { href: "#" },
-            },
-            [
-              _c("img", {
-                staticClass: "h-6 w-6 rounded-full object-cover",
-                attrs: {
-                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                },
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
-                },
-                [
-                  _c(
-                    "div",
-                    { staticClass: "leading-3 transition-all ease-in-out" },
-                    [
-                      _vm._v(
-                        "\n                                                                    Ricko\n                                                                "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
-                    },
-                    [
-                      _vm._v(
-                        "\n                                                                    Binus University\n                                                                "
-                      ),
-                    ]
-                  ),
-                ]
-              ),
-            ]
-          ),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("span", { staticClass: "text-xs font-light h-5" }, [
-          _vm._v("Orang Tua"),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "grid grid-cols-2 gap-x-2" }, [
-          _c(
-            "a",
-            {
-              staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2",
-              attrs: { href: "#" },
-            },
-            [
-              _c("img", {
-                staticClass: "h-6 w-6 rounded-full object-cover",
-                attrs: {
-                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                },
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
-                },
-                [
-                  _c(
-                    "div",
-                    { staticClass: "leading-3 transition-all ease-in-out" },
-                    [
-                      _vm._v(
-                        "\n                                                                    Ricko\n                                                                "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
-                    },
-                    [
-                      _vm._v(
-                        "\n                                                                    Binus University\n                                                                "
-                      ),
-                    ]
-                  ),
-                ]
-              ),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "grid grid-cols-3 gap-x-1 text-center bg-white rounded-xl shadow-lg transform hover:scale-105 transition-all ease-in-out duration-300 hover:shadow-xl h-12 p-2",
-              attrs: { href: "#" },
-            },
-            [
-              _c("img", {
-                staticClass: "h-6 w-6 rounded-full object-cover",
-                attrs: {
-                  src: "http://hbics_sch_id.test/assets/stock_photo_rdev/profile_pic.jpg",
-                },
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-span-2 grid grid-rows-2 gap-0 items-center text-left text-sm",
-                },
-                [
-                  _c(
-                    "div",
-                    { staticClass: "leading-3 transition-all ease-in-out" },
-                    [
-                      _vm._v(
-                        "\n                                                                    Ricko\n                                                                "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "leading-3 text-xs font-light transition-all ease-in-out overflow-hidden truncate h-3",
-                    },
-                    [
-                      _vm._v(
-                        "\n                                                                    Binus University\n                                                                "
-                      ),
-                    ]
-                  ),
-                ]
-              ),
-            ]
-          ),
-        ]),
-      ]),
     ])
   },
   function () {

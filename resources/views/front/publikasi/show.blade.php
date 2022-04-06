@@ -25,6 +25,7 @@
                 @endforelse
                 </div>
                 <div class="bg-white rounded-xl shadow-lg p-5">
+                    <label class="text-xl">Komentar Anda</label>
                     <form class="my-5" action="{{route('comment.store', $publikasi->randKey)}}">
                         <input type="text" class="rounded-xl border shadow-md h-10 md:w-96 px-3 pt-2 pb-1 focus:outline-none" name="name" placeholder="Your Name (Can be Anonym)">
                         <div class="flex rounded-xl shadow-md mt-5">

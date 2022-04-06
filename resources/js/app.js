@@ -11,6 +11,7 @@ import Vuex from "vuex";
 import vClickOutside from 'v-click-outside'
 
 window.Vue = require('vue').default;
+Vue.config.devtools = false
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
