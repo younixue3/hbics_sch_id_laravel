@@ -6762,6 +6762,7 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-edit-teacher-staff-c
  */
 
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].use((v_click_outside__WEBPACK_IMPORTED_MODULE_0___default()));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].config.devtools = false;
 var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
   el: '#app',
   store: store,

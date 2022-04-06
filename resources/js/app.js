@@ -11,7 +11,6 @@ import Vuex from "vuex";
 import vClickOutside from 'v-click-outside'
 
 window.Vue = require('vue').default;
-Vue.config.devtools = false
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
@@ -179,6 +178,7 @@ Vue.component('form-edit-teacher-staff-component', require('./components/widget/
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 Vue.use(vClickOutside)
+Vue.config.devtools = false
 
 const app = new Vue({
     el: '#app',
