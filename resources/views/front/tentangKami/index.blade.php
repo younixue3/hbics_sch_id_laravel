@@ -5,7 +5,7 @@
         <div class="h-[35rem] grid grid-cols-3 grid-rows-4 lg:grid-rows-3 justify-items-stretch  gap-2 :gap-5">
             <div
                 class="bg-gray-100 rounded-xl md:rounded-3xl justify-self-start order-last md:order-none overflow-hidden">
-                <img class="h-full md:h-52 rounded-xl" src="{{asset('assets/stock_photo_rdev/IMG_6818.webp')}}">
+                <img class="w-full rounded-xl object-cover" src="{{asset('assets/stock_photo_rdev/IMG_6818.webp')}}">
             </div>
             <div
                 class="row-span-3 col-span-3 md:col-span-2 lg:col-span-1 sm:order-first lg:order-none bg-gray-100 rounded-3xl overflow-hidden">
@@ -27,7 +27,7 @@
                      src="{{asset('assets/stock_photo_rdev/IMG_7258.webp')}}">
             </div>
             <div class="bg-gray-100">
-                <img class="h-full object-cover rounded-xl md:rounded-3xl"
+                <img class="h-full w-full object-cover rounded-xl md:rounded-3xl"
                      src="{{asset('assets/stock_photo_rdev/Pic-1.webp')}}">
             </div>
         </div>
@@ -129,7 +129,7 @@
         <snap-component url="{{route('api.getFasilitas')}}" asset="{{asset('Upload/fasilitas_assets')}}/"></snap-component>
     </div>
     <div class="my-20 bg-gray-200 h-full text-center py-10">
-        <h3 class="mb-10 text-xl md:text-3xl uppercase">Our Partnership</h3>
+        <h3 class="mb-10 text-xl md:text-3xl uppercase">Our Partner</h3>
         <div class="grid grid-cols-2 md:grid-cols-4 px-10 md:px-32 lg:px-52 gap-10 items-center justify-items-center">
             <img class="lg:h-14 object-contain grayscale hover:grayscale-0 transition-all ease-in-out"
                  src="{{asset('assets/logo/microsoft.png')}}">
