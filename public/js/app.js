@@ -3915,6 +3915,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -12606,10 +12617,13 @@ var render = function () {
                         "col-span-4 justify-self-start hidden lg:block ml-20",
                     },
                     [
-                      _c("div", { staticClass: "text-left font-light mb-2" }, [
+                      _c("div", { staticClass: "grid grid-cols-2 mb-2" }, [
                         _c(
                           "a",
-                          { attrs: { href: _vm.dataurl["hubungi-kami"] } },
+                          {
+                            staticClass: "font-light",
+                            attrs: { href: _vm.dataurl["hubungi-kami"] },
+                          },
                           [_vm._v("Hubungi kami")]
                         ),
                       ]),
@@ -12818,229 +12832,253 @@ var render = function () {
                               [_vm._v("Tentang Kami")]
                             ),
                             _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "py-8 fixed -translate-x-3/4 font-bold",
-                              },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    ref: "tentangkami",
-                                    staticClass:
-                                      "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
-                                    attrs: { id: "tentangkami" },
-                                  },
-                                  [
+                            _c("div", { staticClass: "py-8 fixed font-bold" }, [
+                              _c(
+                                "div",
+                                {
+                                  ref: "tentangkami",
+                                  staticClass:
+                                    "h-0 max-h-80 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
+                                  attrs: { id: "tentangkami" },
+                                },
+                                [
+                                  _c("div", { staticClass: "h-full" }, [
                                     _c(
                                       "div",
                                       {
                                         staticClass:
-                                          "h-full grid grid-rows-5 divide-y-2",
+                                          "grid grid-rows-5 h-full items-center justify-items-stretch p-0.5",
                                       },
                                       [
                                         _c(
-                                          "div",
+                                          "a",
                                           {
                                             staticClass:
-                                              "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5",
+                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                            attrs: {
+                                              href: _vm.dataurl[
+                                                "filosofi-pendidikan"
+                                              ],
+                                            },
                                           },
                                           [
                                             _c(
-                                              "a",
+                                              "div",
                                               {
                                                 staticClass:
-                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                attrs: {
-                                                  href: _vm.dataurl[
-                                                    "happy-holy-kids"
-                                                  ],
-                                                },
+                                                  "flex gap-x-5 text-center",
                                               },
                                               [
                                                 _c(
                                                   "div",
-                                                  {
-                                                    staticClass:
-                                                      "flex gap-x-5 text-center",
-                                                  },
+                                                  { staticClass: "w-20" },
                                                   [
                                                     _c(
                                                       "div",
-                                                      { staticClass: "w-20" },
+                                                      {
+                                                        staticClass:
+                                                          "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                      },
                                                       [
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-1 transition-all ease-in duration-200",
+                                                        _c("img", {
+                                                          attrs: {
+                                                            src: _vm.logo,
                                                           },
-                                                          [
-                                                            _c("img", {
-                                                              attrs: {
-                                                                src: _vm.logohhk,
-                                                              },
-                                                            }),
-                                                          ]
-                                                        ),
+                                                        }),
                                                       ]
                                                     ),
-                                                    _vm._v(" "),
-                                                    _vm._m(17),
                                                   ]
                                                 ),
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "a",
-                                              {
-                                                staticClass:
-                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                attrs: {
-                                                  href: _vm.dataurl[
-                                                    "sekolah-dasar"
-                                                  ],
-                                                },
-                                              },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "flex gap-x-5 text-center",
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "div",
-                                                      { staticClass: "w-20" },
-                                                      [
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
-                                                          },
-                                                          [
-                                                            _c("img", {
-                                                              attrs: {
-                                                                src: _vm.logo,
-                                                              },
-                                                            }),
-                                                          ]
-                                                        ),
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _vm._m(18),
-                                                  ]
-                                                ),
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "a",
-                                              {
-                                                staticClass:
-                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                attrs: {
-                                                  href: _vm.dataurl[
-                                                    "sekolah-menengah-pertama"
-                                                  ],
-                                                },
-                                              },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "flex gap-x-5 text-center",
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "div",
-                                                      { staticClass: "w-20" },
-                                                      [
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
-                                                          },
-                                                          [
-                                                            _c("img", {
-                                                              attrs: {
-                                                                src: _vm.logo,
-                                                              },
-                                                            }),
-                                                          ]
-                                                        ),
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _vm._m(19),
-                                                  ]
-                                                ),
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "a",
-                                              {
-                                                staticClass:
-                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                attrs: {
-                                                  href: _vm.dataurl[
-                                                    "sekolah-menengah-atas"
-                                                  ],
-                                                },
-                                              },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "flex gap-x-5 text-center",
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "div",
-                                                      { staticClass: "w-20" },
-                                                      [
-                                                        _c(
-                                                          "div",
-                                                          {
-                                                            staticClass:
-                                                              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
-                                                          },
-                                                          [
-                                                            _c("img", {
-                                                              attrs: {
-                                                                src: _vm.logo,
-                                                              },
-                                                            }),
-                                                          ]
-                                                        ),
-                                                      ]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _vm._m(20),
-                                                  ]
-                                                ),
+                                                _vm._v(" "),
+                                                _vm._m(17),
                                               ]
                                             ),
                                           ]
                                         ),
                                         _vm._v(" "),
-                                        _vm._m(21),
+                                        _c(
+                                          "a",
+                                          {
+                                            staticClass:
+                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                            attrs: {
+                                              href: _vm.dataurl["sejarah"],
+                                            },
+                                          },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "flex gap-x-5 text-center",
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  { staticClass: "w-20" },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                      },
+                                                      [
+                                                        _c("img", {
+                                                          attrs: {
+                                                            src: _vm.logo,
+                                                          },
+                                                        }),
+                                                      ]
+                                                    ),
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _vm._m(18),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "a",
+                                          {
+                                            staticClass:
+                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                            attrs: {
+                                              href: _vm.dataurl["visi-misi"],
+                                            },
+                                          },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "flex gap-x-5 text-center",
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  { staticClass: "w-20" },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                      },
+                                                      [
+                                                        _c("img", {
+                                                          attrs: {
+                                                            src: _vm.logo,
+                                                          },
+                                                        }),
+                                                      ]
+                                                    ),
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _vm._m(19),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "a",
+                                          {
+                                            staticClass:
+                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                            attrs: {
+                                              href: _vm.dataurl[
+                                                "metode-pembelajaran"
+                                              ],
+                                            },
+                                          },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "flex gap-x-5 text-center",
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  { staticClass: "w-20" },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                      },
+                                                      [
+                                                        _c("img", {
+                                                          attrs: {
+                                                            src: _vm.logo,
+                                                          },
+                                                        }),
+                                                      ]
+                                                    ),
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _vm._m(20),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "a",
+                                          {
+                                            staticClass:
+                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                            attrs: {
+                                              href: _vm.dataurl["fasilitas"],
+                                            },
+                                          },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "flex gap-x-5 text-center",
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  { staticClass: "w-20" },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                      },
+                                                      [
+                                                        _c("img", {
+                                                          attrs: {
+                                                            src: _vm.logo,
+                                                          },
+                                                        }),
+                                                      ]
+                                                    ),
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _vm._m(21),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
                                       ]
                                     ),
-                                  ]
-                                ),
-                              ]
-                            ),
+                                  ]),
+                                ]
+                              ),
+                            ]),
                           ]
                         ),
                       ]),
@@ -14582,7 +14620,7 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
           _vm._v(
-            "\n                                                                Happy Holy Kids\n                                                            "
+            "\n                                                                Sekolah K.A.R.Y.A\n                                                            "
           ),
         ]),
         _vm._v(" "),
@@ -14593,7 +14631,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                                                Kelompok bermain & Taman Kanak-kanak\n                                                            "
+              "\n                                                                filosofi dan arah pendidikan Sekolah Harapan Bangsa\n                                                            "
             ),
           ]
         ),
@@ -14613,7 +14651,7 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
           _vm._v(
-            "\n                                                                Sekolah Dasar\n                                                            "
+            "\n                                                                Sejarah\n                                                            "
           ),
         ]),
         _vm._v(" "),
@@ -14624,7 +14662,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                                                Sekolah dasar Harapan Bangsa\n                                                            "
+              "\n                                                                Sejarah dibangunnya Sekolah Harapan Bangsa hingga saat ini\n                                                            "
             ),
           ]
         ),
@@ -14644,7 +14682,7 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
           _vm._v(
-            "\n                                                                Sekolah Menengah Pertama\n                                                            "
+            "\n                                                                Visi & Misi\n                                                            "
           ),
         ]),
         _vm._v(" "),
@@ -14655,7 +14693,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                                                Sekolah menegah pertama Harapan Bangsa\n                                                            "
+              "\n                                                                Visi Misi Sekolah Harapan Bangsa\n                                                            "
             ),
           ]
         ),
@@ -14675,7 +14713,7 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
           _vm._v(
-            "\n                                                                Sekolah Menengah Atas\n                                                            "
+            "\n                                                                Metode Pembelajaran\n                                                            "
           ),
         ]),
         _vm._v(" "),
@@ -14686,7 +14724,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                                                Sekolah menengah atas Harapan Bangsa\n                                                            "
+              "\n                                                                Metode dan Kurikulum di Sekolah Harapan Bangsa\n                                                            "
             ),
           ]
         ),
@@ -14697,46 +14735,32 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex justify-between gap-x-5 p-5" }, [
-      _c(
-        "a",
-        {
-          staticClass:
-            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
-          attrs: { href: "#" },
-        },
-        [
-          _c("i", { staticClass: "fas fa-user-graduate text-xs mr-3" }),
-          _vm._v("Alumni"),
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
-          attrs: { href: "#" },
-        },
-        [
-          _c("i", { staticClass: "fas fa-medal text-xs mr-3" }),
-          _vm._v("Pretasi"),
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
-          attrs: { href: "#" },
-        },
-        [
-          _c("i", { staticClass: "fas fa-chalkboard-teacher text-xs mr-3" }),
-          _vm._v("Guru"),
-        ]
-      ),
-    ])
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+      },
+      [
+        _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+          _vm._v(
+            "\n                                                                Fasilitas\n                                                            "
+          ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "text-xs font-light break-words leading-3 text-black",
+          },
+          [
+            _vm._v(
+              "\n                                                                Sarana dan prasana di Sekolah Harapan Bangsa\n                                                            "
+            ),
+          ]
+        ),
+      ]
+    )
   },
   function () {
     var _vm = this

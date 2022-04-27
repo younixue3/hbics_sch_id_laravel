@@ -3,7 +3,10 @@
 @section('title', 'Pendaftaran Siswa Baru')
 @section('content')
     <div class="bg-pattern pt-72 pb-10 text-center">
-        <h1 id="hero_section" class="mb-20 text-5xl font-bold text-blue-900">Pendaftaran Siswa Baru</h1>
+        <div class="flex gap-4 justify-center">
+            <span class="mb-20 text-5xl font-bold text-blue-900">Syarat</span>
+            <h1 id="hero_section" class="mb-20 text-5xl font-bold text-blue-900">Pendaftaran Siswa Baru</h1>
+        </div>
         <div class="flex">
             <div class="m-auto w-[65rem] px-10">
                 <div class="bg-white rounded-3xl shadow-xl p-5">
@@ -17,8 +20,8 @@
                         <li>Pasfoto Anak ukuran 3x4cm (background polos warna bebas)</li>
                     </ul>
                     <div
-                        class="font-light italic bg-yellow-200 rounded-xl h-full md:h-6 sm:hover:h-24 transition-all ease-in-out overflow-hidden">
-                        <div>
+                        class="font-light italic bg-yellow-200 rounded-xl h-full transition-all ease-in-out overflow-hidden">
+                        <div class="font-bold md:text-xl mx-10 px-5 mb-3">
                             Apabila siswa/i adalah pindahan dari sekolah lain, harap menyiapkan berkas tambahan berikut:
                         </div>
                         <ul class=" list-disc list-inside">

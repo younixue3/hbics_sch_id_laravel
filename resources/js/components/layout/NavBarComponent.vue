@@ -253,8 +253,8 @@
                                  :src="footerwhite" alt="">
                         </div>
                         <div class="col-span-4 justify-self-start hidden lg:block ml-20">
-                            <div class="text-left font-light mb-2">
-                                <a :href="dataurl['hubungi-kami']">Hubungi kami</a>
+                            <div class="grid grid-cols-2 mb-2">
+                                <a class="font-light" :href="dataurl['hubungi-kami']">Hubungi kami</a>
                             </div>
                             <div class="grid grid-cols-3 font-bold">
                                 <div @mouseover="modalshow('komunitas')" @mouseleave="modalclose('komunitas')">
@@ -484,34 +484,13 @@
                                 </div>
                                 <div @mouseover="modalshow('tentangkami')" @mouseleave="modalclose('tentangkami')">
                                     <a class="cursor-pointer text-lg" :href="dataurl['tentang-kami']">Tentang Kami</a>
-                                    <div class="py-8 fixed -translate-x-3/4 font-bold">
+                                    <div class="py-8 fixed font-bold">
                                         <div ref="tentangkami" id="tentangkami"
-                                             class="h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden">
-                                            <div class="h-full grid grid-rows-5 divide-y-2">
-                                                <div
-                                                    class="grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5">
+                                             class="h-0 max-h-80 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden">
+                                            <div class="h-full">
+                                                <div class="grid grid-rows-5 h-full items-center justify-items-stretch p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       :href="dataurl['happy-holy-kids']">
-                                                        <div class="flex gap-x-5 text-center">
-                                                            <div class="w-20">
-                                                                <div
-                                                                    class="bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-1 transition-all ease-in duration-200">
-                                                                    <img :src="logohhk"></div>
-                                                            </div>
-                                                            <div
-                                                                class="w-full grid grid-rows-2 gap-0 items-center text-left text-sm">
-                                                                <div class="leading-3 transition-all ease-in-out">
-                                                                    Happy Holy Kids
-                                                                </div>
-                                                                <div
-                                                                    class="text-xs font-light break-words leading-3 text-black">
-                                                                    Kelompok bermain & Taman Kanak-kanak
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                    <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       :href="dataurl['sekolah-dasar']">
+                                                       :href="dataurl['filosofi-pendidikan']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -521,17 +500,17 @@
                                                             <div
                                                                 class="w-full grid grid-rows-2 gap-0 items-center text-left text-sm">
                                                                 <div class="leading-3 transition-all ease-in-out">
-                                                                    Sekolah Dasar
+                                                                    Sekolah K.A.R.Y.A
                                                                 </div>
                                                                 <div
                                                                     class="text-xs font-light break-words leading-3 text-black">
-                                                                    Sekolah dasar Harapan Bangsa
+                                                                    filosofi dan arah pendidikan Sekolah Harapan Bangsa
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       :href="dataurl['sekolah-menengah-pertama']">
+                                                       :href="dataurl['sejarah']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -541,17 +520,17 @@
                                                             <div
                                                                 class="w-full grid grid-rows-2 gap-0 items-center text-left text-sm">
                                                                 <div class="leading-3 transition-all ease-in-out">
-                                                                    Sekolah Menengah Pertama
+                                                                    Sejarah
                                                                 </div>
                                                                 <div
                                                                     class="text-xs font-light break-words leading-3 text-black">
-                                                                    Sekolah menegah pertama Harapan Bangsa
+                                                                    Sejarah dibangunnya Sekolah Harapan Bangsa hingga saat ini
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </a>
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       :href="dataurl['sekolah-menengah-atas']">
+                                                       :href="dataurl['visi-misi']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -561,23 +540,55 @@
                                                             <div
                                                                 class="w-full grid grid-rows-2 gap-0 items-center text-left text-sm">
                                                                 <div class="leading-3 transition-all ease-in-out">
-                                                                    Sekolah Menengah Atas
+                                                                    Visi & Misi
                                                                 </div>
                                                                 <div
                                                                     class="text-xs font-light break-words leading-3 text-black">
-                                                                    Sekolah menengah atas Harapan Bangsa
+                                                                    Visi Misi Sekolah Harapan Bangsa
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </a>
-                                                </div>
-                                                <div class="flex justify-between gap-x-5 p-5">
-                                                    <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
-                                                       href="#"><i class="fas fa-user-graduate text-xs mr-3"></i>Alumni</a>
-                                                    <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
-                                                       href="#"><i class="fas fa-medal text-xs mr-3"></i>Pretasi</a>
-                                                    <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
-                                                       href="#"><i class="fas fa-chalkboard-teacher text-xs mr-3"></i>Guru</a>
+                                                    <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
+                                                       :href="dataurl['metode-pembelajaran']">
+                                                        <div class="flex gap-x-5 text-center">
+                                                            <div class="w-20">
+                                                                <div
+                                                                    class="bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200">
+                                                                    <img :src="logo"></div>
+                                                            </div>
+                                                            <div
+                                                                class="w-full grid grid-rows-2 gap-0 items-center text-left text-sm">
+                                                                <div class="leading-3 transition-all ease-in-out">
+                                                                    Metode Pembelajaran
+                                                                </div>
+                                                                <div
+                                                                    class="text-xs font-light break-words leading-3 text-black">
+                                                                    Metode dan Kurikulum di Sekolah Harapan Bangsa
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
+                                                       :href="dataurl['fasilitas']">
+                                                        <div class="flex gap-x-5 text-center">
+                                                            <div class="w-20">
+                                                                <div
+                                                                    class="bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200">
+                                                                    <img :src="logo"></div>
+                                                            </div>
+                                                            <div
+                                                                class="w-full grid grid-rows-2 gap-0 items-center text-left text-sm">
+                                                                <div class="leading-3 transition-all ease-in-out">
+                                                                    Fasilitas
+                                                                </div>
+                                                                <div
+                                                                    class="text-xs font-light break-words leading-3 text-black">
+                                                                    Sarana dan prasana di Sekolah Harapan Bangsa
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

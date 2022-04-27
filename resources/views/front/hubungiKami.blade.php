@@ -6,6 +6,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-14 px-10 lg:px-20">
             <div
                 class="bg-white hover:bg-blue-900 hover:text-white transition-all ease-in-out duration-300 rounded-2xl shadow-lg p-5">
+                <i class="fa-solid fa-clock text-4xl mb-5"></i>
                 <h3 class="text-2xl font-semibold">Jam Operasional</h3>
                 <div class="flex-row my-5 text-sm">
                     <div>
@@ -18,6 +19,7 @@
             </div>
             <div
                 class="bg-white hover:bg-blue-900 hover:text-white transition-all ease-in-out duration-300 rounded-2xl shadow-lg p-5">
+                <i class="fa-solid fa-school text-4xl mb-5"></i>
                 <h3 class="text-2xl font-semibold">Kunjungi Kami</h3>
                 <div class="flex-row my-5 text-sm">
                     <div>
@@ -28,6 +30,7 @@
             </div>
             <div
                 class="bg-white hover:bg-blue-900 hover:text-white transition-all ease-in-out duration-300 rounded-2xl shadow-lg p-5">
+                <i class="fa-solid fa-phone text-4xl mb-5"></i>
                 <h3 class="text-2xl font-semibold">Telepon</h3>
                 <div class="flex-row my-5 text-sm">
                     <div class="my-1">
@@ -46,6 +49,17 @@
         </div>
         <div class="flex py-20 px-16 md:px-20">
             <div class="md:w-2/5 relative">
+                <div class="absolute grid grid-cols-1 bottom-2 gap-3 text-3xl text-white">
+                    <a href="#" class="bg-gradient-to-br from-blue-600 to-blue-300 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
+                        <i class="m-auto fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="bg-gradient-to-br from-red-500 via-pink-600 to-yellow-400 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
+                        <i class="m-auto fab fa-instagram text-4xl"></i>
+                    </a>
+                    <a href="#" class="bg-gradient-to-br from-red-600 to-rose-400 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
+                        <i class="m-auto fab fa-youtube"></i>
+                    </a>
+                </div>
                 <div
                     class="absolute right-0 translate-x-10 -translate-y-10 bg-white h-20 md:h-40 w-20 md:w-40 shadow-xl rounded-2xl">
                     <img class="" src="{{asset('assets/stock_photo_rdev/3d-fluency-blue-paper-plane.png')}}">
