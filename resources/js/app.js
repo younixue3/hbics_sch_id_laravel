@@ -121,6 +121,7 @@ Vue.component('nav-bar-dash-component', require('./components/layout/NavBarDashC
 Vue.component('modal-show-component', require('./components/widget/ModalShowComponent').default)
 Vue.component('notification-component', require('./components/widget/NotificationComponent').default)
 Vue.component('multiple-select-component', require('./components/widget/MutipleselectComponent').default)
+Vue.component('accordion-component', require('./components/widget/AccordionComponent').default)
 
 //FUNCTION
 Vue.component('modal-add-function', require('./components/function/form/ModalAddFunction').default)
@@ -178,7 +179,7 @@ Vue.component('form-edit-teacher-staff-component', require('./components/widget/
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 Vue.use(vClickOutside)
-Vue.config.devtools = false
+// Vue.config.devtools = false
 
 const app = new Vue({
     el: '#app',

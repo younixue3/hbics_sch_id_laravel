@@ -24,54 +24,8 @@
                     di sekitar mereka lebih dekat dengan mengalaminya.
                 </div>
             </div>
-            <div class="text-center">
-                <h2 class="text-3xl font-bold">Pembelajaran Happy Holy Kids sebagai TK Terbaik Balikpapan</h2>
-                <div class="grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 gap-5 py-10 px-5 md:px-20">
-                    <div class="flex justify-self-end">
-                        <div
-                            class="bg-white m-auto md:w-96 rounded-xl shadow-xl p-5 transform hover:scale-105 transition-all ease-in-out duration-500">
-                            <h4 class="text-xl font-bold"> Sentra Belajar :</h4>
-                            <ul>
-                                <li>Sentra Balok</li>
-                                <li>Sentra Bermain Peran</li>
-                                <li>Sentra Persiapan</li>
-                                <li>Sentra Alama</li>
-                                <li>Sentra Seni</li>
-                                <li>Sentra Mulok English</li>
-                                <li>Sentra Mulok Mandarin</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flex justify-self-start">
-                        <div
-                            class="bg-white m-auto md:w-96 rounded-xl shadow-xl p-5 transform hover:scale-105 transition-all ease-in-out duration-500">
-                            <h4 class="text-xl font-bold"> Jam Kegiatan Belajar Mengajar :</h4>
-                            <ul><span class="font-bold">Kelompok Bermain</span>
-                                <li>Sesi Pagi 08.00 - 10.30</li>
-                                <li>Sesi Siang 11.00 - 13.30</li>
-                            </ul>
-                            <ul><span class="font-bold">Taman Kanak-kanak</span>
-                                <li>Sesi Pagi 08.00 - 10.30</li>
-                                <li>Sesi Siang 11.00 - 13.30</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="md:col-span-2 flex">
-                        <div
-                            class="bg-white m-auto md:w-96 rounded-xl shadow-xl p-5 transform hover:scale-105 transition-all ease-in-out duration-500">
-                            <h4 class="text-xl font-bold"> Ekstrakurikuler :</h4>
-                            <ul>
-                                <li>Keyboard</li>
-                                <li>Art & Craft</li>
-                                <li>Drawing & Coloring</li>
-                                <li>English</li>
-                                <li>Vocal</li>
-                                <li>Dance</li>
-                                <li>Obstacle</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center mx-20">
+                <accordion-component></accordion-component>
             </div>
             <div class="text-center">
                 <h2 class="text-3xl font-bold">Prestasi Happy Holy Kids sebagai TK Favorit Balikpapan</h2>
