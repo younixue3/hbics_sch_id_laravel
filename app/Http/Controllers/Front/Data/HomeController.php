@@ -11,8 +11,8 @@ class HomeController extends Controller
 {
     public function get_data()
     {
-        $prestasi = Publikasis::where('status', 'publish')->get()->take(6);
-        $alumni = Publikasis::where('status', 'publish')->get()->take(6);
+        $prestasi = Publikasis::where('status', 'publish')->get()->take(4);
+        $alumni = Publikasis::where('status', 'publish')->get()->take(4);
         $compact = compact('prestasi', 'alumni');
         return $compact;
     }

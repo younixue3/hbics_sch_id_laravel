@@ -4208,6 +4208,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "AccordionComponent",
   data: function data() {
@@ -4215,6 +4219,7 @@ __webpack_require__.r(__webpack_exports__);
       status: false
     };
   },
+  props: ['title'],
   methods: {
     clickactiv: function clickactiv() {
       this.status = this.status !== true;
@@ -15312,7 +15317,7 @@ var render = function () {
         on: { click: _vm.clickactiv },
       },
       [
-        _c("div", [_vm._v("Sentra Balok")]),
+        _c("div", [_vm._v(_vm._s(_vm.title))]),
         _vm._v(" "),
         _c("div", { staticClass: "w-5 h-5" }, [
           _c("i", {
@@ -15324,10 +15329,15 @@ var render = function () {
       ]
     ),
     _vm._v(" "),
-    _c("div", {
-      staticClass: "bg-white text-xl transition-all ease-in-out duration-300",
-      class: _vm.status ? "h-96 border-b-2 border-x-2" : "h-0",
-    }),
+    _c(
+      "div",
+      {
+        staticClass:
+          "bg-white text-sm transition-all ease-in-out duration-300 overflow-hidden text-left",
+        class: _vm.status ? "h-60 border-b-2 border-x-2" : "h-0",
+      },
+      [_c("div", { staticClass: "p-5" }, [_vm._t("default")], 2)]
+    ),
   ])
 }
 var staticRenderFns = []

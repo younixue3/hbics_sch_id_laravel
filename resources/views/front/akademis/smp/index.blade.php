@@ -25,58 +25,63 @@
                     diri dan potensi diri mereka sendiri lewat Teens Camp.
                 </div>
             </div>
-            <div class="text-center">
-                <h2 class="text-3xl font-bold">Pembelajaran di Sekolah Kristen Harapan Bangsa Balikpapan, sebagai SMP
-                    Terbaik Balikpapan</h2>
-                <div class="grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 gap-5 py-10 px-5 md:px-20">
-                    <div class="flex justify-self-end">
-                        <div
-                            class="bg-white m-auto md:w-96 rounded-xl shadow-xl p-5 transform hover:scale-105 transition-all ease-in-out duration-500">
-                            <h4 class="text-xl font-bold"> Mata Pelajaran :</h4>
-                            <ul>
-                                <li>Religion</li>
-                                <li>Citizenship</li>
-                                <li>Bahasa Indonesia</li>
-                                <li>Mathematics</li>
-                                <li>Science</li>
-                                <li>Social Science</li>
-                                <li>English</li>
-                                <li>The Arts</li>
-                                <li>Health and Physical Education</li>
-                                <li>Mandarin</li>
-                                <li>Information and Communication Technology</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div
-                            class="bg-white m-auto md:w-96 rounded-xl shadow-xl p-5 transform hover:scale-105 transition-all ease-in-out duration-500">
-                            <h4 class="text-xl font-bold"> Ekstrakurikuler :</h4>
-                            <ul>
-                                <li>Band</li>
-                                <li>Coding</li>
-                                <li>Cooking</li>
-                                <li>Content Creator</li>
-                                <li>Dance</li>
-                                <li>Graphic Design</li>
-                                <li>Ilustrasi</li>
-                                <li>Merajut</li>
-                                <li>Panahan</li>
-                                <li>Public Speaking</li>
-                                <li>Robotic</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="md:col-span-2 flex place-self-start justify-self-center">
-                        <div
-                            class="bg-white m-auto md:w-96 rounded-xl shadow-xl p-5 transform hover:scale-105 transition-all ease-in-out duration-500">
-                            <h4 class="text-xl font-bold"> Jam Kegiatan Belajar Mengajar :</h4>
-                            <ul>
-                                <li>Senin - Jum'at 08.00 - 10.45</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center mx-20">
+                <accordion-component title="Sentra Balok">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                    </p>
+                </accordion-component>
+                <accordion-component title="Sentra Balok">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                    </p>
+                </accordion-component>
+                <accordion-component title="Sentra Balok">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                    </p>
+                </accordion-component>
+                <accordion-component title="Sentra Balok">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                    </p>
+                </accordion-component>
+                <accordion-component title="Sentra Balok">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                    </p>
+                </accordion-component>
+                <accordion-component title="Sentra Balok">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                    </p>
+                </accordion-component>
+                <accordion-component title="Sentra Balok">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                    </p>
+                </accordion-component>
+                <accordion-component title="Sentra Balok">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                    </p>
+                </accordion-component>
             </div>
             <div class="text-center">
                 <h2 class="text-3xl font-bold">Prestasi Sekolah Kristen Harapan Bangsa Balikpapan, sebagai SMP Favorit
