@@ -26,7 +26,8 @@ class KomunitasController extends Controller
 
     public function orangTua()
     {
-        return view('front.komunitas.orangtua.index');
+        $data = $this->data->get_data_orang_tua();
+        return view('front.komunitas.orangtua.index', $data);
     }
 
     public function teacherStaff(Request $request, $area)

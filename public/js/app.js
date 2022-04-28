@@ -12793,7 +12793,8 @@ var render = function () {
                                             staticClass:
                                               "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
                                             attrs: {
-                                              href: _vm.dataurl["alumni"],
+                                              href:
+                                                _vm.dataurl["alumni"] + "/all",
                                             },
                                           },
                                           [_vm._m(10)]
@@ -13731,7 +13732,9 @@ var render = function () {
                                     _c(
                                       "a",
                                       {
-                                        attrs: { href: _vm.dataurl["alumni"] },
+                                        attrs: {
+                                          href: _vm.dataurl["alumni"] + "/all",
+                                        },
                                       },
                                       [
                                         _vm._v(
@@ -15626,18 +15629,11 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "mb-5" }, [
-      _c(
-        "span",
-        {
-          staticClass:
-            "md:w-16 px-1 py-0.5 pt-1 rounded-md bg-red-600 md:flex md:justify-between",
-        },
-        [
-          _c("i", { staticClass: "fas fa-fire-alt text-xl mt-0.5" }),
-          _vm._v(" "),
-          _c("span", { staticClass: "hidden md:block" }, [_vm._v("Viral")]),
-        ]
-      ),
+      _c("span", { staticClass: "px-1 py-0.5 pt-1 rounded-md bg-red-600" }, [
+        _c("i", { staticClass: "fas fa-fire-alt text-xl mt-0.5" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "hidden md:inline" }, [_vm._v("Trending")]),
+      ]),
     ])
   },
   function () {

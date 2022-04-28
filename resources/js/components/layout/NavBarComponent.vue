@@ -268,7 +268,7 @@
                                                 <div
                                                     class="grid grid-rows-3 items-center justify-items-stretch p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       :href="dataurl['alumni']">
+                                                       :href="dataurl['alumni'] + '/all'">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div
@@ -733,7 +733,7 @@
                                     <div
                                         class="ml-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
                                         <div class="-mb-3 mt-1.5 bg-white">
-                                            <a :href="dataurl['alumni']" class="">
+                                            <a :href="dataurl['alumni'] + '/all'" class="">
                                                 Alumni
                                             </a>
                                         </div>

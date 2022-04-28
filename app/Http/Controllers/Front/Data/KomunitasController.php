@@ -17,8 +17,15 @@ class KomunitasController extends Controller
         } else {
             $alumni = Komunitas::where('connection', 'alumni')->where('area', $area)->paginate(12);
         }
-        $content = Publikasis::where('status', 'publish')->get()->take(6);
+        $content = Publikasis::where('status', 'publish')->get()->take(4);
         $compact = compact('alumni', 'content');
+        return $compact;
+    }
+
+    public function get_data_orang_tua()
+    {
+        $content = Publikasis::where('status', 'publish')->get()->take(4);
+        $compact = compact('content');
         return $compact;
     }
 

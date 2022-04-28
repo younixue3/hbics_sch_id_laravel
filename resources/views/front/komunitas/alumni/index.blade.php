@@ -51,19 +51,16 @@
                                          src="{{asset('Upload/foto_komunitas/'.$value->picture)}}">
                                     <div class="px-3 py-2 pt-3">
                                         <div class="w-full flex justify-between mb-1">
-                                            <div class="flex     gap-x-1 align-text-bottom mb-2">
+                                            <div class="flex gap-x-1 align-text-bottom mb-2">
                                                 <div class="m-auto text-sm md:text-2xl font-bold">
                                                     {{$value->name}}
-                                                    <div class="m-auto text-sm font-light">
-                                                        {{$value->status}}
+                                                    <div class="my-5 text-sm font-light italic">
+                                                        {{$value->pesan}}
                                                     </div>
-                                                    <div class="mt-10 md:mt-20">
-                                                        <div class="text-sm font-light italic">{{$value->pesan}}</div>
+                                                    <div class="mt-5">
+                                                        <div class="text-xs font-light italic">{{$value->status}}</div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="flex h-5 gap-x-5">
-                                                <button class="text-xs md:text-lg"><i class="fa-solid fa-envelope"></i></button>
                                             </div>
                                         </div>
                                     </div>

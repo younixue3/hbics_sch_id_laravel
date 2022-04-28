@@ -12,9 +12,9 @@
             <div class="h-full relative">
                 <div class="static text-white">
                     <div class="mb-5">
-                        <span class="md:w-16 px-1 py-0.5 pt-1 rounded-md bg-red-600 md:flex md:justify-between">
+                        <span class="px-1 py-0.5 pt-1 rounded-md bg-red-600">
                             <i class="fas fa-fire-alt text-xl mt-0.5"></i>
-                            <span class="hidden md:block">Viral</span>
+                            <span class="hidden md:inline">Trending</span>
                         </span>
                     </div>
                     <div class="font-bold leading-4 z-10 overflow-hidden"

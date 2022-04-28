@@ -25,7 +25,7 @@ class getUrl
             'sekolah-dasar' => route('sekolah-dasar'),
             'sekolah-menengah-pertama' => route('sekolah-menengah-pertama'),
             'sekolah-menengah-atas' => route('sekolah-menengah-atas'),
-            'alumni' => route('alumni'),
+            'alumni' => route('alumni', ''),
             'orang-tua' => route('orang-tua'),
             'berita' => route('berita'),
             'acara' => route('acara'),
