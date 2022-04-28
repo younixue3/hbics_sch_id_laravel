@@ -134,6 +134,7 @@ Vue.component('button-add-function', require('./components/function/ButtonAddFun
 Vue.component('fasilitas-component', require('./components/widget/FasilitasComponent').default)
 ////DASHBOARD
 Vue.component('card-fasilitas-component', require('./components/widget/CardFasilitasComponent').default)
+Vue.component('nav-bar-dash-dropdown', require('./components/layout/widget/NavBarDashDropdown').default)
 
 //STAFF Widget & Function
 Vue.component('form-staff-component', require('./components/widget/staff/FormStaffComponent').default)
@@ -150,6 +151,7 @@ Vue.component('button-dot-menu-component', require('./components/widget/publikas
 Vue.component('item-render-function', require('./components/function/publikasi/ItemRenderFunction').default)
 Vue.component('item-render-output', require('./components/function/publikasi/ItemRenderOutput').default)
 Vue.component('button-gear-menu-component', require('./components/widget/publikasi/ButtonGearMenuComponent').default)
+
 ////Publikasi Workspace Component
 Vue.component('title-workspace', require('./components/workspace/TitleWorkspace').default)
 Vue.component('paragraph-workspace', require('./components/workspace/ParagraphWorkspace').default)

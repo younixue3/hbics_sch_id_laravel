@@ -740,6 +740,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-0{
   margin-left: 0px;
 }
+.mr-5{
+  margin-right: 1.25rem;
+}
 .block{
   display: block;
 }
@@ -1847,6 +1850,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.375rem;
   padding-right: 0.375rem;
 }
+.px-2\.5{
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
 .pt-8{
   padding-top: 2rem;
 }
@@ -2211,12 +2218,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
+.ring{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
 .ring-gray-800{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(31 41 55 / var(--tw-ring-opacity));
 }
 .ring-opacity-5{
   --tw-ring-opacity: 0.05;
+}
+.ring-offset-2{
+  --tw-ring-offset-width: 2px;
 }
 .blur-sm{
   --tw-blur: blur(4px);

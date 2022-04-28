@@ -88,7 +88,7 @@ class PublikasiController extends Controller
 
     public function update_data($request, $key)
     {
-        dd($request);
+//        dd($request);
         $publikasi = Publikasis::where('randKey', $key);
 
         if ($request->inputFile1 !== null) {
@@ -141,15 +141,12 @@ class PublikasiController extends Controller
                 $userRole->save();
             }
         }
-        if($request->inputFile1 !== null) {
-//        dd($i = 1 > intval($request->totalfile));
-            for ($i = 1; $i <= intval($request->totalfile);) {
-                if ($request['inputFile'.$i] !== null) {
+        for ($i = 1; $i <= intval($request->totalfile);) {
+            if ($request['inputFile'.$i] !== null) {
 //                    dd('masuk');
-                    Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['inputFile'.$i]->getClientOriginalName());
-                }
-                $i++;
+                Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['nameFile'.$i]);
             }
+            $i++;
         }
     }
 }

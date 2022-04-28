@@ -25,6 +25,19 @@ class KomunitasController extends Controller
         return view('dashboard.komunitas.index', $data);
     }
 
+    public function indexAlumni()
+    {
+        $data = $this->data->get_data();
+//        dd($data);
+        return view('dashboard.komunitas.index', $data);
+    }
+
+    public function indexOrangTua(Request $request)
+    {
+        $data = $this->data->get_data();
+        return view('dashboard.komunitas.index', $data);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
