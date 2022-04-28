@@ -12014,7 +12014,7 @@ var render = function () {
               "div",
               {
                 staticClass:
-                  "cursor-pointer text-center bg-amber-400 rounded-md transition-all ease-in-out",
+                  "cursor-pointer text-center bg-amber-400 w-32 rounded-md transition-all ease-in-out",
                 on: {
                   click: function ($event) {
                     return _vm.bindDataItems("paragraph")
@@ -12032,7 +12032,7 @@ var render = function () {
               "div",
               {
                 staticClass:
-                  "cursor-pointer text-center bg-amber-400 rounded-md",
+                  "cursor-pointer text-center bg-amber-400 w-32 rounded-md",
                 on: {
                   click: function ($event) {
                     return _vm.bindDataItems("title")
@@ -12050,7 +12050,7 @@ var render = function () {
               "div",
               {
                 staticClass:
-                  "cursor-pointer text-center bg-amber-400 rounded-md",
+                  "cursor-pointer text-center bg-amber-400 w-32 rounded-md",
                 on: {
                   click: function ($event) {
                     return _vm.bindDataItems("image")
@@ -12068,7 +12068,7 @@ var render = function () {
               "div",
               {
                 staticClass:
-                  "cursor-pointer text-center bg-amber-400 rounded-md",
+                  "cursor-pointer text-center bg-amber-400 w-32 rounded-md",
                 on: {
                   click: function ($event) {
                     return _vm.bindDataItems("video")
@@ -12132,7 +12132,7 @@ var render = function () {
       }),
       _vm._v(" "),
       _c("input", {
-        staticClass: "bg-blue-500 my-1 rounded-lg text-xl text-white",
+        staticClass: "bg-green-500 my-1 rounded-lg text-xl text-white",
         attrs: { type: "submit" },
         on: { mouseover: _vm.transferData },
       }),
@@ -16290,8 +16290,7 @@ var render = function () {
           return _c(
             "button",
             {
-              staticClass:
-                "rounded-md text-xs transition-all ease-in-out text-white",
+              staticClass: "rounded-md transition-all ease-in-out text-white",
               class: item.status
                 ? "bg-red-500 hover:bg-red-400"
                 : "bg-blue-500 hover:bg-blue-400",
@@ -16311,7 +16310,7 @@ var render = function () {
             "button",
             {
               staticClass:
-                "takedata rounded-md text-xs transition-all ease-in-out text-white",
+                "takedata rounded-md transition-all ease-in-out text-white",
               class: item.status
                 ? "bg-red-500 hover:bg-red-400"
                 : "bg-blue-500 hover:bg-blue-400",
@@ -17094,7 +17093,7 @@ var render = function () {
     [
       _c("div", { staticClass: "col-start-1 col-span-2" }, [
         _c("label", { staticClass: "block font-medium text-gray-700" }, [
-          _vm._v("\n            Name\n        "),
+          _vm._v("\n            Nama Lengkap\n        "),
         ]),
         _vm._v(" "),
         _c("input", {
@@ -17114,14 +17113,14 @@ var render = function () {
         _vm._v(" "),
         _c("img", {
           staticClass:
-            "m-auto rounded-full h-24 w-24 object-cover border border-gray-200",
+            "m-auto rounded-xl h-24 w-24 object-cover border border-gray-200",
           attrs: { src: _vm.$store.state.modal.modalshow.img },
         }),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-start-1 col-span-2" }, [
         _c("label", { staticClass: "block font-medium text-gray-700" }, [
-          _vm._v("\n            Status\n        "),
+          _vm._v("\n            Angkatan / Status\n        "),
         ]),
         _vm._v(" "),
         _c("input", {
@@ -17136,7 +17135,7 @@ var render = function () {
       _vm._v(" "),
       _c("div", { staticClass: "col-start-1 col-span-2" }, [
         _c("label", { staticClass: "block font-medium text-gray-700" }, [
-          _vm._v("\n            pesan\n        "),
+          _vm._v("\n            Pesan\n        "),
         ]),
         _vm._v(" "),
         _c("textarea", {
@@ -17159,7 +17158,7 @@ var render = function () {
               attrs: { type: "button" },
               on: { click: _vm.openModalEdit },
             },
-            [_vm._v("Edit Staff")]
+            [_vm._v("Edit Data")]
           ),
           _vm._v(" "),
           _c(
@@ -17174,7 +17173,7 @@ var render = function () {
                 },
               },
             },
-            [_vm._v("Delete Staff")]
+            [_vm._v("Delete Data")]
           ),
         ]),
       ]),

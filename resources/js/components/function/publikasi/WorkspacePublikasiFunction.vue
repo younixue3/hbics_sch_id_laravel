@@ -6,25 +6,25 @@
         </item-render-function>
         <span class="flex group">
             <div class="grid grid-cols-6 gap-5 w-0 scale-0 group-hover:w-max group-hover:scale-100 transition-all ease-in-out overflow-hidden">
-                <div class="cursor-pointer text-center bg-amber-400 rounded-md transition-all ease-in-out" @click="bindDataItems('paragraph')">
+                <div class="cursor-pointer text-center bg-amber-400 w-32 rounded-md transition-all ease-in-out" @click="bindDataItems('paragraph')">
                     <div>
                         <i class="fa-solid inline-block fa-paragraph"></i>
                     </div>
                     <div class="text-sm">Paragraph</div>
                 </div>
-                <div class="cursor-pointer text-center bg-amber-400 rounded-md" @click="bindDataItems('title')">
+                <div class="cursor-pointer text-center bg-amber-400 w-32 rounded-md" @click="bindDataItems('title')">
                     <div>
                         <i class="fa-solid fa-heading"></i>
                     </div>
                     <div class="text-sm">Title</div>
                 </div>
-                <div class="cursor-pointer text-center bg-amber-400 rounded-md" @click="bindDataItems('image')">
+                <div class="cursor-pointer text-center bg-amber-400 w-32 rounded-md" @click="bindDataItems('image')">
                     <div>
                         <i class="fa-solid fa-image"></i>
                     </div>
                     <div class="text-sm">Image</div>
                 </div>
-                <div class="cursor-pointer text-center bg-amber-400 rounded-md" @click="bindDataItems('video')">
+                <div class="cursor-pointer text-center bg-amber-400 w-32 rounded-md" @click="bindDataItems('video')">
                     <div>
                         <i class="fa-solid fa-video"></i>
                     </div>
@@ -42,7 +42,7 @@
         </slot>
         <input type="hidden" name="item" v-model="jsonstring">
         <input type="hidden" name="totalfile" v-model="$store.state.file">
-        <input class="bg-blue-500 my-1 rounded-lg text-xl text-white" @mouseover="transferData" type="submit">
+        <input class="bg-green-500 my-1 rounded-lg text-xl text-white" @mouseover="transferData" type="submit">
     </form>
 </template>
 
