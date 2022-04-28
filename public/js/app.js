@@ -4212,12 +4212,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "NavBarDashDropdown",
+  data: function data() {
+    return {
+      dropactive: false
+    };
+  },
   props: {
     is_admin: Boolean,
     livehref: String,
     url: String
+  },
+  methods: {
+    dropdownactive: function dropdownactive() {
+      this.dropactive = !this.dropactive;
+    }
   },
   created: function created() {
     console.log(this.livehref.split('/'));
@@ -6366,6 +6379,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tinymce/tinymce-vue */ "./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/index.js");
+//
 //
 //
 //
@@ -15409,21 +15423,42 @@ var render = function () {
   return _vm.is_admin
     ? _c(
         "div",
-        {
-          staticClass:
-            "py-0.5 my-1 rounded-xl overflow-hidden truncate cursor-pointer",
-        },
+        { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
         [
           _c("div", [
             _c(
               "div",
               {
-                staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                staticClass:
+                  "hover:bg-gray-200 px-2 pt-1 rounded-lg cursor-pointer",
                 class: this.livehref.split("/").includes("komunitas")
                   ? "bg-gray-300"
                   : "bg-gray-100",
+                on: { click: _vm.dropdownactive },
               },
-              [_vm._m(0)]
+              [
+                _c("div", { staticClass: "flex justify-between w-full" }, [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "flex-1" }, [_vm._v("Komunitas")]),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    { staticClass: "overflow-hidden w-8 text-center" },
+                    [
+                      _c("i", {
+                        staticClass:
+                          "my-auto fas fa-chevron-right transition-all duration-500 transform",
+                        class:
+                          this.livehref.split("/").includes("komunitas") ||
+                          _vm.dropactive
+                            ? "rotate-90"
+                            : "",
+                      }),
+                    ]
+                  ),
+                ]),
+              ]
             ),
             _vm._v(" "),
             _c(
@@ -15431,14 +15466,16 @@ var render = function () {
               {
                 staticClass:
                   "bg-gray-200 rounded-lg px-2.5 my-2 h-full truncate",
-                class: this.url.split("/").includes("komunitas")
-                  ? ""
-                  : "hidden",
+                class:
+                  this.livehref.split("/").includes("komunitas") ||
+                  _vm.dropactive
+                    ? ""
+                    : "hidden",
               },
               [
                 _c("a", { attrs: { href: _vm.url + "/show/alumni" } }, [
                   _c(
-                    "a",
+                    "div",
                     {
                       staticClass: "my-1 cursor-pointer",
                       attrs: { onclick: "DropDownItem()" },
@@ -15489,12 +15526,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex w-52" }, [
-      _c("div", { staticClass: "w-1/6" }, [
-        _c("i", { staticClass: "fa-solid fa-users mr-3" }),
-      ]),
-      _vm._v(" "),
-      _c("span", [_vm._v("Komunitas")]),
+    return _c("div", { staticClass: "w-1/6" }, [
+      _c("i", { staticClass: "fa-solid fa-users mr-3" }),
     ])
   },
 ]
@@ -18686,12 +18719,13 @@ var render = function () {
                   "api-key": "no-api-key",
                   init: {
                     height: 300,
-                    menubar: false,
+                    menubar: true,
                     plugins: [
                       "advlist autolink lists link image charmap print preview anchor",
                       "searchreplace visualblocks code fullscreen",
                       "insertdatetime media table paste code help wordcount",
                     ],
+                    file_picker_types: "image",
                     toolbar:
                       "undo redo | formatselect | bold italic backcolor | \
                    alignleft aligncenter alignright alignjustify | \

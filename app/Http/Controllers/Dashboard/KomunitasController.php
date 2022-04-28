@@ -19,22 +19,22 @@ class KomunitasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
-    {
-        $data = $this->data->get_data();
-        return view('dashboard.komunitas.index', $data);
-    }
+//    public function index(Request $request)
+//    {
+//        $data = $this->data->get_data();
+//        return view('dashboard.komunitas.index', $data);
+//    }
 
     public function indexAlumni()
     {
-        $data = $this->data->get_data();
+        $data = $this->data->get_data('alumni');
 //        dd($data);
         return view('dashboard.komunitas.index', $data);
     }
 
     public function indexOrangTua(Request $request)
     {
-        $data = $this->data->get_data();
+        $data = $this->data->get_data('orang_tua');
         return view('dashboard.komunitas.index', $data);
     }
 

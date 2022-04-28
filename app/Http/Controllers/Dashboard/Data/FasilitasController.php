@@ -11,9 +11,15 @@ use Illuminate\Support\Facades\Storage;
 
 class FasilitasController extends Controller
 {
-    public function get_data()
+    public function get_data($request)
     {
-        return Fasilitas::latest()->paginate(12);
+        if ($request->area != null && $request->description != null) {
+            return Fasilitas::latest()->where('area', $request->area)->where('description', $request->description)->paginate(12);
+        } else if ($request->area != null || $request->description != null) {
+            return Fasilitas::latest()->where('area', $request->area)->orWhere('description', $request->description)->paginate(12);
+        } else {
+            return Fasilitas::latest()->paginate(12);
+        }
     }
 
     public function store_data($request)
@@ -25,6 +31,7 @@ class FasilitasController extends Controller
             $fasilitas->name = $filename['filename'];
             $fasilitas->type = $filename['type'];
         };
+        $fasilitas->description = $request->description;
         $fasilitas->area = $request->area;
         return $fasilitas->save();
     }
@@ -38,7 +45,10 @@ class FasilitasController extends Controller
             $fasilitas->name = $filename['filename'];
             $fasilitas->type = $filename['type'];
         };
-        $fasilitas->area = $request->area;
+        $fasilitas->description = $request->description;
+        if ($request->are != null) {
+            $fasilitas->area = $request->area;
+        }
         return $fasilitas->save();
     }
 

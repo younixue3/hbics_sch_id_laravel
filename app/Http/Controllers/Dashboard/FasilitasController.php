@@ -23,9 +23,10 @@ class FasilitasController extends Controller
      */
     public function index(Request $request)
     {
-        $data = $this->data->get_data();
+//        dd($request->description);
+        $data = $this->data->get_data($request);
 
-        $compact = compact('data');
+        $compact = compact('data', 'request');
 
         return view('dashboard.fasilitas.index', $compact);
     }

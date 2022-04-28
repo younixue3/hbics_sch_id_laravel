@@ -5,7 +5,22 @@
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
         <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12 overflow-hidden">
             {{--            {{$errors['fileupload']}}--}}
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-2 px-3">
+            <form action="{{route('dashboard.fasilitas.index')}}" class="px-5 flex">
+                <label class="mr-5">Filter</label>
+                <span class="w-32">
+                    <select name="area" class="w-full h-full focus:outline-none px-3 py-0.5 border border-r-0 border-gray-300">
+                        <option value="" disabled selected>--Area--</option>
+                        <option value="" {{$request->area === '' ? 'selected' : 'selected'}}>Semua</option>
+                        <option value="tk" {{$request->area === 'tk' ? 'selected' : ''}}>hhk</option>
+                        <option value="sd" {{$request->area === 'sd' ? 'selected' : ''}}>sd</option>
+                        <option value="smp" {{$request->area === 'smp' ? 'selected' : ''}}>smp</option>
+                        <option value="sma" {{$request->area === 'sma' ? 'selected' : ''}}>sma</option>
+                    </select>
+                </span>
+                <input type="text" name="description" class="w-52 focus:outline-none px-3 py-0.5 border border-r-0 border-gray-300" placeholder="description" value="{{$request->description}}">
+                <button type="submit" class="w-10 focus:outline-none px-3 py-0.5 border border-gray-300"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-2 px-3 mt-5">
                 @forelse($data as $key => $value)
                     <card-fasilitas-component name="{{asset('Upload/fasilitas_assets/'.  $value->name)}}"
                                               type="{{$value->type}}"
@@ -16,7 +31,7 @@
                 @endforelse
             </div>
             <div class="bg-gray-100 px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-                {{$data->links('widgets.custom_pagination')}}
+                {{$data->appends(request()->all())->links('widgets.custom_pagination')}}
             </div>
         </mac-card-component>
     </div>
@@ -40,6 +55,12 @@
     </div>
     <div class="text-left text-sm">
         <label class="block font-medium text-gray-700">
+            Description
+        </label>
+        <input type="text" name="description" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"/>
+    </div>
+    <div class="text-left text-sm">
+        <label class="block font-medium text-gray-700">
             Area
         </label>
         <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300">
@@ -60,6 +81,12 @@
                                   file:bg-violet-50 file:text-violet-700
                                   hover:file:bg-violet-100
                                 "/>
+    </div>
+    <div class="text-left text-sm">
+        <label class="block font-medium text-gray-700">
+            Description
+        </label>
+        <input type="text" name="description" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"/>
     </div>
     <div class="text-left text-sm">
         <label class="block font-medium text-gray-700">

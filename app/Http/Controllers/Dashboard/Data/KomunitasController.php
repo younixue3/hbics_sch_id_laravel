@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Storage;
 
 class KomunitasController extends Controller
 {
-    public function get_data()
+    public function get_data($data)
     {
-        $komunitas = Komunitas::paginate(20);
+        $komunitas = Komunitas::where('connection', $data)->paginate(20);
         $compact = compact('komunitas');
         return $compact;
     }
