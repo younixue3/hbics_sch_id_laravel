@@ -18,9 +18,9 @@ class KomunitasController extends Controller
         $this->data = $data;
     }
 
-    public function alumni()
+    public function alumni($area)
     {
-        $data = $this->data->get_data_alumni();
+        $data = $this->data->get_data_alumni($area);
         return view('front.komunitas.alumni.index', $data);
     }
 

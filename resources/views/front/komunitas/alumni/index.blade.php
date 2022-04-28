@@ -26,48 +26,39 @@
                 <div class="bg-white rounded-3xl p-1 md:p-5">
                     <div>
                         <div class="grid grid-cols-3 md:flex text-sm md:text-base justify-center border-b border-black">
-                            <a href="{{route('teacher-staff','all')}}"
+                            <a href="{{route('alumni','all')}}"
                                class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">All
                             </a>
-                            <a href="{{route('teacher-staff','hhk')}}"
+                            <a href="{{route('alumni','hhk')}}"
                                class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">TK & PG
                             </a>
-                            <a href="{{route('teacher-staff','sdk')}}"
+                            <a href="{{route('alumni','sdk')}}"
                                class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500"
                                @click="changeMenu('sd')">SD
                             </a>
-                            <a href="{{route('teacher-staff','smpk')}}"
+                            <a href="{{route('alumni','smpk')}}"
                                class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">SMP
                             </a>
-                            <a href="{{route('teacher-staff','smak')}}"
+                            <a href="{{route('alumni','smak')}}"
                                class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">SMA
-                            </a>
-                            <a href="{{route('teacher-staff','qrd')}}"
-                               class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">QRD
-                            </a>
-                            <a href="{{route('teacher-staff','finance')}}"
-                               class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">Finance
-                            </a>
-                            <a href="{{route('teacher-staff','hrga')}}"
-                               class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">HRGA
                             </a>
                         </div>
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
                             @forelse($alumni as $key => $value)
+{{--                                {{dd($alumni)}}--}}
                                 <div class="bg-white shadow-xl rounded-xl p-3">
                                     <img class="md:h-80 grayscale hover:grayscale-0 w-full object-cover rounded-2xl transition-all ease-in-out duration-300"
-                                         src="{{asset('Upload/foto_teacher_staff/'.$value->picture)}}">
+                                         src="{{asset('Upload/foto_komunitas/'.$value->picture)}}">
                                     <div class="px-3 py-2 pt-3">
                                         <div class="w-full flex justify-between mb-1">
                                             <div class="flex     gap-x-1 align-text-bottom mb-2">
                                                 <div class="m-auto text-sm md:text-2xl font-bold">
-                                                    {{$value->first_name}}
-                                                    <div class="m-auto text-sm md:text-xl font-normal">
-                                                        {{$value->last_name}}
+                                                    {{$value->name}}
+                                                    <div class="m-auto text-sm font-light">
+                                                        {{$value->status}}
                                                     </div>
                                                     <div class="mt-10 md:mt-20">
-                                                        <div class="text-sm md:text-xl font-semibol uppercase">{{$value->area}}</div>
-                                                        <div class="text-sm md:text-lg font-normal">{{$value->profesi}}</div>
+                                                        <div class="text-sm font-light italic">{{$value->pesan}}</div>
                                                     </div>
                                                 </div>
                                             </div>

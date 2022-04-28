@@ -49,7 +49,7 @@ Route::get('/sekolah-dasar', [App\Http\Controllers\Front\AkademisController::cla
 Route::get('/sekolah-menengah-pertama', [App\Http\Controllers\Front\AkademisController::class, 'sekolahMenengahPertama'])->name('sekolah-menengah-pertama');
 Route::get('/sekolah-menengah-atas', [App\Http\Controllers\Front\AkademisController::class, 'sekolahMenengahAtas'])->name('sekolah-menengah-atas');
 //////////Komunitas
-Route::get('/alumni', [App\Http\Controllers\Front\KomunitasController::class, 'alumni'])->name('alumni');
+Route::get('/alumni/{area}', [App\Http\Controllers\Front\KomunitasController::class, 'alumni'])->name('alumni');
 Route::get('/orang-tua', [App\Http\Controllers\Front\KomunitasController::class, 'orangTua'])->name('orang-tua');
 Route::get('/teacher-staff/{area}', [App\Http\Controllers\Front\KomunitasController::class, 'teacherStaff'])->name('teacher-staff');
 //////////Publikasi

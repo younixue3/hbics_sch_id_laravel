@@ -10,9 +10,13 @@ use Illuminate\Http\Request;
 
 class KomunitasController extends Controller
 {
-    public function get_data_alumni()
+    public function get_data_alumni($area)
     {
-        $alumni = Komunitas::where('connection', 'alumni')->paginate(12);
+        if (!$area || $area === 'all') {
+            $alumni = Komunitas::where('connection', 'alumni')->paginate(12);
+        } else {
+            $alumni = Komunitas::where('connection', 'alumni')->where('area', $area)->paginate(12);
+        }
         $content = Publikasis::where('status', 'publish')->get()->take(6);
         $compact = compact('alumni', 'content');
         return $compact;
