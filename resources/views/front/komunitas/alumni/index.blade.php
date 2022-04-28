@@ -32,14 +32,14 @@
                             <a href="{{route('alumni','hhk')}}"
                                class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">TK & PG
                             </a>
-                            <a href="{{route('alumni','sdk')}}"
+                            <a href="{{route('alumni','sd')}}"
                                class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500"
                                @click="changeMenu('sd')">SD
                             </a>
-                            <a href="{{route('alumni','smpk')}}"
+                            <a href="{{route('alumni','smp')}}"
                                class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">SMP
                             </a>
-                            <a href="{{route('alumni','smak')}}"
+                            <a href="{{route('alumni','sma')}}"
                                class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">SMA
                             </a>
                         </div>
