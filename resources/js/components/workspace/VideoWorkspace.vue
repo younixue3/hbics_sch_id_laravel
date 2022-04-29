@@ -1,5 +1,5 @@
 <template>
-    <div class="relative">
+    <div class="relative py-4">
         <div class="flex w-full justify-end mb-5">
             <div class="flex">
                 <div  @click="showmenu" class="bg-rose-500 flex rounded-lg w-8 h-8 text-white cursor-pointer">

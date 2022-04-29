@@ -6298,6 +6298,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -12138,7 +12140,7 @@ var render = function () {
   return _c(
     "form",
     {
-      staticClass: "grid grid-cols-1 gap-x-5 gap-y-4 my-5",
+      staticClass: "grid grid-cols-1 gap-x-5 divide-y-2 gap-y-4 my-5",
       attrs: {
         id: "formPublish",
         action: _vm.store_link,
@@ -18589,7 +18591,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relative" }, [
+  return _c("div", { staticClass: "relative py-4" }, [
     _c("div", { staticClass: "flex w-full justify-end mb-5" }, [
       _c("div", { staticClass: "flex" }, [
         _c(
@@ -18651,12 +18653,14 @@ var render = function () {
       ]),
     ]),
     _vm._v(" "),
-    _c("img", {
-      ref: "previewimg",
-      staticClass: "w-full object-cover rounded-3xl m-5",
-      class: _vm.inputMode === false ? "h-96" : "h-32 border border-black",
-      on: { dblclick: _vm.inputOn },
-    }),
+    _c("div", { staticClass: "p-5" }, [
+      _c("img", {
+        ref: "previewimg",
+        staticClass: "w-full object-cover rounded-3xl",
+        class: _vm.inputMode === false ? "h-96" : "h-32 border border-black",
+        on: { dblclick: _vm.inputOn },
+      }),
+    ]),
     _vm._v(" "),
     _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
       _c("input", {
@@ -18725,7 +18729,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { attrs: { clas: "relative" } },
+    { staticClass: "relative py-4" },
     [
       _c("button-gear-menu-component", { attrs: { items: _vm.index } }),
       _vm._v(" "),
@@ -18827,7 +18831,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "relative" },
+    { staticClass: "relative py-4" },
     [
       _c("button-gear-menu-component", { attrs: { items: _vm.index } }),
       _vm._v(" "),
@@ -18925,7 +18929,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relative" }, [
+  return _c("div", { staticClass: "relative py-4" }, [
     _c("div", { staticClass: "flex w-full justify-end mb-5" }, [
       _c("div", { staticClass: "flex" }, [
         _c(

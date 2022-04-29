@@ -1,5 +1,5 @@
 <template>
-    <div class="relative">
+    <div class="relative py-4">
         <div class="flex w-full justify-end mb-5">
             <div class="flex">
                 <div  @click="showmenu" class="bg-rose-500 flex rounded-lg w-8 h-8 text-white cursor-pointer">
@@ -17,7 +17,9 @@
                 </div>
             </div>
         </div>
-        <img ref="previewimg" class="w-full object-cover rounded-3xl m-5" :class="inputMode === false ? 'h-96' : 'h-32 border border-black'" @dblclick="inputOn">
+        <div class="p-5">
+            <img ref="previewimg" class="w-full object-cover rounded-3xl" :class="inputMode === false ? 'h-96' : 'h-32 border border-black'" @dblclick="inputOn">
+        </div>
         <div :class="inputMode ? '' : 'hidden'">
             <input type="file" :name="'inputFile'+indexfile" @change="previewImage" :src="$store.state.workspace.items[index].content">
             <input type="hidden" :name="'nameFile'+indexfile" @change="previewImage" :value="Math.random().toString(16).substr(2, 8) + '_' + $store.state.workspace.items[index].content">
