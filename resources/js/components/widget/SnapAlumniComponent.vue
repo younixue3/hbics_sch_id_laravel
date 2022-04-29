@@ -9,7 +9,7 @@
                     <div class="bg-white h-44 lg:h-56 lg:w-[30rem] rounded-3xl shadow-xl p-5">
                         <div class="md:flex h-full">
                             <div class="md:w-1/3 m-auto flex">
-                                <img class="h-20 w-20 rounded-full m-auto object-cover" :src="imageurl + item.picture">
+                                <img class="h-20 w-20 rounded-xl m-auto object-cover" :src="imageurl + item.picture">
                             </div>
                             <div class="md:w-2/3 m-auto">
                                 <span class="text-sm md:text-lg">{{ item.name }}</span>

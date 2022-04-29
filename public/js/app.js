@@ -16734,8 +16734,7 @@ var render = function () {
                   _c("div", { staticClass: "md:flex h-full" }, [
                     _c("div", { staticClass: "md:w-1/3 m-auto flex" }, [
                       _c("img", {
-                        staticClass:
-                          "h-20 w-20 rounded-full m-auto object-cover",
+                        staticClass: "h-20 w-20 rounded-xl m-auto object-cover",
                         attrs: { src: _vm.imageurl + item.picture },
                       }),
                     ]),
