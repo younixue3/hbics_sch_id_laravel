@@ -6039,9 +6039,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -6476,6 +6473,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
 //
 //
 //
@@ -18171,10 +18171,6 @@ var render = function () {
                   },
                   [_vm._v("\n                    Delete\n                ")]
                 ),
-                _vm._v(" "),
-                _c("div", { attrs: { href: "" } }, [
-                  _vm._v("\n                    Edit\n                "),
-                ]),
               ]),
             ]
           )
@@ -18671,7 +18667,7 @@ var render = function () {
         },
         on: { change: _vm.previewImage },
       }),
-      _vm._v('\n        "'),
+      _vm._v(" "),
       _c("input", {
         attrs: { type: "hidden", name: "nameFile" + _vm.indexfile },
         domProps: {
@@ -18682,11 +18678,12 @@ var render = function () {
         },
         on: { change: _vm.previewImage },
       }),
-      _vm._v('"\n        '),
+      _vm._v(" "),
       _c(
         "span",
         {
-          staticClass: "px-2 mt-5 bg-emerald-500 rounded-md text-white",
+          staticClass:
+            "px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer",
           on: { click: _vm.inputOff },
         },
         [_vm._v("Save Changes")]
@@ -18788,7 +18785,11 @@ var render = function () {
                 "button",
                 {
                   staticClass:
-                    "px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer",
+                    "px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer disabled:bg-gray-300 disabled:text-black",
+                  attrs: {
+                    disabled:
+                      _vm.$store.state.workspace.items[_vm.index].content == "",
+                  },
                   on: { click: _vm.inputOff },
                 },
                 [_vm._v("Save Changes")]
@@ -18864,6 +18865,10 @@ var render = function () {
                 },
               },
             }),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-1 bg-yellow-200 italic text-sm" }, [
+              _vm._v("\n            Click enter to Save\n        "),
+            ]),
           ])
         : _vm._e(),
       _vm._v(" "),

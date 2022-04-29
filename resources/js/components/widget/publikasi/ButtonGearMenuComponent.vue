@@ -9,9 +9,6 @@
                     <div class="cursor-pointer" @click="deleteitem">
                         Delete
                     </div>
-                    <div href="">
-                        Edit
-                    </div>
                 </div>
             </div>
         </div>

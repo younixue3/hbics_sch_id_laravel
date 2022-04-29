@@ -27,7 +27,7 @@
                    }"
                 v-model="$store.state.workspace.items[index].content"
             />
-            <button class="px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer" @click="inputOff">Save Changes</button>
+            <button class="px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer disabled:bg-gray-300 disabled:text-black" :disabled="$store.state.workspace.items[index].content == ''" @click="inputOff">Save Changes</button>
         </div>
     </div>
 </template>
