@@ -21,8 +21,8 @@
             <img ref="previewimg" class="w-full object-cover rounded-3xl" :class="inputMode === false ? 'h-96' : 'h-32 border border-black'" @dblclick="inputOn">
         </div>
         <div :class="inputMode ? '' : 'hidden'">
-            <input type="file" :name="'inputFile'+indexfile" @change="previewImage" :src="$store.state.workspace.items[index].content">
-            <input type="hidden" :name="'nameFile'+indexfile" @change="previewImage" :value="Math.random().toString(16).substr(2, 8) + '_' + $store.state.workspace.items[index].content">
+            <input type="file" :name="'inputFile'+indexfile" @change="previewImage">
+            <input type="hidden" :name="'nameFile'+indexfile" :value="Math.random().toString(16).substr(2, 8) + '_' + $store.state.workspace.items[index].content">
             <span class="px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer" @click="inputOff">Save Changes</span>
         </div>
     </div>
@@ -66,7 +66,7 @@ export default {
 
         },
         previewImage: function () {
-            this.$store.state.workspace.items[this.$props.index].content = event.target.files[0].name
+            this.$store.state.workspace.items[this.$props.index].content = Math.random().toString(16).substr(2, 8) + '_' + event.target.files[0].name
             const reader = new FileReader();
             reader.readAsDataURL(event.target.files[0]);
             reader.onload = () => {

@@ -36,8 +36,6 @@ export default {
             }
         } else {
             this.arrValOption = JSON.parse(this.valueoption)
-            console.log('arrValOption');
-            console.log(this.arrValOption);
             for (let item in this.arrValOption) {
                 this.arrValOption[item].status = false
             }

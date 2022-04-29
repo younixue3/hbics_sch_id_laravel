@@ -15,6 +15,7 @@
                         <span class="px-1 py-0.5 pt-1 rounded-md bg-red-600">
                             <i class="fas fa-fire-alt text-xl mt-0.5"></i>
                             <span class="hidden md:inline">Trending</span>
+                            <span class="hidden md:inline">Trending</span>
                         </span>
                     </div>
                     <div class="font-bold leading-4 z-10 overflow-hidden"

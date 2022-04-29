@@ -749,6 +749,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .inline-block{
   display: inline-block;
 }
+.inline{
+  display: inline;
+}
 .flex{
   display: flex;
 }
@@ -962,6 +965,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-24{
   width: 6rem;
 }
+.w-72{
+  width: 18rem;
+}
 .max-w-6xl{
   max-width: 72rem;
 }
@@ -1058,6 +1064,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .scale-0{
   --tw-scale-x: 0;
   --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-95{
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform{
@@ -1242,6 +1253,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
+.divide-x-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-x-reverse: 0;
+  border-right-width: calc(2px * var(--tw-divide-x-reverse));
+  border-left-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
+}
 .divide-gray-200 > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-divide-opacity));
@@ -1357,6 +1373,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-x-2{
   border-left-width: 2px;
   border-right-width: 2px;
+}
+.border-y-2{
+  border-top-width: 2px;
+  border-bottom-width: 2px;
 }
 .border-t{
   border-top-width: 1px;
@@ -1587,6 +1607,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-red-400{
   --tw-bg-opacity: 1;
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+.bg-blue-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
@@ -2306,6 +2330,24 @@ h6{
   line-height: 1.5rem;
 }
 
+.file\:m-auto::-webkit-file-upload-button{
+  margin: auto;
+}
+
+.file\:m-auto::file-selector-button{
+  margin: auto;
+}
+
+.file\:my-auto::-webkit-file-upload-button{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.file\:my-auto::file-selector-button{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .file\:mr-4::-webkit-file-upload-button{
   margin-right: 1rem;
 }
@@ -2338,6 +2380,16 @@ h6{
 .file\:bg-violet-50::file-selector-button{
   --tw-bg-opacity: 1;
   background-color: rgb(245 243 255 / var(--tw-bg-opacity));
+}
+
+.file\:bg-violet-700::-webkit-file-upload-button{
+  --tw-bg-opacity: 1;
+  background-color: rgb(109 40 217 / var(--tw-bg-opacity));
+}
+
+.file\:bg-violet-700::file-selector-button{
+  --tw-bg-opacity: 1;
+  background-color: rgb(109 40 217 / var(--tw-bg-opacity));
 }
 
 .file\:py-2::-webkit-file-upload-button{
@@ -2386,6 +2438,26 @@ h6{
 .file\:text-violet-700::file-selector-button{
   --tw-text-opacity: 1;
   color: rgb(109 40 217 / var(--tw-text-opacity));
+}
+
+.file\:text-violet-50::-webkit-file-upload-button{
+  --tw-text-opacity: 1;
+  color: rgb(245 243 255 / var(--tw-text-opacity));
+}
+
+.file\:text-violet-50::file-selector-button{
+  --tw-text-opacity: 1;
+  color: rgb(245 243 255 / var(--tw-text-opacity));
+}
+
+.file\:text-white::-webkit-file-upload-button{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.file\:text-white::file-selector-button{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .after\:content-\[\'_\2197\'\]::after{
@@ -2531,6 +2603,16 @@ h6{
 .hover\:bg-blue-400:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-blue-300:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-blue-100:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-opacity-75:hover{
@@ -2701,6 +2783,16 @@ h6{
 .focus\:ring-indigo-500:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));
+}
+
+.active\:bg-blue-600:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.active\:text-white:active{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .disabled\:bg-gray-500:disabled{

@@ -56,7 +56,6 @@ export default {
             var scroller = this.$refs.scrollsnap
 
             var element = document.getElementById('testing1').getBoundingClientRect().width
-            console.log(this.scrolcount)
             if (this.counter === 5) {
                 this.counter = 0
                 this.scrolcount = 0

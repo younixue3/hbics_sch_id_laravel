@@ -56,7 +56,6 @@ export default {
             const input = document.createElement('input');
             input.setAttribute('type', 'file');
             input.setAttribute('accept', 'image/*');
-            // console.log(input)
 
             input.addEventListener('change', (e) => {
                 const file = e.target.files[0];

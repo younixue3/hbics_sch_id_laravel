@@ -47,9 +47,6 @@ export default {
           this.dropactive = !this.dropactive;
       }
     },
-    created() {
-        console.log(this.livehref.split('/'))
-    }
 }
 </script>
 

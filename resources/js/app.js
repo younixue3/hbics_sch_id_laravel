@@ -122,6 +122,7 @@ Vue.component('modal-show-component', require('./components/widget/ModalShowComp
 Vue.component('notification-component', require('./components/widget/NotificationComponent').default)
 Vue.component('multiple-select-component', require('./components/widget/MutipleselectComponent').default)
 Vue.component('accordion-component', require('./components/widget/AccordionComponent').default)
+Vue.component('tab-bar-component', require('./components/widget/TabBarComponent').default)
 
 //FUNCTION
 Vue.component('modal-add-function', require('./components/function/form/ModalAddFunction').default)
@@ -157,6 +158,7 @@ Vue.component('title-workspace', require('./components/workspace/TitleWorkspace'
 Vue.component('paragraph-workspace', require('./components/workspace/ParagraphWorkspace').default)
 Vue.component('image-workspace', require('./components/workspace/ImageWorkspace').default)
 Vue.component('video-workspace', require('./components/workspace/VideoWorkspace').default)
+Vue.component('event-workspace', require('./components/workspace/EventWorkspace').default)
 Vue.component('title-workspace-output', require('./components/workspace/output/TitleWorkspaceOutput').default)
 Vue.component('paragraph-workspace-output', require('./components/workspace/output/ParagraphWorkspaceOutput').default)
 Vue.component('image-workspace-output', require('./components/workspace/output/ImageWorkspaceOutput').default)

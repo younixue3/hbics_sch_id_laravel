@@ -12,7 +12,6 @@
                 this.$store.state.workspace.file = 0
             },
             selectStatus: function () {
-                console.log('event');
             }
         }
     }

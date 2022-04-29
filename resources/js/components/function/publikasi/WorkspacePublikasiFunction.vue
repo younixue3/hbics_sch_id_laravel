@@ -30,6 +30,12 @@
                     </div>
                     <div class="text-sm">video</div>
                 </div>
+                <div class="cursor-pointer text-center bg-amber-400 w-32 rounded-md" @click="bindDataItems('event')">
+                    <div>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="text-sm">event</div>
+                </div>
             </div>
             <div class="bg-green-400 w-10 h-10 text-center rounded-md text-xl group-hover:hidden flex">
                 <div class="m-auto">

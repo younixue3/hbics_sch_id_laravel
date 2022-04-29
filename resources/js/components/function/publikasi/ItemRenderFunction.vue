@@ -39,6 +39,14 @@ export default {
                     editmode: this.editmode
                 }
             })
+        } else if(this.type === 'event') {
+            return createElement('event-workspace', {
+                props: {
+                    content: this.content,
+                    index: this.index,
+                    urlasset: this.urlasset,
+                }
+            })
         }
     }
 }
