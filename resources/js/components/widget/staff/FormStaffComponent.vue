@@ -22,7 +22,7 @@
             <label class="block font-medium text-gray-700">
                 Area
             </label>
-            "<input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase" type="text" name="area" :value="$store.state.modal.modalshow.item.user.area">"
+            <input disabled class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase" type="text" name="area" :value="$store.state.modal.modalshow.item.user.area">
         </div>
         <div class="col-start-3">
             <div class="mt-2 grid grid-cols-2 gap-2">

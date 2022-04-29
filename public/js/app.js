@@ -18467,14 +18467,13 @@ var render = function () {
         _c("label", { staticClass: "block font-medium text-gray-700" }, [
           _vm._v("\n            Area\n        "),
         ]),
-        _vm._v('\n        "'),
+        _vm._v(" "),
         _c("input", {
           staticClass:
             "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase",
           attrs: { disabled: "", type: "text", name: "area" },
           domProps: { value: _vm.$store.state.modal.modalshow.item.user.area },
         }),
-        _vm._v('"\n    '),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-start-3" }, [
