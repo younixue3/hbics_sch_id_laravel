@@ -21196,146 +21196,154 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "p-3" }, [
-    _c("div", { staticClass: "grid grid-cols-3 gap-5" }, [
-      _c("div", { staticClass: "col-span-1 grid grid-cols-1 gap-3" }, [
-        _c("div", { staticClass: "flex relative h-60" }, [
-          _c("img", {
-            ref: "previewimg",
-            staticClass: "object-cover h-full rounded-xl",
-            attrs: {
-              src:
-                this.urlasset +
-                "/" +
-                this.$store.state.workspace.items[this.$props.index].content
-                  .foto,
-            },
-          }),
-        ]),
-        _vm._v(" "),
-        _c("div", {}, [
-          _c("div", {}, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value:
-                    _vm.$store.state.workspace.items[_vm.index].content.date,
-                  expression:
-                    "$store.state.workspace.items[index].content.date",
-                },
-              ],
-              staticClass:
-                "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
-              attrs: { disabled: "", type: "date", name: "date" },
-              domProps: {
-                value: _vm.$store.state.workspace.items[_vm.index].content.date,
-              },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(
-                    _vm.$store.state.workspace.items[_vm.index].content,
-                    "date",
-                    $event.target.value
-                  )
-                },
+    _c(
+      "div",
+      {
+        staticClass: "bg-white p-5 rounded-xl shadow-xl grid grid-cols-3 gap-5",
+      },
+      [
+        _c("div", { staticClass: "col-span-1 grid grid-cols-1 gap-3" }, [
+          _c("div", { staticClass: "flex relative h-60" }, [
+            _c("img", {
+              ref: "previewimg",
+              staticClass: "object-cover h-full rounded-xl",
+              attrs: {
+                src:
+                  this.urlasset +
+                  "/" +
+                  this.$store.state.workspace.items[this.$props.index].content
+                    .foto,
               },
             }),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "flex justify-between w-full mt-3" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
+          _c("div", {}, [
+            _c("div", {}, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value:
+                      _vm.$store.state.workspace.items[_vm.index].content.date,
+                    expression:
+                      "$store.state.workspace.items[index].content.date",
+                  },
+                ],
+                staticClass:
+                  "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+                attrs: { disabled: "", type: "date", name: "date" },
+                domProps: {
+                  value:
+                    _vm.$store.state.workspace.items[_vm.index].content.date,
+                },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.$store.state.workspace.items[_vm.index].content,
+                      "date",
+                      $event.target.value
+                    )
+                  },
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex justify-between w-full mt-3" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value:
+                      _vm.$store.state.workspace.items[_vm.index].content
+                        .time_start,
+                    expression:
+                      "$store.state.workspace.items[index].content.time_start",
+                  },
+                ],
+                staticClass:
+                  "flex-1 rounded-xl w-full focus:outline-none px-3 py-2 border border-gray-300",
+                attrs: { disabled: "", type: "time", name: "date" },
+                domProps: {
                   value:
                     _vm.$store.state.workspace.items[_vm.index].content
                       .time_start,
-                  expression:
-                    "$store.state.workspace.items[index].content.time_start",
                 },
-              ],
-              staticClass:
-                "flex-1 rounded-xl w-full focus:outline-none px-3 py-2 border border-gray-300",
-              attrs: { disabled: "", type: "time", name: "date" },
-              domProps: {
-                value:
-                  _vm.$store.state.workspace.items[_vm.index].content
-                    .time_start,
-              },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(
-                    _vm.$store.state.workspace.items[_vm.index].content,
-                    "time_start",
-                    $event.target.value
-                  )
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.$store.state.workspace.items[_vm.index].content,
+                      "time_start",
+                      $event.target.value
+                    )
+                  },
                 },
-              },
-            }),
-            _vm._v(" "),
-            _c("span", { staticClass: "m-auto" }, [_vm._v("s/d")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "m-auto mx-3" }, [_vm._v("s/d")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value:
+                      _vm.$store.state.workspace.items[_vm.index].content
+                        .time_end,
+                    expression:
+                      "$store.state.workspace.items[index].content.time_end",
+                  },
+                ],
+                staticClass:
+                  "flex-1 w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+                attrs: { disabled: "", type: "time", name: "date" },
+                domProps: {
                   value:
                     _vm.$store.state.workspace.items[_vm.index].content
                       .time_end,
-                  expression:
-                    "$store.state.workspace.items[index].content.time_end",
                 },
-              ],
-              staticClass:
-                "flex-1 w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
-              attrs: { disabled: "", type: "time", name: "date" },
-              domProps: {
-                value:
-                  _vm.$store.state.workspace.items[_vm.index].content.time_end,
-              },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(
-                    _vm.$store.state.workspace.items[_vm.index].content,
-                    "time_end",
-                    $event.target.value
-                  )
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.$store.state.workspace.items[_vm.index].content,
+                      "time_end",
+                      $event.target.value
+                    )
+                  },
                 },
-              },
-            }),
+              }),
+            ]),
           ]),
         ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-span-2" }, [
-        _c("h1", { staticClass: "text-3xl" }, [
-          _vm._v(
-            _vm._s(_vm.$store.state.workspace.items[_vm.index].content.title)
-          ),
-        ]),
         _vm._v(" "),
-        _c("div", {
-          staticClass: "h-96",
-          domProps: {
-            innerHTML: _vm._s(
-              _vm.$store.state.workspace.items[_vm.index].content.description
+        _c("div", { staticClass: "col-span-2" }, [
+          _c("h1", { staticClass: "text-3xl" }, [
+            _vm._v(
+              _vm._s(_vm.$store.state.workspace.items[_vm.index].content.title)
             ),
-          },
-        }),
-      ]),
-    ]),
+          ]),
+          _vm._v(" "),
+          _c("div", {
+            staticClass: "h-96",
+            domProps: {
+              innerHTML: _vm._s(
+                _vm.$store.state.workspace.items[_vm.index].content.description
+              ),
+            },
+          }),
+        ]),
+      ]
+    ),
   ])
 }
 var staticRenderFns = []
