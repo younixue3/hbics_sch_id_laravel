@@ -6724,7 +6724,7 @@ __webpack_require__.r(__webpack_exports__);
     previewImage: function previewImage() {
       var _this = this;
 
-      this.$store.state.workspace.items[this.$props.index].content.foto = event.target.files[0].name;
+      this.$store.state.workspace.items[this.$props.index].content = Math.random().toString(16).substr(2, 8) + '_' + event.target.files[0].name;
       var reader = new FileReader();
       reader.readAsDataURL(event.target.files[0]);
 
@@ -20250,8 +20250,6 @@ var render = function () {
                   attrs: { type: "hidden", name: "nameFile" + _vm.indexfile },
                   domProps: {
                     value:
-                      Math.random().toString(16).substr(2, 8) +
-                      "_" +
                       _vm.$store.state.workspace.items[_vm.index].content.foto,
                   },
                 }),
@@ -20607,10 +20605,7 @@ var render = function () {
       _c("input", {
         attrs: { type: "hidden", name: "nameFile" + _vm.indexfile },
         domProps: {
-          value:
-            Math.random().toString(16).substr(2, 8) +
-            "_" +
-            _vm.$store.state.workspace.items[_vm.index].content,
+          value: _vm.$store.state.workspace.items[_vm.index].content,
         },
       }),
       _vm._v(" "),

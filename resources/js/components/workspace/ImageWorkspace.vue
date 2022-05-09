@@ -22,7 +22,7 @@
         </div>
         <div :class="inputMode ? '' : 'hidden'">
             <input type="file" :name="'inputFile'+indexfile" @change="previewImage">
-            <input type="hidden" :name="'nameFile'+indexfile" :value="Math.random().toString(16).substr(2, 8) + '_' + $store.state.workspace.items[index].content">
+            <input type="hidden" :name="'nameFile'+indexfile" :value="$store.state.workspace.items[index].content">
             <span class="px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer" @click="inputOff">Save Changes</span>
         </div>
     </div>

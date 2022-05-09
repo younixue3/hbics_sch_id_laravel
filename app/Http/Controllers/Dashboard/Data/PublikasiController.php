@@ -25,6 +25,7 @@ class PublikasiController extends Controller
 
     public function store_data($request)
     {
+//        dd($request);
         if ($request->inputFile1 !== null) {
             $publikasi = Publikasis::create([
                 'randKey' => Str::random(8),
@@ -64,7 +65,7 @@ class PublikasiController extends Controller
             for ($i = 1; $i <= intval($request->totalfile);) {
                 if ($request['inputFile'.$i] !== null) {
 //                    dd('dalam');
-                    Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['inputFile'.$i]->getClientOriginalName());
+                    Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['nameFile'.$i]);
 
                 }
                 $i++;
@@ -143,7 +144,6 @@ class PublikasiController extends Controller
         }
         for ($i = 1; $i <= intval($request->totalfile);) {
             if ($request['inputFile'.$i] !== null) {
-//                    dd('masuk');
                 Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['nameFile'.$i]);
             }
             $i++;

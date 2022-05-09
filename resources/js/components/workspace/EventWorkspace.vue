@@ -11,7 +11,7 @@
                                   file:rounded-full file:border-0
                                   file:text-sm file:font-semibold
                         "/>
-                            <input type="hidden" :name="'nameFile'+indexfile" :value="Math.random().toString(16).substr(2, 8) + '_' + $store.state.workspace.items[index].content.foto">
+                            <input type="hidden" :name="'nameFile'+indexfile" :value="$store.state.workspace.items[index].content.foto">
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ export default {
     },
     methods: {
         previewImage: function () {
-            this.$store.state.workspace.items[this.$props.index].content.foto = event.target.files[0].name
+            this.$store.state.workspace.items[this.$props.index].content = Math.random().toString(16).substr(2, 8) + '_' + event.target.files[0].name
             const reader = new FileReader();
             reader.readAsDataURL(event.target.files[0]);
             reader.onload = () => {
