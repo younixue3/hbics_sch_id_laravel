@@ -30,7 +30,7 @@ class PublikasiController extends Controller
             $publikasi = Publikasis::create([
                 'randKey' => Str::random(8),
                 'title' => $request->title0,
-                'thumbnail' => $request['nameFile1'],
+                'thumbnail' => $request->nameFile1,
                 'type' => $request->inputFile1->extension() === 'mp4' ? 'video' : 'img'
             ]);
         } else {
