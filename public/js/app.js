@@ -4437,7 +4437,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
-  props: ['name', 'type', 'delete_req', 'edit_req'],
+  props: ['name', 'type', 'desc', 'delete_req', 'edit_req'],
   methods: {
     openModalValidation: function openModalValidation() {
       this.$store.state.modalvalidation.url.url_req = this.$props.delete_req;
@@ -4447,6 +4447,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     openModalShow: function openModalShow() {
       this.$store.state.modal.modalshow.item = this.$props.name;
+      this.$store.state.modal.modalshow.desc = this.$props.desc;
       this.$store.state.modal.modalshow.type = this.$props.type;
       this.$store.commit('toggleModalShow');
     },

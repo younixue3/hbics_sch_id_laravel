@@ -575,6 +575,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 5rem;
   margin-right: 5rem;
 }
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
 .mx-5{
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -586,10 +590,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-0{
   margin-left: 0px;
   margin-right: 0px;
-}
-.my-3{
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
 }
 .my-4{
   margin-top: 1rem;
@@ -680,14 +680,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-auto{
   margin-top: auto;
 }
+.mb-1{
+  margin-bottom: 0.25rem;
+}
 .-mb-0\.5{
   margin-bottom: -0.125rem;
 }
 .-mb-0{
   margin-bottom: -0px;
-}
-.mb-1{
-  margin-bottom: 0.25rem;
 }
 .mt-3{
   margin-top: 0.75rem;
@@ -1601,6 +1601,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
+.bg-opacity-75{
+  --tw-bg-opacity: 0.75;
+}
 .bg-gradient-to-br{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1723,14 +1726,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-32{
   padding: 8rem;
 }
+.p-3{
+  padding: 0.75rem;
+}
 .p-2{
   padding: 0.5rem;
 }
 .p-1{
   padding: 0.25rem;
-}
-.p-3{
-  padding: 0.75rem;
 }
 .p-0\.5{
   padding: 0.125rem;

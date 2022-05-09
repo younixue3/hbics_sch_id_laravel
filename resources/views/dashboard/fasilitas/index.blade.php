@@ -28,6 +28,7 @@
                 @forelse($data as $key => $value)
                     <card-fasilitas-component name="{{asset('Upload/fasilitas_assets/'.  $value->name)}}"
                                               type="{{$value->type}}"
+                                              desc="{{$value->description}}"
                                               delete_req="{{route('dashboard.fasilitas.destroy', $value->id)}}"
                                               edit_req="{{route('dashboard.fasilitas.update', $value->id)}}"></card-fasilitas-component>
                 @empty
@@ -41,11 +42,16 @@
     </div>
 @endsection
 @section('modalShow')
-    <img class="h-96 rounded-2xl" v-if="$store.state.modal.modalshow.type === 'img'"
-         :src="$store.state.modal.modalshow.item">
-    <video class="h-96 rounded-2xl" v-if="$store.state.modal.modalshow.type === 'video'">
-        <source :src="$store.state.modal.modalshow.item">
-    </video>
+    <div class="flex">
+        <div class="absolute p-3">
+            <h3 class="bg-white px-2 bg-opacity-75" v-text="$store.state.modal.modalshow.desc"></h3>
+        </div>
+        <img class="h-96 rounded-2xl" v-if="$store.state.modal.modalshow.type === 'img'"
+             :src="$store.state.modal.modalshow.item">
+        <video class="h-96 rounded-2xl" v-if="$store.state.modal.modalshow.type === 'video'">
+            <source :src="$store.state.modal.modalshow.item">
+        </video>
+    </div>
 @endsection
 @section('modalEdit')
     <div class="mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2">

@@ -34,7 +34,7 @@ export default {
             },
         }
     },
-    props: ['name', 'type', 'delete_req', 'edit_req'],
+    props: ['name', 'type', 'desc', 'delete_req', 'edit_req'],
     methods: {
         openModalValidation: function () {
             this.$store.state.modalvalidation.url.url_req = this.$props.delete_req
@@ -44,6 +44,7 @@ export default {
         },
         openModalShow: function () {
             this.$store.state.modal.modalshow.item = this.$props.name
+            this.$store.state.modal.modalshow.desc = this.$props.desc
             this.$store.state.modal.modalshow.type = this.$props.type
             this.$store.commit('toggleModalShow')
         },
