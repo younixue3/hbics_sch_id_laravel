@@ -23,8 +23,7 @@ export default {
     mounted() {
     },
     props: ['content', 'index', 'urlasset'],
-    methods: {
-    }
+    methods: {}
 }
 </script>
 

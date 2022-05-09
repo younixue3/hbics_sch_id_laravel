@@ -2,10 +2,11 @@
     <div class="relative py-4">
         <div class="flex w-full justify-end mb-5">
             <div class="flex">
-                <div  @click="showmenu" class="bg-rose-500 flex rounded-lg w-8 h-8 text-white cursor-pointer">
+                <div @click="showmenu" class="bg-rose-500 flex rounded-lg w-8 h-8 text-white cursor-pointer">
                     <div class="m-auto"><i class="fa-solid fa-gear"></i></div>
                 </div>
-                <div v-if="show" v-click-outside="focusout" class="absolute right-6 translate-y-1/2 bg-white shadow-md rounded-md px-5 z-50">
+                <div v-if="show" v-click-outside="focusout"
+                     class="absolute right-6 translate-y-1/2 bg-white shadow-md rounded-md px-5 z-50">
                     <div class="grid grid-cols-1">
                         <div class="cursor-pointer" @click="deleteitem">
                             Delete
@@ -18,12 +19,14 @@
             </div>
         </div>
         <div class="p-5">
-            <img ref="previewimg" class="w-full object-cover rounded-3xl" :class="inputMode === false ? 'h-96' : 'h-32 border border-black'" @dblclick="inputOn">
+            <img ref="previewimg" class="w-full object-cover rounded-3xl"
+                 :class="inputMode === false ? 'h-96' : 'h-32 border border-black'" @dblclick="inputOn">
         </div>
         <div :class="inputMode ? '' : 'hidden'">
             <input type="file" :name="'inputFile'+indexfile" @change="previewImage">
             <input type="hidden" :name="'nameFile'+indexfile" :value="$store.state.workspace.items[index].content">
-            <span class="px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer" @click="inputOff">Save Changes</span>
+            <span class="px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer"
+                  @click="inputOff">Save Changes</span>
         </div>
     </div>
 </template>

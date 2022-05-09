@@ -34,8 +34,10 @@
                             <td class="py-1 uppercase">{{$value->area}}</td>
                             <td class="py-1 uppercase">{{$value->connection}}</td>
                             <td class="py-1">
-                                <button-show-component img="{{asset('Upload/foto_komunitas/'. $value->picture)}}" user="{{route('dashboard.komunitas.show', $value->id)}}"
-                                                       delete_req="{{route('dashboard.komunitas.destroy', $value->id)}}" edit_req="{{route('dashboard.komunitas.update', $value->id)}}"></button-show-component>
+                                <button-show-component img="{{asset('Upload/foto_komunitas/'. $value->picture)}}"
+                                                       user="{{route('dashboard.komunitas.show', $value->id)}}"
+                                                       delete_req="{{route('dashboard.komunitas.destroy', $value->id)}}"
+                                                       edit_req="{{route('dashboard.komunitas.update', $value->id)}}"></button-show-component>
                             </td>
                         </tr>
                     @empty
@@ -64,7 +66,8 @@
             <label class="block font-medium text-gray-700">
                 Name
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="name">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="name">
         </div>
         <div class="row-span-2">
             <label class="block font-medium text-gray-700">
@@ -84,19 +87,23 @@
             <label class="block font-medium text-gray-700">
                 Status
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="status">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="status">
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Pesan
             </label>
-            <textarea class="resize-none flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" name="pesan"></textarea>
+            <textarea
+                class="resize-none flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                name="pesan"></textarea>
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Area
             </label>
-            <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
+            <select name="area"
+                    class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
                 <option disabled selected>--- Pilih Area ---</option>
                 <option>hhk</option>
                 <option>sd</option>
@@ -108,7 +115,8 @@
             <label class="block font-medium text-gray-700">
                 Koneksi
             </label>
-            <select name="connection" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
+            <select name="connection"
+                    class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
                 <option disabled selected>--- Pilih Koneksi ---</option>
                 <option>Alumni</option>
                 <option value="orang_tua">Orang Tua</option>

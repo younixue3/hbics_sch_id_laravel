@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <h1 class="text-4xl md:text-5xl" @dblclick="inputOn">{{$store.state.workspace.items[index].content}}</h1>
+        <h1 class="text-4xl md:text-5xl" @dblclick="inputOn">{{ $store.state.workspace.items[index].content }}</h1>
     </div>
 </template>
 

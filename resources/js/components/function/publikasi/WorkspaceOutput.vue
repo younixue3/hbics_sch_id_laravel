@@ -1,6 +1,8 @@
 <template>
     <div class="grid grid-cols-1 gap-x-5 gap-y-4 my-5">
-        <item-render-output v-for="(item, index) in this.$store.state.workspace.items" v-bind:type="item.type" v-bind:content="item.content" v-bind:index="index" v-bind:urlasset="urlasset" v-bind:editmode="editmode">
+        <item-render-output v-for="(item, index) in this.$store.state.workspace.items" v-bind:type="item.type"
+                            v-bind:content="item.content" v-bind:index="index" v-bind:urlasset="urlasset"
+                            v-bind:editmode="editmode">
         </item-render-output>
     </div>
 </template>
@@ -9,8 +11,7 @@
 export default {
     data() {
         return {
-            items: [
-            ],
+            items: [],
             jsonstring: JSON.stringify(this.$store.state.workspace)
         }
     },
@@ -31,14 +32,14 @@ export default {
             // this.items.push({type: type, content: null})
             // store.commit('addCustomer', { id: '2', name: 'User 2'})
             // this.$store.state.workspace.items.push({type: type, content: null})
-            this.$store.commit('pushData', { type: type, content: null})
+            this.$store.commit('pushData', {type: type, content: null})
         },
         transferData: function () {
             this.jsonstring = JSON.stringify(this.$store.state.workspace)
         }
     },
     watch: {
-        items: function(val) {
+        items: function (val) {
             this.jsonstring = JSON.stringify(this.$store.state.workspace)
         }
     }

@@ -110,7 +110,8 @@
                         </div>
                     </div>
                     <div class="my-5">
-                        <button class="w-full rounded-xl text-lg py-2 text-white font-bold bg-amber-400 hover:bg-amber-500">
+                        <button
+                            class="w-full rounded-xl text-lg py-2 text-white font-bold bg-amber-400 hover:bg-amber-500">
                             Kirim Pesan
                         </button>
                     </div>

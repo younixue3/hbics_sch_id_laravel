@@ -230,11 +230,14 @@
                                                 </div>
                                                 <div class="flex justify-between gap-x-5 p-5">
                                                     <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
-                                                       :href="dataurl['alumni'] + '/all'"><i class="fas fa-user-graduate text-xs mr-3"></i>Alumni</a>
+                                                       :href="dataurl['alumni'] + '/all'"><i
+                                                        class="fas fa-user-graduate text-xs mr-3"></i>Alumni</a>
                                                     <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
-                                                       :href="dataurl['prestasi']"><i class="fas fa-medal text-xs mr-3"></i>Pretasi</a>
+                                                       :href="dataurl['prestasi']"><i
+                                                        class="fas fa-medal text-xs mr-3"></i>Pretasi</a>
                                                     <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
-                                                       :href="dataurl['teacher-staff'] + '/all'"><i class="fas fa-chalkboard-teacher text-xs mr-3"></i>Guru</a>
+                                                       :href="dataurl['teacher-staff'] + '/all'"><i
+                                                        class="fas fa-chalkboard-teacher text-xs mr-3"></i>Guru</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -488,7 +491,8 @@
                                         <div ref="tentangkami" id="tentangkami"
                                              class="h-0 max-h-80 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden">
                                             <div class="h-full">
-                                                <div class="grid grid-rows-5 h-full items-center justify-items-stretch p-0.5">
+                                                <div
+                                                    class="grid grid-rows-5 h-full items-center justify-items-stretch p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
                                                        :href="dataurl['filosofi-pendidikan']">
                                                         <div class="flex gap-x-5 text-center">
@@ -524,7 +528,8 @@
                                                                 </div>
                                                                 <div
                                                                     class="text-xs font-light break-words leading-3 text-black">
-                                                                    Sejarah dibangunnya Sekolah Harapan Bangsa hingga saat ini
+                                                                    Sejarah dibangunnya Sekolah Harapan Bangsa hingga
+                                                                    saat ini
                                                                 </div>
                                                             </div>
                                                         </div>

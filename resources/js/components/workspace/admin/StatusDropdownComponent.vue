@@ -7,7 +7,7 @@
             <option value="publish">Publish</option>
         </select>
         <div class="my-auto mx-5">
-            <div type="text" v-if="show" class="px-2 rounded-full font-bold" :class="color">{{status}}</div>
+            <div type="text" v-if="show" class="px-2 rounded-full font-bold" :class="color">{{ status }}</div>
         </div>
     </div>
 </template>

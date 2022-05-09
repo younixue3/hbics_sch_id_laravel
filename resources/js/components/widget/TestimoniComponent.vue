@@ -29,6 +29,7 @@
 
 <script>
 import axios from "axios";
+
 export default {
     data() {
         return {
@@ -38,8 +39,7 @@ export default {
             pathfoto: window.location.origin + '/Upload/foto_komunitas/',
             arrTestimoni: {
                 count: 1,
-                person: [
-                ]
+                person: []
             },
         }
     },
@@ -49,7 +49,7 @@ export default {
             .get(this.$props.get_req)
             .then(response => (
                 this.arrTestimoni.person = response.data,
-                this.data = this.arrTestimoni.person[0]
+                    this.data = this.arrTestimoni.person[0]
             ))
         this.data = this.arrTestimoni.person[0]
     },

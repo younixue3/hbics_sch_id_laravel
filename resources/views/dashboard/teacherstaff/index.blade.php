@@ -33,8 +33,12 @@
                                 {{$value->profesi}}
                             </td>
                             <td class="py-1">
-                                <button-show-component img="{{asset('Upload/foto_teacher_staff/'. $value->picture)}}" user="{{route('dashboard.teacher_staff.show', $value->id)}}"
-                                                       delete_req="{{route('dashboard.teacher_staff.destroy', $value->id)}}" edit_req="{{route('dashboard.teacher_staff.update', $value->id)}}" change_password_req="{{route('dashboard.teacher_staff.update', $value->id)}}" remove_superadmin="{{route('dashboard.teacher_staff.update', $value->id)}}"></button-show-component>
+                                <button-show-component img="{{asset('Upload/foto_teacher_staff/'. $value->picture)}}"
+                                                       user="{{route('dashboard.teacher_staff.show', $value->id)}}"
+                                                       delete_req="{{route('dashboard.teacher_staff.destroy', $value->id)}}"
+                                                       edit_req="{{route('dashboard.teacher_staff.update', $value->id)}}"
+                                                       change_password_req="{{route('dashboard.teacher_staff.update', $value->id)}}"
+                                                       remove_superadmin="{{route('dashboard.teacher_staff.update', $value->id)}}"></button-show-component>
                             </td>
                         </tr>
                     @empty
@@ -63,19 +67,22 @@
             <label class="block font-medium text-gray-700">
                 First Name
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="first_name">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="first_name">
         </div>
         <div class="col-span-1">
             <label class="block font-medium text-gray-700">
                 Last Name
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="last_name">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="last_name">
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Profesi
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="profesi">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="profesi">
         </div>
         <div class="row-span-2">
             <label class="block font-medium text-gray-700">
@@ -95,13 +102,15 @@
             <label class="block font-medium text-gray-700">
                 Email
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="email" name="email">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="email" name="email">
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Area
             </label>
-            <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
+            <select name="area"
+                    class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
                 <option disabled selected>--- Pilih Area ---</option>
                 <option>hhk</option>
                 <option>sdk</option>

@@ -1,5 +1,6 @@
 <template>
-    <form id="formRemoveSuperadmin" type="hidden" :action="$store.state.modalvalidation.url.url_req" name="formRemoveSuperadmin" class=""
+    <form id="formRemoveSuperadmin" type="hidden" :action="$store.state.modalvalidation.url.url_req"
+          name="formRemoveSuperadmin" class=""
           method="POST">
         <input type="hidden" name="_token" :value="$store.state.csrf">
         <input type="hidden" name="_method" value="put">

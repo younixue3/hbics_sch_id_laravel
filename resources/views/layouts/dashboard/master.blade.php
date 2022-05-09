@@ -7,7 +7,8 @@
     <link rel="icon" type="image/png" href="{{asset('assets/logo/logo_colorfull.png')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script src="https://kit.fontawesome.com/6fd3995802.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.tiny.cloud/1/myd6mneo80f63ct1oaplcds41f0tlhaveajnuxiiaenjdgol/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/myd6mneo80f63ct1oaplcds41f0tlhaveajnuxiiaenjdgol/tinymce/5/tinymce.min.js"
+            referrerpolicy="origin"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>

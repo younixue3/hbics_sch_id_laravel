@@ -28,58 +28,154 @@
             <div class="text-center mx-20">
                 <accordion-component title="Sentra Balok">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor
+                        consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus
+                        massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed,
+                        posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus
+                        sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor
+                        elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
 
-                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget
+                        fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet.
+                        Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor
+                        ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque
+                        finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed
+                        rhoncus porttitor molestie.
                     </p>
                 </accordion-component>
                 <accordion-component title="Sentra Balok">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor
+                        consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus
+                        massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed,
+                        posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus
+                        sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor
+                        elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
 
-                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget
+                        fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet.
+                        Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor
+                        ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque
+                        finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed
+                        rhoncus porttitor molestie.
                     </p>
                 </accordion-component>
                 <accordion-component title="Sentra Balok">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor
+                        consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus
+                        massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed,
+                        posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus
+                        sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor
+                        elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
 
-                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget
+                        fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet.
+                        Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor
+                        ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque
+                        finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed
+                        rhoncus porttitor molestie.
                     </p>
                 </accordion-component>
                 <accordion-component title="Sentra Balok">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor
+                        consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus
+                        massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed,
+                        posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus
+                        sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor
+                        elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
 
-                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget
+                        fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet.
+                        Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor
+                        ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque
+                        finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed
+                        rhoncus porttitor molestie.
                     </p>
                 </accordion-component>
                 <accordion-component title="Sentra Balok">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor
+                        consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus
+                        massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed,
+                        posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus
+                        sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor
+                        elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
 
-                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget
+                        fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet.
+                        Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor
+                        ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque
+                        finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed
+                        rhoncus porttitor molestie.
                     </p>
                 </accordion-component>
                 <accordion-component title="Sentra Balok">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor
+                        consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus
+                        massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed,
+                        posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus
+                        sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor
+                        elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
 
-                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget
+                        fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet.
+                        Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor
+                        ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque
+                        finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed
+                        rhoncus porttitor molestie.
                     </p>
                 </accordion-component>
                 <accordion-component title="Sentra Balok">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor
+                        consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus
+                        massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed,
+                        posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus
+                        sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor
+                        elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
 
-                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget
+                        fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet.
+                        Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor
+                        ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque
+                        finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed
+                        rhoncus porttitor molestie.
                     </p>
                 </accordion-component>
                 <accordion-component title="Sentra Balok">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed, posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium elit in leo tempor
+                        consequat. Praesent eu venenatis lorem. Mauris lacus dui, semper at elit nec, vulputate dapibus
+                        massa. Etiam nec erat eros. Phasellus nec est ex. Curabitur felis nunc, efficitur at dui sed,
+                        posuere rutrum lorem. Curabitur ac dignissim lorem, quis tristique odio. Sed convallis faucibus
+                        sapien eu pretium. In eleifend sapien ut est consectetur feugiat. Pellentesque finibus tempor
+                        elit sed blandit. Nulla dignissim diam vitae erat imperdiet, in fermentum enim imperdiet.
 
-                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet. Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed rhoncus porttitor molestie.
+                        In vulputate ante nunc, quis tempor urna lobortis eu. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet euismod nibh, eget
+                        fermentum sem. Curabitur fringilla nulla convallis magna blandit, et sodales massa aliquet.
+                        Etiam eu eros urna. Nunc pharetra ac enim id ultricies. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Vivamus justo dui, tincidunt id tortor
+                        ultrices, lacinia accumsan eros. Duis pellentesque mi nec mi malesuada laoreet. Pellentesque
+                        finibus interdum aliquet. Cras urna lorem, sodales vitae lectus eget, tincidunt mattis nisl. Sed
+                        rhoncus porttitor molestie.
                     </p>
                 </accordion-component>
             </div>

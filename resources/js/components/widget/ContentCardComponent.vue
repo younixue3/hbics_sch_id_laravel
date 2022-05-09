@@ -1,9 +1,10 @@
 <template>
     <a @mouseover="onHover()" @mouseleave="onLeave()" :href="urlshow"
-         :class="[column ? 'md:col-span-2' : 'md:col-span-1', rows ? 'md:row-span-2' : 'md:row-span-1']"
-         class="relative bg-cover bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg flex justify-end"
-         :style="{ backgroundImage: `url('${windowspath + item.thumbnail}')` }">
-        <video class="rounded-2xl absolute w-full h-full z-0 object-cover" v-if="item.type = 'video'" autoplay loop muted>
+       :class="[column ? 'md:col-span-2' : 'md:col-span-1', rows ? 'md:row-span-2' : 'md:row-span-1']"
+       class="relative bg-cover bg-center transition-all ease-in-out duration-200 rounded-2xl shadow-lg flex justify-end"
+       :style="{ backgroundImage: `url('${windowspath + item.thumbnail}')` }">
+        <video class="rounded-2xl absolute w-full h-full z-0 object-cover" v-if="item.type = 'video'" autoplay loop
+               muted>
             <source :src="windowspath + item.thumbnail">
         </video>
         <div
@@ -18,10 +19,14 @@
                         </span>
                     </div>
                     <div class="font-bold leading-4 z-10 overflow-hidden"
-                          :class="[column === true && rows === true ? 'text-lg md:text-3xl lg:text-5xl' : [column ? 'text-lg md:text-3xl h-16' : '', column === false && rows === false ? 'text-lg md:text-2xl h-16' : '']]">
-                        {{ item.title }}</div>
-                    <h4 class="text-amber-500 font-semibold truncate text-xs md:text-sm leading-4">{{ item.created_at }}</h4>
-                    <p class="my-4 leading-6 overflow-hidden text-ellipsis text-lg font-light transition-all ease-in-out duration-300 h-12" :class="column === false && rows === false ? 'hidden' : ''">
+                         :class="[column === true && rows === true ? 'text-lg md:text-3xl lg:text-5xl' : [column ? 'text-lg md:text-3xl h-16' : '', column === false && rows === false ? 'text-lg md:text-2xl h-16' : '']]">
+                        {{ item.title }}
+                    </div>
+                    <h4 class="text-amber-500 font-semibold truncate text-xs md:text-sm leading-4">{{
+                            item.created_at
+                        }}</h4>
+                    <p class="my-4 leading-6 overflow-hidden text-ellipsis text-lg font-light transition-all ease-in-out duration-300 h-12"
+                       :class="column === false && rows === false ? 'hidden' : ''">
                         {{ item.title }}</p>
                 </div>
                 <div class="w-full absolute flex justify-between text-white bottom-0">
@@ -55,7 +60,7 @@ export default {
     },
     props: ['insight', 'item', 'author', 'author_pic', 'urlshow'],
     created() {
-        const months = ["Jan", "Feb", "Mar","Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         if (this.insight === '1') {
             this.column = true;
             this.rows = true;

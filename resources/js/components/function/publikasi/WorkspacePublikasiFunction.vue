@@ -1,12 +1,17 @@
 <template>
-    <form id="formPublish" :action="store_link" class="grid grid-cols-1 gap-x-5 divide-y-2 gap-y-4 my-5" enctype="multipart/form-data"
+    <form id="formPublish" :action="store_link" class="grid grid-cols-1 gap-x-5 divide-y-2 gap-y-4 my-5"
+          enctype="multipart/form-data"
           name="formChangePassword" method="POST">
-    <input type="hidden" name="_token" :value="$store.state.csrf">
-        <item-render-function v-for="(item, index) in this.$store.state.workspace.items" v-bind:type="item.type" v-bind:content="item.content" v-bind:index="index" v-bind:urlasset="urlasset" v-bind:editmode="editmode">
+        <input type="hidden" name="_token" :value="$store.state.csrf">
+        <item-render-function v-for="(item, index) in this.$store.state.workspace.items" v-bind:type="item.type"
+                              v-bind:content="item.content" v-bind:index="index" v-bind:urlasset="urlasset"
+                              v-bind:editmode="editmode">
         </item-render-function>
         <span class="flex group">
-            <div class="grid grid-cols-6 gap-5 w-0 scale-0 group-hover:w-max group-hover:scale-100 transition-all ease-in-out overflow-hidden">
-                <div class="cursor-pointer text-center bg-amber-400 w-32 rounded-md transition-all ease-in-out" @click="bindDataItems('paragraph')">
+            <div
+                class="grid grid-cols-6 gap-5 w-0 scale-0 group-hover:w-max group-hover:scale-100 transition-all ease-in-out overflow-hidden">
+                <div class="cursor-pointer text-center bg-amber-400 w-32 rounded-md transition-all ease-in-out"
+                     @click="bindDataItems('paragraph')">
                     <div>
                         <i class="fa-solid inline-block fa-paragraph"></i>
                     </div>
@@ -56,8 +61,7 @@
 export default {
     data() {
         return {
-            items: [
-            ],
+            items: [],
             jsonstring: JSON.stringify(this.$store.state.workspace)
         }
     },
@@ -82,16 +86,18 @@ export default {
             // this.$store.state.workspace.items.push({type: type, content: null})
 
             if (type === 'event') {
-                this.$store.commit('pushData', { type: type, content: {
+                this.$store.commit('pushData', {
+                    type: type, content: {
                         foto: null,
                         date: null,
                         time_start: null,
                         time_end: null,
                         title: null,
                         description: null
-                    }})
+                    }
+                })
             } else {
-                this.$store.commit('pushData', { type: type, content: null})
+                this.$store.commit('pushData', {type: type, content: null})
             }
         },
         transferData: function () {
@@ -99,7 +105,7 @@ export default {
         }
     },
     watch: {
-        items: function(val) {
+        items: function (val) {
             this.jsonstring = JSON.stringify(this.$store.state.workspace)
         }
     }

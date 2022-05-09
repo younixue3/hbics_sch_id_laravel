@@ -1,7 +1,8 @@
 <template>
     <div class="relative py-4">
         <button-gear-menu-component v-bind:items="index"></button-gear-menu-component>
-        <h1 class="text-5xl" v-if="inputMode === false" @dblclick="inputOn">{{$store.state.workspace.items[index].content}}</h1>
+        <h1 class="text-5xl" v-if="inputMode === false" @dblclick="inputOn">
+            {{ $store.state.workspace.items[index].content }}</h1>
         <form action="#" @submit="inputOff" v-if="inputMode === true">
             <input class="text-5xl w-full" v-model="$store.state.workspace.items[index].content">
             <div class="p-1 bg-yellow-200 italic text-sm">

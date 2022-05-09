@@ -3,7 +3,8 @@
         <div class="static">
             <button @click="showmenu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
         </div>
-        <div v-if="show" v-click-outside="focusout" class="absolute right-6 -translate-y-1/2 bg-white shadow-md rounded-md px-10">
+        <div v-if="show" v-click-outside="focusout"
+             class="absolute right-6 -translate-y-1/2 bg-white shadow-md rounded-md px-10">
             <div class="grid grid-cols-1">
                 <a :href="show_url" target="_blank">
                     Show
@@ -21,6 +22,7 @@
 
 <script>
 import vClickOutside from "v-click-outside";
+
 export default {
     data() {
         return {

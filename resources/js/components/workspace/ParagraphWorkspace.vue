@@ -27,7 +27,10 @@
                    }"
                 v-model="$store.state.workspace.items[index].content"
             />
-            <button class="px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer disabled:bg-gray-300 disabled:text-black" :disabled="$store.state.workspace.items[index].content == ''" @click="inputOff">Save Changes</button>
+            <button
+                class="px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer disabled:bg-gray-300 disabled:text-black"
+                :disabled="$store.state.workspace.items[index].content == ''" @click="inputOff">Save Changes
+            </button>
         </div>
     </div>
 </template>
@@ -68,13 +71,13 @@ export default {
                       necessary, as we are looking to handle it internally.
                     */
                     const id = 'blobid' + (new Date()).getTime();
-                    const blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+                    const blobCache = tinymce.activeEditor.editorUpload.blobCache;
                     const base64 = reader.result.split(',')[1];
                     const blobInfo = blobCache.create(id, file, base64);
                     blobCache.add(blobInfo);
 
                     /* call the callback and populate the Title field with the file name */
-                    cb(blobInfo.blobUri(), { title: file.name });
+                    cb(blobInfo.blobUri(), {title: file.name});
                 });
                 reader.readAsDataURL(file);
             });

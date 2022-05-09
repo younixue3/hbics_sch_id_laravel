@@ -2,10 +2,22 @@
     <div class="m-auto">
         <div class="flex">
             <div class="border-2 bg-white rounded-xl flex">
-                <button class="w-32 bg-white  rounded-l-xl" :class="tab_active === 'hhk' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'" @click="tab_active = 'hhk'">HHK</button>
-                <button class="w-32 bg-white" :class="tab_active === 'sdk' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'" @click="tab_active = 'sdk'">SDK</button>
-                <button class="w-32 bg-white" :class="tab_active === 'smpk' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'" @click="tab_active = 'smpk'">SMPK</button>
-                <button class="w-32 bg-white rounded-r-xl" :class="tab_active === 'smak' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'" @click="tab_active = 'smak'">SMAK</button>
+                <button class="w-32 bg-white  rounded-l-xl"
+                        :class="tab_active === 'hhk' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'"
+                        @click="tab_active = 'hhk'">HHK
+                </button>
+                <button class="w-32 bg-white"
+                        :class="tab_active === 'sdk' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'"
+                        @click="tab_active = 'sdk'">SDK
+                </button>
+                <button class="w-32 bg-white"
+                        :class="tab_active === 'smpk' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'"
+                        @click="tab_active = 'smpk'">SMPK
+                </button>
+                <button class="w-32 bg-white rounded-r-xl"
+                        :class="tab_active === 'smak' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'"
+                        @click="tab_active = 'smak'">SMAK
+                </button>
             </div>
         </div>
         <div class="m-auto px-10 text-left mt-10">
@@ -170,7 +182,8 @@
                         <span
                             class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full">
                         </span>
-                    <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">Pembelian Formulir Pendaftaran
+                    <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 ">Pembelian Formulir
+                        Pendaftaran
                     </h3>
                     <p class="text-base font-normal text-gray-500">Calon Siswa/i atau Wali Siswa/i membeli formulir
                         pendaftaran</p>
@@ -326,7 +339,7 @@
 <script>
 export default {
     name: "TabBarComponent",
-    data () {
+    data() {
         return {
             tab_active: 'hhk'
         }

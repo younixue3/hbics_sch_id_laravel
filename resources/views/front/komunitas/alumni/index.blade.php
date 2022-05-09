@@ -30,7 +30,8 @@
                                class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">All
                             </a>
                             <a href="{{route('alumni','hhk')}}"
-                               class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">TK & PG
+                               class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">TK
+                                & PG
                             </a>
                             <a href="{{route('alumni','sd')}}"
                                class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500"
@@ -45,10 +46,11 @@
                         </div>
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
                             @forelse($alumni as $key => $value)
-{{--                                {{dd($alumni)}}--}}
+                                {{--                                {{dd($alumni)}}--}}
                                 <div class="bg-white shadow-xl rounded-xl p-3">
-                                    <img class="md:h-80 grayscale hover:grayscale-0 w-full object-cover rounded-2xl transition-all ease-in-out duration-300"
-                                         src="{{asset('Upload/foto_komunitas/'.$value->picture)}}">
+                                    <img
+                                        class="md:h-80 grayscale hover:grayscale-0 w-full object-cover rounded-2xl transition-all ease-in-out duration-300"
+                                        src="{{asset('Upload/foto_komunitas/'.$value->picture)}}">
                                     <div class="px-3 py-2 pt-3">
                                         <div class="w-full flex justify-between mb-1">
                                             <div class="flex gap-x-1 align-text-bottom mb-2">

@@ -4,19 +4,22 @@
             <label class="block font-medium text-gray-700">
                 First Name
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="first_name" :value="$store.state.modal.modalshow.item.teacherstaff.first_name">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="first_name" :value="$store.state.modal.modalshow.item.teacherstaff.first_name">
         </div>
         <div class="col-span-1">
             <label class="block font-medium text-gray-700">
                 Last Name
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="last_name" :value="$store.state.modal.modalshow.item.teacherstaff.last_name">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="last_name" :value="$store.state.modal.modalshow.item.teacherstaff.last_name">
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Profesi
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="profesi" :value="$store.state.modal.modalshow.item.teacherstaff.profesi">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="profesi" :value="$store.state.modal.modalshow.item.teacherstaff.profesi">
         </div>
         <div class="row-span-2">
             <label class="block font-medium text-gray-700">
@@ -36,13 +39,15 @@
             <label class="block font-medium text-gray-700">
                 Email
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="email" name="email" :value="$store.state.modal.modalshow.item.teacherstaff.email">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="email" name="email" :value="$store.state.modal.modalshow.item.teacherstaff.email">
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Area
             </label>
-            <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
+            <select name="area"
+                    class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
                 <option disabled selected>--- Pilih Area ---</option>
                 <option>hhk</option>
                 <option>sdk</option>
@@ -59,14 +64,10 @@
 <script>
 export default {
     data() {
-        return {
-
-        }
+        return {}
     },
     props: [],
-    methods: {
-
-    }
+    methods: {}
 }
 </script>
 

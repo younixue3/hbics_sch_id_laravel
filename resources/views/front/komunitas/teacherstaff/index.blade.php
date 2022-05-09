@@ -7,20 +7,21 @@
             <div>
                 <div class="grid grid-cols-3 md:flex text-sm md:text-base justify-center border-b border-black">
                     <a href="{{route('teacher-staff','all')}}"
-                        class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">All
+                       class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">All
                     </a>
                     <a href="{{route('teacher-staff','hhk')}}"
-                        class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">TK & PG
+                       class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">TK
+                        & PG
                     </a>
                     <a href="{{route('teacher-staff','sdk')}}"
-                        class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500"
-                        @click="changeMenu('sd')">SD
+                       class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500"
+                       @click="changeMenu('sd')">SD
                     </a>
                     <a href="{{route('teacher-staff','smpk')}}"
-                        class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">SMP
+                       class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">SMP
                     </a>
                     <a href="{{route('teacher-staff','smak')}}"
-                        class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">SMA
+                       class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">SMA
                     </a>
                     <a href="{{route('teacher-staff','qrd')}}"
                        class="border-b-4 border-transparent focus:border-blue-600 mx-5 -mb-0.5 transition-all ease-in-out duration-500">QRD
@@ -35,8 +36,9 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
                     @forelse($teacherstaff as $key => $value)
                         <div class="bg-white shadow-xl rounded-xl p-3">
-                            <img class="md:h-80 grayscale hover:grayscale-0 w-full object-cover rounded-2xl transition-all ease-in-out duration-300"
-                                 src="{{asset('Upload/foto_teacher_staff/'.$value->picture)}}">
+                            <img
+                                class="md:h-80 grayscale hover:grayscale-0 w-full object-cover rounded-2xl transition-all ease-in-out duration-300"
+                                src="{{asset('Upload/foto_teacher_staff/'.$value->picture)}}">
                             <div class="px-3 py-2 pt-3">
                                 <div class="w-full flex justify-between mb-1">
                                     <div class="flex     gap-x-1 align-text-bottom mb-2">
@@ -46,7 +48,8 @@
                                                 {{$value->last_name}}
                                             </div>
                                             <div class="mt-10 md:mt-20">
-                                                <div class="text-sm md:text-xl font-semibol uppercase">{{$value->area}}</div>
+                                                <div
+                                                    class="text-sm md:text-xl font-semibol uppercase">{{$value->area}}</div>
                                                 <div class="text-sm md:text-lg font-normal">{{$value->profesi}}</div>
                                             </div>
                                         </div>

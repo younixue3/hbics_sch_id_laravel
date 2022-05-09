@@ -50,13 +50,16 @@
         <div class="flex py-20 px-16 md:px-20">
             <div class="md:w-2/5 relative">
                 <div class="absolute grid grid-cols-1 bottom-2 gap-3 text-3xl text-white">
-                    <a href="#" class="bg-gradient-to-br from-blue-600 to-blue-300 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
+                    <a href="#"
+                       class="bg-gradient-to-br from-blue-600 to-blue-300 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
                         <i class="m-auto fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="bg-gradient-to-br from-red-500 via-pink-600 to-yellow-400 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
+                    <a href="#"
+                       class="bg-gradient-to-br from-red-500 via-pink-600 to-yellow-400 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
                         <i class="m-auto fab fa-instagram text-4xl"></i>
                     </a>
-                    <a href="#" class="bg-gradient-to-br from-red-600 to-rose-400 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
+                    <a href="#"
+                       class="bg-gradient-to-br from-red-600 to-rose-400 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
                         <i class="m-auto fab fa-youtube"></i>
                     </a>
                 </div>

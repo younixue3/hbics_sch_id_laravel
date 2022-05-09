@@ -9,19 +9,23 @@
                     </div>
                     <span class="flex-1">Komunitas</span>
                     <span class="overflow-hidden w-8 text-center">
-                        <i class="my-auto fas fa-chevron-right transition-all duration-500 transform" :class="this.livehref.split('/').includes('komunitas') || dropactive ? 'rotate-90' : ''"></i>
+                        <i class="my-auto fas fa-chevron-right transition-all duration-500 transform"
+                           :class="this.livehref.split('/').includes('komunitas') || dropactive ? 'rotate-90' : ''"></i>
                     </span>
                 </div>
             </div>
-            <ul class="bg-gray-200 rounded-lg px-2.5 my-2 h-full truncate" :class="this.livehref.split('/').includes('komunitas') || dropactive ? '' : 'hidden'">
+            <ul class="bg-gray-200 rounded-lg px-2.5 my-2 h-full truncate"
+                :class="this.livehref.split('/').includes('komunitas') || dropactive ? '' : 'hidden'">
                 <a :href="url + '/show/alumni'">
                     <div onclick="DropDownItem()" class="my-1 cursor-pointer">
-                        <div class="ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2" :class="this.livehref.split('/').includes('alumni') ? 'bg-black' : ''"></div>
+                        <div class="ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2"
+                             :class="this.livehref.split('/').includes('alumni') ? 'bg-black' : ''"></div>
                         <span class="">Alumni</span></div>
                 </a>
                 <a :href="url + '/show/orang_tua'">
                     <div onclick="DropDownItem()" class="my-1 cursor-pointer">
-                        <div class="ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2" :class="this.livehref.split('/').includes('orang_tua') ? 'bg-black' : ''"></div>
+                        <div class="ml-1 mr-5 w-2 h-2 inline-block rounded-full ring ring-gray-800 ring-offset-2"
+                             :class="this.livehref.split('/').includes('orang_tua') ? 'bg-black' : ''"></div>
                         <span>Orang Tua</span></div>
                 </a>
             </ul>
@@ -32,7 +36,7 @@
 <script>
 export default {
     name: "NavBarDashDropdown",
-    data () {
+    data() {
         return {
             dropactive: false
         }
@@ -43,9 +47,9 @@ export default {
         url: String
     },
     methods: {
-      dropdownactive: function () {
-          this.dropactive = !this.dropactive;
-      }
+        dropdownactive: function () {
+            this.dropactive = !this.dropactive;
+        }
     },
 }
 </script>

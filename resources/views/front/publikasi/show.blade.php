@@ -5,33 +5,42 @@
     <div class="px-5 md:px-10">
 
         <div class="md:px-20 my-10 mb-32">
-            <workspace-output urlasset="{{asset('Upload/foto_content')}}" fetchdata="{{$publikasi->publikasis_contents()->first()->content()->first()->item}}"></workspace-output>
+            <workspace-output urlasset="{{asset('Upload/foto_content')}}"
+                              fetchdata="{{$publikasi->publikasis_contents()->first()->content()->first()->item}}"></workspace-output>
         </div>
         <div class="md:px-20 mb-20">
             <div class="grid grid-cols-1 gap-y-5">
                 <div class="bg-white rounded-xl shadow-lg p-5 grid grid-cols-1 gap-y-5 divide-y">
-                @forelse($comment as $key => $value)
-                    <div class="py-4">
-                        <div class="pl-7 font-bold">
-                            <span class="italic font-normal text-sm text-gray-400 mr-2">From :</span> {{$value->comment()->name}}
-                        </div>
-                        <div class="flex rounded-md shadow-md mt-2">
-                            <textarea disabled class="resize-none flex-1 block w-full rounded-md focus:outline-none px-3 pt-2 pb-1 bg-gray-100" name="comment"
+                    @forelse($comment as $key => $value)
+                        <div class="py-4">
+                            <div class="pl-7 font-bold">
+                                <span
+                                    class="italic font-normal text-sm text-gray-400 mr-2">From :</span> {{$value->comment()->name}}
+                            </div>
+                            <div class="flex rounded-md shadow-md mt-2">
+                            <textarea disabled
+                                      class="resize-none flex-1 block w-full rounded-md focus:outline-none px-3 pt-2 pb-1 bg-gray-100"
+                                      name="comment"
                                       placeholder="Search what you want to know">{{$value->comment()->comment}}</textarea>
+                            </div>
                         </div>
-                    </div>
-                @empty
-                    Komentar Kosong
-                @endforelse
+                    @empty
+                        Komentar Kosong
+                    @endforelse
                 </div>
                 <div class="bg-white rounded-xl shadow-lg p-5">
                     <label class="text-xl">Komentar Anda</label>
                     <form class="my-5" action="{{route('comment.store', $publikasi->randKey)}}">
-                        <input type="text" class="rounded-xl border shadow-md h-10 md:w-96 px-3 pt-2 pb-1 focus:outline-none" name="name" placeholder="Your Name (Can be Anonym)">
+                        <input type="text"
+                               class="rounded-xl border shadow-md h-10 md:w-96 px-3 pt-2 pb-1 focus:outline-none"
+                               name="name" placeholder="Your Name (Can be Anonym)">
                         <div class="flex rounded-xl shadow-md mt-5">
-                            <textarea class="resize-none flex-1 block border border-r-0 w-full rounded-l-xl focus:outline-none px-3 pt-2 pb-1" name="comment"
-                                      placeholder="Search what you want to know"></textarea>
-                            <button type="submit" class="inline-flex items-center rounded-r-xl border-l-0 border border-l-0 text-white w-12">
+                            <textarea
+                                class="resize-none flex-1 block border border-r-0 w-full rounded-l-xl focus:outline-none px-3 pt-2 pb-1"
+                                name="comment"
+                                placeholder="Search what you want to know"></textarea>
+                            <button type="submit"
+                                    class="inline-flex items-center rounded-r-xl border-l-0 border border-l-0 text-white w-12">
                                 <i class="far fa-paper-plane text-gray-600 text-xl m-auto"></i>
                             </button>
                         </div>

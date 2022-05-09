@@ -4,7 +4,8 @@
             <label class="block font-medium text-gray-700">
                 Name
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="name" :value="$store.state.modal.modalshow.item.prestasi.name">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="name" :value="$store.state.modal.modalshow.item.prestasi.name">
         </div>
         <div class="row-span-2">
             <label class="block font-medium text-gray-700">
@@ -24,19 +25,23 @@
             <label class="block font-medium text-gray-700">
                 Prestasi
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="prestasi" :value="$store.state.modal.modalshow.item.prestasi.prestasi">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="prestasi" :value="$store.state.modal.modalshow.item.prestasi.prestasi">
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Detail Prestasi
             </label>
-            <textarea class="resize-none flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" name="detail_prestasi" :value="$store.state.modal.modalshow.item.prestasi.detail_prestasi"></textarea>
+            <textarea
+                class="resize-none flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                name="detail_prestasi" :value="$store.state.modal.modalshow.item.prestasi.detail_prestasi"></textarea>
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Area
             </label>
-            <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
+            <select name="area"
+                    class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
                 <option disabled selected>--- Pilih Area ---</option>
                 <option>hhk</option>
                 <option>sd</option>
@@ -50,14 +55,10 @@
 <script>
 export default {
     data() {
-        return {
-
-        }
+        return {}
     },
     props: [],
-    methods: {
-
-    }
+    methods: {}
 }
 </script>
 

@@ -8,7 +8,8 @@
             <form action="{{route('dashboard.fasilitas.index')}}" class="px-5 flex">
                 <label class="mr-5">Filter</label>
                 <span class="w-32">
-                    <select name="area" class="w-full h-full focus:outline-none px-3 py-0.5 border border-r-0 border-gray-300">
+                    <select name="area"
+                            class="w-full h-full focus:outline-none px-3 py-0.5 border border-r-0 border-gray-300">
                         <option value="" disabled selected>--Area--</option>
                         <option value="" {{$request->area === '' ? 'selected' : 'selected'}}>Semua</option>
                         <option value="tk" {{$request->area === 'tk' ? 'selected' : ''}}>hhk</option>
@@ -17,8 +18,11 @@
                         <option value="sma" {{$request->area === 'sma' ? 'selected' : ''}}>sma</option>
                     </select>
                 </span>
-                <input type="text" name="description" class="w-52 focus:outline-none px-3 py-0.5 border border-r-0 border-gray-300" placeholder="description" value="{{$request->description}}">
-                <button type="submit" class="w-10 focus:outline-none px-3 py-0.5 border border-gray-300"><i class="fas fa-search"></i></button>
+                <input type="text" name="description"
+                       class="w-52 focus:outline-none px-3 py-0.5 border border-r-0 border-gray-300"
+                       placeholder="description" value="{{$request->description}}">
+                <button type="submit" class="w-10 focus:outline-none px-3 py-0.5 border border-gray-300"><i
+                        class="fas fa-search"></i></button>
             </form>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-2 px-3 mt-5">
                 @forelse($data as $key => $value)
@@ -57,7 +61,8 @@
         <label class="block font-medium text-gray-700">
             Description
         </label>
-        <input type="text" name="description" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"/>
+        <input type="text" name="description"
+               class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"/>
     </div>
     <div class="text-left text-sm">
         <label class="block font-medium text-gray-700">
@@ -86,7 +91,8 @@
         <label class="block font-medium text-gray-700">
             Description
         </label>
-        <input type="text" name="description" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"/>
+        <input type="text" name="description"
+               class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"/>
     </div>
     <div class="text-left text-sm">
         <label class="block font-medium text-gray-700">

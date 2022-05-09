@@ -45,7 +45,8 @@
                         </div>
                     </a>
                 </div>
-                <nav-bar-dash-dropdown :is_admin="is_admin ? true : false" :livehref="livehref" :url="dataurl['komunitas']"></nav-bar-dash-dropdown>
+                <nav-bar-dash-dropdown :is_admin="is_admin ? true : false" :livehref="livehref"
+                                       :url="dataurl['komunitas']"></nav-bar-dash-dropdown>
                 <div v-if="is_admin === 'true'" class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['prestasi']">
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
@@ -118,7 +119,7 @@ export default {
         }
     },
     props: {
-        is_admin : Boolean,
+        is_admin: Boolean,
     },
     created() {
         window.addEventListener('scroll', this.handleScroll);

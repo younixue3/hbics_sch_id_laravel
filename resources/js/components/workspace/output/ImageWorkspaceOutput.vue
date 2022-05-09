@@ -1,6 +1,7 @@
 <template>
     <div class="relative">
-        <img ref="previewimg" class="w-full object-cover rounded-3xl h-96" :src="this.urlasset + '/' + this.$store.state.workspace.items[this.$props.index].content">
+        <img ref="previewimg" class="w-full object-cover rounded-3xl h-96"
+             :src="this.urlasset + '/' + this.$store.state.workspace.items[this.$props.index].content">
     </div>
 </template>
 
@@ -18,8 +19,7 @@ export default {
     props: ['content', 'index', 'editmode', 'urlasset'],
     mounted() {
     },
-    methods: {
-    }
+    methods: {}
 }
 </script>
 

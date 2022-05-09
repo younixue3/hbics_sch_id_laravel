@@ -10,7 +10,8 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
                 <div class="p-5 w-full">
-                    <form id="formChangePassword" :action="$store.state.modalvalidation.url.url_req" enctype="multipart/form-data"
+                    <form id="formChangePassword" :action="$store.state.modalvalidation.url.url_req"
+                          enctype="multipart/form-data"
                           name="formChangePassword" method="POST">
                         <input type="hidden" name="_token" :value="$store.state.csrf">
                         <input type="hidden" name="_method" value="put">

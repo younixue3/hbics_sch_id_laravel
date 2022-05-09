@@ -4,7 +4,8 @@
             <label class="block font-medium text-gray-700">
                 Name
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="name" :value="$store.state.modal.modalshow.item.user.name">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="name" :value="$store.state.modal.modalshow.item.user.name">
         </div>
         <div class="row-span-2">
             <label class="block font-medium text-gray-700">
@@ -24,13 +25,15 @@
             <label class="block font-medium text-gray-700">
                 Email
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="email" name="email" :value="$store.state.modal.modalshow.item.user.email">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="email" name="email" :value="$store.state.modal.modalshow.item.user.email">
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Area
             </label>
-            <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
+            <select name="area"
+                    class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
                 <option value="" disabled selected>--- Pilih Area ---</option>
                 <option>hhk</option>
                 <option>sd</option>
@@ -42,7 +45,9 @@
             </select>
         </div>
         <div class="col-start-1 col-span-2 flex justify-self-start px-5">
-            <input class="m-auto rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="checkbox" name="is_super_admin" :checked="$store.state.modal.modalshow.item.user.is_super_admin === 1 ? true : false">
+            <input class="m-auto rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="checkbox"
+                   name="is_super_admin"
+                   :checked="$store.state.modal.modalshow.item.user.is_super_admin === 1 ? true : false">
             <label class="ml-2 w-full font-medium text-gray-700 text-sm">
                 Is Superadmin
             </label>
@@ -55,14 +60,10 @@
 <script>
 export default {
     data() {
-        return {
-
-        }
+        return {}
     },
     props: [],
-    methods: {
-
-    }
+    methods: {}
 }
 </script>
 

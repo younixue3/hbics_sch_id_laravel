@@ -76,7 +76,7 @@
                 @empty
                     Data kosong
                 @endforelse
-        </div>
+            </div>
             {{$berita->links('widgets.custom_pagination')}}
-    </div>
+        </div>
 @endsection

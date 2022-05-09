@@ -1,9 +1,7 @@
 <script>
 export default {
     data() {
-        return {
-
-        }
+        return {}
     },
     props: ['type', 'content', 'index', 'urlasset', 'editmode'],
     render: function (createElement) {
@@ -14,14 +12,14 @@ export default {
                     index: this.index
                 }
             })
-        } else if(this.type === 'paragraph') {
+        } else if (this.type === 'paragraph') {
             return createElement('paragraph-workspace-output', {
                 props: {
                     content: this.content,
                     index: this.index
                 }
             })
-        } else if(this.type === 'image') {
+        } else if (this.type === 'image') {
             return createElement('image-workspace-output', {
                 props: {
                     content: this.content,
@@ -29,7 +27,7 @@ export default {
                     urlasset: this.urlasset,
                 }
             })
-        } else if(this.type === 'video') {
+        } else if (this.type === 'video') {
             return createElement('video-workspace-output', {
                 props: {
                     content: this.content,
@@ -37,7 +35,7 @@ export default {
                     urlasset: this.urlasset,
                 }
             })
-        } else if(this.type === 'event') {
+        } else if (this.type === 'event') {
             return createElement('event-workspace-output', {
                 props: {
                     content: this.content,

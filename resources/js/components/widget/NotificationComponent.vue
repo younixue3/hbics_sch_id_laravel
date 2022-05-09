@@ -1,7 +1,8 @@
 <template>
     <div
-         class="m-3 ml-0 md:w-96 text-left border-b-8 mx-auto flex transition-all ease-in-out duration-1000 cursor-pointer" @click="closeNotif()"
-         :class="[type === 'error' ? 'bg-red-100 text-red-700 border-red-600' : type === 'success' ? 'bg-green-100 text-green-700 border-green-600' : type === 'info' ? 'bg-blue-100 text-blue-700 border-blue-600' : '', timeout ? 'opacity-100' : 'opacity-0']">
+        class="m-3 ml-0 md:w-96 text-left border-b-8 mx-auto flex transition-all ease-in-out duration-1000 cursor-pointer"
+        @click="closeNotif()"
+        :class="[type === 'error' ? 'bg-red-100 text-red-700 border-red-600' : type === 'success' ? 'bg-green-100 text-green-700 border-green-600' : type === 'info' ? 'bg-blue-100 text-blue-700 border-blue-600' : '', timeout ? 'opacity-100' : 'opacity-0']">
         <div class="my-auto w-20 text-center px-0.5">
             <i class="fas fa-info text-2xl lg:text-3xl"></i>
         </div>

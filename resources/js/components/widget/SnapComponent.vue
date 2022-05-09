@@ -6,8 +6,10 @@
                  class="snap-center scroll-mx-6 shrink-0 md:mx-2 rounded-3xl shadow-xl">
                 <!--                <img class="h-44 lg:h-56 rounded-3xl" :src="item.image" />-->
                 <div class="flex relative">
-                    <img v-if="item.type === 'img'" class="h-44 lg:h-56 w-[27rem] object-cover rounded-3xl" :class="index === 5 ? 'blur-sm' : ''" :src="asset + item.name"/>
-                    <video v-if="item.type === 'video'" class="h-44 lg:h-56 w-[27rem] object-cover rounded-3xl" :class="index === 5 ? 'blur-sm' : ''">
+                    <img v-if="item.type === 'img'" class="h-44 lg:h-56 w-[27rem] object-cover rounded-3xl"
+                         :class="index === 5 ? 'blur-sm' : ''" :src="asset + item.name"/>
+                    <video v-if="item.type === 'video'" class="h-44 lg:h-56 w-[27rem] object-cover rounded-3xl"
+                           :class="index === 5 ? 'blur-sm' : ''">
                         <source :src="asset + item.name">
                     </video>
                     <a :href="fasilitaspath" class="absolute w-full h-full flex" v-if="index === 5">
@@ -33,6 +35,7 @@
 
 <script>
 import axios from 'axios';
+
 export default {
     data() {
         return {

@@ -3,29 +3,43 @@
         <div class="grid grid-cols-3 gap-5">
             <div class="col-span-1 grid grid-cols-1 gap-3">
                 <div class="flex relative h-60">
-                    <img ref="previewimg" class="object-cover h-full rounded-xl" v-if="this.$store.state.workspace.items[index].content.foto != null">
+                    <img ref="previewimg" class="object-cover h-full rounded-xl"
+                         v-if="this.$store.state.workspace.items[index].content.foto != null">
                     <div class="absolute p-1 w-full h-full">
-                        <div class="justify-center border-2 border-gray-300 border-dashed rounded-xl h-full" :class="this.$store.state.workspace.items[index].content.foto != null ? 'opacity-0 hover:opacity-100 text-white ' : ''">
-                            <input type="file" :name="'inputFile'+indexfile" id="fileupload" @change="previewImage" :class="this.$store.state.workspace.items[index].content.foto != null ? 'file:bg-violet-50 file:text-violet-700 text-white' : 'file:bg-violet-700 file:text-violet-50'" class="block m-auto text-sm p-5 text-center h-full text-slate-500 cursor-pointer
+                        <div class="justify-center border-2 border-gray-300 border-dashed rounded-xl h-full"
+                             :class="this.$store.state.workspace.items[index].content.foto != null ? 'opacity-0 hover:opacity-100 text-white ' : ''">
+                            <input type="file" :name="'inputFile'+indexfile" id="fileupload" @change="previewImage"
+                                   :class="this.$store.state.workspace.items[index].content.foto != null ? 'file:bg-violet-50 file:text-violet-700 text-white' : 'file:bg-violet-700 file:text-violet-50'"
+                                   class="block m-auto text-sm p-5 text-center h-full text-slate-500 cursor-pointer
                                   file:py-2 file:px-4
                                   file:rounded-full file:border-0
                                   file:text-sm file:font-semibold
                         "/>
-                            <input type="hidden" :name="'nameFile'+indexfile" :value="$store.state.workspace.items[index].content.foto">
+                            <input type="hidden" :name="'nameFile'+indexfile"
+                                   :value="$store.state.workspace.items[index].content.foto">
                         </div>
                     </div>
                 </div>
                 <div class="">
                     <div class="">
-                        <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="date" name="date" v-model="$store.state.workspace.items[index].content.date">
+                        <input
+                            class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                            type="date" name="date" v-model="$store.state.workspace.items[index].content.date">
                     </div>
-                    <div class="flex justify-between w-full mt-3"><input class="flex-1 rounded-xl w-full focus:outline-none px-3 py-2 border border-gray-300" type="time" name="date" v-model="$store.state.workspace.items[index].content.time_start"> <span class="m-auto">s/d</span> <input class="flex-1 w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="time" name="date" v-model="$store.state.workspace.items[index].content.time_end"></div>
+                    <div class="flex justify-between w-full mt-3"><input
+                        class="flex-1 rounded-xl w-full focus:outline-none px-3 py-2 border border-gray-300" type="time"
+                        name="date" v-model="$store.state.workspace.items[index].content.time_start"> <span
+                        class="m-auto">s/d</span> <input
+                        class="flex-1 w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="time"
+                        name="date" v-model="$store.state.workspace.items[index].content.time_end"></div>
                 </div>
             </div>
             <div class="col-span-2">
-                <h1 class="text-3xl" v-if="inputMode === false" @dblclick="inputOn">{{$store.state.workspace.items[index].content.title}}</h1>
+                <h1 class="text-3xl" v-if="inputMode === false" @dblclick="inputOn">
+                    {{ $store.state.workspace.items[index].content.title }}</h1>
                 <form class="h-20" action="#" @submit="inputOff" v-if="inputMode === true">
-                    <input type="text" class="text-3xl w-full" v-model="$store.state.workspace.items[index].content.title">
+                    <input type="text" class="text-3xl w-full"
+                           v-model="$store.state.workspace.items[index].content.title">
                     <div class="p-1 bg-yellow-200 italic text-sm">
                         Click enter to Save
                     </div>
@@ -59,9 +73,10 @@
 
 <script>
 import Editor from '@tinymce/tinymce-vue'
+
 export default {
     name: "EventWorkspace",
-    data () {
+    data() {
         return {
             inputMode: true,
             indexfile: null

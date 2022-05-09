@@ -37,8 +37,13 @@
                                 @endforeach
                             </td>
                             <td class="py-1">
-                                <button-show-component img="{{asset('Upload/foto_profile/'. $value->foto_profile()->img)}}" user="{{route('dashboard.staff.show', $value->randKey)}}"
-                                    delete_req="{{route('dashboard.staff.destroy', $value->randKey)}}" edit_req="{{route('dashboard.staff.update', $value->randKey)}}" change_password_req="{{route('dashboard.staff.update', $value->randKey)}}" remove_superadmin="{{route('dashboard.staff.update', $value->randKey)}}"></button-show-component>
+                                <button-show-component
+                                    img="{{asset('Upload/foto_profile/'. $value->foto_profile()->img)}}"
+                                    user="{{route('dashboard.staff.show', $value->randKey)}}"
+                                    delete_req="{{route('dashboard.staff.destroy', $value->randKey)}}"
+                                    edit_req="{{route('dashboard.staff.update', $value->randKey)}}"
+                                    change_password_req="{{route('dashboard.staff.update', $value->randKey)}}"
+                                    remove_superadmin="{{route('dashboard.staff.update', $value->randKey)}}"></button-show-component>
                             </td>
                         </tr>
                     @empty
@@ -60,14 +65,16 @@
 @section('modalShow')
     <form-staff-component>
         <template v-slot:multicomponent>
-            <multiple-select-component disabled="true" class="col-start-1 col-span-2" nameoption="selectrole" valueoption="true"></multiple-select-component>
+            <multiple-select-component disabled="true" class="col-start-1 col-span-2" nameoption="selectrole"
+                                       valueoption="true"></multiple-select-component>
         </template>
     </form-staff-component>
 @endsection
 @section('modalEdit')
     <form-staff-edit-component>
         <template v-slot:multicomponent>
-            <multiple-select-component class="col-start-1 col-span-2" nameoption="selectrole" valueoption="{{$role}}"></multiple-select-component>
+            <multiple-select-component class="col-start-1 col-span-2" nameoption="selectrole"
+                                       valueoption="{{$role}}"></multiple-select-component>
         </template>
     </form-staff-edit-component>
 @endsection
@@ -77,7 +84,8 @@
             <label class="block font-medium text-gray-700">
                 Name
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text" name="name">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="text" name="name">
         </div>
         <div class="row-span-2">
             <label class="block font-medium text-gray-700">
@@ -97,13 +105,15 @@
             <label class="block font-medium text-gray-700">
                 Email
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="email" name="email">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="email" name="email">
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Area
             </label>
-            <select name="area" class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
+            <select name="area"
+                    class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
                 <option disabled selected>--- Pilih Area ---</option>
                 <option>hhk</option>
                 <option>sd</option>
@@ -118,21 +128,25 @@
             <label class="block font-medium text-gray-700">
                 Password
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="password" name="password">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="password" name="password">
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Password
             </label>
-            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="password" name="password_confirmation">
+            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
+                   type="password" name="password_confirmation">
         </div>
         <div class="col-start-1 col-span-2 flex justify-self-start px-5">
-            <input class="m-auto rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="checkbox" name="is_super_admin">
+            <input class="m-auto rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="checkbox"
+                   name="is_super_admin">
             <label class="ml-2 w-full font-medium text-gray-700 text-sm">
                 Is Superadmin
             </label>
         </div>
-        <multiple-select-component class="col-start-1 col-span-2" nameoption="selectrole" valueoption="{{$role}}"></multiple-select-component>
+        <multiple-select-component class="col-start-1 col-span-2" nameoption="selectrole"
+                                   valueoption="{{$role}}"></multiple-select-component>
     </div>
 @endsection
 @section('notification')

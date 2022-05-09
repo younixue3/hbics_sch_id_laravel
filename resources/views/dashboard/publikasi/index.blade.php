@@ -1,7 +1,8 @@
 @extends('layouts.dashboard.master')
 @section('title', 'Publikasi')
 @section('content')
-    <a href="{{route('dashboard.publikasi.create')}}" class="bg-green-400 rounded-lg w-20 px-3 flex justify-between text-center"><span>Add</span><i
+    <a href="{{route('dashboard.publikasi.create')}}"
+       class="bg-green-400 rounded-lg w-20 px-3 flex justify-between text-center"><span>Add</span><i
             class="fa-solid fa-plus my-auto"></i></a>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
         <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12">
@@ -20,8 +21,8 @@
                     </thead>
                     <tbody class="bg-white divide-y-2 divide-gray-200">
                     @forelse($publikasis as $key => $value)
-{{--                        {{$value->users_update()->staff()}}--}}
-{{--                        {{dd($value->user_update()->staff())}}--}}
+                        {{--                        {{$value->users_update()->staff()}}--}}
+                        {{--                        {{dd($value->user_update()->staff())}}--}}
                         <tr class="hover:bg-blue-50 transition-all duration-200">
                             <td class="py-1 pl-4">
                                 <div class="flex items-center">
@@ -36,28 +37,32 @@
                                          src="{{asset('Upload/foto_profile/'.$value->users_create()->user()->foto_profile()->img)}}"
                                          alt="">
                                     <div class="text-left my-auto">
-                                        <div class="text-sm text-gray-500">{{$value->users_create()->user()->name}}</div>
+                                        <div
+                                            class="text-sm text-gray-500">{{$value->users_create()->user()->name}}</div>
                                     </div>
                                 </div>
                             </td>
                             <td class="py-1">
                                 @foreach($value->kategoris_publikasi()->get() as $key => $item)
-                                <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5">
+                                    <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5">
                                     {{$item->kategoris()->name}}
                                 </span>
                                 @endforeach
                             </td>
                             <td class="py-1">
                                 @if($value->status === 'publish')
-                                    <span class="bg-green-500 hover:bg-green-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                    <span
+                                        class="bg-green-500 hover:bg-green-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
                                         {{$value->status}}
                                     </span>
                                 @elseif($value->status === 'reject')
-                                    <span class="bg-red-500 hover:bg-red-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                    <span
+                                        class="bg-red-500 hover:bg-red-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
                                         {{$value->status}}
                                     </span>
                                 @elseif($value->status === 'draft')
-                                    <span class="bg-yellow-500 hover:bg-yellow-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                    <span
+                                        class="bg-yellow-500 hover:bg-yellow-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
                                         {{$value->status}}
                                     </span>
                                 @endif
@@ -75,7 +80,7 @@
                                              alt="">
                                         <div class="text-left my-auto text-xs">
                                             <div class="">
-                                                    {{$value->users_update()->user()->name}}
+                                                {{$value->users_update()->user()->name}}
                                             </div>
                                         </div>
                                         )
@@ -87,7 +92,10 @@
                                 </div>
                             </td>
                             <td class="py-1 px-3">
-                                <button-dot-menu-component delete_req="{{route('dashboard.publikasi.destroy', $value->randKey)}}" edit_url="{{route('dashboard.publikasi.edit', $value->randKey)}}" show_url="{{route('publikasi.show', $value->randKey)}}">
+                                <button-dot-menu-component
+                                    delete_req="{{route('dashboard.publikasi.destroy', $value->randKey)}}"
+                                    edit_url="{{route('dashboard.publikasi.edit', $value->randKey)}}"
+                                    show_url="{{route('publikasi.show', $value->randKey)}}">
                                 </button-dot-menu-component>
                             </td>
                         </tr>
