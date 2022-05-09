@@ -83,18 +83,18 @@ export default {
         }
     },
     created() {
-        this.$store.state.workspace.items[this.$props.index].content = {
-            foto: null,
-            date: null,
-            time_start: null,
-            time_end: null,
-            title: null,
-            description: null
-        }
+        // this.$store.state.workspace.items[this.$props.index].content = {
+        //     foto: null,
+        //     date: null,
+        //     time_start: null,
+        //     time_end: null,
+        //     title: null,
+        //     description: null
+        // }
     },
     methods: {
         previewImage: function () {
-            this.$store.state.workspace.items[this.$props.index].content = Math.random().toString(16).substr(2, 8) + '_' + event.target.files[0].name
+            this.$store.state.workspace.items[this.$props.index].content.foto = Math.random().toString(16).substr(2, 8) + '_' + event.target.files[0].name
             const reader = new FileReader();
             reader.readAsDataURL(event.target.files[0]);
             reader.onload = () => {

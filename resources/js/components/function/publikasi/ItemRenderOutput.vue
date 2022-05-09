@@ -37,6 +37,14 @@ export default {
                     urlasset: this.urlasset,
                 }
             })
+        } else if(this.type === 'event') {
+            return createElement('event-workspace-output', {
+                props: {
+                    content: this.content,
+                    index: this.index,
+                    urlasset: this.urlasset,
+                }
+            })
         }
     }
 }

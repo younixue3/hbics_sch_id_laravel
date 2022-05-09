@@ -67,9 +67,11 @@ export default {
             this.$store.state.workspace = JSON.parse(this.fetchdata)
             // this.items = this.$store.state.workspace.item
         }
+        console.log(editmode === 'true')
         if (editmode === 'true') {
             for (var item in this.$store.state.workspace.items) {
                 this.$store.state.workspace.file++
+                console.log(this.$store.state.workspace.file++)
             }
         }
     },
@@ -79,6 +81,16 @@ export default {
             // store.commit('addCustomer', { id: '2', name: 'User 2'})
             // this.$store.state.workspace.items.push({type: type, content: null})
             this.$store.commit('pushData', { type: type, content: null})
+            if (type === 'event') {
+                this.$store.commit('pushData', { type: type, content: {
+                        foto: null,
+                        date: null,
+                        time_start: null,
+                        time_end: null,
+                        title: null,
+                        description: null
+                    }})
+            }
         },
         transferData: function () {
             this.jsonstring = JSON.stringify(this.$store.state.workspace)
