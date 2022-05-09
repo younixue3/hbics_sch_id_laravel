@@ -18,7 +18,7 @@
                         <option value="sma" {{$request->area === 'sma' ? 'selected' : ''}}>sma</option>
                     </select>
                 </span>
-                        <input type="text" name="description" class="w-52 focus:outline-none px-3 py-0.5 border border-r-0 border-gray-300" placeholder="description" value="{{$request->description}}">
+                        <input type="text" name="description" class="w-52 focus:outline-none px-3 py-0.5 border border-r-0 border-gray-300" placeholder="Search" value="{{$request->description}}">
                         <button type="submit" class="w-10 focus:outline-none px-3 py-0.5 border border-gray-300"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
