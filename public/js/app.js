@@ -3096,11 +3096,6 @@ __webpack_require__.r(__webpack_exports__);
       // this.items.push({type: type, content: null})
       // store.commit('addCustomer', { id: '2', name: 'User 2'})
       // this.$store.state.workspace.items.push({type: type, content: null})
-      this.$store.commit('pushData', {
-        type: type,
-        content: null
-      });
-
       if (type === 'event') {
         this.$store.commit('pushData', {
           type: type,
@@ -3112,6 +3107,11 @@ __webpack_require__.r(__webpack_exports__);
             title: null,
             description: null
           }
+        });
+      } else {
+        this.$store.commit('pushData', {
+          type: type,
+          content: null
         });
       }
     },
