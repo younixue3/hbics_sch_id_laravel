@@ -2775,6 +2775,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -2804,6 +2805,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -2955,6 +2957,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
 //
 //
 //
@@ -3146,6 +3150,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4175,6 +4184,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -4229,6 +4239,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
 //
 //
 //
@@ -4456,6 +4470,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5018,6 +5037,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5092,6 +5119,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -5294,6 +5322,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -5366,6 +5396,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5861,6 +5904,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -5882,6 +5931,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6101,6 +6155,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -6270,6 +6337,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -6291,6 +6363,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6443,6 +6529,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -6568,6 +6655,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {};
@@ -6589,6 +6681,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6677,6 +6787,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tinymce/tinymce-vue */ "./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/index.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6835,6 +6959,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -6947,6 +7074,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -7023,6 +7153,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -7055,6 +7186,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var v_click_outside__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! v-click-outside */ "./node_modules/v-click-outside/dist/v-click-outside.umd.js");
 /* harmony import */ var v_click_outside__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(v_click_outside__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -7238,6 +7374,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "EventWorkspaceOutput",
   data: function data() {
@@ -7261,6 +7408,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -15793,7 +15941,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\n                                                                Sejarah dibangunnya Sekolah Harapan Bangsa hingga saat ini\n                                                            "
+              "\n                                                                Sejarah dibangunnya Sekolah Harapan Bangsa hingga\n                                                                saat ini\n                                                            "
             ),
           ]
         ),
@@ -16683,7 +16831,13 @@ var render = function () {
                         ],
                   ],
                 },
-                [_vm._v("\n                    " + _vm._s(_vm.item.title))]
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(_vm.item.title) +
+                      "\n                "
+                  ),
+                ]
               ),
               _vm._v(" "),
               _c(
@@ -17425,7 +17579,7 @@ var render = function () {
                 },
               },
             },
-            [_vm._v(_vm._s(item.name))]
+            [_vm._v(_vm._s(item.name) + "\n        ")]
           )
         }),
         _vm._v(" "),
@@ -17445,7 +17599,7 @@ var render = function () {
                 },
               },
             },
-            [_vm._v(_vm._s(item.name))]
+            [_vm._v(_vm._s(item.name) + "\n        ")]
           )
         }),
       ],
@@ -17801,7 +17955,7 @@ var render = function () {
               },
             },
           },
-          [_vm._v("HHK")]
+          [_vm._v("HHK\n            ")]
         ),
         _vm._v(" "),
         _c(
@@ -17818,7 +17972,7 @@ var render = function () {
               },
             },
           },
-          [_vm._v("SDK")]
+          [_vm._v("SDK\n            ")]
         ),
         _vm._v(" "),
         _c(
@@ -17835,7 +17989,7 @@ var render = function () {
               },
             },
           },
-          [_vm._v("SMPK")]
+          [_vm._v("SMPK\n            ")]
         ),
         _vm._v(" "),
         _c(
@@ -17852,7 +18006,7 @@ var render = function () {
               },
             },
           },
-          [_vm._v("SMAK")]
+          [_vm._v("SMAK\n            ")]
         ),
       ]),
     ]),
@@ -18351,7 +18505,11 @@ var staticRenderFns = [
           staticClass:
             "flex items-center mb-1 text-lg font-semibold text-gray-900 ",
         },
-        [_vm._v("Pembelian Formulir Pendaftaran\n                ")]
+        [
+          _vm._v(
+            "Pembelian Formulir\n                    Pendaftaran\n                "
+          ),
+        ]
       ),
       _vm._v(" "),
       _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
@@ -19419,7 +19577,7 @@ var render = function () {
               attrs: { type: "button" },
               on: { click: _vm.openModalEdit },
             },
-            [_vm._v("Edit Staff")]
+            [_vm._v("\n                Edit Staff\n            ")]
           ),
           _vm._v(" "),
           _c(
@@ -19434,7 +19592,7 @@ var render = function () {
                 },
               },
             },
-            [_vm._v("Delete Staff")]
+            [_vm._v("\n                Delete Staff\n            ")]
           ),
         ]),
       ]),
@@ -19797,7 +19955,7 @@ var render = function () {
               attrs: { type: "button" },
               on: { click: _vm.openModalEdit },
             },
-            [_vm._v("Edit Staff")]
+            [_vm._v("\n                Edit Staff\n            ")]
           ),
           _vm._v(" "),
           _c(
@@ -19812,7 +19970,7 @@ var render = function () {
                 },
               },
             },
-            [_vm._v("Delete Staff")]
+            [_vm._v("\n                Delete Staff\n            ")]
           ),
         ]),
       ]),
@@ -20293,7 +20451,7 @@ var render = function () {
               attrs: { type: "button" },
               on: { click: _vm.openModalEdit },
             },
-            [_vm._v("Edit Staff")]
+            [_vm._v("\n                Edit Staff\n            ")]
           ),
           _vm._v(" "),
           _c(
@@ -20308,7 +20466,7 @@ var render = function () {
                 },
               },
             },
-            [_vm._v("Delete Staff")]
+            [_vm._v("\n                Delete Staff\n            ")]
           ),
         ]),
       ]),
@@ -20340,7 +20498,11 @@ var render = function () {
                   attrs: { type: "button" },
                   on: { click: _vm.openModalChangePassword },
                 },
-                [_vm._v("Change Password")]
+                [
+                  _vm._v(
+                    "\n                    Change Password\n                "
+                  ),
+                ]
               ),
               _vm._v(" "),
               _vm.$store.state.modal.modalshow.item.user.is_super_admin
@@ -20352,7 +20514,11 @@ var render = function () {
                       attrs: { type: "button" },
                       on: { click: _vm.openModalRemoveSuperadmin },
                     },
-                    [_vm._v("Remove Superadmin Permission")]
+                    [
+                      _vm._v(
+                        "\n                    Remove Superadmin Permission\n                "
+                      ),
+                    ]
                   )
                 : _vm._e(),
             ]),
@@ -20562,9 +20728,10 @@ var render = function () {
               { staticClass: "text-3xl", on: { dblclick: _vm.inputOn } },
               [
                 _vm._v(
-                  _vm._s(
-                    _vm.$store.state.workspace.items[_vm.index].content.title
-                  )
+                  "\n                " +
+                    _vm._s(
+                      _vm.$store.state.workspace.items[_vm.index].content.title
+                    )
                 ),
               ]
             )
@@ -20912,7 +21079,7 @@ var render = function () {
                   },
                   on: { click: _vm.inputOff },
                 },
-                [_vm._v("Save Changes")]
+                [_vm._v("Save Changes\n        ")]
               ),
             ],
             1
@@ -20953,7 +21120,10 @@ var render = function () {
       _vm._v(" "),
       _vm.inputMode === false
         ? _c("h1", { staticClass: "text-5xl", on: { dblclick: _vm.inputOn } }, [
-            _vm._v(_vm._s(_vm.$store.state.workspace.items[_vm.index].content)),
+            _vm._v(
+              "\n        " +
+                _vm._s(_vm.$store.state.workspace.items[_vm.index].content)
+            ),
           ])
         : _vm._e(),
       _vm._v(" "),

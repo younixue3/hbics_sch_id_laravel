@@ -73,7 +73,7 @@ class StaffController extends Controller
                     'img' => $filename['filename'],
                 ]);
             };
-            if($request->selectrole !== '[object Object]') {
+            if ($request->selectrole !== '[object Object]') {
                 UsersRoles::where('user', $user->first()->id)->delete();
                 foreach (json_decode($request->selectrole) as $value) {
                     $userRole = new UsersRoles();

@@ -31,7 +31,7 @@ class getUrl
             'acara' => route('acara'),
             'artikel' => route('artikel'),
             'dashboard' => route('dashboard.index'),
-            'teacher-staff' => route('teacher-staff',''),
+            'teacher-staff' => route('teacher-staff', ''),
             'filosofi-pendidikan' => route('filosofi-pendidikan'),
             'sejarah' => route('sejarah'),
             'visi-misi' => route('visi-misi'),

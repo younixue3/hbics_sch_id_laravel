@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class FotoProfile extends Model
 {
     use HasFactory;
+
     protected $table = 'foto_profile';
 }

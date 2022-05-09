@@ -47,7 +47,7 @@ class PublikasiController extends Controller
 
     public function show_data($key)
     {
-        $cardpublikasi = Publikasis::where('randKey', '!=',$key)->get()->take(4);
+        $cardpublikasi = Publikasis::where('randKey', '!=', $key)->get()->take(4);
         $publikasi = Publikasis::where('randKey', $key)->firstOrFail();
         $comment = $publikasi->publikasis_comments();
         $compact = compact('publikasi', 'cardpublikasi', 'comment');

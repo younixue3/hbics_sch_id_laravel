@@ -59,13 +59,13 @@ class PublikasiController extends Controller
                 $userRole->save();
             }
         }
-        if($request->inputFile1 !== null) {
+        if ($request->inputFile1 !== null) {
 //            dd('masuk');
 //        dd($i = 1 > intval($request->totalfile));
             for ($i = 1; $i <= intval($request->totalfile);) {
-                if ($request['inputFile'.$i] !== null) {
+                if ($request['inputFile' . $i] !== null) {
 //                    dd('dalam');
-                    Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['nameFile'.$i]);
+                    Storage::disk('upload')->putFileAs('foto_content', $request['inputFile' . $i], $request['nameFile' . $i]);
 
                 }
                 $i++;
@@ -143,8 +143,8 @@ class PublikasiController extends Controller
             }
         }
         for ($i = 1; $i <= intval($request->totalfile);) {
-            if ($request['inputFile'.$i] !== null) {
-                Storage::disk('upload')->putFileAs('foto_content', $request['inputFile'.$i], $request['nameFile'.$i]);
+            if ($request['inputFile' . $i] !== null) {
+                Storage::disk('upload')->putFileAs('foto_content', $request['inputFile' . $i], $request['nameFile' . $i]);
             }
             $i++;
         }

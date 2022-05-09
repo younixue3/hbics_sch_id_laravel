@@ -14,7 +14,7 @@ class AddDescriptionOnFasilitas extends Migration
     public function up()
     {
         Schema::table('fasilitas', function (Blueprint $table) {
-           $table->text('description')->after('name');
+            $table->text('description')->after('name');
         });
     }
 

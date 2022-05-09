@@ -31,12 +31,14 @@ class PrestasiController extends Controller
         $prestasi->area = $request->area;
         $prestasi->save();
     }
+
     public function show_data($id)
     {
         $prestasi = Prestasis::findOrFail($id);
         $compact = compact('prestasi');
         return $compact;
     }
+
     public function update_data($request, $id)
     {
         $prestasi = Prestasis::findOrFail($id);
@@ -53,6 +55,7 @@ class PrestasiController extends Controller
         };
         $prestasi->save();
     }
+
     public function destroy_data($id)
     {
         return Prestasis::findOrFail($id)->delete();

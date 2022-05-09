@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class PublikasisComments extends Model
 {
     use HasFactory, SoftDeletes;
+
     protected $guarded = [];
 
     public function comment()

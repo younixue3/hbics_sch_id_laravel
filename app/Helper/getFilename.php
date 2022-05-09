@@ -8,7 +8,7 @@ class getFilename
 {
     public function __construct()
     {
-        return New getFilename();
+        return new getFilename();
     }
 
     public static function getFilename($request)
@@ -16,7 +16,7 @@ class getFilename
         $name = Str::random(40);
         $format = $request->fileupload->extension();
         $file = [
-            'filename' => $name.'.'.$format,
+            'filename' => $name . '.' . $format,
             'type' => $format === 'mp4' ? 'video' : 'img'
         ];
         return $file;

@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Publikasis extends Model
 {
     use HasFactory, SoftDeletes;
+
     protected $table = 'publikasis';
     protected $guarded = [];
 

@@ -9,5 +9,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Prestasis extends Model
 {
     use HasFactory, SoftDeletes;
+
     protected $table = 'prestasis';
 }
