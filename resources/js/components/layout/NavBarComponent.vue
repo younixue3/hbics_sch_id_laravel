@@ -232,7 +232,7 @@
                                                     <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
                                                        :href="dataurl['alumni'] + '/all'"><i class="fas fa-user-graduate text-xs mr-3"></i>Alumni</a>
                                                     <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
-                                                       href="#"><i class="fas fa-medal text-xs mr-3"></i>Pretasi</a>
+                                                       :href="dataurl['prestasi']"><i class="fas fa-medal text-xs mr-3"></i>Pretasi</a>
                                                     <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
                                                        :href="dataurl['teacher-staff'] + '/all'"><i class="fas fa-chalkboard-teacher text-xs mr-3"></i>Guru</a>
                                                 </div>

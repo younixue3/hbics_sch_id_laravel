@@ -13679,7 +13679,25 @@ var render = function () {
                                                 ]
                                               ),
                                               _vm._v(" "),
-                                              _vm._m(9),
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass:
+                                                    "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
+                                                  attrs: {
+                                                    href: _vm.dataurl[
+                                                      "prestasi"
+                                                    ],
+                                                  },
+                                                },
+                                                [
+                                                  _c("i", {
+                                                    staticClass:
+                                                      "fas fa-medal text-xs mr-3",
+                                                  }),
+                                                  _vm._v("Pretasi"),
+                                                ]
+                                              ),
                                               _vm._v(" "),
                                               _c(
                                                 "a",
@@ -13809,7 +13827,7 @@ var render = function () {
                                                 _vm.dataurl["alumni"] + "/all",
                                             },
                                           },
-                                          [_vm._m(10)]
+                                          [_vm._m(9)]
                                         ),
                                         _vm._v(" "),
                                         _c(
@@ -13821,7 +13839,7 @@ var render = function () {
                                               href: _vm.dataurl["orang-tua"],
                                             },
                                           },
-                                          [_vm._m(11)]
+                                          [_vm._m(10)]
                                         ),
                                         _vm._v(" "),
                                         _c(
@@ -13835,7 +13853,7 @@ var render = function () {
                                                 "/all",
                                             },
                                           },
-                                          [_vm._m(12)]
+                                          [_vm._m(11)]
                                         ),
                                       ]
                                     ),
@@ -13902,7 +13920,7 @@ var render = function () {
                                                 href: _vm.dataurl["berita"],
                                               },
                                             },
-                                            [_vm._m(13)]
+                                            [_vm._m(12)]
                                           ),
                                           _vm._v(" "),
                                           _c(
@@ -13914,7 +13932,7 @@ var render = function () {
                                                 href: _vm.dataurl["acara"],
                                               },
                                             },
-                                            [_vm._m(14)]
+                                            [_vm._m(13)]
                                           ),
                                           _vm._v(" "),
                                           _c(
@@ -13926,12 +13944,12 @@ var render = function () {
                                                 href: _vm.dataurl["artikel"],
                                               },
                                             },
-                                            [_vm._m(15)]
+                                            [_vm._m(14)]
                                           ),
                                         ]
                                       ),
                                       _vm._v(" "),
-                                      _vm._m(16),
+                                      _vm._m(15),
                                     ]
                                   ),
                                 ]
@@ -14020,7 +14038,7 @@ var render = function () {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(17),
+                                                _vm._m(16),
                                               ]
                                             ),
                                           ]
@@ -14064,7 +14082,7 @@ var render = function () {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(18),
+                                                _vm._m(17),
                                               ]
                                             ),
                                           ]
@@ -14108,7 +14126,7 @@ var render = function () {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(19),
+                                                _vm._m(18),
                                               ]
                                             ),
                                           ]
@@ -14154,7 +14172,7 @@ var render = function () {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(20),
+                                                _vm._m(19),
                                               ]
                                             ),
                                           ]
@@ -14198,7 +14216,7 @@ var render = function () {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(21),
+                                                _vm._m(20),
                                               ]
                                             ),
                                           ]
@@ -14960,7 +14978,7 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(22),
+            _vm._m(21),
           ]
         ),
       ]
@@ -15306,20 +15324,6 @@ var staticRenderFns = [
           ]
         ),
       ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass:
-          "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
-        attrs: { href: "#" },
-      },
-      [_c("i", { staticClass: "fas fa-medal text-xs mr-3" }), _vm._v("Pretasi")]
     )
   },
   function () {

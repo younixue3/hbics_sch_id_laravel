@@ -37,6 +37,7 @@ class getUrl
             'visi-misi' => route('visi-misi'),
             'metode-pembelajaran' => route('metode-pembelajaran'),
             'fasilitas' => route('fasilitas'),
+            'prestasi' => route('prestasi'),
         ];
         return response($url);
 
