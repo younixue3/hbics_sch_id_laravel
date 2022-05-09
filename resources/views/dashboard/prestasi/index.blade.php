@@ -20,7 +20,7 @@
                         <tr class="hover:bg-blue-50 transition-all duration-200">
                             <td class="py-1 pl-4">
                                 <div class="flex items-center">
-                                    <img class="h-8 w-8 mr-2 rounded-full object-cover"
+                                    <img class="h-8 w-8 mr-2 rounded-xl object-cover"
                                          src="{{asset('Upload/foto_siswa/'.$value->picture)}}"
                                          alt="">
                                     <div class="text-left my-auto">

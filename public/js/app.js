@@ -19348,7 +19348,7 @@ var render = function () {
         _vm._v(" "),
         _c("img", {
           staticClass:
-            "m-auto rounded-full h-24 w-24 object-cover border border-gray-200",
+            "m-auto rounded-xl h-24 w-24 object-cover border border-gray-200",
           attrs: { src: _vm.$store.state.modal.modalshow.img },
         }),
       ]),
@@ -20226,7 +20226,7 @@ var render = function () {
         _vm._v(" "),
         _c("img", {
           staticClass:
-            "m-auto rounded-full h-24 w-24 object-cover border border-gray-200",
+            "m-auto rounded-xl h-24 w-24 object-cover border border-gray-200",
           attrs: { src: _vm.$store.state.modal.modalshow.img },
         }),
       ]),

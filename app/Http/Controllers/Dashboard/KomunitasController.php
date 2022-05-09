@@ -65,7 +65,7 @@ class KomunitasController extends Controller
             'connection' => ['required'],
         ]);
         $data = $this->data->store_data($request);
-        return redirect(route('dashboard.komunitas.index'))->with('success', 'Insert Data Successfully');
+        return redirect(route('dashboard.komunitas.alumni'))->with('success', 'Insert Data Successfully');
     }
 
     /**

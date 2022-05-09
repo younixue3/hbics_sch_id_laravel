@@ -22,7 +22,7 @@
             <label class="block font-medium text-gray-700">
                 Foto
             </label>
-            <img class="m-auto rounded-full h-24 w-24 object-cover border border-gray-200" :src="$store.state.modal.modalshow.img">
+            <img class="m-auto rounded-xl h-24 w-24 object-cover border border-gray-200" :src="$store.state.modal.modalshow.img">
         </div>
         <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
