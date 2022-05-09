@@ -47,4 +47,10 @@ class AkademisController extends Controller
     {
         return view('front.akademis.sma.index');
     }
+
+    public function prestasiSiswa(Request $request)
+    {
+        $data = $this->data->get_prestasi($request);
+        return view('front.akademis.prestasi.index', $data);
+    }
 }

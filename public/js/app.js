@@ -4491,7 +4491,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -13653,7 +13652,57 @@ var render = function () {
                                             ]
                                           ),
                                           _vm._v(" "),
-                                          _vm._m(9),
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "flex justify-between gap-x-5 p-5",
+                                            },
+                                            [
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass:
+                                                    "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
+                                                  attrs: {
+                                                    href:
+                                                      _vm.dataurl["alumni"] +
+                                                      "/all",
+                                                  },
+                                                },
+                                                [
+                                                  _c("i", {
+                                                    staticClass:
+                                                      "fas fa-user-graduate text-xs mr-3",
+                                                  }),
+                                                  _vm._v("Alumni"),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._m(9),
+                                              _vm._v(" "),
+                                              _c(
+                                                "a",
+                                                {
+                                                  staticClass:
+                                                    "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
+                                                  attrs: {
+                                                    href:
+                                                      _vm.dataurl[
+                                                        "teacher-staff"
+                                                      ] + "/all",
+                                                  },
+                                                },
+                                                [
+                                                  _c("i", {
+                                                    staticClass:
+                                                      "fas fa-chalkboard-teacher text-xs mr-3",
+                                                  }),
+                                                  _vm._v("Guru"),
+                                                ]
+                                              ),
+                                            ]
+                                          ),
                                         ]
                                       ),
                                     ]
@@ -15263,46 +15312,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex justify-between gap-x-5 p-5" }, [
-      _c(
-        "a",
-        {
-          staticClass:
-            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
-          attrs: { href: "#" },
-        },
-        [
-          _c("i", { staticClass: "fas fa-user-graduate text-xs mr-3" }),
-          _vm._v("Alumni"),
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
-          attrs: { href: "#" },
-        },
-        [
-          _c("i", { staticClass: "fas fa-medal text-xs mr-3" }),
-          _vm._v("Pretasi"),
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
-          attrs: { href: "#" },
-        },
-        [
-          _c("i", { staticClass: "fas fa-chalkboard-teacher text-xs mr-3" }),
-          _vm._v("Guru"),
-        ]
-      ),
-    ])
+    return _c(
+      "a",
+      {
+        staticClass:
+          "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
+        attrs: { href: "#" },
+      },
+      [_c("i", { staticClass: "fas fa-medal text-xs mr-3" }), _vm._v("Pretasi")]
+    )
   },
   function () {
     var _vm = this
@@ -16707,8 +16725,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "mb-5" }, [
       _c("span", { staticClass: "px-1 py-0.5 pt-1 rounded-md bg-red-600" }, [
         _c("i", { staticClass: "fas fa-fire-alt text-xl mt-0.5" }),
-        _vm._v(" "),
-        _c("span", { staticClass: "hidden md:inline" }, [_vm._v("Trending")]),
         _vm._v(" "),
         _c("span", { staticClass: "hidden md:inline" }, [_vm._v("Trending")]),
       ]),
