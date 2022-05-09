@@ -45,7 +45,7 @@ const store = new Vuex.Store({
         file: 0
     },
     mutations: {
-        toggleModalValidationView (state) {
+        toggleModalValidationView(state) {
             state.modalvalidation.status = state.modalvalidation.status === false;
             if (state.modalvalidation.status === true) {
                 document.body.classList.add('removescrollbar', 'overflow-hidden')
@@ -53,7 +53,7 @@ const store = new Vuex.Store({
                 document.body.classList.remove('removescrollbar', 'overflow-hidden')
             }
         },
-        toggleModalShow (state) {
+        toggleModalShow(state) {
             state.modal.modalshow.status = state.modal.modalshow.status === false;
             if (state.modal.modalshow.status === true) {
                 document.body.classList.add('removescrollbar', 'overflow-hidden')
@@ -61,7 +61,7 @@ const store = new Vuex.Store({
                 document.body.classList.remove('removescrollbar', 'overflow-hidden')
             }
         },
-        toggleModalEdit (state) {
+        toggleModalEdit(state) {
             state.modal.modaledit.status = state.modal.modaledit.status === false;
             if (state.modal.modaledit.status === true) {
                 document.body.classList.add('removescrollbar', 'overflow-hidden')
@@ -69,7 +69,7 @@ const store = new Vuex.Store({
                 document.body.classList.remove('removescrollbar', 'overflow-hidden')
             }
         },
-        toggleModalAdd (state) {
+        toggleModalAdd(state) {
             state.modal.modaladd.status = state.modal.modaladd.status === false;
             if (state.modal.modaladd.status === true) {
                 document.body.classList.add('removescrollbar', 'overflow-hidden')
@@ -77,7 +77,7 @@ const store = new Vuex.Store({
                 document.body.classList.remove('removescrollbar', 'overflow-hidden')
             }
         },
-        toggleModalChangePassword (state) {
+        toggleModalChangePassword(state) {
             state.modal.modalstaff.status = state.modal.modalstaff.status === false;
             if (state.modal.modalstaff.status === true) {
                 document.body.classList.add('removescrollbar', 'overflow-hidden')
