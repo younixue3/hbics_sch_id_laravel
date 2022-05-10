@@ -9,8 +9,12 @@
                               fetchdata="{{$publikasi->publikasis_contents()->first()->content()->first()->item}}"></workspace-output>
         </div>
         <div class="md:px-20 mb-20">
+            <likes-component url="{{route('like.insert', $publikasi->randKey)}}"></likes-component>
             <div class="grid grid-cols-1 gap-y-5">
                 <div class="bg-white rounded-xl shadow-lg p-5 grid grid-cols-1 gap-y-5 divide-y">
+                    <label class="text-xl">
+                        Komentar
+                    </label>
                     @forelse($comment as $key => $value)
                         <div class="py-4">
                             <div class="pl-7 font-bold">
@@ -29,7 +33,7 @@
                     @endforelse
                 </div>
                 <div class="bg-white rounded-xl shadow-lg p-5">
-                    <label class="text-xl">Komentar Anda</label>
+                    <label class="text-xl">Masukkan Komentar Anda</label>
                     <form class="my-5" action="{{route('comment.store', $publikasi->randKey)}}">
                         <input type="text"
                                class="rounded-xl border shadow-md h-10 md:w-96 px-3 pt-2 pb-1 focus:outline-none"

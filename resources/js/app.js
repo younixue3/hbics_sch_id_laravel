@@ -152,6 +152,7 @@ Vue.component('button-dot-menu-component', require('./components/widget/publikas
 Vue.component('item-render-function', require('./components/function/publikasi/ItemRenderFunction').default)
 Vue.component('item-render-output', require('./components/function/publikasi/ItemRenderOutput').default)
 Vue.component('button-gear-menu-component', require('./components/widget/publikasi/ButtonGearMenuComponent').default)
+Vue.component('likes-component', require('./components/widget/publikasi/LikesComponent').default)
 
 ////Publikasi Workspace Component
 Vue.component('title-workspace', require('./components/workspace/TitleWorkspace').default)

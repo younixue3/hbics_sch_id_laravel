@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard\Data;
 use App\Helper\getFilename;
 use App\Http\Controllers\Controller;
 use App\Models\Contents;
+use App\Models\Events;
 use App\Models\Kategoris;
 use App\Models\Publikasis;
 use App\Models\PublikasisContents;
@@ -25,7 +26,7 @@ class PublikasiController extends Controller
 
     public function store_data($request)
     {
-//        dd($request);
+        dd(json_decode($request->item)->items[0]->content);
         if ($request->inputFile1 !== null) {
             $publikasi = Publikasis::create([
                 'randKey' => Str::random(8),
@@ -53,10 +54,20 @@ class PublikasiController extends Controller
         ]);
         if ($request->selectcategory !== '[object Object]') {
             foreach (json_decode($request->selectcategory) as $value) {
-                $userRole = new PublikasisKategoris();
-                $userRole->publikasi = $publikasi->id;
-                $userRole->kategori = $value->id;
-                $userRole->save();
+                if ($value->name === 'acara') {
+                    Events::created([
+                        'title' => $request->title0,
+                        'photo' => $request->inputFile0,
+                        'description' => json_decode($request->item)->items[0]->content->description,
+                        'date' => ,
+                        'start_at' => ,
+                        'end_at' => ,
+                    ]);
+                }
+                $publikasiKategoris = new PublikasisKategoris();
+                $publikasiKategoris->publikasi = $publikasi->id;
+                $publikasiKategoris->kategori = $value->id;
+                $publikasiKategoris->save();
             }
         }
         if ($request->inputFile1 !== null) {

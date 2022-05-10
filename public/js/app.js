@@ -6555,6 +6555,78 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      get_likes_data: null
+    };
+  },
+  props: ['url', 'content'],
+  mounted: function mounted() {
+    this.getLikes();
+  },
+  methods: {
+    likes: function likes(type) {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post(this.$props.url, {
+        type_like: type
+      }).then(function (resp) {
+        _this.getLikes();
+      })["catch"](function (e) {
+        return console.log(e);
+      });
+    },
+    getLikes: function getLikes() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get(this.$props.url).then(function (resp) {
+        _this2.get_likes_data = resp.data;
+
+        if (resp.data.live_like === null) {
+          _this2.get_likes_data.live_like = 'null';
+        }
+      })["catch"](function (e) {
+        return console.log(e);
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/staff/FormChangePasswordComponent.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/staff/FormChangePasswordComponent.vue?vue&type=script&lang=js& ***!
@@ -7716,7 +7788,8 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('workspace-output', (__web
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('button-dot-menu-component', (__webpack_require__(/*! ./components/widget/publikasi/ButtonDotMenuComponent */ "./resources/js/components/widget/publikasi/ButtonDotMenuComponent.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('item-render-function', (__webpack_require__(/*! ./components/function/publikasi/ItemRenderFunction */ "./resources/js/components/function/publikasi/ItemRenderFunction.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('item-render-output', (__webpack_require__(/*! ./components/function/publikasi/ItemRenderOutput */ "./resources/js/components/function/publikasi/ItemRenderOutput.vue")["default"]));
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('button-gear-menu-component', (__webpack_require__(/*! ./components/widget/publikasi/ButtonGearMenuComponent */ "./resources/js/components/widget/publikasi/ButtonGearMenuComponent.vue")["default"])); ////Publikasi Workspace Component
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('button-gear-menu-component', (__webpack_require__(/*! ./components/widget/publikasi/ButtonGearMenuComponent */ "./resources/js/components/widget/publikasi/ButtonGearMenuComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('likes-component', (__webpack_require__(/*! ./components/widget/publikasi/LikesComponent */ "./resources/js/components/widget/publikasi/LikesComponent.vue")["default"])); ////Publikasi Workspace Component
 
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('title-workspace', (__webpack_require__(/*! ./components/workspace/TitleWorkspace */ "./resources/js/components/workspace/TitleWorkspace.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('paragraph-workspace', (__webpack_require__(/*! ./components/workspace/ParagraphWorkspace */ "./resources/js/components/workspace/ParagraphWorkspace.vue")["default"]));
@@ -10151,6 +10224,45 @@ component.options.__file = "resources/js/components/widget/publikasi/ButtonGearM
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/publikasi/LikesComponent.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/widget/publikasi/LikesComponent.vue ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _LikesComponent_vue_vue_type_template_id_fa223e0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LikesComponent.vue?vue&type=template&id=fa223e0c&scoped=true& */ "./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=template&id=fa223e0c&scoped=true&");
+/* harmony import */ var _LikesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LikesComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LikesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LikesComponent_vue_vue_type_template_id_fa223e0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _LikesComponent_vue_vue_type_template_id_fa223e0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "fa223e0c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/publikasi/LikesComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/staff/FormChangePasswordComponent.vue":
 /*!******************************************************************************!*\
   !*** ./resources/js/components/widget/staff/FormChangePasswordComponent.vue ***!
@@ -11305,6 +11417,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LikesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./LikesComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LikesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/staff/FormChangePasswordComponent.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************!*\
   !*** ./resources/js/components/widget/staff/FormChangePasswordComponent.vue?vue&type=script&lang=js& ***!
@@ -12215,6 +12343,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonGearMenuComponent_vue_vue_type_template_id_93cd3218_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonGearMenuComponent_vue_vue_type_template_id_93cd3218_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ButtonGearMenuComponent.vue?vue&type=template&id=93cd3218&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/publikasi/ButtonGearMenuComponent.vue?vue&type=template&id=93cd3218&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=template&id=fa223e0c&scoped=true&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=template&id=fa223e0c&scoped=true& ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LikesComponent_vue_vue_type_template_id_fa223e0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LikesComponent_vue_vue_type_template_id_fa223e0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_LikesComponent_vue_vue_type_template_id_fa223e0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./LikesComponent.vue?vue&type=template&id=fa223e0c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=template&id=fa223e0c&scoped=true&");
 
 
 /***/ }),
@@ -20155,6 +20300,156 @@ var staticRenderFns = [
     ])
   },
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=template&id=fa223e0c&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/publikasi/LikesComponent.vue?vue&type=template&id=fa223e0c&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "px-40 mb-20" }, [
+    _c("div", { staticClass: "bg-white rounded-xl shadow-lg p-2 mb-10" }, [
+      _c(
+        "div",
+        { staticClass: "grid grid-cols-6 gap-2 text-3xl text-center" },
+        [
+          _c(
+            "button",
+            {
+              staticClass:
+                "hover:bg-blue-50 py-2 px-2 rounded-lg transition-all ease-in-out duration-300 active:bg-blue-200 active:bg-blue-500 active:text-white",
+              class:
+                _vm.get_likes_data.live_like.type === "favorite"
+                  ? "bg-blue-500 text-white"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.likes("favorite")
+                },
+              },
+            },
+            [_c("i", { staticClass: "fa-solid fa-face-grin-hearts" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "hover:bg-blue-50 py-2 px-2 rounded-lg transition-all ease-in-out duration-300 active:bg-blue-200 active:bg-blue-500 active:text-white",
+              class:
+                _vm.get_likes_data.live_like.type === "like"
+                  ? "bg-blue-500 text-white"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.likes("like")
+                },
+              },
+            },
+            [_c("i", { staticClass: "fa-solid fa-thumbs-up" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "hover:bg-blue-50 py-2 px-2 rounded-lg transition-all ease-in-out duration-300 active:bg-blue-200 active:bg-blue-500 active:text-white",
+              class:
+                _vm.get_likes_data.live_like.type === "sad"
+                  ? "bg-blue-500 text-white"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.likes("sad")
+                },
+              },
+            },
+            [_c("i", { staticClass: "fa-solid fa-face-sad-tear" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "hover:bg-blue-50 py-2 px-2 rounded-lg transition-all ease-in-out duration-300 active:bg-blue-200 active:bg-blue-500 active:text-white",
+              class:
+                _vm.get_likes_data.live_like.type === "surprise"
+                  ? " bg-blue-500 text-white"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.likes("surprise")
+                },
+              },
+            },
+            [_c("i", { staticClass: "fas fa-surprise" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "hover:bg-blue-50 py-2 px-2 rounded-lg transition-all ease-in-out duration-300 active:bg-blue-200 active:bg-blue-500 active:text-white",
+              class:
+                _vm.get_likes_data.live_like.type === "angry"
+                  ? "bg-blue-500 text-white"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.likes("angry")
+                },
+              },
+            },
+            [_c("i", { staticClass: "fa-solid fa-face-angry" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "hover:bg-blue-50 py-2 px-2 rounded-lg transition-all ease-in-out duration-300 active:bg-blue-200 active:bg-blue-500 active:text-white",
+              class:
+                _vm.get_likes_data.live_like.type === "funny"
+                  ? "bg-blue-500 text-white"
+                  : "",
+              on: {
+                click: function ($event) {
+                  return _vm.likes("funny")
+                },
+              },
+            },
+            [_c("i", { staticClass: "fa-solid fa-face-laugh-squint" })]
+          ),
+        ]
+      ),
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "text-center" }, [
+      _c("h6", [
+        _c("span", { staticClass: "mx-2" }, [
+          _vm._v(_vm._s(_vm.get_likes_data.total_like)),
+        ]),
+        _vm._v("Orang menyukai konten ini"),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

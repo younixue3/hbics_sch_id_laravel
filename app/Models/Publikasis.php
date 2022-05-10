@@ -38,4 +38,14 @@ class Publikasis extends Model
     {
         return $this->belongsTo(PublikasisComments::class, 'id', 'publikasi')->latest()->get();
     }
+
+    public function count_comments()
+    {
+        return $this->belongsTo(PublikasisContents::class, 'id', 'publikasi')->count();
+    }
+
+    public function count_likes()
+    {
+        return $this->belongsTo(InsightLikes::class, 'id', 'publikasi')->count();
+    }
 }

@@ -62,6 +62,8 @@ Route::get('/artikel', [App\Http\Controllers\Front\PublikasiController::class, '
 Route::get('/artikel/{key}', [App\Http\Controllers\Front\PublikasiController::class, 'show'])->name('artikel.show');
 Route::get('/publikasi/{key}', [App\Http\Controllers\Front\PublikasiController::class, 'show'])->name('publikasi.show');
 Route::get('/publikasi/{key}/comment', [App\Http\Controllers\Front\CommentsController::class, 'store'])->name('comment.store');
+Route::post('/publikasi/{key}/like', [App\Http\Controllers\Front\LikesController::class, 'liked'])->name('like.insert');
+Route::get('/publikasi/{key}/like', [App\Http\Controllers\Front\LikesController::class, 'getliked'])->name('like.get');
 
 Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(function () {
     Route::get('/', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('index');
