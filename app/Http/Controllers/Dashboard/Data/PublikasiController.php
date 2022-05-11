@@ -26,7 +26,7 @@ class PublikasiController extends Controller
 
     public function store_data($request)
     {
-        dd(json_decode($request->item)->items[0]->content);
+//        dd($request);
         if ($request->inputFile1 !== null) {
             $publikasi = Publikasis::create([
                 'randKey' => Str::random(8),
@@ -55,13 +55,15 @@ class PublikasiController extends Controller
         if ($request->selectcategory !== '[object Object]') {
             foreach (json_decode($request->selectcategory) as $value) {
                 if ($value->name === 'acara') {
-                    Events::created([
+//                    dd('acara');
+                    Events::create([
                         'title' => $request->title0,
-                        'photo' => $request->inputFile0,
+                        'photo' => $request->nameFile1,
                         'description' => json_decode($request->item)->items[0]->content->description,
-                        'date' => ,
-                        'start_at' => ,
-                        'end_at' => ,
+                        'date' => json_decode($request->item)->items[0]->content->date,
+                        'start_at' => json_decode($request->item)->items[0]->content->time_start,
+                        'end_at' => json_decode($request->item)->items[0]->content->time_end,
+                        'publikasi' => $publikasi->id
                     ]);
                 }
                 $publikasiKategoris = new PublikasisKategoris();

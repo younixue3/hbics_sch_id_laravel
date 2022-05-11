@@ -70,6 +70,7 @@ Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(functi
     Route::resource('staff', \App\Http\Controllers\Dashboard\StaffController::class);
     Route::resource('fasilitas', \App\Http\Controllers\Dashboard\FasilitasController::class);
     Route::resource('komunitas', \App\Http\Controllers\Dashboard\KomunitasController::class);
+    Route::resource('event', \App\Http\Controllers\Dashboard\EventController::class);
     Route::prefix('komunitas')->group(function () {
         Route::get('/show/alumni', [App\Http\Controllers\Dashboard\KomunitasController::class, 'indexAlumni'])->name('komunitas.alumni');
         Route::get('/show/orang_tua', [App\Http\Controllers\Dashboard\KomunitasController::class, 'indexOrangTua'])->name('komunitas.orangtua');

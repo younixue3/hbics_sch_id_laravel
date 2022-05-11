@@ -1,10 +1,10 @@
 <template>
     <div class="flex">
-        <div class="static">
+        <div class="m-auto">
             <button @click="showmenu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
         </div>
         <div v-if="show" v-click-outside="focusout"
-             class="absolute right-6 -translate-y-1/2 bg-white shadow-md rounded-md px-10">
+             class="absolute right-32 -translate-y-1/2 bg-white shadow-md rounded-md px-10">
             <div class="grid grid-cols-1">
                 <a :href="show_url" target="_blank">
                     Show

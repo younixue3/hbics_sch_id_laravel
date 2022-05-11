@@ -4185,6 +4185,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -16492,6 +16505,31 @@ var render = function () {
                   ]
                 )
               : _vm._e(),
+            _vm._v(" "),
+            _vm.is_admin === "true"
+              ? _c(
+                  "div",
+                  {
+                    staticClass:
+                      "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                  },
+                  [
+                    _c("a", { attrs: { href: _vm.dataurl["event"] } }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                          class:
+                            _vm.livehref === _vm.dataurl["event"]
+                              ? "bg-gray-300"
+                              : "bg-gray-100",
+                        },
+                        [_vm._m(6)]
+                      ),
+                    ]),
+                  ]
+                )
+              : _vm._e(),
           ],
           1
         ),
@@ -16570,6 +16608,18 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("Teacher & Staff Component")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex w-52" }, [
+      _c("div", { staticClass: "w-1/6" }, [
+        _c("i", { staticClass: "fas fa-calendar-day mr-3" }),
+      ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("Event")]),
     ])
   },
 ]
@@ -20178,7 +20228,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "flex" }, [
-    _c("div", { staticClass: "static" }, [
+    _c("div", { staticClass: "m-auto" }, [
       _c("button", { on: { click: _vm.showmenu } }, [
         _c("i", { staticClass: "fa-solid fa-ellipsis-vertical" }),
       ]),
@@ -20197,7 +20247,7 @@ var render = function () {
               },
             ],
             staticClass:
-              "absolute right-6 -translate-y-1/2 bg-white shadow-md rounded-md px-10",
+              "absolute right-32 -translate-y-1/2 bg-white shadow-md rounded-md px-10",
           },
           [
             _c("div", { staticClass: "grid grid-cols-1" }, [
