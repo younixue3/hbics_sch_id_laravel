@@ -78,5 +78,8 @@ Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(functi
     Route::resource('prestasi', \App\Http\Controllers\Dashboard\PrestasiController::class);
     Route::resource('publikasi', \App\Http\Controllers\Dashboard\PublikasiController::class);
     Route::resource('teacher_staff', \App\Http\Controllers\Dashboard\TeacherStaffController::class);
+    Route::get('/send-mail', function () {
+       return New \App\Mail\HbicsMail();
+    });
 });
 
