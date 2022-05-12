@@ -2937,7 +2937,8 @@ __webpack_require__.r(__webpack_exports__);
         props: {
           content: this.content,
           index: this.index,
-          urlasset: this.urlasset
+          urlasset: this.urlasset,
+          urlregister: window.location.href + '/event'
         }
       });
     }
@@ -2976,6 +2977,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['fetchdata', 'store_link', 'urlasset', 'editmode'],
   created: function created() {
     if (this.$props.fetchdata !== null) {
+      console.log(JSON.parse(this.fetchdata));
       this.$store.state.workspace = JSON.parse(this.fetchdata); // this.items = this.$store.state.workspace.item
     }
 
@@ -6946,6 +6948,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "EventWorkspace",
@@ -7437,6 +7444,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -7471,14 +7480,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "EventWorkspaceOutput",
   data: function data() {
     return {};
   },
-  props: ['content', 'index', 'editmode', 'urlasset'],
+  props: ['content', 'index', 'editmode', 'urlasset', 'urlregister'],
   mounted: function mounted() {},
-  methods: {}
+  methods: {
+    openModalAdd: function openModalAdd() {
+      this.$store.state.modalvalidation.url.url_req = this.$props.urlregister;
+      this.$store.commit('toggleModalAdd');
+    }
+  }
 });
 
 /***/ }),
@@ -13508,7 +13529,7 @@ var render = function () {
       {
         ref: "navbar",
         staticClass:
-          "h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-50",
+          "h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-40",
         attrs: { id: "navBar" },
       },
       [
@@ -21064,6 +21085,38 @@ var render = function () {
               },
             }),
           ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-3" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value:
+                    _vm.$store.state.workspace.items[_vm.index].content.url,
+                  expression: "$store.state.workspace.items[index].content.url",
+                },
+              ],
+              staticClass:
+                "flex-1 w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+              attrs: { type: "text", name: "url" },
+              domProps: {
+                value: _vm.$store.state.workspace.items[_vm.index].content.url,
+              },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(
+                    _vm.$store.state.workspace.items[_vm.index].content,
+                    "url",
+                    $event.target.value
+                  )
+                },
+              },
+            }),
+          ]),
         ]),
       ]),
       _vm._v(" "),
@@ -21885,24 +21938,39 @@ var render = function () {
                 },
               }),
             ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass:
+                  "w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold",
+                attrs: { type: "submit" },
+                on: { click: _vm.openModalAdd },
+              },
+              [_vm._v("Register")]
+            ),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-span-2" }, [
-          _c("h1", { staticClass: "text-3xl" }, [
-            _vm._v(
-              _vm._s(_vm.$store.state.workspace.items[_vm.index].content.title)
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", {
-            staticClass: "h-96",
-            domProps: {
-              innerHTML: _vm._s(
-                _vm.$store.state.workspace.items[_vm.index].content.description
+        _c("div", { staticClass: "col-span-2 grid grid-rows-3" }, [
+          _c("div", { staticClass: "row-span-2" }, [
+            _c("h1", { staticClass: "text-3xl" }, [
+              _vm._v(
+                _vm._s(
+                  _vm.$store.state.workspace.items[_vm.index].content.title
+                )
               ),
-            },
-          }),
+            ]),
+            _vm._v(" "),
+            _c("div", {
+              domProps: {
+                innerHTML: _vm._s(
+                  _vm.$store.state.workspace.items[_vm.index].content
+                    .description
+                ),
+              },
+            }),
+          ]),
         ]),
       ]
     ),

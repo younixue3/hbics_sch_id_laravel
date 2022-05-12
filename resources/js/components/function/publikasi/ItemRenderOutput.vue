@@ -41,6 +41,7 @@ export default {
                     content: this.content,
                     index: this.index,
                     urlasset: this.urlasset,
+                    urlregister: window.location.href + '/event'
                 }
             })
         }

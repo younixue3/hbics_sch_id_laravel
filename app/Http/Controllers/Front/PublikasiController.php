@@ -41,4 +41,11 @@ class PublikasiController extends Controller
         $data = $this->data->show_data($key);
         return view('front.publikasi.show', $data);
     }
+
+    public function register_event(Request $request, $key)
+    {
+        $register_event = $this->data->register_event($request, $key);
+
+        return redirect()->back()->with('success', 'Pendaftaran anda telah masukkan');
+    }
 }

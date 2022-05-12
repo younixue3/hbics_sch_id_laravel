@@ -32,6 +32,11 @@
                         class="m-auto">s/d</span> <input
                         class="flex-1 w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="time"
                         name="date" v-model="$store.state.workspace.items[index].content.time_end"></div>
+                    <div class="mt-3">
+                        <input
+                            class="flex-1 w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text"
+                            name="url" v-model="$store.state.workspace.items[index].content.url">
+                    </div>
                 </div>
             </div>
             <div class="col-span-2">

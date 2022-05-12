@@ -413,7 +413,7 @@
                 <div class="p-6">
                     <div class="items-center">
                         <div class="ml-4 text-lg leading-7 text-center font-semibold"><a href="https://laravel.com/docs"
-                                                                                         class="text-gray-900 text-2xl dark:text-white">Hai, {{'Jane Doe'}}</a>
+                                                                                         class="text-gray-900 text-2xl dark:text-white">Hai, {{$audience->name}}</a>
                         </div>
                     </div>
 
@@ -421,7 +421,7 @@
                         <div class="mt-2 text-gray-600 dark:text-gray-400 text-md grid grid-cols-1 gap-5">
                             <div class="text-left">
                                 Selamat datang di <span
-                                    class="font-semibold text-black italic">"{{'Event Title'}}"</span>.
+                                    class="font-semibold text-black italic">"{{$event->title}}"</span>.
                             </div>
                             <p class="">
                                 Anda telah berhasil terdaftar dan dapat bergabung pada Event kami, Klik tombol dibawah
@@ -439,7 +439,7 @@
                                 </div>
                             </div>
                             <p class="font-bold">
-                                {{'Detail Description'}}
+                                {!!$event->description!!}
                             </p>
                             <div>
                                 <div>

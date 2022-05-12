@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Front\Data;
 
 use App\Http\Controllers\Controller;
+use App\Models\Audiences;
+use App\Models\Events;
+use App\Models\EventsAudiences;
 use App\Models\Publikasis;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
@@ -52,5 +55,19 @@ class PublikasiController extends Controller
         $comment = $publikasi->publikasis_comments();
         $compact = compact('publikasi', 'cardpublikasi', 'comment');
         return $compact;
+    }
+
+    public function register_event($request, $key)
+    {
+//        dd($key, $request);
+        $audience = Audiences::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone_number' => $request->phone_number
+        ]);
+        EventsAudiences::create([
+            'event' => Events::where('randKey', $key)->first()->id,
+            'audience' => $audience->id
+        ]);
     }
 }

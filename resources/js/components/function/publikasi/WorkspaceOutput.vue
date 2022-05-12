@@ -18,6 +18,7 @@ export default {
     props: ['fetchdata', 'store_link', 'urlasset', 'editmode'],
     created() {
         if (this.$props.fetchdata !== null) {
+            console.log(JSON.parse(this.fetchdata))
             this.$store.state.workspace = JSON.parse(this.fetchdata)
             // this.items = this.$store.state.workspace.item
         }

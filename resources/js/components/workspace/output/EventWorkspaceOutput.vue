@@ -21,27 +21,39 @@
                                                                     type="time" name="date"
                                                                     v-model="$store.state.workspace.items[index].content.time_end">
                     </div>
+<!--                    <form :action="urlregister">-->
+                        <button @click="openModalAdd" type="submit" class="w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold">Register</button>
+<!--                    </form>-->
                 </div>
             </div>
-            <div class="col-span-2">
-                <h1 class="text-3xl">{{ $store.state.workspace.items[index].content.title }}</h1>
-                <div class="h-96" v-html="$store.state.workspace.items[index].content.description">
+            <div class="col-span-2 grid grid-rows-3">
+                <div class="row-span-2">
+                    <h1 class="text-3xl">{{ $store.state.workspace.items[index].content.title }}</h1>
+                    <div v-html="$store.state.workspace.items[index].content.description">
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
     name: "EventWorkspaceOutput",
     data() {
         return {}
     },
-    props: ['content', 'index', 'editmode', 'urlasset'],
+    props: ['content', 'index', 'editmode', 'urlasset', 'urlregister'],
     mounted() {
     },
-    methods: {}
+    methods: {
+        openModalAdd: function () {
+            this.$store.state.modalvalidation.url.url_req = this.$props.urlregister
+            this.$store.commit('toggleModalAdd')
+        },
+    }
 }
 </script>
 

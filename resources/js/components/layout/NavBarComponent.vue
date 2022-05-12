@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header ref="navbar" class="h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-50"
+        <header ref="navbar" class="h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-40"
                 id="navBar">
             <div>
                 <div

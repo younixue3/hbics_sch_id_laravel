@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Events;
 use Illuminate\Http\Request;
 use App\Http\Controllers\dashboard\Data\EventController as DataController;
+use Illuminate\Support\Facades\Event;
 
 class EventController extends Controller
 {
@@ -64,7 +66,8 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        //
+        $event = $this->data->edit_data($id);
+        return view('dashboard.event.edit', $event);
     }
 
     /**

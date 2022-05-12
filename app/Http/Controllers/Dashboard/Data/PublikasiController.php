@@ -57,6 +57,7 @@ class PublikasiController extends Controller
                 if ($value->name === 'acara') {
 //                    dd('acara');
                     Events::create([
+                        'randKey' => $publikasi->randKey,
                         'title' => $request->title0,
                         'photo' => $request->nameFile1,
                         'description' => json_decode($request->item)->items[0]->content->description,

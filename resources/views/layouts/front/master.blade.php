@@ -11,10 +11,25 @@
 </head>
 <body>
 <div id="app" class="bg-gray-100 font-raleway">
+    <modal-add-function>
+        @yield('modalAdd')
+    </modal-add-function>
+    <modal-validation-function></modal-validation-function>
     @include('layouts.front.header')
     @yield('content')
     @include('layouts.front.footer')
 </div>
+@section('notification')
+    <div class="fixed bottom-0 right-0 flex-row">
+        @forelse ($errors->all() as $error)
+            <notification-component type="error" message="{{$error}}"></notification-component>
+        @empty
+        @endforelse
+        @if(session()->has('success'))
+            <notification-component type="success" message="{{ session()->get('success') }}"></notification-component>
+        @endif
+    </div>
+@endsection
 <script src="{{asset('js/app.js')}}"></script>
 <style>
     /* Hide scrollbar for Chrome, Safari and Opera */

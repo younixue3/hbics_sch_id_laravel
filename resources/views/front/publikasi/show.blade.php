@@ -66,3 +66,26 @@
         </div>
     </div>
 @endsection
+@section('modalAdd')
+    <div class="w-96 text-left text-sm">
+        <label class="block font-medium text-gray-700">
+            Name
+        </label>
+        <input type="text" name="name"
+               class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"/>
+    </div>
+    <div class="text-left text-sm">
+        <label class="block font-medium text-gray-700">
+            Email
+        </label>
+        <input type="email" name="email"
+               class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"/>
+    </div>
+    <div class="text-left text-sm">
+        <label class="block font-medium text-gray-700">
+            Phone Number
+        </label>
+        <input type="text" name="phone_number"
+               class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"/>
+    </div>
+@endsection

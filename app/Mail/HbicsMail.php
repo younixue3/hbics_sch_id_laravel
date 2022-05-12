@@ -2,10 +2,13 @@
 
 namespace App\Mail;
 
+use App\Models\Audiences;
+use App\Models\Events;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Mail;
 
 class HbicsMail extends Mailable
 {
@@ -26,8 +29,13 @@ class HbicsMail extends Mailable
      *
      * @return $this
      */
-    public function build()
+    public function build($key, $audience)
     {
-        return $this->view('emails.eventValidation');
+        $event = Events::find($key);
+        $audience = Audiences::find($audience);
+        $compact = compact('event', 'audience');
+//        dd($compact);
+//        Mail::send('emails.eventValidation');
+        return view('emails.eventValidation', $compact);
     }
 }
