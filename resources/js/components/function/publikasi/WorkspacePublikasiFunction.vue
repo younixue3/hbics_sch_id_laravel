@@ -93,7 +93,8 @@ export default {
                         time_start: null,
                         time_end: null,
                         title: null,
-                        description: null
+                        description: null,
+                        url: null
                     }
                 })
             } else {

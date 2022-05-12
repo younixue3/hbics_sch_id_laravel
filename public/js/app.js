@@ -3116,7 +3116,8 @@ __webpack_require__.r(__webpack_exports__);
             time_start: null,
             time_end: null,
             title: null,
-            description: null
+            description: null,
+            url: null
           }
         });
       } else {
@@ -6875,6 +6876,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tinymce/tinymce-vue */ "./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/index.js");
+//
 //
 //
 //
@@ -21050,7 +21052,7 @@ var render = function () {
               },
             }),
             _vm._v(" "),
-            _c("span", { staticClass: "m-auto" }, [_vm._v("s/d")]),
+            _c("span", { staticClass: "m-auto mx-2" }, [_vm._v("s/d")]),
             _vm._v(" "),
             _c("input", {
               directives: [
@@ -21086,7 +21088,9 @@ var render = function () {
             }),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "mt-3" }, [
+          _c("div", { staticClass: "mt-3 flex" }, [
+            _vm._m(0),
+            _vm._v(" "),
             _c("input", {
               directives: [
                 {
@@ -21098,8 +21102,8 @@ var render = function () {
                 },
               ],
               staticClass:
-                "flex-1 w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
-              attrs: { type: "text", name: "url" },
+                "flex-1 w-full rounded-r-xl focus:outline-none px-3 py-2 border border-gray-300",
+              attrs: { placeholder: "Link Meeting", type: "url", name: "url" },
               domProps: {
                 value: _vm.$store.state.workspace.items[_vm.index].content.url,
               },
@@ -21258,7 +21262,20 @@ var render = function () {
     ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "rounded-l-xl border border-r-0 border-gray-300 flex px-2",
+      },
+      [_c("i", { staticClass: "m-auto text-xl fa-solid fa-link" })]
+    )
+  },
+]
 render._withStripped = true
 
 

@@ -29,12 +29,13 @@
                     <div class="flex justify-between w-full mt-3"><input
                         class="flex-1 rounded-xl w-full focus:outline-none px-3 py-2 border border-gray-300" type="time"
                         name="date" v-model="$store.state.workspace.items[index].content.time_start"> <span
-                        class="m-auto">s/d</span> <input
+                        class="m-auto mx-2">s/d</span> <input
                         class="flex-1 w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="time"
                         name="date" v-model="$store.state.workspace.items[index].content.time_end"></div>
-                    <div class="mt-3">
+                    <div class="mt-3 flex">
+                        <div class="rounded-l-xl border border-r-0 border-gray-300 flex px-2"><i class="m-auto text-xl fa-solid fa-link"></i></div>
                         <input
-                            class="flex-1 w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300" type="text"
+                            class="flex-1 w-full rounded-r-xl focus:outline-none px-3 py-2 border border-gray-300" placeholder="Link Meeting" type="url"
                             name="url" v-model="$store.state.workspace.items[index].content.url">
                     </div>
                 </div>

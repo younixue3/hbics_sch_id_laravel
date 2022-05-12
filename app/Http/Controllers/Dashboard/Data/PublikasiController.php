@@ -103,8 +103,8 @@ class PublikasiController extends Controller
 
     public function update_data($request, $key)
     {
-//        dd($request);
         $publikasi = Publikasis::where('randKey', $key);
+        dd($publikasi);
 
         if ($request->inputFile1 !== null) {
             if ($request->status !== null) {
@@ -147,9 +147,27 @@ class PublikasiController extends Controller
                 'publikasi' => $publikasi->first()->id
             ]);
         }
-        if ($request->selectcategory !== '[object Object]') {
+        if ($request->selectcategory !== '[object Object]' || ) {
             PublikasisKategoris::where('publikasi', $publikasi->first()->id)->delete();
             foreach (json_decode($request->selectcategory) as $value) {
+                if ($value->name === 'acara') {
+//                    dd('acara');
+                    dd(Events::update(
+                        [
+                            'randKey' => $key
+                        ],
+                        [
+                        'randKey' => $publikasi->randKey,
+                        'title' => $request->title0,
+                        'photo' => $request->nameFile1,
+                        'description' => json_decode($request->item)->items[0]->content->description,
+                        'date' => json_decode($request->item)->items[0]->content->date,
+                        'start_at' => json_decode($request->item)->items[0]->content->time_start,
+                        'end_at' => json_decode($request->item)->items[0]->content->time_end,
+                        'publikasi' => $publikasi->id
+                        ]
+                    ));
+                }
                 $userRole = new PublikasisKategoris();
                 $userRole->publikasi = $publikasi->first()->id;
                 $userRole->kategori = $value->id;
