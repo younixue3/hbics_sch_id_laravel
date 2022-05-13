@@ -16,10 +16,10 @@ class PublikasiController extends Controller
     {
         $berita = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 1);
-        })->paginate(12);
+        })->latest()->paginate(12);
         $cardberita = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 1);
-        })->get()->take(4);
+        })->latest()->get()->take(4);
         $compact = compact('berita', 'cardberita');
         return $compact;
     }
@@ -28,10 +28,10 @@ class PublikasiController extends Controller
     {
         $acara = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 2);
-        })->paginate(12);
+        })->latest()->paginate(12);
         $cardacara = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 2);
-        })->get()->take(4);
+        })->latest()->get()->take(4);
         $compact = compact('acara', 'cardacara');
         return $compact;
     }
@@ -40,10 +40,10 @@ class PublikasiController extends Controller
     {
         $artikel = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 3);
-        })->paginate(12);
+        })->latest()->paginate(12);
         $cardartikel = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 3);
-        })->get()->take(4);
+        })->latest()->get()->take(4);
         $compact = compact('artikel', 'cardartikel');
         return $compact;
     }

@@ -19,17 +19,16 @@
     @yield('content')
     @include('layouts.front.footer')
 </div>
-@section('notification')
-    <div class="fixed bottom-0 right-0 flex-row">
-        @forelse ($errors->all() as $error)
-            <notification-component type="error" message="{{$error}}"></notification-component>
-        @empty
-        @endforelse
-        @if(session()->has('success'))
-            <notification-component type="success" message="{{ session()->get('success') }}"></notification-component>
-        @endif
-    </div>
-@endsection
+<div class="fixed bottom-0 right-0 flex-row z-50">
+    {{session()->has('success')}}
+    @forelse ($errors->all() as $error)
+        <notification-component type="error" message="{{$error}}"></notification-component>
+    @empty
+    @endforelse
+    @if(session()->has('success'))
+        <notification-component type="success" message="{{ session()->get('success') }}"></notification-component>
+    @endif
+</div>
 <script src="{{asset('js/app.js')}}"></script>
 <style>
     /* Hide scrollbar for Chrome, Safari and Opera */

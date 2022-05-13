@@ -62,7 +62,7 @@ Route::get('/acara/{key}', [App\Http\Controllers\Front\PublikasiController::clas
 Route::get('/artikel', [App\Http\Controllers\Front\PublikasiController::class, 'artikel'])->name('artikel');
 Route::get('/artikel/{key}', [App\Http\Controllers\Front\PublikasiController::class, 'show'])->name('artikel.show');
 Route::get('/publikasi/{key}', [App\Http\Controllers\Front\PublikasiController::class, 'show'])->name('publikasi.show');
-Route::post('/publikasi/{key}/event', [App\Http\Controllers\Front\PublikasiController::class, 'register_event'])->name('publikasi.event');
+Route::post('/acara/{key}/event', [App\Http\Controllers\Front\PublikasiController::class, 'register_event'])->name('publikasi.event');
 Route::get('/publikasi/{key}/comment', [App\Http\Controllers\Front\CommentsController::class, 'store'])->name('comment.store');
 Route::post('/publikasi/{key}/like', [App\Http\Controllers\Front\LikesController::class, 'liked'])->name('like.insert');
 Route::get('/publikasi/{key}/like', [App\Http\Controllers\Front\LikesController::class, 'getliked'])->name('like.get');

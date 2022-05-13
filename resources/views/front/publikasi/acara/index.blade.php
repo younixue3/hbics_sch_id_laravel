@@ -10,7 +10,7 @@
                                         item="{{$value}}"
                                         author="{{$value->users_create()->user()}}"
                                         author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
-                                        urlshow="{{route('berita.show', $value->randKey)}}"></content-card-component>
+                                        urlshow="{{route('acara.show', $value->randKey)}}"></content-card-component>
             @empty
                 Data kosong
             @endforelse
