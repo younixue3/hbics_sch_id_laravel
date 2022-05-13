@@ -81,9 +81,6 @@ Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(functi
     Route::resource('publikasi', \App\Http\Controllers\Dashboard\PublikasiController::class);
     Route::resource('teacher_staff', \App\Http\Controllers\Dashboard\TeacherStaffController::class);
 //    Route::get('/send-mail', [\App\Mail\HbicsMail::class, 'build'])->name('send.mail');
-    Route::get('/send-mail', function () {
-//        Mail::to('ricko.caesar@hbics.sch.id')->send(new \App\Mail\HbicsMail());
-        return new \App\Mail\HbicsMail();
-    })->name('send.mail');
+    Route::get('/send-mail/{key}/{audience}', [\App\Http\Controllers\Mail\MailController::class, 'index'])->name('send.mail');
 });
 

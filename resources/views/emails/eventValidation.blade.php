@@ -511,8 +511,16 @@
     ini untuk bergabung pada Event kami:
 </div>
 
-@component('mail::button', ['url' => $url])
-    Join Video Conference
+@component('mail::button')
+    <div class="h-32 w-full">
+        <img class="h-32 w-full object-cover" src="{{asset('Upload/foto_content/'. $event->photo)}}" alt="{{$event->title}}">
+    </div>
+    <div class="absolute flex w-full h-full">
+        <a href="{{ $url }}" target="_blank"
+           class="m-auto button bg-blue-800 text-lg px-3 py-1">
+            Join Video Conference
+        </a>
+    </div>
 @endcomponent
 
 @component('mail::panel')
