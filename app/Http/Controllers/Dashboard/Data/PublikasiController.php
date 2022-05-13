@@ -64,7 +64,8 @@ class PublikasiController extends Controller
                         'date' => json_decode($request->item)->items[0]->content->date,
                         'start_at' => json_decode($request->item)->items[0]->content->time_start,
                         'end_at' => json_decode($request->item)->items[0]->content->time_end,
-                        'publikasi' => $publikasi->id
+                        'publikasi' => $publikasi->id,
+                        'url' => $request->url
                     ]);
                 }
                 $publikasiKategoris = new PublikasisKategoris();
@@ -103,9 +104,8 @@ class PublikasiController extends Controller
 
     public function update_data($request, $key)
     {
+//        dd($request);
         $publikasi = Publikasis::where('randKey', $key);
-        dd($publikasi);
-
         if ($request->inputFile1 !== null) {
             if ($request->status !== null) {
                 $publikasi->update([
@@ -147,32 +147,29 @@ class PublikasiController extends Controller
                 'publikasi' => $publikasi->first()->id
             ]);
         }
-        if ($request->selectcategory !== '[object Object]' || ) {
+        if ($request->selectcategory !== '[object Object]') {
             PublikasisKategoris::where('publikasi', $publikasi->first()->id)->delete();
             foreach (json_decode($request->selectcategory) as $value) {
-                if ($value->name === 'acara') {
-//                    dd('acara');
-                    dd(Events::update(
-                        [
-                            'randKey' => $key
-                        ],
-                        [
-                        'randKey' => $publikasi->randKey,
-                        'title' => $request->title0,
-                        'photo' => $request->nameFile1,
-                        'description' => json_decode($request->item)->items[0]->content->description,
-                        'date' => json_decode($request->item)->items[0]->content->date,
-                        'start_at' => json_decode($request->item)->items[0]->content->time_start,
-                        'end_at' => json_decode($request->item)->items[0]->content->time_end,
-                        'publikasi' => $publikasi->id
-                        ]
-                    ));
-                }
                 $userRole = new PublikasisKategoris();
                 $userRole->publikasi = $publikasi->first()->id;
                 $userRole->kategori = $value->id;
                 $userRole->save();
             }
+        }
+        if ($publikasi->first()->kategoris_publikasi()->get()->contains('kategori', 2) !== null) {
+            Events::where('randKey', $key)->first()->update(
+                [
+                    'randKey' => $publikasi->first()->randKey,
+                    'title' => $request->title0,
+                    'photo' => $request->nameFile1,
+                    'description' => json_decode($request->item)->items[0]->content->description,
+                    'date' => json_decode($request->item)->items[0]->content->date,
+                    'start_at' => json_decode($request->item)->items[0]->content->time_start,
+                    'end_at' => json_decode($request->item)->items[0]->content->time_end,
+                    'publikasi' => $publikasi->first()->id,
+                    'url' => $request->url
+                ]
+            );
         }
         for ($i = 1; $i <= intval($request->totalfile);) {
             if ($request['inputFile' . $i] !== null) {

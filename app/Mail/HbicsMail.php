@@ -29,13 +29,17 @@ class HbicsMail extends Mailable
      *
      * @return $this
      */
-    public function build($key, $audience)
+    public function build()
     {
-        $event = Events::find($key);
-        $audience = Audiences::find($audience);
-        $compact = compact('event', 'audience');
-//        dd($compact);
-//        Mail::send('emails.eventValidation');
-        return view('emails.eventValidation', $compact);
+        $event = Events::find(1);
+        $audience = Audiences::find(1);
+        $url = $event->url;
+        $compact = compact('event', 'audience', 'url');
+////        dd($compact);
+//        Mail::to('ricko.caesar@')->send('emails.eventValidation', $compact, function($massage) use ($compact){
+//            $massage->to($compact['audience']->email)->subject($compact['event']->title);
+//        });
+
+        return $this->markdown('emails.eventValidation', $compact);
     }
 }

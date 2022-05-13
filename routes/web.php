@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,6 +80,10 @@ Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(functi
     Route::resource('prestasi', \App\Http\Controllers\Dashboard\PrestasiController::class);
     Route::resource('publikasi', \App\Http\Controllers\Dashboard\PublikasiController::class);
     Route::resource('teacher_staff', \App\Http\Controllers\Dashboard\TeacherStaffController::class);
-    Route::get('/send-mail/{key}/{audience}', [\App\Mail\HbicsMail::class, 'build'])->name('send.mail');
+//    Route::get('/send-mail', [\App\Mail\HbicsMail::class, 'build'])->name('send.mail');
+    Route::get('/send-mail', function () {
+//        Mail::to('ricko.caesar@hbics.sch.id')->send(new \App\Mail\HbicsMail());
+        return new \App\Mail\HbicsMail();
+    })->name('send.mail');
 });
 
