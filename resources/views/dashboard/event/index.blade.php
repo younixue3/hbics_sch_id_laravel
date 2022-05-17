@@ -12,7 +12,7 @@
                     <tr>
                         <th class="py-1">Title</th>
                         <th class="py-1 w-52">Date</th>
-                        <th class="py-1 w-52">Time</th>
+                        <th class="py-1 w-60">Time</th>
                         <th class="py-1 w-52"></th>
                     </tr>
                     </thead>
@@ -31,7 +31,7 @@
                             <td class="w-52 py-1 text-sm text-gray-500">
                                 {{\Carbon\Carbon::parse($value->date)->format('d M Y')}}
                             </td>
-                            <td class="w-52 py-1 text-sm text-gray-500 flex justify-center">
+                            <td class="w-60 py-1 text-sm text-gray-500 flex justify-center">
                                 <div class="px-3 rounded-full bg-gray-100 border border-gray-800 font-semibold">{{\Carbon\Carbon::parse($value->start_at)->format('g:i A')}}</div> <span class="mx-2 font-bold">s/d</span> <div class="px-3 rounded-full bg-gray-100 border border-gray-800 font-semibold">{{\Carbon\Carbon::parse($value->end_at)->format('g:i A')}}</div>
                             </td>
 
