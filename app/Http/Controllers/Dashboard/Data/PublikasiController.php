@@ -156,7 +156,7 @@ class PublikasiController extends Controller
                 $userRole->save();
             }
         }
-        if ($publikasi->first()->kategoris_publikasi()->get()->contains('kategori', 2) !== null) {
+        if ($publikasi->first()->kategoris_publikasi()->get()->contains('kategori', 2)) {
             Events::where('randKey', $key)->first()->update(
                 [
                     'randKey' => $publikasi->first()->randKey,
