@@ -18,7 +18,7 @@ class EventController extends Controller
 
     public function edit_data($id)
     {
-        $audiences = EventsAudiences::where('event', $id)->paginate(15);
+        $audiences = EventsAudiences::where('event', $id)->where('validated', false)->paginate(15);
         $event = Events::find($id);
         $compact = compact('audiences', 'event');
         return $compact;

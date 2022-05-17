@@ -10,32 +10,23 @@
                 <table class="table-auto w-full text-center">
                     <thead class="bg-gray-100">
                     <tr>
-                        <th class="py-1">Title</th>
-                        <th class="py-1 w-52">Date</th>
-                        <th class="py-1 w-52">Time</th>
-                        <th class="py-1 w-52"></th>
+                        <th class="py-1">Name</th>
+                        <th class="py-1"></th>
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y-2 divide-gray-200">
                     @forelse($audiences as $key => $value)
-                        {{--                        {{$value->users_update()->staff()}}--}}
-                        {{--                        {{dd($value->user_update()->staff())}}--}}
                         <tr class="hover:bg-blue-50 transition-all duration-200">
                             <td class="py-1 pl-4">
                                 <div class="flex items-center">
                                     <div class="text-left my-auto">
-                                        {{$value->title}}
+                                        {{\App\Models\Audiences::find($value->audience)->name}}
+                                        <div class="text-sm text-gray-500">{{\App\Models\Audiences::find($value->audience)->email}}</div>
+                                        <div class="text-sm text-gray-500">{{\App\Models\Audiences::find($value->audience)->phone_number}}</div>
                                     </div>
                                 </div>
                             </td>
-                            <td class="w-52 py-1 text-sm text-gray-500">
-                                {{\Carbon\Carbon::parse($value->date)->format('d M Y')}}
-                            </td>
-                            <td class="w-52 py-1 text-sm text-gray-500 flex justify-center">
-                                <div class="px-3 rounded-full bg-gray-100 border border-gray-800 font-semibold">{{\Carbon\Carbon::parse($value->start_at)->format('g:i A')}}</div> <span class="mx-2 font-bold">s/d</span> <div class="px-3 rounded-full bg-gray-100 border border-gray-800 font-semibold">{{\Carbon\Carbon::parse($value->end_at)->format('g:i A')}}</div>
-                            </td>
-
-                            <td class="w-52 text-center py-1 px-3">
+                            <td class="py-1">
                                 <a href="{{route('dashboard.send.mail', [$event, $value->audience])}}" class="px-2 bg-green-400 rounded-full">Validate</a>
                             </td>
                         </tr>
