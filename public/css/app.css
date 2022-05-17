@@ -746,12 +746,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-0{
   margin-left: 0px;
 }
-.mr-auto{
-  margin-right: auto;
-}
-.mb-auto{
-  margin-bottom: auto;
-}
 .block{
   display: block;
 }
@@ -806,6 +800,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-4{
   height: 1rem;
 }
+.h-32{
+  height: 8rem;
+}
 .h-14{
   height: 3.5rem;
 }
@@ -829,9 +826,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-7{
   height: 1.75rem;
-}
-.h-32{
-  height: 8rem;
 }
 .h-60{
   height: 15rem;
@@ -869,17 +863,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-h-80{
   max-height: 20rem;
 }
-.max-h-full{
-  max-height: 100%;
-}
 .min-h-screen{
   min-height: 100vh;
-}
-.min-h-full{
-  min-height: 100%;
-}
-.min-h-0{
-  min-height: 0px;
 }
 .w-5{
   width: 1.25rem;
@@ -2256,10 +2241,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .blur-sm{
   --tw-blur: blur(4px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.blur-lg{
-  --tw-blur: blur(16px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .brightness-50{

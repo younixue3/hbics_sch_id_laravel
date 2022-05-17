@@ -19,9 +19,10 @@ class HbicsMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($key, $audience)
     {
-        //
+        $this->key = $key;
+        $this->audience = $audience;
     }
 
     /**
@@ -31,8 +32,8 @@ class HbicsMail extends Mailable
      */
     public function build()
     {
-        $event = Events::find(1);
-        $audience = Audiences::find(1);
+        $event = Events::find($this->key);
+        $audience = Audiences::find($this->audience);
         $url = $event->url;
         $compact = compact('event', 'audience', 'url');
 ////        dd($compact);
@@ -40,6 +41,6 @@ class HbicsMail extends Mailable
 //            $massage->to($compact['audience']->email)->subject($compact['event']->title);
 //        });
 
-        return $this->markdown('emails.eventValidation', $compact);
+        return $this->subject('HBICS Event: '.$event->title)->markdown('emails.eventValidation', $compact);
     }
 }
