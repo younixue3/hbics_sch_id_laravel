@@ -6,14 +6,12 @@
         <div
             class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-0 z-10">
             @forelse($cardartikel as $key => $value)
-{{--                <a href="{{route('berita.show', $value->randKey)}}">--}}
                     <content-card-component insight="{{++$key}}"
                                             item="{{$value}}"
                                             author="{{$value->users_create()->user()}}"
                                             author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
                                             urlshow="{{route('berita.show', $value->randKey)}}"></content-card-component>
                     @empty
-{{--                </a>--}}
                 Data kosong
             @endforelse
         </div>
