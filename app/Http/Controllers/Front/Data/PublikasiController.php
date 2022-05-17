@@ -41,7 +41,7 @@ class PublikasiController extends Controller
         $artikel = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 3);
         })->latest()->paginate(12);
-        dd($artikel);
+//        dd($artikel);
         $cardartikel = Publikasis::where('status', 'publish')->whereHas('kategoris_publikasi', function (Builder $query) {
             $query->where('kategori', 3);
         })->latest()->get()->take(4);
