@@ -8,8 +8,8 @@
                 <div class="grid grid-cols-1 lg:grid-cols-4 gap-5">
                     <div class="bg-white grid grid-rows-6 rounded-3xl shadow-xl p-5">
                         <div class="row-span-2">
-                            <div class="h-10 w-10 rounded-full bg-green-100 p-2 flex">
-                                <i class="fa-solid fa-share m-auto text-green-600"></i>
+                            <div class="h-10 w-10 rounded-full">
+                                <img src="{{asset('assets/logo/Asset6.svg')}}">
                             </div>
                             <h3 class="mt-4 font-semibold text-2xl">BEASISWA BEST STUDENT</h3>
                         </div>
@@ -26,10 +26,10 @@
                     </div>
                     <div class="bg-white grid grid-rows-6 rounded-3xl shadow-xl p-5">
                         <div class="row-span-2">
-                            <div class="h-10 w-10 rounded-full bg-green-100 p-2 flex">
-                                <i class="fa-solid fa-share m-auto text-green-600"></i>
+                            <div class="h-10 w-10 rounded-full">
+                                <img src="{{asset('assets/logo/Asset1.svg')}}">
                             </div>
-                            <h3 class="mt-4 font-semibold text-2xl">BEST CHARACTER (SD)</h3>
+                            <h3 class="mt-4 font-semibold text-2xl">BEASISWA BEST CHARACTER (SD)</h3>
                         </div>
                         <div class="row-span-3 text-gray-400 my-5 px-3">
                             <ol class="list-disc list-inside">
@@ -44,8 +44,8 @@
                     </div>
                     <div class="bg-white grid grid-rows-6 rounded-3xl shadow-xl p-5">
                         <div class="row-span-2">
-                            <div class="h-10 w-10 rounded-full bg-amber-100 p-2 flex">
-                                <i class="fa-solid fa-medal m-auto text-amber-600"></i>
+                            <div class="h-10 w-10 rounded-full">
+                                <img src="{{asset('assets/logo/Asset4.svg')}}">
                             </div>
                             <h3 class="mt-4 font-semibold text-2xl">BEASISWA PRESTASI LOMBA (AKADEMIK/NON AKADEMIK)</h3>
                         </div>
@@ -62,8 +62,8 @@
                     </div>
                     <div class="bg-white grid grid-rows-6 rounded-3xl shadow-xl p-5">
                         <div class="row-span-2">
-                            <div class="h-10 w-10 rounded-full bg-blue-100 p-2 flex">
-                                <i class="fa-solid fa-square-poll-vertical m-auto text-blue-600"></i>
+                            <div class="h-10 w-10 rounded-full">
+                                <img src="{{asset('assets/logo/Asset2.svg')}}">
                             </div>
                             <h3 class="mt-4 font-semibold text-2xl">BEASISWA RAPOR</h3>
                         </div>
