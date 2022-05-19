@@ -5793,6 +5793,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "TabBarComponent",
   data: function data() {
@@ -18290,11 +18325,7 @@ var render = function () {
             _vm._m(6),
             _vm._v(" "),
             _vm._m(7),
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.tab_active === "sdk"
-        ? _c("ol", { staticClass: "relative border-l border-gray-400" }, [
+            _vm._v(" "),
             _vm._m(8),
             _vm._v(" "),
             _vm._m(9),
@@ -18308,7 +18339,11 @@ var render = function () {
             _vm._m(13),
             _vm._v(" "),
             _vm._m(14),
-            _vm._v(" "),
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.tab_active === "sdk"
+        ? _c("ol", { staticClass: "relative border-l border-gray-400" }, [
             _vm._m(15),
             _vm._v(" "),
             _vm._m(16),
@@ -18324,11 +18359,7 @@ var render = function () {
             _vm._m(21),
             _vm._v(" "),
             _vm._m(22),
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.tab_active === "smpk"
-        ? _c("ol", { staticClass: "relative border-l border-gray-400" }, [
+            _vm._v(" "),
             _vm._m(23),
             _vm._v(" "),
             _vm._m(24),
@@ -18342,15 +18373,15 @@ var render = function () {
             _vm._m(28),
             _vm._v(" "),
             _vm._m(29),
-            _vm._v(" "),
-            _vm._m(30),
-            _vm._v(" "),
-            _vm._m(31),
           ])
         : _vm._e(),
       _vm._v(" "),
-      _vm.tab_active === "smak"
+      _vm.tab_active === "smpk"
         ? _c("ol", { staticClass: "relative border-l border-gray-400" }, [
+            _vm._m(30),
+            _vm._v(" "),
+            _vm._m(31),
+            _vm._v(" "),
             _vm._m(32),
             _vm._v(" "),
             _vm._m(33),
@@ -18364,10 +18395,28 @@ var render = function () {
             _vm._m(37),
             _vm._v(" "),
             _vm._m(38),
-            _vm._v(" "),
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.tab_active === "smak"
+        ? _c("ol", { staticClass: "relative border-l border-gray-400" }, [
             _vm._m(39),
             _vm._v(" "),
             _vm._m(40),
+            _vm._v(" "),
+            _vm._m(41),
+            _vm._v(" "),
+            _vm._m(42),
+            _vm._v(" "),
+            _vm._m(43),
+            _vm._v(" "),
+            _vm._m(44),
+            _vm._v(" "),
+            _vm._m(45),
+            _vm._v(" "),
+            _vm._m(46),
+            _vm._v(" "),
+            _vm._m(47),
           ])
         : _vm._e(),
     ]),
@@ -18390,12 +18439,16 @@ var staticRenderFns = [
           staticClass:
             "flex items-center mb-1 text-lg font-semibold text-gray-900 ",
         },
-        [_vm._v("Membeli\n                    Formulir\n                ")]
+        [
+          _vm._v(
+            "Pembelian Formulir\n                    Pendaftaran\n                "
+          ),
+        ]
       ),
       _vm._v(" "),
       _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
         _vm._v(
-          "Calon Siswa/i membeli formulir\n                    pendaftaran"
+          "Calon Siswa/i atau Wali Siswa/i membeli formulir\n                    pendaftaran"
         ),
       ]),
       _vm._v(" "),
@@ -18442,46 +18495,12 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Test/Observasi"),
-      ]),
-      _vm._v(" "),
-      _c(
-        "time",
-        {
-          staticClass:
-            "block mb-2 text-sm font-normal leading-none text-gray-400",
-        },
-        [
-          _vm._v(
-            "\n                    Released\n                    on December 2nd, 2021\n                "
-          ),
-        ]
-      ),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i menjalani\n                    test/observasi masuk sekolah"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
         _vm._v("Parents Interview"),
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
         _vm._v(
-          "Calon Orang Tua Siswa/i\n                    mengikuti Parent Interview dengan Kepala Sekolah"
+          "Orang Tua Calon Siswa/i\n                    mengikuti Parent Interview dengan Kepala Sekolah"
         ),
       ]),
     ])
@@ -18497,12 +18516,31 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Result Parents\n                    Interview"),
+        _vm._v("Hasil Parents Interview"),
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
+        _vm._v("Orang Tua Calon Siswa/i menerima hasil dari Parents Interview"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mb-10 ml-6" }, [
+      _c("span", {
+        staticClass:
+          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+      }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
+        _vm._v("Admininstrasi Keuangan"),
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
         _vm._v(
-          "Calon Orang Tua Siswa/i\n                    menerima hasil keputusan dari kepala sekolah terkait hasil Parents Interview"
+          "Orang Tua Calon Siswa/i melakukan proses admininstrasi keuangan"
         ),
       ]),
     ])
@@ -18518,12 +18556,31 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Admininstras"),
+        _vm._v("Validasi Umur Calon Siswa"),
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
+        _vm._v("Calon Siswa/i di validasi memiliki kesesuaian umur"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mb-10 ml-6" }, [
+      _c("span", {
+        staticClass:
+          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+      }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
+        _vm._v("Observasi Usia Berjalan"),
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
         _vm._v(
-          "Calon Siswa/i menyelesaikan\n                    proses admininstrasi sekolah"
+          "Observasi usia berjalan oleh Principal atau Pak Rio sesuai prosedur"
         ),
       ]),
     ])
@@ -18539,13 +18596,11 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Pengambilan Perlengkapan\n                    Sekolah"),
+        _vm._v("Result Observasi"),
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i melakukan proses\n                    pengukuran serama, pengambilan buku sekolah dan penempatan kelas"
-        ),
+        _vm._v("Orang tua Calon Siswa/i menerima hasil Observasi"),
       ]),
     ])
   },
@@ -18560,13 +18615,113 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Selamat Bersekolah!"),
+        _vm._v("Terbit Surat Penerimaan Siswa Baru"),
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Selamat Datang! di Sekolah\n                    Harapan Bangsa & Happy Holy Kids Balikpapan"
-        ),
+        _vm._v("Orang tua Calon Siswa/i menerima surat Penerimaan siswa baru"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mb-10 ml-6" }, [
+      _c("span", {
+        staticClass:
+          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+      }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
+        _vm._v("Ukur Seragam"),
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
+        _vm._v("Pengukuran seragam untuk Siswa/i Baru"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mb-10 ml-6" }, [
+      _c("span", {
+        staticClass:
+          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+      }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
+        _vm._v("Pengambilan Seragam"),
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
+        _vm._v("Pengambilan seragam sekolah Siswa/i Baru"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mb-10 ml-6" }, [
+      _c("span", {
+        staticClass:
+          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+      }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
+        _vm._v("Pengambilan Buku KBM"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mb-10 ml-6" }, [
+      _c("span", {
+        staticClass:
+          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+      }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
+        _vm._v("Observasi Penempatan Kelas"),
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
+        _vm._v("Observasi penempatan kelas untuk Siswa/i Baru"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mb-10 ml-6" }, [
+      _c("span", {
+        staticClass:
+          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+      }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
+        _vm._v("Admininstrasi Keuangan sekesai sebelum KBM TA Baru"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "mb-10 ml-6" }, [
+      _c("span", {
+        staticClass:
+          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+      }),
+      _vm._v(" "),
+      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
+        _vm._v("KBM TA Baru di SDK HBICS"),
       ]),
     ])
   },
@@ -18868,7 +19023,7 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("KBM TA Baru di SDK HBICS"),
+        _vm._v("KBM TA Baru di HHK"),
       ]),
     ])
   },

@@ -965,15 +965,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-24{
   width: 6rem;
 }
-.w-\[35rem\]{
-  width: 35rem;
-}
-.w-\[50rem\]{
-  width: 50rem;
-}
-.w-\[80rem\]{
-  width: 80rem;
-}
 .max-w-6xl{
   max-width: 72rem;
 }
@@ -1537,18 +1528,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
-.bg-green-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
-}
-.bg-amber-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 243 199 / var(--tw-bg-opacity));
-}
-.bg-blue-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
-}
 .bg-blue-200{
   --tw-bg-opacity: 1;
   background-color: rgb(191 219 254 / var(--tw-bg-opacity));
@@ -1583,6 +1562,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-amber-500{
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
+}
+.bg-green-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+.bg-blue-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 .bg-blue-600{
   --tw-bg-opacity: 1;
@@ -2046,9 +2033,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .leading-4{
   line-height: 1rem;
 }
-.leading-none{
-  line-height: 1;
-}
 .tracking-tight{
   letter-spacing: -0.025em;
 }
@@ -2139,14 +2123,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-blue-800{
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity));
-}
-.text-amber-600{
-  --tw-text-opacity: 1;
-  color: rgb(217 119 6 / var(--tw-text-opacity));
-}
-.text-blue-600{
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 .text-yellow-500{
   --tw-text-opacity: 1;
