@@ -80,6 +80,7 @@ Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(functi
     Route::resource('prestasi', \App\Http\Controllers\Dashboard\PrestasiController::class);
     Route::resource('publikasi', \App\Http\Controllers\Dashboard\PublikasiController::class);
     Route::resource('teacher_staff', \App\Http\Controllers\Dashboard\TeacherStaffController::class);
+    Route::resource('mailbox', \App\Http\Controllers\Dashboard\MailboxController::class);
 //    Route::get('/send-mail', [\App\Mail\HbicsMail::class, 'build'])->name('send.mail');
     Route::get('/send-mail/{key}/{audience}', [\App\Http\Controllers\Mail\MailController::class, 'index'])->name('send.mail');
 });
