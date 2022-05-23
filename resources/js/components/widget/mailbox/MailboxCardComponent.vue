@@ -6,12 +6,12 @@
              alt="">
         <div class="pt-1">
             <div class="flex justify-between">
-                <h1 class="text-lg font-bold leading-4">{{ name }}</h1>
+                <h1 class="text-lg font-bold leading-4">{{ this.nama.name }}</h1>
                 <h1 class="text-xs">{{ date }}</h1>
             </div>
             <h2 class="text-base">{{ subject }}</h2>
             <p class="my-2 h-20 overflow-hidden leading-5 text-sm text-gray-600">
-                {{ content }}
+                {{ this.nama.message }}
             </p>
         </div>
     </div>
@@ -21,6 +21,11 @@
 export default {
     name: "MailboxCardComponent",
     props: ['name', 'date', 'content', 'subject'],
+    data () {
+        return {
+            nama : JSON.parse(this.$props.name).items
+        }
+    },
     methods: {
         cardClick: function () {
             console.log('terkelik')

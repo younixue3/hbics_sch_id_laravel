@@ -6417,6 +6417,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "MailboxCardComponent",
   props: ['name', 'date', 'content', 'subject'],
+  data: function data() {
+    return {
+      nama: JSON.parse(this.$props.name).items
+    };
+  },
   methods: {
     cardClick: function cardClick() {
       console.log('terkelik');
@@ -20741,7 +20746,7 @@ var render = function () {
       _c("div", { staticClass: "pt-1" }, [
         _c("div", { staticClass: "flex justify-between" }, [
           _c("h1", { staticClass: "text-lg font-bold leading-4" }, [
-            _vm._v(_vm._s(_vm.name)),
+            _vm._v(_vm._s(this.nama.name)),
           ]),
           _vm._v(" "),
           _c("h1", { staticClass: "text-xs" }, [_vm._v(_vm._s(_vm.date))]),
@@ -20755,7 +20760,7 @@ var render = function () {
             staticClass:
               "my-2 h-20 overflow-hidden leading-5 text-sm text-gray-600",
           },
-          [_vm._v("\n            " + _vm._s(_vm.content) + "\n        ")]
+          [_vm._v("\n            " + _vm._s(this.nama.message) + "\n        ")]
         ),
       ]),
     ]

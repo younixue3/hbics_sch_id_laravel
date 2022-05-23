@@ -3,8 +3,8 @@
 @section('content')
     <mailbox-component>
         @forelse($mailbox as $key => $value)
-            {{dd($value)}}
-            <mailbox-card-component name="" subject="Kunjungan_ {{$value->kunjungan}}" date="{{$value->created_at}}" content="{{$value->kunjungan != null ? $value->kunjungan : $value->content}}"></mailbox-card-component>
+{{--            {{dd($value)}}--}}
+            <mailbox-card-component name="{{$value->kunjungan == null ? $value->content : 'ad'}}" subject="Kunjungan_ {{$value->kunjungan}}" date="{{$value->created_at}}" content="{{$value->kunjungan != null ? $value->kunjungan : $value->content}}"></mailbox-card-component>
             @empty
                 Data Kosong
                 @endforelse

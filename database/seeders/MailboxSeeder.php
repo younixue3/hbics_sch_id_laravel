@@ -15,10 +15,10 @@ class MailboxSeeder extends Seeder
     public function run()
     {
         DB::table('mailbox')->insert([
-            ['content' => 'Coco Frut'],
-            ['kunjungan' => 1],
-            ['kunjungan' => 2],
-            ['kunjungan' => 3],
+            ['content' => 'Coco Frut', 'kunjungan' => null],
+            ['content' => null, 'kunjungan' => 1],
+            ['content' => null, 'kunjungan' => 2],
+            ['content' => null, 'kunjungan' => 3],
         ]);
     }
 }
