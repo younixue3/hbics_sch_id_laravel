@@ -178,6 +178,8 @@ Vue.component('teacher-staff-component', require('./components/widget/komunitas/
 Vue.component('form-teacher-staff-component', require('./components/widget/komunitas/FormTeacherStaffComponent').default)
 Vue.component('form-edit-teacher-staff-component', require('./components/widget/komunitas/FormEditTeacherStaffComponent').default)
 
+//MAILBOX Widget & Function
+Vue.component('mailbox-component', require('./components/widget/mailbox/MailboxComponent').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

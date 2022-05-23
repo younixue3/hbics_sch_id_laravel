@@ -112,6 +112,19 @@
                         </div>
                     </a>
                 </div>
+                <div v-if="is_admin === 'true'" class="py-0.5 my-1 rounded-xl overflow-hidden truncate">
+                    <a :href="dataurl['mailbox']">
+                        <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
+                             :class="livehref === dataurl['mailbox'] ? 'bg-gray-300' : 'bg-gray-100'">
+                            <div class="flex w-52">
+                                <div class="w-1/6">
+                                    <i class="fas fa-mail-bulk mr-3"></i>
+                                </div>
+                                <span>Mailbox</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

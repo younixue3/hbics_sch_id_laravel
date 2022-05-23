@@ -20,7 +20,8 @@ class getUrlDashboard
             'publikasi' => route('dashboard.publikasi.index'),
             'staff' => route('dashboard.staff.index'),
             'teacher-staff' => route('dashboard.teacher_staff.index'),
-            'event' => route('dashboard.event.index')
+            'event' => route('dashboard.event.index'),
+            'mailbox' => route('dashboard.mailbox.index')
         ];
         return response($url);
     }

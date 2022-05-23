@@ -4201,6 +4201,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -6371,6 +6384,177 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tinymce/tinymce-vue */ "./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "MailboxComponent",
+  components: {
+    'editor': _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {};
+  },
+  mounted: function mounted() {},
+  methods: {
+    getMail: function getMail() {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().get(window.location.origin + '/dashboard/mailbox').then(function (resp) {
+        console.log(resp);
+      });
+    },
+    imageUploader: function imageUploader(cb, value, meta) {
+      var input = document.createElement('input');
+      input.setAttribute('type', 'file');
+      input.setAttribute('accept', 'image/*');
+      input.addEventListener('change', function (e) {
+        var file = e.target.files[0];
+        var reader = new FileReader();
+        reader.addEventListener('load', function () {
+          /*
+            Note: Now we need to register the blob in TinyMCEs image blob
+            registry. In the next release this part hopefully won't be
+            necessary, as we are looking to handle it internally.
+          */
+          var id = 'blobid' + new Date().getTime();
+          var blobCache = tinymce.activeEditor.editorUpload.blobCache;
+          var base64 = reader.result.split(',')[1];
+          var blobInfo = blobCache.create(id, file, base64);
+          blobCache.add(blobInfo);
+          /* call the callback and populate the Title field with the file name */
+
+          cb(blobInfo.blobUri(), {
+            title: file.name
+          });
+        });
+        reader.readAsDataURL(file);
+      });
+      input.click();
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js& ***!
@@ -7923,7 +8107,9 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-komunitas-component'
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-komunitas-edit-component', (__webpack_require__(/*! ./components/widget/komunitas/FormEditComponent */ "./resources/js/components/widget/komunitas/FormEditComponent.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('teacher-staff-component', (__webpack_require__(/*! ./components/widget/komunitas/TeacherStaffComponent */ "./resources/js/components/widget/komunitas/TeacherStaffComponent.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-teacher-staff-component', (__webpack_require__(/*! ./components/widget/komunitas/FormTeacherStaffComponent */ "./resources/js/components/widget/komunitas/FormTeacherStaffComponent.vue")["default"]));
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-edit-teacher-staff-component', (__webpack_require__(/*! ./components/widget/komunitas/FormEditTeacherStaffComponent */ "./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-edit-teacher-staff-component', (__webpack_require__(/*! ./components/widget/komunitas/FormEditTeacherStaffComponent */ "./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue")["default"])); //MAILBOX Widget & Function
+
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('mailbox-component', (__webpack_require__(/*! ./components/widget/mailbox/MailboxComponent */ "./resources/js/components/widget/mailbox/MailboxComponent.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -10181,6 +10367,45 @@ component.options.__file = "resources/js/components/widget/komunitas/TeacherStaf
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/mailbox/MailboxComponent.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/widget/mailbox/MailboxComponent.vue ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _MailboxComponent_vue_vue_type_template_id_4f13f334_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true& */ "./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true&");
+/* harmony import */ var _MailboxComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MailboxComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MailboxComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MailboxComponent_vue_vue_type_template_id_4f13f334_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _MailboxComponent_vue_vue_type_template_id_4f13f334_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "4f13f334",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/mailbox/MailboxComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/prestasi/FormEditComponent.vue":
 /*!***********************************************************************!*\
   !*** ./resources/js/components/widget/prestasi/FormEditComponent.vue ***!
@@ -11466,6 +11691,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MailboxComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************!*\
   !*** ./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js& ***!
@@ -12388,6 +12629,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TeacherStaffComponent_vue_vue_type_template_id_61c4060f_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TeacherStaffComponent_vue_vue_type_template_id_61c4060f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./TeacherStaffComponent.vue?vue&type=template&id=61c4060f&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/TeacherStaffComponent.vue?vue&type=template&id=61c4060f&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true& ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxComponent_vue_vue_type_template_id_4f13f334_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxComponent_vue_vue_type_template_id_4f13f334_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxComponent_vue_vue_type_template_id_4f13f334_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true&");
 
 
 /***/ }),
@@ -16630,6 +16888,31 @@ var render = function () {
                   ]
                 )
               : _vm._e(),
+            _vm._v(" "),
+            _vm.is_admin === "true"
+              ? _c(
+                  "div",
+                  {
+                    staticClass:
+                      "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                  },
+                  [
+                    _c("a", { attrs: { href: _vm.dataurl["mailbox"] } }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                          class:
+                            _vm.livehref === _vm.dataurl["mailbox"]
+                              ? "bg-gray-300"
+                              : "bg-gray-100",
+                        },
+                        [_vm._m(7)]
+                      ),
+                    ]),
+                  ]
+                )
+              : _vm._e(),
           ],
           1
         ),
@@ -16720,6 +17003,18 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("Event")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex w-52" }, [
+      _c("div", { staticClass: "w-1/6" }, [
+        _c("i", { staticClass: "fas fa-mail-bulk mr-3" }),
+      ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("Mailbox")]),
     ])
   },
 ]
@@ -20303,6 +20598,246 @@ var render = function () {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "grid grid-cols-1 md:grid-cols-8 gap-5 my-5" }, [
+      _vm._m(1),
+      _vm._v(" "),
+      _c("div", { staticClass: "hidden md:block md:col-span-5" }, [
+        _c(
+          "div",
+          {
+            staticClass: "border rounded-xl bg-whited shadow-lg px-5 py-3 flex",
+          },
+          [
+            _c("img", {
+              staticClass: "h-12 w-12 mr-2 md:mr-4 rounded-full",
+              attrs: {
+                src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+                alt: "",
+              },
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "pt-1" }, [
+              _vm._m(2),
+              _vm._v(" "),
+              _c("h1", { staticClass: "text-sm leading-4" }, [
+                _vm._v("janedoe@example.com"),
+              ]),
+              _vm._v(" "),
+              _c("h2", { staticClass: "text-base" }, [
+                _vm._v("Apply Resume CV"),
+              ]),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "my-2 overflow-hidden leading-5 text-sm text-gray-600",
+                },
+                [
+                  _vm._v(
+                    "\n                        It is a long established fact that a reader will be distracted by the readable content\n                        of a page when looking at its layout. The point of using Lorem Ipsum is that it has a\n                        more-or-less normal distribution of letters, as opposed to using 'Content here, content\n                        here', making it look like readable English. Many desktop publishing packages and web\n                        page editors now use Lorem Ipsum as their default model text, and a search for 'lorem\n                        ipsum' will uncover many web sites still in their infancy. Various versions have evolved\n                        over the years, sometimes by accident, sometimes on purpose (injected humour and the\n                        like).\n                    "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "grid grid-cols-3 gap-5 pt-10" }),
+              _vm._v(" "),
+              _c(
+                "form",
+                { staticClass: "flex relative rounded-md mt-10 mb-5" },
+                [
+                  _c("editor", {
+                    staticClass:
+                      "flex-1 block border w-full rounded-xl focus:outline-none px-3 pt-2 pb-1 h-32 resize",
+                    attrs: {
+                      "api-key": "no-api-key",
+                      init: {
+                        height: 300,
+                        width: 600,
+                        menubar: true,
+                        plugins: [
+                          "advlist autolink lists link image charmap print preview anchor",
+                          "searchreplace visualblocks code fullscreen",
+                          "insertdatetime table paste code help wordcount",
+                          "lists link paste help wordcount",
+                        ],
+                        images_file_types: "jpg,svg,webp",
+                        file_picker_types: "image",
+                        automatic_uploads: true,
+                        file_picker_callback: function (cb, value, meta) {
+                          _vm.imageUploader(cb, value, meta)
+                        },
+                        toolbar:
+                          "undo redo | formatselect | bold italic backcolor | \
+                   alignleft aligncenter alignright alignjustify | \
+                   bullist numlist outdent indent | removeformat | help | image",
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _vm._m(3),
+                ],
+                1
+              ),
+            ]),
+          ]
+        ),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex" }, [
+      _c(
+        "button",
+        {
+          staticClass: "text-gray-500 border px-3 py-1 rounded-l-xl shadow-md",
+        },
+        [
+          _c("i", { staticClass: "fas fa-inbox mr-2" }),
+          _vm._v("Inbox"),
+          _c(
+            "span",
+            {
+              staticClass:
+                "bg-indigo-600 rounded-full text-white px-2 pb-0.5 pt-1 ml-2 mx-1",
+            },
+            [_vm._v("12")]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass:
+            "text-gray-500 border border-r-0 border-l-0 px-3 py-1 shadow-md",
+        },
+        [
+          _c("i", { staticClass: "fas fa-envelope mr-2" }),
+          _vm._v("Sent\n        "),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "text-gray-500 border px-3 py-1 rounded-r-xl shadow-md",
+        },
+        [
+          _c("i", { staticClass: "fas fa-trash mr-2" }),
+          _vm._v("Trash\n        "),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "md:col-span-3 space-y-3" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "transition-all duration-200 cursor-pointer border rounded-xl bg-white hover:bg-gray-100 shadow-lg px-5 py-3 flex",
+        },
+        [
+          _c("img", {
+            staticClass: "h-12 w-12 mr-2 md:mr-4 rounded-full",
+            attrs: {
+              src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+              alt: "",
+            },
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "pt-1" }, [
+            _c("div", { staticClass: "flex justify-between" }, [
+              _c("h1", { staticClass: "text-lg font-bold leading-4" }, [
+                _vm._v("Jane Doe"),
+              ]),
+              _vm._v(" "),
+              _c("h1", { staticClass: "text-xs" }, [_vm._v("August 23, 2021")]),
+            ]),
+            _vm._v(" "),
+            _c("h2", { staticClass: "text-base" }, [_vm._v("Apply Resume CV")]),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                staticClass:
+                  "my-2 h-20 overflow-hidden leading-5 text-sm text-gray-600",
+              },
+              [
+                _vm._v(
+                  "\n                        It is a long established fact that a reader will be distracted by the readable content\n                        of a page when looking at its layout. The point of using Lorem Ipsum is that it has a\n                        more-or-less normal distribution of letters, as opposed to using 'Content here, content\n                        here', making it look like readable English.\n                    "
+                ),
+              ]
+            ),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex justify-between" }, [
+      _c("h1", { staticClass: "text-lg font-bold leading-4" }, [
+        _vm._v("Jane Doe"),
+      ]),
+      _vm._v(" "),
+      _c("h1", { staticClass: "text-xs" }, [_vm._v("August 23, 2021")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass:
+          "inline-flex mx-2 items-center h-10 rounded-xl border text-white w-12 float-bottom",
+      },
+      [
+        _c("i", {
+          staticClass: "far fa-paper-plane text-gray-600 text-xl m-auto",
+        }),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
