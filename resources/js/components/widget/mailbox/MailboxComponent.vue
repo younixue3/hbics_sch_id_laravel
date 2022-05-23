@@ -12,25 +12,9 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-8 gap-5 my-5">
             <div class="md:col-span-3 space-y-3">
-                <div v-for=""
-                    class="transition-all duration-200 cursor-pointer border rounded-xl bg-white hover:bg-gray-100 shadow-lg px-5 py-3 flex">
-                    <img class="h-12 w-12 mr-2 md:mr-4 rounded-full"
-                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                         alt="">
-                    <div class="pt-1">
-                        <div class="flex justify-between">
-                            <h1 class="text-lg font-bold leading-4">Jane Doe</h1>
-                            <h1 class="text-xs">August 23, 2021</h1>
-                        </div>
-                        <h2 class="text-base">Apply Resume CV</h2>
-                        <p class="my-2 h-20 overflow-hidden leading-5 text-sm text-gray-600">
-                            It is a long established fact that a reader will be distracted by the readable content
-                            of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                            here', making it look like readable English.
-                        </p>
-                    </div>
-                </div>
+                <slot>
+
+                </slot>
             </div>
             <!--       Not Support for Mobile Version         -->
             <div class="hidden md:block md:col-span-5">
@@ -154,6 +138,9 @@ export default {
             });
 
             input.click();
+        },
+        clickCard: function () {
+            console.log('asdas')
         }
     }
 }

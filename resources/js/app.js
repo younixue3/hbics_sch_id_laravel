@@ -180,6 +180,7 @@ Vue.component('form-edit-teacher-staff-component', require('./components/widget/
 
 //MAILBOX Widget & Function
 Vue.component('mailbox-component', require('./components/widget/mailbox/MailboxComponent').default)
+Vue.component('mailbox-card-component', require('./components/widget/mailbox/MailboxCardComponent').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -5,17 +5,6 @@
         <multiple-select-component nameoption="selectcategory" valueoption="{{$category}}"></multiple-select-component>
         <input type="hidden" name="_method" value="post">
     </workspace-publikasi-function>
-    <script>
-        export default {
-            methods: {
-                submitPublikasi: function () {
-                    this.$store.state.workspace.file = 0
-                },
-                selectStatus: function () {
-                }
-            }
-        }
-    </script>
 @endsection
 @section('notification')
     <div class="fixed bottom-0 right-0 flex-row">

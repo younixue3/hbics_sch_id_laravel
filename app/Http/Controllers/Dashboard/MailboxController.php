@@ -21,8 +21,8 @@ class MailboxController extends Controller
      */
     public function index()
     {
-        $mail = $this->data->
-        return view('dashboard.mailbox.index');
+        $mailbox = $this->data->get_data();
+        return view('dashboard.mailbox.index', $mailbox);
     }
 
     /**

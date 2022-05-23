@@ -6384,6 +6384,48 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "MailboxCardComponent",
+  props: ['name', 'date', 'content', 'subject'],
+  methods: {
+    cardClick: function cardClick() {
+      console.log('terkelik');
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=script&lang=js& ***!
@@ -6398,22 +6440,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tinymce/tinymce-vue */ "./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -6549,6 +6575,9 @@ __webpack_require__.r(__webpack_exports__);
         reader.readAsDataURL(file);
       });
       input.click();
+    },
+    clickCard: function clickCard() {
+      console.log('asdas');
     }
   }
 });
@@ -8110,6 +8139,7 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-teacher-staff-compon
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-edit-teacher-staff-component', (__webpack_require__(/*! ./components/widget/komunitas/FormEditTeacherStaffComponent */ "./resources/js/components/widget/komunitas/FormEditTeacherStaffComponent.vue")["default"])); //MAILBOX Widget & Function
 
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('mailbox-component', (__webpack_require__(/*! ./components/widget/mailbox/MailboxComponent */ "./resources/js/components/widget/mailbox/MailboxComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('mailbox-card-component', (__webpack_require__(/*! ./components/widget/mailbox/MailboxCardComponent */ "./resources/js/components/widget/mailbox/MailboxCardComponent.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -10367,6 +10397,45 @@ component.options.__file = "resources/js/components/widget/komunitas/TeacherStaf
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/mailbox/MailboxCardComponent.vue":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/widget/mailbox/MailboxCardComponent.vue ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _MailboxCardComponent_vue_vue_type_template_id_399e0af8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MailboxCardComponent.vue?vue&type=template&id=399e0af8&scoped=true& */ "./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=template&id=399e0af8&scoped=true&");
+/* harmony import */ var _MailboxCardComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MailboxCardComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MailboxCardComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MailboxCardComponent_vue_vue_type_template_id_399e0af8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _MailboxCardComponent_vue_vue_type_template_id_399e0af8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "399e0af8",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/mailbox/MailboxCardComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/mailbox/MailboxComponent.vue":
 /*!*********************************************************************!*\
   !*** ./resources/js/components/widget/mailbox/MailboxComponent.vue ***!
@@ -11691,6 +11760,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxCardComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MailboxCardComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxCardComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************!*\
   !*** ./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=script&lang=js& ***!
@@ -12629,6 +12714,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TeacherStaffComponent_vue_vue_type_template_id_61c4060f_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TeacherStaffComponent_vue_vue_type_template_id_61c4060f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./TeacherStaffComponent.vue?vue&type=template&id=61c4060f&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/komunitas/TeacherStaffComponent.vue?vue&type=template&id=61c4060f&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=template&id=399e0af8&scoped=true&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=template&id=399e0af8&scoped=true& ***!
+  \********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxCardComponent_vue_vue_type_template_id_399e0af8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxCardComponent_vue_vue_type_template_id_399e0af8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxCardComponent_vue_vue_type_template_id_399e0af8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MailboxCardComponent.vue?vue&type=template&id=399e0af8&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=template&id=399e0af8&scoped=true&");
 
 
 /***/ }),
@@ -20604,6 +20706,68 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=template&id=399e0af8&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxCardComponent.vue?vue&type=template&id=399e0af8&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass:
+        "transition-all duration-200 cursor-pointer border rounded-xl bg-white hover:bg-gray-100 shadow-lg px-5 py-3 flex",
+      on: { click: _vm.cardClick },
+    },
+    [
+      _c("img", {
+        staticClass: "h-12 w-12 mr-2 md:mr-4 rounded-full",
+        attrs: {
+          src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+          alt: "",
+        },
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "pt-1" }, [
+        _c("div", { staticClass: "flex justify-between" }, [
+          _c("h1", { staticClass: "text-lg font-bold leading-4" }, [
+            _vm._v(_vm._s(_vm.name)),
+          ]),
+          _vm._v(" "),
+          _c("h1", { staticClass: "text-xs" }, [_vm._v(_vm._s(_vm.date))]),
+        ]),
+        _vm._v(" "),
+        _c("h2", { staticClass: "text-base" }, [_vm._v(_vm._s(_vm.subject))]),
+        _vm._v(" "),
+        _c(
+          "p",
+          {
+            staticClass:
+              "my-2 h-20 overflow-hidden leading-5 text-sm text-gray-600",
+          },
+          [_vm._v("\n            " + _vm._s(_vm.content) + "\n        ")]
+        ),
+      ]),
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true&":
 /*!*******************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true& ***!
@@ -20624,7 +20788,12 @@ var render = function () {
     _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "grid grid-cols-1 md:grid-cols-8 gap-5 my-5" }, [
-      _vm._m(1),
+      _c(
+        "div",
+        { staticClass: "md:col-span-3 space-y-3" },
+        [_vm._t("default")],
+        2
+      ),
       _vm._v(" "),
       _c("div", { staticClass: "hidden md:block md:col-span-5" }, [
         _c(
@@ -20642,7 +20811,7 @@ var render = function () {
             }),
             _vm._v(" "),
             _c("div", { staticClass: "pt-1" }, [
-              _vm._m(2),
+              _vm._m(1),
               _vm._v(" "),
               _c("h1", { staticClass: "text-sm leading-4" }, [
                 _vm._v("janedoe@example.com"),
@@ -20700,7 +20869,7 @@ var render = function () {
                     },
                   }),
                   _vm._v(" "),
-                  _vm._m(3),
+                  _vm._m(2),
                 ],
                 1
               ),
@@ -20756,54 +20925,6 @@ var staticRenderFns = [
         [
           _c("i", { staticClass: "fas fa-trash mr-2" }),
           _vm._v("Trash\n        "),
-        ]
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "md:col-span-3 space-y-3" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "transition-all duration-200 cursor-pointer border rounded-xl bg-white hover:bg-gray-100 shadow-lg px-5 py-3 flex",
-        },
-        [
-          _c("img", {
-            staticClass: "h-12 w-12 mr-2 md:mr-4 rounded-full",
-            attrs: {
-              src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-              alt: "",
-            },
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "pt-1" }, [
-            _c("div", { staticClass: "flex justify-between" }, [
-              _c("h1", { staticClass: "text-lg font-bold leading-4" }, [
-                _vm._v("Jane Doe"),
-              ]),
-              _vm._v(" "),
-              _c("h1", { staticClass: "text-xs" }, [_vm._v("August 23, 2021")]),
-            ]),
-            _vm._v(" "),
-            _c("h2", { staticClass: "text-base" }, [_vm._v("Apply Resume CV")]),
-            _vm._v(" "),
-            _c(
-              "p",
-              {
-                staticClass:
-                  "my-2 h-20 overflow-hidden leading-5 text-sm text-gray-600",
-              },
-              [
-                _vm._v(
-                  "\n                        It is a long established fact that a reader will be distracted by the readable content\n                        of a page when looking at its layout. The point of using Lorem Ipsum is that it has a\n                        more-or-less normal distribution of letters, as opposed to using 'Content here, content\n                        here', making it look like readable English.\n                    "
-                ),
-              ]
-            ),
-          ]),
         ]
       ),
     ])

@@ -15,8 +15,8 @@ class CreateMailboxTable extends Migration
     {
         Schema::create('mailbox', function (Blueprint $table) {
             $table->id();
-            $table->text('area');
-            $table->unsignedBigInteger('kunjungan');
+            $table->text('content')->nullable();
+            $table->unsignedBigInteger('kunjungan')->nullable();
             $table->foreign('kunjungan')->references('id')->on('kunjungans');
             $table->timestamps();
         });

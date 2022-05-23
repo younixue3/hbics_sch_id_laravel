@@ -15,7 +15,6 @@ class CreateSentsTable extends Migration
     {
         Schema::create('sents', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 120);
             $table->text('message');
             $table->timestamps();
         });

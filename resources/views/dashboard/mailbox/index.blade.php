@@ -1,7 +1,14 @@
 @extends('layouts.dashboard.master')
 @section('title', 'Mailbox')
 @section('content')
-    <mailbox-component></mailbox-component>
+    <mailbox-component>
+        @forelse($mailbox as $key => $value)
+            {{dd($value)}}
+            <mailbox-card-component name="" subject="Kunjungan_ {{$value->kunjungan}}" date="{{$value->created_at}}" content="{{$value->kunjungan != null ? $value->kunjungan : $value->content}}"></mailbox-card-component>
+            @empty
+                Data Kosong
+                @endforelse
+    </mailbox-component>
 @endsection
 {{--@section('modalShow')--}}
 {{--    <form-prestasi-component>--}}

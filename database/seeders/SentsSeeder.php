@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class SentsSeeder extends Seeder
 {
@@ -13,6 +14,11 @@ class SentsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('sents')->insert([
+            ['message' => '<p>bla bla bla</p>'],
+            ['message' => '<p>bla bla bla</p>'],
+            ['message' => '<p>bla bla bla</p>'],
+            ['message' => '<p>bla bla bla</p>'],
+        ]);
     }
 }
