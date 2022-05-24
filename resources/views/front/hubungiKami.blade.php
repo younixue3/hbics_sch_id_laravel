@@ -68,20 +68,21 @@
                     <img class="" src="{{asset('assets/stock_photo_rdev/3d-fluency-blue-paper-plane.png')}}">
                 </div>
             </div>
-            <div class="md:w-3/5 py-10 px-10 md:px-20 bg-white shadow-xl rounded-2xl w-full flex-row text-left">
+            <form action="{{route('hubungi-kami.sent-message')}}" method="POST" class="md:w-3/5 py-10 px-10 md:px-20 bg-white shadow-xl rounded-2xl w-full flex-row text-left">
+                @csrf
                 <div class="my-2">
                     <span class="text-sm">Nama lengkap</span>
-                    <input type="text"
+                    <input type="text" name="name"
                            class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                 </div>
                 <div class="my-2">
                     <label class="text-sm">Alamat email</label>
-                    <input type="text"
+                    <input type="text" name="email"
                            class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                 </div>
                 <div class="my-2">
                     <label class="text-sm">Pesan</label>
-                    <textarea
+                    <textarea name="message"
                         class="bg-gray-100 h-20 resize-none w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold"></textarea>
                 </div>
                 <div class="my-5">
@@ -89,7 +90,7 @@
                         Kirim Pesan
                     </button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 @endsection

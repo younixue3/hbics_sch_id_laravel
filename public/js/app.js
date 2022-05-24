@@ -3983,6 +3983,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -3999,7 +4004,8 @@ __webpack_require__.r(__webpack_exports__);
     footerwhite: String,
     logo: String,
     logohhk: String,
-    authstatus: String
+    authstatus: String,
+    logooffice: String
   },
   created: function created() {
     var _this = this;
@@ -6481,6 +6487,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tinymce/tinymce-vue */ "./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+//
 //
 //
 //
@@ -14089,7 +14096,7 @@ var render = function () {
       {
         ref: "navbar",
         staticClass:
-          "h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-40",
+          "h-20 md:h-44 fixed top-0 w-full transition-all ease-in-out duration-300 z-40",
         attrs: { id: "navBar" },
       },
       [
@@ -14121,16 +14128,28 @@ var render = function () {
                       "a",
                       {
                         staticClass:
-                          "hidden lg:block px-2 after:content-['_↗'] text-white",
+                          "hidden lg:block px-2 py-2 text-white hover:border-2 hover:border-white rounded-sm transition-all ease-in-out duration-300",
                         attrs: {
                           href: "https://www.office.com/",
                           target: "_blank",
                         },
                       },
                       [
-                        _vm._v(
-                          "\n                            Login 365\n                        "
-                        ),
+                        _c("div", { staticClass: "flex" }, [
+                          _c("img", {
+                            staticClass: "h-9 w-9",
+                            attrs: { src: _vm.logooffice },
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "ml-2 h-4 m-auto transition-all ease-in-out uppercase",
+                            },
+                            [_vm._v("Login")]
+                          ),
+                        ]),
                       ]
                     ),
                     _vm._v(" "),
@@ -15148,21 +15167,13 @@ var render = function () {
                   ),
                   _vm._v(" "),
                   _c(
-                    "div",
+                    "a",
                     {
-                      class:
-                        _vm.authstatus !== "" ? "hidden lg:block" : "hidden",
+                      staticClass:
+                        "cursor-pointer 2-1 hover:border-2 hover:border-white uppercase p-2 transition-all ease-in-out duration-300",
+                      attrs: { href: _vm.dataurl["dashboard"] },
                     },
-                    [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "cursor-pointer",
-                          attrs: { href: _vm.dataurl["dashboard"] },
-                        },
-                        [_vm._v("Dashboard")]
-                      ),
-                    ]
+                    [_vm._m(21)]
                   ),
                 ]
               ),
@@ -15892,7 +15903,7 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(21),
+            _vm._m(22),
           ]
         ),
       ]
@@ -16780,6 +16791,21 @@ var staticRenderFns = [
         ),
       ]
     )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex" }, [
+      _c("i", {
+        staticClass: "fa-solid fa-id-badge h-9 pt-1 text-3xl text-center",
+      }),
+      _c(
+        "div",
+        { staticClass: "m-auto ml-2 h-4 text-base m-auto text-center" },
+        [_vm._v("Sign In")]
+      ),
+    ])
   },
   function () {
     var _vm = this
@@ -21022,25 +21048,131 @@ var render = function () {
                 : _vm._e(),
               _vm._v(" "),
               this.$store.state.mailbox.kunjungan !== null
-                ? _c("div", [
+                ? _c("div", { staticClass: "my-2" }, [
                     _c(
                       "div",
                       {
                         staticClass:
-                          "p-5 bg-white shadow-xl rounded-2xl w-full flex-row text-left text-sm md:text-base",
+                          "p-5 bg-white rounded-2xl w-full flex-row text-left text-sm md:text-base",
                       },
                       [
-                        _vm._m(2),
+                        _c("div", { staticClass: "my-2" }, [
+                          _c("span", { staticClass: "text-sm" }, [
+                            _vm._v("Nama orang tua"),
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass:
+                              "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+                            attrs: { disabled: "", type: "text" },
+                            domProps: {
+                              value: this.$store.state.mailbox.kunjungan.name,
+                            },
+                          }),
+                        ]),
                         _vm._v(" "),
-                        _vm._m(3),
+                        _c("div", { staticClass: "my-2" }, [
+                          _c("label", { staticClass: "text-sm" }, [
+                            _vm._v("Alamat email"),
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass:
+                              "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+                            attrs: { disabled: "", type: "text" },
+                            domProps: {
+                              value: this.$store.state.mailbox.kunjungan.email,
+                            },
+                          }),
+                        ]),
                         _vm._v(" "),
-                        _vm._m(4),
+                        _c("div", { staticClass: "my-2" }, [
+                          _c("label", { staticClass: "text-sm" }, [
+                            _vm._v("Alamat"),
+                          ]),
+                          _vm._v(" "),
+                          _c("textarea", {
+                            staticClass:
+                              "bg-gray-100 h-20 resize-none w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+                            domProps: {
+                              value: this.$store.state.mailbox.kunjungan.alamat,
+                            },
+                          }),
+                        ]),
                         _vm._v(" "),
-                        _vm._m(5),
+                        _c(
+                          "div",
+                          { staticClass: "my-2 grid grid-cols-2 gap-5" },
+                          [
+                            _c("div", [
+                              _c("label", { staticClass: "text-sm" }, [
+                                _vm._v("Kota/Kab"),
+                              ]),
+                              _vm._v(" "),
+                              _c("input", {
+                                staticClass:
+                                  "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+                                attrs: { disabled: "", type: "text" },
+                                domProps: {
+                                  value:
+                                    this.$store.state.mailbox.kunjungan
+                                      .kota_kab,
+                                },
+                              }),
+                            ]),
+                            _vm._v(" "),
+                            _c("div", [
+                              _c("label", { staticClass: "text-sm" }, [
+                                _vm._v("Negara"),
+                              ]),
+                              _vm._v(" "),
+                              _c("input", {
+                                staticClass:
+                                  "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+                                attrs: { disabled: "", type: "text" },
+                                domProps: {
+                                  value:
+                                    this.$store.state.mailbox.kunjungan.negara,
+                                },
+                              }),
+                            ]),
+                          ]
+                        ),
                         _vm._v(" "),
-                        _vm._m(6),
+                        _c("div", { staticClass: "my-2" }, [
+                          _c("label", { staticClass: "text-sm" }, [
+                            _vm._v("Telepon"),
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass:
+                              "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+                            attrs: { disabled: "", type: "text" },
+                            domProps: {
+                              value:
+                                this.$store.state.mailbox.kunjungan.telepon,
+                            },
+                          }),
+                        ]),
                         _vm._v(" "),
-                        _vm._m(7),
+                        _c("div", { staticClass: "my-2 mt-8" }, [
+                          _c("div", { staticClass: "my-2" }, [
+                            _c("span", { staticClass: "text-sm" }, [
+                              _vm._v("Nama calon siswa/i"),
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass:
+                                "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+                              attrs: { disabled: "", type: "text" },
+                              domProps: {
+                                value:
+                                  this.$store.state.mailbox.kunjungan
+                                    .nama_calon_siswa,
+                              },
+                            }),
+                          ]),
+                        ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "my-2" }, [
                           _c("span", { staticClass: "text-sm" }, [
@@ -21125,9 +21257,43 @@ var render = function () {
                           ),
                         ]),
                         _vm._v(" "),
-                        _vm._m(8),
+                        _c("div", { staticClass: "my-2" }, [
+                          _c("div", { staticClass: "my-2" }, [
+                            _c("span", { staticClass: "text-sm" }, [
+                              _vm._v("Tingkat pendidikan saat ini"),
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass:
+                                "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+                              attrs: { disabled: "", type: "text" },
+                              domProps: {
+                                value:
+                                  this.$store.state.mailbox.kunjungan
+                                    .tinkat_pendidikan,
+                              },
+                            }),
+                          ]),
+                        ]),
                         _vm._v(" "),
-                        _vm._m(9),
+                        _c("div", { staticClass: "my-2" }, [
+                          _c("div", { staticClass: "my-2" }, [
+                            _c("span", { staticClass: "text-sm" }, [
+                              _vm._v("Tanggal kunjungan"),
+                            ]),
+                            _vm._v(" "),
+                            _c("input", {
+                              staticClass:
+                                "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+                              attrs: { disabled: "", type: "datetime" },
+                              domProps: {
+                                value:
+                                  this.$store.state.mailbox.kunjungan
+                                    .tanggal_kunjungan,
+                              },
+                            }),
+                          ]),
+                        ]),
                       ]
                     ),
                   ])
@@ -21135,12 +21301,21 @@ var render = function () {
               _vm._v(" "),
               _c(
                 "form",
-                { staticClass: "flex relative rounded-md mt-10 mb-5" },
+                {
+                  staticClass: "flex relative rounded-md mt-10 mb-5",
+                  attrs: { action: _vm.$store.state.mailbox.url },
+                },
                 [
+                  _c("input", {
+                    attrs: { type: "hidden", name: "_token" },
+                    domProps: { value: _vm.$store.state.csrf },
+                  }),
+                  _vm._v(" "),
                   _c("editor", {
                     staticClass:
                       "flex-1 block border w-full rounded-xl focus:outline-none px-3 pt-2 pb-1 h-32 resize",
                     attrs: {
+                      name: "sent",
                       "api-key": "no-api-key",
                       init: {
                         height: 300,
@@ -21166,7 +21341,7 @@ var render = function () {
                     },
                   }),
                   _vm._v(" "),
-                  _vm._m(10),
+                  _vm._m(2),
                 ],
                 1
               ),
@@ -21238,138 +21413,6 @@ var staticRenderFns = [
           alt: "",
         },
       }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "my-2" }, [
-      _c("span", { staticClass: "text-sm" }, [_vm._v("Nama orang tua")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass:
-          "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
-        attrs: { disabled: "", type: "text" },
-      }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "my-2" }, [
-      _c("label", { staticClass: "text-sm" }, [_vm._v("Alamat email")]),
-      _vm._v('\n                                "'),
-      _c("input", {
-        staticClass:
-          "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
-        attrs: { disabled: "", type: "text" },
-      }),
-      _vm._v('"\n                            '),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "my-2" }, [
-      _c("label", { staticClass: "text-sm" }, [_vm._v("Alamat")]),
-      _vm._v(" "),
-      _c("textarea", {
-        staticClass:
-          "bg-gray-100 h-20 resize-none w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
-      }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "my-2 grid grid-cols-2 gap-5" }, [
-      _c("div", [
-        _c("label", { staticClass: "text-sm" }, [_vm._v("Kota/Kab")]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass:
-            "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
-          attrs: { disabled: "", type: "text" },
-        }),
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("label", { staticClass: "text-sm" }, [_vm._v("Negara")]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass:
-            "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
-          attrs: { disabled: "", type: "text" },
-        }),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "my-2" }, [
-      _c("label", { staticClass: "text-sm" }, [_vm._v("Telepon")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass:
-          "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
-        attrs: { disabled: "", type: "text" },
-      }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "my-2 mt-8" }, [
-      _c("div", { staticClass: "my-2" }, [
-        _c("span", { staticClass: "text-sm" }, [_vm._v("Nama calon siswa/i")]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass:
-            "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
-          attrs: { disabled: "", type: "text" },
-        }),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "my-2" }, [
-      _c("div", { staticClass: "my-2" }, [
-        _c("span", { staticClass: "text-sm" }, [
-          _vm._v("Tingkat pendidikan saat ini"),
-        ]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass:
-            "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
-          attrs: { disabled: "", type: "text" },
-        }),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "my-2" }, [
-      _c("div", { staticClass: "my-2" }, [
-        _c("span", { staticClass: "text-sm" }, [_vm._v("Tanggal kunjungan")]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass:
-            "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
-          attrs: { disabled: "", type: "datetime-local" },
-        }),
-      ]),
     ])
   },
   function () {

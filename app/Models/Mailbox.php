@@ -9,6 +9,8 @@ class Mailbox extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     protected $table = 'mailbox';
 
     public function kunjungan() {

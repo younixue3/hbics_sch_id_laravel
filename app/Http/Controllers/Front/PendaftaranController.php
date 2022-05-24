@@ -47,4 +47,10 @@ class PendaftaranController extends Controller
     {
         return view('front.pendaftaran.kunjungiKami.index');
     }
+
+    public function sent_kunjungan(Request $request)
+    {
+        $kunjungan = $this->data->insert_kunjungan($request);
+        return redirect()->back();
+    }
 }

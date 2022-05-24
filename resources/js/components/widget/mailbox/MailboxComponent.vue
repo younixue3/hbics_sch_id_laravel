@@ -39,45 +39,45 @@
                         <p v-if="this.$store.state.mailbox.kunjungan === null" class="my-2 overflow-hidden leading-5 text-sm text-gray-600">
                             {{this.$store.state.mailbox.content}}
                         </p>
-                        <div v-if="this.$store.state.mailbox.kunjungan !== null">
+                        <div class="my-2" v-if="this.$store.state.mailbox.kunjungan !== null">
                             <div
-                                class="p-5 bg-white shadow-xl rounded-2xl w-full flex-row text-left text-sm md:text-base">
+                                class="p-5 bg-white rounded-2xl w-full flex-row text-left text-sm md:text-base">
                                 <div class="my-2">
                                     <span class="text-sm">Nama orang tua</span>
-                                    <input disabled type="text"
+                                    <input disabled type="text" :value="this.$store.state.mailbox.kunjungan.name"
                                            class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                                 </div>
                                 <div class="my-2">
                                     <label class="text-sm">Alamat email</label>
-                                    "<input disabled type="text"
-                                           class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">"
+                                    <input disabled type="text" :value="this.$store.state.mailbox.kunjungan.email"
+                                           class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                                 </div>
                                 <div class="my-2">
                                     <label class="text-sm">Alamat</label>
-                                    <textarea
+                                    <textarea  :value="this.$store.state.mailbox.kunjungan.alamat"
                                         class="bg-gray-100 h-20 resize-none w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold"></textarea>
                                 </div>
                                 <div class="my-2 grid grid-cols-2 gap-5">
                                     <div>
                                         <label class="text-sm">Kota/Kab</label>
-                                        <input disabled type="text"
+                                        <input disabled type="text"  :value="this.$store.state.mailbox.kunjungan.kota_kab"
                                                class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                                     </div>
                                     <div>
                                         <label class="text-sm">Negara</label>
-                                        <input disabled type="text"
+                                        <input disabled type="text"  :value="this.$store.state.mailbox.kunjungan.negara"
                                                class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                                     </div>
                                 </div>
                                 <div class="my-2">
                                     <label class="text-sm">Telepon</label>
-                                    <input disabled type="text"
+                                    <input disabled type="text"  :value="this.$store.state.mailbox.kunjungan.telepon"
                                            class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                                 </div>
                                 <div class="my-2 mt-8">
                                     <div class="my-2">
                                         <span class="text-sm">Nama calon siswa/i</span>
-                                        <input disabled type="text"
+                                        <input disabled type="text"  :value="this.$store.state.mailbox.kunjungan.nama_calon_siswa"
                                                class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                                     </div>
                                 </div>
@@ -109,23 +109,24 @@
                                 <div class="my-2">
                                     <div class="my-2">
                                         <span class="text-sm">Tingkat pendidikan saat ini</span>
-                                        <input disabled type="text"
+                                        <input disabled type="text"  :value="this.$store.state.mailbox.kunjungan.tinkat_pendidikan"
                                                class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                                     </div>
                                 </div>
                                 <div class="my-2">
                                     <div class="my-2">
                                         <span class="text-sm">Tanggal kunjungan</span>
-                                        <input disabled type="datetime-local"
+                                        <input disabled type="datetime"  :value="this.$store.state.mailbox.kunjungan.tanggal_kunjungan"
                                                class="bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <form class="flex relative rounded-md mt-10 mb-5">
+                        <form :action="$store.state.mailbox.url" class="flex relative rounded-md mt-10 mb-5">
+                            <input type="hidden" name="_token" :value="$store.state.csrf">
                             <!--                            <textarea type="email"-->
                             <!--                                   class="flex-1 block border w-full rounded-xl focus:outline-none px-3 pt-2 pb-1 h-32 resize-y"></textarea>-->
-                            <editor
+                            <editor name="sent"
                                 api-key="no-api-key"
                                 class="flex-1 block border w-full rounded-xl focus:outline-none px-3 pt-2 pb-1 h-32 resize"
                                 :init="{

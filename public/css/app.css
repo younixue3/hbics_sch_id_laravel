@@ -746,6 +746,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-0{
   margin-left: 0px;
 }
+.ml-0\.5{
+  margin-left: 0.125rem;
+}
 .block{
   display: block;
 }
@@ -964,6 +967,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-24{
   width: 6rem;
+}
+.w-9{
+  width: 2.25rem;
 }
 .max-w-6xl{
   max-width: 72rem;
@@ -2534,6 +2540,20 @@ h6{
   border-width: 0px;
 }
 
+.hover\:border-2:hover{
+  border-width: 2px;
+}
+
+.hover\:border-amber-400:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(251 191 36 / var(--tw-border-opacity));
+}
+
+.hover\:border-white:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 .hover\:bg-blue-700:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
@@ -2655,6 +2675,14 @@ h6{
   --tw-gradient-to: #fb7185;
 }
 
+.hover\:font-bold:hover{
+  font-weight: 700;
+}
+
+.hover\:font-semibold:hover{
+  font-weight: 600;
+}
+
 .hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2688,6 +2716,11 @@ h6{
 .hover\:text-blue-700:hover{
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-800:hover{
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-100:hover{

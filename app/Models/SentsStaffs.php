@@ -9,6 +9,8 @@ class SentsStaffs extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function staffs_sentsstaffs() {
         return $this->hasOne(User::class, 'id', 'staff')->first();
     }

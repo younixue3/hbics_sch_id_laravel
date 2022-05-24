@@ -37,12 +37,14 @@ Route::get('/metode-pembelajaran', [App\Http\Controllers\Front\TentangKamiContro
 Route::get('/fasilitas', [App\Http\Controllers\Front\TentangKamiController::class, 'fasilitas'])->name('fasilitas');
 //////////Hubungi Kami
 Route::get('/hubungi-kami', [App\Http\Controllers\Front\HubungiKamiController::class, 'index'])->name('hubungi-kami');
+Route::post('/hubungi-kami/sent-message', [App\Http\Controllers\Front\HubungiKamiController::class, 'sent_message'])->name('hubungi-kami.sent-message');
 //////////Pendaftaran
 Route::get('/pendaftaran', [App\Http\Controllers\Front\PendaftaranController::class, 'index'])->name('pendaftaran');
 Route::get('/petunjuk-pendaftaran', [App\Http\Controllers\Front\PendaftaranController::class, 'petunjukPendaftaran'])->name('petunjuk-pendaftaran');
 Route::get('/program-beasiswa', [App\Http\Controllers\Front\PendaftaranController::class, 'programBeasiswa'])->name('program-beasiswa');
 Route::get('/pendaftaran-siswa-baru', [App\Http\Controllers\Front\PendaftaranController::class, 'pendaftaranSiswaBaru'])->name('pendaftaran-siswa-baru');
 Route::get('/kunjungi-kami', [App\Http\Controllers\Front\PendaftaranController::class, 'kunjungiKami'])->name('kunjungi-kami');
+Route::post('/kunjungi-kami/sent-kunjungan', [App\Http\Controllers\Front\PendaftaranController::class, 'sent_kunjungan'])->name('kunjungi-kami.sent-kunjungan');
 //////////Akademis
 Route::get('/akademis', [App\Http\Controllers\Front\AkademisController::class, 'index'])->name('akademis');
 Route::get('/kelompok-bermain-taman-kanak-kanak', [App\Http\Controllers\Front\AkademisController::class, 'kelompokBermainTk'])->name('kelompok-bermain-tk');
@@ -82,6 +84,7 @@ Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(functi
     Route::resource('teacher_staff', \App\Http\Controllers\Dashboard\TeacherStaffController::class);
     Route::resource('mailbox', \App\Http\Controllers\Dashboard\MailboxController::class);
 //    Route::get('/send-mail', [\App\Mail\HbicsMail::class, 'build'])->name('send.mail');
+    Route::get('/send-mailbox/{id}', [\App\Http\Controllers\Mail\MailController::class, 'mailbox'])->name('send.mailbox');
     Route::get('/send-mail/{key}/{audience}', [\App\Http\Controllers\Mail\MailController::class, 'index'])->name('send.mail');
 });
 

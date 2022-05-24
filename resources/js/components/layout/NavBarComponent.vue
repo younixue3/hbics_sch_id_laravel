@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header ref="navbar" class="h-20 md:h-44 fixed top-0 w-screen transition-all ease-in-out duration-300 z-40"
+        <header ref="navbar" class="h-20 md:h-44 fixed top-0 w-full transition-all ease-in-out duration-300 z-40"
                 id="navBar">
             <div>
                 <div
@@ -9,8 +9,11 @@
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
                         <div class="text-sm font-light">
                             <a href="https://www.office.com/" target="_blank"
-                               class="hidden lg:block px-2 after:content-['_↗'] text-white">
-                                Login 365
+                               class="hidden lg:block px-2 py-2 text-white hover:border-2 hover:border-white rounded-sm transition-all ease-in-out duration-300">
+                                <div class="flex">
+                                    <img class="h-9 w-9" :src="logooffice">
+                                    <div class="ml-2 h-4 m-auto transition-all ease-in-out uppercase">Login</div>
+                                </div>
                             </a>
                             <div class="-mr-2 -my-2 lg:hidden">
                                 <button id="openMenu" type="button" @click="menushow()"
@@ -601,9 +604,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div :class="authstatus !== '' ? 'hidden lg:block' : 'hidden'">
-                            <a class="cursor-pointer" :href="dataurl['dashboard']">Dashboard</a>
-                        </div>
+                        <a class="cursor-pointer 2-1 hover:border-2 hover:border-white uppercase p-2 transition-all ease-in-out duration-300" :href="dataurl['dashboard']">
+                            <div class="flex">
+                                <i class="fa-solid fa-id-badge h-9 pt-1 text-3xl text-center"></i><div class="m-auto ml-2 h-4 text-base m-auto text-center">Sign In</div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -846,7 +851,8 @@ export default {
         footerwhite: String,
         logo: String,
         logohhk: String,
-        authstatus: String
+        authstatus: String,
+        logooffice: String
     },
     created() {
         window.addEventListener('scroll', this.handleScroll);

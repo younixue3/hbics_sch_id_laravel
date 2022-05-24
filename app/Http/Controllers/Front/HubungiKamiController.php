@@ -29,4 +29,10 @@ class HubungiKamiController extends Controller
         $datas = $this->data->get_data();
         return view('front.hubungiKami', $datas);
     }
+
+    public function sent_message(Request $request)
+    {
+        $message = $this->data->insert_message($request);
+        return redirect()->back();
+    }
 }
