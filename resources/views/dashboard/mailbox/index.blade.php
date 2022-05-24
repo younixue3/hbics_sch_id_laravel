@@ -3,11 +3,10 @@
 @section('content')
     <mailbox-component>
         @forelse($mailbox as $key => $value)
-{{--            {{dd($value)}}--}}
-            <mailbox-card-component name="{{$value->kunjungan == null ? $value->content : 'ad'}}" subject="Kunjungan_ {{$value->kunjungan}}" date="{{$value->created_at}}" content="{{$value->kunjungan != null ? $value->kunjungan : $value->content}}"></mailbox-card-component>
+            <mailbox-card-component name="{{$value->kunjungan == null ? $value->content : $value->kunjungan()}}" subject="{{$value->kunjungan != null ? 'Kunjungan_'.$value->kunjungan : 'Pesan Dari '.json_decode($value->content)->items->name}}" date="{{$value->created_at}}" content="{{$value->kunjungan != null ? $value->kunjungan() : $value->content}}" type="{{$value->kunjungan}}" url="{{$value->id}}"></mailbox-card-component>
             @empty
-                Data Kosong
-                @endforelse
+            Data Kosong
+            @endforelse
     </mailbox-component>
 @endsection
 {{--@section('modalShow')--}}

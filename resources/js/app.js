@@ -42,7 +42,16 @@ const store = new Vuex.Store({
             }
         },
         workspace: {items: []},
-        file: 0
+        file: 0,
+        mailbox: {
+            name: null,
+            email: null,
+            subject: null,
+            content: null,
+            date: null,
+            url: null,
+            kunjungan: null
+        }
     },
     mutations: {
         toggleModalValidationView(state) {

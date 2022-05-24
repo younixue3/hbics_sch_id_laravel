@@ -6414,17 +6414,53 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "MailboxCardComponent",
-  props: ['name', 'date', 'content', 'subject'],
+  props: ['name', 'date', 'content', 'subject', 'url', 'type'],
   data: function data() {
-    return {
-      nama: JSON.parse(this.$props.name).items
-    };
+    return {};
   },
   methods: {
     cardClick: function cardClick() {
-      console.log('terkelik');
+      this.$store.state.mailbox.name = null;
+      this.$store.state.mailbox.email = null;
+      this.$store.state.mailbox.subject = null;
+      this.$store.state.mailbox.url = null;
+      this.$store.state.mailbox.content = null;
+      this.$store.state.mailbox.date = null;
+      this.$store.state.mailbox.kunjungan = null;
+
+      if (this.$props.type === '') {
+        this.$store.state.mailbox.name = JSON.parse(this.$props.name).items.name;
+        this.$store.state.mailbox.email = JSON.parse(this.$props.name).items.email;
+        this.$store.state.mailbox.subject = this.$props.subject;
+        this.$store.state.mailbox.url = this.$props.url;
+        this.$store.state.mailbox.content = JSON.parse(this.$props.name).items.message;
+        this.$store.state.mailbox.date = JSON.parse(this.$props.name).items.date;
+      } else {
+        console.log('kunjungan');
+        this.$store.state.mailbox.name = JSON.parse(this.$props.name).name;
+        this.$store.state.mailbox.email = JSON.parse(this.$props.name).email;
+        this.$store.state.mailbox.subject = this.$props.subject;
+        this.$store.state.mailbox.url = this.$props.url;
+        this.$store.state.mailbox.kunjungan = JSON.parse(this.$props.name);
+        this.$store.state.mailbox.date = JSON.parse(this.$props.name).date;
+      }
     }
   }
 });
@@ -6536,6 +6572,77 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -6554,7 +6661,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     imageUploader: function imageUploader(cb, value, meta) {
-      var input = document.createElement('input');
+      var input = document.createElement('input disabled');
       input.setAttribute('type', 'file');
       input.setAttribute('accept', 'image/*');
       input.addEventListener('change', function (e) {
@@ -8009,7 +8116,16 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_2__["default"].Store({
     workspace: {
       items: []
     },
-    file: 0
+    file: 0,
+    mailbox: {
+      name: null,
+      email: null,
+      subject: null,
+      content: null,
+      date: null,
+      url: null,
+      kunjungan: null
+    }
   },
   mutations: {
     toggleModalValidationView: function toggleModalValidationView(state) {
@@ -20731,10 +20847,75 @@ var render = function () {
     "div",
     {
       staticClass:
-        "transition-all duration-200 cursor-pointer border rounded-xl bg-white hover:bg-gray-100 shadow-lg px-5 py-3 flex",
+        "transition-all duration-200 cursor-pointer border rounded-xl bg-white hover:bg-gray-100 shadow-lg px-5 py-3 w-full",
       on: { click: _vm.cardClick },
     },
     [
+      _c("div", { staticClass: "pt-1" }, [
+        _c("div", { staticClass: "flex" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-full" }, [
+            _c("div", { staticClass: "flex justify-between" }, [
+              _c("h1", { staticClass: "text-lg font-bold leading-4" }, [
+                _vm._v(
+                  _vm._s(
+                    _vm.type === ""
+                      ? JSON.parse(this.$props.name).items.name
+                      : JSON.parse(this.$props.name).name
+                  )
+                ),
+              ]),
+              _vm._v(" "),
+              _c("h1", { staticClass: "text-xs" }, [_vm._v(_vm._s(_vm.date))]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text-xs font-normal leading-4" }, [
+              _vm._v(
+                _vm._s(
+                  _vm.type === ""
+                    ? JSON.parse(this.$props.name).items.email
+                    : JSON.parse(this.$props.name).email
+                )
+              ),
+            ]),
+            _vm._v(" "),
+            _c("h2", { staticClass: "text-base" }, [
+              _vm._v(_vm._s(_vm.subject)),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _vm.type === ""
+          ? _c(
+              "p",
+              {
+                staticClass:
+                  "my-2 h-20 overflow-hidden leading-5 text-sm text-gray-600",
+              },
+              [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(JSON.parse(this.$props.name).items.message) +
+                    "\n        "
+                ),
+              ]
+            )
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.type !== ""
+          ? _c("div", { staticClass: "h-20 my-2 flex" }, [_vm._m(1)])
+          : _vm._e(),
+      ]),
+    ]
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
       _c("img", {
         staticClass: "h-12 w-12 mr-2 md:mr-4 rounded-full",
         attrs: {
@@ -20742,31 +20923,21 @@ var render = function () {
           alt: "",
         },
       }),
-      _vm._v(" "),
-      _c("div", { staticClass: "pt-1" }, [
-        _c("div", { staticClass: "flex justify-between" }, [
-          _c("h1", { staticClass: "text-lg font-bold leading-4" }, [
-            _vm._v(_vm._s(this.nama.name)),
-          ]),
-          _vm._v(" "),
-          _c("h1", { staticClass: "text-xs" }, [_vm._v(_vm._s(_vm.date))]),
-        ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "m-auto border border-dashed flex" }, [
+      _c("div", { staticClass: "m-auto flex" }, [
+        _c("i", { staticClass: "fas fa-file-alt" }),
         _vm._v(" "),
-        _c("h2", { staticClass: "text-base" }, [_vm._v(_vm._s(_vm.subject))]),
-        _vm._v(" "),
-        _c(
-          "p",
-          {
-            staticClass:
-              "my-2 h-20 overflow-hidden leading-5 text-sm text-gray-600",
-          },
-          [_vm._v("\n            " + _vm._s(this.nama.message) + "\n        ")]
-        ),
+        _c("div", [_vm._v("1 Form Kunjungan")]),
       ]),
-    ]
-  )
-}
-var staticRenderFns = []
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -20800,46 +20971,167 @@ var render = function () {
         2
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "hidden md:block md:col-span-5" }, [
+      _c("div", { staticClass: "hidden md:block md:col-span-5 relative" }, [
         _c(
           "div",
           {
-            staticClass: "border rounded-xl bg-whited shadow-lg px-5 py-3 flex",
+            staticClass: "border rounded-xl bg-whited shadow-lg px-5 py-3",
+            class: this.$store.state.mailbox.name == null ? "hidden" : "",
           },
           [
-            _c("img", {
-              staticClass: "h-12 w-12 mr-2 md:mr-4 rounded-full",
-              attrs: {
-                src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-                alt: "",
-              },
-            }),
-            _vm._v(" "),
             _c("div", { staticClass: "pt-1" }, [
-              _vm._m(1),
-              _vm._v(" "),
-              _c("h1", { staticClass: "text-sm leading-4" }, [
-                _vm._v("janedoe@example.com"),
+              _c("div", { staticClass: "flex" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("div", { staticClass: "w-full" }, [
+                  _c("div", { staticClass: "flex justify-between" }, [
+                    _c("h1", { staticClass: "text-lg font-bold leading-4" }, [
+                      _vm._v(_vm._s(this.$store.state.mailbox.name)),
+                    ]),
+                    _vm._v(" "),
+                    _c("h1", { staticClass: "text-xs" }, [
+                      _vm._v(_vm._s(this.$store.state.mailbox.date)),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "text-xs font-normal leading-4" }, [
+                    _vm._v(_vm._s(this.$store.state.mailbox.email)),
+                  ]),
+                  _vm._v(" "),
+                  _c("h2", { staticClass: "text-base" }, [
+                    _vm._v(_vm._s(this.$store.state.mailbox.subject)),
+                  ]),
+                ]),
               ]),
               _vm._v(" "),
-              _c("h2", { staticClass: "text-base" }, [
-                _vm._v("Apply Resume CV"),
-              ]),
+              this.$store.state.mailbox.kunjungan === null
+                ? _c(
+                    "p",
+                    {
+                      staticClass:
+                        "my-2 overflow-hidden leading-5 text-sm text-gray-600",
+                    },
+                    [
+                      _vm._v(
+                        "\n                        " +
+                          _vm._s(this.$store.state.mailbox.content) +
+                          "\n                    "
+                      ),
+                    ]
+                  )
+                : _vm._e(),
               _vm._v(" "),
-              _c(
-                "p",
-                {
-                  staticClass:
-                    "my-2 overflow-hidden leading-5 text-sm text-gray-600",
-                },
-                [
-                  _vm._v(
-                    "\n                        It is a long established fact that a reader will be distracted by the readable content\n                        of a page when looking at its layout. The point of using Lorem Ipsum is that it has a\n                        more-or-less normal distribution of letters, as opposed to using 'Content here, content\n                        here', making it look like readable English. Many desktop publishing packages and web\n                        page editors now use Lorem Ipsum as their default model text, and a search for 'lorem\n                        ipsum' will uncover many web sites still in their infancy. Various versions have evolved\n                        over the years, sometimes by accident, sometimes on purpose (injected humour and the\n                        like).\n                    "
-                  ),
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "grid grid-cols-3 gap-5 pt-10" }),
+              this.$store.state.mailbox.kunjungan !== null
+                ? _c("div", [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-5 bg-white shadow-xl rounded-2xl w-full flex-row text-left text-sm md:text-base",
+                      },
+                      [
+                        _vm._m(2),
+                        _vm._v(" "),
+                        _vm._m(3),
+                        _vm._v(" "),
+                        _vm._m(4),
+                        _vm._v(" "),
+                        _vm._m(5),
+                        _vm._v(" "),
+                        _vm._m(6),
+                        _vm._v(" "),
+                        _vm._m(7),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "my-2" }, [
+                          _c("span", { staticClass: "text-sm" }, [
+                            _vm._v("Area kunjungan"),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "grid grid-cols-1 md:grid-cols-4 mt-3 mb-5",
+                            },
+                            [
+                              _c("div", { staticClass: "mx-0.5" }, [
+                                _c("input", {
+                                  staticClass:
+                                    "appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer text-black",
+                                  attrs: { disabled: "", type: "checkbox" },
+                                  domProps: {
+                                    checked:
+                                      this.$store.state.mailbox.kunjungan
+                                        .area_kunjungan === "HHK",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c("span", { staticClass: "text-sm" }, [
+                                  _vm._v("Happy Holy Kids"),
+                                ]),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "mx-0.5" }, [
+                                _c("input", {
+                                  staticClass:
+                                    "appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-red-600 checked:border-red-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer text-black",
+                                  attrs: { disabled: "", type: "checkbox" },
+                                  domProps: {
+                                    checked:
+                                      this.$store.state.mailbox.kunjungan
+                                        .area_kunjungan === "SD",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c("span", { staticClass: "text-sm" }, [
+                                  _vm._v("SDK Harapan Bangsa"),
+                                ]),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "mx-0.5" }, [
+                                _c("input", {
+                                  staticClass:
+                                    "appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-purple-600 checked:border-purple-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer text-black",
+                                  attrs: { disabled: "", type: "checkbox" },
+                                  domProps: {
+                                    checked:
+                                      this.$store.state.mailbox.kunjungan
+                                        .area_kunjungan === "SMP",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c("span", { staticClass: "text-sm" }, [
+                                  _vm._v("SMPK Harapan Bangsa"),
+                                ]),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "mx-0.5" }, [
+                                _c("input", {
+                                  staticClass:
+                                    "appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-green-600 checked:border-green-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer text-black",
+                                  attrs: { disabled: "", type: "checkbox" },
+                                  domProps: {
+                                    checked:
+                                      this.$store.state.mailbox.kunjungan
+                                        .area_kunjungan === "SMA",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c("span", { staticClass: "text-sm" }, [
+                                  _vm._v("SMAK Harapan Bangsa"),
+                                ]),
+                              ]),
+                            ]
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(8),
+                        _vm._v(" "),
+                        _vm._m(9),
+                      ]
+                    ),
+                  ])
+                : _vm._e(),
               _vm._v(" "),
               _c(
                 "form",
@@ -20874,7 +21166,7 @@ var render = function () {
                     },
                   }),
                   _vm._v(" "),
-                  _vm._m(2),
+                  _vm._m(10),
                 ],
                 1
               ),
@@ -20938,12 +21230,146 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex justify-between" }, [
-      _c("h1", { staticClass: "text-lg font-bold leading-4" }, [
-        _vm._v("Jane Doe"),
+    return _c("div", [
+      _c("img", {
+        staticClass: "h-12 w-12 mr-2 md:mr-4 rounded-full",
+        attrs: {
+          src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+          alt: "",
+        },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-2" }, [
+      _c("span", { staticClass: "text-sm" }, [_vm._v("Nama orang tua")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass:
+          "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+        attrs: { disabled: "", type: "text" },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-2" }, [
+      _c("label", { staticClass: "text-sm" }, [_vm._v("Alamat email")]),
+      _vm._v('\n                                "'),
+      _c("input", {
+        staticClass:
+          "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+        attrs: { disabled: "", type: "text" },
+      }),
+      _vm._v('"\n                            '),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-2" }, [
+      _c("label", { staticClass: "text-sm" }, [_vm._v("Alamat")]),
+      _vm._v(" "),
+      _c("textarea", {
+        staticClass:
+          "bg-gray-100 h-20 resize-none w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-2 grid grid-cols-2 gap-5" }, [
+      _c("div", [
+        _c("label", { staticClass: "text-sm" }, [_vm._v("Kota/Kab")]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+          attrs: { disabled: "", type: "text" },
+        }),
       ]),
       _vm._v(" "),
-      _c("h1", { staticClass: "text-xs" }, [_vm._v("August 23, 2021")]),
+      _c("div", [
+        _c("label", { staticClass: "text-sm" }, [_vm._v("Negara")]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+          attrs: { disabled: "", type: "text" },
+        }),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-2" }, [
+      _c("label", { staticClass: "text-sm" }, [_vm._v("Telepon")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass:
+          "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+        attrs: { disabled: "", type: "text" },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-2 mt-8" }, [
+      _c("div", { staticClass: "my-2" }, [
+        _c("span", { staticClass: "text-sm" }, [_vm._v("Nama calon siswa/i")]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+          attrs: { disabled: "", type: "text" },
+        }),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-2" }, [
+      _c("div", { staticClass: "my-2" }, [
+        _c("span", { staticClass: "text-sm" }, [
+          _vm._v("Tingkat pendidikan saat ini"),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+          attrs: { disabled: "", type: "text" },
+        }),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-2" }, [
+      _c("div", { staticClass: "my-2" }, [
+        _c("span", { staticClass: "text-sm" }, [_vm._v("Tanggal kunjungan")]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "bg-gray-100 w-full rounded-md py-2 pl-5 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 font-semibold",
+          attrs: { disabled: "", type: "datetime-local" },
+        }),
+      ]),
     ])
   },
   function () {
@@ -20954,11 +21380,11 @@ var staticRenderFns = [
       "button",
       {
         staticClass:
-          "inline-flex mx-2 items-center h-10 rounded-xl border text-white w-12 float-bottom",
+          "inline-flex mx-2 bg-blue-800 items-center h-10 rounded-xl border text-white w-12 float-bottom",
       },
       [
         _c("i", {
-          staticClass: "far fa-paper-plane text-gray-600 text-xl m-auto",
+          staticClass: "far fa-paper-plane text-amber-400 text-xl m-auto",
         }),
       ]
     )
