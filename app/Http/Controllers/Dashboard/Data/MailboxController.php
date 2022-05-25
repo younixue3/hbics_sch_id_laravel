@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard\Data;
 
 use App\Http\Controllers\Controller;
 use App\Models\Mailbox;
+use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
 
 class MailboxController extends Controller
@@ -11,6 +12,16 @@ class MailboxController extends Controller
     public function get_data()
     {
         $mailbox = Mailbox::paginate(10);
+//        dd($mailbox->mailboxsents_mailbox()->sents_mailboxsents()->staffs_sentsstaffs(), $mailbox->mailboxsents_mailbox()->sents_mailboxsents()->sent_sentsstaffs());
+        $compact = compact('mailbox');
+        return $compact;
+    }
+
+    public function get_sent_data()
+    {
+
+        $mailbox = Mailbox::with('mailboxsents_mailbox')->get();
+        dd($mailbox);
 //        dd($mailbox->mailboxsents_mailbox()->sents_mailboxsents()->staffs_sentsstaffs(), $mailbox->mailboxsents_mailbox()->sents_mailboxsents()->sent_sentsstaffs());
         $compact = compact('mailbox');
         return $compact;

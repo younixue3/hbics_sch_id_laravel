@@ -25,6 +25,12 @@ class MailboxController extends Controller
         return view('dashboard.mailbox.index', $mailbox);
     }
 
+    public function sent_index()
+    {
+        $mailbox = $this->data->get_sent_data();
+        return view('dashboard.mailbox.index', $mailbox);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
