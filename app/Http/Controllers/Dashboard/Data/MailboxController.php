@@ -10,7 +10,7 @@ class MailboxController extends Controller
 {
     public function get_data()
     {
-        $mailbox = Mailbox::get();
+        $mailbox = Mailbox::paginate(10);
 //        dd($mailbox->mailboxsents_mailbox()->sents_mailboxsents()->staffs_sentsstaffs(), $mailbox->mailboxsents_mailbox()->sents_mailboxsents()->sent_sentsstaffs());
         $compact = compact('mailbox');
         return $compact;

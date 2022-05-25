@@ -6663,16 +6663,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -21018,8 +21008,6 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
     _c("div", { staticClass: "grid grid-cols-1 md:grid-cols-8 gap-5 my-5" }, [
       _c(
         "div",
@@ -21038,7 +21026,7 @@ var render = function () {
           [
             _c("div", { staticClass: "pt-1" }, [
               _c("div", { staticClass: "flex" }, [
-                _vm._m(1),
+                _vm._m(0),
                 _vm._v(" "),
                 _c("div", { staticClass: "w-full" }, [
                   _c("div", { staticClass: "flex justify-between" }, [
@@ -21392,7 +21380,7 @@ var render = function () {
                     },
                   }),
                   _vm._v(" "),
-                  _vm._m(2),
+                  _vm._m(1),
                 ],
                 1
               ),
@@ -21404,54 +21392,6 @@ var render = function () {
   ])
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex" }, [
-      _c(
-        "button",
-        {
-          staticClass: "text-gray-500 border px-3 py-1 rounded-l-xl shadow-md",
-        },
-        [
-          _c("i", { staticClass: "fas fa-inbox mr-2" }),
-          _vm._v("Inbox"),
-          _c(
-            "span",
-            {
-              staticClass:
-                "bg-indigo-600 rounded-full text-white px-2 pb-0.5 pt-1 ml-2 mx-1",
-            },
-            [_vm._v("12")]
-          ),
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass:
-            "text-gray-500 border border-r-0 border-l-0 px-3 py-1 shadow-md",
-        },
-        [
-          _c("i", { staticClass: "fas fa-envelope mr-2" }),
-          _vm._v("Sent\n        "),
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "text-gray-500 border px-3 py-1 rounded-r-xl shadow-md",
-        },
-        [
-          _c("i", { staticClass: "fas fa-trash mr-2" }),
-          _vm._v("Trash\n        "),
-        ]
-      ),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement

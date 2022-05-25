@@ -1,6 +1,15 @@
 @extends('layouts.dashboard.master')
 @section('title', 'Mailbox')
 @section('content')
+    <div class="flex">
+        <button class="text-gray-500 border px-3 py-1 rounded-l-xl shadow-md"><i class="fas fa-inbox mr-2"></i>Inbox<span
+                class="bg-indigo-600 rounded-full text-white px-2 pb-0.5 pt-1 ml-2 mx-1">12</span></button>
+        <button class="text-gray-500 border border-r-0 border-l-0 px-3 py-1 shadow-md"><i
+                class="fas fa-envelope mr-2"></i>Sent
+        </button>
+        <button class="text-gray-500 border px-3 py-1 rounded-r-xl shadow-md"><i class="fas fa-trash mr-2"></i>Trash
+        </button>
+    </div>
     <mailbox-component>
         @forelse($mailbox as $key => $value)
             <mailbox-card-component name="{{$value->kunjungan == null ? $value->content : $value->kunjungan()}}" subject="{{$value->kunjungan != null ? 'Kunjungan_'.$value->kunjungan : 'Pesan Dari '.json_decode($value->content)->items->name}}" date="{{$value->created_at}}" content="{{$value->kunjungan != null ? $value->kunjungan() : $value->content}}" type="{{$value->kunjungan}}" url="{{route('dashboard.send.mailbox', $value->id)}}" sent="{{route('dashboard.mailbox.show', $value->id)}}"></mailbox-card-component>
@@ -8,6 +17,9 @@
             Data Kosong
             @endforelse
     </mailbox-component>
+    <div class="bg-gray-100 px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+        {{$mailbox->links('widgets.custom_pagination')}}
+    </div>
 @endsection
 {{--@section('modalShow')--}}
 {{--    <form-prestasi-component>--}}
