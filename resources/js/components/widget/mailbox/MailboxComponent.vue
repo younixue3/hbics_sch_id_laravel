@@ -122,7 +122,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-1 gap-y-3">
+                        <div class="grid grid-cols-1 my-10 gap-y-3">
                             <div class="bg-white rounded-xl p-4" v-for="item in this.$store.state.mailbox.sent">
                                 <div class="mb-4" v-html="item.message"></div>
                                 <div class="text-xs text-gray-700">

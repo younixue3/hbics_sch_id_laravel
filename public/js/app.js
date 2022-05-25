@@ -21332,7 +21332,7 @@ var render = function () {
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "grid grid-cols-1 gap-y-3" },
+                { staticClass: "grid grid-cols-1 my-10 gap-y-3" },
                 _vm._l(this.$store.state.mailbox.sent, function (item) {
                   return _c("div", { staticClass: "bg-white rounded-xl p-4" }, [
                     _c("div", {

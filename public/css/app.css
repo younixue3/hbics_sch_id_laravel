@@ -602,6 +602,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: -0.5rem;
   margin-bottom: -0.5rem;
 }
+.my-7{
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
 .ml-1{
   margin-left: 0.25rem;
 }
