@@ -33,11 +33,14 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     name: "MailboxCardComponent",
-    props: ['name', 'date', 'content', 'subject', 'url', 'type'],
+    props: ['name', 'date', 'content', 'subject', 'url', 'type', 'sent'],
     data () {
         return {
+            sent_message: null
         }
     },
     methods: {
@@ -46,6 +49,7 @@ export default {
             this.$store.state.mailbox.email = null
             this.$store.state.mailbox.subject = null
             this.$store.state.mailbox.url = null
+            this.$store.state.mailbox.sent = null
             this.$store.state.mailbox.content = null
             this.$store.state.mailbox.date = null
             this.$store.state.mailbox.kunjungan = null
@@ -54,18 +58,22 @@ export default {
                 this.$store.state.mailbox.email =  JSON.parse(this.$props.name).items.email
                 this.$store.state.mailbox.subject =  this.$props.subject
                 this.$store.state.mailbox.url = this.$props.url
+                this.$store.state.mailbox.sent = this.$props.sent
                 this.$store.state.mailbox.content =  JSON.parse(this.$props.name).items.message
                 this.$store.state.mailbox.date =  JSON.parse(this.$props.name).items.date
             } else {
-                console.log('kunjungan')
                 this.$store.state.mailbox.name =  JSON.parse(this.$props.name).name
                 this.$store.state.mailbox.email =  JSON.parse(this.$props.name).email
                 this.$store.state.mailbox.subject =  this.$props.subject
                 this.$store.state.mailbox.url = this.$props.url
+                this.$store.state.mailbox.sent = this.$props.sent
                 this.$store.state.mailbox.kunjungan = JSON.parse(this.$props.name)
                 this.$store.state.mailbox.date =  JSON.parse(this.$props.name).date
             }
-
+            axios.get(this.$props.sent)
+            .then(resp => {
+                this.$store.state.mailbox.sent = resp.data.data_mailbox
+            })
         }
     }
 }

@@ -16,8 +16,20 @@ class MailboxController extends Controller
         return $compact;
     }
 
-    public function sent_mail()
+    public function show_sent_mail($id)
     {
-
+//        $mailbox = Mailbox::find($id)->mailboxsents_mailbox()->sents_mailboxsents()->sent_sentsstaffs();
+        $data_mailbox = [];
+        $mailbox = Mailbox::find($id)->mailboxsents_mailbox();
+        foreach ($mailbox as $key => $value) {
+            array_push($data_mailbox, [
+                'name' => $value->sents_mailboxsents()->staffs_sentsstaffs()->name,
+                'email' => $value->sents_mailboxsents()->staffs_sentsstaffs()->email,
+                'date' => $value->created_at,
+                'message' => $value->sents_mailboxsents()->sent_sentsstaffs()->message
+            ]);
+        };
+        $compact = compact('data_mailbox');
+        return $compact;
     }
 }

@@ -3,7 +3,7 @@
 @section('content')
     <mailbox-component>
         @forelse($mailbox as $key => $value)
-            <mailbox-card-component name="{{$value->kunjungan == null ? $value->content : $value->kunjungan()}}" subject="{{$value->kunjungan != null ? 'Kunjungan_'.$value->kunjungan : 'Pesan Dari '.json_decode($value->content)->items->name}}" date="{{$value->created_at}}" content="{{$value->kunjungan != null ? $value->kunjungan() : $value->content}}" type="{{$value->kunjungan}}" url="{{route('dashboard.send.mailbox', $value->id)}}"></mailbox-card-component>
+            <mailbox-card-component name="{{$value->kunjungan == null ? $value->content : $value->kunjungan()}}" subject="{{$value->kunjungan != null ? 'Kunjungan_'.$value->kunjungan : 'Pesan Dari '.json_decode($value->content)->items->name}}" date="{{$value->created_at}}" content="{{$value->kunjungan != null ? $value->kunjungan() : $value->content}}" type="{{$value->kunjungan}}" url="{{route('dashboard.send.mailbox', $value->id)}}" sent="{{route('dashboard.mailbox.show', $value->id)}}"></mailbox-card-component>
             @empty
             Data Kosong
             @endforelse

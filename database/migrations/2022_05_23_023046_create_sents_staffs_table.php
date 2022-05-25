@@ -16,7 +16,7 @@ class CreateSentsStaffsTable extends Migration
         Schema::create('sents_staffs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('sent');
-            $table->foreign('sent')->references('id')->on('mailbox');
+            $table->foreign('sent')->references('id')->on('sents');
             $table->unsignedBigInteger('staff');
             $table->foreign('staff')->references('id')->on('users');
             $table->timestamps();

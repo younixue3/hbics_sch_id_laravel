@@ -16,9 +16,10 @@ class HbicsMailbox extends Mailable
      *
      * @return void
      */
-    public function __construct($message)
+    public function __construct($message, $subject)
     {
         $this->message = $message;
+        $this->subject = $subject;
     }
 
     /**
@@ -30,6 +31,6 @@ class HbicsMailbox extends Mailable
     {
         $message = $this->message;
         $compact = compact('message');
-        return $this->subject('Test')->markdown('emails.sentMailbox', $compact);
+        return $this->subject($this->subject)->markdown('emails.sentMailbox', $compact);
     }
 }

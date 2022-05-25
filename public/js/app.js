@@ -3988,6 +3988,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -6401,6 +6402,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -6435,18 +6438,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "MailboxCardComponent",
-  props: ['name', 'date', 'content', 'subject', 'url', 'type'],
+  props: ['name', 'date', 'content', 'subject', 'url', 'type', 'sent'],
   data: function data() {
-    return {};
+    return {
+      sent_message: null
+    };
   },
   methods: {
     cardClick: function cardClick() {
+      var _this = this;
+
       this.$store.state.mailbox.name = null;
       this.$store.state.mailbox.email = null;
       this.$store.state.mailbox.subject = null;
       this.$store.state.mailbox.url = null;
+      this.$store.state.mailbox.sent = null;
       this.$store.state.mailbox.content = null;
       this.$store.state.mailbox.date = null;
       this.$store.state.mailbox.kunjungan = null;
@@ -6456,17 +6465,22 @@ __webpack_require__.r(__webpack_exports__);
         this.$store.state.mailbox.email = JSON.parse(this.$props.name).items.email;
         this.$store.state.mailbox.subject = this.$props.subject;
         this.$store.state.mailbox.url = this.$props.url;
+        this.$store.state.mailbox.sent = this.$props.sent;
         this.$store.state.mailbox.content = JSON.parse(this.$props.name).items.message;
         this.$store.state.mailbox.date = JSON.parse(this.$props.name).items.date;
       } else {
-        console.log('kunjungan');
         this.$store.state.mailbox.name = JSON.parse(this.$props.name).name;
         this.$store.state.mailbox.email = JSON.parse(this.$props.name).email;
         this.$store.state.mailbox.subject = this.$props.subject;
         this.$store.state.mailbox.url = this.$props.url;
+        this.$store.state.mailbox.sent = this.$props.sent;
         this.$store.state.mailbox.kunjungan = JSON.parse(this.$props.name);
         this.$store.state.mailbox.date = JSON.parse(this.$props.name).date;
       }
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get(this.$props.sent).then(function (resp) {
+        _this.$store.state.mailbox.sent = resp.data.data_mailbox;
+      });
     }
   }
 });
@@ -6487,6 +6501,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tinymce/tinymce-vue */ "./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -8131,7 +8154,8 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_2__["default"].Store({
       content: null,
       date: null,
       url: null,
-      kunjungan: null
+      kunjungan: null,
+      sent: null
     }
   },
   mutations: {
@@ -14210,501 +14234,14 @@ var render = function () {
                         "col-span-4 justify-self-end hidden lg:block mr-20",
                     },
                     [
-                      _c("div", { staticClass: "grid grid-cols-2 mb-2" }, [
+                      _c("div", { staticClass: "grid grid-cols-3 mb-2" }, [
                         _c(
                           "a",
                           {
-                            staticClass: "font-light col-start-2",
+                            staticClass: "font-light col-start-3",
                             attrs: { href: _vm.dataurl["home"] },
                           },
                           [_vm._v("Beranda")]
-                        ),
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "grid grid-cols-2 gap-x-5 font-bold" },
-                        [
-                          _c(
-                            "div",
-                            {
-                              on: {
-                                mouseover: function ($event) {
-                                  return _vm.modalshow("pendaftaran")
-                                },
-                                mouseleave: function ($event) {
-                                  return _vm.modalclose("pendaftaran")
-                                },
-                              },
-                            },
-                            [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "cursor-pointer text-lg",
-                                  attrs: { href: _vm.dataurl["pendaftaran"] },
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    Pendaftaran\n                                "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "py-8 fixed -translate-x-3/4" },
-                                [
-                                  _c(
-                                    "div",
-                                    {
-                                      ref: "pendaftaran",
-                                      staticClass:
-                                        "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
-                                      attrs: { id: "pendaftaran" },
-                                    },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "h-full grid grid-rows-5 divide-y-2",
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5",
-                                            },
-                                            [
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: {
-                                                    href: _vm.dataurl[
-                                                      "petunjuk-pendaftaran"
-                                                    ],
-                                                  },
-                                                },
-                                                [_vm._m(0)]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: {
-                                                    href: _vm.dataurl[
-                                                      "program-beasiswa"
-                                                    ],
-                                                  },
-                                                },
-                                                [_vm._m(1)]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: {
-                                                    href: _vm.dataurl[
-                                                      "pendaftaran-siswa-baru"
-                                                    ],
-                                                  },
-                                                },
-                                                [_vm._m(2)]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: {
-                                                    href: _vm.dataurl[
-                                                      "kunjungi-kami"
-                                                    ],
-                                                  },
-                                                },
-                                                [_vm._m(3)]
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _vm._m(4),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              on: {
-                                mouseover: function ($event) {
-                                  return _vm.modalshow("akademis")
-                                },
-                                mouseleave: function ($event) {
-                                  return _vm.modalclose("akademis")
-                                },
-                              },
-                            },
-                            [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "cursor-pointer text-lg",
-                                  attrs: { href: _vm.dataurl["akademis"] },
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    Akademis\n                                "
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "py-8 fixed -translate-x-3/4" },
-                                [
-                                  _c(
-                                    "div",
-                                    {
-                                      ref: "akademis",
-                                      staticClass:
-                                        "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
-                                      attrs: { id: "akademis" },
-                                    },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "h-full grid grid-rows-5 divide-y-2",
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5",
-                                            },
-                                            [
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: {
-                                                    href: _vm.dataurl[
-                                                      "happy-holy-kids"
-                                                    ],
-                                                  },
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "flex gap-x-5 text-center",
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        { staticClass: "w-20" },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-1 transition-all ease-in duration-200",
-                                                            },
-                                                            [
-                                                              _c("img", {
-                                                                attrs: {
-                                                                  src: _vm.logohhk,
-                                                                },
-                                                              }),
-                                                            ]
-                                                          ),
-                                                        ]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _vm._m(5),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: {
-                                                    href: _vm.dataurl[
-                                                      "sekolah-dasar"
-                                                    ],
-                                                  },
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "flex gap-x-5 text-center",
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        { staticClass: "w-20" },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
-                                                            },
-                                                            [
-                                                              _c("img", {
-                                                                attrs: {
-                                                                  src: _vm.logo,
-                                                                },
-                                                              }),
-                                                            ]
-                                                          ),
-                                                        ]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _vm._m(6),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: {
-                                                    href: _vm.dataurl[
-                                                      "sekolah-menengah-pertama"
-                                                    ],
-                                                  },
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "flex gap-x-5 text-center",
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        { staticClass: "w-20" },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
-                                                            },
-                                                            [
-                                                              _c("img", {
-                                                                attrs: {
-                                                                  src: _vm.logo,
-                                                                },
-                                                              }),
-                                                            ]
-                                                          ),
-                                                        ]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _vm._m(7),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                                  attrs: {
-                                                    href: _vm.dataurl[
-                                                      "sekolah-menengah-atas"
-                                                    ],
-                                                  },
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "flex gap-x-5 text-center",
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "div",
-                                                        { staticClass: "w-20" },
-                                                        [
-                                                          _c(
-                                                            "div",
-                                                            {
-                                                              staticClass:
-                                                                "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
-                                                            },
-                                                            [
-                                                              _c("img", {
-                                                                attrs: {
-                                                                  src: _vm.logo,
-                                                                },
-                                                              }),
-                                                            ]
-                                                          ),
-                                                        ]
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _vm._m(8),
-                                                    ]
-                                                  ),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "flex justify-between gap-x-5 p-5",
-                                            },
-                                            [
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
-                                                  attrs: {
-                                                    href:
-                                                      _vm.dataurl["alumni"] +
-                                                      "/all",
-                                                  },
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass:
-                                                      "fas fa-user-graduate text-xs mr-3",
-                                                  }),
-                                                  _vm._v("Alumni"),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
-                                                  attrs: {
-                                                    href: _vm.dataurl[
-                                                      "prestasi"
-                                                    ],
-                                                  },
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass:
-                                                      "fas fa-medal text-xs mr-3",
-                                                  }),
-                                                  _vm._v("Pretasi"),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "a",
-                                                {
-                                                  staticClass:
-                                                    "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
-                                                  attrs: {
-                                                    href:
-                                                      _vm.dataurl[
-                                                        "teacher-staff"
-                                                      ] + "/all",
-                                                  },
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass:
-                                                      "fas fa-chalkboard-teacher text-xs mr-3",
-                                                  }),
-                                                  _vm._v("Guru"),
-                                                ]
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-span-9 lg:col-span-1" }, [
-                    _c("img", {
-                      staticClass:
-                        "m-auto transition-all ease-in-out duration-300",
-                      class: _vm.show ? "h-16" : "h-0",
-                      attrs: { src: _vm.imagewhite, alt: "" },
-                    }),
-                    _vm._v(" "),
-                    _c("img", {
-                      staticClass:
-                        "m-auto transition-all ease-in-out duration-300",
-                      class: _vm.show ? "h-0" : "h-14 md:h-20",
-                      attrs: { src: _vm.logo, alt: "" },
-                    }),
-                    _vm._v(" "),
-                    _c("img", {
-                      staticClass:
-                        "m-auto transition-all ease-in-out duration-300",
-                      class: _vm.show ? "h-0" : "h-14 md:h-20",
-                      attrs: { src: _vm.footerwhite, alt: "" },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "col-span-4 justify-self-start hidden lg:block ml-20",
-                    },
-                    [
-                      _c("div", { staticClass: "grid grid-cols-2 mb-2" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "font-light",
-                            attrs: { href: _vm.dataurl["hubungi-kami"] },
-                          },
-                          [_vm._v("Hubungi kami")]
                         ),
                       ]),
                       _vm._v(" "),
@@ -14714,86 +14251,119 @@ var render = function () {
                           {
                             on: {
                               mouseover: function ($event) {
-                                return _vm.modalshow("komunitas")
+                                return _vm.modalshow("pendaftaran")
                               },
                               mouseleave: function ($event) {
-                                return _vm.modalclose("komunitas")
+                                return _vm.modalclose("pendaftaran")
                               },
                             },
                           },
                           [
                             _c(
-                              "span",
-                              { staticClass: "cursor-pointer text-lg" },
+                              "a",
+                              {
+                                staticClass: "cursor-pointer text-lg",
+                                attrs: { href: _vm.dataurl["pendaftaran"] },
+                              },
                               [
                                 _vm._v(
-                                  "\n                                    Komunitas\n                                "
+                                  "\n                                    Pendaftaran\n                                "
                                 ),
                               ]
                             ),
                             _vm._v(" "),
-                            _c("div", { staticClass: "py-8 fixed" }, [
-                              _c(
-                                "div",
-                                {
-                                  ref: "komunitas",
-                                  staticClass:
-                                    "h-0 max-h-52 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg z-50 transition-all ease-in-out duration-300 overflow-hidden",
-                                  attrs: { id: "komunitas" },
-                                },
-                                [
-                                  _c("div", { staticClass: "h-full" }, [
+                            _c(
+                              "div",
+                              { staticClass: "py-8 fixed -translate-x-3/4" },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    ref: "pendaftaran",
+                                    staticClass:
+                                      "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
+                                    attrs: { id: "pendaftaran" },
+                                  },
+                                  [
                                     _c(
                                       "div",
                                       {
                                         staticClass:
-                                          "grid grid-rows-3 items-center justify-items-stretch p-0.5",
+                                          "h-full grid grid-rows-5 divide-y-2",
                                       },
                                       [
                                         _c(
-                                          "a",
+                                          "div",
                                           {
                                             staticClass:
-                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                            attrs: {
-                                              href:
-                                                _vm.dataurl["alumni"] + "/all",
-                                            },
+                                              "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5",
                                           },
-                                          [_vm._m(9)]
+                                          [
+                                            _c(
+                                              "a",
+                                              {
+                                                staticClass:
+                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                attrs: {
+                                                  href: _vm.dataurl[
+                                                    "petunjuk-pendaftaran"
+                                                  ],
+                                                },
+                                              },
+                                              [_vm._m(0)]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "a",
+                                              {
+                                                staticClass:
+                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                attrs: {
+                                                  href: _vm.dataurl[
+                                                    "program-beasiswa"
+                                                  ],
+                                                },
+                                              },
+                                              [_vm._m(1)]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "a",
+                                              {
+                                                staticClass:
+                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                attrs: {
+                                                  href: _vm.dataurl[
+                                                    "pendaftaran-siswa-baru"
+                                                  ],
+                                                },
+                                              },
+                                              [_vm._m(2)]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "a",
+                                              {
+                                                staticClass:
+                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                attrs: {
+                                                  href: _vm.dataurl[
+                                                    "kunjungi-kami"
+                                                  ],
+                                                },
+                                              },
+                                              [_vm._m(3)]
+                                            ),
+                                          ]
                                         ),
                                         _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                            attrs: {
-                                              href: _vm.dataurl["orang-tua"],
-                                            },
-                                          },
-                                          [_vm._m(10)]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "a",
-                                          {
-                                            staticClass:
-                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                            attrs: {
-                                              href:
-                                                _vm.dataurl["teacher-staff"] +
-                                                "/all",
-                                            },
-                                          },
-                                          [_vm._m(11)]
-                                        ),
+                                        _vm._m(4),
                                       ]
                                     ),
-                                  ]),
-                                ]
-                              ),
-                            ]),
+                                  ]
+                                ),
+                              ]
+                            ),
                           ]
                         ),
                         _vm._v(" "),
@@ -14802,92 +14372,313 @@ var render = function () {
                           {
                             on: {
                               mouseover: function ($event) {
-                                return _vm.modalshow("publikasi")
+                                return _vm.modalshow("akademis")
                               },
                               mouseleave: function ($event) {
-                                return _vm.modalclose("publikasi")
+                                return _vm.modalclose("akademis")
                               },
                             },
                           },
                           [
                             _c(
-                              "span",
-                              { staticClass: "cursor-pointer text-lg" },
+                              "a",
+                              {
+                                staticClass: "cursor-pointer text-lg",
+                                attrs: { href: _vm.dataurl["akademis"] },
+                              },
                               [
                                 _vm._v(
-                                  "\n                                    Publikasi\n                                "
+                                  "\n                                    Akademis\n                                "
                                 ),
                               ]
                             ),
                             _vm._v(" "),
-                            _c("div", { staticClass: "py-8 fixed" }, [
-                              _c(
-                                "div",
-                                {
-                                  ref: "publikasi",
-                                  staticClass:
-                                    "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-[31rem] z-50 transition-all ease-in-out duration-300 overflow-hidden",
-                                  attrs: { id: "publikasi" },
-                                },
-                                [
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "h-full grid grid-rows-5 divide-y-2",
-                                    },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "grid grid-rows-3 items-center justify-items-stretch row-span-3 p-0.5",
-                                        },
-                                        [
-                                          _c(
-                                            "a",
-                                            {
-                                              staticClass:
-                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                              attrs: {
-                                                href: _vm.dataurl["berita"],
+                            _c(
+                              "div",
+                              { staticClass: "py-8 fixed -translate-x-3/4" },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    ref: "akademis",
+                                    staticClass:
+                                      "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-80 z-50 transition-all ease-in-out duration-300 overflow-hidden",
+                                    attrs: { id: "akademis" },
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "h-full grid grid-rows-5 divide-y-2",
+                                      },
+                                      [
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5",
+                                          },
+                                          [
+                                            _c(
+                                              "a",
+                                              {
+                                                staticClass:
+                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                attrs: {
+                                                  href: _vm.dataurl[
+                                                    "happy-holy-kids"
+                                                  ],
+                                                },
                                               },
-                                            },
-                                            [_vm._m(12)]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "a",
-                                            {
-                                              staticClass:
-                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                              attrs: {
-                                                href: _vm.dataurl["acara"],
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "flex gap-x-5 text-center",
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      { staticClass: "w-20" },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-1 transition-all ease-in duration-200",
+                                                          },
+                                                          [
+                                                            _c("img", {
+                                                              attrs: {
+                                                                src: _vm.logohhk,
+                                                              },
+                                                            }),
+                                                          ]
+                                                        ),
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _vm._m(5),
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "a",
+                                              {
+                                                staticClass:
+                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                attrs: {
+                                                  href: _vm.dataurl[
+                                                    "sekolah-dasar"
+                                                  ],
+                                                },
                                               },
-                                            },
-                                            [_vm._m(13)]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "a",
-                                            {
-                                              staticClass:
-                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
-                                              attrs: {
-                                                href: _vm.dataurl["artikel"],
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "flex gap-x-5 text-center",
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      { staticClass: "w-20" },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                          },
+                                                          [
+                                                            _c("img", {
+                                                              attrs: {
+                                                                src: _vm.logo,
+                                                              },
+                                                            }),
+                                                          ]
+                                                        ),
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _vm._m(6),
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "a",
+                                              {
+                                                staticClass:
+                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                attrs: {
+                                                  href: _vm.dataurl[
+                                                    "sekolah-menengah-pertama"
+                                                  ],
+                                                },
                                               },
-                                            },
-                                            [_vm._m(14)]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(15),
-                                    ]
-                                  ),
-                                ]
-                              ),
-                            ]),
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "flex gap-x-5 text-center",
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      { staticClass: "w-20" },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                          },
+                                                          [
+                                                            _c("img", {
+                                                              attrs: {
+                                                                src: _vm.logo,
+                                                              },
+                                                            }),
+                                                          ]
+                                                        ),
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _vm._m(7),
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "a",
+                                              {
+                                                staticClass:
+                                                  "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                                attrs: {
+                                                  href: _vm.dataurl[
+                                                    "sekolah-menengah-atas"
+                                                  ],
+                                                },
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "flex gap-x-5 text-center",
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      { staticClass: "w-20" },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "bg-blue-900 text-white rounded-xl flex items-center justify-center w-12 h-12 p-2 transition-all ease-in duration-200",
+                                                          },
+                                                          [
+                                                            _c("img", {
+                                                              attrs: {
+                                                                src: _vm.logo,
+                                                              },
+                                                            }),
+                                                          ]
+                                                        ),
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _vm._m(8),
+                                                  ]
+                                                ),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "flex justify-between gap-x-5 p-5",
+                                          },
+                                          [
+                                            _c(
+                                              "a",
+                                              {
+                                                staticClass:
+                                                  "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
+                                                attrs: {
+                                                  href:
+                                                    _vm.dataurl["alumni"] +
+                                                    "/all",
+                                                },
+                                              },
+                                              [
+                                                _c("i", {
+                                                  staticClass:
+                                                    "fas fa-user-graduate text-xs mr-3",
+                                                }),
+                                                _vm._v("Alumni"),
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "a",
+                                              {
+                                                staticClass:
+                                                  "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
+                                                attrs: {
+                                                  href: _vm.dataurl["prestasi"],
+                                                },
+                                              },
+                                              [
+                                                _c("i", {
+                                                  staticClass:
+                                                    "fas fa-medal text-xs mr-3",
+                                                }),
+                                                _vm._v("Pretasi"),
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "a",
+                                              {
+                                                staticClass:
+                                                  "bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal",
+                                                attrs: {
+                                                  href:
+                                                    _vm.dataurl[
+                                                      "teacher-staff"
+                                                    ] + "/all",
+                                                },
+                                              },
+                                              [
+                                                _c("i", {
+                                                  staticClass:
+                                                    "fas fa-chalkboard-teacher text-xs mr-3",
+                                                }),
+                                                _vm._v("Guru"),
+                                              ]
+                                            ),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                           ]
                         ),
                         _vm._v(" "),
@@ -14971,7 +14762,7 @@ var render = function () {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(16),
+                                                _vm._m(9),
                                               ]
                                             ),
                                           ]
@@ -15015,7 +14806,7 @@ var render = function () {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(17),
+                                                _vm._m(10),
                                               ]
                                             ),
                                           ]
@@ -15059,7 +14850,7 @@ var render = function () {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(18),
+                                                _vm._m(11),
                                               ]
                                             ),
                                           ]
@@ -15105,7 +14896,7 @@ var render = function () {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(19),
+                                                _vm._m(12),
                                               ]
                                             ),
                                           ]
@@ -15149,7 +14940,7 @@ var render = function () {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _vm._m(20),
+                                                _vm._m(13),
                                               ]
                                             ),
                                           ]
@@ -15166,6 +14957,233 @@ var render = function () {
                     ]
                   ),
                   _vm._v(" "),
+                  _c("div", { staticClass: "col-span-9 lg:col-span-1" }, [
+                    _c("img", {
+                      staticClass:
+                        "m-auto transition-all ease-in-out duration-300",
+                      class: _vm.show ? "h-16" : "h-0",
+                      attrs: { src: _vm.imagewhite, alt: "" },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass:
+                        "m-auto transition-all ease-in-out duration-300",
+                      class: _vm.show ? "h-0" : "h-14 md:h-20",
+                      attrs: { src: _vm.logo, alt: "" },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass:
+                        "m-auto transition-all ease-in-out duration-300",
+                      class: _vm.show ? "h-0" : "h-14 md:h-20",
+                      attrs: { src: _vm.footerwhite, alt: "" },
+                    }),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-span-4 justify-self-start hidden lg:block ml-20",
+                    },
+                    [
+                      _c("div", { staticClass: "grid grid-cols-2 mb-2" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "font-light",
+                            attrs: { href: _vm.dataurl["hubungi-kami"] },
+                          },
+                          [_vm._v("Hubungi kami")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "grid grid-cols-2 font-bold" }, [
+                        _c(
+                          "div",
+                          {
+                            on: {
+                              mouseover: function ($event) {
+                                return _vm.modalshow("komunitas")
+                              },
+                              mouseleave: function ($event) {
+                                return _vm.modalclose("komunitas")
+                              },
+                            },
+                          },
+                          [
+                            _c(
+                              "span",
+                              { staticClass: "cursor-pointer text-lg" },
+                              [
+                                _vm._v(
+                                  "\n                                    Komunitas\n                                "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "py-8 fixed" }, [
+                              _c(
+                                "div",
+                                {
+                                  ref: "komunitas",
+                                  staticClass:
+                                    "h-0 max-h-52 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg z-50 transition-all ease-in-out duration-300 overflow-hidden",
+                                  attrs: { id: "komunitas" },
+                                },
+                                [
+                                  _c("div", { staticClass: "h-full" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "grid grid-rows-3 items-center justify-items-stretch p-0.5",
+                                      },
+                                      [
+                                        _c(
+                                          "a",
+                                          {
+                                            staticClass:
+                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                            attrs: {
+                                              href:
+                                                _vm.dataurl["alumni"] + "/all",
+                                            },
+                                          },
+                                          [_vm._m(14)]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "a",
+                                          {
+                                            staticClass:
+                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                            attrs: {
+                                              href: _vm.dataurl["orang-tua"],
+                                            },
+                                          },
+                                          [_vm._m(15)]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "a",
+                                          {
+                                            staticClass:
+                                              "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                            attrs: {
+                                              href:
+                                                _vm.dataurl["teacher-staff"] +
+                                                "/all",
+                                            },
+                                          },
+                                          [_vm._m(16)]
+                                        ),
+                                      ]
+                                    ),
+                                  ]),
+                                ]
+                              ),
+                            ]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            on: {
+                              mouseover: function ($event) {
+                                return _vm.modalshow("publikasi")
+                              },
+                              mouseleave: function ($event) {
+                                return _vm.modalclose("publikasi")
+                              },
+                            },
+                          },
+                          [
+                            _c(
+                              "span",
+                              { staticClass: "cursor-pointer text-lg" },
+                              [
+                                _vm._v(
+                                  "\n                                    Publikasi\n                                "
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "py-8 fixed" }, [
+                              _c(
+                                "div",
+                                {
+                                  ref: "publikasi",
+                                  staticClass:
+                                    "h-0 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg w-[31rem] z-50 transition-all ease-in-out duration-300 overflow-hidden",
+                                  attrs: { id: "publikasi" },
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "h-full grid grid-rows-5 divide-y-2",
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "grid grid-rows-3 items-center justify-items-stretch row-span-3 p-0.5",
+                                        },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                              attrs: {
+                                                href: _vm.dataurl["berita"],
+                                              },
+                                            },
+                                            [_vm._m(17)]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                              attrs: {
+                                                href: _vm.dataurl["acara"],
+                                              },
+                                            },
+                                            [_vm._m(18)]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              staticClass:
+                                                "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
+                                              attrs: {
+                                                href: _vm.dataurl["artikel"],
+                                              },
+                                            },
+                                            [_vm._m(19)]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._m(20),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
                   _c(
                     "a",
                     {
@@ -15173,7 +15191,35 @@ var render = function () {
                         "cursor-pointer 2-1 hover:border-2 hover:border-white uppercase p-2 transition-all ease-in-out duration-300",
                       attrs: { href: _vm.dataurl["dashboard"] },
                     },
-                    [_vm._m(21)]
+                    [
+                      _c("div", { staticClass: "flex" }, [
+                        _c("i", {
+                          staticClass:
+                            "fa-solid fa-id-badge h-9 pt-1 text-center",
+                          class:
+                            _vm.authstatus !== ""
+                              ? "fa-columns text-2xl"
+                              : "fa-id-badge text-3xl",
+                        }),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "m-auto ml-2 h-5 text-base m-auto text-center",
+                          },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(
+                                  _vm.authstatus !== ""
+                                    ? "Dashboard"
+                                    : "Sign In"
+                                )
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
                   ),
                 ]
               ),
@@ -15903,7 +15949,7 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(22),
+            _vm._m(21),
           ]
         ),
       ]
@@ -16245,6 +16291,161 @@ var staticRenderFns = [
           [
             _vm._v(
               "\n                                                                Sekolah menengah atas Harapan Bangsa\n                                                            "
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+      },
+      [
+        _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+          _vm._v(
+            "\n                                                                Sekolah K.A.R.Y.A\n                                                            "
+          ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "text-xs font-light break-words leading-3 text-black",
+          },
+          [
+            _vm._v(
+              "\n                                                                filosofi dan arah pendidikan Sekolah Harapan Bangsa\n                                                            "
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+      },
+      [
+        _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+          _vm._v(
+            "\n                                                                Sejarah\n                                                            "
+          ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "text-xs font-light break-words leading-3 text-black",
+          },
+          [
+            _vm._v(
+              "\n                                                                Sejarah dibangunnya Sekolah Harapan Bangsa hingga\n                                                                saat ini\n                                                            "
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+      },
+      [
+        _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+          _vm._v(
+            "\n                                                                Visi & Misi\n                                                            "
+          ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "text-xs font-light break-words leading-3 text-black",
+          },
+          [
+            _vm._v(
+              "\n                                                                Visi Misi Sekolah Harapan Bangsa\n                                                            "
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+      },
+      [
+        _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+          _vm._v(
+            "\n                                                                Metode Pembelajaran\n                                                            "
+          ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "text-xs font-light break-words leading-3 text-black",
+          },
+          [
+            _vm._v(
+              "\n                                                                Metode dan Kurikulum di Sekolah Harapan Bangsa\n                                                            "
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
+      },
+      [
+        _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
+          _vm._v(
+            "\n                                                                Fasilitas\n                                                            "
+          ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "text-xs font-light break-words leading-3 text-black",
+          },
+          [
+            _vm._v(
+              "\n                                                                Sarana dan prasana di Sekolah Harapan Bangsa\n                                                            "
             ),
           ]
         ),
@@ -16635,176 +16836,6 @@ var staticRenderFns = [
           ]
         ),
       ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-      },
-      [
-        _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
-          _vm._v(
-            "\n                                                                Sekolah K.A.R.Y.A\n                                                            "
-          ),
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "text-xs font-light break-words leading-3 text-black",
-          },
-          [
-            _vm._v(
-              "\n                                                                filosofi dan arah pendidikan Sekolah Harapan Bangsa\n                                                            "
-            ),
-          ]
-        ),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-      },
-      [
-        _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
-          _vm._v(
-            "\n                                                                Sejarah\n                                                            "
-          ),
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "text-xs font-light break-words leading-3 text-black",
-          },
-          [
-            _vm._v(
-              "\n                                                                Sejarah dibangunnya Sekolah Harapan Bangsa hingga\n                                                                saat ini\n                                                            "
-            ),
-          ]
-        ),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-      },
-      [
-        _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
-          _vm._v(
-            "\n                                                                Visi & Misi\n                                                            "
-          ),
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "text-xs font-light break-words leading-3 text-black",
-          },
-          [
-            _vm._v(
-              "\n                                                                Visi Misi Sekolah Harapan Bangsa\n                                                            "
-            ),
-          ]
-        ),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-      },
-      [
-        _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
-          _vm._v(
-            "\n                                                                Metode Pembelajaran\n                                                            "
-          ),
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "text-xs font-light break-words leading-3 text-black",
-          },
-          [
-            _vm._v(
-              "\n                                                                Metode dan Kurikulum di Sekolah Harapan Bangsa\n                                                            "
-            ),
-          ]
-        ),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-full grid grid-rows-2 gap-0 items-center text-left text-sm",
-      },
-      [
-        _c("div", { staticClass: "leading-3 transition-all ease-in-out" }, [
-          _vm._v(
-            "\n                                                                Fasilitas\n                                                            "
-          ),
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "text-xs font-light break-words leading-3 text-black",
-          },
-          [
-            _vm._v(
-              "\n                                                                Sarana dan prasana di Sekolah Harapan Bangsa\n                                                            "
-            ),
-          ]
-        ),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex" }, [
-      _c("i", {
-        staticClass: "fa-solid fa-id-badge h-9 pt-1 text-3xl text-center",
-      }),
-      _c(
-        "div",
-        { staticClass: "m-auto ml-2 h-4 text-base m-auto text-center" },
-        [_vm._v("Sign In")]
-      ),
     ])
   },
   function () {
@@ -21298,6 +21329,26 @@ var render = function () {
                     ),
                   ])
                 : _vm._e(),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "grid grid-cols-1 gap-y-3" },
+                _vm._l(this.$store.state.mailbox.sent, function (item) {
+                  return _c("div", { staticClass: "bg-white rounded-xl p-4" }, [
+                    _c("div", {
+                      staticClass: "mb-4",
+                      domProps: { innerHTML: _vm._s(item.message) },
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "text-xs text-gray-700" }, [
+                      _c("div", [_vm._v("Sent By " + _vm._s(item.name))]),
+                      _vm._v(" "),
+                      _c("div", [_vm._v(_vm._s(item.email))]),
+                    ]),
+                  ])
+                }),
+                0
+              ),
               _vm._v(" "),
               _c(
                 "form",

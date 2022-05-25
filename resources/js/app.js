@@ -50,7 +50,8 @@ const store = new Vuex.Store({
             content: null,
             date: null,
             url: null,
-            kunjungan: null
+            kunjungan: null,
+            sent: null
         }
     },
     mutations: {

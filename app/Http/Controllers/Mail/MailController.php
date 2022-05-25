@@ -32,7 +32,19 @@ class MailController extends Controller
 //        dd($request);
         $mailbox = Mailbox::find($id);
         if ($mailbox->kunjungan !== null) {
-            dd($mailbox, $request);
+            $sent = Sents::create([
+                'message' => $request->sent
+            ]);
+            $sentstaff = SentsStaffs::create([
+                'sent' => $sent->id,
+                'staff' => auth()->user()->id
+            ]);
+            $mailboxsent = MailboxSents::create([
+                'mailbox' => $mailbox->id,
+                'sent' => $sent->id
+            ]);
+            Mail::to($mailbox->kunjungan()->email)->send(new \App\Mail\HbicsMailbox($sent->message, 'Kunjungan dari '.$mailbox->kunjungan()->name));
+            return redirect()->back();
         } else {
             $to = json_decode($mailbox->content);
             $sent = Sents::create([
@@ -46,7 +58,8 @@ class MailController extends Controller
                 'mailbox' => $mailbox->id,
                 'sent' => $sent->id
             ]);
-            Mail::to($to->items->email)->send(new \App\Mail\HbicsMailbox($sent->message));
+            Mail::to($to->items->email)->send(new \App\Mail\HbicsMailbox($sent->message, 'Pesan Dari '.$to->items->name));
+            return redirect()->back();
         }
     }
 }

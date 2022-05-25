@@ -122,6 +122,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="grid grid-cols-1 gap-y-3">
+                            <div class="bg-white rounded-xl p-4" v-for="item in this.$store.state.mailbox.sent">
+                                <div class="mb-4" v-html="item.message"></div>
+                                <div class="text-xs text-gray-700">
+                                    <div>Sent By {{item.name}}</div>
+                                    <div>{{item.email}}</div>
+                                </div>
+                            </div>
+                        </div>
                         <form :action="$store.state.mailbox.url" class="flex relative rounded-md mt-10 mb-5">
                             <input type="hidden" name="_token" :value="$store.state.csrf">
                             <!--                            <textarea type="email"-->

@@ -18,6 +18,6 @@ class Mailbox extends Model
     }
 
     public function mailboxsents_mailbox() {
-        return $this->belongsTo(MailboxSents::class, 'id', 'mailbox')->first();
+        return $this->belongsTo(MailboxSents::class, 'id', 'mailbox')->get();
     }
 }
