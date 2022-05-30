@@ -93,7 +93,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @forelse($article as $key => $value)
+                @forelse($article->take(10) as $key => $value)
                     <tr class="border-b-2 border-gray-200 h-10">
                         {{dd($value)}}
 {{--                        <td><a class="text-blue-500" href="#">{{$value}}</a></td>--}}
