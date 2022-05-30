@@ -97,7 +97,24 @@
                     <tr class="border-b-2 border-gray-200 h-10">
                         <td><a class="text-blue-500" href="{{route('dashboard.publikasi.edit', $value->randKey)}}">{{$value->randKey}}</a></td>
                         <td class="truncate">{{$value->title}}</td>
-                        <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">{{$value->status}}</span></td>
+                        <td class="py-1">
+                            @if($value->status === 'publish')
+                                <span
+                                    class="bg-green-500 hover:bg-green-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                        {{$value->status}}
+                                    </span>
+                            @elseif($value->status === 'reject')
+                                <span
+                                    class="bg-red-500 hover:bg-red-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                        {{$value->status}}
+                                    </span>
+                            @elseif($value->status === 'draft')
+                                <span
+                                    class="bg-yellow-500 hover:bg-yellow-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                        {{$value->status}}
+                                    </span>
+                            @endif
+                        </td>
                         <td>
                             <div class="flex items-center">
                                 <img class="h-8 w-8 mr-2 rounded-full object-cover"
