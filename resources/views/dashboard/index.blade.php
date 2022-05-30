@@ -68,9 +68,9 @@
                 <tbody>
                     @forelse($mailbox->take(8) as $key => $value)
                             <tr class="border-b-2 border-gray-200 h-10">
-                                <td>{{$value->kunjungan != null ? $value->kunjungan()->email : json_decode($value->content)->items->email}}</td>
+                                <td class="truncate">{{$value->kunjungan != null ? $value->kunjungan()->email : json_decode($value->content)->items->email}}</td>
                                 <td class="truncate">{{$value->kunjungan != null ? 'Kunjungan_'.$value->kunjungan : 'Pesan Dari '.json_decode($value->content)->items->name}}</td>
-                                <td>{{$value->created_at}}</td>
+                                <td class="truncate">{{$value->created_at}}</td>
                             </tr>
                     @empty
                         Email kosong
@@ -98,7 +98,17 @@
                         <td><a class="text-blue-500" href="{{route('dashboard.publikasi.edit', $value->randKey)}}">{{$value->randKey}}</a></td>
                         <td class="truncate">{{$value->title}}</td>
                         <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">{{$value->status}}</span></td>
-                        <td>{{$value->users_create()->name}}</td>
+                        <td>
+                            <div class="flex items-center">
+                                <img class="h-8 w-8 mr-2 rounded-full object-cover"
+                                     src="{{asset('Upload/foto_profile/'.$value->users_create()->user()->foto_profile()->img)}}"
+                                     alt="">
+                                <div class="text-left my-auto">
+                                    <div
+                                        class="text-sm text-gray-500">{{$value->users_create()->user()->name}}</div>
+                                </div>
+                            </div>
+                        </td>
                         <td>{{$value->created_at}}</td>
                     </tr>
                 @empty
