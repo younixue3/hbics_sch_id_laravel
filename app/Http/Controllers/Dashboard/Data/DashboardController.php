@@ -13,11 +13,12 @@ class DashboardController extends Controller
 {
     public function get_data_dashboard()
     {
-        $article = Publikasis::get()->count();
-        $users = User::get()->count();
-        $mailbox = Mailbox::get()->count();
+        $article = Publikasis::get();
+        $users = User::get();
+        $mailbox = Mailbox::get();
         $insight = PublikasisComments::get()->count();
 
         $compact = compact('article', 'users', 'mailbox', 'insight');
+        return $compact;
     }
 }
