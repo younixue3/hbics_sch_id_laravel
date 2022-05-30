@@ -119,7 +119,9 @@ const store = new Vuex.Store({
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('nav-bar-component', require('./components/layout/NavBarComponent.vue').default);
+Vue.component('activity-component', require('./components/layout/ActivityComponent').default);
+
+Vue.component('nav-bar-component', require('./components/layout/NavBarComponent').default);
 Vue.component('content-card-component', require('./components/widget/ContentCardComponent').default)
 Vue.component('testimoni-component', require('./components/widget/TestimoniComponent').default)
 Vue.component('hero-component', require('./components/widget/HeroComponent').default)

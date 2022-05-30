@@ -12,29 +12,31 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
-<div id="app" class="bg-gray-100 font-raleway font-">
-    <modal-show-component>
-        @yield('modalShow')
-    </modal-show-component>
-    <modal-add-function>
-        @yield('modalAdd')
-    </modal-add-function>
-    <modal-edit-function>
-        @yield('modalEdit')
-    </modal-edit-function>
-    <modal-staff-change-password-function>
-        @yield('modalChangePassword')
-    </modal-staff-change-password-function>
-    <modal-validation-function></modal-validation-function>
-    <div class="flex w-full">
-        @include('layouts.dashboard.header')
-        <div class="min-h-screen w-full px-10 py-5">
-            @yield('content')
+
+<div id="app" class="bg-gray-100 font-raleway">
+    <activity-component>
+        <modal-show-component>
+            @yield('modalShow')
+        </modal-show-component>
+        <modal-add-function>
+            @yield('modalAdd')
+        </modal-add-function>
+        <modal-edit-function>
+            @yield('modalEdit')
+        </modal-edit-function>
+        <modal-staff-change-password-function>
+            @yield('modalChangePassword')
+        </modal-staff-change-password-function>
+        <modal-validation-function></modal-validation-function>
+        <div class="flex w-full">
+            @include('layouts.dashboard.header')
+            <div class="min-h-screen w-full px-10 py-5">
+                @yield('content')
+            </div>
         </div>
-    </div>
-    @yield('notification')
-</div>
-@include('layouts.dashboard.footer')
+        @yield('notification')
+        @include('layouts.dashboard.footer')
+    </activity-component>
 </div>
 {{--VueJs--}}
 <script>
@@ -42,6 +44,13 @@
 </script>
 {{--VueJs--}}
 <script src="{{asset('js/app.js')}}"></script>
+<script>
+    export default {
+        mounted() {
+            console.log('masok')
+        }
+    }
+</script>
 <style>
     /* Hide scrollbar for Chrome, Safari and Opera */
     .removescrollbar::-webkit-scrollbar {

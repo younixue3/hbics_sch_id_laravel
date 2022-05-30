@@ -50,5 +50,12 @@
         background-image: url({{asset('assets/svg/4.svg')}});
     }
 </style>
+<script>
+    export default {
+        mounted() {
+            console.log('masok')
+        }
+    }
+</script>
 </body>
 </html>
