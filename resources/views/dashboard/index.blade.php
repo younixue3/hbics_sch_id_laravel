@@ -95,11 +95,12 @@
                 <tbody>
                 @forelse($article->get(5) as $key => $value)
                     <tr class="border-b-2 border-gray-200 h-10">
-                        <td><a class="text-blue-500" href="#">{{$value}}</a></td>
-                        <td class="truncate">{{$value->title}}</td>
-                        <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">{{$value->status}}</span></td>
-                        <td>{{$value->users_create()->name}}</td>
-                        <td>{{$value->created_at}}</td>
+                        {{dd($value)}}
+{{--                        <td><a class="text-blue-500" href="#">{{$value}}</a></td>--}}
+{{--                        <td class="truncate">{{$value->title}}</td>--}}
+{{--                        <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">{{$value->status}}</span></td>--}}
+{{--                        <td>{{$value->users_create()->name}}</td>--}}
+{{--                        <td>{{$value->created_at}}</td>--}}
                     </tr>
                 @empty
                     Data Kosong
