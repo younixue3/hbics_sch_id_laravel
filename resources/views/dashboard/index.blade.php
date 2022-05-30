@@ -41,7 +41,7 @@
         </div>
         <mac-card-component cardsname="Staff | Status" class="row-span-1 md:col-span-4 lg:col-span-6 overflow-hidden">
             <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-                @forelse($users as $key => $value)
+                @forelse($users->take(8) as $key => $value)
                     <div class="text-center">
                         <img class="h-8 w-8 rounded-full mx-auto"
                              src="{{asset('Upload/foto_profile/'.$value->foto_profile()->img)}}"
@@ -66,7 +66,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @forelse($mailbox as $key => $value)
+                    @forelse($mailbox->take(8) as $key => $value)
                         <tr class="border-b-2 border-gray-200 h-10">
                             <td><a class="text-blue-500" href="#">{{$value->kunjungan != null ? $value->kunjungan()->email : json_decode($value->content)->items->email}}</a></td>
                             <td class="truncate">{{$value->kunjungan != null ? 'Kunjungan_'.$value->kunjungan : 'Pesan Dari '.json_decode($value->content)->items->name}}</td>
@@ -93,7 +93,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @forelse($article->take(3) as $key => $value)
+                @forelse($article->take(8) as $key => $value)
                     <tr class="border-b-2 border-gray-200 h-10">
                         <td><a class="text-blue-500" href="#">{{$value->randKey}}</a></td>
                         <td class="truncate">{{$value->title}}</td>
@@ -104,59 +104,6 @@
                 @empty
                     Data Kosong
                 @endforelse
-                </tbody>
-            </table>
-            <div class="w-full absolute bottom-0 bg-gray-600 text-white">
-                <button class=w-full>View All Orders</button>
-            </div>
-        </mac-card-component>
-        <mac-card-component cardsname="Event | Table" class="row-span-3 md:col-span-4 lg:col-span-6 overflow-hidden">
-            <table class="table-fixed w-full h-full text-xs md:text-base mb-4">
-                <thead class="border-b-4">
-                <tr>
-                    <th>Order Id</th>
-                    <th>Item</th>
-                    <th>Status</th>
-                    <th>Experience & Review</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td class="truncate">Template E-Commerce + Pro</td>
-                    <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">Success</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-yellow-500 px-2 py-0.5 text-white rounded-full">Pending</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-red-500 px-2 py-0.5 text-white rounded-full">Expired</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-blue-500 px-2 py-0.5 text-white rounded-full">Processing</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-green-500 px-2 py-0.5 text-white rounded-full">Success</span></td>
-                    <td>5</td>
-                </tr>
-                <tr class="border-b-2 border-gray-200 h-10">
-                    <td><a class="text-blue-500" href="#">OR9842</a></td>
-                    <td>Adam</td>
-                    <td><span class="bg-red-500 px-2 py-0.5 text-white rounded-full">Expired</span></td>
-                    <td>5</td>
-                </tr>
                 </tbody>
             </table>
             <div class="w-full absolute bottom-0 bg-gray-600 text-white">
