@@ -49,22 +49,22 @@
                                 </span>
                                 @endforeach
                             </td>
-                            <td class="py-1">
+                            <td class="py-1 flex">
                                 @if($value->status === 'publish')
-                                    <span
-                                        class="bg-green-500 hover:bg-green-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                    <div
+                                        class="bg-green-500 m-auto hover:bg-green-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
                                         {{$value->status}}
-                                    </span>
+                                    </div>
                                 @elseif($value->status === 'reject')
-                                    <span
-                                        class="bg-red-500 hover:bg-red-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                    <div
+                                        class="bg-red-500 m-auto hover:bg-red-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
                                         {{$value->status}}
-                                    </span>
+                                    </div>
                                 @elseif($value->status === 'draft')
-                                    <span
-                                        class="bg-yellow-500 hover:bg-yellow-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                    <div
+                                        class="bg-yellow-500 m-auto hover:bg-yellow-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
                                         {{$value->status}}
-                                    </span>
+                                    </div>
                                 @endif
                             </td>
                             <td class="py-1 text-sm text-gray-500">
