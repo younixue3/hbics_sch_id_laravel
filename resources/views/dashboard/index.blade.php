@@ -8,7 +8,7 @@
             </div>
             <div class="w-2/3 ml-10 my-auto">
                 <span class="text-4xl">236</span>
-                <div class="-mt-3 text-lg">Orders<i class="mx-2 text-green-500 fas fa-caret-up"></i></div>
+                <div class="-mt-3 text-lg">Article<i class="mx-2 text-green-500 fas fa-newspaper"></i></div>
             </div>
         </div>
         <div class="md:col-span-3 bg-gray-100 shadow-md text-gray-800 rounded-xl flex">

@@ -15,6 +15,7 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return view('dashboard.index');
+        $dashboard = $this->data->get_data_dashboard();
+        return view('dashboard.index', $dashboard);
     }
 }
