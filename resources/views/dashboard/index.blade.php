@@ -67,11 +67,13 @@
                 </thead>
                 <tbody>
                     @forelse($mailbox->take(8) as $key => $value)
-                        <tr class="border-b-2 border-gray-200 h-10">
-                            <td><a class="text-blue-500" href="#">{{$value->kunjungan != null ? $value->kunjungan()->email : json_decode($value->content)->items->email}}</a></td>
-                            <td class="truncate">{{$value->kunjungan != null ? 'Kunjungan_'.$value->kunjungan : 'Pesan Dari '.json_decode($value->content)->items->name}}</td>
-                            <td>{{$value->created_at}}</td>
-                        </tr>
+                        <a>
+                            <tr class="border-b-2 border-gray-200 h-10">
+                                <td><a class="text-blue-500" href="#">{{$value->kunjungan != null ? $value->kunjungan()->email : json_decode($value->content)->items->email}}</a></td>
+                                <td class="truncate">{{$value->kunjungan != null ? 'Kunjungan_'.$value->kunjungan : 'Pesan Dari '.json_decode($value->content)->items->name}}</td>
+                                <td>{{$value->created_at}}</td>
+                            </tr>
+                        </a>
                     @empty
                         Email kosong
                     @endforelse
