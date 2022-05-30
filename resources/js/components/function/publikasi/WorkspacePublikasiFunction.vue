@@ -97,6 +97,13 @@ export default {
                         url: null
                     }
                 })
+            } else if (type === 'image') {
+                this.$store.commit('pushData', {
+                    type: type, content: {
+                        image: null,
+                        alt: null
+                    }
+                })
             } else {
                 this.$store.commit('pushData', {type: type, content: null})
             }

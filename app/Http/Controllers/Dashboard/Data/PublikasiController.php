@@ -79,9 +79,7 @@ class PublikasiController extends Controller
 //        dd($i = 1 > intval($request->totalfile));
             for ($i = 1; $i <= intval($request->totalfile);) {
                 if ($request['inputFile' . $i] !== null) {
-//                    dd('dalam');
                     Storage::disk('upload')->putFileAs('foto_content', $request['inputFile' . $i], $request['nameFile' . $i]);
-
                 }
                 $i++;
             }

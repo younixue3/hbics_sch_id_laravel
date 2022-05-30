@@ -19,12 +19,16 @@
             </div>
         </div>
         <div class="p-5">
-            <img ref="previewimg" class="w-full object-cover rounded-3xl"
+            <img ref="previewimg" class="w-full object-cover rounded-3xl" :alt="this.$store.state.workspace.items[this.$props.index].content.alt"
                  :class="inputMode === false ? 'h-96' : 'h-32 border border-black'" @dblclick="inputOn">
+            <div class="flex">
+                <label>Alt Image Text : </label>
+                <input class="ml-2 rounded-md px-2 border focus:border-sky-500 outline-none" type="text" name="alt" v-model="$store.state.workspace.items[index].content.alt">
+            </div>
         </div>
         <div :class="inputMode ? '' : 'hidden'">
             <input type="file" :name="'inputFile'+indexfile" @change="previewImage">
-            <input type="hidden" :name="'nameFile'+indexfile" :value="$store.state.workspace.items[index].content">
+            <input type="hidden" :name="'nameFile'+indexfile" :value="$store.state.workspace.items[index].content.file">
             <span class="px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer"
                   @click="inputOff">Save Changes</span>
         </div>
@@ -51,7 +55,7 @@ export default {
         this.indexfile = this.$store.state.file
         if (this.$props.editmode === 'true') {
             if (this.$store.state.workspace.items[this.$props.index].type === 'image' || this.$store.state.workspace.items[this.$props.index].type === 'video') {
-                var name = this.$store.state.workspace.items[this.$props.index].content
+                var name = this.$store.state.workspace.items[this.$props.index].content.file
                 var filename = '/' + name
                 this.filename = this.urlasset + filename
                 const preview = this.$refs.previewimg
@@ -69,7 +73,7 @@ export default {
 
         },
         previewImage: function () {
-            this.$store.state.workspace.items[this.$props.index].content = Math.random().toString(16).substr(2, 8) + '_' + event.target.files[0].name
+            this.$store.state.workspace.items[this.$props.index].content.file = Math.random().toString(16).substr(2, 8) + '_' + event.target.files[0].name
             const reader = new FileReader();
             reader.readAsDataURL(event.target.files[0]);
             reader.onload = () => {

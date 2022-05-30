@@ -3120,6 +3120,14 @@ __webpack_require__.r(__webpack_exports__);
             url: null
           }
         });
+      } else if (type === 'image') {
+        this.$store.commit('pushData', {
+          type: type,
+          content: {
+            image: null,
+            alt: null
+          }
+        });
       } else {
         this.$store.commit('pushData', {
           type: type,
@@ -7479,6 +7487,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -7500,7 +7512,7 @@ __webpack_require__.r(__webpack_exports__);
 
     if (this.$props.editmode === 'true') {
       if (this.$store.state.workspace.items[this.$props.index].type === 'image' || this.$store.state.workspace.items[this.$props.index].type === 'video') {
-        var name = this.$store.state.workspace.items[this.$props.index].content;
+        var name = this.$store.state.workspace.items[this.$props.index].content.file;
         var filename = '/' + name;
         this.filename = this.urlasset + filename;
         var preview = this.$refs.previewimg;
@@ -7519,7 +7531,7 @@ __webpack_require__.r(__webpack_exports__);
     previewImage: function previewImage() {
       var _this = this;
 
-      this.$store.state.workspace.items[this.$props.index].content = Math.random().toString(16).substr(2, 8) + '_' + event.target.files[0].name;
+      this.$store.state.workspace.items[this.$props.index].content.file = Math.random().toString(16).substr(2, 8) + '_' + event.target.files[0].name;
       var reader = new FileReader();
       reader.readAsDataURL(event.target.files[0]);
 
@@ -22830,8 +22842,44 @@ var render = function () {
         ref: "previewimg",
         staticClass: "w-full object-cover rounded-3xl",
         class: _vm.inputMode === false ? "h-96" : "h-32 border border-black",
+        attrs: {
+          alt: this.$store.state.workspace.items[this.$props.index].content.alt,
+        },
         on: { dblclick: _vm.inputOn },
       }),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex" }, [
+        _c("label", [_vm._v("Alt Image Text : ")]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.$store.state.workspace.items[_vm.index].content.alt,
+              expression: "$store.state.workspace.items[index].content.alt",
+            },
+          ],
+          staticClass:
+            "ml-2 rounded-md px-2 border focus:border-sky-500 outline-none",
+          attrs: { type: "text", name: "alt" },
+          domProps: {
+            value: _vm.$store.state.workspace.items[_vm.index].content.alt,
+          },
+          on: {
+            input: function ($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(
+                _vm.$store.state.workspace.items[_vm.index].content,
+                "alt",
+                $event.target.value
+              )
+            },
+          },
+        }),
+      ]),
     ]),
     _vm._v(" "),
     _c("div", { class: _vm.inputMode ? "" : "hidden" }, [
@@ -22843,7 +22891,7 @@ var render = function () {
       _c("input", {
         attrs: { type: "hidden", name: "nameFile" + _vm.indexfile },
         domProps: {
-          value: _vm.$store.state.workspace.items[_vm.index].content,
+          value: _vm.$store.state.workspace.items[_vm.index].content.file,
         },
       }),
       _vm._v(" "),
@@ -23489,7 +23537,8 @@ var render = function () {
         src:
           this.urlasset +
           "/" +
-          this.$store.state.workspace.items[this.$props.index].content,
+          this.$store.state.workspace.items[this.$props.index].content.file,
+        alt: this.$store.state.workspace.items[this.$props.index].content.alt,
       },
     }),
   ])
