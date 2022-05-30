@@ -785,14 +785,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-10{
   height: 2.5rem;
 }
-.h-full{
-  height: 100%;
-}
 .h-36{
   height: 9rem;
 }
 .h-52{
   height: 13rem;
+}
+.h-full{
+  height: 100%;
 }
 .h-4{
   height: 1rem;
@@ -1494,10 +1494,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(199 210 254 / var(--tw-bg-opacity));
 }
-.bg-red-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
 .bg-gray-600{
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
@@ -1525,6 +1521,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-indigo-600{
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
+.bg-red-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 .bg-black{
   --tw-bg-opacity: 1;

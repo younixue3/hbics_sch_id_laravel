@@ -78,7 +78,7 @@
                 </tbody>
             </table>
             <div class="w-full absolute bottom-0 bg-gray-600 text-white">
-                <button class=w-full>View All Orders</button>
+                <a href="{{route('dashboard.mailbox.index')}}" class=w-full>View All Orders</a>
             </div>
         </mac-card-component>
         <mac-card-component cardsname="Article | Table" class="row-span-2 md:col-span-4 lg:col-span-12 overflow-hidden">
@@ -107,7 +107,7 @@
                 </tbody>
             </table>
             <div class="w-full absolute bottom-0 bg-gray-600 text-white">
-                <button class=w-full>View All Orders</button>
+                <a href="{{route('dashboard.publikasi.index')}}" class=w-full>View All Orders</a>
             </div>
         </mac-card-component>
     </div>
