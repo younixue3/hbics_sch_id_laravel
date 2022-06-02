@@ -3209,14 +3209,14 @@ __webpack_require__.r(__webpack_exports__);
     timesout: function timesout() {
       var _this2 = this;
 
-      if (this.timesout >= 10) {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().post(this.windowspath + 'api/checkActivity/' + this.$props.userid).then(function (resp) {
+      if (this.timesout >= 300) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post(this.windowspath + 'api/checkActivity/' + this.$props.userid, {
+          activity: 'not_active'
+        }).then(function (resp) {
           _this2.count = 'stop';
         })["catch"](function (e) {
           return console.log(e);
         });
-      } else {
-        console.log('belum');
       }
     }
   }

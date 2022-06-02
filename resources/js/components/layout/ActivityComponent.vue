@@ -46,14 +46,12 @@ export default {
     },
     watch: {
         timesout: function () {
-            if (this.timesout >= 10) {
-                axios.post(this.windowspath + 'api/checkActivity/' + this.$props.userid)
+            if (this.timesout >= 300) {
+                axios.post(this.windowspath + 'api/checkActivity/' + this.$props.userid,{activity: 'not_active'})
                 .then(resp => {
                     this.count = 'stop'
                 })
                 .catch(e => console.log(e))
-            } else {
-                console.log('belum')
             }
         }
     }

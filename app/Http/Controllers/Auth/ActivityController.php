@@ -10,13 +10,12 @@ class ActivityController extends Controller
 {
     public function activity($id, Request $request)
     {
-//        return view(dd($request->activity));
-        if ($request->activity = 'active') {
-            User::find($id)->update([
+        if ($request->activity === 'active') {
+            return User::find($id)->update([
                 'last_activity' => null
             ]);
         } else {
-            User::find($id)->update([
+            return User::find($id)->update([
                 'last_activity' => now()
             ]);
         }

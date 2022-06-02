@@ -48,7 +48,7 @@
                              alt="">
                         <h1 class="text-base font-normal">{{$value->name}}</h1>
                         <div class="px-6">
-                            <h4 class="text-xs bg-indigo-200 rounded-full pt-0.5 font-raleway">1h Ago</h4>
+                            <h4 class="text-xs bg-indigo-200 rounded-full pt-0.5 font-raleway">{{$value->last_activity === null ? 'Active Now' : Carbon\Carbon::parse($value->last_activity)->diffForHumans()}}</h4>
                         </div>
                     </div>
                 @empty

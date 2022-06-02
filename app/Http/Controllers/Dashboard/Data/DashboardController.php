@@ -14,7 +14,7 @@ class DashboardController extends Controller
     public function get_data_dashboard()
     {
         $article = Publikasis::get();
-        $users = User::get();
+        $users = User::where('id', '!=', auth()->user()->id)->get();
         $mailbox = Mailbox::get();
         $insight = PublikasisComments::get()->count();
 
