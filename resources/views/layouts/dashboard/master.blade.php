@@ -14,7 +14,7 @@
 <body>
 
 <div id="app" class="bg-gray-100 font-raleway">
-    <activity-component>
+    <activity-component userid="{{auth()->user()->id}}">
         <modal-show-component>
             @yield('modalShow')
         </modal-show-component>

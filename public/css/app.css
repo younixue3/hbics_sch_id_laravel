@@ -1498,6 +1498,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
+.bg-red-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
 .bg-blue-800{
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
@@ -1521,10 +1525,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-indigo-600{
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
-}
-.bg-red-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 .bg-black{
   --tw-bg-opacity: 1;
@@ -1805,14 +1805,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.py-0\.5{
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-}
-.py-0{
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
 .px-60{
   padding-left: 15rem;
   padding-right: 15rem;
@@ -1840,6 +1832,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+.py-0\.5{
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 .px-12{
   padding-left: 3rem;
@@ -1889,6 +1889,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pt-0{
   padding-top: 0px;
 }
+.pb-0\.5{
+  padding-bottom: 0.125rem;
+}
+.pb-0{
+  padding-bottom: 0px;
+}
 .pt-72{
   padding-top: 18rem;
 }
@@ -1907,14 +1913,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pl-4{
   padding-left: 1rem;
 }
-.pb-0\.5{
-  padding-bottom: 0.125rem;
-}
 .pt-1{
   padding-top: 0.25rem;
-}
-.pb-0{
-  padding-bottom: 0px;
 }
 .pl-7{
   padding-left: 1.75rem;
@@ -2522,6 +2522,21 @@ h6{
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.hover\:bg-green-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-yellow-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(202 138 4 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-blue-700:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
@@ -2545,21 +2560,6 @@ h6{
 .hover\:bg-blue-50:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(239 246 255 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-green-600:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-red-600:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-yellow-600:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(202 138 4 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-pink-500:hover{

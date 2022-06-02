@@ -38,3 +38,4 @@ Route::get('getTestimoniSmpk', [\App\Http\Controllers\Front\Data\api\AkademisCon
 Route::get('getTestimoniSmak', [\App\Http\Controllers\Front\Data\api\AkademisController::class, 'get_prestasi_smak'])->name('api.getTestimoniSmak');
 Route::get('getHeroAlumni', [\App\Http\Controllers\Front\Data\api\KomunitasController::class, 'get_data_hero_alumni'])->name('api.getHeroAlumni');
 Route::get('getHeroOrangTua', [\App\Http\Controllers\Front\Data\api\KomunitasController::class, 'get_data_orang_tua'])->name('api.getHeroOrangTua');
+Route::post('checkActivity/{id}', [\App\Http\Controllers\Auth\ActivityController::class, 'activity'])->name('api.activity');

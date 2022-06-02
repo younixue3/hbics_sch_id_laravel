@@ -33,11 +33,11 @@ class DatabaseSeeder extends Seeder
 //            PrestasisSeeder::class,
 //            KomunitasSeeder::class,
 //            TeacherStaffSeeder::class,
-            KunjungansSeeder::class,
-            MailboxSeeder::class,
-            SentsSeeder::class,
-            SentsStaffsSeeder::class,
-            MailboxSentsSeeder::class,
+//            KunjungansSeeder::class,
+//            MailboxSeeder::class,
+//            SentsSeeder::class,
+//            SentsStaffsSeeder::class,
+//            MailboxSentsSeeder::class,
         ]);
 
         // \App\Models\User::factory(10)->create();

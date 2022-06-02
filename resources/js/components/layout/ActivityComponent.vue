@@ -5,14 +5,56 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     name: "ActivityComponent",
+    data() {
+        return {
+            timesout: 0,
+            count: 'stop',
+            windowspath: window.location.origin + '/',
+        }
+    },
+    props: [
+      'userid'
+    ],
+    mounted() {
+        this.activity()
+    },
     methods: {
         mouseout: function () {
-            console.log('mouse out')
+            this.count = 'start'
         },
         mousein: function () {
-            console.log('mouse in')
+            axios.post(this.windowspath + 'api/checkActivity/' + this.$props.userid, {activity: 'active'})
+                .then(resp => {
+                    this.count = 'stop'
+                })
+            this.timesout = 0
+            this.count = 'stop'
+        },
+        activity: function () {
+            const self = this
+            setInterval(function () {
+                if (self.count === 'start') {
+                    self.timesout++
+                }
+            }, 1000)
+        },
+
+    },
+    watch: {
+        timesout: function () {
+            if (this.timesout >= 10) {
+                axios.post(this.windowspath + 'api/checkActivity/' + this.$props.userid)
+                .then(resp => {
+                    this.count = 'stop'
+                })
+                .catch(e => console.log(e))
+            } else {
+                console.log('belum')
+            }
         }
     }
 }

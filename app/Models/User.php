@@ -24,7 +24,8 @@ class User extends Authenticatable
         'password',
         'randKey',
         'area',
-        'is_super_admin'
+        'is_super_admin',
+        'last_activity'
     ];
 
     /**

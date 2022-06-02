@@ -14,7 +14,7 @@ class AddActiveAtToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->timestamp('active_at');
+            $table->timestamp('last_activity')->nullable();
         });
     }
 

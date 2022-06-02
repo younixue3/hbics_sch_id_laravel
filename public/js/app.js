@@ -3159,20 +3159,65 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
 //
 //
 //
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "ActivityComponent",
+  data: function data() {
+    return {
+      timesout: 0,
+      count: 'stop',
+      windowspath: window.location.origin + '/'
+    };
+  },
+  props: ['userid'],
+  mounted: function mounted() {
+    this.activity();
+  },
   methods: {
     mouseout: function mouseout() {
-      console.log('mouse out');
+      this.count = 'start';
     },
     mousein: function mousein() {
-      console.log('mouse in');
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post(this.windowspath + 'api/checkActivity/' + this.$props.userid, {
+        activity: 'active'
+      }).then(function (resp) {
+        _this.count = 'stop';
+      });
+      this.timesout = 0;
+      this.count = 'stop';
+    },
+    activity: function activity() {
+      var self = this;
+      setInterval(function () {
+        if (self.count === 'start') {
+          self.timesout++;
+        }
+      }, 1000);
+    }
+  },
+  watch: {
+    timesout: function timesout() {
+      var _this2 = this;
+
+      if (this.timesout >= 10) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post(this.windowspath + 'api/checkActivity/' + this.$props.userid).then(function (resp) {
+          _this2.count = 'stop';
+        })["catch"](function (e) {
+          return console.log(e);
+        });
+      } else {
+        console.log('belum');
+      }
     }
   }
 });
