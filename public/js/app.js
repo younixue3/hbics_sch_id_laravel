@@ -23022,7 +23022,7 @@ var render = function () {
         staticClass: "w-full object-cover rounded-3xl",
         class: _vm.inputMode === false ? "h-96" : "h-32 border border-black",
         attrs: {
-          alt: this.$store.state.workspace.items[this.$props.index].content.alt,
+          alt: this.$store.state.workspace.items[_vm.index].content.alt,
         },
         on: { dblclick: _vm.inputOn },
       }),
@@ -23716,7 +23716,7 @@ var render = function () {
         src:
           this.urlasset +
           "/" +
-          this.$store.state.workspace.items[_vm.index].content,
+          this.$store.state.workspace.items[_vm.index].content.file,
         alt: this.$store.state.workspace.items[this.$props.index].content.alt,
       },
     }),

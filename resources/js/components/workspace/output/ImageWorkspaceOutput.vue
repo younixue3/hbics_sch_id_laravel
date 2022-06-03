@@ -1,7 +1,7 @@
 <template>
     <div class="relative">
         <img ref="previewimg" class="w-full object-cover rounded-3xl h-96"
-             :src="this.urlasset + '/' + this.$store.state.workspace.items[index].content" :alt="this.$store.state.workspace.items[this.$props.index].content.alt">
+             :src="this.urlasset + '/' + this.$store.state.workspace.items[index].content.file" :alt="this.$store.state.workspace.items[this.$props.index].content.alt">
     </div>
 </template>
 
