@@ -23716,7 +23716,7 @@ var render = function () {
         src:
           this.urlasset +
           "/" +
-          this.$store.state.workspace.items[this.$props.index].content.file,
+          this.$store.state.workspace.items[_vm.index].content,
         alt: this.$store.state.workspace.items[this.$props.index].content.alt,
       },
     }),
