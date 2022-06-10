@@ -14325,7 +14325,7 @@ var render = function () {
                 "div",
                 {
                   staticClass:
-                    "pt-2 grid grid-cols-11 place-items-center content-center text-center text-white",
+                    "pt-2 grid grid-cols-11 place-items-center content-center text-center text-white px-5",
                 },
                 [
                   _c("div", { staticClass: "text-sm font-light" }, [
@@ -14419,7 +14419,7 @@ var render = function () {
                         _c(
                           "a",
                           {
-                            staticClass: "font-light col-start-3",
+                            staticClass: "font-light col-start-3 text-right",
                             attrs: { href: _vm.dataurl["home"] },
                           },
                           [_vm._v("Beranda")]
@@ -15194,8 +15194,11 @@ var render = function () {
                           },
                           [
                             _c(
-                              "span",
-                              { staticClass: "cursor-pointer text-lg" },
+                              "div",
+                              {
+                                staticClass:
+                                  "cursor-pointer text-lg w-full text-left",
+                              },
                               [
                                 _vm._v(
                                   "\n                                    Komunitas\n                                "
@@ -15369,7 +15372,7 @@ var render = function () {
                     "a",
                     {
                       staticClass:
-                        "cursor-pointer 2-1 hover:border-2 hover:border-white uppercase p-2 transition-all ease-in-out duration-300",
+                        "cursor-pointer hover:border-2 hover:border-white uppercase p-2 transition-all ease-in-out duration-300",
                       attrs: { href: _vm.dataurl["dashboard"] },
                     },
                     [

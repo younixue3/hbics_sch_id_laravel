@@ -6,7 +6,7 @@
                 <div
                     :class="[show ? 'bg-blue-900 h-20' : livepath === '/' || livepath === '/alumni' || livepath === '/orang-tua' ? 'bg-transparent h-44' : 'bg-blue-900 h-44']"
                     class="transition-all ease-in-out duration-300">
-                    <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white">
+                    <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white px-5">
                         <div class="text-sm font-light">
                             <a href="https://www.office.com/" target="_blank"
                                class="hidden lg:block px-2 py-2 text-white hover:border-2 hover:border-white rounded-sm transition-all ease-in-out duration-300">
@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-span-4 justify-self-end hidden lg:block mr-20">
                             <div class="grid grid-cols-3 mb-2">
-                                <a class="font-light col-start-3" :href="dataurl['home']">Beranda</a>
+                                <a class="font-light col-start-3 text-right" :href="dataurl['home']">Beranda</a>
                             </div>
                             <div class="grid grid-cols-3 font-bold">
                                 <div @mouseover="modalshow('pendaftaran')" @mouseleave="modalclose('pendaftaran')">
@@ -378,9 +378,9 @@
                             </div>
                             <div class="grid grid-cols-2 font-bold">
                                 <div @mouseover="modalshow('komunitas')" @mouseleave="modalclose('komunitas')">
-                                    <span class="cursor-pointer text-lg">
+                                    <div class="cursor-pointer text-lg w-full text-left">
                                         Komunitas
-                                    </span>
+                                    </div>
                                     <div class="py-8 fixed">
                                         <div ref="komunitas" id="komunitas"
                                              class="h-0 max-h-52 hidden bg-white text-black shadow-xl rounded-2xl border border-2 shadow-lg z-50 transition-all ease-in-out duration-300 overflow-hidden">
@@ -604,7 +604,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="cursor-pointer 2-1 hover:border-2 hover:border-white uppercase p-2 transition-all ease-in-out duration-300" :href="dataurl['dashboard']">
+                        <a class="cursor-pointer hover:border-2 hover:border-white uppercase p-2 transition-all ease-in-out duration-300" :href="dataurl['dashboard']">
                             <div class="flex">
                                 <i :class="authstatus !== '' ? 'fa-columns text-2xl' : 'fa-id-badge text-3xl'" class="fa-solid fa-id-badge h-9 pt-1 text-center"></i><div class="m-auto ml-2 h-5 text-base m-auto text-center">
                                 {{ authstatus !== '' ? 'Dashboard' : 'Sign In' }}</div>

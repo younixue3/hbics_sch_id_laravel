@@ -1877,6 +1877,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 10rem;
   padding-right: 10rem;
 }
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 .pt-8{
   padding-top: 2rem;
 }
