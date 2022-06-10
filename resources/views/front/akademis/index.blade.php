@@ -12,7 +12,7 @@
                 <p class="my-5">
                     Panduan mendaftar Sekolah Harapan Bangsa & Happy Holy Kids
                 </p>
-                <a class="font-normal text-lg" href="#">Read More<i
+                <a class="font-normal text-lg" href="{{route('kelompok-bermain-tk')}}">Read More<i
                         class="ml-1 fa-solid fa-circle-arrow-right"></i></a>
             </div>
         </div>
@@ -27,7 +27,7 @@
                 <p class="my-5">
                     Berbagai program Beasiswa Sekolah Harapan Bangsa & Happy Holy Kids
                 </p>
-                <a class="font-normal text-lg" href="#">Read More<i
+                <a class="font-normal text-lg" href="{{route('sekolah-dasar')}}">Read More<i
                         class="ml-1 fa-solid fa-circle-arrow-right"></i></a>
             </div>
         </div>
@@ -42,7 +42,7 @@
                 <p class="my-5">
                     Pendaftaran Calon Siswa Sekolah harapan Bangsa
                 </p>
-                <a class="font-normal text-lg" href="#">Read More<i
+                <a class="font-normal text-lg" href="{{route('sekolah-menengah-pertama')}}">Read More<i
                         class="ml-1 fa-solid fa-circle-arrow-right"></i></a>
             </div>
         </div>
@@ -57,7 +57,7 @@
                 <p class="my-5">
                     Alamat dan jadwal kunjungan ke Sekolah Harapan Bangsa
                 </p>
-                <a class="font-normal text-lg" href="#">Read More<i
+                <a class="font-normal text-lg" href="{{route('sekolah-menengah-atas')}}">Read More<i
                         class="ml-1 fa-solid fa-circle-arrow-right"></i></a>
             </div>
         </div>

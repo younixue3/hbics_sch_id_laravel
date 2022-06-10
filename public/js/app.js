@@ -17145,7 +17145,7 @@ var render = function () {
                     "my-auto text-2xl align-middle overflow-hidden truncate font-light",
                   attrs: { href: _vm.dataurl["home"] },
                 },
-                [_vm._v("\n                Dashboard\n            ")]
+                [_vm._v("\n                    Dashboard\n                ")]
               ),
             ]
           ),
@@ -17336,31 +17336,6 @@ var render = function () {
                       "py-0.5 my-1 rounded-xl overflow-hidden truncate",
                   },
                   [
-                    _c("a", { attrs: { href: _vm.dataurl["event"] } }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
-                          class:
-                            _vm.livehref === _vm.dataurl["event"]
-                              ? "bg-gray-300"
-                              : "bg-gray-100",
-                        },
-                        [_vm._m(6)]
-                      ),
-                    ]),
-                  ]
-                )
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.is_admin === "true"
-              ? _c(
-                  "div",
-                  {
-                    staticClass:
-                      "py-0.5 my-1 rounded-xl overflow-hidden truncate",
-                  },
-                  [
                     _c("a", { attrs: { href: _vm.dataurl["mailbox"] } }, [
                       _c(
                         "div",
@@ -17371,7 +17346,7 @@ var render = function () {
                               ? "bg-gray-300"
                               : "bg-gray-100",
                         },
-                        [_vm._m(7)]
+                        [_vm._m(6)]
                       ),
                     ]),
                   ]
@@ -17455,18 +17430,6 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("Teacher & Staff Component")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex w-52" }, [
-      _c("div", { staticClass: "w-1/6" }, [
-        _c("i", { staticClass: "fas fa-calendar-day mr-3" }),
-      ]),
-      _vm._v(" "),
-      _c("span", [_vm._v("Event")]),
     ])
   },
   function () {
@@ -17642,7 +17605,7 @@ var render = function () {
       "div",
       {
         staticClass:
-          "border-2 h-14 flex justify-between py-3 px-5 cursor-pointer",
+          "border-2 h-14 flex rounded-t-2xl justify-between py-3 px-5 cursor-pointer",
         class: _vm.status ? "bg-blue-300 hover:bg-blue-200" : "bg-gray-100",
         on: { click: _vm.clickactiv },
       },
@@ -17663,7 +17626,7 @@ var render = function () {
       "div",
       {
         staticClass:
-          "bg-white text-sm transition-all ease-in-out duration-300 overflow-hidden text-left",
+          "bg-white text-sm transition-all ease-in-out duration-300 rounded-b-2xl overflow-hidden text-left",
         class: _vm.status ? "h-60 border-b-2 border-x-2" : "h-0",
       },
       [_c("div", { staticClass: "p-5" }, [_vm._t("default")], 2)]

@@ -92,7 +92,7 @@ class FasilitasController extends Controller
             'fileupload' => ['mimes:jpeg,jpg,webp,png,mp4', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000']
         ]);
         $data = $this->data->update_data($request, $id);
-        return redirect(route('dashboard.fasilitas.index'))->with('success', 'Update Data Successfully');
+        return redirect(route('dashboard.fasilitas.index'))->with('success', 'Update Data adasda Successfully');
     }
 
     /**

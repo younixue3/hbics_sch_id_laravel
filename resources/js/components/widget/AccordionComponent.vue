@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div @click="clickactiv" class="border-2 h-14 flex justify-between py-3 px-5 cursor-pointer"
+        <div @click="clickactiv" class="border-2 h-14 flex rounded-t-2xl justify-between py-3 px-5 cursor-pointer"
              :class="status ? 'bg-blue-300 hover:bg-blue-200' : 'bg-gray-100'">
             <div>{{ title }}</div>
             <div class="w-5 h-5">
@@ -8,7 +8,7 @@
                    :class="status ? 'rotate-180' : 'rotate-0'"></i>
             </div>
         </div>
-        <div class="bg-white text-sm transition-all ease-in-out duration-300 overflow-hidden text-left"
+        <div class="bg-white text-sm transition-all ease-in-out duration-300 rounded-b-2xl overflow-hidden text-left"
              :class="status ? 'h-60 border-b-2 border-x-2' : 'h-0'">
             <div class="p-5">
                 <slot></slot>

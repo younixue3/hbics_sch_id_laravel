@@ -68,7 +68,7 @@
                 <tbody>
                     @forelse($mailbox->take(8) as $key => $value)
                             <tr class="border-b-2 border-gray-200 h-10">
-                                <td class="truncate">{{$value->kunjungan != null ? $value->kunjungan()->email : json_decode($value->content)->items->email}}</td>
+                                <td class="truncate pl-3">{{$value->kunjungan != null ? $value->kunjungan()->email : json_decode($value->content)->items->email}}</td>
                                 <td class="truncate">{{$value->kunjungan != null ? 'Kunjungan_'.$value->kunjungan : 'Pesan Dari '.json_decode($value->content)->items->name}}</td>
                                 <td class="truncate">{{$value->created_at}}</td>
                             </tr>
@@ -95,7 +95,7 @@
                 <tbody>
                 @forelse($article->take(8) as $key => $value)
                     <tr class="border-b-2 border-gray-200 h-10">
-                        <td><a class="text-blue-500" href="{{route('dashboard.publikasi.edit', $value->randKey)}}">{{$value->randKey}}</a></td>
+                        <td class="px-3"><a class="text-blue-500" href="{{route('dashboard.publikasi.edit', $value->randKey)}}">{{$value->randKey}}</a></td>
                         <td class="truncate">{{$value->title}}</td>
                         <td class="py-1 flex">
                             @if($value->status === 'publish')
@@ -126,7 +126,7 @@
                                 </div>
                             </div>
                         </td>
-                        <td>{{$value->created_at}}</td>
+                        <td class="text-center">{{$value->created_at}}</td>
                     </tr>
                 @empty
                     Data Kosong

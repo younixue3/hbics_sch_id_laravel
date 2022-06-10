@@ -45,8 +45,10 @@ class FasilitasController extends Controller
             $fasilitas->name = $filename['filename'];
             $fasilitas->type = $filename['type'];
         };
-        $fasilitas->description = $request->description;
-        if ($request->are != null) {
+        if ($request->description !== null) {
+            $fasilitas->description = $request->description;
+        }
+        if ($request->area != null) {
             $fasilitas->area = $request->area;
         }
         return $fasilitas->save();

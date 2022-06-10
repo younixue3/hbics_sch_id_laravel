@@ -13,7 +13,7 @@
                         <th class="py-1 w-96">Pesan</th>
                         <th class="py-1 w-96">Area</th>
                         <th class="py-1 w-96">Connection</th>
-                        <th class="py-1"></th>
+                        <th class="py-1 pr-3"></th>
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y-2 divide-gray-200">
