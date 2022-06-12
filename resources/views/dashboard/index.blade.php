@@ -73,7 +73,6 @@
                                 <td class="truncate">{{$value->created_at}}</td>
                             </tr>
                     @empty
-                        Email kosong
                     @endforelse
                 </tbody>
             </table>
@@ -129,7 +128,6 @@
                         <td class="text-center">{{$value->created_at}}</td>
                     </tr>
                 @empty
-                    Data Kosong
                 @endforelse
                 </tbody>
             </table>
