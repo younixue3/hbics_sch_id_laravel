@@ -57,9 +57,10 @@
             </div>
         </mac-card-component>
         <mac-card-component cardsname="Mail | Table" class="md:col-span-4 lg:col-span-6 overflow-hidden">
-            <table class="table-fixed w-full text-xs md:text-base mb-4">
+            <table class="table-auto w-full text-xs md:text-base mb-4">
                 <thead class="border-b-4">
                 <tr>
+                    <th>No</th>
                     <th>Email</th>
                     <th>Subject</th>
                     <th>Date</th>
@@ -68,6 +69,7 @@
                 <tbody>
                     @forelse($mailbox->take(8) as $key => $value)
                             <tr class="border-b-2 border-gray-200 h-10">
+                                <td class="py-1">{{$value->id}}</td>
                                 <td class="truncate pl-3">{{$value->kunjungan != null ? $value->kunjungan()->email : json_decode($value->content)->items->email}}</td>
                                 <td class="truncate">{{$value->kunjungan != null ? 'Kunjungan_'.$value->kunjungan : 'Pesan Dari '.json_decode($value->content)->items->name}}</td>
                                 <td class="truncate">{{$value->created_at}}</td>
@@ -81,9 +83,10 @@
             </a>
         </mac-card-component>
         <mac-card-component cardsname="Article | Table" class="row-span-2 md:col-span-4 lg:col-span-12 overflow-hidden">
-            <table class="table-fixed w-full text-xs md:text-base mb-4">
+            <table class="table-auto w-full text-xs md:text-base mb-4">
                 <thead class="border-b-4">
                 <tr>
+                    <th>No</th>
                     <th>Article Id</th>
                     <th>Title</th>
                     <th>Status</th>
@@ -94,6 +97,7 @@
                 <tbody>
                 @forelse($article->take(8) as $key => $value)
                     <tr class="border-b-2 border-gray-200 h-10">
+                        <td class="text-center">{{$value->id}}</td>
                         <td class="px-3"><a class="text-blue-500" href="{{route('dashboard.publikasi.edit', $value->randKey)}}">{{$value->randKey}}</a></td>
                         <td class="truncate">{{$value->title}}</td>
                         <td class="py-1 flex">
