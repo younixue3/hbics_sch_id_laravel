@@ -19,7 +19,7 @@
                     </form>
                     <div class="mt-5 grid grid-cols-2 gap-5">
                         <button @click="submitModal"
-                                class="bg-indigo-500 text-white text-center rounded-2xl shadow-md px-5 py-1 w-full">
+                                class="bg-sky-700 text-white text-center rounded-2xl shadow-md px-5 py-1 w-full">
                             <span class="align-text-top">Submit</span></button>
                         <button @click="closeModal"
                                 class="border-2 border-red-500 text-red-500 text-center rounded-2xl shadow-md px-5 py-1 w-full">

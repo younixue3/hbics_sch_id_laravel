@@ -36,19 +36,15 @@
                                 <div class="w-full flex justify-between mb-1">
                                     <div class="flex     gap-x-1 align-text-bottom mb-2">
                                         <div class="m-auto text-sm md:text-2xl font-bold">
-                                            {{$value->first_name}}
                                             <div class="m-auto text-sm md:text-xl font-normal">
-                                                {{$value->last_name}}
+                                                {{$value->name}}
                                             </div>
-                                            <div class="mt-10 md:mt-20">
+                                            <div>
                                                 <div
-                                                    class="text-sm md:text-xl font-semibol uppercase">{{$value->area}}</div>
-                                                <div class="text-sm md:text-lg font-normal">{{$value->profesi}}</div>
+                                                    class="text-sm md:text-lg font-semibold">{{$value->prestasi}}</div>
+                                                <div class="text-sm md:text-sm font-normal uppercase">{{$value->area}}</div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="flex h-5 gap-x-5">
-                                        <button class="text-xs md:text-lg"><i class="fa-solid fa-envelope"></i></button>
                                     </div>
                                 </div>
                             </div>

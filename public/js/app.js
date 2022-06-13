@@ -8459,7 +8459,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-14c5c7c0],\r\n.fade-rdev-leave-active[data-v-14c5c7c0] {\r\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-14c5c7c0],\r\n.fade-rdev-leave-to[data-v-14c5c7c0] {\r\n    opacity: 0;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-14c5c7c0],\n.fade-rdev-leave-active[data-v-14c5c7c0] {\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-14c5c7c0],\n.fade-rdev-leave-to[data-v-14c5c7c0] {\n    opacity: 0;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -13600,7 +13600,7 @@ var render = function () {
                     "button",
                     {
                       staticClass:
-                        "bg-indigo-500 text-white text-center rounded-2xl shadow-md px-5 py-1 w-full",
+                        "bg-sky-700 text-white text-center rounded-2xl shadow-md px-5 py-1 w-full",
                       on: { click: _vm.submitModal },
                     },
                     [
@@ -13755,7 +13755,7 @@ var render = function () {
                     "button",
                     {
                       staticClass:
-                        "bg-indigo-500 text-white text-center rounded-2xl shadow-md px-5 py-1 w-full",
+                        "bg-sky-700 text-white text-center rounded-2xl shadow-md px-5 py-1 w-full",
                       on: { click: _vm.submitModal },
                     },
                     [
@@ -20364,7 +20364,7 @@ var staticRenderFns = [
         [
           _c("input", {
             staticClass:
-              "block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer\n                              file:mr-4 file:py-2 file:px-4\n                              file:rounded-full file:border-0\n                              file:text-sm file:font-semibold\n                              file:bg-violet-50 file:text-violet-700\n                              hover:file:bg-violet-100\n                            ",
+              "block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer\n                              file:mr-4 file:py-2 file:px-4\n                              file:rounded-full file:border-0\n                              file:text-sm file:font-semibold\n                              file:bg-blue-50 file:text-blue-700\n                              hover:file:bg-blue-100\n                            ",
             attrs: { type: "file", name: "fileupload", id: "fileupload" },
           }),
         ]
@@ -20546,7 +20546,7 @@ var staticRenderFns = [
         [
           _c("input", {
             staticClass:
-              "block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer\n                              file:mr-4 file:py-2 file:px-4\n                              file:rounded-full file:border-0\n                              file:text-sm file:font-semibold\n                              file:bg-violet-50 file:text-violet-700\n                              hover:file:bg-violet-100\n                            ",
+              "block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer\n                              file:mr-4 file:py-2 file:px-4\n                              file:rounded-full file:border-0\n                              file:text-sm file:font-semibold\n                              file:bg-blue-50 file:text-blue-700\n                              hover:file:bg-blue-100\n                            ",
             attrs: { type: "file", name: "fileupload", id: "fileupload" },
           }),
         ]
@@ -21678,7 +21678,7 @@ var staticRenderFns = [
         [
           _c("input", {
             staticClass:
-              "block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer\n                              file:mr-4 file:py-2 file:px-4\n                              file:rounded-full file:border-0\n                              file:text-sm file:font-semibold\n                              file:bg-violet-50 file:text-violet-700\n                              hover:file:bg-violet-100\n                            ",
+              "block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer\n                              file:mr-4 file:py-2 file:px-4\n                              file:rounded-full file:border-0\n                              file:text-sm file:font-semibold\n                              file:bg-blue-50 file:text-blue-700\n                              hover:file:bg-blue-100\n                            ",
             attrs: { type: "file", name: "fileupload", id: "fileupload" },
           }),
         ]
@@ -22309,7 +22309,7 @@ var staticRenderFns = [
         [
           _c("input", {
             staticClass:
-              "block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer\n                              file:mr-4 file:py-2 file:px-4\n                              file:rounded-full file:border-0\n                              file:text-sm file:font-semibold\n                              file:bg-violet-50 file:text-violet-700\n                              hover:file:bg-violet-100\n                            ",
+              "block w-full h-full text-sm p-5 text-center text-slate-500 cursor-pointer\n                              file:mr-4 file:py-2 file:px-4\n                              file:rounded-full file:border-0\n                              file:text-sm file:font-semibold\n                              file:bg-blue-50 file:text-blue-700\n                              hover:file:bg-blue-100\n                            ",
             attrs: { type: "file", name: "fileupload", id: "fileupload" },
           }),
         ]

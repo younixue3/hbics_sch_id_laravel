@@ -33,7 +33,7 @@
                             <td class="py-1 w-[30rem]">{{$value->pesan}}</td>
                             <td class="py-1 uppercase">{{$value->area}}</td>
                             <td class="py-1 uppercase">{{$value->connection}}</td>
-                            <td class="py-1">
+                            <td class="py-1 pr-3">
                                 <button-show-component img="{{asset('Upload/foto_komunitas/'. $value->picture)}}"
                                                        user="{{route('dashboard.komunitas.show', $value->id)}}"
                                                        delete_req="{{route('dashboard.komunitas.destroy', $value->id)}}"
@@ -78,8 +78,8 @@
                                   file:mr-4 file:py-2 file:px-4
                                   file:rounded-full file:border-0
                                   file:text-sm file:font-semibold
-                                  file:bg-violet-50 file:text-violet-700
-                                  hover:file:bg-violet-100
+                                  file:bg-blue-50 file:text-blue-700
+                                  hover:file:bg-blue-100
                                 "/>
             </div>
         </div>
