@@ -7931,13 +7931,13 @@ __webpack_require__.r(__webpack_exports__);
 
       if (event.target.value === 'draft') {
         this.color = 'bg-yellow-400';
-        this.status = 'Draft';
+        this.status = 'Editorial Checking';
       } else if (event.target.value === 'reject') {
         this.color = 'bg-red-400';
-        this.status = 'Reject';
+        this.status = 'Cancelled';
       } else if (event.target.value === 'publish') {
         this.color = 'bg-green-400';
-        this.status = 'Publish';
+        this.status = 'Published';
       }
     }
   }
@@ -23439,11 +23439,13 @@ var render = function () {
           _vm._v("-- Pilih Status --"),
         ]),
         _vm._v(" "),
-        _c("option", { attrs: { value: "draft" } }, [_vm._v("Draft")]),
+        _c("option", { attrs: { value: "draft" } }, [
+          _vm._v("Editorial Checking"),
+        ]),
         _vm._v(" "),
-        _c("option", { attrs: { value: "reject" } }, [_vm._v("Reject")]),
+        _c("option", { attrs: { value: "reject" } }, [_vm._v("Cancelled")]),
         _vm._v(" "),
-        _c("option", { attrs: { value: "publish" } }, [_vm._v("Publish")]),
+        _c("option", { attrs: { value: "publish" } }, [_vm._v("Published")]),
       ]
     ),
     _vm._v(" "),

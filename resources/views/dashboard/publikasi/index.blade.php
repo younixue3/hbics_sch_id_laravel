@@ -53,25 +53,25 @@
                                 @if($value->status === 'publish')
                                     <span
                                         class="bg-green-500 hover:bg-green-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
-                                        {{$value->status}}
+                                        published
                                     </span>
                                 @elseif($value->status === 'reject')
                                     <span
                                         class="bg-red-500 hover:bg-red-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
-                                        {{$value->status}}
+                                        cancelled
                                     </span>
                                 @elseif($value->status === 'draft')
                                     <span
                                         class="bg-yellow-500 hover:bg-yellow-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
-                                        {{$value->status}}
+                                        editorial checking
                                     </span>
                                 @endif
                             </td>
-                            <td class="py-1 text-sm text-gray-500">
+                            <td class="py-1 text-xs text-gray-500">
                                 {{\Carbon\Carbon::parse($value->created_at)->format('d M Y')}}
                             </td>
                             <td class="py-1">
-                                <div class="flex items-center text-sm text-gray-500">
+                                <div class="flex items-center text-xs text-gray-500">
                                     @if($value->users_update() != null)
                                         <span>{{\Carbon\Carbon::parse($value->users_update()->updated_at)->setTimezone('Asia/Kuala_Lumpur')->format('d M Y - h:i:s')}}</span>
                                         (
