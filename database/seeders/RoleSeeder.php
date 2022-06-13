@@ -18,8 +18,8 @@ class RoleSeeder extends Seeder
     {
         DB::table('roles')->insert([
             ['name' => 'Author'],
-            ['name' => 'Quality Assurance'],
-            ['name' => 'Manager']
+            ['name' => 'Editor'],
+            ['name' => 'Approval']
         ]);
     }
 }

@@ -10,6 +10,7 @@
                 <table class="table-auto w-full text-center">
                     <thead class="bg-gray-100">
                     <tr>
+                        <th class="py-1">No</th>
                         <th class="py-1">Title</th>
                         <th class="py-1">Author</th>
                         <th class="py-1">Category</th>
@@ -24,7 +25,8 @@
                         {{--                        {{$value->users_update()->staff()}}--}}
                         {{--                        {{dd($value->user_update()->staff())}}--}}
                         <tr class="hover:bg-blue-50 transition-all duration-200">
-                            <td class="py-1 pl-4">
+                            <td class="py-1">{{$value->id}}</td>
+                            <td class="py-1">
                                 <div class="flex items-center">
                                     <div class="text-left my-auto">
                                         {{$value->title}}

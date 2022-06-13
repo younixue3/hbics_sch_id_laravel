@@ -8,6 +8,7 @@
                 <table class="table-auto w-full text-center">
                     <thead class="bg-gray-100">
                     <tr>
+                        <th class="py-1">No</th>
                         <th class="py-1">Name</th>
                         <th class="py-1">Area</th>
                         <th class="py-1 w-96">Profesi</th>
@@ -17,6 +18,7 @@
                     <tbody class="bg-white divide-y-2 divide-gray-200">
                     @forelse($teacherstaff as $key => $value)
                         <tr class="hover:bg-blue-50 transition-all duration-200">
+                            <td class="py-1">{{$value->id}}</td>
                             <td class="py-1 pl-4">
                                 <div class="flex items-center">
                                     <img class="h-8 w-8 mr-2 rounded-xl object-cover"
