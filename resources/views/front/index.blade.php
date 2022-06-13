@@ -47,13 +47,27 @@
                         <h1 class="text-3xl md:text-5xl font-bold uppercase">Prestasi Kami</h1>
                     </div>
                     <div
-                        class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-0 z-10">
+                        class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-32 z-10">
                         @forelse($prestasi as $key => $value)
-                            <content-card-component insight="{{++$key}}"
-                                                    item="{{$value}}"
-                                                    author="{{$value->users_create()->user()}}"
-                                                    author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
-                                                    urlshow="{{route('publikasi.show', $value->randKey)}}"></content-card-component>
+                            @if($prestasi->count() === 2)
+                                <content-card-component insight="1"
+                                                        item="{{$value}}"
+                                                        author="{{$value->users_create()->user()}}"
+                                                        author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
+                                                        urlshow="{{route('acara.show', $value->randKey)}}"></content-card-component>
+                            @elseif($prestasi->count() === 3)
+                                <content-card-component insight="{{++$key === 3 ? 2 : $key}}"
+                                                        item="{{$value}}"
+                                                        author="{{$value->users_create()->user()}}"
+                                                        author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
+                                                        urlshow="{{route('acara.show', $value->randKey)}}"></content-card-component>
+                            @else
+                                <content-card-component insight="{{++$key}}"
+                                                        item="{{$value}}"
+                                                        author="{{$value->users_create()->user()}}"
+                                                        author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
+                                                        urlshow="{{route('acara.show', $value->randKey)}}"></content-card-component>
+                            @endif
                         @empty
                             Data kosong
                         @endforelse
@@ -71,16 +85,30 @@
                         <h1 class="text-3xl md:text-5xl font-bold uppercase">Alumni Harapan Bangsa</h1>
                     </div>
                     <div
-                        class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-0 z-10">
+                        class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-32 z-10">
                         @php
                             $urut = 3;
                         @endphp
                         @forelse($prestasi as $key => $value)
-                            <content-card-component insight="{{ --$urut }}"
-                                                    item="{{$value}}"
-                                                    author="{{$value->users_create()->user()}}"
-                                                    author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
-                                                    urlshow="{{route('publikasi.show', $value->randKey)}}"></content-card-component>
+                            @if($prestasi->count() === 2)
+                                <content-card-component insight="3"
+                                                        item="{{$value}}"
+                                                        author="{{$value->users_create()->user()}}"
+                                                        author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
+                                                        urlshow="{{route('acara.show', $value->randKey)}}"></content-card-component>
+                            @elseif($prestasi->count() === 3)
+                                <content-card-component insight="{{ --$urut === 0 ? 2 : $urut}}"
+                                                        item="{{$value}}"
+                                                        author="{{$value->users_create()->user()}}"
+                                                        author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
+                                                        urlshow="{{route('acara.show', $value->randKey)}}"></content-card-component>
+                            @else
+                                <content-card-component insight="{{ --$urut }}"
+                                                        item="{{$value}}"
+                                                        author="{{$value->users_create()->user()}}"
+                                                        author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
+                                                        urlshow="{{route('acara.show', $value->randKey)}}"></content-card-component>
+                            @endif
                         @empty
                             Data kosong
                         @endforelse

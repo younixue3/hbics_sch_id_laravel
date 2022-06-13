@@ -64,11 +64,25 @@
                             $urut = 3;
                         @endphp
                         @forelse($content as $key => $value)
-                            <content-card-component insight="{{ --$urut }}"
-                                                    item="{{$value}}"
-                                                    author="{{$value->users_create()->user()}}"
-                                                    author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
-                                                    urlshow="{{route('publikasi.show', $value->randKey)}}"></content-card-component>
+                            @if($content->count() === 2)
+                                <content-card-component insight="3"
+                                                        item="{{$value}}"
+                                                        author="{{$value->users_create()->user()}}"
+                                                        author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
+                                                        urlshow="{{route('acara.show', $value->randKey)}}"></content-card-component>
+                            @elseif($content->count() === 3)
+                                <content-card-component insight="{{ --$urut === 0 ? 2 : $urut}}"
+                                                        item="{{$value}}"
+                                                        author="{{$value->users_create()->user()}}"
+                                                        author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
+                                                        urlshow="{{route('acara.show', $value->randKey)}}"></content-card-component>
+                            @else
+                                <content-card-component insight="{{ --$urut }}"
+                                                        item="{{$value}}"
+                                                        author="{{$value->users_create()->user()}}"
+                                                        author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
+                                                        urlshow="{{route('acara.show', $value->randKey)}}"></content-card-component>
+                            @endif
                         @empty
                             Data kosong
                         @endforelse
