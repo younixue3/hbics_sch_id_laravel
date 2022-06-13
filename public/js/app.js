@@ -7995,6 +7995,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "EventWorkspaceOutput",
@@ -23598,16 +23599,13 @@ var render = function () {
               }),
             ]),
             _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass:
-                  "w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold",
-                attrs: { type: "submit" },
-                on: { click: _vm.openModalAdd },
+            _c("a", {
+              staticClass:
+                "w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold",
+              attrs: {
+                href: _vm.$store.state.workspace.items[_vm.index].content.url,
               },
-              [_vm._v("Register")]
-            ),
+            }),
           ]),
         ]),
         _vm._v(" "),

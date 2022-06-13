@@ -22,7 +22,8 @@
                                                                     v-model="$store.state.workspace.items[index].content.time_end">
                     </div>
 <!--                    <form :action="urlregister">-->
-                        <button @click="openModalAdd" type="submit" class="w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold">Register</button>
+                        <a :href="$store.state.workspace.items[index].content.url" class="w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold"></a>
+<!--                        <button @click="openModalAdd" type="submit" class="w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold">Register</button>-->
 <!--                    </form>-->
                 </div>
             </div>
