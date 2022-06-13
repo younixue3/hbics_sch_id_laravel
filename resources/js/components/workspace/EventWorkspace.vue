@@ -9,7 +9,7 @@
                         <div class="justify-center border-2 border-gray-300 border-dashed rounded-xl h-full"
                              :class="this.$store.state.workspace.items[index].content.foto != null ? 'opacity-0 hover:opacity-100 text-white ' : ''">
                             <input type="file" :name="'inputFile'+indexfile" id="fileupload" @change="previewImage"
-                                   :class="this.$store.state.workspace.items[index].content.foto != null ? 'file:bg-violet-50 file:text-violet-700 text-white' : 'file:bg-violet-700 file:text-violet-50'"
+                                   :class="this.$store.state.workspace.items[index].content.foto != null ? 'file:bg-blue-50 file:text-blue-700 text-white' : 'file:bg-blue-700 file:text-blue-50'"
                                    class="block m-auto text-sm p-5 text-center h-full text-slate-500 cursor-pointer
                                   file:py-2 file:px-4
                                   file:rounded-full file:border-0

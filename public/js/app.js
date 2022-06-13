@@ -3077,9 +3077,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -14036,12 +14033,12 @@ var render = function () {
         })
       }),
       _vm._v(" "),
-      _c("span", { staticClass: "flex group" }, [
+      _c("span", { staticClass: "flex py-5" }, [
         _c(
           "div",
           {
             staticClass:
-              "grid grid-cols-6 gap-5 w-0 scale-0 group-hover:w-max group-hover:scale-100 transition-all ease-in-out overflow-hidden",
+              "grid grid-cols-6 gap-5 transition-all ease-in-out overflow-hidden",
           },
           [
             _c(
@@ -14135,8 +14132,6 @@ var render = function () {
             ),
           ]
         ),
-        _vm._v(" "),
-        _vm._m(5),
       ]),
       _vm._v(" "),
       _vm._t("default"),
@@ -14183,11 +14178,14 @@ var render = function () {
         },
       }),
       _vm._v(" "),
-      _c("input", {
-        staticClass: "bg-green-500 my-1 rounded-lg text-xl text-white",
-        attrs: { type: "submit" },
-        on: { mouseover: _vm.transferData },
-      }),
+      _c("div", { staticClass: "flex" }, [
+        _c("input", {
+          staticClass:
+            "bg-sky-700 my-1 py-1.5 px-8 rounded-lg text-xl text-white m-auto mr-0 cursor-pointer",
+          attrs: { type: "submit" },
+          on: { mouseover: _vm.transferData },
+        }),
+      ]),
     ],
     2
   )
@@ -14224,23 +14222,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [_c("i", { staticClass: "fas fa-star" })])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "bg-green-400 w-10 h-10 text-center rounded-md text-xl group-hover:hidden flex",
-      },
-      [
-        _c("div", { staticClass: "m-auto" }, [
-          _c("i", { staticClass: "m-auto fa-solid fa-angle-right" }),
-        ]),
-      ]
-    )
   },
 ]
 render._withStripped = true
@@ -18586,9 +18567,10 @@ var render = function () {
           return _c(
             "button",
             {
-              staticClass: "rounded-md transition-all ease-in-out text-white",
+              staticClass:
+                "rounded-md transition-all ease-in-out text-white py-1.5 font-bold uppercase",
               class: item.status
-                ? "bg-red-500 hover:bg-red-400"
+                ? "bg-amber-500 hover:bg-amber-400"
                 : "bg-blue-500 hover:bg-blue-400",
               attrs: { disabled: _vm.disabled, type: "button" },
               on: {
@@ -18606,9 +18588,9 @@ var render = function () {
             "button",
             {
               staticClass:
-                "takedata rounded-md transition-all ease-in-out text-white",
+                "takedata rounded-md transition-all ease-in-out text-white py-1.5 font-bold uppercase",
               class: item.status
-                ? "bg-red-500 hover:bg-red-400"
+                ? "bg-amber-500 hover:bg-amber-400"
                 : "bg-blue-500 hover:bg-blue-400",
               attrs: { disabled: _vm.disabled, type: "button" },
               on: {
@@ -22583,8 +22565,8 @@ var render = function () {
                   class:
                     this.$store.state.workspace.items[_vm.index].content.foto !=
                     null
-                      ? "file:bg-violet-50 file:text-violet-700 text-white"
-                      : "file:bg-violet-700 file:text-violet-50",
+                      ? "file:bg-blue-50 file:text-blue-700 text-white"
+                      : "file:bg-blue-700 file:text-blue-50",
                   attrs: {
                     type: "file",
                     name: "inputFile" + _vm.indexfile,
@@ -22993,7 +22975,7 @@ var render = function () {
         on: { dblclick: _vm.inputOn },
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "flex" }, [
+      _c("div", { staticClass: "flex mt-3" }, [
         _c("label", [_vm._v("Alt Image Text : ")]),
         _vm._v(" "),
         _c("input", {

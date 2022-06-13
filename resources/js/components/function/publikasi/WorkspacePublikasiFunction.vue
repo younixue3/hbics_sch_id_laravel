@@ -7,9 +7,9 @@
                               v-bind:content="item.content" v-bind:index="index" v-bind:urlasset="urlasset"
                               v-bind:editmode="editmode">
         </item-render-function>
-        <span class="flex group">
+        <span class="flex py-5">
             <div
-                class="grid grid-cols-6 gap-5 w-0 scale-0 group-hover:w-max group-hover:scale-100 transition-all ease-in-out overflow-hidden">
+                class="grid grid-cols-6 gap-5 transition-all ease-in-out overflow-hidden">
                 <div class="cursor-pointer text-center bg-amber-400 w-32 rounded-md transition-all ease-in-out"
                      @click="bindDataItems('paragraph')">
                     <div>
@@ -42,18 +42,15 @@
                     <div class="text-sm">event</div>
                 </div>
             </div>
-            <div class="bg-green-400 w-10 h-10 text-center rounded-md text-xl group-hover:hidden flex">
-                <div class="m-auto">
-                    <i class="m-auto fa-solid fa-angle-right"></i>
-                </div>
-            </div>
         </span>
         <slot>
 
         </slot>
         <input type="hidden" name="item" v-model="jsonstring">
         <input type="hidden" name="totalfile" v-model="$store.state.file">
-        <input class="bg-green-500 my-1 rounded-lg text-xl text-white" @mouseover="transferData" type="submit">
+        <div class="flex">
+            <input class="bg-sky-700 my-1 py-1.5 px-8 rounded-lg text-xl text-white m-auto mr-0 cursor-pointer" @mouseover="transferData" type="submit">
+        </div>
     </form>
 </template>
 

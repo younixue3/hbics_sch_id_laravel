@@ -6,13 +6,13 @@
         </label>
         <div class="rounded-md border p-2 grid grid-cols-3 gap-2">
             <button :disabled="disabled" type="button" @click="selectOption(index)"
-                    class="rounded-md transition-all ease-in-out text-white"
-                    :class="item.status ? 'bg-red-500 hover:bg-red-400' : 'bg-blue-500 hover:bg-blue-400'" v-if=""
+                    class="rounded-md transition-all ease-in-out text-white py-1.5 font-bold uppercase"
+                    :class="item.status ? 'bg-amber-500 hover:bg-amber-400' : 'bg-blue-500 hover:bg-blue-400'" v-if=""
                     v-for="(item, index) in arrValOption">{{ item.name }}
             </button>
             <button :disabled="disabled" type="button" @click="selectOption(index)"
-                    class="takedata rounded-md transition-all ease-in-out text-white"
-                    :class="item.status ? 'bg-red-500 hover:bg-red-400' : 'bg-blue-500 hover:bg-blue-400'" v-if=""
+                    class="takedata rounded-md transition-all ease-in-out text-white py-1.5 font-bold uppercase"
+                    :class="item.status ? 'bg-amber-500 hover:bg-amber-400' : 'bg-blue-500 hover:bg-blue-400'" v-if=""
                     v-for="(item, index) in this.storeurl">{{ item.name }}
             </button>
         </div>

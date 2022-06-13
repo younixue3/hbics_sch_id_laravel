@@ -21,7 +21,7 @@
         <div class="p-5">
             <img ref="previewimg" class="w-full object-cover rounded-3xl" :alt="this.$store.state.workspace.items[index].content.alt"
                  :class="inputMode === false ? 'h-96' : 'h-32 border border-black'" @dblclick="inputOn">
-            <div class="flex">
+            <div class="flex mt-3">
                 <label>Alt Image Text : </label>
                 <input class="ml-2 rounded-md px-2 border focus:border-sky-500 outline-none" type="text" name="alt" v-model="$store.state.workspace.items[index].content.alt">
             </div>
