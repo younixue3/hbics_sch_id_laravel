@@ -4843,7 +4843,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       if (this.slider === 4) {
-        this.slider = 1;
+        this.slider = 0;
         setTimeout(function () {
           return _this2.sliderContent = _this2.heroContent[_this2.slider];
         }, 200);
@@ -4991,7 +4991,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       if (this.slider === 4) {
-        this.slider = 1;
+        this.slider = 0;
         setTimeout(function () {
           return _this.sliderContent = _this.heroContent[_this.slider];
         }, 200);

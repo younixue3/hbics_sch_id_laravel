@@ -68,7 +68,7 @@ export default {
     methods: {
         countSlider: function () {
             if (this.slider === 4) {
-                this.slider = 1;
+                this.slider = 0;
                 setTimeout(() => this.sliderContent = this.heroContent[this.slider], 200);
             } else {
                 this.slider++;
