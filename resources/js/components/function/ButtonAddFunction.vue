@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="openModalAdd" class="bg-green-400 rounded-lg w-20 px-3 flex justify-between text-center"><span>Add</span><i
+        <button @click="openModalAdd" class="bg-sky-800 text-white rounded-lg w-20 px-3 flex justify-between text-center"><span>Add</span><i
             class="fa-solid fa-plus my-auto"></i></button>
     </div>
 </template>

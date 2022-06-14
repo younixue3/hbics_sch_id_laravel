@@ -4,7 +4,7 @@
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
         <div class="md:col-span-3 bg-gray-100 shadow-md text-gray-800 rounded-xl flex">
             <div class="w-1/3 text-4xl p-5">
-                <i class="bg-purple-500 text-white rounded-full px-5 py-4 fas fa-newspaper"></i>
+                <i class="bg-sky-800 text-white rounded-full px-5 py-4 fas fa-newspaper"></i>
             </div>
             <div class="w-2/3 ml-10 my-auto">
                 <span class="text-4xl">{{$article->count()}}</span>
@@ -13,7 +13,7 @@
         </div>
         <div class="md:col-span-3 bg-gray-100 shadow-md text-gray-800 rounded-xl flex">
             <div class="w-1/3 text-4xl p-5">
-                <i class="bg-green-500 text-white rounded-full px-3 py-4 fas fa-users"></i>
+                <i class="bg-orange-300 text-white rounded-full px-3 py-4 fas fa-users"></i>
             </div>
             <div class="w-2/3 ml-10 my-auto">
                 <span class="text-4xl">{{$users->count()}}</span>

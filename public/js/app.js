@@ -4070,6 +4070,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -13397,7 +13399,7 @@ var render = function () {
       "button",
       {
         staticClass:
-          "bg-green-400 rounded-lg w-20 px-3 flex justify-between text-center",
+          "bg-sky-800 text-white rounded-lg w-20 px-3 flex justify-between text-center",
         on: { click: _vm.openModalAdd },
       },
       [
@@ -14298,8 +14300,8 @@ var render = function () {
                   : _vm.livepath === "/" ||
                     _vm.livepath === "/alumni" ||
                     _vm.livepath === "/orang-tua"
-                  ? "bg-transparent h-44"
-                  : "bg-blue-900 h-44",
+                  ? "bg-transparent h-32 md:h-44"
+                  : "bg-blue-900 h-32 md:h-44",
               ],
             },
             [
@@ -15354,7 +15356,7 @@ var render = function () {
                     "a",
                     {
                       staticClass:
-                        "cursor-pointer hover:border-2 hover:border-white uppercase p-2 transition-all ease-in-out duration-300",
+                        "hidden lg:block cursor-pointer hover:border-2 hover:border-white uppercase p-2 transition-all ease-in-out duration-300",
                       attrs: { href: _vm.dataurl["dashboard"] },
                     },
                     [
@@ -16115,7 +16117,72 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _vm._m(21),
+            _c("div", { staticClass: "py-6 px-5 space-y-6" }, [
+              _c("div", { staticClass: "grid grid-cols-2 gap-y-4 gap-x-8" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "text-base text-gray-900 hover:text-gray-700",
+                    attrs: { href: _vm.dataurl["tentang-kami"] },
+                  },
+                  [
+                    _vm._v(
+                      "\n                        Tentang Kami\n                    "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "text-base text-gray-900 hover:text-gray-700",
+                    attrs: { href: _vm.dataurl["hubungi-kami"] },
+                  },
+                  [
+                    _vm._v(
+                      "\n                        Hubungi Kami\n                    "
+                    ),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "grid grid-cols-1 gap-y-2" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "w-full flex items-center justify-center px-4 py-1 border border-transparent rounded-md shadow-sm text-base border border-sky-600 text-sky-600 bg-white",
+                    attrs: {
+                      href: "https://www.office.com/",
+                      target: "_blank",
+                    },
+                  },
+                  [
+                    _vm._v(
+                      "\n                        Office 365\n                    "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "w-full flex items-center justify-center px-4 py-1 border border-transparent rounded-md shadow-sm text-base text-white bg-indigo-600 hover:bg-indigo-700",
+                    attrs: { href: _vm.dataurl["dashboard"] },
+                  },
+                  [
+                    _vm._v(
+                      "\n                        " +
+                        _vm._s(
+                          _vm.authstatus !== "" ? "Dashboard" : "Sign In"
+                        ) +
+                        "\n                    "
+                    ),
+                  ]
+                ),
+              ]),
+            ]),
           ]
         ),
       ]
@@ -17000,62 +17067,6 @@ var staticRenderFns = [
               ]
             ),
           ]
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "py-6 px-5 space-y-6" }, [
-      _c("div", { staticClass: "grid grid-cols-2 gap-y-4 gap-x-8" }, [
-        _c(
-          "a",
-          {
-            staticClass: "text-base text-gray-900 hover:text-gray-700",
-            attrs: { href: "#" },
-          },
-          [
-            _vm._v(
-              "\n                        Tentang Kami\n                    "
-            ),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "text-base text-gray-900 hover:text-gray-700",
-            attrs: { href: "#" },
-          },
-          [
-            _vm._v(
-              "\n                        Hubungi Kami\n                    "
-            ),
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass:
-              "col-span-2 text-base font-semibold text-center text-sky-600 hover:text-gray-700 after:content-['_↗']",
-            attrs: { href: "https://www.office.com/", target: "_blank" },
-          },
-          [_vm._v("\n                        Login 365\n                    ")]
-        ),
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c(
-          "a",
-          {
-            staticClass:
-              "w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base text-white bg-indigo-600 hover:bg-indigo-700",
-            attrs: { href: "#" },
-          },
-          [_vm._v("\n                        Log In\n                    ")]
         ),
       ]),
     ])
@@ -23599,13 +23610,17 @@ var render = function () {
               }),
             ]),
             _vm._v(" "),
-            _c("a", {
-              staticClass:
-                "w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold",
-              attrs: {
-                href: _vm.$store.state.workspace.items[_vm.index].content.url,
+            _c(
+              "a",
+              {
+                staticClass:
+                  "w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold",
+                attrs: {
+                  href: _vm.$store.state.workspace.items[_vm.index].content.url,
+                },
               },
-            }),
+              [_vm._v("Open Meeting")]
+            ),
           ]),
         ]),
         _vm._v(" "),

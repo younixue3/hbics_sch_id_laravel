@@ -4,7 +4,7 @@
                 id="navBar">
             <div>
                 <div
-                    :class="[show ? 'bg-blue-900 h-20' : livepath === '/' || livepath === '/alumni' || livepath === '/orang-tua' ? 'bg-transparent h-44' : 'bg-blue-900 h-44']"
+                    :class="[show ? 'bg-blue-900 h-20' : livepath === '/' || livepath === '/alumni' || livepath === '/orang-tua' ? 'bg-transparent h-32 md:h-44' : 'bg-blue-900 h-32 md:h-44']"
                     class="transition-all ease-in-out duration-300">
                     <div class="pt-2 grid grid-cols-11 place-items-center content-center text-center text-white px-5">
                         <div class="text-sm font-light">
@@ -604,7 +604,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="cursor-pointer hover:border-2 hover:border-white uppercase p-2 transition-all ease-in-out duration-300" :href="dataurl['dashboard']">
+                        <a class="hidden lg:block cursor-pointer hover:border-2 hover:border-white uppercase p-2 transition-all ease-in-out duration-300" :href="dataurl['dashboard']">
                             <div class="flex">
                                 <i :class="authstatus !== '' ? 'fa-columns text-2xl' : 'fa-id-badge text-3xl'" class="fa-solid fa-id-badge h-9 pt-1 text-center"></i><div class="m-auto ml-2 h-5 text-base m-auto text-center">
                                 {{ authstatus !== '' ? 'Dashboard' : 'Sign In' }}</div>
@@ -809,23 +809,25 @@
                 </div>
                 <div class="py-6 px-5 space-y-6">
                     <div class="grid grid-cols-2 gap-y-4 gap-x-8">
-                        <a href="#" class="text-base text-gray-900 hover:text-gray-700">
+                        <a :href="dataurl['tentang-kami']" class="text-base text-gray-900 hover:text-gray-700">
                             Tentang Kami
                         </a>
 
-                        <a href="#" class="text-base text-gray-900 hover:text-gray-700">
+                        <a :href="dataurl['hubungi-kami']" class="text-base text-gray-900 hover:text-gray-700">
                             Hubungi Kami
                         </a>
 
-                        <a href="https://www.office.com/" target="_blank"
-                           class="col-span-2 text-base font-semibold text-center text-sky-600 hover:text-gray-700 after:content-['_↗']">
-                            Login 365
-                        </a>
                     </div>
-                    <div>
-                        <a href="#"
-                           class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base text-white bg-indigo-600 hover:bg-indigo-700">
-                            Log In
+                    <div class="grid grid-cols-1 gap-y-2">
+
+                        <a href="https://www.office.com/" target="_blank"
+                           class="w-full flex items-center justify-center px-4 py-1 border border-transparent rounded-md shadow-sm text-base border border-sky-600 text-sky-600 bg-white">
+                            Office 365
+                        </a>
+
+                        <a :href="dataurl['dashboard']"
+                           class="w-full flex items-center justify-center px-4 py-1 border border-transparent rounded-md shadow-sm text-base text-white bg-indigo-600 hover:bg-indigo-700">
+                            {{ authstatus !== '' ? 'Dashboard' : 'Sign In' }}
                         </a>
                     </div>
                 </div>
