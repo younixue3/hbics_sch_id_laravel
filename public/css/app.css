@@ -3215,6 +3215,10 @@ h6{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
+  .md\:px-40{
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
   .md\:pl-10{
     padding-left: 2.5rem;
   }

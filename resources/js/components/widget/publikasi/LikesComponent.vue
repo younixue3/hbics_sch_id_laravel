@@ -1,7 +1,7 @@
 <template>
-    <div class="px-40 mb-20">
+    <div class="px-5 md:px-40 mb-20">
         <div class="bg-white rounded-xl shadow-lg p-2 mb-10">
-            <div class="grid grid-cols-6 gap-2 text-3xl text-center">
+            <div class="grid grid-cols-6 gap-2 text-xl md:text-3xl text-center">
                 <button :class="get_likes_data.live_like.type === 'favorite' ? 'bg-blue-500 text-white' : ''" @click="likes('favorite')" class="hover:bg-blue-50 py-2 px-2 rounded-lg transition-all ease-in-out duration-300 active:bg-blue-200 active:bg-blue-500 active:text-white"><i class="fa-solid fa-face-grin-hearts"></i></button>
                 <button :class="get_likes_data.live_like.type === 'like' ? 'bg-blue-500 text-white' : ''" @click="likes('like')" class="hover:bg-blue-50 py-2 px-2 rounded-lg transition-all ease-in-out duration-300 active:bg-blue-200 active:bg-blue-500 active:text-white"><i class="fa-solid fa-thumbs-up"></i></button>
                 <button :class="get_likes_data.live_like.type === 'sad' ? 'bg-blue-500 text-white' : ''" @click="likes('sad')" class="hover:bg-blue-50 py-2 px-2 rounded-lg transition-all ease-in-out duration-300 active:bg-blue-200 active:bg-blue-500 active:text-white"><i class="fa-solid fa-face-sad-tear"></i></button>

@@ -1,9 +1,9 @@
 <template>
     <div class="p-3">
         <div class="bg-white p-5 rounded-xl shadow-xl grid grid-cols-3 gap-5">
-            <div class="col-span-1 grid grid-cols-1 gap-3">
+            <div class="col-span-3 md:col-span-1 grid grid-cols-1 gap-3">
                 <div class="flex relative h-60">
-                    <img ref="previewimg" class="object-cover h-full rounded-xl"
+                    <img ref="previewimg" class="object-cover h-full rounded-xl m-auto"
                          :src="this.urlasset + '/' + this.$store.state.workspace.items[this.$props.index].content.foto">
                 </div>
                 <div class="">
@@ -22,12 +22,12 @@
                                                                     v-model="$store.state.workspace.items[index].content.time_end">
                     </div>
 <!--                    <form :action="urlregister">-->
-                        <a :href="$store.state.workspace.items[index].content.url" class="w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold">Open Meeting</a>
+                        <a :href="$store.state.workspace.items[index].content.url"><button class="w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold">Open Link</button></a>
 <!--                        <button @click="openModalAdd" type="submit" class="w-full px-3 my-3 py-1 bg-amber-500 hover:bg-amber-400 rounded-xl text-white font-bold">Register</button>-->
 <!--                    </form>-->
                 </div>
             </div>
-            <div class="col-span-2 grid grid-rows-3">
+            <div class="col-span-3 md:col-span-2 grid grid-rows-3">
                 <div class="row-span-2">
                     <h1 class="text-3xl">{{ $store.state.workspace.items[index].content.title }}</h1>
                     <div v-html="$store.state.workspace.items[index].content.description">
