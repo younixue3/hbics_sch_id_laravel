@@ -18419,32 +18419,44 @@ var render = function () {
           ],
         },
         [
-          _c("button", {
-            staticClass: "ml-1.5 w-3 h-3 bg-red-500 rounded-full",
-            on: {
-              click: function ($event) {
-                return _vm.closeit()
+          _c(
+            "button",
+            {
+              staticClass: "ml-1.5 w-3 h-3",
+              on: {
+                click: function ($event) {
+                  return _vm.closeit()
+                },
               },
             },
-          }),
+            [_c("i", { staticClass: "text-sm fas fa-times" })]
+          ),
           _vm._v(" "),
-          _c("button", {
-            staticClass: "w-3 h-3 bg-amber-500 rounded-full",
-            on: {
-              click: function ($event) {
-                return _vm.maximise()
+          _c(
+            "button",
+            {
+              staticClass: "mx-0.5 w-3 h-3",
+              on: {
+                click: function ($event) {
+                  return _vm.maximise()
+                },
               },
             },
-          }),
+            [_c("i", { staticClass: "text-xs fas fa-window-minimize" })]
+          ),
           _vm._v(" "),
-          _c("button", {
-            staticClass: "w-3 h-3 bg-green-500 rounded-full",
-            on: {
-              click: function ($event) {
-                return _vm.minimise()
+          _c(
+            "button",
+            {
+              staticClass: "mx-0.5 w-3 h-3",
+              on: {
+                click: function ($event) {
+                  return _vm.minimise()
+                },
               },
             },
-          }),
+            [_c("i", { staticClass: "text-xs fas fa-window-maximize" })]
+          ),
           _vm._v("\n    " + _vm._s(_vm.cardsname) + "\n    "),
           _c(
             "div",
