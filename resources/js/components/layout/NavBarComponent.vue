@@ -237,7 +237,7 @@
                                                         class="fas fa-user-graduate text-xs mr-3"></i>Alumni</a>
                                                     <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
                                                        :href="dataurl['prestasi']"><i
-                                                        class="fas fa-medal text-xs mr-3"></i>Pretasi</a>
+                                                        class="fas fa-medal text-xs mr-3"></i>Prestasi</a>
                                                     <a class="bg-clip-text text-transparent bg-gradient-to-br from-gray-700 hover:from-blue-600 to-gray-700 hover:to-sky-400 font-normal"
                                                        :href="dataurl['teacher-staff'] + '/all'"><i
                                                         class="fas fa-chalkboard-teacher text-xs mr-3"></i>Guru</a>
@@ -725,6 +725,30 @@
                                         <div class="-mb-3 mt-1.5 bg-white">
                                             <a :href="dataurl['sekolah-menengah-atas']" class="">
                                                 Sekolah Menengah Atas
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                        <div class="-mb-3 mt-1.5 bg-white">
+                                            <a :href="dataurl['alumni']" class="">
+                                                Alumni
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                        <div class="-mb-3 mt-1.5 bg-white">
+                                            <a :href="dataurl['prestasi']" class="">
+                                                Prestasi
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3">
+                                        <div class="-mb-3 mt-1.5 bg-white">
+                                            <a :href="dataurl['teacher-staff']" class="">
+                                                Guru
                                             </a>
                                         </div>
                                     </div>

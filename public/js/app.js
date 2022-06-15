@@ -4072,6 +4072,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -14812,7 +14836,7 @@ var render = function () {
                                                   staticClass:
                                                     "fas fa-medal text-xs mr-3",
                                                 }),
-                                                _vm._v("Pretasi"),
+                                                _vm._v("Prestasi"),
                                               ]
                                             ),
                                             _vm._v(" "),
@@ -15825,6 +15849,91 @@ var render = function () {
                                       [
                                         _vm._v(
                                           "\n                                            Sekolah Menengah Atas\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: _vm.dataurl["alumni"] },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Alumni\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl["prestasi"],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Prestasi\n                                        "
+                                        ),
+                                      ]
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "ml-3 mb-3 text-base border-l-2 border-b-2 font-semibold text-blue-800 pt-3 pl-3",
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "-mb-3 mt-1.5 bg-white" },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.dataurl["teacher-staff"],
+                                        },
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            Guru\n                                        "
                                         ),
                                       ]
                                     ),
