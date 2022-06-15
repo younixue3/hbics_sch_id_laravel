@@ -2,7 +2,7 @@
 @section('title', 'Berita')
 @section('content')
     <div id="hero_section" class="h-52"></div>
-    <div class="px-5 md:px-10">
+    <div class="px-5 md:px-52">
         <div
             class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-0 z-10">
             @forelse($cardberita as $key => $value)
@@ -30,7 +30,7 @@
             @endforelse
         </div>
         <div class="md:px-20 my-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
                 @forelse($berita as $key => $value)
                     <a class="md:row-span-1" href="{{route('acara.show', $value->randKey)}}">
                         @if($value->type === 'video')

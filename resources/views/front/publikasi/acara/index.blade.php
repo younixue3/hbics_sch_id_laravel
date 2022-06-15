@@ -30,7 +30,7 @@
             @endforelse
         </div>
         <div class="md:px-20 my-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
                 @forelse($acara as $key => $value)
                     <a class="md:row-span-1" href="{{route('acara.show', $value->randKey)}}">
                         @if($value->type === 'video')
