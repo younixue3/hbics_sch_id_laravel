@@ -12,7 +12,7 @@
                                             author="{{$value->users_create()->user()}}"
                                             author_pic="{{$value->users_create()->user()->foto_profile()->img}}"
                                             urlshow="{{route('acara.show', $value->randKey)}}"></content-card-component>
-                @elseif($cardacara->count() === 3)
+                @elseif($cardberita->count() === 3)
                     <content-card-component insight="{{++$key === 3 ? 2 : $key}}"
                                             item="{{$value}}"
                                             author="{{$value->users_create()->user()}}"
