@@ -6,7 +6,7 @@
         <div
             class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-0 z-10">
             @forelse($cardartikel as $key => $value)
-                @if($cardacara->count() === 2)
+                @if($cardartikel->count() === 2)
                     <content-card-component insight="1"
                                             item="{{$value}}"
                                             author="{{$value->users_create()->user()}}"
