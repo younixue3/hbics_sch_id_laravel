@@ -32,7 +32,7 @@
                                 </div>
                             </td>
                             <td class="py-1 w-96">{{$value->status}}</td>
-                            <td class="py-1 w-[30rem]">{{$value->pesan}}</td>
+                            <td class="py-1 w-[30rem] text-left">{{$value->pesan}}</td>
                             <td class="py-1 uppercase">{{$value->area}}</td>
                             <td class="py-1 uppercase">{{$value->connection}}</td>
                             <td class="py-1 pr-3">
