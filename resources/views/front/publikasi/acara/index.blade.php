@@ -42,14 +42,7 @@
                                  src="{{asset('Upload/foto_content/'.$value->thumbnail)}}">
                         @endif
                         <div class="h-36 overflow-hidden px-3 py-2 pt-3">
-                            <div class="w-full flex justify-between mb-1">
-                                <div class="flex h-6 gap-x-1 align-text-bottom mb-2">
-                                    <img class="rounded-full h-6 w-6 md:h-8 md:w-8 object-cover"
-                                         src="{{asset('Upload/foto_profile/'.$value->users_create()->user()->foto_profile()->img)}}">
-                                    <div class="m-auto text-xs md:text-base truncate">
-                                        {{$value->users_create()->user()->name}}
-                                    </div>
-                                </div>
+                            <div class="w-full flex justify-end mb-1">
                                 <div class="flex h-5 gap-x-5">
                                     <button class="text-xs md:text-lg"><i class="fas fa-heart"></i></button>
                                     <button class="text-xs md:text-lg"><i class="fas fa-share"></i></button>
