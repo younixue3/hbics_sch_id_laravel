@@ -108,14 +108,14 @@ class PublikasiController extends Controller
             if ($request->status !== null) {
                 $publikasi->first()->update([
                     'title' => $request->title0,
-                    'thumbnail' => $request->inputFile1->getClientOriginalName(),
+                    'thumbnail' => $request->nameFile1->getClientOriginalName(),
                     'type' => $request->inputFile1->extension() === 'mp4' ? 'video' : 'img',
                     'status' => $request->status
                 ]);
             } else {
                 $publikasi->first()->update([
                     'title' => $request->title0,
-                    'thumbnail' => $request->inputFile1->getClientOriginalName(),
+                    'thumbnail' => $request->nameFile1->getClientOriginalName(),
                     'type' => $request->inputFile1->extension() === 'mp4' ? 'video' : 'img'
                 ]);
             }
