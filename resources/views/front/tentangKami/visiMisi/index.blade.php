@@ -15,18 +15,18 @@
                     </div>
                     <span class="block">Misi :</span>
                     <ol class="leading-6 my-5">
-                        <li><i class="fas fa-check-circle text-green-600 mr-3"></i><span class="font-semibold">Membangun karakter</span>
+                        <li><i class="fas fa-check-circle text-green-600 my-1 md:my-0 mr-3"></i><span class="font-semibold">Membangun karakter</span>
                             mulia berlandaskan nilai-nilai <span class="font-semibold">Kristus.</span></li>
-                        <li><i class="fas fa-check-circle text-green-600 mr-3"></i><span
+                        <li><i class="fas fa-check-circle text-green-600 my-1 md:my-0 mr-3"></i><span
                                 class="font-semibold">Mengarahkan</span> peserta didik <span class="font-semibold">memiliki tujuan hidup</span>
                             yang benar sejak dini.
                         </li>
-                        <li><i class="fas fa-check-circle text-green-600 mr-3"></i><span class="font-semibold">Menggali, menemukan</span>
+                        <li><i class="fas fa-check-circle text-green-600 my-1 md:my-0 mr-3"></i><span class="font-semibold">Menggali, menemukan</span>
                             dan <span class="font-semibold">mengembangkan potensi</span> peserta didik secara <span
                                 class="font-semibold">maksimal.</span></li>
-                        <li><i class="fas fa-check-circle text-green-600 mr-3"></i><span class="font-semibold">Memfasilitasi dan mendorong</span>
+                        <li><i class="fas fa-check-circle text-green-600 my-1 md:my-0 mr-3"></i><span class="font-semibold">Memfasilitasi dan mendorong</span>
                             peserta didik untuk <span class="font-semibold">berinovasi dan berkarya.</span></li>
-                        <li><i class="fas fa-check-circle text-green-600 mr-3"></i><span class="font-semibold">Memberikan layanan prima</span>
+                        <li><i class="fas fa-check-circle text-green-600 my-1 md:my-0 mr-3"></i><span class="font-semibold">Memberikan layanan prima</span>
                             kepada seluruh pemangku kepentingan <span class="font-semibold">sekolah.</span></li>
                     </ol>
                 </div>

@@ -2,7 +2,7 @@
 @section('title', 'Hubungi kami')
 @section('content')
     <div class="bg-pattern pt-72 pb-10 text-center">
-        <h1 id="hero_section" class="mb-20 text-5xl font-bold text-blue-900">Hubungi kami</h1>
+        <h1 id="hero_section" class="mb-20 text-3xl md:text-5xl font-bold text-blue-900">Hubungi kami</h1>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-14 px-10 lg:px-20">
             <div
                 class="bg-white hover:bg-blue-900 hover:text-white transition-all ease-in-out duration-300 rounded-2xl shadow-lg p-5">
@@ -47,31 +47,31 @@
                 </div>
             </div>
         </div>
-        <div class="flex py-20 px-16 md:px-20">
+        <div class="md:flex py-20 px-5 md:px-20">
             <div class="md:w-3/5 relative">
-                <div class="absolute grid grid-cols-1 bottom-2 gap-3 text-3xl text-white">
-                    <a href="#"
-                       class="bg-gradient-to-br from-blue-600 to-blue-300 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
+                <div class="absolute grid grid-cols-1 bottom-2 gap-3 text-sm md:text-3xl text-white">
+                    <a href="https://www.facebook.com/HBICS/"
+                       class="bg-gradient-to-br from-blue-600 to-blue-300 rounded-md w-7 h-7 md:w-14 md:h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
                         <i class="m-auto fab fa-facebook-f"></i>
                     </a>
-                    <a href="#"
-                       class="bg-gradient-to-br from-red-500 via-pink-600 to-yellow-400 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
-                        <i class="m-auto fab fa-instagram text-4xl"></i>
+                    <a href="https://www.instagram.com/harapanbangsa_balikpapan/"
+                       class="bg-gradient-to-br from-red-500 via-pink-600 to-yellow-400 rounded-md w-7 h-7 md:w-14 md:h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
+                        <i class="m-auto fab fa-instagram text-lg md:-4xl"></i>
                     </a>
-                    <a href="#"
-                       class="bg-gradient-to-br from-red-600 to-rose-400 rounded-md w-14 h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
+                    <a href="https://www.youtube.com/channel/UCHJ9hdRwx7ZD-VZBL_GX8Kw"
+                       class="bg-gradient-to-br from-red-600 to-rose-400 rounded-md w-7 h-7 md:w-14 md:h-14 shadow-lg flex hover:scale-105 transition-all ease-in-out">
                         <i class="m-auto fab fa-youtube"></i>
                     </a>
                 </div>
+                <div class="px-2 md:px-16">
+                    <iframe class="rounded-2xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014.1046107038405!2d116.86209400848142!3d-1.2306400636208756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1463c0c5dd131%3A0x67995806f12d0389!2sHarapan%20Bangsa%20Integrated%20Christian%20Junior%20High%20School!5e1!3m2!1sid!2sid!4v1655168302991!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
                 <div
-                    class="absolute right-0 translate-x-10 -translate-y-10 bg-white h-20 md:h-40 w-20 md:w-40 shadow-xl rounded-2xl">
+                    class="absolute mt-12 md:mt-0 md:top-0 right-0 translate-x-3 md:translate-x-10 -translate-y-10 bg-white h-20 md:h-40 w-20 md:w-40 shadow-xl rounded-2xl">
                     <img class="" src="{{asset('assets/stock_photo_rdev/3d-fluency-blue-paper-plane.png')}}">
                 </div>
-                <div class="px-16">
-                    <iframe class="rounded-2xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014.1046107038405!2d116.86209400848142!3d-1.2306400636208756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1463c0c5dd131%3A0x67995806f12d0389!2sHarapan%20Bangsa%20Integrated%20Christian%20Junior%20High%20School!5e1!3m2!1sid!2sid!4v1655168302991!5m2!1sid!2sid" width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
             </div>
-            <form action="{{route('hubungi-kami.sent-message')}}" method="POST" class="md:w-2/5 py-10 px-10 md:px-20 bg-white shadow-xl rounded-2xl w-full flex-row text-left">
+            <form action="{{route('hubungi-kami.sent-message')}}" method="POST" class="md:w-2/5 py-10 px-5 md:px-20 mt-12 md:mt-0 bg-white shadow-xl rounded-2xl w-full flex-row text-left">
                 @csrf
                 <div class="my-2">
                     <span class="text-sm">Nama lengkap</span>

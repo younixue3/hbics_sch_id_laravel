@@ -55,7 +55,7 @@
                      src="{{asset('assets/stock_photo_rdev/cambridge.jpeg')}}">
             </div>
             <div class="md:m-10 border-l-4 border-yellow-600 bg-yellow-100 text-lg md:text-3xl p-5 md:px-52">
-                <h2>Program kurikulum Cambridge yang ditawarkan oleh Sekolah Kristen Harapan Bangsa</h2>
+                <h2 class="text-lg md:text-2xl">Program kurikulum Cambridge yang ditawarkan oleh Sekolah Kristen Harapan Bangsa</h2>
                 <ul class="text-sm list-disc list-inside my-5">
                     <li>Cambridge Primary
                         <div>Siswa/i akan mengembangkan keterampilan dan pemahaman dalam Bahasa Inggris. Tahapan

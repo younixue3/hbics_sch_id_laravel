@@ -752,6 +752,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mr-0{
   margin-right: 0px;
 }
+.mt-12{
+  margin-top: 3rem;
+}
 .block{
   display: block;
 }
@@ -1019,6 +1022,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .translate-y-1\/2{
   --tw-translate-y: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-x-5{
+  --tw-translate-x: 1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-x-3{
+  --tw-translate-x: 0.75rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .rotate-180{
@@ -3002,6 +3013,10 @@ h6{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
+  .md\:my-0{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
   .md\:mb-10{
     margin-bottom: 2.5rem;
   }
@@ -3016,6 +3031,9 @@ h6{
   }
   .md\:mb-20{
     margin-bottom: 5rem;
+  }
+  .md\:mt-0{
+    margin-top: 0px;
   }
   .md\:block{
     display: block;
@@ -3065,6 +3083,9 @@ h6{
   .md\:h-10{
     height: 2.5rem;
   }
+  .md\:h-14{
+    height: 3.5rem;
+  }
   .md\:w-96{
     width: 24rem;
   }
@@ -3100,6 +3121,12 @@ h6{
   }
   .md\:w-\[37rem\]{
     width: 37rem;
+  }
+  .md\:w-14{
+    width: 3.5rem;
+  }
+  .md\:w-1\/2{
+    width: 50%;
   }
   .md\:translate-y-1\/2{
     --tw-translate-y: 50%;
@@ -3215,6 +3242,10 @@ h6{
   .md\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+  .md\:px-16{
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
   .md\:pl-10{
     padding-left: 2.5rem;
