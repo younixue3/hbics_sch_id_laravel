@@ -18963,76 +18963,83 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "m-auto" }, [
-    _c("div", { staticClass: "flex" }, [
-      _c("div", { staticClass: "border-2 bg-white rounded-xl flex" }, [
-        _c(
-          "button",
-          {
-            staticClass: "w-32 bg-white  rounded-l-xl",
-            class:
-              _vm.tab_active === "hhk"
-                ? "bg-blue-600 text-white"
-                : "hover:bg-blue-100",
-            on: {
-              click: function ($event) {
-                _vm.tab_active = "hhk"
+    _c("div", { staticClass: "flex w-full" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "border-2 bg-white rounded-xl w-full flex justify-between",
+        },
+        [
+          _c(
+            "button",
+            {
+              staticClass: "w-full bg-white  rounded-l-xl",
+              class:
+                _vm.tab_active === "hhk"
+                  ? "bg-blue-600 text-white"
+                  : "hover:bg-blue-100",
+              on: {
+                click: function ($event) {
+                  _vm.tab_active = "hhk"
+                },
               },
             },
-          },
-          [_vm._v("HHK\n            ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "w-32 bg-white",
-            class:
-              _vm.tab_active === "sdk"
-                ? "bg-blue-600 text-white"
-                : "hover:bg-blue-100",
-            on: {
-              click: function ($event) {
-                _vm.tab_active = "sdk"
+            [_vm._v("HHK\n            ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "w-full bg-white",
+              class:
+                _vm.tab_active === "sdk"
+                  ? "bg-blue-600 text-white"
+                  : "hover:bg-blue-100",
+              on: {
+                click: function ($event) {
+                  _vm.tab_active = "sdk"
+                },
               },
             },
-          },
-          [_vm._v("SDK\n            ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "w-32 bg-white",
-            class:
-              _vm.tab_active === "smpk"
-                ? "bg-blue-600 text-white"
-                : "hover:bg-blue-100",
-            on: {
-              click: function ($event) {
-                _vm.tab_active = "smpk"
+            [_vm._v("SDK\n            ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "w-full bg-white",
+              class:
+                _vm.tab_active === "smpk"
+                  ? "bg-blue-600 text-white"
+                  : "hover:bg-blue-100",
+              on: {
+                click: function ($event) {
+                  _vm.tab_active = "smpk"
+                },
               },
             },
-          },
-          [_vm._v("SMPK\n            ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "w-32 bg-white rounded-r-xl",
-            class:
-              _vm.tab_active === "smak"
-                ? "bg-blue-600 text-white"
-                : "hover:bg-blue-100",
-            on: {
-              click: function ($event) {
-                _vm.tab_active = "smak"
+            [_vm._v("SMPK\n            ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "w-full bg-white rounded-r-xl",
+              class:
+                _vm.tab_active === "smak"
+                  ? "bg-blue-600 text-white"
+                  : "hover:bg-blue-100",
+              on: {
+                click: function ($event) {
+                  _vm.tab_active = "smak"
+                },
               },
             },
-          },
-          [_vm._v("SMAK\n            ")]
-        ),
-      ]),
+            [_vm._v("SMAK\n            ")]
+          ),
+        ]
+      ),
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "m-auto px-10 text-left mt-10" }, [

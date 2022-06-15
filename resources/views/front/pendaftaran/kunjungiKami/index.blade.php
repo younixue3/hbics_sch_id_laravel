@@ -2,11 +2,11 @@
 @section('title', 'Kunjungi kami')
 @section('content')
     <div class="bg-pattern pt-72 pb-10 text-center">
-        <h1 id="hero_section" class="mb-20 text-5xl font-bold text-blue-900">Kunjungi kami</h1>
-        <div class="md:flex py-20 px-10 md:px-20">
+        <h1 id="hero_section" class="mb-10 md:mb-20 text-5xl font-bold text-blue-900">Kunjungi kami</h1>
+        <div class="md:flex py-20 px-5 md:px-20">
             <div class="md:w-2/5 md:flex relative">
                 <div
-                    class="absolute top-40 right-1/2 md:right-0 translate-x-1/2 md:translate-x-10 -translate-y-14 md:-translate-y-10 bg-white h-20 md:h-40 w-20 md:w-40 shadow-xl rounded-2xl">
+                    class="absolute top-56 md:top-40 right-1/2 md:right-0 translate-x-1/2 md:translate-x-10 -translate-y-14 md:-translate-y-10 bg-white h-20 md:h-40 w-20 md:w-40 shadow-xl rounded-2xl">
                     <img class="" src="{{asset('assets/stock_photo_rdev/3d-fluency-blue-paper-plane.png')}}">
                 </div>
             </div>
@@ -15,7 +15,7 @@
                     Silakan mengisi form berikut ini untuk mengikuti virtual tur bersama kami:
                 </div>
                 <form action="{{route('kunjungi-kami.sent-kunjungan')}}" method="POST"
-                    class="py-10 px-10 md:px-20 bg-white shadow-xl rounded-2xl w-full flex-row text-left text-sm md:text-base">
+                    class="py-5 md:py-10 px-5 md:px-20 bg-white shadow-xl rounded-2xl w-full flex-row text-left text-sm md:text-base">
                     @csrf
                     <div class="my-2">
                         <span class="text-sm">Nama orang tua</span>

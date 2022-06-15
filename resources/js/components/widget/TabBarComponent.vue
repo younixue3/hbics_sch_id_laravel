@@ -1,20 +1,20 @@
 <template>
     <div class="m-auto">
-        <div class="flex">
-            <div class="border-2 bg-white rounded-xl flex">
-                <button class="w-32 bg-white  rounded-l-xl"
+        <div class="flex w-full">
+            <div class="border-2 bg-white rounded-xl w-full flex justify-between">
+                <button class="w-full bg-white  rounded-l-xl"
                         :class="tab_active === 'hhk' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'"
                         @click="tab_active = 'hhk'">HHK
                 </button>
-                <button class="w-32 bg-white"
+                <button class="w-full bg-white"
                         :class="tab_active === 'sdk' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'"
                         @click="tab_active = 'sdk'">SDK
                 </button>
-                <button class="w-32 bg-white"
+                <button class="w-full bg-white"
                         :class="tab_active === 'smpk' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'"
                         @click="tab_active = 'smpk'">SMPK
                 </button>
-                <button class="w-32 bg-white rounded-r-xl"
+                <button class="w-full bg-white rounded-r-xl"
                         :class="tab_active === 'smak' ? 'bg-blue-600 text-white' : 'hover:bg-blue-100'"
                         @click="tab_active = 'smak'">SMAK
                 </button>
