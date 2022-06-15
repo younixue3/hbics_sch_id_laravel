@@ -13,7 +13,7 @@
             <div class="h-full relative">
                 <div class="static text-white">
                     <div class="mb-5">
-                        <span class="px-1 py-0.5 pt-1 rounded-md bg-red-600">
+                        <span class="px-1 py-0.5 pt-1 rounded-md bg-amber-400">
                             <i class="fas fa-fire-alt text-xl mt-0.5"></i>
                             <span class="hidden md:inline">Trending</span>
                         </span>
