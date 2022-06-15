@@ -124,6 +124,7 @@ Vue.component('activity-component', require('./components/layout/ActivityCompone
 Vue.component('nav-bar-component', require('./components/layout/NavBarComponent').default);
 Vue.component('content-card-component', require('./components/widget/ContentCardComponent').default)
 Vue.component('testimoni-component', require('./components/widget/TestimoniComponent').default)
+Vue.component('testimoni-v2-component', require('./components/widget/TestimoniV2Component').default)
 Vue.component('hero-component', require('./components/widget/HeroComponent').default)
 Vue.component('hero-alumni-component', require('./components/widget/HeroAlumniComponent').default)
 Vue.component('snap-component', require('./components/widget/SnapComponent').default)

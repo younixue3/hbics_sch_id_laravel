@@ -90,7 +90,7 @@
                 </div>
             </div>
             <div class="p-2 md:p-10">
-                <testimoni-component get_req="{{route('api.getTestimoni')}}"></testimoni-component>
+                <testimoni-v2-component get_req="{{route('api.getTestimoni')}}"></testimoni-v2-component>
             </div>
         </div>
     </div>
