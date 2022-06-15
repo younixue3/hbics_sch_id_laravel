@@ -2,9 +2,9 @@
 @section('title', 'Acara')
 @section('content')
     <div id="hero_section" class="h-52"></div>
-    <div class="px-5 md:px-52">
+    <div class="px-5 md:px-32">
         <div
-            class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-0 z-10">
+            class="w-full h-full lg:h-[35rem] grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-5 lg:gap-8 overflow-hidden px-5 md:px-20 z-10">
             @forelse($cardacara as $key => $value)
                 @if($cardacara->count() === 2)
                 <content-card-component insight="1"
@@ -29,7 +29,7 @@
                 Data kosong
             @endforelse
         </div>
-        <div class="md:px-20 my-10">
+        <div class="my-10">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
                 @forelse($acara as $key => $value)
                     <a class="md:row-span-1" href="{{route('acara.show', $value->randKey)}}">
