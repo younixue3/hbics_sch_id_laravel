@@ -58,19 +58,24 @@ export default {
     methods: {
         nextButton() {
             for (let i in this.arrTestimoni.person) {
-                if (this.arrTestimoni.person[i].status === 'active first') {
-                    console.log(i)
-                    let recenti = i
-                    if()
-                    this.arrTestimoni.person[recenti].status = 'active'
-                    this.arrTestimoni.person[++recenti].status = 'active first'
-                    if(--recenti >= 0) {
-                        this.arrTestimoni.person[--recenti].status = 'out'
-                    }
-                    if(-recenti >= 0) {
-                        this.arrTestimoni.person[-recenti].status = 'active last'
-                    }
+                console.log(i)
+                if (i >= this.arrTestimoni.person.length) {
+                    console.log('gagal')
                     break
+                } else {
+                    console.log('masuk')
+                    if (this.arrTestimoni.person[i].status === 'active first') {
+                        let recenti = i
+                        this.arrTestimoni.person[recenti].status = 'active'
+                        this.arrTestimoni.person[++recenti].status = 'active first'
+                        if(--recenti >= 0) {
+                            this.arrTestimoni.person[--recenti].status = 'out'
+                        }
+                        if(-recenti >= 0) {
+                            this.arrTestimoni.person[-recenti].status = 'active last'
+                        }
+                        break
+                    }
                 }
             }
             // this.counter = this.counter + 1
