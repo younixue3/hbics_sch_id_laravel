@@ -20618,16 +20618,19 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relative flex w-full h-72 px-1 md:px-5" }, [
+  return _c("div", { staticClass: "relative flex w-full h-72" }, [
     _c(
       "div",
-      { staticClass: "h-60 border-2 grid grid-cols-3" },
+      {
+        staticClass:
+          "h-full w-full grid grid-cols-3 gap-5 transition-all ease-in-out",
+      },
       _vm._l(this.arrTestimoni.person, function (value, index) {
         return _c(
           "div",
           {
             staticClass:
-              "col-span-1 transition-all ease-in-out bg-white rounded-xl shadow-lg border-2",
+              "col-span-1 transition-all ease-in-out bg-white rounded-xl shadow-lg transition-all ease-in-out",
             class:
               value.status === null
                 ? "translate-x-52 hidden"

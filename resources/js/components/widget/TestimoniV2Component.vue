@@ -1,8 +1,8 @@
 <template>
-    <div class="relative flex w-full h-72 px-1 md:px-5">
-        <div class="h-60 border-2 grid grid-cols-3">
+    <div class="relative flex w-full h-72">
+        <div class="h-full w-full grid grid-cols-3 gap-5 transition-all ease-in-out">
             <div v-for="(value, index) in this.arrTestimoni.person" :class="value.status === null ? 'translate-x-52 hidden' : value.status === 'active first' ? 'col-start-3' : value.status === 'active' ? 'col-start-2' : value.status === 'active last' ? 'col-start-1' : value.status === 'out' ? '-translate-x-52 hidden' : null"
-                 class="col-span-1 transition-all ease-in-out bg-white rounded-xl shadow-lg border-2">
+                 class="col-span-1 transition-all ease-in-out bg-white rounded-xl shadow-lg transition-all ease-in-out">
                 <div class="self-start pl-1 pt-5 w-2/6">
                     <img class="rounded-full w-32 h-32 bg-gray-200 object-cover"
                          :src="pathfoto + value.picture">
