@@ -6095,6 +6095,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -6121,33 +6124,32 @@ __webpack_require__.r(__webpack_exports__);
         _this.arrTestimoni.person[i]['status'] = null;
       }
 
-      _this.arrTestimoni.person[0]['status'] = 'active first';
+      _this.arrTestimoni.person[0].status = 'active last';
+      _this.arrTestimoni.person[1].status = 'active';
+      _this.arrTestimoni.person[2].status = 'active first';
     });
     this.data = this.arrTestimoni.person[0];
   },
   methods: {
     nextButton: function nextButton() {
       for (var i in this.arrTestimoni.person) {
-        console.log(i);
-
-        if (i >= this.arrTestimoni.person.length) {
-          console.log('gagal');
+        if (i == this.arrTestimoni.person.length - 1) {
           break;
         } else {
-          console.log('masuk');
-
           if (this.arrTestimoni.person[i].status === 'active first') {
             var recenti = i;
             this.arrTestimoni.person[recenti].status = 'active';
-            this.arrTestimoni.person[++recenti].status = 'active first';
-
-            if (--recenti >= 0) {
-              this.arrTestimoni.person[--recenti].status = 'out';
-            }
-
-            if (-recenti >= 0) {
-              this.arrTestimoni.person[-recenti].status = 'active last';
-            }
+            this.arrTestimoni.person[parseInt(recenti) - 1].status = 'active last';
+            this.arrTestimoni.person[1 + parseInt(recenti)].status = 'active first';
+            this.arrTestimoni.person[parseInt(recenti) - 2].status = 'out'; // if(2 - parseInt(recenti) >= 0) {
+            //     console.log('out')
+            //     this.arrTestimoni.person[2 - parseInt(recenti)].status = 'out'
+            // }
+            // console.log(parseInt(recenti) - 1)
+            // if(parseInt(recenti) - 1 >= 0) {
+            //     console.log('active last')
+            //     this.arrTestimoni.person[parseInt(recenti) - 1].status = 'active last'
+            // }
 
             break;
           }
@@ -6160,6 +6162,26 @@ __webpack_require__.r(__webpack_exports__);
       // this.data = this.arrTestimoni.person[this.counter]
       // setTimeout(() => this.show = true, 200);
 
+    },
+    prevButton: function prevButton() {
+      for (var i in this.arrTestimoni.person) {
+        if (this.arrTestimoni.person[i].status === 'active last') {
+          var recenti = i;
+          console.log(recenti);
+          this.arrTestimoni.person[recenti].status = 'active';
+          this.arrTestimoni.person[parseInt(recenti) + 2].status = null;
+          this.arrTestimoni.person[1 + parseInt(recenti)].status = 'active first';
+          this.arrTestimoni.person[parseInt(recenti) - 1].status = 'active last'; // if(2 + parseInt(recenti) >= this.arrTestimoni.person.length - 1) {
+          //     this.arrTestimoni.person[2 + parseInt(recenti)].status = null
+          // }
+          // if(1 + parseInt(recenti) <= this.arrTestimoni.person.length - 1) {
+          //     console.log(this.arrTestimoni.person[1 + parseInt(recenti)].status)
+          //     this.arrTestimoni.person[1 + parseInt(recenti)].status = 'active first'
+          // }
+
+          break;
+        }
+      }
     },
     handleScroll: function handleScroll() {// console.log(this.$refs.snapSpace.scrollWidth)
       // console.log(document.getElementById('activeSnap').getBoundingClientRect().left)
@@ -20596,7 +20618,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relative w-full h-72 px-1 md:px-5" }, [
+  return _c("div", { staticClass: "relative flex w-full h-72 px-1 md:px-5" }, [
     _c(
       "div",
       { staticClass: "h-60 border-2 grid grid-cols-3" },
@@ -20608,7 +20630,7 @@ var render = function () {
               "col-span-1 transition-all ease-in-out bg-white rounded-xl shadow-lg border-2",
             class:
               value.status === null
-                ? "translate-x-52"
+                ? "translate-x-52 hidden"
                 : value.status === "active first"
                 ? "col-start-3"
                 : value.status === "active"
@@ -20616,7 +20638,7 @@ var render = function () {
                 : value.status === "active last"
                 ? "col-start-1"
                 : value.status === "out"
-                ? "-translate-x-52"
+                ? "-translate-x-52 hidden"
                 : null,
           },
           [
@@ -20659,23 +20681,25 @@ var render = function () {
                   )
                 : _vm._e(),
             ]),
-            _vm._v(" "),
-            _c("div", {}, [
-              _c(
-                "button",
-                {
-                  staticClass:
-                    "rounded-full h-7 w-7 md:h-10 md:w-10 hover:bg-gray-200 md:text-lg border hover:border-0 border-black",
-                  on: { click: _vm.nextButton },
-                },
-                [_c("i", { staticClass: "fas fa-angle-right" })]
-              ),
-            ]),
           ]
         )
       }),
       0
     ),
+    _vm._v(" "),
+    _c("div", { staticClass: "absolute w-full h-full flex justify-between" }, [
+      _c("div", { staticClass: "flex h-full" }, [
+        _c("button", { staticClass: "m-auto", on: { click: _vm.prevButton } }, [
+          _vm._v("Prev"),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex h-full" }, [
+        _c("button", { staticClass: "m-auto", on: { click: _vm.nextButton } }, [
+          _vm._v("Next"),
+        ]),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = []
