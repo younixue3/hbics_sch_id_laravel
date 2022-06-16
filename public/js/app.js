@@ -6059,101 +6059,9 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/TestimoniV2Component.vue?vue&type=script&lang=js& ***!
   \**********************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      show: true,
-      data: {},
-      counter: 0,
-      pathfoto: window.location.origin + '/Upload/foto_komunitas/',
-      arrTestimoni: {
-        count: 1,
-        person: []
-      }
-    };
-  },
-  props: ['get_req'],
-  created: function created() {
-    var _this = this;
-
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get(this.$props.get_req).then(function (response) {
-      _this.arrTestimoni.person = response.data;
-      _this.data = _this.arrTestimoni.person[0];
-
-      for (var i in _this.arrTestimoni.person) {
-        _this.arrTestimoni.person[i]['status'] = null;
-      }
-
-      _this.arrTestimoni.person[0]['status'] = 'active first';
-    });
-    this.data = this.arrTestimoni.person[0];
-  },
-  methods: {
-    nextButton: function nextButton() {
-      for (var i in this.arrTestimoni.person) {
-        if (this.arrTestimoni.person[i].status === 'active first') {
-          console.log(i);
-          this.arrTestimoni.person[+i].status = 'active first'; // this.arrTestimoni.person[i].status = 'active'
-          // if(--i >= 0) {
-          //     this.arrTestimoni.person[--i].status = 'out'
-          // }
-          // if(-i >= 0) {
-          //     this.arrTestimoni.person[-i].status = 'active last'
-          // }
-
-          break;
-        }
-      } // this.counter = this.counter + 1
-      // if (this.counter === 4) {
-      //     this.counter = 0
-      // }
-      // this.show = false
-      // this.data = this.arrTestimoni.person[this.counter]
-      // setTimeout(() => this.show = true, 200);
-
-    },
-    handleScroll: function handleScroll() {// console.log(this.$refs.snapSpace.scrollWidth)
-      // console.log(document.getElementById('activeSnap').getBoundingClientRect().left)
-    }
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\resources\\js\\components\\widget\\TestimoniV2Component.vue: Unexpected token (64:23)\n\n\u001b[0m \u001b[90m 62 |\u001b[39m                     console\u001b[33m.\u001b[39mlog(i)\u001b[0m\n\u001b[0m \u001b[90m 63 |\u001b[39m                     \u001b[36mlet\u001b[39m recenti \u001b[33m=\u001b[39m i\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 64 |\u001b[39m                     \u001b[36mif\u001b[39m()\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 65 |\u001b[39m                     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39marrTestimoni\u001b[33m.\u001b[39mperson[recenti]\u001b[33m.\u001b[39mstatus \u001b[33m=\u001b[39m \u001b[32m'active'\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 66 |\u001b[39m                     \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39marrTestimoni\u001b[33m.\u001b[39mperson[\u001b[33m++\u001b[39mrecenti]\u001b[33m.\u001b[39mstatus \u001b[33m=\u001b[39m \u001b[32m'active first'\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 67 |\u001b[39m                     \u001b[36mif\u001b[39m(\u001b[33m--\u001b[39mrecenti \u001b[33m>=\u001b[39m \u001b[35m0\u001b[39m) {\u001b[0m\n    at instantiate (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:358:12)\n    at Parser.raise (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:3334:19)\n    at Parser.unexpected (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:3372:16)\n    at Parser.parseExprAtom (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:13014:22)\n    at Parser.parseExprSubscripts (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:12539:23)\n    at Parser.parseUpdate (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)\n    at Parser.parseMaybeUnary (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:12489:23)\n    at Parser.parseMaybeUnaryOrPrivate (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:12283:61)\n    at Parser.parseExprOps (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:12290:23)\n    at Parser.parseMaybeConditional (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:12260:23)\n    at Parser.parseMaybeAssign (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:12213:21)\n    at Parser.parseExpressionBase (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:12149:23)\n    at D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:12143:39\n    at Parser.allowInAnd (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:14231:16)\n    at Parser.parseExpression (D:\\Kerjaan\\Web\\Laravel\\hbics_sch_id_laravel\\node_modules\\@babel\\parser\\lib\\index.js:12143:17)");
 
 /***/ }),
 
@@ -20593,7 +20501,7 @@ var render = function () {
           "div",
           {
             staticClass:
-              "col-span-1 col-start-3 transition-all ease-in-out bg-white rounded-xl shadow-lg border-2",
+              "col-span-1 transition-all ease-in-out bg-white rounded-xl shadow-lg border-2",
             class:
               value.status === null
                 ? "translate-x-52"

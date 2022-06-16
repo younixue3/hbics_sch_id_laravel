@@ -2,7 +2,7 @@
     <div class="relative w-full h-72 px-1 md:px-5">
         <div class="h-60 border-2 grid grid-cols-3">
             <div v-for="(value, index) in this.arrTestimoni.person" :class="value.status === null ? 'translate-x-52' : value.status === 'active first' ? 'col-start-3' : value.status === 'active' ? 'col-start-2' : value.status === 'active last' ? 'col-start-1' : value.status === 'out' ? '-translate-x-52' : null"
-                 class="col-span-1 col-start-3 transition-all ease-in-out bg-white rounded-xl shadow-lg border-2">
+                 class="col-span-1 transition-all ease-in-out bg-white rounded-xl shadow-lg border-2">
                 <div class="self-start pl-1 pt-5 w-2/6">
                     <img class="rounded-full w-32 h-32 bg-gray-200 object-cover"
                          :src="pathfoto + value.picture">
@@ -60,14 +60,16 @@ export default {
             for (let i in this.arrTestimoni.person) {
                 if (this.arrTestimoni.person[i].status === 'active first') {
                     console.log(i)
-                    this.arrTestimoni.person[+i].status = 'active first'
-                    // this.arrTestimoni.person[i].status = 'active'
-                    // if(--i >= 0) {
-                    //     this.arrTestimoni.person[--i].status = 'out'
-                    // }
-                    // if(-i >= 0) {
-                    //     this.arrTestimoni.person[-i].status = 'active last'
-                    // }
+                    let recenti = i
+                    if()
+                    this.arrTestimoni.person[recenti].status = 'active'
+                    this.arrTestimoni.person[++recenti].status = 'active first'
+                    if(--recenti >= 0) {
+                        this.arrTestimoni.person[--recenti].status = 'out'
+                    }
+                    if(-recenti >= 0) {
+                        this.arrTestimoni.person[-recenti].status = 'active last'
+                    }
                     break
                 }
             }
