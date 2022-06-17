@@ -6121,12 +6121,12 @@ __webpack_require__.r(__webpack_exports__);
       _this.data = _this.arrTestimoni.person[0];
 
       for (var i in _this.arrTestimoni.person) {
-        _this.arrTestimoni.person[i]['status'] = null;
+        _this.arrTestimoni.person[i]['deleted_at'] = null;
       }
 
-      _this.arrTestimoni.person[0].status = 'active last';
-      _this.arrTestimoni.person[1].status = 'active';
-      _this.arrTestimoni.person[2].status = 'active first';
+      _this.arrTestimoni.person[0].deleted_at = 'active last';
+      _this.arrTestimoni.person[1].deleted_at = 'active';
+      _this.arrTestimoni.person[2].deleted_at = 'active first';
     });
     this.data = this.arrTestimoni.person[0];
   },
@@ -6136,19 +6136,19 @@ __webpack_require__.r(__webpack_exports__);
         if (i == this.arrTestimoni.person.length - 1) {
           break;
         } else {
-          if (this.arrTestimoni.person[i].status === 'active first') {
+          if (this.arrTestimoni.person[i].deleted_at === 'active first') {
             var recenti = i;
-            this.arrTestimoni.person[recenti].status = 'active';
-            this.arrTestimoni.person[parseInt(recenti) - 1].status = 'active last';
-            this.arrTestimoni.person[1 + parseInt(recenti)].status = 'active first';
-            this.arrTestimoni.person[parseInt(recenti) - 2].status = 'out'; // if(2 - parseInt(recenti) >= 0) {
+            this.arrTestimoni.person[recenti].deleted_at = 'active';
+            this.arrTestimoni.person[parseInt(recenti) - 1].deleted_at = 'active last';
+            this.arrTestimoni.person[1 + parseInt(recenti)].deleted_at = 'active first';
+            this.arrTestimoni.person[parseInt(recenti) - 2].deleted_at = 'out'; // if(2 - parseInt(recenti) >= 0) {
             //     console.log('out')
-            //     this.arrTestimoni.person[2 - parseInt(recenti)].status = 'out'
+            //     this.arrTestimoni.person[2 - parseInt(recenti)].deleted_at = 'out'
             // }
             // console.log(parseInt(recenti) - 1)
             // if(parseInt(recenti) - 1 >= 0) {
             //     console.log('active last')
-            //     this.arrTestimoni.person[parseInt(recenti) - 1].status = 'active last'
+            //     this.arrTestimoni.person[parseInt(recenti) - 1].deleted_at = 'active last'
             // }
 
             break;
@@ -6165,18 +6165,18 @@ __webpack_require__.r(__webpack_exports__);
     },
     prevButton: function prevButton() {
       for (var i in this.arrTestimoni.person) {
-        if (this.arrTestimoni.person[i].status === 'active last') {
+        if (this.arrTestimoni.person[i].deleted_at === 'active last') {
           var recenti = i;
           console.log(recenti);
-          this.arrTestimoni.person[recenti].status = 'active';
-          this.arrTestimoni.person[parseInt(recenti) + 2].status = null;
-          this.arrTestimoni.person[1 + parseInt(recenti)].status = 'active first';
-          this.arrTestimoni.person[parseInt(recenti) - 1].status = 'active last'; // if(2 + parseInt(recenti) >= this.arrTestimoni.person.length - 1) {
-          //     this.arrTestimoni.person[2 + parseInt(recenti)].status = null
+          this.arrTestimoni.person[recenti].deleted_at = 'active';
+          this.arrTestimoni.person[parseInt(recenti) + 2].deleted_at = null;
+          this.arrTestimoni.person[1 + parseInt(recenti)].deleted_at = 'active first';
+          this.arrTestimoni.person[parseInt(recenti) - 1].deleted_at = 'active last'; // if(2 + parseInt(recenti) >= this.arrTestimoni.person.length - 1) {
+          //     this.arrTestimoni.person[2 + parseInt(recenti)].deleted_at = null
           // }
           // if(1 + parseInt(recenti) <= this.arrTestimoni.person.length - 1) {
-          //     console.log(this.arrTestimoni.person[1 + parseInt(recenti)].status)
-          //     this.arrTestimoni.person[1 + parseInt(recenti)].status = 'active first'
+          //     console.log(this.arrTestimoni.person[1 + parseInt(recenti)].deleted_at)
+          //     this.arrTestimoni.person[1 + parseInt(recenti)].deleted_at = 'active first'
           // }
 
           break;
@@ -20618,7 +20618,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relative flex w-full h-72" }, [
+  return _c("div", { staticClass: "relative flex w-full" }, [
     _c(
       "div",
       {
@@ -20630,24 +20630,25 @@ var render = function () {
           "div",
           {
             staticClass:
-              "col-span-1 transition-all ease-in-out bg-white rounded-xl shadow-lg transition-all ease-in-out",
+              "col-span-1 transition-all ease-in-out bg-white rounded-xl shadow-lg transition-all ease-in-out flex p-2",
             class:
-              value.status === null
+              value.deleted_at === null
                 ? "translate-x-52 hidden"
-                : value.status === "active first"
+                : value.deleted_at === "active first"
                 ? "col-start-3"
-                : value.status === "active"
+                : value.deleted_at === "active"
                 ? "col-start-2"
-                : value.status === "active last"
+                : value.deleted_at === "active last"
                 ? "col-start-1"
-                : value.status === "out"
+                : value.deleted_at === "out"
                 ? "-translate-x-52 hidden"
                 : null,
           },
           [
-            _c("div", { staticClass: "self-start pl-1 pt-5 w-2/6" }, [
+            _c("div", { staticClass: "self-start w-2/6 h-full flex" }, [
               _c("img", {
-                staticClass: "rounded-full w-32 h-32 bg-gray-200 object-cover",
+                staticClass:
+                  "rounded-full w-32 h-32 bg-gray-200 object-cover m-auto",
                 attrs: { src: _vm.pathfoto + value.picture },
               }),
             ]),
@@ -20692,15 +20693,25 @@ var render = function () {
     _vm._v(" "),
     _c("div", { staticClass: "absolute w-full h-full flex justify-between" }, [
       _c("div", { staticClass: "flex h-full" }, [
-        _c("button", { staticClass: "m-auto", on: { click: _vm.prevButton } }, [
-          _vm._v("Prev"),
-        ]),
+        _c(
+          "button",
+          {
+            staticClass: "m-auto bg-black text-white w-8 h-8 p-1",
+            on: { click: _vm.prevButton },
+          },
+          [_c("i", { staticClass: "fas fa-angle-left" })]
+        ),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "flex h-full" }, [
-        _c("button", { staticClass: "m-auto", on: { click: _vm.nextButton } }, [
-          _vm._v("Next"),
-        ]),
+        _c(
+          "button",
+          {
+            staticClass: "m-auto bg-black text-white w-8 h-8 p-1",
+            on: { click: _vm.nextButton },
+          },
+          [_c("i", { staticClass: "fas fa-angle-right" })]
+        ),
       ]),
     ]),
   ])
