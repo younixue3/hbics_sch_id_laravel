@@ -195,6 +195,10 @@ Vue.component('form-edit-teacher-staff-component', require('./components/widget/
 Vue.component('mailbox-component', require('./components/widget/mailbox/MailboxComponent').default)
 Vue.component('mailbox-card-component', require('./components/widget/mailbox/MailboxCardComponent').default)
 
+//PAGES Widget & Function
+Vue.component('button-delete-pages-function', require('./components/function/pages/ButtonDeleteFunction').default)
+Vue.component('workspace-pages-function', require('./components/function/pages/WorkspacePagesFunction').default)
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

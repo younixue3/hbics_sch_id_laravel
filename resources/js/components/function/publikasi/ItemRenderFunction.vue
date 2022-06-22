@@ -46,6 +46,14 @@ export default {
                     editmode: this.editmode
                 }
             })
+        } else if (this.type === 'accordion') {
+            return createElement('accordion-component', {
+                props: {
+                    content: this.content,
+                    index: this.index,
+                    title: this.title
+                }
+            })
         }
     }
 }

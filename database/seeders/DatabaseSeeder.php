@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
 //            SentsSeeder::class,
 //            SentsStaffsSeeder::class,
 //            MailboxSentsSeeder::class,
+            PagesSeeder::class
         ]);
 
         // \App\Models\User::factory(10)->create();
