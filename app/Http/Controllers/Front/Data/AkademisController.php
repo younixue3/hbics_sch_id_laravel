@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 
 class AkademisController extends Controller
 {
-    public function get_data_hhk()
+    public function get_data_hhk($id)
     {
-        $page = Pages::find(1)->contents();
+        $page = Pages::find($id)->contents();
         $compact = compact('page');
         return $compact;
     }

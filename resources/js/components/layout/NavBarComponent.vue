@@ -151,7 +151,7 @@
                                                 <div
                                                     class="grid grid-rows-4 items-center justify-items-stretch row-span-4 p-0.5">
                                                     <a class="bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200"
-                                                       :href="dataurl['happy-holy-kids']">
+                                                       :href="dataurl['kelompok-bermain-taman-kanak-kanak']">
                                                         <div class="flex gap-x-5 text-center">
                                                             <div class="w-20">
                                                                 <div

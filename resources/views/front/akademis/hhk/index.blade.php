@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="text-center mx-20">
-                <workspace-pages-output-function editmode="true" fetchdata="{{$page->latest()->first()->item}}"></workspace-pages-output-function>
+                <workspace-pages-output-function editmode="true" fetchdata="{{$page->latest()->first() != null ? $page->latest()->first()->item : ''}}"></workspace-pages-output-function>
             </div>
             <div class="text-center">
                 <h2 class="text-3xl font-bold">Prestasi Happy Holy Kids sebagai TK Favorit Balikpapan</h2>

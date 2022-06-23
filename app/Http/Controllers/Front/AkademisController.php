@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Front\Data\AkademisController as DataController;
+use App\Models\Pages;
 
 class AkademisController extends Controller
 {
@@ -28,29 +29,29 @@ class AkademisController extends Controller
         return view('front.akademis.index');
     }
 
-    public function kelompokBermainTk()
+    public function pages($id)
     {
-        $page = $this->data->get_data_hhk();
+        $page = $this->data->get_data_hhk($id);
         return view('front.akademis.hhk.index', $page);
     }
 
-    public function sekolahDasar()
-    {
-        $page = $this->data->get_data_sdk();
-        return view('front.akademis.sd.index');
-    }
-
-    public function sekolahMenengahPertama()
-    {
-        $page = $this->data->get_data_smpk();
-        return view('front.akademis.smp.index');
-    }
-
-    public function sekolahMenengahAtas()
-    {
-        $page = $this->data->get_data_smak();
-        return view('front.akademis.sma.index');
-    }
+//    public function sekolahDasar()
+//    {
+//        $page = $this->data->get_data_sdk();
+//        return view('front.akademis.sd.index');
+//    }
+//
+//    public function sekolahMenengahPertama()
+//    {
+//        $page = $this->data->get_data_smpk();
+//        return view('front.akademis.smp.index');
+//    }
+//
+//    public function sekolahMenengahAtas()
+//    {
+//        $page = $this->data->get_data_smak();
+//        return view('front.akademis.sma.index');
+//    }
 
     public function prestasiSiswa(Request $request)
     {

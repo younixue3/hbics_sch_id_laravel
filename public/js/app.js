@@ -15594,7 +15594,7 @@ var render = function () {
                                                   "bg-white hover:bg-gray-200 rounded-xl p-2 text-black hover:text-amber-500 transition-all ease-in duration-200",
                                                 attrs: {
                                                   href: _vm.dataurl[
-                                                    "happy-holy-kids"
+                                                    "kelompok-bermain-taman-kanak-kanak"
                                                   ],
                                                 },
                                               },
