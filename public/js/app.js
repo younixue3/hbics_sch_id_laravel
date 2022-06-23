@@ -4719,6 +4719,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "AccordionComponent",
   data: function data() {
@@ -18680,116 +18681,50 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      {
-        staticClass:
-          "border-2 h-14 flex rounded-t-2xl justify-between py-3 px-5",
-        class: _vm.status ? "bg-blue-300 hover:bg-blue-200" : "bg-gray-100",
-      },
-      [
-        !_vm.inputMode
-          ? _c("div", [
-              _vm._v(
-                _vm._s(
-                  _vm.$store.state.workspace.items[_vm.index].content.title
-                )
-              ),
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        _vm.inputMode
-          ? _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value:
-                    _vm.$store.state.workspace.items[_vm.index].content.title,
-                  expression:
-                    "$store.state.workspace.items[index].content.title",
-                },
-              ],
-              staticClass: "w-full focus:outline-none mr-5",
-              class: _vm.status
-                ? " bg-blue-50 hover:bg-blue-100"
-                : "bg-gray-200",
-              domProps: {
-                value:
-                  _vm.$store.state.workspace.items[_vm.index].content.title,
-              },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(
-                    _vm.$store.state.workspace.items[_vm.index].content,
-                    "title",
-                    $event.target.value
-                  )
-                },
-              },
-            })
-          : _vm._e(),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "w-5 h-5 cursor-pointer",
-            on: { click: _vm.clickactiv },
-          },
-          [
-            _c("i", {
-              staticClass:
-                "fas fa-chevron-up my-auto transition-all ease-in-out duration-300",
-              class: _vm.status ? "rotate-180" : "rotate-0",
-            }),
-          ]
-        ),
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass:
-          "bg-white text-sm transition-all ease-in-out duration-300 rounded-b-2xl overflow-hidden text-left",
-        class: _vm.status ? "h-60 border-b-2 border-x-2" : "h-0",
-      },
-      [
-        !_vm.inputMode
-          ? _c("div", { staticClass: "p-5" }, [
-              _vm._v(
-                "\n            " +
+  return _c(
+    "div",
+    [
+      _vm.inputMode
+        ? _c("button-gear-menu-component", { attrs: { items: _vm.index } })
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "border-2 h-14 flex rounded-t-2xl justify-between py-3 px-5",
+          class: _vm.status ? "bg-blue-300 hover:bg-blue-200" : "bg-gray-100",
+        },
+        [
+          !_vm.inputMode
+            ? _c("div", [
+                _vm._v(
                   _vm._s(
-                    _vm.$store.state.workspace.items[_vm.index].content.field
-                  ) +
-                  "\n        "
-              ),
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        _vm.inputMode
-          ? _c("div", { staticClass: "p-5" }, [
-              _c("textarea", {
+                    _vm.$store.state.workspace.items[_vm.index].content.title
+                  )
+                ),
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.inputMode
+            ? _c("input", {
                 directives: [
                   {
                     name: "model",
                     rawName: "v-model",
                     value:
-                      _vm.$store.state.workspace.items[_vm.index].content.field,
+                      _vm.$store.state.workspace.items[_vm.index].content.title,
                     expression:
-                      "$store.state.workspace.items[index].content.field",
+                      "$store.state.workspace.items[index].content.title",
                   },
                 ],
-                staticClass:
-                  "bg-gray-100 w-full focus:outline-none resize-none",
-                class: _vm.status ? "h-48" : "",
+                staticClass: "w-full focus:outline-none mr-5",
+                class: _vm.status
+                  ? " bg-blue-50 hover:bg-blue-100"
+                  : "bg-gray-200",
                 domProps: {
                   value:
-                    _vm.$store.state.workspace.items[_vm.index].content.field,
+                    _vm.$store.state.workspace.items[_vm.index].content.title,
                 },
                 on: {
                   input: function ($event) {
@@ -18798,17 +18733,92 @@ var render = function () {
                     }
                     _vm.$set(
                       _vm.$store.state.workspace.items[_vm.index].content,
-                      "field",
+                      "title",
                       $event.target.value
                     )
                   },
                 },
+              })
+            : _vm._e(),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "w-5 h-5 cursor-pointer",
+              on: { click: _vm.clickactiv },
+            },
+            [
+              _c("i", {
+                staticClass:
+                  "fas fa-chevron-up my-auto transition-all ease-in-out duration-300",
+                class: _vm.status ? "rotate-180" : "rotate-0",
               }),
-            ])
-          : _vm._e(),
-      ]
-    ),
-  ])
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "bg-white text-sm transition-all ease-in-out duration-300 rounded-b-2xl overflow-hidden text-left",
+          class: _vm.status ? "h-60 border-b-2 border-x-2" : "h-0",
+        },
+        [
+          !_vm.inputMode
+            ? _c("div", { staticClass: "p-5" }, [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(
+                      _vm.$store.state.workspace.items[_vm.index].content.field
+                    ) +
+                    "\n        "
+                ),
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.inputMode
+            ? _c("div", { staticClass: "p-5" }, [
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value:
+                        _vm.$store.state.workspace.items[_vm.index].content
+                          .field,
+                      expression:
+                        "$store.state.workspace.items[index].content.field",
+                    },
+                  ],
+                  staticClass:
+                    "bg-gray-100 w-full focus:outline-none resize-none",
+                  class: _vm.status ? "h-48" : "",
+                  domProps: {
+                    value:
+                      _vm.$store.state.workspace.items[_vm.index].content.field,
+                  },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.$store.state.workspace.items[_vm.index].content,
+                        "field",
+                        $event.target.value
+                      )
+                    },
+                  },
+                }),
+              ])
+            : _vm._e(),
+        ]
+      ),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

@@ -31,7 +31,7 @@ class AkademisController extends Controller
 
     public function pages($id)
     {
-        $page = $this->data->get_data_hhk($id);
+        $page = $this->data->get_data_page($id);
         return view('front.akademis.hhk.index', $page);
     }
 

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <button-gear-menu-component v-if="inputMode" v-bind:items="index"></button-gear-menu-component>
         <div class="border-2 h-14 flex rounded-t-2xl justify-between py-3 px-5"
              :class="status ? 'bg-blue-300 hover:bg-blue-200' : 'bg-gray-100'">
             <div v-if="!inputMode">{{ $store.state.workspace.items[index].content.title }}</div>
