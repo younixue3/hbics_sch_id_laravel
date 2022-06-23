@@ -11,7 +11,7 @@
                     <h3>{{$value->name}}</h3>
                     <h4 class="text-sm italic font-normal">{{'/'.$value->url}}</h4>
                     <div class="mt-5 grid grid-cols-3 gap-2 w-28">
-                        <a href="{{url('/'.$value->url)}}" class="w-8 h-8 flex bg-green-400 text-white text-lg font-semibold rounded-lg"><i class="fas fa-eye m-auto text-sm"></i></a>
+                        <a href="{{route($value->url, $value->id)}}" class="w-8 h-8 flex bg-green-400 text-white text-lg font-semibold rounded-lg"><i class="fas fa-eye m-auto text-sm"></i></a>
                         <a href="{{route('dashboard.pages.edit', $value->id)}}" class="w-8 h-8 flex bg-amber-400 text-white text-lg font-semibold rounded-lg"><i class="fas fa-edit m-auto text-sm"></i></a>
                         <button-delete-pages-function delete_req="{{route('dashboard.pages.destroy', $value->id)}}"></button-delete-pages-function>
                     </div>
