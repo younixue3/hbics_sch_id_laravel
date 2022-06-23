@@ -23,6 +23,15 @@ class PagesController extends Controller
         return $compact;
     }
 
+    public function update_data($request, $id)
+    {
+        $page = Pages::find($id);
+        PagesContents::create([
+            'item' => $request->item,
+            'page' => $page->id
+        ]);
+    }
+
     public function store_data($request, $page)
     {
 

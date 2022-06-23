@@ -4,8 +4,10 @@
         <div class="rounded-2xl bg-white overflow-hidden">
             <workspace-pages-function editmode="true"
                                       store_link="{{route('dashboard.pages.update',$id)}}"
-                                      fetchdata="{{$content->first()}}"
-                                      @submit="submitPublikasi"></workspace-pages-function>
+                                      fetchdata="{{$content->latest()->first() != null ? $content->latest()->first()->item : ''}}"
+                                      @submit="submitPublikasi">
+                <input type="hidden" name="_method" value="put">
+            </workspace-pages-function>
         </div>
 @endsection
 @section('notification')

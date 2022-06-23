@@ -44,6 +44,15 @@ export default {
                     urlregister: window.location.href + '/event'
                 }
             })
+        } else if (this.type === 'accordion') {
+            return createElement('accordion-component', {
+                props: {
+                    content: this.content,
+                    index: this.index,
+                    title: this.title,
+                    editmode: this.editmode
+                }
+            })
         }
     }
 }

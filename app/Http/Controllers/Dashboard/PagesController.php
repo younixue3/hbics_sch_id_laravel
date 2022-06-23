@@ -78,7 +78,8 @@ class PagesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request);
+        $data = $this->data->update_data($request, $id);
+        return redirect(route('dashboard.pages.index'))->with('success', 'Update Data Successfully');
     }
 
     /**

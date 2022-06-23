@@ -12,7 +12,7 @@
         <div class="bg-white text-sm transition-all ease-in-out duration-300 rounded-b-2xl overflow-hidden text-left"
              :class="status ? 'h-60 border-b-2 border-x-2' : 'h-0'">
             <div class="p-5" v-if="!inputMode">
-                {{content}}
+                {{$store.state.workspace.items[index].content.field}}
             </div>
             <div class="p-5" v-if="inputMode">
                 <textarea class="bg-gray-100 w-full focus:outline-none resize-none" :class="status ? 'h-48' : ''" v-model="$store.state.workspace.items[index].content.field"></textarea>
