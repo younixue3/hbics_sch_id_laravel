@@ -206,7 +206,7 @@ Vue.component('workspace-pages-output-function', require('./components/function/
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 Vue.use(vClickOutside)
-// Vue.config.devtools = false
+Vue.config.devtools = false
 
 const app = new Vue({
     el: '#app',
