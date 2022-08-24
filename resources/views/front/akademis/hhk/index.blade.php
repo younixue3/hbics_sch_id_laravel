@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="bg-akademis bg-no-repeat bg-left pb-5">
-            <div class="text-center mx-20">
+            <div class="text-center mx-10 md:mx-20">
                 <workspace-pages-output-function editmode="true" fetchdata="{{$page->latest()->first() != null ? $page->latest()->first()->item : ''}}"></workspace-pages-output-function>
             </div>
             <div class="text-center">

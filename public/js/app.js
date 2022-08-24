@@ -4709,6 +4709,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tinymce/tinymce-vue */ "./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/index.js");
 //
 //
 //
@@ -4733,8 +4734,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "AccordionComponent",
+  components: {
+    'editor': _tinymce_tinymce_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       status: false,
@@ -8847,7 +8872,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-72c3c872],\n.fade-rdev-leave-active[data-v-72c3c872] {\n    transition: opacity 0.5s ease;\n}\n.fade-rdev-enter-from[data-v-72c3c872],\n.fade-rdev-leave-to[data-v-72c3c872] {\n    opacity: 0;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-72c3c872],\r\n.fade-rdev-leave-active[data-v-72c3c872] {\r\n    transition: opacity 0.5s ease;\n}\n.fade-rdev-enter-from[data-v-72c3c872],\r\n.fade-rdev-leave-to[data-v-72c3c872] {\r\n    opacity: 0;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8871,7 +8896,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-256b926a],\n.fade-rdev-leave-active[data-v-256b926a] {\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-256b926a],\n.fade-rdev-leave-to[data-v-256b926a] {\n    opacity: 0;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-256b926a],\r\n.fade-rdev-leave-active[data-v-256b926a] {\r\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-256b926a],\r\n.fade-rdev-leave-to[data-v-256b926a] {\r\n    opacity: 0;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8895,7 +8920,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-14c5c7c0],\n.fade-rdev-leave-active[data-v-14c5c7c0] {\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-14c5c7c0],\n.fade-rdev-leave-to[data-v-14c5c7c0] {\n    opacity: 0;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-14c5c7c0],\r\n.fade-rdev-leave-active[data-v-14c5c7c0] {\r\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-14c5c7c0],\r\n.fade-rdev-leave-to[data-v-14c5c7c0] {\r\n    opacity: 0;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8919,7 +8944,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-61e9af3a],\n.fade-rdev-leave-active[data-v-61e9af3a] {\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-61e9af3a],\n.fade-rdev-leave-to[data-v-61e9af3a] {\n    opacity: 0;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.fade-rdev-enter-active[data-v-61e9af3a],\r\n.fade-rdev-leave-active[data-v-61e9af3a] {\r\n    transition: opacity 0.7s ease;\n}\n.fade-rdev-enter-from[data-v-61e9af3a],\r\n.fade-rdev-leave-to[data-v-61e9af3a] {\r\n    opacity: 0;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8967,7 +8992,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.slide-fade-enter-active[data-v-831ff40e] {\n    transition: all 0.3s ease-out;\n}\n.slide-fade-leave-active[data-v-831ff40e] {\n    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter-from[data-v-831ff40e],\n.slide-fade-leave-to[data-v-831ff40e] {\n    transform: translateX(20px);\n    opacity: 0;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.slide-fade-enter-active[data-v-831ff40e] {\r\n    transition: all 0.3s ease-out;\n}\n.slide-fade-leave-active[data-v-831ff40e] {\r\n    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter-from[data-v-831ff40e],\r\n.slide-fade-leave-to[data-v-831ff40e] {\r\n    transform: translateX(20px);\r\n    opacity: 0;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -14944,7 +14969,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "grid grid-cols-1 gap-x-5 gap-y-4 my-5" },
+    { staticClass: "grid grid-cols-1 gap-x-5 gap-y-10 my-5" },
     _vm._l(this.$store.state.workspace.items, function (item, index) {
       return _c("item-render-output", {
         attrs: {
@@ -18813,56 +18838,67 @@ var render = function () {
         {
           staticClass:
             "bg-white text-sm transition-all ease-in-out duration-300 rounded-b-2xl overflow-hidden text-left",
-          class: _vm.status ? "h-60 border-b-2 border-x-2" : "h-0",
+          class: _vm.status ? "border-b-2 border-x-2" : "h-0",
         },
         [
           !_vm.inputMode
-            ? _c("div", { staticClass: "p-5" }, [
-                _vm._v(
-                  "\n            " +
-                    _vm._s(
-                      _vm.$store.state.workspace.items[_vm.index].content.field
-                    ) +
-                    "\n        "
-                ),
-              ])
+            ? _c("div", {
+                staticClass: "p-5",
+                domProps: {
+                  innerHTML: _vm._s(
+                    _vm.$store.state.workspace.items[_vm.index].content.field
+                  ),
+                },
+              })
             : _vm._e(),
           _vm._v(" "),
           _vm.inputMode
-            ? _c("div", { staticClass: "p-5" }, [
-                _c("textarea", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
+            ? _c(
+                "div",
+                { staticClass: "p-5" },
+                [
+                  _c("editor", {
+                    attrs: {
+                      "api-key": "no-api-key",
+                      init: {
+                        height: 400,
+                        menubar: true,
+                        plugins: [
+                          "advlist autolink lists link image charmap print preview anchor",
+                          "searchreplace visualblocks code fullscreen",
+                          "insertdatetime table paste code help wordcount",
+                          "lists link image paste help wordcount",
+                        ],
+                        images_file_types: "jpg,svg,webp",
+                        file_picker_types: "image",
+                        automatic_uploads: true,
+                        file_picker_callback: function (cb, value, meta) {
+                          _vm.imageUploader(cb, value, meta)
+                        },
+                        toolbar:
+                          "undo redo | formatselect | bold italic backcolor | \
+                   alignleft aligncenter alignright alignjustify | \
+                   bullist numlist outdent indent | removeformat | help | image",
+                      },
+                    },
+                    model: {
                       value:
                         _vm.$store.state.workspace.items[_vm.index].content
                           .field,
+                      callback: function ($$v) {
+                        _vm.$set(
+                          _vm.$store.state.workspace.items[_vm.index].content,
+                          "field",
+                          $$v
+                        )
+                      },
                       expression:
                         "$store.state.workspace.items[index].content.field",
                     },
-                  ],
-                  staticClass:
-                    "bg-gray-100 w-full focus:outline-none resize-none",
-                  class: _vm.status ? "h-48" : "",
-                  domProps: {
-                    value:
-                      _vm.$store.state.workspace.items[_vm.index].content.field,
-                  },
-                  on: {
-                    input: function ($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(
-                        _vm.$store.state.workspace.items[_vm.index].content,
-                        "field",
-                        $event.target.value
-                      )
-                    },
-                  },
-                }),
-              ])
+                  }),
+                ],
+                1
+              )
             : _vm._e(),
         ]
       ),

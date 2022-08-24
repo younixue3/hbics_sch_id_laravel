@@ -11,20 +11,45 @@
             </div>
         </div>
         <div class="bg-white text-sm transition-all ease-in-out duration-300 rounded-b-2xl overflow-hidden text-left"
-             :class="status ? 'h-60 border-b-2 border-x-2' : 'h-0'">
-            <div class="p-5" v-if="!inputMode">
-                {{$store.state.workspace.items[index].content.field}}
+             :class="status ? 'border-b-2 border-x-2' : 'h-0'">
+            <div class="p-5" v-if="!inputMode" v-html="$store.state.workspace.items[index].content.field">
             </div>
             <div class="p-5" v-if="inputMode">
-                <textarea class="bg-gray-100 w-full focus:outline-none resize-none" :class="status ? 'h-48' : ''" v-model="$store.state.workspace.items[index].content.field"></textarea>
+                <editor
+                    api-key="no-api-key"
+                    :init="{
+                     height: 400,
+                     menubar: true,
+                     plugins: [
+                       'advlist autolink lists link image charmap print preview anchor',
+                       'searchreplace visualblocks code fullscreen',
+                       'insertdatetime table paste code help wordcount',
+                       'lists link image paste help wordcount'
+                     ],
+                     images_file_types: 'jpg,svg,webp',
+                     file_picker_types: 'image',
+                     automatic_uploads: true,
+                     file_picker_callback: (cb, value, meta) => {imageUploader(cb, value, meta)},
+                     toolbar:
+                       'undo redo | formatselect | bold italic backcolor | \
+                       alignleft aligncenter alignright alignjustify | \
+                       bullist numlist outdent indent | removeformat | help | image'
+                   }"
+                    v-model="$store.state.workspace.items[index].content.field"
+                />
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import Editor from '@tinymce/tinymce-vue'
+
 export default {
     name: "AccordionComponent",
+    components: {
+      'editor': Editor
+    },
     data() {
         return {
             status: false,

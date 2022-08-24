@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-1 gap-x-5 gap-y-4 my-5">
+    <div class="grid grid-cols-1 gap-x-5 gap-y-10 my-5">
         <item-render-output v-for="(item, index) in this.$store.state.workspace.items" v-bind:type="item.type"
                             v-bind:content="item.content" v-bind:index="index" v-bind:urlasset="urlasset"
                             v-bind:editmode="editmode">
