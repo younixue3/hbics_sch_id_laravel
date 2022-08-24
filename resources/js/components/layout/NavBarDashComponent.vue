@@ -145,6 +145,7 @@
 
 <script>
 import axios from "axios";
+import Echo from "laravel-echo";
 
 export default {
     data() {
@@ -155,12 +156,26 @@ export default {
             windowspath: window.location.origin + '/',
             collapsed: true,
             hover: true,
+            allNotifications: null
         }
     },
     props: {
         is_admin: Boolean,
     },
     created() {
+        this.allNotifications = window.user.user.notifications:
+
+        Echo.join('chat.${roomId}')
+            .here((users) => {
+
+            })
+            .joining((user) => {
+                console.log(user.name)
+            })
+            .leaving((user) => {
+                console.log(user.name)
+            })
+
         window.addEventListener('scroll', this.handleScroll);
         axios
             .get(this.windowspath + 'api/getUrlDashboard')
@@ -183,7 +198,7 @@ export default {
                 this.collapsed = true
             }
         }
-    }
+    },
 }
 </script>
 
