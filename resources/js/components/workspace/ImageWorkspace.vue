@@ -26,7 +26,7 @@
                 <input class="ml-2 rounded-md px-2 border focus:border-sky-500 outline-none" type="text" name="alt" v-model="$store.state.workspace.items[index].content.alt">
             </div>
         </div>
-        <div :class="inputMode ? '' : 'hidden'">
+        <div>
             <input type="file" :name="'inputFile'+indexfile" @change="previewImage">
             <input type="hidden" :name="'nameFile'+indexfile" :value="$store.state.workspace.items[index].content.file">
             <span class="px-2 mt-5 bg-emerald-500 rounded-md text-white cursor-pointer"

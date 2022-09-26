@@ -3,7 +3,7 @@
 @section('content')
     <button-add-function add_req="{{route('dashboard.fasilitas.store')}}"></button-add-function>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
-        <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12 overflow-hidden">
+        <mac-card-component cardsname="Fasilitas | List" class="row-span-3 md:col-span-6 lg:col-span-12 overflow-hidden">
             {{--            {{$errors['fileupload']}}--}}
             <form action="{{route('dashboard.fasilitas.index')}}" class="px-5 flex">
                 <label class="mr-5">Filter</label>

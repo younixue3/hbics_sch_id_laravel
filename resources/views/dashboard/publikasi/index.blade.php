@@ -5,7 +5,7 @@
        class="bg-green-400 rounded-lg w-20 px-3 flex justify-between text-center"><span>Add</span><i
             class="fa-solid fa-plus my-auto"></i></a>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
-        <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12">
+        <mac-card-component cardsname="Publikasi | Table" class="row-span-3 md:col-span-6 lg:col-span-12">
             <div>
                 <table class="table-auto w-full text-center">
                     <thead class="bg-gray-100">
@@ -46,7 +46,7 @@
                             </td>
                             <td class="py-1">
                                 @foreach($value->kategoris_publikasi()->get() as $key => $item)
-                                    <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5">
+                                    <span class="bg-gray-200 rounded-md px-2 pb-0.5">
                                     {{$item->kategoris()->name}}
                                 </span>
                                 @endforeach
@@ -54,17 +54,17 @@
                             <td class="py-1">
                                 @if($value->status === 'publish')
                                     <span
-                                        class="bg-green-500 hover:bg-green-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                        class="bg-green-500 hover:bg-green-600 text-white rounded-md px-2 pb-0.5 cursor-pointer">
                                         published
                                     </span>
                                 @elseif($value->status === 'reject')
                                     <span
-                                        class="bg-red-500 hover:bg-red-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                        class="bg-red-500 hover:bg-red-600 text-white rounded-md px-2 pb-0.5 cursor-pointer">
                                         cancelled
                                     </span>
                                 @elseif($value->status === 'draft')
                                     <span
-                                        class="bg-yellow-500 hover:bg-yellow-600 text-white text-xs rounded-md px-2 pb-0.5 cursor-pointer">
+                                        class="bg-yellow-500 hover:bg-yellow-600 text-white rounded-md px-2 pb-0.5 cursor-pointer">
                                         editorial checking
                                     </span>
                                 @endif

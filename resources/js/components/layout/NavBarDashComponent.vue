@@ -1,15 +1,12 @@
 <template>
     <div id="mobile-menu"
-         class="h-full md:h-auto text-gray-800 z-40 fixed duration-300 bg-gray-100 shadow-md md:static"
+         class="h-full md:h-auto text-gray-800 z-40 fixed duration-300 bg-blue-900 shadow-md md:static"
          @mouseenter="CollapsedHover()" @mouseleave="CollapsedHover()"
          :class="collapsed ? 'w-60 md:w-80 lg:w-80' : 'w-0 md:w-11 lg:w-11 md:hover:w-44'">
-        <div class="font-bold text-xl h-16 pr-2 md:pr-0 flex relative z-50">
+        <div class="font-bold text-xl h-16 pr-2 md:pr-0 flex relative z-50 bg-gray-200">
             <div class="flex transition-all ease-in-out duration-500" :class="collapsed ? 'w-full' : 'w-0'">
-                <img class="min-h-5 h-5 mx-3 my-auto" src="" alt="">
-                <a :href="dataurl['home']"
-                   class="my-auto text-2xl align-middle overflow-hidden truncate font-light">
-                    Dashboard
-                </a>
+                <img class="h-10 mx-2 my-auto" :src="logo_ytcb" alt="">
+                <img class="h-10 my-auto" :src="logo_hb" alt="">
             </div>
             <button @click="CloseBar()" type="button"
                     class="transition-all bg-gray-700 shrink-0 -mr-3 w-10 h-10 text-white rounded-lg ease-in-out duration-500 z-50 m-auto -mr-5">
@@ -24,7 +21,7 @@
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['dashboard'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-1/6">
+                                <div class="w-10">
                                     <i class="fa-solid fa-gauge-high mr-3"></i>
                                 </div>
                                 <span>Dashboard</span>
@@ -37,7 +34,7 @@
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['fasilitas'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-1/6">
+                                <div class="w-10">
                                     <i class="fa-solid fa-images mr-3"></i>
                                 </div>
                                 <span>Fasilitas</span>
@@ -52,7 +49,7 @@
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['prestasi'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-1/6">
+                                <div class="w-10">
                                     <i class="fa-solid fa-award mr-3"></i>
                                 </div>
                                 <span>Prestasi</span>
@@ -65,7 +62,7 @@
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['publikasi'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-1/6">
+                                <div class="w-10">
                                     <i class="fa-solid fa-newspaper mr-3"></i>
                                 </div>
                                 <span>Publikasi</span>
@@ -78,10 +75,10 @@
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['staff'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-1/6">
+                                <div class="w-10">
                                     <i class="fa-solid fa-id-badge mr-3"></i>
                                 </div>
-                                <span>Staff</span>
+                                <span>User</span>
                             </div>
                         </div>
                     </a>
@@ -91,10 +88,10 @@
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['teacher-staff'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-1/6">
+                                <div class="w-10">
                                     <i class="fa-solid fa-id-badge mr-3"></i>
                                 </div>
-                                <span>Teacher & Staff Component</span>
+                                <span>Teacher & Staff</span>
                             </div>
                         </div>
                     </a>
@@ -117,7 +114,7 @@
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['mailbox'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-1/6">
+                                <div class="w-10">
                                     <i class="fas fa-mail-bulk mr-3"></i>
                                 </div>
                                 <span>Mailbox</span>
@@ -130,7 +127,7 @@
                         <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg"
                              :class="livehref === dataurl['pages'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-1/6">
+                                <div class="w-10">
                                     <i class="fa-solid fa-window-restore mr-3"></i>
                                 </div>
                                 <span>Pages</span>
@@ -161,20 +158,22 @@ export default {
     },
     props: {
         is_admin: Boolean,
+        logo_hb: String,
+        logo_ytcb: String
     },
     created() {
-        this.allNotifications = window.user.user.notifications:
-
-        Echo.join('chat.${roomId}')
-            .here((users) => {
-
-            })
-            .joining((user) => {
-                console.log(user.name)
-            })
-            .leaving((user) => {
-                console.log(user.name)
-            })
+        // this.allNotifications = window.user.user.notifications:
+        //
+        // Echo.join('chat.${roomId}')
+        //     .here((users) => {
+        //
+        //     })
+        //     .joining((user) => {
+        //         console.log(user.name)
+        //     })
+        //     .leaving((user) => {
+        //         console.log(user.name)
+        //     })
 
         window.addEventListener('scroll', this.handleScroll);
         axios

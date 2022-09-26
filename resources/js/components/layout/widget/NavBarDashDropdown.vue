@@ -3,8 +3,8 @@
         <div>
             <div class="hover:bg-gray-200 px-2 pt-1 rounded-lg cursor-pointer" @click="dropdownactive"
                  :class="this.livehref.split('/').includes('komunitas') ? 'bg-gray-300' : 'bg-gray-100'">
-                <div class="flex justify-between w-full">
-                    <div class="w-1/6">
+                <div class="flex justify-between w-52">
+                    <div class="w-10">
                         <i class="fa-solid fa-users mr-3"></i>
                     </div>
                     <span class="flex-1">Komunitas</span>

@@ -3,7 +3,7 @@
 @section('content')
     <button-add-function add_req="{{route('dashboard.staff.store')}}"></button-add-function>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
-        <mac-card-component cardsname="Gallery | Table" class="row-span-3 md:col-span-6 lg:col-span-12 overflow-hidden">
+        <mac-card-component cardsname="User | Table" class="row-span-3 md:col-span-6 lg:col-span-12 overflow-hidden">
             <div>
                 <table class="table-auto w-full text-center">
                     <thead class="bg-gray-100">

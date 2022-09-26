@@ -20,7 +20,7 @@
         </div>
         <video ref="previewvideo" class="object-cover rounded-3xl m-5"
                :class="inputMode === false ? 'w-full h-96' : 'w-96'" @dblclick="inputOn" controls allow></video>
-        <div :class="inputMode ? '' : 'hidden'">
+        <div>
             <input type="file" :name="'inputFile'+indexfile" @change="previewVideo"
                    :src="$store.state.workspace.items[index].content">
             <input type="hidden" :name="'nameFile'+indexfile" @change="previewImage"
