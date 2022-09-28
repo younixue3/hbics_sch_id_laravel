@@ -34,7 +34,7 @@
                             <td class="py-1.5">
                                 <div class="flex spaxe-x-3 text-center h-full">
                                     @foreach($value->roles_user() as $key => $item)
-                                        <span class="bg-gray-200 text-xs rounded-md px-2 pb-0.5 m-auto">
+                                        <span class="bg-gray-200 rounded-md px-2 pb-0.5 m-auto">
                                             {{$item->roles()->name}}
                                         </span>
                                     @endforeach
