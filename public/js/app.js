@@ -24841,8 +24841,7 @@ var render = function () {
       _c(
         "div",
         {
-          staticClass:
-            "font-bold text-xl h-16 pr-2 md:pr-0 flex relative z-50 bg-gray-200",
+          staticClass: "font-bold text-xl h-16 pr-2 md:pr-0 flex relative z-50",
         },
         [
           _c(
@@ -24893,14 +24892,14 @@ var render = function () {
             _c(
               "div",
               {
-                staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                staticClass: "py-0.5 my-2 rounded-xl overflow-hidden truncate",
               },
               [
                 _c("a", { attrs: { href: _vm.dataurl["dashboard"] } }, [
                   _c(
                     "div",
                     {
-                      staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                      staticClass: "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
                       class:
                         _vm.livehref === _vm.dataurl["dashboard"]
                           ? "bg-gray-300"
@@ -24917,14 +24916,15 @@ var render = function () {
                   "div",
                   {
                     staticClass:
-                      "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                      "py-0.5 my-2 rounded-xl overflow-hidden truncate",
                   },
                   [
                     _c("a", { attrs: { href: _vm.dataurl["fasilitas"] } }, [
                       _c(
                         "div",
                         {
-                          staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                          staticClass:
+                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["fasilitas"]
                               ? "bg-gray-300"
@@ -24950,14 +24950,15 @@ var render = function () {
                   "div",
                   {
                     staticClass:
-                      "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                      "py-0.5 my-2 rounded-xl overflow-hidden truncate",
                   },
                   [
                     _c("a", { attrs: { href: _vm.dataurl["prestasi"] } }, [
                       _c(
                         "div",
                         {
-                          staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                          staticClass:
+                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["prestasi"]
                               ? "bg-gray-300"
@@ -24973,14 +24974,14 @@ var render = function () {
             _c(
               "div",
               {
-                staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                staticClass: "py-0.5 my-2 rounded-xl overflow-hidden truncate",
               },
               [
                 _c("a", { attrs: { href: _vm.dataurl["publikasi"] } }, [
                   _c(
                     "div",
                     {
-                      staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                      staticClass: "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
                       class:
                         _vm.livehref === _vm.dataurl["publikasi"]
                           ? "bg-gray-300"
@@ -24997,14 +24998,15 @@ var render = function () {
                   "div",
                   {
                     staticClass:
-                      "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                      "py-0.5 my-2 rounded-xl overflow-hidden truncate",
                   },
                   [
                     _c("a", { attrs: { href: _vm.dataurl["staff"] } }, [
                       _c(
                         "div",
                         {
-                          staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                          staticClass:
+                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["staff"]
                               ? "bg-gray-300"
@@ -25022,14 +25024,15 @@ var render = function () {
                   "div",
                   {
                     staticClass:
-                      "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                      "py-0.5 my-2 rounded-xl overflow-hidden truncate",
                   },
                   [
                     _c("a", { attrs: { href: _vm.dataurl["teacher-staff"] } }, [
                       _c(
                         "div",
                         {
-                          staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                          staticClass:
+                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["teacher-staff"]
                               ? "bg-gray-300"
@@ -25047,14 +25050,15 @@ var render = function () {
                   "div",
                   {
                     staticClass:
-                      "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                      "py-0.5 my-2 rounded-xl overflow-hidden truncate",
                   },
                   [
                     _c("a", { attrs: { href: _vm.dataurl["mailbox"] } }, [
                       _c(
                         "div",
                         {
-                          staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                          staticClass:
+                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["mailbox"]
                               ? "bg-gray-300"
@@ -25072,14 +25076,15 @@ var render = function () {
                   "div",
                   {
                     staticClass:
-                      "py-0.5 my-1 rounded-xl overflow-hidden truncate",
+                      "py-0.5 my-2 rounded-xl overflow-hidden truncate",
                   },
                   [
                     _c("a", { attrs: { href: _vm.dataurl["pages"] } }, [
                       _c(
                         "div",
                         {
-                          staticClass: "hover:bg-gray-200 px-2 pt-1 rounded-lg",
+                          staticClass:
+                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["pages"]
                               ? "bg-gray-300"
@@ -25221,14 +25226,14 @@ var render = function () {
   return _vm.is_admin
     ? _c(
         "div",
-        { staticClass: "py-0.5 my-1 rounded-xl overflow-hidden truncate" },
+        { staticClass: "py-0.5 my-2 rounded-xl overflow-hidden truncate" },
         [
           _c("div", [
             _c(
               "div",
               {
                 staticClass:
-                  "hover:bg-gray-200 px-2 pt-1 rounded-lg cursor-pointer",
+                  "hover:bg-gray-200 px-2 py-1.5 rounded-lg cursor-pointer",
                 class: this.livehref.split("/").includes("komunitas")
                   ? "bg-gray-300"
                   : "bg-gray-100",
