@@ -5,7 +5,7 @@
          :class="collapsed ? 'w-60 md:w-80 lg:w-80' : 'w-0 md:w-11 lg:w-11 md:hover:w-44'">
         <div class="font-bold text-xl h-16 pr-2 md:pr-0 flex relative z-50">
             <div class="flex transition-all ease-in-out duration-500" :class="collapsed ? 'w-full' : 'w-0'">
-                <img class="h-10 mx-2 my-auto" :src="logo_ytcb" alt="">
+                <img class="h-14 mx-2 my-auto" :src="logo_ytcb" alt="">
                 <img class="h-10 my-auto" :src="logo_hb" alt="">
             </div>
             <button @click="CloseBar()" type="button"

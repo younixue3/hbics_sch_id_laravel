@@ -24864,7 +24864,7 @@ var render = function () {
             },
             [
               _c("img", {
-                staticClass: "h-10 mx-2 my-auto",
+                staticClass: "h-14 mx-2 my-auto",
                 attrs: { src: _vm.logo_ytcb, alt: "" },
               }),
               _vm._v(" "),
