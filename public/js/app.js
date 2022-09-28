@@ -26340,20 +26340,7 @@ var render = function () {
           _c(
             "button",
             {
-              staticClass: "ml-1.5 w-3 h-3",
-              on: {
-                click: function ($event) {
-                  return _vm.closeit()
-                },
-              },
-            },
-            [_c("i", { staticClass: "text-sm fas fa-times" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "mx-0.5 w-3 h-3",
+              staticClass: "ml-1.5 mr-0.5 w-3 h-3",
               on: {
                 click: function ($event) {
                   return _vm.maximise()
@@ -26375,7 +26362,7 @@ var render = function () {
             },
             [_c("i", { staticClass: "text-xs fas fa-window-maximize" })]
           ),
-          _vm._v("\n    " + _vm._s(_vm.cardsname) + "\n    "),
+          _vm._v("\n        " + _vm._s(_vm.cardsname) + "\n        "),
           _c(
             "div",
             {

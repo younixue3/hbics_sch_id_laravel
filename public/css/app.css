@@ -749,6 +749,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mr-0{
   margin-right: 0px;
 }
+.mr-0\.5{
+  margin-right: 0.125rem;
+}
 .block{
   display: block;
 }
