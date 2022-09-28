@@ -4586,6 +4586,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -25096,6 +25108,14 @@ var render = function () {
                   ]
                 )
               : _vm._e(),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "py-0.5 my-2 rounded-xl overflow-hidden truncate",
+              },
+              [_c("a", { attrs: { href: _vm.dataurl["logout"] } }, [_vm._m(8)])]
+            ),
           ],
           1
         ),
@@ -25199,6 +25219,24 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("span", [_vm._v("Pages")]),
     ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "bg-gray-100 hover:bg-gray-200 px-2 py-1.5 rounded-lg" },
+      [
+        _c("div", { staticClass: "flex w-52" }, [
+          _c("div", { staticClass: "w-10" }, [
+            _c("i", { staticClass: "fa-solid fa-right-from-bracket mr-3" }),
+          ]),
+          _vm._v(" "),
+          _c("span", [_vm._v("Logout")]),
+        ]),
+      ]
+    )
   },
 ]
 render._withStripped = true

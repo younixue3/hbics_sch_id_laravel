@@ -22,7 +22,8 @@ class getUrlDashboard
             'teacher-staff' => route('dashboard.teacher_staff.index'),
             'event' => route('dashboard.event.index'),
             'mailbox' => route('dashboard.mailbox.index'),
-            'pages' => route('dashboard.pages.index')
+            'pages' => route('dashboard.pages.index'),
+            'logout' => route('logout')
         ];
         return response($url);
     }

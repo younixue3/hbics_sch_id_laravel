@@ -135,6 +135,18 @@
                         </div>
                     </a>
                 </div>
+                <div class="py-0.5 my-2 rounded-xl overflow-hidden truncate">
+                    <a :href="dataurl['logout']">
+                        <div class="bg-gray-100 hover:bg-gray-200 px-2 py-1.5 rounded-lg">
+                            <div class="flex w-52">
+                                <div class="w-10">
+                                    <i class="fa-solid fa-right-from-bracket mr-3"></i>
+                                </div>
+                                <span>Logout</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@ Auth::routes();
 Route::get('/logout', function () {
     Auth::logout();
     return redirect('/');
-});
+})->name('logout');
 
 //FrontPage
 ///////////Home
