@@ -1,6 +1,6 @@
 <template>
     <div id="mobile-menu"
-         class="h-full md:h-auto text-gray-800 z-40 fixed duration-300 bg-blue-900 shadow-md md:static"
+         class="h-full md:h-auto text-gray-800 z-40 fixed duration-300 bg-blue-900 px-2 shadow-md md:static"
          @mouseenter="CollapsedHover()" @mouseleave="CollapsedHover()"
          :class="collapsed ? 'w-60 md:w-80 lg:w-80' : 'w-0 md:w-11 lg:w-11 md:hover:w-44'">
         <div class="font-bold text-xl h-16 pr-2 md:pr-0 flex relative z-50">

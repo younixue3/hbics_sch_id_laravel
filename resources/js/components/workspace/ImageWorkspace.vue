@@ -57,6 +57,7 @@ export default {
             if (this.$store.state.workspace.items[this.$props.index].type === 'image' || this.$store.state.workspace.items[this.$props.index].type === 'video') {
                 var name = this.$store.state.workspace.items[this.$props.index].content.file
                 var filename = '/' + name
+                console.log(filename)
                 this.filename = this.urlasset + filename
                 const preview = this.$refs.previewimg
                 preview.src = this.filename

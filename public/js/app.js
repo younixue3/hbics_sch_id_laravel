@@ -8096,6 +8096,7 @@ __webpack_require__.r(__webpack_exports__);
       if (this.$store.state.workspace.items[this.$props.index].type === 'image' || this.$store.state.workspace.items[this.$props.index].type === 'video') {
         var name = this.$store.state.workspace.items[this.$props.index].content.file;
         var filename = '/' + name;
+        console.log(filename);
         this.filename = this.urlasset + filename;
         var preview = this.$refs.previewimg;
         preview.src = this.filename;
@@ -24835,7 +24836,7 @@ var render = function () {
     "div",
     {
       staticClass:
-        "h-full md:h-auto text-gray-800 z-40 fixed duration-300 bg-blue-900 shadow-md md:static",
+        "h-full md:h-auto text-gray-800 z-40 fixed duration-300 bg-blue-900 px-2 shadow-md md:static",
       class: _vm.collapsed
         ? "w-60 md:w-80 lg:w-80"
         : "w-0 md:w-11 lg:w-11 md:hover:w-44",
