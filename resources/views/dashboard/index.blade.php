@@ -88,7 +88,7 @@
                 <tr>
                     <th>No</th>
                     <th>Article Id</th>
-                    <th>Title</th>
+                    <th class="w-96">Title</th>
                     <th>Status</th>
                     <th>Author</th>
                     <th>Date</th>
