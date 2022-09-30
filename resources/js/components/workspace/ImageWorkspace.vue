@@ -19,8 +19,11 @@
             </div>
         </div>
         <div class="p-5">
-            <img ref="previewimg" class="w-full object-cover rounded-3xl" :alt="this.$store.state.workspace.items[index].content.alt"
+            <img ref="previewimg" class="w-full object-cover rounded-3xl" v-if="this.$props.content.file" :alt="this.$store.state.workspace.items[index].content.alt"
                  :class="inputMode === false ? 'h-96' : 'h-32 border border-black'" @dblclick="inputOn">
+            <div class="w-full flex h-60 bg-gray-200 rounded-3xl border border-black'">
+                <i class="fa-regular fa-image m-auto text-center text-white text-6xl"></i>
+            </div>
             <div class="flex mt-3">
                 <label>Alt Image Text : </label>
                 <input class="ml-2 rounded-md px-2 border focus:border-sky-500 outline-none" type="text" name="alt" v-model="$store.state.workspace.items[index].content.alt">
@@ -57,8 +60,11 @@ export default {
             if (this.$store.state.workspace.items[this.$props.index].type === 'image' || this.$store.state.workspace.items[this.$props.index].type === 'video') {
                 var name = this.$store.state.workspace.items[this.$props.index].content.file
                 var filename = '/' + name
-                console.log(filename)
-                this.filename = this.urlasset + filename
+                if (name) {
+                    this.filename = this.urlasset + filename
+                } else {
+                    this.filename = 'http://127.0.0.1:8000/assets/logo/63204d38-9f57-4358-9bf7-77538c56ccf4.png'
+                }
                 const preview = this.$refs.previewimg
                 preview.src = this.filename
             }

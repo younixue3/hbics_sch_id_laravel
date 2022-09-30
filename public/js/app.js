@@ -8073,6 +8073,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -8096,8 +8099,13 @@ __webpack_require__.r(__webpack_exports__);
       if (this.$store.state.workspace.items[this.$props.index].type === 'image' || this.$store.state.workspace.items[this.$props.index].type === 'video') {
         var name = this.$store.state.workspace.items[this.$props.index].content.file;
         var filename = '/' + name;
-        console.log(filename);
-        this.filename = this.urlasset + filename;
+
+        if (name) {
+          this.filename = this.urlasset + filename;
+        } else {
+          this.filename = 'http://127.0.0.1:8000/assets/logo/63204d38-9f57-4358-9bf7-77538c56ccf4.png';
+        }
+
         var preview = this.$refs.previewimg;
         preview.src = this.filename;
       }
@@ -8901,8 +8909,8 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('workspace-pages-output-fu
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].use((v_click_outside__WEBPACK_IMPORTED_MODULE_0___default()));
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].config.devtools = false;
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].use((v_click_outside__WEBPACK_IMPORTED_MODULE_0___default())); // Vue.config.devtools = false
+
 var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
   el: '#app',
   store: store,
@@ -31081,15 +31089,20 @@ var render = function () {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "p-5" }, [
-      _c("img", {
-        ref: "previewimg",
-        staticClass: "w-full object-cover rounded-3xl",
-        class: _vm.inputMode === false ? "h-96" : "h-32 border border-black",
-        attrs: {
-          alt: this.$store.state.workspace.items[_vm.index].content.alt,
-        },
-        on: { dblclick: _vm.inputOn },
-      }),
+      this.$props.content.file
+        ? _c("img", {
+            ref: "previewimg",
+            staticClass: "w-full object-cover rounded-3xl",
+            class:
+              _vm.inputMode === false ? "h-96" : "h-32 border border-black",
+            attrs: {
+              alt: this.$store.state.workspace.items[_vm.index].content.alt,
+            },
+            on: { dblclick: _vm.inputOn },
+          })
+        : _vm._e(),
+      _vm._v(" "),
+      _vm._m(1),
       _vm._v(" "),
       _c("div", { staticClass: "flex mt-3" }, [
         _c("label", [_vm._v("Alt Image Text : ")]),
@@ -31158,6 +31171,24 @@ var staticRenderFns = [
     return _c("div", { staticClass: "m-auto" }, [
       _c("i", { staticClass: "fa-solid fa-gear" }),
     ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-full flex h-60 bg-gray-200 rounded-3xl border border-black'",
+      },
+      [
+        _c("i", {
+          staticClass:
+            "fa-regular fa-image m-auto text-center text-white text-6xl",
+        }),
+      ]
+    )
   },
 ]
 render._withStripped = true
