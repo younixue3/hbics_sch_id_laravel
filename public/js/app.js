@@ -8550,6 +8550,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -31824,20 +31827,44 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "relative" }, [
-    _c("img", {
-      ref: "previewimg",
-      staticClass: "w-full object-cover rounded-3xl h-96",
-      attrs: {
-        src:
-          this.urlasset +
-          "/" +
-          this.$store.state.workspace.items[_vm.index].content.file,
-        alt: this.$store.state.workspace.items[this.$props.index].content.alt,
-      },
-    }),
+    this.$props.content.file
+      ? _c("img", {
+          ref: "previewimg",
+          staticClass: "w-full object-cover rounded-3xl h-96",
+          attrs: {
+            src:
+              this.urlasset +
+              "/" +
+              this.$store.state.workspace.items[_vm.index].content.file,
+            alt: this.$store.state.workspace.items[this.$props.index].content
+              .alt,
+          },
+        })
+      : _vm._e(),
+    _vm._v(" "),
+    _vm._m(0),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "w-full flex h-96 bg-gray-200 rounded-3xl border border-black'",
+      },
+      [
+        _c("i", {
+          staticClass:
+            "fa-regular fa-image m-auto text-center text-white text-6xl",
+        }),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
