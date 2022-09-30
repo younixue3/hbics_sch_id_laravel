@@ -99,7 +99,7 @@
                     <tr class="border-b-2 border-gray-200 h-10">
                         <td class="text-center">{{$value->id}}</td>
                         <td class="px-3"><a class="text-blue-500" href="{{route('dashboard.publikasi.edit', $value->randKey)}}">{{$value->randKey}}</a></td>
-                        <td class="truncate">{{$value->title}}</td>
+                        <td class="w-96 truncate">{{$value->title}}</td>
                         <td class="py-1 flex">
                             @if($value->status === 'publish')
                                 <span
