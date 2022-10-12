@@ -174,18 +174,6 @@ export default {
         logo_ytcb: String
     },
     created() {
-        // this.allNotifications = window.user.user.notifications:
-        //
-        // Echo.join('chat.${roomId}')
-        //     .here((users) => {
-        //
-        //     })
-        //     .joining((user) => {
-        //         console.log(user.name)
-        //     })
-        //     .leaving((user) => {
-        //         console.log(user.name)
-        //     })
 
         window.addEventListener('scroll', this.handleScroll);
         axios

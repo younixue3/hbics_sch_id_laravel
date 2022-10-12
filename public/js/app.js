@@ -4620,18 +4620,6 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    // this.allNotifications = window.user.user.notifications:
-    //
-    // Echo.join('chat.${roomId}')
-    //     .here((users) => {
-    //
-    //     })
-    //     .joining((user) => {
-    //         console.log(user.name)
-    //     })
-    //     .leaving((user) => {
-    //         console.log(user.name)
-    //     })
     window.addEventListener('scroll', this.handleScroll);
     axios__WEBPACK_IMPORTED_MODULE_0___default().get(this.windowspath + 'api/getUrlDashboard').then(function (response) {
       return _this.dataurl = response.data.original;
