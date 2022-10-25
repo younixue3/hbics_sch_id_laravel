@@ -87,6 +87,7 @@ Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(functi
     Route::resource('teacher_staff', \App\Http\Controllers\Dashboard\TeacherStaffController::class);
     Route::resource('mailbox', \App\Http\Controllers\Dashboard\MailboxController::class);
     Route::resource('pages', \App\Http\Controllers\Dashboard\PagesController::class);
+    Route::resource('filosofi-karya', \App\Http\Controllers\Dashboard\FilosofiKaryaController::class);
     Route::get('/mailbox/sent/mail', [App\Http\Controllers\Dashboard\MailboxController::class, 'sent_index'])->name('mailbox.sent');
 //    Route::get('/send-mail', [\App\Mail\HbicsMail::class, 'build'])->name('send.mail');
     Route::get('/send-mailbox/{id}', [\App\Http\Controllers\Mail\MailController::class, 'mailbox'])->name('send.mailbox');

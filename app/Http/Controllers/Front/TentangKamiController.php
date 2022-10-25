@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Helper\getUrl;
 use App\Http\Controllers\Controller;
+use App\Models\FilosofiKarya;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Front\Data\TentangKamiController as DataController;
 
@@ -42,7 +43,9 @@ class TentangKamiController extends Controller
 
     public function filosofiPendidikan()
     {
-        return view('front.tentangKami.filosofiPendidikan.index');
+        $pages = FilosofiKarya::all()->last();
+        $compact = compact('pages');
+        return view('front.tentangKami.filosofiPendidikan.index', $compact);
     }
 
     public function metodePembelajaran()
