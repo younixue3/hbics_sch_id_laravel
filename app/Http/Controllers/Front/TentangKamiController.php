@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Front;
 use App\Helper\getUrl;
 use App\Http\Controllers\Controller;
 use App\Models\FilosofiKarya;
+use App\Models\Sejarah;
+use App\Models\VisiMisi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Front\Data\TentangKamiController as DataController;
 
@@ -32,12 +34,16 @@ class TentangKamiController extends Controller
 
     public function sejarah()
     {
-        return view('front.tentangKami.sejarah.index');
+        $pages = Sejarah::all()->last();
+        $compact = compact('pages');
+        return view('front.tentangKami.sejarah.index', $compact);
     }
 
     public function visiMisi()
     {
-        return view('front.tentangKami.visiMisi.index');
+        $pages = VisiMisi::all()->last();
+        $compact = compact('pages');
+        return view('front.tentangKami.visiMisi.index', $compact);
     }
 
 

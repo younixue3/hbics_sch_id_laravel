@@ -24708,7 +24708,21 @@ var render = function () {
           })
         : _vm._e(),
       _vm._v(" "),
-      _vm._m(1),
+      !_vm.urlasset
+        ? _c(
+            "div",
+            {
+              staticClass:
+                "w-full flex h-60 bg-gray-200 rounded-3xl border border-black'",
+            },
+            [
+              _c("i", {
+                staticClass:
+                  "fa-regular fa-image m-auto text-center text-white text-6xl",
+              }),
+            ]
+          )
+        : _vm._e(),
       _vm._v(" "),
       _c("div", { staticClass: "flex mt-3" }, [
         _c("label", [_vm._v("Alt Image Text : ")]),
@@ -24777,24 +24791,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "m-auto" }, [
       _c("i", { staticClass: "fa-solid fa-gear" }),
     ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-full flex h-60 bg-gray-200 rounded-3xl border border-black'",
-      },
-      [
-        _c("i", {
-          staticClass:
-            "fa-regular fa-image m-auto text-center text-white text-6xl",
-        }),
-      ]
-    )
   },
 ]
 render._withStripped = true
@@ -25445,29 +25441,24 @@ var render = function () {
         })
       : _vm._e(),
     _vm._v(" "),
-    _vm._m(0),
+    !this.$props.content.file
+      ? _c(
+          "div",
+          {
+            staticClass:
+              "w-full flex h-96 bg-gray-200 rounded-3xl border border-black'",
+          },
+          [
+            _c("i", {
+              staticClass:
+                "fa-regular fa-image m-auto text-center text-white text-6xl",
+            }),
+          ]
+        )
+      : _vm._e(),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-full flex h-96 bg-gray-200 rounded-3xl border border-black'",
-      },
-      [
-        _c("i", {
-          staticClass:
-            "fa-regular fa-image m-auto text-center text-white text-6xl",
-        }),
-      ]
-    )
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

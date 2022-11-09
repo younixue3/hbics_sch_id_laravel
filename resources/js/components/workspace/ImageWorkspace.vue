@@ -21,7 +21,7 @@
         <div class="p-5">
             <img ref="previewimg" class="w-full object-cover rounded-3xl" v-if="this.$props.content.file" :alt="this.$store.state.workspace.items[index].content.alt"
                  :class="inputMode === false ? 'h-96' : 'h-32 border border-black'" @dblclick="inputOn">
-            <div class="w-full flex h-60 bg-gray-200 rounded-3xl border border-black'">
+            <div v-if="!urlasset" class="w-full flex h-60 bg-gray-200 rounded-3xl border border-black'">
                 <i class="fa-regular fa-image m-auto text-center text-white text-6xl"></i>
             </div>
             <div class="flex mt-3">
