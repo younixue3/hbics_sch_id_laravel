@@ -23,7 +23,7 @@ class FilosofiKaryaController extends Controller
     {
         $pages = $this->data->get_data();
 //        dd($pages);
-        return view('dashboard.tentangKami.index', $pages);
+        return view('dashboard.tentangkami.index', $pages);
     }
 
     /**
