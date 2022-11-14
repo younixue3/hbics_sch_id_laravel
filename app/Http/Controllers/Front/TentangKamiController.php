@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Helper\getUrl;
 use App\Http\Controllers\Controller;
 use App\Models\FilosofiKarya;
+use App\Models\MetodePembelajaran;
 use App\Models\Sejarah;
 use App\Models\VisiMisi;
 use Illuminate\Http\Request;
@@ -56,7 +57,9 @@ class TentangKamiController extends Controller
 
     public function metodePembelajaran()
     {
-        return view('front.tentangKami.metodePembelajaran.index');
+        $pages = MetodePembelajaran::all()->last();
+        $compact = compact('pages');
+        return view('front.tentangKami.metodePembelajaran.index', $compact);
     }
 
     public function fasilitas()

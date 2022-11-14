@@ -1446,10 +1446,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-transparent{
   border-color: transparent;
 }
-.border-yellow-600{
-  --tw-border-opacity: 1;
-  border-color: rgb(202 138 4 / var(--tw-border-opacity));
-}
 .border-sky-600{
   --tw-border-opacity: 1;
   border-color: rgb(2 132 199 / var(--tw-border-opacity));
@@ -1561,10 +1557,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-yellow-200{
   --tw-bg-opacity: 1;
   background-color: rgb(254 240 138 / var(--tw-bg-opacity));
-}
-.bg-yellow-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
 }
 .bg-transparent{
   background-color: transparent;
@@ -1781,9 +1773,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-0\.5{
   padding: 0.125rem;
 }
-.p-20{
-  padding: 5rem;
-}
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1856,10 +1845,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0px;
   padding-bottom: 0px;
 }
-.px-20{
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
 .px-12{
   padding-left: 3rem;
   padding-right: 3rem;
@@ -1875,6 +1860,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-32{
   padding-left: 8rem;
   padding-right: 8rem;
+}
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 .py-8{
   padding-top: 2rem;
@@ -2944,9 +2933,6 @@ h6{
   .md\:m-auto{
     margin: auto;
   }
-  .md\:m-10{
-    margin: 2.5rem;
-  }
   .md\:my-10{
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
@@ -2966,10 +2952,6 @@ h6{
   .md\:mx-32{
     margin-left: 8rem;
     margin-right: 8rem;
-  }
-  .md\:my-0{
-    margin-top: 0px;
-    margin-bottom: 0px;
   }
   .md\:mx-2{
     margin-left: 0.5rem;
@@ -3193,10 +3175,6 @@ h6{
   .md\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-  }
-  .md\:px-52{
-    padding-left: 13rem;
-    padding-right: 13rem;
   }
   .md\:px-40{
     padding-left: 10rem;

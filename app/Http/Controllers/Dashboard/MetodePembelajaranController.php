@@ -3,10 +3,17 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Dashboard\Data\MetodePembelajaranController as DataController;
 use Illuminate\Http\Request;
 
 class MetodePembelajaranController extends Controller
 {
+    public function __construct(DataController $data)
+    {
+        $this->data = $data;
+        $this->middleware(['admin']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,8 @@ class MetodePembelajaranController extends Controller
      */
     public function index()
     {
-        //
+        $pages = $this->data->get_data();
+        return view('dashboard.metodepembelajaran.edit', $pages);
     }
 
     /**
@@ -35,7 +43,8 @@ class MetodePembelajaranController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $this->data->store_data($request);
+        return redirect(route('dashboard.metode-pembelajaran.index'))->with('success', 'Update Data Successfully');
     }
 
     /**

@@ -4,22 +4,96 @@
     <button-add-function add_req="{{route('dashboard.pages.store')}}"></button-add-function>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-5 my-5 h-[50rem]">
         @forelse($pages as $key => $value)
+            <div class="rounded-2xl bg-white overflow-hidden">
+                <div class="grid grid-rows-5 h-full">
+                    <img class="row-span-2 w-full h-full object-cover"
+                         src="{{asset('assets/stock_photo_rdev/cambridge.webp')}}">
+                    <div class="row-span-3 w-full h-full p-5">
+                        <h3>{{$value->name}}</h3>
+                        <h4 class="text-sm italic font-normal">{{'/'.$value->url}}</h4>
+                        <div class="mt-5 grid grid-cols-3 gap-2 w-28">
+                            <a href="{{route($value->url, $value->id)}}"
+                               class="w-8 h-8 flex bg-green-400 text-white text-lg font-semibold rounded-lg"><i
+                                    class="fas fa-eye m-auto text-sm"></i></a>
+                            <a href="{{route('dashboard.pages.edit', $value->id)}}"
+                               class="w-8 h-8 flex bg-amber-400 text-white text-lg font-semibold rounded-lg"><i
+                                    class="fas fa-edit m-auto text-sm"></i></a>
+                            <button-delete-pages-function
+                                delete_req="{{route('dashboard.pages.destroy', $value->id)}}"></button-delete-pages-function>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @empty
+        @endforelse
         <div class="rounded-2xl bg-white overflow-hidden">
             <div class="grid grid-rows-5 h-full">
-                <img class="row-span-2 w-full h-full object-cover" src="{{asset('assets/stock_photo_rdev/cambridge.webp')}}">
+                <img class="row-span-2 w-full h-full object-cover"
+                     src="{{asset('assets/stock_photo_rdev/cambridge.webp')}}">
                 <div class="row-span-3 w-full h-full p-5">
-                    <h3>{{$value->name}}</h3>
-                    <h4 class="text-sm italic font-normal">{{'/'.$value->url}}</h4>
+                    <h3>Filosofi Karya</h3>
                     <div class="mt-5 grid grid-cols-3 gap-2 w-28">
-                        <a href="{{route($value->url, $value->id)}}" class="w-8 h-8 flex bg-green-400 text-white text-lg font-semibold rounded-lg"><i class="fas fa-eye m-auto text-sm"></i></a>
-                        <a href="{{route('dashboard.pages.edit', $value->id)}}" class="w-8 h-8 flex bg-amber-400 text-white text-lg font-semibold rounded-lg"><i class="fas fa-edit m-auto text-sm"></i></a>
-                        <button-delete-pages-function delete_req="{{route('dashboard.pages.destroy', $value->id)}}"></button-delete-pages-function>
+                        <a href="{{route('filosofi-pendidikan')}}"
+                           class="w-8 h-8 flex bg-green-400 text-white text-lg font-semibold rounded-lg"><i
+                                class="fas fa-eye m-auto text-sm"></i></a>
+                        <a href="{{route('dashboard.filosofi-karya.index')}}"
+                           class="w-8 h-8 flex bg-amber-400 text-white text-lg font-semibold rounded-lg"><i
+                                class="fas fa-edit m-auto text-sm"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        @empty
-        @endforelse
+        <div class="rounded-2xl bg-white overflow-hidden">
+            <div class="grid grid-rows-5 h-full">
+                <img class="row-span-2 w-full h-full object-cover"
+                     src="{{asset('assets/stock_photo_rdev/cambridge.webp')}}">
+                <div class="row-span-3 w-full h-full p-5">
+                    <h3>Sejarah</h3>
+                    <div class="mt-5 grid grid-cols-3 gap-2 w-28">
+                        <a href="{{route('sejarah')}}"
+                           class="w-8 h-8 flex bg-green-400 text-white text-lg font-semibold rounded-lg"><i
+                                class="fas fa-eye m-auto text-sm"></i></a>
+                        <a href="{{route('dashboard.sejarah.index')}}"
+                           class="w-8 h-8 flex bg-amber-400 text-white text-lg font-semibold rounded-lg"><i
+                                class="fas fa-edit m-auto text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rounded-2xl bg-white overflow-hidden">
+            <div class="grid grid-rows-5 h-full">
+                <img class="row-span-2 w-full h-full object-cover"
+                     src="{{asset('assets/stock_photo_rdev/cambridge.webp')}}">
+                <div class="row-span-3 w-full h-full p-5">
+                    <h3>Visi Misi</h3>
+                    <div class="mt-5 grid grid-cols-3 gap-2 w-28">
+                        <a href="{{route('visi-misi')}}"
+                           class="w-8 h-8 flex bg-green-400 text-white text-lg font-semibold rounded-lg"><i
+                                class="fas fa-eye m-auto text-sm"></i></a>
+                        <a href="{{route('dashboard.visi-misi.index')}}"
+                           class="w-8 h-8 flex bg-amber-400 text-white text-lg font-semibold rounded-lg"><i
+                                class="fas fa-edit m-auto text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rounded-2xl bg-white overflow-hidden">
+            <div class="grid grid-rows-5 h-full">
+                <img class="row-span-2 w-full h-full object-cover"
+                     src="{{asset('assets/stock_photo_rdev/cambridge.webp')}}">
+                <div class="row-span-3 w-full h-full p-5">
+                    <h3>Metode Pembelajaran</h3>
+                    <div class="mt-5 grid grid-cols-3 gap-2 w-28">
+                        <a href="{{route('metode-pembelajaran')}}"
+                           class="w-8 h-8 flex bg-green-400 text-white text-lg font-semibold rounded-lg"><i
+                                class="fas fa-eye m-auto text-sm"></i></a>
+                        <a href="{{route('dashboard.metode-pembelajaran.index')}}"
+                           class="w-8 h-8 flex bg-amber-400 text-white text-lg font-semibold rounded-lg"><i
+                                class="fas fa-edit m-auto text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
 @section('modalShow')
