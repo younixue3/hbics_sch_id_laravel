@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard\Data;
 use App\Http\Controllers\Controller;
 use App\Models\MetodePembelajaran;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MetodePembelajaranController extends Controller
 {
