@@ -18400,7 +18400,7 @@ var render = function () {
         "h-full md:h-auto text-gray-800 z-40 fixed duration-300 bg-blue-900 px-2 shadow-md md:static",
       class: _vm.collapsed
         ? "w-60 md:w-80 lg:w-80"
-        : "w-0 md:w-11 lg:w-11 md:hover:w-44",
+        : "w-0 md:w-16 lg:w-16 md:hover:w-44",
       attrs: { id: "mobile-menu" },
       on: {
         mouseenter: function ($event) {
@@ -18473,7 +18473,7 @@ var render = function () {
                   _c(
                     "div",
                     {
-                      staticClass: "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
+                      staticClass: "hover:bg-gray-200 px-1 py-1.5 rounded-lg",
                       class:
                         _vm.livehref === _vm.dataurl["dashboard"]
                           ? "bg-gray-300"
@@ -18498,7 +18498,7 @@ var render = function () {
                         "div",
                         {
                           staticClass:
-                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
+                            "hover:bg-gray-200 px-1 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["fasilitas"]
                               ? "bg-gray-300"
@@ -18532,7 +18532,7 @@ var render = function () {
                         "div",
                         {
                           staticClass:
-                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
+                            "hover:bg-gray-200 px-1 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["prestasi"]
                               ? "bg-gray-300"
@@ -18555,7 +18555,7 @@ var render = function () {
                   _c(
                     "div",
                     {
-                      staticClass: "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
+                      staticClass: "hover:bg-gray-200 px-1 py-1.5 rounded-lg",
                       class:
                         _vm.livehref === _vm.dataurl["publikasi"]
                           ? "bg-gray-300"
@@ -18580,7 +18580,7 @@ var render = function () {
                         "div",
                         {
                           staticClass:
-                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
+                            "hover:bg-gray-200 px-1 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["staff"]
                               ? "bg-gray-300"
@@ -18606,7 +18606,7 @@ var render = function () {
                         "div",
                         {
                           staticClass:
-                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
+                            "hover:bg-gray-200 px-1 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["teacher-staff"]
                               ? "bg-gray-300"
@@ -18632,7 +18632,7 @@ var render = function () {
                         "div",
                         {
                           staticClass:
-                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
+                            "hover:bg-gray-200 px-1 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["mailbox"]
                               ? "bg-gray-300"
@@ -18658,7 +18658,7 @@ var render = function () {
                         "div",
                         {
                           staticClass:
-                            "hover:bg-gray-200 px-2 py-1.5 rounded-lg",
+                            "hover:bg-gray-200 px-1 py-1.5 rounded-lg",
                           class:
                             _vm.livehref === _vm.dataurl["pages"]
                               ? "bg-gray-300"
@@ -18691,8 +18691,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex w-52" }, [
-      _c("div", { staticClass: "w-10" }, [
-        _c("i", { staticClass: "fa-solid fa-gauge-high mr-3" }),
+      _c("div", { staticClass: "w-8 flex mr-2" }, [
+        _c("i", { staticClass: "m-auto fa-solid fa-gauge-high" }),
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("Dashboard")]),
@@ -18703,8 +18703,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex w-52" }, [
-      _c("div", { staticClass: "w-10" }, [
-        _c("i", { staticClass: "fa-solid fa-images mr-3" }),
+      _c("div", { staticClass: "w-8 flex mr-2" }, [
+        _c("i", { staticClass: "m-auto fa-solid fa-images" }),
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("Fasilitas")]),
@@ -18715,8 +18715,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex w-52" }, [
-      _c("div", { staticClass: "w-10" }, [
-        _c("i", { staticClass: "fa-solid fa-award mr-3" }),
+      _c("div", { staticClass: "w-8 flex mr-2" }, [
+        _c("i", { staticClass: "m-auto fa-solid fa-award" }),
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("Prestasi")]),
@@ -18727,8 +18727,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex w-52" }, [
-      _c("div", { staticClass: "w-10" }, [
-        _c("i", { staticClass: "fa-solid fa-newspaper mr-3" }),
+      _c("div", { staticClass: "w-8 flex mr-2" }, [
+        _c("i", { staticClass: "m-auto fa-solid fa-newspaper" }),
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("Publikasi")]),
@@ -18739,8 +18739,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex w-52" }, [
-      _c("div", { staticClass: "w-10" }, [
-        _c("i", { staticClass: "fa-solid fa-id-badge mr-3" }),
+      _c("div", { staticClass: "w-8 flex mr-2" }, [
+        _c("i", { staticClass: "m-auto fa-solid fa-id-badge" }),
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("User")]),
@@ -18751,8 +18751,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex w-52" }, [
-      _c("div", { staticClass: "w-10" }, [
-        _c("i", { staticClass: "fa-solid fa-id-badge mr-3" }),
+      _c("div", { staticClass: "w-8 flex mr-2" }, [
+        _c("i", { staticClass: "m-auto fa-solid fa-id-badge" }),
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("Teacher & Staff")]),
@@ -18763,8 +18763,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex w-52" }, [
-      _c("div", { staticClass: "w-10" }, [
-        _c("i", { staticClass: "fas fa-mail-bulk mr-3" }),
+      _c("div", { staticClass: "w-8 flex mr-2" }, [
+        _c("i", { staticClass: "m-auto fas fa-mail-bulk" }),
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("Mailbox")]),
@@ -18775,8 +18775,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "flex w-52" }, [
-      _c("div", { staticClass: "w-10" }, [
-        _c("i", { staticClass: "fa-solid fa-window-restore mr-3" }),
+      _c("div", { staticClass: "w-8 flex mr-2" }, [
+        _c("i", { staticClass: "m-auto fa-solid fa-window-restore" }),
       ]),
       _vm._v(" "),
       _c("span", [_vm._v("Pages")]),
@@ -18788,11 +18788,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "bg-gray-100 hover:bg-gray-200 px-2 py-1.5 rounded-lg" },
+      { staticClass: "bg-gray-100 hover:bg-gray-200 px-1 py-1.5 rounded-lg" },
       [
         _c("div", { staticClass: "flex w-52" }, [
-          _c("div", { staticClass: "w-10" }, [
-            _c("i", { staticClass: "fa-solid fa-right-from-bracket mr-3" }),
+          _c("div", { staticClass: "w-8 flex mr-2" }, [
+            _c("i", { staticClass: "m-auto fa-solid fa-right-from-bracket" }),
           ]),
           _vm._v(" "),
           _c("span", [_vm._v("Logout")]),

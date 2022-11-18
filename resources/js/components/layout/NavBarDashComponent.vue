@@ -2,7 +2,7 @@
     <div id="mobile-menu"
          class="h-full md:h-auto text-gray-800 z-40 fixed duration-300 bg-blue-900 px-2 shadow-md md:static"
          @mouseenter="CollapsedHover()" @mouseleave="CollapsedHover()"
-         :class="collapsed ? 'w-60 md:w-80 lg:w-80' : 'w-0 md:w-11 lg:w-11 md:hover:w-44'">
+         :class="collapsed ? 'w-60 md:w-80 lg:w-80' : 'w-0 md:w-16 lg:w-16 md:hover:w-44'">
         <div class="font-bold text-xl h-16 pr-2 md:pr-0 flex relative z-50">
             <div class="flex transition-all ease-in-out duration-500" :class="collapsed ? 'w-full' : 'w-0'">
                 <img class="h-14 mx-2 my-auto" :src="logo_ytcb" alt="">
@@ -18,11 +18,11 @@
             <div class="py-5 px-1 py-2">
                 <div class="py-0.5 my-2 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['dashboard']">
-                        <div class="hover:bg-gray-200 px-2 py-1.5 rounded-lg"
+                        <div class="hover:bg-gray-200 px-1 py-1.5 rounded-lg"
                              :class="livehref === dataurl['dashboard'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-10">
-                                    <i class="fa-solid fa-gauge-high mr-3"></i>
+                                <div class="w-8 flex mr-2">
+                                    <i class="m-auto fa-solid fa-gauge-high"></i>
                                 </div>
                                 <span>Dashboard</span>
                             </div>
@@ -31,11 +31,11 @@
                 </div>
                 <div v-if="is_admin === 'true'" class="py-0.5 my-2 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['fasilitas']">
-                        <div class="hover:bg-gray-200 px-2 py-1.5 rounded-lg"
+                        <div class="hover:bg-gray-200 px-1 py-1.5 rounded-lg"
                              :class="livehref === dataurl['fasilitas'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-10">
-                                    <i class="fa-solid fa-images mr-3"></i>
+                                <div class="w-8 flex mr-2">
+                                    <i class="m-auto fa-solid fa-images"></i>
                                 </div>
                                 <span>Fasilitas</span>
                             </div>
@@ -46,11 +46,11 @@
                                        :url="dataurl['komunitas']"></nav-bar-dash-dropdown>
                 <div v-if="is_admin === 'true'" class="py-0.5 my-2 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['prestasi']">
-                        <div class="hover:bg-gray-200 px-2 py-1.5 rounded-lg"
+                        <div class="hover:bg-gray-200 px-1 py-1.5 rounded-lg"
                              :class="livehref === dataurl['prestasi'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-10">
-                                    <i class="fa-solid fa-award mr-3"></i>
+                                <div class="w-8 flex mr-2">
+                                    <i class="m-auto fa-solid fa-award"></i>
                                 </div>
                                 <span>Prestasi</span>
                             </div>
@@ -59,11 +59,11 @@
                 </div>
                 <div class="py-0.5 my-2 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['publikasi']">
-                        <div class="hover:bg-gray-200 px-2 py-1.5 rounded-lg"
+                        <div class="hover:bg-gray-200 px-1 py-1.5 rounded-lg"
                              :class="livehref === dataurl['publikasi'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-10">
-                                    <i class="fa-solid fa-newspaper mr-3"></i>
+                                <div class="w-8 flex mr-2">
+                                    <i class="m-auto fa-solid fa-newspaper"></i>
                                 </div>
                                 <span>Publikasi</span>
                             </div>
@@ -72,11 +72,11 @@
                 </div>
                 <div v-if="is_admin === 'true'" class="py-0.5 my-2 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['staff']">
-                        <div class="hover:bg-gray-200 px-2 py-1.5 rounded-lg"
+                        <div class="hover:bg-gray-200 px-1 py-1.5 rounded-lg"
                              :class="livehref === dataurl['staff'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-10">
-                                    <i class="fa-solid fa-id-badge mr-3"></i>
+                                <div class="w-8 flex mr-2">
+                                    <i class="m-auto fa-solid fa-id-badge"></i>
                                 </div>
                                 <span>User</span>
                             </div>
@@ -85,11 +85,11 @@
                 </div>
                 <div v-if="is_admin === 'true'" class="py-0.5 my-2 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['teacher-staff']">
-                        <div class="hover:bg-gray-200 px-2 py-1.5 rounded-lg"
+                        <div class="hover:bg-gray-200 px-1 py-1.5 rounded-lg"
                              :class="livehref === dataurl['teacher-staff'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-10">
-                                    <i class="fa-solid fa-id-badge mr-3"></i>
+                                <div class="w-8 flex mr-2">
+                                    <i class="m-auto fa-solid fa-id-badge"></i>
                                 </div>
                                 <span>Teacher & Staff</span>
                             </div>
@@ -111,11 +111,11 @@
 <!--                </div>-->
                 <div v-if="is_admin === 'true'" class="py-0.5 my-2 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['mailbox']">
-                        <div class="hover:bg-gray-200 px-2 py-1.5 rounded-lg"
+                        <div class="hover:bg-gray-200 px-1 py-1.5 rounded-lg"
                              :class="livehref === dataurl['mailbox'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-10">
-                                    <i class="fas fa-mail-bulk mr-3"></i>
+                                <div class="w-8 flex mr-2">
+                                    <i class="m-auto fas fa-mail-bulk"></i>
                                 </div>
                                 <span>Mailbox</span>
                             </div>
@@ -124,11 +124,11 @@
                 </div>
                 <div v-if="is_admin === 'true'" class="py-0.5 my-2 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['pages']">
-                        <div class="hover:bg-gray-200 px-2 py-1.5 rounded-lg"
+                        <div class="hover:bg-gray-200 px-1 py-1.5 rounded-lg"
                              :class="livehref === dataurl['pages'] ? 'bg-gray-300' : 'bg-gray-100'">
                             <div class="flex w-52">
-                                <div class="w-10">
-                                    <i class="fa-solid fa-window-restore mr-3"></i>
+                                <div class="w-8 flex mr-2">
+                                    <i class="m-auto fa-solid fa-window-restore"></i>
                                 </div>
                                 <span>Pages</span>
                             </div>
@@ -137,10 +137,10 @@
                 </div>
                 <div class="py-0.5 my-2 rounded-xl overflow-hidden truncate">
                     <a :href="dataurl['logout']">
-                        <div class="bg-gray-100 hover:bg-gray-200 px-2 py-1.5 rounded-lg">
+                        <div class="bg-gray-100 hover:bg-gray-200 px-1 py-1.5 rounded-lg">
                             <div class="flex w-52">
-                                <div class="w-10">
-                                    <i class="fa-solid fa-right-from-bracket mr-3"></i>
+                                <div class="w-8 flex mr-2">
+                                    <i class="m-auto fa-solid fa-right-from-bracket"></i>
                                 </div>
                                 <span>Logout</span>
                             </div>
