@@ -21,8 +21,9 @@ class VisiMisiController extends Controller
 //        dd($request);
         $pages = new VisiMisi();
         $pages->content = $request->item;
-        if ($request->inputFile1 !== null) {
+        if ($request->totalfile !== null) {
             for ($i = 1; $i <= intval($request->totalfile);) {
+//                dd($request);
                 if ($request['inputFile' . $i] !== null) {
                     Storage::disk('upload')->putFileAs('foto_content', $request['inputFile' . $i], $request['nameFile' . $i]);
                 }
