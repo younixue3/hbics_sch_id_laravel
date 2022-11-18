@@ -24695,18 +24695,15 @@ var render = function () {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "p-5" }, [
-      this.$props.content.file
-        ? _c("img", {
-            ref: "previewimg",
-            staticClass: "w-full object-cover rounded-3xl",
-            class:
-              _vm.inputMode === false ? "h-96" : "h-32 border border-black",
-            attrs: {
-              alt: this.$store.state.workspace.items[_vm.index].content.alt,
-            },
-            on: { dblclick: _vm.inputOn },
-          })
-        : _vm._e(),
+      _c("img", {
+        ref: "previewimg",
+        staticClass: "w-full object-cover rounded-3xl",
+        class: _vm.inputMode === false ? "h-96" : "h-32 border border-black",
+        attrs: {
+          alt: this.$store.state.workspace.items[_vm.index].content.alt,
+        },
+        on: { dblclick: _vm.inputOn },
+      }),
       _vm._v(" "),
       !_vm.urlasset
         ? _c(
