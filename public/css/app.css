@@ -974,9 +974,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-24{
   width: 6rem;
 }
-.w-16{
-  width: 4rem;
-}
 .max-w-6xl{
   max-width: 72rem;
 }
@@ -3050,8 +3047,8 @@ h6{
   .md\:w-80{
     width: 20rem;
   }
-  .md\:w-11{
-    width: 2.75rem;
+  .md\:w-16{
+    width: 4rem;
   }
   .md\:w-8{
     width: 2rem;
@@ -3067,9 +3064,6 @@ h6{
   }
   .md\:w-\[37rem\]{
     width: 37rem;
-  }
-  .md\:w-16{
-    width: 4rem;
   }
   .md\:translate-y-1\/2{
     --tw-translate-y: 50%;
@@ -3292,17 +3286,11 @@ h6{
   .lg\:w-80{
     width: 20rem;
   }
-  .lg\:w-11{
-    width: 2.75rem;
+  .lg\:w-16{
+    width: 4rem;
   }
   .lg\:w-\[30rem\]{
     width: 30rem;
-  }
-  .lg\:w-14{
-    width: 3.5rem;
-  }
-  .lg\:w-16{
-    width: 4rem;
   }
   .lg\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
