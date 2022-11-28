@@ -63,6 +63,7 @@ class PrestasiController extends Controller
      */
     public function show($id)
     {
+        dd($id);
         $data = $this->data->show_data($id);
         return response($data);
     }

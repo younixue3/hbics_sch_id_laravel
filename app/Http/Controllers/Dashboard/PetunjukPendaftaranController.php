@@ -22,9 +22,8 @@ class PetunjukPendaftaranController extends Controller
      */
     public function index()
     {
-        $petunjuk_pendaftaran = PentujukPendaftaran::paginate(20);
-        $compact = compact('petunjuk_pendaftaran');
-        return view('dashboard.petunjukpendaftaran.index', $compact);
+        $data = $this->data->get_data();
+        return view('dashboard.petunjukpendaftaran.index', $data);
     }
 
     /**
@@ -45,7 +44,8 @@ class PetunjukPendaftaranController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $this->data->store_data($request);
+        return redirect(route('dashboard.petunjuk_pendaftaran.index'))->with('success', 'Insert Data Successfully');
     }
 
     /**
@@ -56,7 +56,8 @@ class PetunjukPendaftaranController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = $this->data->show_data($id);
+        return response($data);
     }
 
     /**
@@ -79,7 +80,8 @@ class PetunjukPendaftaranController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $this->data->update_data($request, $id);
+        return redirect(route('dashboard.petunjuk_pendaftaran.index'))->with('success', 'Update Data Successfully');
     }
 
     /**
@@ -90,6 +92,7 @@ class PetunjukPendaftaranController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = $this->data->destroy_data($id);
+        return redirect(route('dashboard.petunjuk_pendaftaran.index'))->with('success', 'Delete Data Successfully');
     }
 }

@@ -41,12 +41,12 @@
     </div>
 @endsection
 @section('modalShow')
-    <form-prestasi-component>
-    </form-prestasi-component>
+    <form-petunjuk-pendaftaran-component>
+    </form-petunjuk-pendaftaran-component>
 @endsection
 @section('modalEdit')
-    <form-prestasi-edit-component>
-    </form-prestasi-edit-component>
+    <form-petunjuk-pendaftaran-edit-component>
+    </form-petunjuk-pendaftaran-edit-component>
 @endsection
 @section('modalAdd')
     <div class="grid grid-cols-3 gap-5 text-left w-[42rem]">
@@ -57,16 +57,14 @@
             <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
                    type="text" name="title">
         </div>
-        <div class="row-span-2">
+        <div class="col-start-1 col-span-2">
             <label class="block font-medium text-gray-700">
                 Content
             </label>
-            <div class="mt-1 flex justify-center border-2 border-gray-300 border-dashed rounded-xl mb-2">
-                <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
-                       type="text" name="title">
-            </div>
+            <textarea class="flex-1 block w-full rounded-xl resize-none focus:outline-none px-3 py-2 border border-gray-300"
+                      type="text" name="content"></textarea>
         </div>
-        <div class="col-start-1 col-span-2">
+        <div class="col-start-1 col-span-1">
             <label class="block font-medium text-gray-700">
                 Area
             </label>
@@ -75,29 +73,6 @@
                 <option value="sd">SD</option>
                 <option value="smp">SMP</option>
                 <option value="sma">SMA</option>
-            </select>
-{{--            <input class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"--}}
-{{--                   type="text" name="prestasi">--}}
-        </div>
-        <div class="col-start-1 col-span-2">
-            <label class="block font-medium text-gray-700">
-                Detail Prestasi
-            </label>
-            <textarea
-                class="resize-none flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300"
-                name="detail_prestasi"></textarea>
-        </div>
-        <div class="col-start-1 col-span-2">
-            <label class="block font-medium text-gray-700">
-                Area
-            </label>
-            <select name="area"
-                    class="flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300 uppercase">
-                <option disabled selected>--- Pilih Area ---</option>
-                <option>hhk</option>
-                <option>sd</option>
-                <option>smp</option>
-                <option>sma</option>
             </select>
         </div>
     </div>

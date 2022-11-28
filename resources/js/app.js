@@ -200,6 +200,10 @@ Vue.component('button-delete-pages-function', require('./components/function/pag
 Vue.component('workspace-pages-function', require('./components/function/pages/WorkspacePagesFunction').default)
 Vue.component('workspace-pages-output-function', require('./components/function/pages/WorkspacePagesOutput').default)
 Vue.component('paragraph-component', require('./components/widget/ParagraphComponent').default)
+
+//PETUNJUK PENDAFTARAN Widget & Function
+Vue.component('form-petunjuk-pendaftaran-edit-component', require('./components/widget/petunjukpendaftaran/FormEditComponent').default)
+Vue.component('form-petunjuk-pendaftaran-component', require('./components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent').default)
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

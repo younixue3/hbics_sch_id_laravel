@@ -7318,6 +7318,128 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  props: [],
+  methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "FormPetunjukPendaftaranComponent",
+  methods: {
+    openModalValidation: function openModalValidation() {
+      this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.delete_req;
+      this.$store.state.modalvalidation.url.validation_form = "formDelete";
+      this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?";
+      this.$store.commit('toggleModalValidationView');
+    },
+    openModalEdit: function openModalEdit() {
+      this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.edit_req;
+      this.$store.commit('toggleModalEdit');
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js& ***!
@@ -8932,7 +9054,10 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('mailbox-card-component', 
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('button-delete-pages-function', (__webpack_require__(/*! ./components/function/pages/ButtonDeleteFunction */ "./resources/js/components/function/pages/ButtonDeleteFunction.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('workspace-pages-function', (__webpack_require__(/*! ./components/function/pages/WorkspacePagesFunction */ "./resources/js/components/function/pages/WorkspacePagesFunction.vue")["default"]));
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('workspace-pages-output-function', (__webpack_require__(/*! ./components/function/pages/WorkspacePagesOutput */ "./resources/js/components/function/pages/WorkspacePagesOutput.vue")["default"]));
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('paragraph-component', (__webpack_require__(/*! ./components/widget/ParagraphComponent */ "./resources/js/components/widget/ParagraphComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('paragraph-component', (__webpack_require__(/*! ./components/widget/ParagraphComponent */ "./resources/js/components/widget/ParagraphComponent.vue")["default"])); //PETUNJUK PENDAFTARAN Widget & Function
+
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-petunjuk-pendaftaran-edit-component', (__webpack_require__(/*! ./components/widget/petunjukpendaftaran/FormEditComponent */ "./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-petunjuk-pendaftaran-component', (__webpack_require__(/*! ./components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent */ "./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -11502,6 +11627,84 @@ component.options.__file = "resources/js/components/widget/mailbox/MailboxCompon
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FormEditComponent_vue_vue_type_template_id_1fc07fba_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormEditComponent.vue?vue&type=template&id=1fc07fba&scoped=true& */ "./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=template&id=1fc07fba&scoped=true&");
+/* harmony import */ var _FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormEditComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormEditComponent_vue_vue_type_template_id_1fc07fba_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _FormEditComponent_vue_vue_type_template_id_1fc07fba_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "1fc07fba",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FormPetunjukPendaftaranComponent_vue_vue_type_template_id_65b6aea8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormPetunjukPendaftaranComponent.vue?vue&type=template&id=65b6aea8&scoped=true& */ "./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=template&id=65b6aea8&scoped=true&");
+/* harmony import */ var _FormPetunjukPendaftaranComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormPetunjukPendaftaranComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormPetunjukPendaftaranComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormPetunjukPendaftaranComponent_vue_vue_type_template_id_65b6aea8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _FormPetunjukPendaftaranComponent_vue_vue_type_template_id_65b6aea8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "65b6aea8",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/prestasi/FormEditComponent.vue":
 /*!***********************************************************************!*\
   !*** ./resources/js/components/widget/prestasi/FormEditComponent.vue ***!
@@ -12915,6 +13118,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormEditComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormPetunjukPendaftaranComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormPetunjukPendaftaranComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormPetunjukPendaftaranComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************!*\
   !*** ./resources/js/components/widget/prestasi/FormEditComponent.vue?vue&type=script&lang=js& ***!
@@ -13973,6 +14208,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxComponent_vue_vue_type_template_id_4f13f334_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MailboxComponent_vue_vue_type_template_id_4f13f334_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/mailbox/MailboxComponent.vue?vue&type=template&id=4f13f334&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=template&id=1fc07fba&scoped=true&":
+/*!*****************************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=template&id=1fc07fba&scoped=true& ***!
+  \*****************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_template_id_1fc07fba_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_template_id_1fc07fba_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_template_id_1fc07fba_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormEditComponent.vue?vue&type=template&id=1fc07fba&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=template&id=1fc07fba&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=template&id=65b6aea8&scoped=true&":
+/*!********************************************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=template&id=65b6aea8&scoped=true& ***!
+  \********************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormPetunjukPendaftaranComponent_vue_vue_type_template_id_65b6aea8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormPetunjukPendaftaranComponent_vue_vue_type_template_id_65b6aea8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormPetunjukPendaftaranComponent_vue_vue_type_template_id_65b6aea8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormPetunjukPendaftaranComponent.vue?vue&type=template&id=65b6aea8&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=template&id=65b6aea8&scoped=true&");
 
 
 /***/ }),
@@ -23233,6 +23502,232 @@ var staticRenderFns = [
         }),
       ]
     )
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=template&id=1fc07fba&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue?vue&type=template&id=1fc07fba&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "grid grid-cols-3 gap-5 text-left w-[42rem]" },
+    [
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Title\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { type: "text", name: "title" },
+          domProps: {
+            value:
+              _vm.$store.state.modal.modalshow.item.petuntuk_pendaftaran.judul,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Content\n        "),
+        ]),
+        _vm._v(" "),
+        _c(
+          "textarea",
+          {
+            staticClass:
+              "flex-1 block w-full rounded-xl resize-none focus:outline-none px-3 py-2 border border-gray-300",
+            attrs: { type: "text", name: "content" },
+          },
+          [
+            _vm._v(
+              _vm._s(
+                _vm.$store.state.modal.modalshow.item.petuntuk_pendaftaran.isi
+              )
+            ),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+    ]
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-start-1 col-span-1" }, [
+      _c("label", { staticClass: "block font-medium text-gray-700" }, [
+        _vm._v("\n            Area\n        "),
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { name: "type" },
+        },
+        [
+          _c("option", { attrs: { value: "hhk" } }, [_vm._v("HHK")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "sd" } }, [_vm._v("SD")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "smp" } }, [_vm._v("SMP")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "sma" } }, [_vm._v("SMA")]),
+        ]
+      ),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=template&id=65b6aea8&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue?vue&type=template&id=65b6aea8&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "grid grid-cols-3 gap-5 text-left w-[42rem]" },
+    [
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Title\n        "),
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { disabled: "", type: "text", name: "title" },
+          domProps: {
+            value:
+              _vm.$store.state.modal.modalshow.item.petuntuk_pendaftaran.judul,
+          },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 col-span-2" }, [
+        _c("label", { staticClass: "block font-medium text-gray-700" }, [
+          _vm._v("\n            Content\n        "),
+        ]),
+        _vm._v(" "),
+        _c(
+          "textarea",
+          {
+            staticClass:
+              "flex-1 block w-full rounded-xl resize-none focus:outline-none px-3 py-2 border border-gray-300",
+            attrs: { disabled: "", type: "text", name: "content" },
+          },
+          [
+            _vm._v(
+              _vm._s(
+                _vm.$store.state.modal.modalshow.item.petuntuk_pendaftaran.isi
+              )
+            ),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 row-span-2" }, [
+        _c("div", { staticClass: "mt-2 grid grid-cols-2 gap-2" }, [
+          _c(
+            "button",
+            {
+              staticClass:
+                "rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-300 px-1.5 py-1 text-xs font-medium text-black after:content-['_↗'] transition-all ease-in-out",
+              attrs: { type: "button" },
+              on: { click: _vm.openModalEdit },
+            },
+            [_vm._v("\n                Edit Data\n            ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "rounded-lg bg-red-500 hover:bg-red-600 border border-red-600 px-1.5 py-1 text-xs font-medium text-white after:content-['_⊘'] transition-all ease-in-out",
+              attrs: { type: "button" },
+              on: {
+                click: function ($event) {
+                  return _vm.openModalValidation()
+                },
+              },
+            },
+            [_vm._v("\n                Delete Data\n            ")]
+          ),
+        ]),
+      ]),
+    ]
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-start-1 col-span-1" }, [
+      _c("label", { staticClass: "block font-medium text-gray-700" }, [
+        _vm._v("\n            Area\n        "),
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          staticClass:
+            "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+          attrs: { disabled: "", name: "type" },
+        },
+        [
+          _c("option", { attrs: { value: "hhk" } }, [_vm._v("HHK")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "sd" } }, [_vm._v("SD")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "smp" } }, [_vm._v("SMP")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "sma" } }, [_vm._v("SMA")]),
+        ]
+      ),
+    ])
   },
 ]
 render._withStripped = true
