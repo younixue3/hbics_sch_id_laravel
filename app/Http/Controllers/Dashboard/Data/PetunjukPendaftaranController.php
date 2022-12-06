@@ -10,8 +10,11 @@ class PetunjukPendaftaranController extends Controller
 {
     public function get_data()
     {
-        $petunjuk_pendaftaran = PentujukPendaftaran::paginate(20);
-        $compact = compact('petunjuk_pendaftaran');
+        $petunjuk_pendaftaran_hhk = PentujukPendaftaran::where('type', 'hhk')->paginate(20);
+        $petunjuk_pendaftaran_sd = PentujukPendaftaran::where('type', 'sd')->paginate(20);
+        $petunjuk_pendaftaran_smp = PentujukPendaftaran::where('type', 'smp')->paginate(20);
+        $petunjuk_pendaftaran_sma = PentujukPendaftaran::where('type', 'sma')->paginate(20);
+        $compact = compact('petunjuk_pendaftaran_hhk', 'petunjuk_pendaftaran_sd', 'petunjuk_pendaftaran_smp', 'petunjuk_pendaftaran_sma');
         return $compact;
     }
 

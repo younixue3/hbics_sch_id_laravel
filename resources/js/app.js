@@ -204,6 +204,10 @@ Vue.component('paragraph-component', require('./components/widget/ParagraphCompo
 //PETUNJUK PENDAFTARAN Widget & Function
 Vue.component('form-petunjuk-pendaftaran-edit-component', require('./components/widget/petunjukpendaftaran/FormEditComponent').default)
 Vue.component('form-petunjuk-pendaftaran-component', require('./components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent').default)
+
+//BEASISWA Widget & Fucntion
+Vue.component('form-beasiswa-edit-component', require('./components/widget/beasiswa/FormEditComponent').default)
+Vue.component('form-beasiswa-component', require('./components/widget/beasiswa/FormBeasiswaComponent').default)
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

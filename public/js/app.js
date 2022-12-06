@@ -5970,356 +5970,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "TabBarComponent",
   data: function data() {
     return {
       tab_active: 'hhk'
     };
+  },
+  props: {
+    hhk: JSON,
+    sd: JSON,
+    smp: JSON,
+    sma: JSON
   }
 });
 
@@ -6546,6 +6208,106 @@ __webpack_require__.r(__webpack_exports__);
       // console.log(document.getElementById('activeSnap').getBoundingClientRect().left)
     }
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "FormPetunjukPendaftaranComponent",
+  methods: {
+    openModalValidation: function openModalValidation() {
+      this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.delete_req;
+      this.$store.state.modalvalidation.url.validation_form = "formDelete";
+      this.$store.state.modalvalidation.massage = "Apakah anda yakin untuk menghapus data ini?";
+      this.$store.commit('toggleModalValidationView');
+    },
+    openModalEdit: function openModalEdit() {
+      this.$store.state.modalvalidation.url.url_req = this.$store.state.modalvalidation.url.urls_req.edit_req;
+      this.$store.commit('toggleModalEdit');
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {};
+  },
+  props: [],
+  methods: {}
 });
 
 /***/ }),
@@ -9057,7 +8819,10 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('workspace-pages-output-fu
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('paragraph-component', (__webpack_require__(/*! ./components/widget/ParagraphComponent */ "./resources/js/components/widget/ParagraphComponent.vue")["default"])); //PETUNJUK PENDAFTARAN Widget & Function
 
 vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-petunjuk-pendaftaran-edit-component', (__webpack_require__(/*! ./components/widget/petunjukpendaftaran/FormEditComponent */ "./resources/js/components/widget/petunjukpendaftaran/FormEditComponent.vue")["default"]));
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-petunjuk-pendaftaran-component', (__webpack_require__(/*! ./components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent */ "./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-petunjuk-pendaftaran-component', (__webpack_require__(/*! ./components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent */ "./resources/js/components/widget/petunjukpendaftaran/FormPetunjukPendaftaranComponent.vue")["default"])); //BEASISWA Widget & Fucntion
+
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-beasiswa-edit-component', (__webpack_require__(/*! ./components/widget/beasiswa/FormEditComponent */ "./resources/js/components/widget/beasiswa/FormEditComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('form-beasiswa-component', (__webpack_require__(/*! ./components/widget/beasiswa/FormBeasiswaComponent */ "./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -11354,6 +11119,84 @@ component.options.__file = "resources/js/components/widget/TestimoniV2Component.
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FormBeasiswaComponent_vue_vue_type_template_id_3230b05a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormBeasiswaComponent.vue?vue&type=template&id=3230b05a&scoped=true& */ "./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=template&id=3230b05a&scoped=true&");
+/* harmony import */ var _FormBeasiswaComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormBeasiswaComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormBeasiswaComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormBeasiswaComponent_vue_vue_type_template_id_3230b05a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _FormBeasiswaComponent_vue_vue_type_template_id_3230b05a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "3230b05a",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/beasiswa/FormEditComponent.vue":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/widget/beasiswa/FormEditComponent.vue ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FormEditComponent_vue_vue_type_template_id_546d1999_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormEditComponent.vue?vue&type=template&id=546d1999&scoped=true& */ "./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=template&id=546d1999&scoped=true&");
+/* harmony import */ var _FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormEditComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormEditComponent_vue_vue_type_template_id_546d1999_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _FormEditComponent_vue_vue_type_template_id_546d1999_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "546d1999",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/widget/beasiswa/FormEditComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/komunitas/FormEditComponent.vue":
 /*!************************************************************************!*\
   !*** ./resources/js/components/widget/komunitas/FormEditComponent.vue ***!
@@ -13006,6 +12849,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormBeasiswaComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormBeasiswaComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormBeasiswaComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormEditComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************!*\
   !*** ./resources/js/components/widget/komunitas/FormEditComponent.vue?vue&type=script&lang=js& ***!
@@ -14089,6 +13964,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TestimoniV2Component_vue_vue_type_template_id_6fb7e7dd_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TestimoniV2Component_vue_vue_type_template_id_6fb7e7dd_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./TestimoniV2Component.vue?vue&type=template&id=6fb7e7dd&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/TestimoniV2Component.vue?vue&type=template&id=6fb7e7dd&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=template&id=3230b05a&scoped=true&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=template&id=3230b05a&scoped=true& ***!
+  \**********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormBeasiswaComponent_vue_vue_type_template_id_3230b05a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormBeasiswaComponent_vue_vue_type_template_id_3230b05a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormBeasiswaComponent_vue_vue_type_template_id_3230b05a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormBeasiswaComponent.vue?vue&type=template&id=3230b05a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=template&id=3230b05a&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=template&id=546d1999&scoped=true&":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=template&id=546d1999&scoped=true& ***!
+  \******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_template_id_546d1999_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_template_id_546d1999_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEditComponent_vue_vue_type_template_id_546d1999_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormEditComponent.vue?vue&type=template&id=546d1999&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=template&id=546d1999&scoped=true&");
 
 
 /***/ }),
@@ -20751,7 +20660,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "m-auto" }, [
+  return _c("div", { staticClass: "m-auto w-full px-6" }, [
     _c("div", { staticClass: "flex w-full" }, [
       _c(
         "div",
@@ -20831,1143 +20740,122 @@ var render = function () {
       ),
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "m-auto px-10 text-left mt-10" }, [
+    _c("div", { staticClass: "px-10 text-left mt-10" }, [
       _vm.tab_active === "hhk"
-        ? _c("ol", { staticClass: "relative border-l border-gray-400" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _vm._m(1),
-            _vm._v(" "),
-            _vm._m(2),
-            _vm._v(" "),
-            _vm._m(3),
-            _vm._v(" "),
-            _vm._m(4),
-            _vm._v(" "),
-            _vm._m(5),
-            _vm._v(" "),
-            _vm._m(6),
-            _vm._v(" "),
-            _vm._m(7),
-            _vm._v(" "),
-            _vm._m(8),
-            _vm._v(" "),
-            _vm._m(9),
-            _vm._v(" "),
-            _vm._m(10),
-            _vm._v(" "),
-            _vm._m(11),
-            _vm._v(" "),
-            _vm._m(12),
-            _vm._v(" "),
-            _vm._m(13),
-            _vm._v(" "),
-            _vm._m(14),
-          ])
+        ? _c(
+            "ol",
+            { staticClass: "relative border-l border-gray-400 w-full" },
+            _vm._l(JSON.parse(this.$props.hhk), function (item, index, key) {
+              return _c("li", { key: key, staticClass: "mb-10 ml-6 w-full" }, [
+                _c("span", {
+                  staticClass:
+                    "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+                }),
+                _vm._v(" "),
+                _c(
+                  "h3",
+                  { staticClass: "mb-1 text-lg font-semibold text-gray-900" },
+                  [_vm._v(_vm._s(item.judul))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-base font-normal text-gray-500" },
+                  [_vm._v(_vm._s(item.isi))]
+                ),
+              ])
+            }),
+            0
+          )
         : _vm._e(),
       _vm._v(" "),
       _vm.tab_active === "sdk"
-        ? _c("ol", { staticClass: "relative border-l border-gray-400" }, [
-            _vm._m(15),
-            _vm._v(" "),
-            _vm._m(16),
-            _vm._v(" "),
-            _vm._m(17),
-            _vm._v(" "),
-            _vm._m(18),
-            _vm._v(" "),
-            _vm._m(19),
-            _vm._v(" "),
-            _vm._m(20),
-            _vm._v(" "),
-            _vm._m(21),
-            _vm._v(" "),
-            _vm._m(22),
-            _vm._v(" "),
-            _vm._m(23),
-            _vm._v(" "),
-            _vm._m(24),
-            _vm._v(" "),
-            _vm._m(25),
-            _vm._v(" "),
-            _vm._m(26),
-            _vm._v(" "),
-            _vm._m(27),
-            _vm._v(" "),
-            _vm._m(28),
-            _vm._v(" "),
-            _vm._m(29),
-          ])
+        ? _c(
+            "ol",
+            { staticClass: "relative border-l border-gray-400 w-full" },
+            _vm._l(JSON.parse(this.$props.sd), function (item, index, key) {
+              return _c("li", { key: key, staticClass: "mb-10 ml-6 w-full" }, [
+                _c("span", {
+                  staticClass:
+                    "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+                }),
+                _vm._v(" "),
+                _c(
+                  "h3",
+                  { staticClass: "mb-1 text-lg font-semibold text-gray-900" },
+                  [_vm._v(_vm._s(item.judul))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-base font-normal text-gray-500" },
+                  [_vm._v(_vm._s(item.isi))]
+                ),
+              ])
+            }),
+            0
+          )
         : _vm._e(),
       _vm._v(" "),
       _vm.tab_active === "smpk"
-        ? _c("ol", { staticClass: "relative border-l border-gray-400" }, [
-            _vm._m(30),
-            _vm._v(" "),
-            _vm._m(31),
-            _vm._v(" "),
-            _vm._m(32),
-            _vm._v(" "),
-            _vm._m(33),
-            _vm._v(" "),
-            _vm._m(34),
-            _vm._v(" "),
-            _vm._m(35),
-            _vm._v(" "),
-            _vm._m(36),
-            _vm._v(" "),
-            _vm._m(37),
-            _vm._v(" "),
-            _vm._m(38),
-          ])
+        ? _c(
+            "ol",
+            { staticClass: "relative border-l border-gray-400 w-full" },
+            _vm._l(JSON.parse(this.$props.smp), function (item, index, key) {
+              return _c("li", { key: key, staticClass: "mb-10 ml-6 w-full" }, [
+                _c("span", {
+                  staticClass:
+                    "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+                }),
+                _vm._v(" "),
+                _c(
+                  "h3",
+                  { staticClass: "mb-1 text-lg font-semibold text-gray-900" },
+                  [_vm._v(_vm._s(item.judul))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-base font-normal text-gray-500" },
+                  [_vm._v(_vm._s(item.isi))]
+                ),
+              ])
+            }),
+            0
+          )
         : _vm._e(),
       _vm._v(" "),
       _vm.tab_active === "smak"
-        ? _c("ol", { staticClass: "relative border-l border-gray-400" }, [
-            _vm._m(39),
-            _vm._v(" "),
-            _vm._m(40),
-            _vm._v(" "),
-            _vm._m(41),
-            _vm._v(" "),
-            _vm._m(42),
-            _vm._v(" "),
-            _vm._m(43),
-            _vm._v(" "),
-            _vm._m(44),
-            _vm._v(" "),
-            _vm._m(45),
-            _vm._v(" "),
-            _vm._m(46),
-            _vm._v(" "),
-            _vm._m(47),
-          ])
+        ? _c(
+            "ol",
+            { staticClass: "relative border-l border-gray-400 w-full" },
+            _vm._l(JSON.parse(this.$props.sma), function (item, index, key) {
+              return _c("li", { key: key, staticClass: "mb-10 ml-6 w-full" }, [
+                _c("span", {
+                  staticClass:
+                    "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
+                }),
+                _vm._v(" "),
+                _c(
+                  "h3",
+                  { staticClass: "mb-1 text-lg font-semibold text-gray-900" },
+                  [_vm._v(_vm._s(item.judul))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-base font-normal text-gray-500" },
+                  [_vm._v(_vm._s(item.isi))]
+                ),
+              ])
+            }),
+            0
+          )
         : _vm._e(),
     ]),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c(
-        "h3",
-        {
-          staticClass:
-            "flex items-center mb-1 text-lg font-semibold text-gray-900 ",
-        },
-        [
-          _vm._v(
-            "Pembelian Formulir\n                    Pendaftaran\n                "
-          ),
-        ]
-      ),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i atau Wali Siswa/i membeli formulir\n                    pendaftaran"
-        ),
-      ]),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700",
-          attrs: { href: "#" },
-        },
-        [_vm._v("\n                    Beli Formulir")]
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Mengisi Formulir"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i mengisi Formulir\n                    sesuai dengan syarat dan ketentuan sekolah yang berlaku, lalu mengembalikan formulir ke\n                    pihak sekolah"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Parents Interview"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Orang Tua Calon Siswa/i\n                    mengikuti Parent Interview dengan Kepala Sekolah"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Hasil Parents Interview"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Orang Tua Calon Siswa/i menerima hasil dari Parents Interview"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Admininstrasi Keuangan"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Orang Tua Calon Siswa/i melakukan proses admininstrasi keuangan"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Validasi Umur Calon Siswa"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Calon Siswa/i di validasi memiliki kesesuaian umur"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Observasi Usia Berjalan"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Observasi usia berjalan oleh Principal atau Pak Rio sesuai prosedur"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Result Observasi"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Orang tua Calon Siswa/i menerima hasil Observasi"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Terbit Surat Penerimaan Siswa Baru"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Orang tua Calon Siswa/i menerima surat Penerimaan siswa baru"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Ukur Seragam"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Pengukuran seragam untuk Siswa/i Baru"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Pengambilan Seragam"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Pengambilan seragam sekolah Siswa/i Baru"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Pengambilan Buku KBM"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Observasi Penempatan Kelas"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Observasi penempatan kelas untuk Siswa/i Baru"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Admininstrasi Keuangan sekesai sebelum KBM TA Baru"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("KBM TA Baru di SDK HBICS"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c(
-        "h3",
-        {
-          staticClass:
-            "flex items-center mb-1 text-lg font-semibold text-gray-900 ",
-        },
-        [
-          _vm._v(
-            "Pembelian Formulir\n                    Pendaftaran\n                "
-          ),
-        ]
-      ),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i atau Wali Siswa/i membeli formulir\n                    pendaftaran"
-        ),
-      ]),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700",
-          attrs: { href: "#" },
-        },
-        [_vm._v("\n                    Beli Formulir")]
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Mengisi Formulir"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i mengisi Formulir\n                    sesuai dengan syarat dan ketentuan sekolah yang berlaku, lalu mengembalikan formulir ke\n                    pihak sekolah"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Parents Interview"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Orang Tua Calon Siswa/i\n                    mengikuti Parent Interview dengan Kepala Sekolah"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Hasil Parents Interview"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Orang Tua Calon Siswa/i menerima hasil dari Parents Interview"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Admininstrasi Keuangan"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Orang Tua Calon Siswa/i melakukan proses admininstrasi keuangan"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Validasi Umur Calon Siswa"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Calon Siswa/i di validasi memiliki kesesuaian umur"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Observasi Usia Berjalan"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Observasi usia berjalan oleh Principal atau Pak Rio sesuai prosedur"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Result Observasi"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Orang tua Calon Siswa/i menerima hasil Observasi"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Terbit Surat Penerimaan Siswa Baru"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Orang tua Calon Siswa/i menerima surat Penerimaan siswa baru"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Ukur Seragam"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Pengukuran seragam untuk Siswa/i Baru"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Pengambilan Seragam"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Pengambilan seragam sekolah Siswa/i Baru"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Pengambilan Buku KBM"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Observasi Penempatan Kelas"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v("Observasi penempatan kelas untuk Siswa/i Baru"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Admininstrasi Keuangan sekesai sebelum KBM TA Baru"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("KBM TA Baru di HHK"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c(
-        "h3",
-        {
-          staticClass:
-            "flex items-center mb-1 text-lg font-semibold text-gray-900 ",
-        },
-        [
-          _vm._v(
-            "Pembelian Formulir\n                    Pendaftaran\n                "
-          ),
-        ]
-      ),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i atau Wali Siswa/i membeli formulir\n                    pendaftaran"
-        ),
-      ]),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700",
-          attrs: { href: "#" },
-        },
-        [_vm._v("\n                    Beli Formulir")]
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Mengisi Formulir"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i mengisi Formulir\n                    sesuai dengan syarat dan ketentuan sekolah yang berlaku, lalu mengembalikan formulir ke\n                    pihak sekolah"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Tes Minat Bakat"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i menjalan\n                    tes minat dan bakat"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Parents Interview"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Orang Tua Siswa/i\n                    mengikuti Parent Interview dengan Kepala Sekolah"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Surat Penerimaan"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Orang Tua Siswa/i\n                    menerima hasil keputusan dari kepala sekolah terkait hasil Parents Interview"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Admininstrasi"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i menyelesaikan\n                    proses admininstrasi sekolah"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Observasi English"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i melakukan proses\n                    pengukuran serama, pengambilan buku sekolah dan penempatan kelas"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Pengambilan Perlengkapan\n                    Sekolah"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i melakukan proses\n                    pengukuran serama, pengambilan buku sekolah dan penempatan kelas"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Selamat Bersekolah!"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Selamat Datang! di Sekolah\n                    Harapan Bangsa & Happy Holy Kids Balikpapan"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c(
-        "h3",
-        {
-          staticClass:
-            "flex items-center mb-1 text-lg font-semibold text-gray-900 ",
-        },
-        [
-          _vm._v(
-            "Pembelian Formulir\n                    Pendaftaran\n                "
-          ),
-        ]
-      ),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i atau Wali Siswa/i membeli formulir\n                    pendaftaran"
-        ),
-      ]),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass:
-            "inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700",
-          attrs: { href: "#" },
-        },
-        [_vm._v("\n                    Beli Formulir")]
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Mengisi Formulir"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i mengisi Formulir\n                    sesuai dengan syarat dan ketentuan sekolah yang berlaku, lalu mengembalikan formulir ke\n                    pihak sekolah"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Tes Minat Bakat"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i menjalan\n                    tes minat dan bakat"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Parents Interview"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Orang Tua Siswa/i\n                    mengikuti Parent Interview dengan Kepala Sekolah"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Surat Penerimaan"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Orang Tua Siswa/i\n                    menerima hasil keputusan dari kepala sekolah terkait hasil Parents Interview"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Admininstrasi"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i menyelesaikan\n                    proses admininstrasi sekolah"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Observasi English"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i melakukan proses\n                    pengukuran serama, pengambilan buku sekolah dan penempatan kelas"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Pengambilan Perlengkapan\n                    Sekolah"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Calon Siswa/i melakukan proses\n                    pengukuran serama, pengambilan buku sekolah dan penempatan kelas"
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "mb-10 ml-6" }, [
-      _c("span", {
-        staticClass:
-          "flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full",
-      }),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mb-1 text-lg font-semibold text-gray-900" }, [
-        _vm._v("Selamat Bersekolah!"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-base font-normal text-gray-500" }, [
-        _vm._v(
-          "Selamat Datang! di Sekolah\n                    Harapan Bangsa & Happy Holy Kids Balikpapan"
-        ),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -22188,6 +21076,162 @@ var render = function () {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=template&id=3230b05a&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormBeasiswaComponent.vue?vue&type=template&id=3230b05a&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "grid grid-cols-3 gap-5 text-left w-[42rem]" },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-start-1 row-span-2" }, [
+        _c("div", { staticClass: "mt-2 grid grid-cols-2 gap-2" }, [
+          _c(
+            "button",
+            {
+              staticClass:
+                "rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-300 px-1.5 py-1 text-xs font-medium text-black after:content-['_↗'] transition-all ease-in-out",
+              attrs: { type: "button" },
+              on: { click: _vm.openModalEdit },
+            },
+            [_vm._v("\n                Edit Data\n            ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "rounded-lg bg-red-500 hover:bg-red-600 border border-red-600 px-1.5 py-1 text-xs font-medium text-white after:content-['_⊘'] transition-all ease-in-out",
+              attrs: { type: "button" },
+              on: {
+                click: function ($event) {
+                  return _vm.openModalValidation()
+                },
+              },
+            },
+            [_vm._v("\n                Delete Data\n            ")]
+          ),
+        ]),
+      ]),
+    ]
+  )
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-start-1 col-span-2" }, [
+      _c("label", { staticClass: "block font-medium text-gray-700" }, [
+        _vm._v("\n            Title\n        "),
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass:
+          "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+        attrs: { type: "text", name: "title" },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-start-1 col-span-2" }, [
+      _c("label", { staticClass: "block font-medium text-gray-700" }, [
+        _vm._v("\n            Content\n        "),
+      ]),
+      _vm._v(" "),
+      _c("textarea", {
+        staticClass:
+          "flex-1 block w-full rounded-xl resize-none focus:outline-none px-3 py-2 border border-gray-300",
+        attrs: { type: "text", name: "content" },
+      }),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=template&id=546d1999&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/widget/beasiswa/FormEditComponent.vue?vue&type=template&id=546d1999&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "grid grid-cols-3 gap-5 text-left w-[42rem]" },
+      [
+        _c("div", { staticClass: "col-start-1 col-span-2" }, [
+          _c("label", { staticClass: "block font-medium text-gray-700" }, [
+            _vm._v("\n            Title\n        "),
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            staticClass:
+              "flex-1 block w-full rounded-xl focus:outline-none px-3 py-2 border border-gray-300",
+            attrs: { type: "text", name: "title" },
+          }),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-start-1 col-span-2" }, [
+          _c("label", { staticClass: "block font-medium text-gray-700" }, [
+            _vm._v("\n            Content\n        "),
+          ]),
+          _vm._v(" "),
+          _c("textarea", {
+            staticClass:
+              "flex-1 block w-full rounded-xl resize-none focus:outline-none px-3 py-2 border border-gray-300",
+            attrs: { type: "text", name: "content" },
+          }),
+        ]),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
