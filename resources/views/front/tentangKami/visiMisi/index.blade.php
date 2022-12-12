@@ -2,7 +2,7 @@
 @section('title', 'Visi Misi')
 @section('content')
     <div class="bg-pattern pt-72 pb-10 text-center">
-        <h1 id="hero_section" class="mb-20 text-5xl font-bold text-blue-900">Visi Misi</h1>
+        <h1 id="hero_section" class="hidden mb-20 text-5xl font-bold text-blue-900">Visi Misi</h1>
         <div class="flex">
             <div class="m-auto w-[65rem] px-10">
                 <div class="bg-white rounded-3xl shadow-xl p-5">
