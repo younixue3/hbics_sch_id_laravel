@@ -2,8 +2,8 @@
 @section('title', 'Login')
 @section('content')
     <div class="relative">
-{{--        <img class="static h-screen w-full object-cover object-bottom"--}}
-{{--             src="{{asset('assets/svg/LANDING_LOGO-01-min.jpg')}}">--}}
+        <img class="static h-screen w-full object-cover object-bottom"
+             src="{{asset('assets/svg/LANDING_LOGO-01-min.jpg')}}">
         <div class="absolute top-1/4 md:top-0 right-0 w-full md:h-screen md:w-96 p-4">
             <div class="text-center bg-white shadow-lg h-auto md:h-full w-full top-0 rounded-xl shadow-xl py-5">
                 <form class="static transform md:translate-y-1/2" action="{{ route('login') }}" method="POST">
