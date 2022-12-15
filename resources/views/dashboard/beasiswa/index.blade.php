@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.master')
 @section('title', 'Prestasi')
 @section('content')
-    <button-add-function add_req="{{route('dashboard.beasiswa.store')}}"></button-add-function>
+    <button-add-function add_req="{{route('dashboard.program-beasiswa.store')}}"></button-add-function>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
         <mac-card-component cardsname="Prestasi | Table" class="row-span-3 md:col-span-6 lg:col-span-12 overflow-hidden">
             <div>
@@ -21,9 +21,9 @@
                             <td class="py-1 uppercase">{{$value->title}}</td>
                             <td class="py-1 uppercase">{{$value->content}}</td>
                             <td class="py-1">
-                                <button-show-component user="{{route('dashboard.beasiswa.show', $value->id)}}"
-                                                       delete_req="{{route('dashboard.beasiswa.destroy', $value->id)}}"
-                                                       edit_req="{{route('dashboard.beasiswa.update', $value->id)}}"></button-show-component>
+                                <button-show-component user="{{route('dashboard.program-beasiswa.show', $value->id)}}"
+                                                       delete_req="{{route('dashboard.program-beasiswa.destroy', $value->id)}}"
+                                                       edit_req="{{route('dashboard.program-beasiswa.update', $value->id)}}"></button-show-component>
                             </td>
                         </tr>
                     @empty

@@ -82,12 +82,29 @@
                 <img class="row-span-2 w-full h-full object-cover"
                      src="{{asset('assets/stock_photo_rdev/cambridge.webp')}}">
                 <div class="row-span-3 w-full h-full p-5">
-                    <h3>Metode Pembelajaran</h3>
+                    <h3>Petunjuk Pendaftaran</h3>
                     <div class="mt-5 grid grid-cols-3 gap-2 w-28">
-                        <a href="{{route('metode-pembelajaran')}}"
+                        <a href="{{route('petunjuk-pendaftaran')}}"
                            class="w-8 h-8 flex bg-green-400 text-white text-lg font-semibold rounded-lg"><i
                                 class="fas fa-eye m-auto text-sm"></i></a>
-                        <a href="{{route('dashboard.metode-pembelajaran.index')}}"
+                        <a href="{{route('dashboard.petunjuk-pendaftaran.index')}}"
+                           class="w-8 h-8 flex bg-amber-400 text-white text-lg font-semibold rounded-lg"><i
+                                class="fas fa-edit m-auto text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rounded-2xl bg-white overflow-hidden">
+            <div class="grid grid-rows-5 h-full">
+                <img class="row-span-2 w-full h-full object-cover"
+                     src="{{asset('assets/stock_photo_rdev/cambridge.webp')}}">
+                <div class="row-span-3 w-full h-full p-5">
+                    <h3>Metode Pembelajaran</h3>
+                    <div class="mt-5 grid grid-cols-3 gap-2 w-28">
+                        <a href="{{route('program-beasiswa')}}"
+                           class="w-8 h-8 flex bg-green-400 text-white text-lg font-semibold rounded-lg"><i
+                                class="fas fa-eye m-auto text-sm"></i></a>
+                        <a href="{{route('dashboard.program-beasiswa.index')}}"
                            class="w-8 h-8 flex bg-amber-400 text-white text-lg font-semibold rounded-lg"><i
                                 class="fas fa-edit m-auto text-sm"></i></a>
                     </div>

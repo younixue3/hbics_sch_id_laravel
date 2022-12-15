@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.master')
 @section('title', 'Prestasi')
 @section('content')
-    <button-add-function add_req="{{route('dashboard.petunjuk_pendaftaran.store')}}"></button-add-function>
+    <button-add-function add_req="{{route('dashboard.petunjuk-pendaftaran.store')}}"></button-add-function>
     <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-x-5 gap-y-5 my-5">
         <mac-card-component cardsname="Prestasi | Table"
                             class="row-span-3 md:col-span-6 lg:col-span-12 overflow-hidden">
@@ -18,9 +18,9 @@
                                 <p class="text-base font-normal text-gray-500">{{$value->isi}}</p>
                                 <div class="my-5">
                                     <button-show-component
-                                        user="{{route('dashboard.petunjuk_pendaftaran.show', $value->id)}}"
-                                        delete_req="{{route('dashboard.petunjuk_pendaftaran.destroy', $value->id)}}"
-                                        edit_req="{{route('dashboard.petunjuk_pendaftaran.update', $value->id)}}"></button-show-component>
+                                        user="{{route('dashboard.petunjuk-pendaftaran.show', $value->id)}}"
+                                        delete_req="{{route('dashboard.petunjuk-pendaftaran.destroy', $value->id)}}"
+                                        edit_req="{{route('dashboard.petunjuk-pendaftaran.update', $value->id)}}"></button-show-component>
                                 </div>
                             </li>
                             {{--                        <tr class="hover:bg-blue-50 transition-all duration-200">--}}
@@ -29,9 +29,9 @@
                             {{--                            <td class="py-1 uppercase">{{$value->judul}}</td>--}}
                             {{--                            <td class="py-1 uppercase">{{$value->isi}}</td>--}}
                             {{--                            <td class="py-1">--}}
-                            {{--                                <button-show-component user="{{route('dashboard.petunjuk_pendaftaran.show', $value->id)}}"--}}
-                            {{--                                                       delete_req="{{route('dashboard.petunjuk_pendaftaran.destroy', $value->id)}}"--}}
-                            {{--                                                       edit_req="{{route('dashboard.petunjuk_pendaftaran.update', $value->id)}}"></button-show-component>--}}
+                            {{--                                <button-show-component user="{{route('dashboard.petunjuk-pendaftaran.show', $value->id)}}"--}}
+                            {{--                                                       delete_req="{{route('dashboard.petunjuk-pendaftaran.destroy', $value->id)}}"--}}
+                            {{--                                                       edit_req="{{route('dashboard.petunjuk-pendaftaran.update', $value->id)}}"></button-show-component>--}}
                             {{--                            </td>--}}
                             {{--                        </tr>--}}
                         @empty
@@ -51,9 +51,9 @@
                                 <p class="text-base font-normal text-gray-500">{{$value->isi}}</p>
                                 <div class="my-5">
                                     <button-show-component
-                                        user="{{route('dashboard.petunjuk_pendaftaran.show', $value->id)}}"
-                                        delete_req="{{route('dashboard.petunjuk_pendaftaran.destroy', $value->id)}}"
-                                        edit_req="{{route('dashboard.petunjuk_pendaftaran.update', $value->id)}}"></button-show-component>
+                                        user="{{route('dashboard.petunjuk-pendaftaran.show', $value->id)}}"
+                                        delete_req="{{route('dashboard.petunjuk-pendaftaran.destroy', $value->id)}}"
+                                        edit_req="{{route('dashboard.petunjuk-pendaftaran.update', $value->id)}}"></button-show-component>
                                 </div>
                             </li>
                             {{--                        <tr class="hover:bg-blue-50 transition-all duration-200">--}}
@@ -62,9 +62,9 @@
                             {{--                            <td class="py-1 uppercase">{{$value->judul}}</td>--}}
                             {{--                            <td class="py-1 uppercase">{{$value->isi}}</td>--}}
                             {{--                            <td class="py-1">--}}
-                            {{--                                <button-show-component user="{{route('dashboard.petunjuk_pendaftaran.show', $value->id)}}"--}}
-                            {{--                                                       delete_req="{{route('dashboard.petunjuk_pendaftaran.destroy', $value->id)}}"--}}
-                            {{--                                                       edit_req="{{route('dashboard.petunjuk_pendaftaran.update', $value->id)}}"></button-show-component>--}}
+                            {{--                                <button-show-component user="{{route('dashboard.petunjuk-pendaftaran.show', $value->id)}}"--}}
+                            {{--                                                       delete_req="{{route('dashboard.petunjuk-pendaftaran.destroy', $value->id)}}"--}}
+                            {{--                                                       edit_req="{{route('dashboard.petunjuk-pendaftaran.update', $value->id)}}"></button-show-component>--}}
                             {{--                            </td>--}}
                             {{--                        </tr>--}}
                         @empty
@@ -84,9 +84,9 @@
                                 <p class="text-base font-normal text-gray-500">{{$value->isi}}</p>
                                 <div class="my-5">
                                     <button-show-component
-                                        user="{{route('dashboard.petunjuk_pendaftaran.show', $value->id)}}"
-                                        delete_req="{{route('dashboard.petunjuk_pendaftaran.destroy', $value->id)}}"
-                                        edit_req="{{route('dashboard.petunjuk_pendaftaran.update', $value->id)}}"></button-show-component>
+                                        user="{{route('dashboard.petunjuk-pendaftaran.show', $value->id)}}"
+                                        delete_req="{{route('dashboard.petunjuk-pendaftaran.destroy', $value->id)}}"
+                                        edit_req="{{route('dashboard.petunjuk-pendaftaran.update', $value->id)}}"></button-show-component>
                                 </div>
                             </li>
                             {{--                        <tr class="hover:bg-blue-50 transition-all duration-200">--}}
@@ -95,9 +95,9 @@
                             {{--                            <td class="py-1 uppercase">{{$value->judul}}</td>--}}
                             {{--                            <td class="py-1 uppercase">{{$value->isi}}</td>--}}
                             {{--                            <td class="py-1">--}}
-                            {{--                                <button-show-component user="{{route('dashboard.petunjuk_pendaftaran.show', $value->id)}}"--}}
-                            {{--                                                       delete_req="{{route('dashboard.petunjuk_pendaftaran.destroy', $value->id)}}"--}}
-                            {{--                                                       edit_req="{{route('dashboard.petunjuk_pendaftaran.update', $value->id)}}"></button-show-component>--}}
+                            {{--                                <button-show-component user="{{route('dashboard.petunjuk-pendaftaran.show', $value->id)}}"--}}
+                            {{--                                                       delete_req="{{route('dashboard.petunjuk-pendaftaran.destroy', $value->id)}}"--}}
+                            {{--                                                       edit_req="{{route('dashboard.petunjuk-pendaftaran.update', $value->id)}}"></button-show-component>--}}
                             {{--                            </td>--}}
                             {{--                        </tr>--}}
                         @empty
@@ -108,7 +108,7 @@
                 <h1>SMA</h1>
                 <div class="border-2 rounded-xl px-8 p-5">
                     <ol class="relative border-l border-gray-400">
-                        @forelse($petunjuk_pendaftaran_ as $key => $value)
+                        @forelse($petunjuk_pendaftaran_sma as $key => $value)
                             <li class="mb-10 ml-6">
                             <span
                                 class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-800 rounded-full">
@@ -117,9 +117,9 @@
                                 <p class="text-base font-normal text-gray-500">{{$value->isi}}</p>
                                 <div class="my-5">
                                     <button-show-component
-                                        user="{{route('dashboard.petunjuk_pendaftaran.show', $value->id)}}"
-                                        delete_req="{{route('dashboard.petunjuk_pendaftaran.destroy', $value->id)}}"
-                                        edit_req="{{route('dashboard.petunjuk_pendaftaran.update', $value->id)}}"></button-show-component>
+                                        user="{{route('dashboard.petunjuk-pendaftaran.show', $value->id)}}"
+                                        delete_req="{{route('dashboard.petunjuk-pendaftaran.destroy', $value->id)}}"
+                                        edit_req="{{route('dashboard.petunjuk-pendaftaran.update', $value->id)}}"></button-show-component>
                                 </div>
                             </li>
                             {{--                        <tr class="hover:bg-blue-50 transition-all duration-200">--}}
@@ -128,9 +128,9 @@
                             {{--                            <td class="py-1 uppercase">{{$value->judul}}</td>--}}
                             {{--                            <td class="py-1 uppercase">{{$value->isi}}</td>--}}
                             {{--                            <td class="py-1">--}}
-                            {{--                                <button-show-component user="{{route('dashboard.petunjuk_pendaftaran.show', $value->id)}}"--}}
-                            {{--                                                       delete_req="{{route('dashboard.petunjuk_pendaftaran.destroy', $value->id)}}"--}}
-                            {{--                                                       edit_req="{{route('dashboard.petunjuk_pendaftaran.update', $value->id)}}"></button-show-component>--}}
+                            {{--                                <button-show-component user="{{route('dashboard.petunjuk-pendaftaran.show', $value->id)}}"--}}
+                            {{--                                                       delete_req="{{route('dashboard.petunjuk-pendaftaran.destroy', $value->id)}}"--}}
+                            {{--                                                       edit_req="{{route('dashboard.petunjuk-pendaftaran.update', $value->id)}}"></button-show-component>--}}
                             {{--                            </td>--}}
                             {{--                        </tr>--}}
                         @empty
@@ -140,7 +140,7 @@
                 </div>
             </div>
             {{--            <div class="bg-gray-100 px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">--}}
-            {{--                {{$petunjuk_pendaftaran->links('widgets.custom_pagination')}}--}}
+            {{--                {{$petunjuk-pendaftaran->links('widgets.custom_pagination')}}--}}
             {{--            </div>--}}
         </mac-card-component>
     </div>

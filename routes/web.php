@@ -78,7 +78,7 @@ Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(functi
     Route::resource('fasilitas', \App\Http\Controllers\Dashboard\FasilitasController::class);
     Route::resource('komunitas', \App\Http\Controllers\Dashboard\KomunitasController::class);
     Route::resource('event', \App\Http\Controllers\Dashboard\EventController::class);
-    Route::resource('petunjuk_pendaftaran', \App\Http\Controllers\Dashboard\PetunjukPendaftaranController::class);
+    Route::resource('petunjuk-pendaftaran', \App\Http\Controllers\Dashboard\PetunjukPendaftaranController::class);
     Route::prefix('komunitas')->group(function () {
         Route::get('/show/alumni', [App\Http\Controllers\Dashboard\KomunitasController::class, 'indexAlumni'])->name('komunitas.alumni');
         Route::get('/show/orang_tua', [App\Http\Controllers\Dashboard\KomunitasController::class, 'indexOrangTua'])->name('komunitas.orangtua');
@@ -92,7 +92,7 @@ Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(functi
     Route::resource('sejarah', \App\Http\Controllers\Dashboard\SejarahController::class);
     Route::resource('visi-misi', \App\Http\Controllers\Dashboard\VisiMisiController::class);
     Route::resource('metode-pembelajaran', \App\Http\Controllers\Dashboard\MetodePembelajaranController::class);
-    Route::resource('beasiswa', \App\Http\Controllers\Dashboard\BeasiswaController::class);
+    Route::resource('program-beasiswa', \App\Http\Controllers\Dashboard\BeasiswaController::class);
     Route::get('/mailbox/sent/mail', [App\Http\Controllers\Dashboard\MailboxController::class, 'sent_index'])->name('mailbox.sent');
 //    Route::get('/send-mail', [\App\Mail\HbicsMail::class, 'build'])->name('send.mail');
     Route::get('/send-mailbox/{id}', [\App\Http\Controllers\Mail\MailController::class, 'mailbox'])->name('send.mailbox');
