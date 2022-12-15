@@ -35,6 +35,12 @@
                     </div>
                     <div class="text-sm">Accordian</div>
                 </div>
+                <div class="cursor-pointer text-center bg-amber-400 w-32 rounded-md" @click="bindDataItems('markup')">
+                    <div>
+                        <i class="fa-solid fa-underline"></i>
+                    </div>
+                    <div class="text-sm">Markup</div>
+                </div>
             </div>
         </span>
         <slot>

@@ -173,11 +173,13 @@ Vue.component('paragraph-workspace', require('./components/workspace/ParagraphWo
 Vue.component('image-workspace', require('./components/workspace/ImageWorkspace').default)
 Vue.component('video-workspace', require('./components/workspace/VideoWorkspace').default)
 Vue.component('event-workspace', require('./components/workspace/EventWorkspace').default)
+Vue.component('markup-workspace', require('./components/workspace/MarkupWorkspace').default)
 Vue.component('title-workspace-output', require('./components/workspace/output/TitleWorkspaceOutput').default)
 Vue.component('paragraph-workspace-output', require('./components/workspace/output/ParagraphWorkspaceOutput').default)
 Vue.component('image-workspace-output', require('./components/workspace/output/ImageWorkspaceOutput').default)
 Vue.component('video-workspace-output', require('./components/workspace/output/VideoWorkspaceOutput').default)
 Vue.component('event-workspace-output', require('./components/workspace/output/EventWorkspaceOutput').default)
+Vue.component('markup-workspace-output', require('./components/workspace/output/MarkupWorkspaceOutput').default)
 Vue.component('status-dropdown-component', require('./components/workspace/admin/StatusDropdownComponent').default)
 
 //PRESTASI Widget & Function

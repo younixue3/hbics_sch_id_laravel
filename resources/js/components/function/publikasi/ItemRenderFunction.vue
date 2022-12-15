@@ -54,6 +54,13 @@ export default {
                     title: this.title
                 }
             })
+        } else if (this.type === 'markup') {
+            return createElement('markup-workspace', {
+                props: {
+                    content: this.content,
+                    index: this.index,
+                }
+            })
         }
     }
 }
