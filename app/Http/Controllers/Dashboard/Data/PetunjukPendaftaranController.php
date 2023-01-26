@@ -38,8 +38,8 @@ class PetunjukPendaftaranController extends Controller
     public function update_data($request, $id)
     {
         $petunjuk_pendaftaran = PentujukPendaftaran::find($id);
-        $petunjuk_pendaftaran->judul = $request->judul;
-        $petunjuk_pendaftaran->isi = $request->isi;
+        $petunjuk_pendaftaran->judul = $request->title;
+        $petunjuk_pendaftaran->isi = $request->content;
         $petunjuk_pendaftaran->type = $request->type;
         $petunjuk_pendaftaran->save();
     }

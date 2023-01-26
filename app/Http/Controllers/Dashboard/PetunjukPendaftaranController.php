@@ -45,7 +45,7 @@ class PetunjukPendaftaranController extends Controller
     public function store(Request $request)
     {
         $data = $this->data->store_data($request);
-        return redirect(route('dashboard.petunjuk_pendaftaran.index'))->with('success', 'Insert Data Successfully');
+        return redirect(route('dashboard.petunjuk-pendaftaran.index'))->with('success', 'Insert Data Successfully');
     }
 
     /**
@@ -81,7 +81,7 @@ class PetunjukPendaftaranController extends Controller
     public function update(Request $request, $id)
     {
         $data = $this->data->update_data($request, $id);
-        return redirect(route('dashboard.petunjuk_pendaftaran.index'))->with('success', 'Update Data Successfully');
+        return redirect(route('dashboard.petunjuk-pendaftaran.index'))->with('success', 'Update Data Successfully');
     }
 
     /**
@@ -93,6 +93,6 @@ class PetunjukPendaftaranController extends Controller
     public function destroy($id)
     {
         $data = $this->data->destroy_data($id);
-        return redirect(route('dashboard.petunjuk_pendaftaran.index'))->with('success', 'Delete Data Successfully');
+        return redirect(route('dashboard.petunjuk-pendaftaran.index'))->with('success', 'Delete Data Successfully');
     }
 }
